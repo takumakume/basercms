@@ -25,7 +25,99 @@
 //#ContentsBody{
 //	padding: 0 20px 40px;
 //}
+#ContentsBody li img,
+#ContentsBody p img {
+	vertical-align:middle;
+}
+.contents-body h2 {
+	font-size:16px;
+	margin-bottom:15px;
+	border-left:5px solid #535A62;
+	padding-left:12px;
+	font-weight: bold;
+	line-height: 20px;
+	color:#535A62;
+}
+.contents-body h3 {
+	font-size:14px;
+	line-height: 18px;
+	margin-bottom:15px;
+	font-weight: bold;
+    border-left:5px double #535A62;
+	padding-left:12px;
+	color:#535A62;
+}
+.contents-body h4 {
+	font-size:14px;
+	line-height: 18px;
+	margin-bottom:15px;
+	font-weight: bold;
+	background: url(../../img/admin/blt_head_h4.png) no-repeat left 6px;
+	padding-left:14px;
+}
+.contents-body h5 {
+	font-size:14px;
+	line-height: 18px;
+	margin-bottom:15px;
+	font-weight: bold;
+}
+.contents-body h6 {
+	font-size:14px;
+	line-height: 18px;
+	margin-bottom:15px;
+}
+.contents-body table {
+	/*clear:both;*/
+	padding: 0;
+	margin: 0;
+	white-space: normal;
+	margin-left:auto;
+	margin-right:auto;
+}
+.contents-body table th {
+	padding:8px 8px;
+	font-weight:normal;
+	font-weight:bold;
+}
+.contents-body table tr td {
+	padding:10px 8px;
+	vertical-align:top;
+	border:none;
+}
+.contents-body p {
+	margin-bottom:10px;
+}
+.contents-body p small{
+	line-height:14px;
+}
+.contents-body ul{
+	/*margin-bottom:20px;*/
+}
+.contents-body li {
+	padding: 0 20px;
+	margin:5px 0;
+	background: url(../../img/admin/blt_list_2.png) no-repeat left 2px;
+	padding-left:15px;
+	line-height: 1.8em;
+}
+/* section
+😣 マージン用のユーティリティクラス扱いなので破棄予定
+----------------------------------------------- */
+.contents-body .section {
+	margin-bottom:60px;
+	/*clear: both;*/
+}
+.contents-body .section p {
+	margin-bottom:15px;
+}
 
+// ページ専用要素 HTML側を先に整理
+#AdminUpdaters .contents-body .version{
+	font-size: 14px;
+}
+#AdminUpdaters .contents-body .version strong {
+	font-size: 20px;
+}
 
 .bca-main {
 	position: relative;
@@ -38,6 +130,8 @@
 			clear: both;
 		}
 	}
+
+	// ❗ .contents-body と同じ要素 ❗
 	&-body {
 		&-header {
 			margin-bottom:30px;

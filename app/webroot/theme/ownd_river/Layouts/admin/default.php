@@ -26,13 +26,13 @@
 			'admin/jquery-ui/jquery-ui.min',
 			'../js/admin/vendors/jquery.jstree-3.3.1/themes/proton/style.min',
 			'../js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min',
-			'admin/import',
-			'admin/colorbox/colorbox-1.6.1',
-			'admin/toolbar'))
+			'admin/colorbox/colorbox-1.6.1'))
 		?>
-		<?php if($favoriteBoxOpened): ?>
-			<?php $this->BcBaser->css('admin/sidebar_opened') ?>
-		<?php endif ?>
+
+		<?php # if($favoriteBoxOpened): ?>
+			<?php # $this->BcBaser->css('admin/sidebar_opened') ?>
+		<?php # endif ?>
+
 		<!--[if IE]><?php $this->BcBaser->js(array('admin/vendors/excanvas')) ?><![endif]-->
 		<?php
 		$this->BcBaser->js(array(
