@@ -74,7 +74,7 @@ $this->BcBaser->js('admin/pages/edit', false);
 <?php endif ?>
 
 <div class="submit">
-	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
 </div>
 
 <?php echo $this->BcForm->end(); ?>

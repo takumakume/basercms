@@ -17,12 +17,14 @@
 
 
 <?php echo $this->BcForm->create('User', array('url' => array('action' => 'index'))) ?>
-<p>
-	<?php echo $this->BcForm->label('User.user_group_id', 'ユーザーグループ') ?> 
-	<?php echo $this->BcForm->input('User.user_group_id', array('type' => 'select', 'options' => $this->BcForm->getControlSource('User.user_group_id'), 'empty' => '指定なし')) ?>
+<p class="bca-search__input-list">
+	<span class="bca-search__input-item">
+		<?php echo $this->BcForm->label('User.user_group_id', 'ユーザーグループ') ?> 
+		<?php echo $this->BcForm->input('User.user_group_id', array('type' => 'select', 'class' => 'bca-select', 'options' => $this->BcForm->getControlSource('User.user_group_id'), 'empty' => '指定なし')) ?>
+	</span>
 </p>
-<div class="button">
-	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_search.png', array('alt' => '検索', 'class' => 'btn')), "javascript:void(0)", array('id' => 'BtnSearchSubmit')) ?> 
-	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_clear.png', array('alt' => 'クリア', 'class' => 'btn')), "javascript:void(0)", array('id' => 'BtnSearchClear')) ?> 
+<div class="button bca-search__btns">
+	<div class="bca-search__btns-item"><?php $this->BcBaser->link('検索', "javascript:void(0)", array('id' => 'BtnSearchSubmit', 'class' => 'bca-btn', 'data-bca-btn-type' => 'search')) ?></div>
+	<div class="bca-search__btns-item"><?php $this->BcBaser->link('クリア', "javascript:void(0)", array('id' => 'BtnSearchClear', 'class' => 'bca-btn', 'data-bca-btn-type' => 'clear')) ?></div>
 </div>
 <?php echo $this->Form->end() ?>
