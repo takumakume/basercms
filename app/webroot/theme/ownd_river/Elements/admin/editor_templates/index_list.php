@@ -16,18 +16,18 @@
 ?>
 
 
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
-	<thead>
+<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
+	<thead class="bca-table-listup__thead">
 		<tr>
-			<th style="width:140px" class="list-tool">
+			<th style="width:140px" class="list-tool bca-table-listup__thead-th">
 				<div>
-					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn')), array('action' => 'add')) ?>
+					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__a', 'hidden' => 'hidden')).'新規追加', array('action' => 'add'),array( 'class'=> 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg')) ?>
 				</div>
 			</th>
-			<th>NO</th>
-			<th>テンプレート名</th>
-			<th>説明文</th>
-			<th>登録日<br />
+			<th class="bca-table-listup__thead-th">NO</th>
+			<th class="bca-table-listup__thead-th">テンプレート名</th>
+			<th class="bca-table-listup__thead-th">説明文</th>
+			<th class="bca-table-listup__thead-th">登録日<br />
 				更新日</th>
 		</tr>
 	</thead>
@@ -38,7 +38,7 @@
 		<?php endforeach; ?>
 	<?php else: ?>
 		<tr>
-			<td colspan="5"><p class="no-data">データが見つかりませんでした。</p></td>
+			<td colspan="5" class="bca-table-listup__tbody-td"><p class="no-data">データが見つかりませんでした。</p></td>
 		</tr>
 	<?php endif; ?>
 </tbody>
