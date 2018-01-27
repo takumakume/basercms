@@ -23,7 +23,7 @@
 <?php $this->BcBaser->element('admin/contents/form_alias') ?>
 
 <div class="submit">
-	<?php echo $this->BcForm->submit('保存', array('class' => 'button bca-btn', 'data-bca-btn-type'=>'save', 'div' => false)) ?>
+	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('class' => 'button bca-btn', 'data-bca-btn-type'=>'save', 'div' => false)) ?>
 </div>
 
 <?php echo $this->BcForm->end() ?>

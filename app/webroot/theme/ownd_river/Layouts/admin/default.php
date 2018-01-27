@@ -124,7 +124,7 @@
 						<!-- / bca-main-body --></article>
 
 						<?php if (!empty($user)): ?>
-						<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link('▲ トップへ', '#Header') ?></div>
+						<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link('▲ ' . __d('baser', 'トップへ'), '#Header') ?></div>
 						<?php endif ?>
 
 						<!-- / .bca-main-inner --></div>
