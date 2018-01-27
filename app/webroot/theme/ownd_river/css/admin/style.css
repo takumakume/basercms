@@ -7424,7 +7424,13 @@ table.cake-sql-log tr td {
     display: inline-block;
     position: relative;
     cursor: pointer;
-    margin-right: 15px; }
+    margin-right: 15px;
+    padding-left: 2em;
+    font-size: 1.6rem; }
+  .bca-radio[data-radio-size=lg] + label {
+    font-size: 1.8rem; }
+  .bca-radio[data-radio-size=sm] + label {
+    font-size: 1.4rem; }
   .bca-radio + label:before {
     content: "";
     display: inline-block;
@@ -7432,15 +7438,15 @@ table.cake-sql-log tr td {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
     box-sizing: border-box;
     margin: auto;
     border: 1px solid #999999;
     border-radius: 50%;
     background: #EEEEEE; }
   .bca-radio:checked + label:before {
-    background: #0077BC;
+    background: #61a82e;
     box-shadow: 0 0 0px 4px #EEEEEE inset; }
   .bca-radio:focus + label:before {
     box-shadow: 0 0 0px 4px #EEEEEE inset, 0 0 6px 0px #555555; }

@@ -8,6 +8,18 @@
 		position: relative;
 		cursor: pointer;
 		margin-right: 15px;
+		padding-left: 2em;
+		font-size: 1.6rem;
+	}
+	&[data-radio-size=lg] { //大きいサイズ
+		+ label{
+			font-size: 1.8rem;
+		}
+	}
+	&[data-radio-size=sm] { //小さいサイズ
+		+ label{
+			font-size: 1.4rem;
+		}
 	}
 	& + label:before {
 		content: "";
@@ -16,8 +28,8 @@
 		top: 0;
 		bottom: 0;
 		left: 0;
-		width: 20px;
-		height: 20px;
+		width: 1.5em;
+		height: 1.5em;
 		box-sizing: border-box;
 		margin: auto;
 		border: 1px solid #999999;
@@ -25,7 +37,7 @@
 		background: #EEEEEE;
 	}
 	&:checked + label:before {
-		background: #0077BC;
+		background: $color_primary;
 		box-shadow: 0 0 0px 4px #EEEEEE inset;
 	}
 	&:focus + label:before {
