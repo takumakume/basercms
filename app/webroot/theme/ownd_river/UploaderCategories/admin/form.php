@@ -35,12 +35,12 @@
 
 <div class="submit">
 <?php if($this->action == 'admin_add'): ?>
-	<?php echo $this->BcForm->submit('登録', array('div' => false, 'class' => 'button')) ?>
+	<?php echo $this->BcForm->submit('登録', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
 <?php else: ?>
-	<?php echo $this->BcForm->submit('更新', array('div' => false, 'class' => 'button')) ?>
+	<?php echo $this->BcForm->submit('更新', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
 	<?php $this->BcBaser->link('削除',
 			array('action' => 'delete', $this->BcForm->value('UploaderCategory.id')),
-			array('class' => 'submit-token button'),
+			array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'),
 			sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('UploaderCategory.name')),
 			false); ?>
 <?php endif ?>
