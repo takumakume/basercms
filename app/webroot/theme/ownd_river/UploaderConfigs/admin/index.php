@@ -80,7 +80,7 @@
 </div>
 
 <?php if($user['user_group_id'] == 1): ?>
-<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption">オプション</a></h2>
+<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption" class="bca-btn">オプション</a></h2>
 
 
 <div id ="FormOptionBody" class="slide-body section">
@@ -109,7 +109,7 @@
 
 <!-- button -->
 <div class="submit">
-	<?php echo $this->BcForm->submit('更　新', array('div' => false, 'class' => 'btn-orange button', 'id' => 'btnSubmit')) ?>
+	<?php echo $this->BcForm->submit('更新', array('div' => false, 'class' => 'btn-orange button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'id' => 'btnSubmit')) ?>
 </div>
 
 <?php echo $this->BcForm->end() ?>
