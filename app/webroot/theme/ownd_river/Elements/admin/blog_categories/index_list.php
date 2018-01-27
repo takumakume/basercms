@@ -22,13 +22,13 @@
 		<tr>
 			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
 	<div>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__img')), array('action' => 'add', $blogContent['BlogContent']['id']),array('class'=>' bca-table-listup__a')) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__img', 'hidden' => 'hidden')) . '新規追加', array('action' => 'add', $blogContent['BlogContent']['id']),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
 	</div>
 	<?php if ($this->BcBaser->isAdminUser()): ?>
 		<div>
 			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
 			<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => '削除'), 'empty' => '一括処理')) ?>
-			<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled')) ?>
+			<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
 		</div>
 	<?php endif ?>
 </th>
