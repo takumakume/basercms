@@ -213,7 +213,7 @@ html{
 ----------------------------------------------- */
 
 body{
-	font-size: 12px;
+	font-size: 1.6rem;
 	text-align: left;
 	min-width: 960px;
 	width : expression(document.body.clientWidth < 940? "900px" : "auto"); /* IE */

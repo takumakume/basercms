@@ -17,12 +17,12 @@
 
 
 <!-- list -->
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
-	<thead>
+<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
+	<thead class="bca-table-listup__thead">
 		<tr>
-			<th style="width:160px" class="list-tool">
+			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
 	<div>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn')), array('action' => 'add', $blogContent['BlogContent']['id'])) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__img')), array('action' => 'add', $blogContent['BlogContent']['id']),array('class'=>' bca-table-listup__a')) ?>
 	</div>
 	<?php if ($this->BcBaser->isAdminUser()): ?>
 		<div>
@@ -32,17 +32,17 @@
 		</div>
 	<?php endif ?>
 </th>
-<th>NO</th>
-<th>ブログカテゴリ名
+<th class="bca-table-listup__thead-th">NO</th>
+<th class="bca-table-listup__thead-th">ブログカテゴリ名
 	<?php if ($this->BcBaser->siteConfig['category_permission']): ?>
 		<br />管理グループ
 	<?php endif ?>
 </th>
-<th>ブログカテゴリタイトル</th>
-<th>登録日<br />更新日</th>
+<th class="bca-table-listup__thead-th">ブログカテゴリタイトル</th>
+<th class="bca-table-listup__thead-th">登録日<br />更新日</th>
 </tr>
 </thead>
-<tbody>
+<tbody class="bca-table-listup__tbody">
 	<?php if (!empty($dbDatas)): ?>
 		<?php $currentDepth = 0 ?>
 		<?php foreach ($dbDatas as $data): ?>
@@ -68,7 +68,7 @@
 		<?php endforeach; ?>
 	<?php else: ?>
 		<tr>
-			<td colspan="6"><p class="no-data">データが見つかりませんでした。</p></td>
+			<td colspan="6" class="bca-table-listup__tbody-td"><p class="no-data">データが見つかりませんでした。</p></td>
 		</tr>
 	<?php endif; ?>
 </tbody>
