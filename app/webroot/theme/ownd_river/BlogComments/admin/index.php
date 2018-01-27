@@ -36,4 +36,4 @@ $(function(){
 <?php endif ?>
 <div id="AlertMessage" class="message" style="display:none"></div>
 <div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
-<div id="DataList"><?php $this->BcBaser->element('blog_comments/index_list') ?></div>
+<div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('blog_comments/index_list') ?></div>

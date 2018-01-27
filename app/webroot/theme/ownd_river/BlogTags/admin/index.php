@@ -24,7 +24,7 @@ $this->BcBaser->js(array(
 
 <script type="text/javascript">
 $(function(){
-	$.baserAjaxDataList.config.methods.del.confirm = 'このデータを本当に削除してもいいですか？\nこのタグに関連する記事は削除されません。';
+	$.baserAjaxDataList.config.methods.del.confirm = <?php echo __d('baser', 'このデータを本当に削除してもいいですか？\nこのタグに関連する記事は削除されません。') ?>;
 	$.baserAjaxDataList.init();
 	$.baserAjaxBatch.init({ url: $("#AjaxBatchUrl").html()});
 });
@@ -33,4 +33,4 @@ $(function(){
 <div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(array('controller' => 'blog_tags', 'action' => 'ajax_batch')) ?></div>
 <div id="AlertMessage" class="message" style="display:none"></div>
 <div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
-<div id="DataList"><?php $this->BcBaser->element('blog_tags/index_list') ?></div>
+<div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('blog_tags/index_list') ?></div>

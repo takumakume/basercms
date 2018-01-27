@@ -38,8 +38,9 @@ if ($links) {
 
 
 <?php if ($link): ?>
-	<div class="list-num bca-list-num">
-		<strong>表示件数</strong><p><?php echo $link ?></p>
-	</div>
+	<dl class="list-num bca-list-num">
+		<dt class="bca-list-num__title">表示件数</dt>
+    <dd class="bca-list-num__data"><?php echo $link ?></dd>
+	</dl>
 <?php endif ?>
 	
