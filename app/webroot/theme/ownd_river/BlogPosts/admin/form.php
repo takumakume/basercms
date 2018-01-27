@@ -180,12 +180,12 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 <!-- button -->
 <div class="submit">
 	<?php if ($this->action == 'admin_add'): ?>
-		<?php echo $this->BcForm->button(__d('baser', 'プレビュー'), array('div' => false, 'class' => 'button', 'id' => 'BtnPreview')) ?>
-		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+		<?php echo $this->BcForm->button(__d('baser', 'プレビュー'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnPreview')) ?>
+		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
 	<?php elseif ($this->action == 'admin_edit'): ?>
-		<?php echo $this->BcForm->button(__d('baser', 'プレビュー'), array('div' => false, 'class' => 'button', 'id' => 'BtnPreview')) ?>
-		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
-		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $blogContent['BlogContent']['id'], $this->BcForm->value('BlogPost.id')), array('class' => 'submit-token button'), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('BlogPost.name')), false); ?>
+		<?php echo $this->BcForm->button(__d('baser', 'プレビュー'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnPreview')) ?>
+		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
+		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $blogContent['BlogContent']['id'], $this->BcForm->value('BlogPost.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('BlogPost.name')), false); ?>
 	<?php endif ?>
 </div>
 
