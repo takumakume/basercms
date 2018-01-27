@@ -15,7 +15,7 @@
  */
 $config['BcApp.adminNavigation'] = [
 	'Contents' => [
-		'Uploader' => [
+		'Feed' => [
 			'title' => __d('baser', 'フィード管理'),
 			'type' => 'contents',
 			'menus' => [
