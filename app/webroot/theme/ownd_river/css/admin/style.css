@@ -7224,6 +7224,9 @@ span#DebugMode {
     vertical-align: middle;
     line-height: 1; }
 
+.bca-list-num {
+  display: inline-block; }
+
 .contents-body .form-table {
   border: 1px solid #DDD;
   border-collapse: collapse;
