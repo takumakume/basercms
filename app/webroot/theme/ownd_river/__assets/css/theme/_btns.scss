@@ -67,6 +67,14 @@
 		@include btn-common;
 	}
 
+	// 保存
+	// TODO: デザインは仮です
+	&[data-bca-btn-type=save] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
+	}
+
 	// 削除
 	&[data-bca-btn-type=delete] {
 		@extend .#{$fa-css-prefix}-trash;
