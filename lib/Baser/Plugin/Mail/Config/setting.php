@@ -13,7 +13,7 @@
 /**
  * システムナビ
  */
-$config['BcApp.adminNavi'] = [
+$config['BcApp.adminNavigation'] = [
 	'Plugin' => [
 		'menus' => [
 			'Mail' => ['title' => 'メール設定', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_configs', 'action' => 'form']],
@@ -25,7 +25,7 @@ $mailContents = $MailContent->find('all', ['recursive' => 0]);
 foreach ($mailContents as $mailContent) {
 	$mail = $mailContent['MailContent'];
 	$content = $mailContent['Content'];
-	$config['BcApp.adminNavi.Contents.' . 'MailContent' . $mail['id']] = [
+	$config['BcApp.adminNavigation.Contents.' . 'MailContent' . $mail['id']] = [
 		'siteId' => $content['site_id'],
 		'title' => $content['title'],
 		'type' => 'mail-content',
@@ -37,6 +37,14 @@ foreach ($mailContents as $mailContent) {
 		]
 	];
 }
+// @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
+$config['BcApp.adminNavi.mail'] = array(
+	'name' => 'メールプラグイン',
+	'contents' => array(
+		array('name' => '基本設定', 'url' => array('admin' => true, 'plugin' => 'mail', 'controller' => 'mail_configs', 'action' => 'form')),
+	)
+);
+
 $config['BcContents']['items']['Mail'] = [
 	'MailContent'	=> [
 		'title' => 'メールフォーム',
