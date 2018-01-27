@@ -10,7 +10,8 @@
   },
   "scripts": {
     "build": "gulp",
-    "dev": "gulp watch"
+    "dev": "gulp watch",
+	"guide": "gulp guide"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
