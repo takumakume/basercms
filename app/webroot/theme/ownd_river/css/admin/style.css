@@ -6958,21 +6958,21 @@ span#DebugMode {
   .bca-main-body .bca-table-listup {
     margin-top: 15px;
     margin-bottom: 15px; }
-  .bca-table-listup thead th {
+  .bca-table-listup__thead-th {
     vertical-align: middle;
     color: #fff;
     background-color: #1b6123; }
-    .bca-table-listup thead th a {
-      color: #fff; }
-      .bca-table-listup thead th a img {
-        vertical-align: middle; }
-  .bca-table-listup tbody th, .bca-table-listup tbody td {
+  .bca-table-listup__a {
+    color: #fff; }
+  .bca-table-listup__img {
+    vertical-align: middle; }
+  .bca-table-listup__tbody-th, .bca-table-listup__tbody-td {
     border: none;
     border-bottom: 1px solid #ccc !important; }
-  .bca-table-listup tbody td {
-    padding: 10px 20px; }
-  .bca-table-listup tbody .disablerow th, .bca-table-listup tbody .disablerow td {
+  .bca-table-listup .disablerow th, .bca-table-listup .disablerow td {
     background-color: #fafafa; }
+  .bca-table-listup__tbody-td {
+    padding: 10px 20px; }
   .bca-table-listup .eye_catch {
     float: left;
     margin-right: 10px;

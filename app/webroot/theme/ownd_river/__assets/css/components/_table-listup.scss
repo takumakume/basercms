@@ -134,33 +134,32 @@
 		margin-bottom:15px;
 	}
 
-	thead {
-		th {
-			vertical-align:middle;
-			color: #fff;
-			background-color: $color_secondary;
-			a {
-				color: #fff;
-				img {
-					vertical-align:middle;
-				}
-			}
-		}
+	&__thead-th {
+		vertical-align:middle;
+		color: #fff;
+		background-color: $color_secondary;
 	}
-	tbody {
-		th,td {
+	
+	
+	&__a {
+		color: #fff;
+	}
+	&__img {
+		vertical-align:middle;
+	}
+	&__tbody-th,&__tbody-td {
 			border: none;
 			border-bottom: 1px solid #ccc !important;
-		}
-		td {
-			padding:10px 20px;
-		}
-		.disablerow {
-			th,td {
-				background-color: $color_background_menu;
-			}
+	}
+	.disablerow {
+		th,td {
+			background-color: $color_background_menu;
 		}
 	}
+	&__tbody-td {
+		padding:10px 20px;
+	}
+
 	.eye_catch {
 		float: left;
 		margin-right:10px;
