@@ -1,130 +1,347 @@
-.submit {
-	position:relative;
-	text-align:center;
-}
-.submit .button,
-.ui-widget-content .button{
-	color:#535A62;
-	border:1px solid #CCC;
-	cursor:pointer;
-	text-shadow:rgba(255,255,255,0.4) 1px 1px 0;
-	-webkit-border-radius:2px;
-	-moz-border-radius:2px;
-	-o-border-radius:2px;
-	border-radius:2px;
-	-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
-	-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
-	-o-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
-	box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
-	background:#F3F3F3;
-	background:-moz-linear-gradient(top,#FFF,#F3F3F3);
-	background:-webkit-gradient(linear,left top,left bottom,from(#FFF),color-stop(100%,#F3F3F3));
-	background:-o-linear-gradient(top,#FFF,#F3F3F3);
-	margin:10px;
-	padding:3px 40px;
-	font-weight: bold;
-	font-size: 1.2em;
-	white-space: nowrap;
-	line-height: 24px;
-}
-.submit .button:hover,
-.ui-widget-content .button:hover{
-	border:1px solid #CCC;
-	text-decoration:none;
-	background:#f4f4f4;
-	background:-moz-linear-gradient(top,#f4f4f4,#dfdfdf 100%);
-	background:-webkit-gradient(linear,left top,left bottom,from(#f4f4f4),color-stop(100%,#dfdfdf));
-	background:-o-linear-gradient(top,#f4f4f4,#dfdfdf 100%);
-}
-.submit .button:active,
-.ui-widget-content .button:active{
-	border:1px solid #CCC;text-decoration:none;
-	background:#cdcdcd;
-	background:-moz-linear-gradient(top,#cdcdcd,#eee 100%);
-	background:-webkit-gradient(linear,left top,left bottom,from(#cdcdcd),color-stop(100%,#eee));
-	background:-o-linear-gradient(top,#cdcdcd,#eee 100%);
-}
-.submit .button[disabled],
-.ui-widget-content .button[disabled]{
-	opacity:.5
-}
-.submit a.button,
-.ui-widget-content a.button{
-	padding-top:5px;
-	padding-bottom:5.5px;
-}
-*:first-child+html .submit a.button,
-.ui-widget-content a.button{
-	position:absolute;
-	top:1px;
-	padding-top:3px;
-	padding-bottom:3px;
+@import '../vender/Font-Awesome/font-awesome';
+
+.bca-btn {
+	font-size: 1.4rem;
+
+	@mixin btn-common {
+		display: inline-block;
+		border-radius: 3px;
+		padding: 0.9558em 1em 0.76em;
+		line-height:1.2;
+		border: 1px solid #ccc;
+		cursor: pointer;
+
+		color: $color_text_primary;
+		text-decoration: none;
+		background-image:linear-gradient(rgb(255,255,255) 10%,rgb(244,245,241) 100%);
+		transition: all .5s ease-out 0s;
+
+		&::before {
+			@extend .#{$fa-css-prefix};
+			margin-right: 4px;
+			color: $color_text_primary;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $color_text_primary;
+			background-color: $color_background_menu;
+			background-image:linear-gradient(rgb(255,255,255) 100%,rgb(255,255,255) 100%);
+		}
+	}
+
+	// デフォルトボタン
+	@include btn-common;
+
+	// 公開
+	&[data-bca-btn-type=publish] {
+		@extend .#{$fa-css-prefix}-play-circle-o;
+		@include btn-common;
+	}
+
+	// 非公開
+	&[data-bca-btn-type=unpublish] {
+		@extend .#{$fa-css-prefix}-pause-circle-o;
+		@include btn-common;
+	}
+
+	// 確認
+	&[data-bca-btn-type=preview] {
+		@extend .#{$fa-css-prefix}-eye;
+		@include btn-common;
+	}
+
+	// 編集
+	&[data-bca-btn-type=edit] {
+		@extend .#{$fa-css-prefix}-pencil;
+		@include btn-common;
+	}
+
+	// 複製
+	&[data-bca-btn-type=copy] {
+		@extend .#{$fa-css-prefix}-copy;
+		@include btn-common;
+	}
+
+	// 保存
+	// TODO: デザインは仮です
+	&[data-bca-btn-type=save] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
+	}
+
+	// 削除
+	&[data-bca-btn-type=delete] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+	}
+
+	// 一覧に戻る
+	// TODO: デザインは仮です
+	&[data-bca-btn-type=back-to-list] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
+	}
+
+	// お気に入り
+	&[data-bca-btn-type=favorite] {
+		@extend .#{$fa-css-prefix}-heart;
+		@include btn-common;
+	}
+
+	// メニューアイテム
+	&[data-bca-btn-type=menuitem] {
+		@extend .#{$fa-css-prefix}-angle-right;
+		@include btn-common;
+	}
+
+	// 追加
+	&[data-bca-btn-type=add] {
+		@extend .#{$fa-css-prefix}-plus-circle;
+		@include btn-common;
+		color: #fff;
+		border: none;
+		background: $color_primary;
+		&::before {
+			@extend .#{$fa-css-prefix};
+			//font-size: 16px !important;
+			color: #fff;
+		}
+		&:hover {
+			color: #fff;
+			background: $color_secondary;
+		}
+	}
+
+	// ヘルプ
+	&[data-bca-btn-type=help] {
+		@extend .#{$fa-css-prefix}-life-ring;
+		@include btn-common;
+	}
+
+	// 制限（鍵)
+	&[data-bca-btn-type=permission] {
+		@extend .#{$fa-css-prefix}-lock;
+		@include btn-common;
+	}
+
+	// HOME
+	&[data-bca-btn-type=home] {
+		@extend .#{$fa-css-prefix}-home;
+		@include btn-common;
+	}
+
+	// HOME
+	&[data-bca-btn-type=login] {
+		@include btn-common;
+		color: $color_lightest;
+		$color_darken: darken($color_primary, 5%);
+		border: 1px solid $color_darken;
+		background-image: linear-gradient($color_primary 10%, $color_darken 100%);
+		&:hover,
+		&:focus {
+			color: $color_lightest;
+			background-image: linear-gradient($color_darken 10%, $color_darken 100%);
+		}
+	}
+
+	// サイズ
+	// ===========================
+
+	// large
+	&[data-bca-btn-size=lg] {
+		font-size: 1.1rem; // 16px *
+		//padding: .5em .8em .4em;
+		&::before {
+			@extend .#{$fa-css-prefix};
+			font-size: 16px !important;
+		}
+	}
+
+	// small
+	&[data-bca-btn-size=sm] {
+		font-size:14px;
+		font-size: 0.91rem;
+		padding: .4em .8em .5em;
+
+		&::before {
+			@extend .#{$fa-css-prefix};
+			font-size: 16px !important;
+		}
+	}
+
+	// xsmall
+	&[data-bca-btn-size=xs] {
+		font-size:12px;
+		font-size: 0.78rem;
+		padding: .4em .8em .5em;
+
+		&::before {
+			@extend .#{$fa-css-prefix};
+			font-size: 16px !important;
+		}
+	}
+
+	// ステータス
+	// ===========================
+
+	// プライマリー
+	&[data-bca-btn-status=primary] {
+		@include btn-common;
+		color: #fff;
+		background: $color_primary;
+		&::before {
+			@extend .#{$fa-css-prefix};
+			color: #fff;
+		}
+		&:hover {
+			background: $color_secondary;
+		}
+	}
+
+	// disabled
+	&[disabled] {
+		color: #aaa;
+		border-color: #ddd;
+		//background: #eee;
+	}
 }
 
-#Help .button, #Limit .button{
-	text-align: center;
-}
-
-/* button
------------------------------------------------ */
 
 
-.button-small{
-	text-decoration: none!important;
-	display:inline-block;
-	padding:4px 10px 4px;
-	margin-bottom:0;
-	font-size:13px;
-	line-height:18px;
-	color:#333!important;
-	text-align:center;
-	text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
-	vertical-align:middle;
-	cursor:pointer;
-	background-color:#f5f5f5;
-	background-image:-ms-linear-gradient(top, #fff, #e6e6e6);
-	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
-	background-image:-webkit-linear-gradient(top, #fff, #e6e6e6);
-	background-image:-o-linear-gradient(top, #fff, #e6e6e6);
-	background-image:linear-gradient(top, #fff, #e6e6e6);
-	background-image:-moz-linear-gradient(top, #fff, #e6e6e6);
-	background-repeat:repeat-x;
-	border:1px solid #ccc;
-	border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	border-color:#e6e6e6 #e6e6e6 #bfbfbf;
-	border-bottom-color:#b3b3b3;
-	-webkit-border-radius:4px;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
-	filter:progid:dximagetransform.microsoft.gradient(enabled=false);
-	-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
-	border-color:#ccc;
-	border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-}
-.button-small:hover{
-	background-color:#e6e6e6;
-	color:#333;
-	text-decoration:none;
-	background-color:#e6e6e6;
-	background-position:0 -15px;
-	-webkit-transition:background-position .1s linear;
-	-moz-transition:background-position .1s linear;
-	-ms-transition:background-position .1s linear;
-	-o-transition:background-position .1s linear;
-	transition:background-position .1s linear;
-}
+// .submit {
+// 	position:relative;
+// 	text-align:center;
+// }
+// .submit .button,
+// .ui-widget-content .button{
+// 	color:#535A62;
+// 	border:1px solid #CCC;
+// 	cursor:pointer;
+// 	text-shadow:rgba(255,255,255,0.4) 1px 1px 0;
+// 	-webkit-border-radius:2px;
+// 	-moz-border-radius:2px;
+// 	-o-border-radius:2px;
+// 	border-radius:2px;
+// 	-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
+// 	-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
+// 	-o-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
+// 	box-shadow:inset 0 0 0 1px rgba(255,255,255,0.4);
+// 	background:#F3F3F3;
+// 	background:-moz-linear-gradient(top,#FFF,#F3F3F3);
+// 	background:-webkit-gradient(linear,left top,left bottom,from(#FFF),color-stop(100%,#F3F3F3));
+// 	background:-o-linear-gradient(top,#FFF,#F3F3F3);
+// 	margin:10px;
+// 	padding:3px 40px;
+// 	font-weight: bold;
+// 	font-size: 1.2em;
+// 	white-space: nowrap;
+// 	line-height: 24px;
+// }
+// .submit .button:hover,
+// .ui-widget-content .button:hover{
+// 	border:1px solid #CCC;
+// 	text-decoration:none;
+// 	background:#f4f4f4;
+// 	background:-moz-linear-gradient(top,#f4f4f4,#dfdfdf 100%);
+// 	background:-webkit-gradient(linear,left top,left bottom,from(#f4f4f4),color-stop(100%,#dfdfdf));
+// 	background:-o-linear-gradient(top,#f4f4f4,#dfdfdf 100%);
+// }
+// .submit .button:active,
+// .ui-widget-content .button:active{
+// 	border:1px solid #CCC;text-decoration:none;
+// 	background:#cdcdcd;
+// 	background:-moz-linear-gradient(top,#cdcdcd,#eee 100%);
+// 	background:-webkit-gradient(linear,left top,left bottom,from(#cdcdcd),color-stop(100%,#eee));
+// 	background:-o-linear-gradient(top,#cdcdcd,#eee 100%);
+// }
+// .submit .button[disabled],
+// .ui-widget-content .button[disabled]{
+// 	opacity:.5
+// }
+// .submit a.button,
+// .ui-widget-content a.button{
+// 	padding-top:5px;
+// 	padding-bottom:5.5px;
+// }
+// *:first-child+html .submit a.button,
+// .ui-widget-content a.button{
+// 	position:absolute;
+// 	top:1px;
+// 	padding-top:3px;
+// 	padding-bottom:3px;
+// }
+
+// #Help .button, #Limit .button{
+// 	text-align: center;
+// }
+
+// /* button
+// ----------------------------------------------- */
 
 
-// .btnとセットで使われる
-.help{
-	cursor: pointer;
-	vertical-align:middle;
-}
+// .button-small{
+// 	text-decoration: none!important;
+// 	display:inline-block;
+// 	padding:4px 10px 4px;
+// 	margin-bottom:0;
+// 	font-size:13px;
+// 	line-height:18px;
+// 	color:#333!important;
+// 	text-align:center;
+// 	text-shadow:0 1px 1px rgba(255, 255, 255, 0.75);
+// 	vertical-align:middle;
+// 	cursor:pointer;
+// 	background-color:#f5f5f5;
+// 	background-image:-ms-linear-gradient(top, #fff, #e6e6e6);
+// 	background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e6e6e6));
+// 	background-image:-webkit-linear-gradient(top, #fff, #e6e6e6);
+// 	background-image:-o-linear-gradient(top, #fff, #e6e6e6);
+// 	background-image:linear-gradient(top, #fff, #e6e6e6);
+// 	background-image:-moz-linear-gradient(top, #fff, #e6e6e6);
+// 	background-repeat:repeat-x;
+// 	border:1px solid #ccc;
+// 	border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+// 	border-color:#e6e6e6 #e6e6e6 #bfbfbf;
+// 	border-bottom-color:#b3b3b3;
+// 	-webkit-border-radius:4px;
+// 	-moz-border-radius:4px;
+// 	border-radius:4px;
+// 	filter:progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+// 	filter:progid:dximagetransform.microsoft.gradient(enabled=false);
+// 	-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+// 	-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+// 	box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+// 	border-color:#ccc;
+// 	border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+// }
+// .button-small:hover{
+// 	background-color:#e6e6e6;
+// 	color:#333;
+// 	text-decoration:none;
+// 	background-color:#e6e6e6;
+// 	background-position:0 -15px;
+// 	-webkit-transition:background-position .1s linear;
+// 	-moz-transition:background-position .1s linear;
+// 	-ms-transition:background-position .1s linear;
+// 	-o-transition:background-position .1s linear;
+// 	transition:background-position .1s linear;
+// }
 
-// HTML上存在するが、スタイルはない
-.btn {
 
-}
+// // .btnとセットで使われる
+// .help{
+// 	cursor: pointer;
+// 	vertical-align:middle;
+// }
+
+// // HTML上存在するが、スタイルはない
+// .btn {
+
+// }
+
+
+
+
+
