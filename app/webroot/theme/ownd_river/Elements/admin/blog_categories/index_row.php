@@ -21,7 +21,7 @@ if (isset($user['user_group_id'])) {
 
 
 <tr<?php echo $rowGroupClass ?>>
-	<td class="row-tools">
+	<td class="row-tools bca-table-listup__tbody-td">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['BlogCategory']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogCategory']['id'])) ?>
 		<?php endif ?>		
@@ -31,8 +31,8 @@ if (isset($user['user_group_id'])) {
 			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => '削除', 'class' => 'btn')), array('action' => 'ajax_delete', $blogContent['BlogContent']['id'], $data['BlogCategory']['id']), array('title' => '削除', 'class' => 'btn-delete')) ?>
 		<?php endif ?>
 	</td>
-	<td><?php echo $data['BlogCategory']['no'] ?></td>
-	<td>
+	<td class="bca-table-listup__tbody-td"><?php echo $data['BlogCategory']['no'] ?></td>
+	<td class="bca-table-listup__tbody-td">
 		<?php if (in_array($data['BlogCategory']['owner_id'], $allowOwners) || $this->BcAdmin->isSystemAdmin()): ?>
 			<?php $this->BcBaser->link($data['BlogCategory']['name'], array('action' => 'edit', $blogContent['BlogContent']['id'], $data['BlogCategory']['id'])) ?>
 		<?php else: ?>
@@ -43,7 +43,7 @@ if (isset($user['user_group_id'])) {
 			<?php echo $this->BcText->arrayValue($data['BlogCategory']['owner_id'], $owners) ?>
 		<?php endif ?>
 	</td>
-	<td><?php echo $data['BlogCategory']['title'] ?></td>
-	<td><?php echo $this->BcTime->format('Y-m-d', $data['BlogCategory']['created']); ?><br />
+	<td class="bca-table-listup__tbody-td"><?php echo $data['BlogCategory']['title'] ?></td>
+	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['BlogCategory']['created']); ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['BlogCategory']['modified']); ?></td>
 </tr>

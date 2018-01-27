@@ -1,129 +1,111 @@
 //
-// # ボタン
+// # ボタンアイコン（アイコンのみ/テキストなし)
 //
 @import '../vender/Font-Awesome/font-awesome';
 
-.bca-btn {
+.bca-btn-icon {
 
-	@mixin btn-common {
+	@mixin bca-btn-icon-common {
 		display: inline-block;
-		//margin:0 0.6em;
-		font-size: 14px;
-		font-size: 0.88rem; // 16px × 0.88 = 14.08 ;
-		border-radius: 3px;
-		padding: 0.9558em 1em 0.76em;
-		line-height:1.2;
-		border: 1px solid #ccc;
+		width:1em;
+		font-size: 18px;
+		line-height:1;
 		cursor: pointer;
-
-		color: $color_text_primary;
 		text-decoration: none;
-		background-image:linear-gradient(rgb(255,255,255) 10%,rgb(244,245,241) 100%);
-		transition: all .5s ease-out 0s;
+		text-align: center;
 
 		&::before {
 			@extend .#{$fa-css-prefix};
-			margin-right: 4px;
-			color: $color_text_primary;
+			color: $color_primary;
+			transition: 0.2;
 		}
 		&:hover {
 			text-decoration: none;
-			color: $color_text_primary;
-			background-color: $color_background_menu;
-			background-image:linear-gradient(rgb(255,255,255) 100%,rgb(255,255,255) 100%);
+			color: $color_secondary;
+			&:before {
+				color: $color_secondary;
+			}
 		}
 	}
 
 	// デフォルトボタン
-	@include btn-common;
+	@include bca-btn-icon-common;
 
 	// 公開
 	&[data-bca-btn-type=publish] {
 		@extend .#{$fa-css-prefix}-play-circle-o;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 非公開
 	&[data-bca-btn-type=unpublish] {
 		@extend .#{$fa-css-prefix}-pause-circle-o;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 確認
 	&[data-bca-btn-type=preview] {
 		@extend .#{$fa-css-prefix}-eye;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 編集
 	&[data-bca-btn-type=edit] {
 		@extend .#{$fa-css-prefix}-pencil;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 複製
 	&[data-bca-btn-type=copy] {
 		@extend .#{$fa-css-prefix}-copy;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 削除
 	&[data-bca-btn-type=delete] {
 		@extend .#{$fa-css-prefix}-trash;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// お気に入り
 	&[data-bca-btn-type=favorite] {
 		@extend .#{$fa-css-prefix}-heart;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// メニューアイテム
 	&[data-bca-btn-type=menuitem] {
 		@extend .#{$fa-css-prefix}-angle-right;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 追加
 	&[data-bca-btn-type=add] {
 		@extend .#{$fa-css-prefix}-plus-circle;
-		@include btn-common;
-		color: #fff;
-		border: none;
-		background: $color_primary;
-		&::before {
-			@extend .#{$fa-css-prefix};
-			//font-size: 16px !important;
-			color: #fff;
-		}
-		&:hover {
-			color: #fff;
-			background: $color_secondary;
-		}
+		@include bca-btn-icon-common;
 	}
 
 	// ヘルプ
 	&[data-bca-btn-type=help] {
 		@extend .#{$fa-css-prefix}-life-ring;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// 制限（鍵)
 	&[data-bca-btn-type=permission] {
 		@extend .#{$fa-css-prefix}-lock;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// HOME
 	&[data-bca-btn-type=home] {
 		@extend .#{$fa-css-prefix}-home;
-		@include btn-common;
+		@include bca-btn-icon-common;
 	}
 
 	// HOME
 	&[data-bca-btn-type=login] {
-		@include btn-common;
+		@include bca-btn-icon-common;
 		color: $color_lightest;
 		$color_darken: darken($color_primary, 5%);
 		border: 1px solid $color_darken;
@@ -140,35 +122,28 @@
 
 	// large
 	&[data-bca-btn-size=lg] {
-		font-size: 1.1rem; // 16px *
-		//padding: .5em .8em .4em;
+		font-size: 24px;
 		&::before {
 			@extend .#{$fa-css-prefix};
-			font-size: 16px !important;
+			font-size: 24px !important;
 		}
 	}
 
 	// small
 	&[data-bca-btn-size=sm] {
-		font-size:14px;
-		font-size: 0.91rem;
-		padding: .4em .8em .5em;
-
+		font-size: 14px;
 		&::before {
 			@extend .#{$fa-css-prefix};
-			font-size: 16px !important;
+			font-size: 14px !important;
 		}
 	}
 
 	// xsmall
 	&[data-bca-btn-size=xs] {
 		font-size:12px;
-		font-size: 0.78rem;
-		padding: .4em .8em .5em;
-
 		&::before {
 			@extend .#{$fa-css-prefix};
-			font-size: 16px !important;
+			font-size: 12px !important;
 		}
 	}
 
@@ -177,7 +152,7 @@
 
 	// プライマリー
 	&[data-bca-btn-status=primary] {
-		@include btn-common;
+		@include bca-btn-icon-common;
 		color: #fff;
 		background: $color_primary;
 		&::before {

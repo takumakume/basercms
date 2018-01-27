@@ -4,7 +4,6 @@
 @import 'theme/var/dimensions';
 @import 'theme/utility';
 @import 'theme/icons';
-@import 'theme/btns';
 
 @import 'base/general';
 
@@ -20,6 +19,7 @@
 @import 'components/nav-favorite';
 @import 'components/nav-main';
 @import 'components/nav-sub';
+@import 'components/btn-icon';
 @import 'components/banners';
 @import 'components/action-table-listup';
 @import 'components/table-listup';
@@ -29,10 +29,15 @@
 @import 'components/pagination';
 @import 'components/totop';
 @import 'components/login';
+@import 'components/list-num';
 @import 'components/form-table';
 @import 'components/form-expand';
 @import 'components/notification';
 @import 'components/help';
 @import 'components/cake-sql-log';
+@import 'components/button';
+@import 'components/radio';
+@import 'components/checkbox';
+@import 'components/select';
 
 @import 'vender/jquery.bt.js';
