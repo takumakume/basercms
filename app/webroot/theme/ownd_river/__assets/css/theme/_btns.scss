@@ -79,6 +79,14 @@
 		@include btn-common;
 	}
 
+	// 一覧に戻る
+	// TODO: デザインは仮です
+	&[data-bca-btn-type=back-to-list] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
+	}
+
 	// お気に入り
 	&[data-bca-btn-type=favorite] {
 		@extend .#{$fa-css-prefix}-heart;
