@@ -8,7 +8,14 @@ const autoprefixer = require('autoprefixer');
 
 const sceg = require('gulp-sceg');
 
-const BROWSER_SYNC_PROXY = 'localhost';
+let proxy;
+try {
+	const proxyJson = require('./proxy.json');
+	proxy = proxyJson ? proxyJson.proxy : null;
+} catch (e) {
+	// void
+}
+const BROWSER_SYNC_PROXY = proxy | 'localhost';
 
 const CSS_DEV_DIR = 'css/';
 const CSS_MAIN_SCSS_FILENAME = 'style.scss';
