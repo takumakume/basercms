@@ -39,7 +39,7 @@ if (!empty($crumbs)) {
 ?>
 
 <?php if (!empty($user)): ?>
-<nav id="Crumb" class="bca-crumb">
+<nav id="Crumb" class="bca-crumb" hidden>
 	<ol>
 		<?php $this->BcBaser->crumbs("\n", false, true) ?>
 	</ol>

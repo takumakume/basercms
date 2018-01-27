@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer');
 
 const sceg = require('gulp-sceg');
 
-const BROWSER_SYNC_PROXY = 'localhost:8888';
+const BROWSER_SYNC_PROXY = 'localhost';
 
 const CSS_DEV_DIR = 'css/';
 const CSS_MAIN_SCSS_FILENAME = 'style.scss';
@@ -48,6 +48,7 @@ gulp.task('watch', () => {
 		proxy: BROWSER_SYNC_PROXY,
 	});
 	gulp.watch([`${CSS_DEV_DIR}**/*.scss`], ['css']);
+	gulp.watch([`./guide/elements/*`], ['guide']);
 });
 
 gulp.task('build', ['css']);
