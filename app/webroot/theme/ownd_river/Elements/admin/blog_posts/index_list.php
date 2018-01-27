@@ -44,6 +44,9 @@
 	</div>
 <?php endif ?>
 
+<!-- list-num -->
+<?php $this->BcBaser->element('list_num') ?>
+
 <!-- pagination -->
 <?php $this->BcBaser->element('pagination') ?>
 
@@ -105,5 +108,4 @@
 
 <!-- pagination -->
 <?php $this->BcBaser->element('pagination') ?>
-<!-- list-num -->
-<?php $this->BcBaser->element('list_num') ?>
+
