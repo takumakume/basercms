@@ -150,7 +150,7 @@ $(function(){
 				<?php echo $this->BcForm->input($userModel . '.password', array('type' => 'password', 'tabindex' => 2)) ?>
 			</div>
 			<div class="submit bca-login-form-btn-group">
-				<?php echo $this->BcForm->button('ログイン', array('type' => 'submit', 'div' => false, 'class' => 'bca-btn--login', 'id' => 'BtnLogin', 'tabindex' => 4)) ?>
+				<?php echo $this->BcForm->button('ログイン', array('type' => 'submit', 'div' => false, 'class' => 'bca-btn--login bca-btn', 'data-bca-btn-type' => 'login', 'id' => 'BtnLogin', 'tabindex' => 4)) ?>
 			</div>
 			<div class="clear login-etc bca-login-form-ctrl">
 				<div class="bca-login-form-checker">
