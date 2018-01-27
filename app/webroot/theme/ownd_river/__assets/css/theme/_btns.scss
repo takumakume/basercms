@@ -38,55 +38,55 @@
 	@include btn-common;
 
 	// 公開
-	&--publish {
+	&[data-bca-btn-type=publish] {
 		@extend .#{$fa-css-prefix}-play-circle-o;
 		@include btn-common;
 	}
 
 	// 非公開
-	&--unpublish {
+	&[data-bca-btn-type=unpublish] {
 		@extend .#{$fa-css-prefix}-pause-circle-o;
 		@include btn-common;
 	}
 
 	// 確認
-	&--preview {
+	&[data-bca-btn-type=preview] {
 		@extend .#{$fa-css-prefix}-eye;
 		@include btn-common;
 	}
 
 	// 編集
-	&--edit {
+	&[data-bca-btn-type=edit] {
 		@extend .#{$fa-css-prefix}-pencil;
 		@include btn-common;
 	}
 
 	// 複製
-	&--copy {
+	&[data-bca-btn-type=copy] {
 		@extend .#{$fa-css-prefix}-copy;
 		@include btn-common;
 	}
 
 	// 削除
-	&--delete {
+	&[data-bca-btn-type=delete] {
 		@extend .#{$fa-css-prefix}-trash;
 		@include btn-common;
 	}
 
 	// お気に入り
-	&--favorite {
+	&[data-bca-btn-type=favorite] {
 		@extend .#{$fa-css-prefix}-heart;
 		@include btn-common;
 	}
 
 	// メニューアイテム
-	&--menuitem {
+	&[data-bca-btn-type=menuitem] {
 		@extend .#{$fa-css-prefix}-angle-right;
 		@include btn-common;
 	}
 
 	// 追加
-	&--add {
+	&[data-bca-btn-type=add] {
 		@extend .#{$fa-css-prefix}-plus-circle;
 		@include btn-common;
 		color: #fff;
@@ -104,25 +104,25 @@
 	}
 
 	// ヘルプ
-	&--help {
+	&[data-bca-btn-type=help] {
 		@extend .#{$fa-css-prefix}-life-ring;
 		@include btn-common;
 	}
 
 	// 制限（鍵)
-	&--permission {
+	&[data-bca-btn-type=permission] {
 		@extend .#{$fa-css-prefix}-lock;
 		@include btn-common;
 	}
 
 	// HOME
-	&--home {
+	&[data-bca-btn-type=home] {
 		@extend .#{$fa-css-prefix}-home;
 		@include btn-common;
 	}
 
 	// HOME
-	&--login {
+	&[data-bca-btn-type=login] {
 		@include btn-common;
 		color: $color_lightest;
 		$color_darken: darken($color_primary, 5%);
@@ -139,7 +139,7 @@
 	// ===========================
 
 	// large
-	&--large {
+	&[data-bca-btn-size=lg] {
 		font-size: 1.1rem; // 16px *
 		//padding: .5em .8em .4em;
 		&::before {
@@ -149,7 +149,7 @@
 	}
 
 	// small
-	&--small {
+	&[data-bca-btn-size=sm] {
 		font-size:14px;
 		font-size: 0.91rem;
 		padding: .4em .8em .5em;
@@ -161,7 +161,7 @@
 	}
 
 	// xsmall
-	&--xsmall {
+	&[data-bca-btn-size=xs] {
 		font-size:12px;
 		font-size: 0.78rem;
 		padding: .4em .8em .5em;
@@ -176,7 +176,7 @@
 	// ===========================
 
 	// プライマリー
-	&--primary {
+	&[data-bca-btn-status=primary] {
 		@include btn-common;
 		color: #fff;
 		background: $color_primary;
