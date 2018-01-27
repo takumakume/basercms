@@ -337,7 +337,7 @@ h2 {}
 				<div id="helptextSmtpTls" class="helptext">SMTPサーバーがTLS暗号化を利用する場合指定します。</div>
 				</div>
 				<p>
-					<?php echo $this->BcForm->button('メール送信テスト', array('type' => 'button', 'class' => 'button-small', 'id' => 'BtnCheckSendmail')) ?>　<span id=ResultCheckSendmail></span>
+					<?php echo $this->BcForm->button('メール送信テスト', array('type' => 'button', 'class' => 'button-small bca-btn', 'id' => 'BtnCheckSendmail')) ?>　<span id=ResultCheckSendmail></span>
 					<?php echo $this->BcBaser->img('admin/ajax-loader-s.gif', array('id' => 'AjaxLoaderCheckSendmail', 'style' => 'display:none')) ?>
 				</p>
 			</td>
@@ -347,7 +347,7 @@ h2 {}
 </div>
 
 <div class="submit">
-<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
 </div>
 
 <?php echo $this->BcForm->end() ?>

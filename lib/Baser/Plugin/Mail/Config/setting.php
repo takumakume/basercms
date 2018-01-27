@@ -14,9 +14,9 @@
  * システムナビ
  */
 $config['BcApp.adminNavigation'] = [
-	'Plugin' => [
+	'Plugins' => [
 		'menus' => [
-			'Mail' => ['title' => 'メール設定', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_configs', 'action' => 'form']],
+			'MailConfigs' => ['title' => 'メール基本設定', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_configs', 'action' => 'form']],
 		]
 	]
 ];
@@ -30,7 +30,7 @@ foreach ($mailContents as $mailContent) {
 		'title' => $content['title'],
 		'type' => 'mail-content',
 		'menus' => [
-			'MailMessages' . $mail['id'] => ['title' => '受信メール一覧', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_messages', 'action' => 'index', $mail['id']]],
+			'MailMessages' . $mail['id'] => ['title' => '受信メール', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_messages', 'action' => 'index', $mail['id']]],
 			'MailFields' . $mail['id'] => ['title' => 'フィールド', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_fields', 'action' => 'index', $mail['id']]],
 			'MailContents' . $mail['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_contents', 'action' => 'edit', $mail['id']]],
 			'Mail' . $mail['id'] => ['title' => '公開ページ', 'url' => $content['url']],

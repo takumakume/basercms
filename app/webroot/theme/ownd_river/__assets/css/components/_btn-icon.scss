@@ -1,0 +1,170 @@
+//
+// # ボタンアイコン（アイコンのみ/テキストなし)
+//
+@import '../vender/Font-Awesome/font-awesome';
+
+.bca-btn-icon {
+
+	@mixin bca-btn-icon-common {
+		display: inline-block;
+		width:1em;
+		font-size: 1.8rem;
+		line-height:1;
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+
+		&::before {
+			@extend .#{$fa-css-prefix};
+			color: $color_primary;
+			transition: 0.2;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $color_secondary;
+			&:before {
+				color: $color_secondary;
+			}
+		}
+	}
+
+	// デフォルトボタン
+	@include bca-btn-icon-common;
+
+	// 公開
+	&[data-bca-btn-type=publish] {
+		@extend .#{$fa-css-prefix}-play-circle-o;
+		@include bca-btn-icon-common;
+	}
+
+	// 非公開
+	&[data-bca-btn-type=unpublish] {
+		@extend .#{$fa-css-prefix}-pause-circle-o;
+		@include bca-btn-icon-common;
+	}
+
+	// 確認
+	&[data-bca-btn-type=preview] {
+		@extend .#{$fa-css-prefix}-eye;
+		@include bca-btn-icon-common;
+	}
+
+	// 編集
+	&[data-bca-btn-type=edit] {
+		@extend .#{$fa-css-prefix}-pencil;
+		@include bca-btn-icon-common;
+	}
+
+	// 複製
+	&[data-bca-btn-type=copy] {
+		@extend .#{$fa-css-prefix}-copy;
+		@include bca-btn-icon-common;
+	}
+
+	// 削除
+	&[data-bca-btn-type=delete] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include bca-btn-icon-common;
+	}
+
+	// お気に入り
+	&[data-bca-btn-type=favorite] {
+		@extend .#{$fa-css-prefix}-heart;
+		@include bca-btn-icon-common;
+	}
+
+	// メニューアイテム
+	&[data-bca-btn-type=menuitem] {
+		@extend .#{$fa-css-prefix}-angle-right;
+		@include bca-btn-icon-common;
+	}
+
+	// 追加
+	&[data-bca-btn-type=add] {
+		@extend .#{$fa-css-prefix}-plus-circle;
+		@include bca-btn-icon-common;
+	}
+
+	// ヘルプ
+	&[data-bca-btn-type=help] {
+		@extend .#{$fa-css-prefix}-life-ring;
+		@include bca-btn-icon-common;
+	}
+
+	// 制限（鍵)
+	&[data-bca-btn-type=permission] {
+		@extend .#{$fa-css-prefix}-lock;
+		@include bca-btn-icon-common;
+	}
+
+	// HOME
+	&[data-bca-btn-type=home] {
+		@extend .#{$fa-css-prefix}-home;
+		@include bca-btn-icon-common;
+	}
+
+	// HOME
+	&[data-bca-btn-type=login] {
+		@include bca-btn-icon-common;
+		color: $color_lightest;
+		$color_darken: darken($color_primary, 5%);
+		border: 1px solid $color_darken;
+		background-image: linear-gradient($color_primary 10%, $color_darken 100%);
+		&:hover,
+		&:focus {
+			color: $color_lightest;
+			background-image: linear-gradient($color_darken 10%, $color_darken 100%);
+		}
+	}
+
+	// サイズ
+	// ===========================
+
+	// large
+	&[data-bca-btn-size=lg] {
+		font-size: 2.4rem;
+		&::before {
+			@extend .#{$fa-css-prefix};
+		}
+	}
+
+	// small
+	&[data-bca-btn-size=sm] {
+		font-size: 1.4rem;
+		&::before {
+			@extend .#{$fa-css-prefix};
+		}
+	}
+
+	// xsmall
+	&[data-bca-btn-size=xs] {
+		font-size:1.2rem;
+		&::before {
+			@extend .#{$fa-css-prefix};
+		}
+	}
+
+	// ステータス
+	// ===========================
+
+	// プライマリー
+	&[data-bca-btn-status=primary] {
+		@include bca-btn-icon-common;
+		color: #fff;
+		background: $color_primary;
+		&::before {
+			@extend .#{$fa-css-prefix};
+			color: #fff;
+		}
+		&:hover {
+			background: $color_secondary;
+		}
+	}
+
+	// disabled
+	&[disabled] {
+		color: #aaa;
+		border-color: #ddd;
+		//background: #eee;
+	}
+}

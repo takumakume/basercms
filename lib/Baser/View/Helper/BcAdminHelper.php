@@ -65,6 +65,10 @@ class BcAdminHelper extends AppHelper {
 		return false;
 	}
 
+/**
+ * JSON形式でメニューデータを取得する
+ * @return string
+ */
 	public function getJsonMenu() {
 		$adminMenuGroups = Configure::read('BcApp.adminNavigation');
 		$currentSiteId = $this->Session->read('ContentsAdminIndex.named.site_id');
@@ -89,8 +93,15 @@ class BcAdminHelper extends AppHelper {
 			$currentUrl .= '?' . $params;
 		}
 		$contents = $adminMenuGroups['Contents'];
-		unset($adminMenuGroups['Contents']);
-		$adminMenuGroups = $contents + $adminMenuGroups;
+		$systems = $adminMenuGroups['Systems'];
+		$plugins = $adminMenuGroups['Plugins'];
+		unset($adminMenuGroups['Contents'], $adminMenuGroups['Systems'], $adminMenuGroups['Plugins']);
+		if($plugins) {
+			foreach($plugins['menus'] as $plugin) {
+				$systems['Plugin']['menus'][] = $plugin;
+			}
+		}
+		$adminMenuGroups = $contents + $adminMenuGroups + $systems;
 		$Permission = ClassRegistry::init('Permission');
 		$covertedAdminMenuGroups = [];
 		foreach($adminMenuGroups as $group => $adminMenuGroup) {
