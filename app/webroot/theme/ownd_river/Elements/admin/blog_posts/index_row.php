@@ -38,24 +38,24 @@ $class = ' class="' . implode(' ', $classies) . '"';
 
 
 <tr<?php echo $class; ?>>
-	<td><?php // 選択 ?>
+	<td class="bca-table-listup__tbody-td"><?php // 選択 ?>
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['BlogPost']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogPost']['id'])) ?>
 		<?php endif ?>
 	</td>
-	<td><?php // No ?><?php echo $data['BlogPost']['no']; ?></td>
-	<td><?php // アイキャッチ＋タイトル ?>
+	<td class="bca-table-listup__tbody-td"><?php // No ?><?php echo $data['BlogPost']['no']; ?></td>
+	<td class="bca-table-listup__tbody-td"><?php // アイキャッチ＋タイトル ?>
 		<div class="eye_catch"><?php echo $this->BcUpload->uploadImage('BlogPost.eye_catch',  $data['BlogPost']['eye_catch'], array('imgsize' => 'mobile_thumb')) ?></div>
 		<?php $this->BcBaser->link($data['BlogPost']['name'], array('action' => 'edit', $data['BlogContent']['id'], $data['BlogPost']['id'])) ?>
 	</td>
-	<td><?php // カテゴリ ?>
+	<td class="bca-table-listup__tbody-td"><?php // カテゴリ ?>
 		<?php if (!empty($data['BlogCategory']['title'])): ?>
 			<?php echo $data['BlogCategory']['title']; ?>
 		<?php endif; ?>
 	</td>
 
 	<?php if ($data['BlogContent']['tag_use'] ): ?>
-	<td><?php // タグ ?>
+	<td class="bca-table-listup__tbody-td"><?php // タグ ?>
 		<?php if (!empty($data['BlogTag'])): ?>
 		<?php $tags = Hash::extract($data['BlogTag'], '{n}.name') ?>
 		<span class="tag"><?php echo implode('</span><span class="tag">', $tags) ?></span>
@@ -64,7 +64,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 	<?php endif ?>
 
 	<?php if ($data['BlogContent']['comment_use']): ?>
-		<td><?php // コメント ?>
+		<td class="bca-table-listup__tbody-td"><?php // コメント ?>
 			<?php $comment = count($data['BlogComment']) ?>
 			<?php if ($comment): ?>
 				<?php $this->BcBaser->link($comment, array('controller' => 'blog_comments', 'action' => 'index', $data['BlogContent']['id'], $data['BlogPost']['id'])) ?>
@@ -74,11 +74,11 @@ $class = ' class="' . implode(' ', $classies) . '"';
 		</td>
 	<?php endif ?>
 
-	<td><?php // 作者 ?>
+	<td class="bca-table-listup__tbody-td"><?php // 作者 ?>
 		<?php echo $this->BcBaser->getUserName($data['User']) ?>
 	</td>
 
-	<td><?php // 投稿日 ?>
+	<td class="bca-table-listup__tbody-td"><?php // 投稿日 ?>
 		<?php echo $this->BcTime->format('Y-m-d', $data['BlogPost']['posts_date']); ?>
 	</td>
 
@@ -91,7 +91,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 		<?php echo $this->BcTime->format('Y-m-d', $data['BlogPost']['modified']); ?>
 	</td>
 */ ?>
-	<td class="row-tools bca-table-listup-actions"><?php // アクション ?>
+	<td class="row-tools bca-table-listup__tbody-td bca-table-listup-actions"><?php // アクション ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_unpublish.png', array('alt' => '非公開', 'class' => 'btn')), array('action' => 'ajax_unpublish', $data['BlogContent']['id'], $data['BlogPost']['id']), array('title' => '非公開', 'class' => 'btn-unpublish')) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_publish.png', array('alt' => '公開', 'class' => 'btn')), array('action' => 'ajax_publish', $data['BlogContent']['id'], $data['BlogPost']['id']), array('title' => '公開', 'class' => 'btn-publish')) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_check.png', array('alt' => '確認', 'class' => 'btn')), $this->request->params['Content']['url'] . '/archives/' . $data['BlogPost']['no'], array('title' => '確認', 'target' => '_blank')) ?>
