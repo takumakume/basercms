@@ -40,87 +40,87 @@
 //	border-top: 1px dotted #DDD;
 //	border-bottom: 1px dotted #DDD;
 //}
-.contents-body .list-table td.eye_catch img {
-	max-width: 100px;
-}
-.contents-body .list-table td a{
-	color:#333;
-	text-decoration:underline;
-}
-.contents-body .list-table td a:hover{
-	text-decoration:none;
-}
-.contents-body .list-table tr.odd{
-	background-color: #FFF;
-}
-.contents-body .list-table tr.even{
-	background-color:#FAFAFA;
-}
-.contents-body .list-table tr.disablerow {
-	background-color:#CCC;
-}
-.contents-body .list-table tr.currentrow {
-	background-color:#3392e3;
-	color:#fff;
-}
-.contents-body .list-table tr.currentrow td small {
-	color:#FFF;
-}
-.contents-body .list-table tr.activerow{
-	background-color:#C30;
-	color:#fff;
-}
-.contents-body .list-table tr.activerow a{
-	color:#fff;
-}
-.contents-body .list-table tr.hoverrow{
-	background-color:#ffffde;
-	color:#333;
-}
-.contents-body .list-table tr.hoverrow a{
-	color:#333;
-}
-.contents-body .list-table tr.selectedrow{
-	background-color:#2F6FAB;
-	color:#fff;
-}
-.contents-body .list-table tr.selectedrow small,
-.contents-body .list-table tr.selectedrow a{
-	color:#fff;
-}
-.list-table .no-data {
-	padding:20px 0;
-	text-align: center;
-}
-.contents-body .list-table .tag {
-	border:1px solid #CCC;
-	font-weight: normal;
-	padding:2px 3px;
-	font-size: 10px;
-	background-color: #FFF;
-	vertical-align:baseline;
-	margin-left:3px;
-	margin-right:1px;
-	color:#333;
-}
-.list-tool {
-	white-space:nowrap;
-}
+// .contents-body .list-table td.eye_catch img {
+// 	max-width: 100px;
+// }
+// .contents-body .list-table td a{
+// 	color:#333;
+// 	text-decoration:underline;
+// }
+// .contents-body .list-table td a:hover{
+// 	text-decoration:none;
+// }
+// .contents-body .list-table tr.odd{
+// 	background-color: #FFF;
+// }
+// .contents-body .list-table tr.even{
+// 	background-color:#FAFAFA;
+// }
+// .contents-body .list-table tr.disablerow {
+// 	background-color:#CCC;
+// }
+// .contents-body .list-table tr.currentrow {
+// 	background-color:#3392e3;
+// 	color:#fff;
+// }
+// .contents-body .list-table tr.currentrow td small {
+// 	color:#FFF;
+// }
+// .contents-body .list-table tr.activerow{
+// 	background-color:#C30;
+// 	color:#fff;
+// }
+// .contents-body .list-table tr.activerow a{
+// 	color:#fff;
+// }
+// .contents-body .list-table tr.hoverrow{
+// 	background-color:#ffffde;
+// 	color:#333;
+// }
+// .contents-body .list-table tr.hoverrow a{
+// 	color:#333;
+// }
+// .contents-body .list-table tr.selectedrow{
+// 	background-color:#2F6FAB;
+// 	color:#fff;
+// }
+// .contents-body .list-table tr.selectedrow small,
+// .contents-body .list-table tr.selectedrow a{
+// 	color:#fff;
+// }
+// .list-table .no-data {
+// 	padding:20px 0;
+// 	text-align: center;
+// }
+// .contents-body .list-table .tag {
+// 	border:1px solid #CCC;
+// 	font-weight: normal;
+// 	padding:2px 3px;
+// 	font-size: 10px;
+// 	background-color: #FFF;
+// 	vertical-align:baseline;
+// 	margin-left:3px;
+// 	margin-right:1px;
+// 	color:#333;
+// }
+// .list-tool {
+// 	white-space:nowrap;
+// }
 
-.row-tools{
-	white-space:nowrap;
-}
-.row-tools img{
-	vertical-align: middle;
-}
-.list-tool input,
-.list-tool select {
-	font-size: 12px;
-}
-.list-tool button {
-	padding:0px 7px;
-	cursor: pointer;
-}
+// .row-tools{
+// 	white-space:nowrap;
+// }
+// .row-tools img{
+// 	vertical-align: middle;
+// }
+// .list-tool input,
+// .list-tool select {
+// 	font-size: 12px;
+// }
+// .list-tool button {
+// 	padding:0px 7px;
+// 	cursor: pointer;
+// }
 
 // ====================================
 
@@ -134,33 +134,32 @@
 		margin-bottom:15px;
 	}
 
-	thead {
-		th {
-			vertical-align:middle;
-			color: #fff;
-			background-color: $color_secondary;
-			a {
-				color: #fff;
-				img {
-					vertical-align:middle;
-				}
-			}
-		}
+	&__thead-th {
+		vertical-align:middle;
+		color: #fff;
+		background-color: $color_secondary;
 	}
-	tbody {
-		th,td {
+
+
+	&__a {
+		color: #fff;
+	}
+	&__img {
+		vertical-align:middle;
+	}
+	&__tbody-th,&__tbody-td {
 			border: none;
 			border-bottom: 1px solid #ccc !important;
-		}
-		td {
-			padding:10px 20px;
-		}
-		.disablerow {
-			th,td {
-				background-color: $color_background_menu;
-			}
+	}
+	.disablerow {
+		th,td {
+			background-color: $color_background_menu;
 		}
 	}
+	&__tbody-td {
+		padding:10px 20px;
+	}
+
 	.eye_catch {
 		float: left;
 		margin-right:10px;

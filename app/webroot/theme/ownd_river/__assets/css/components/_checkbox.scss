@@ -1,0 +1,28 @@
+.bca-checkbox{
+	// filter: alpha(opacity=0);
+	// -moz-opacity:0;
+	// opacity:0;
+	// -webkit-appearance: none;
+	// appearance: none;
+	// position: absolute;
+	width: 30px;
+	&:checked{
+		
+	}
+	&:focus{
+		
+	}
+}
+
+.bca-checkbox-icon{
+	content: "";
+	vertical-align: middle;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	border: 2px solid #BBBBBB;
+	border-radius: 2px;
+	box-sizing: border-box;
+	margin-top: -3px;
+	margin-right: 5px;
+}

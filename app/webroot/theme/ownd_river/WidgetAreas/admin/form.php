@@ -30,7 +30,7 @@ $this->BcBaser->js('admin/widget_areas/form', false, ['id' => 'AdminWidgetFormSc
 
 <?php echo $this->BcForm->label('WidgetArea.name', 'ウィジェットエリア名') ?>&nbsp;
 <?php echo $this->BcForm->input('WidgetArea.name', array('type' => 'text', 'size' => 40, 'autofocus' => true)) ?>&nbsp;
-<span class="submit"><?php echo $this->BcForm->end(array('label' => 'エリア名を保存する', 'div' => false, 'class' => 'button btn-red', 'id' => 'WidgetAreaUpdateTitleSubmit')) ?></span>
+<span class="submit"><?php echo $this->BcForm->end(array('label' => 'エリア名を保存する', 'div' => false, 'class' => 'button btn-red bca-btn', 'id' => 'WidgetAreaUpdateTitleSubmit', 'data-bca-btn-type' => 'save')) ?></span>
 <?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'WidgetAreaUpdateTitleLoader')) ?>
 <?php echo $this->BcForm->error('WidgetArea.name') ?>
 
@@ -148,7 +148,7 @@ $this->BcBaser->js('admin/widget_areas/form', false, ['id' => 'AdminWidgetFormSc
 								<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'WidgetUpdateWidgetLoader' . $widget[$key]['id'], 'class' => 'loader')) ?>
 								<?php echo $this->BcForm->input($key . '.use_title', array('type' => 'checkbox', 'label' => 'タイトルを表示', 'class' => 'use_title')) ?>
 								<?php echo $this->BcForm->input($key . '.status', array('type' => 'checkbox', 'label' => '利用する', 'class' => 'status')) ?>
-								<?php echo $this->BcForm->end(array('label' => '保存', 'div' => false, 'id' => 'WidgetUpdateWidgetSubmit' . $widget[$key]['id'], 'class' => 'button')) ?>
+								<?php echo $this->BcForm->end(array('label' => '保存', 'div' => false, 'id' => 'WidgetUpdateWidgetSubmit' . $widget[$key]['id'], 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
 							</div>
 						</div>
 		<?php endforeach; ?>

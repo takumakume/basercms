@@ -72,11 +72,12 @@
 
 
 .bca-pagination {
-	float: right;
+	//float: right;
 	//margin-top:10px;
 	margin-bottom: 10px;
 	padding-right: 0;
 	line-height: 32px;
+	text-align: center;
 
 	.bca-page-numbers {
 		display: inline-block;
