@@ -9987,6 +9987,19 @@ table.cake-sql-log tr td {
   margin-top: -3px;
   margin-right: 5px; }
 
+.bca-label {
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #FFF;
+  background: #444;
+  margin: .5em;
+  padding: 0 .5em;
+  line-height: 2; }
+  .bca-label[data-bca-label-type="required"] {
+    background: #E00; }
+  .bca-label[data-bca-label-type="optional"] {
+    background: #00E; }
+
 .bt-content li {
   padding: 0 20px;
   margin: 5px 0;
