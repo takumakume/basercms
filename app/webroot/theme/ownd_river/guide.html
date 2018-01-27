@@ -378,11 +378,67 @@
 									<section>
 										<h2>ラジオボタン</h2>
 										<h5>Preview</h5>
-										<input type="radio" class="bca-radio">
+										<input type="radio" class="bca-radio" name="radio01" id="radio01-1">
+<label for="radio01-1">公開しない</label>
+<input type="radio" class="bca-radio" name="radio01" id="radio01-2">
+<label for="radio01-2">公開しない</label>
 
 										<h5>Code</h5>
-										<pre class="brush: html;"><input type="radio" class="bca-radio"></pre>
+										<pre class="brush: html;"><input type="radio" class="bca-radio" name="radio01" id="radio01-1">
+<label for="radio01-1">公開しない</label>
+<input type="radio" class="bca-radio" name="radio01" id="radio01-2">
+<label for="radio01-2">公開しない</label></pre>
 										<small><p>基本ラジオボタン</p>
+</small>
+									</section>
+							</section>
+							<section>
+								<h1><a id="sceg-cat-checkbox">checkbox</a></h1>
+									<section>
+										<h2>チェックボックス</h2>
+										<h5>Preview</h5>
+										<input type="checkbox" name="data[ListTool][batch_targets][1]" class="batch-targets bca-checkbox" value="1" id="ListToolBatchTargets1">
+
+<hr>
+
+<span style="white-space: nowrap">
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="1" id="ContentExcludeSearch" class="bca-checkbox">
+<label for="ContentExcludeSearch">チェックボックス</label>
+</span>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><input type="checkbox" name="data[ListTool][batch_targets][1]" class="batch-targets bca-checkbox" value="1" id="ListToolBatchTargets1">
+
+<hr>
+
+<span style="white-space: nowrap">
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="1" id="ContentExcludeSearch" class="bca-checkbox">
+<label for="ContentExcludeSearch">チェックボックス</label>
+</span></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+							</section>
+							<section>
+								<h1><a id="sceg-cat-select">select</a></h1>
+									<section>
+										<h2>セレクトボックス</h2>
+										<h5>Preview</h5>
+										<select name="data[Content][layout_template]" id="ContentLayoutTemplate" class="bca-select">
+<option value="">セレクトボックス</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><select name="data[Content][layout_template]" id="ContentLayoutTemplate" class="bca-select">
+<option value="">セレクトボックス</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select></pre>
+										<small><p>ページタイトル</p>
 </small>
 									</section>
 							</section>
