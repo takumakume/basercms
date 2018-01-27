@@ -14,23 +14,21 @@
  * システムナビ
  */
 $config['BcApp.adminNavigation'] = [
+	'Plugins' => [
+		'menus' => [
+			'UploaderConfigs' => ['title' => 'アップローダー基本設定', 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_configs', 'action' => 'index']],
+		]
+	],
 	'Contents' => [
 		'Uploader' => [
 			'title' => __d('baser', 'アップロード管理'),
 			'type' => 'contents',
 			'menus' => [
-				['title' => __d('baser', 'アップロードファイル一覧'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_files', 'action' => 'index']],
-				['title' => __d('baser', 'カテゴリ一覧'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_categories', 'action' => 'index']],
-				['title' => __d('baser', 'カテゴリ登録'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_categories', 'action' => 'add']],
-				['title' => __d('baser', '基本設定'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_configs', 'action' => 'index']],
+				'UplaoderFiles' => ['title' => __d('baser', 'アップロードファイル'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_files', 'action' => 'index']],
+				'UploaderCategories' => ['title' => __d('baser', 'カテゴリ'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_categories', 'action' => 'index']],
 			]
 		],
 	],
-	'Plugin' => [
-		'menus' => [
-			'Uploader' => ['title' => 'アップロードファイル一覧', 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'uploader_files', 'action' => 'index']],
-		]
-	]
 ];
 // @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
 $config['BcApp.adminNavi.uploader'] = [

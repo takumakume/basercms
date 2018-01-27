@@ -77,7 +77,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 <?php echo $this->BcForm->hidden('Content.main_site_content_id') ?>
 
 
-<div id="ContentsFormTabs">
+<div id="ContentsFormTabs0">
 	<ul>
 		<li><a href="#BasicSetting">基本設定</a></li>
 		<li><a href="#OptionalSetting">オプション</a></li>
