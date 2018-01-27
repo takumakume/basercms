@@ -13,7 +13,7 @@
 /**
  * システムナビ
  */
-$config['BcApp.adminNavi'] = [
+$config['BcApp.adminNavigation'] = [
 	'Plugin' => [
 		'menus' => [
 			'Blog' => ['title' => 'ブログ設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
@@ -26,7 +26,7 @@ $blogContents = $BlogContent->find('all', ['recursive' => 0]);
 foreach ($blogContents as $blogContent) {
 	$blog = $blogContent['BlogContent'];
 	$content = $blogContent['Content'];
-	$config['BcApp.adminNavi.Contents.' . 'BlogContent' . $blog['id']] = [
+	$config['BcApp.adminNavigation.Contents.' . 'BlogContent' . $blog['id']] = [
 		'siteId' => $content['site_id'],
 		'title' => $content['title'],
 		'type' => 'blog-content',
@@ -40,6 +40,14 @@ foreach ($blogContents as $blogContent) {
 		]
 	];
 }
+// @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
+$config['BcApp.adminNavi.blog'] = [
+	'name' => 'ブログプラグイン',
+	'contents' => [
+		['name' => 'タグ一覧', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
+		['name' => 'タグ登録', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'add']],
+	]
+];
 
 $config['BcContents']['items']['Blog'] = [
 	'BlogContent'	=> [
