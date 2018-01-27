@@ -1,12 +1,13 @@
 @import '../vender/Font-Awesome/font-awesome';
 
 .bca-btn {
-	font-size: 1.4rem;
+	font-size: $button_font_size_medium;
+	box-sizing: border-box;
 
 	@mixin btn-common {
 		display: inline-block;
 		border-radius: 3px;
-		padding: 0.9558em 1em 0.76em;
+		padding: $button_padding_top 1em $button_padding_bottom;
 		line-height:1.2;
 		border: 1px solid #ccc;
 		cursor: pointer;
@@ -167,7 +168,7 @@
 
 	// large
 	&[data-bca-btn-size=lg] {
-		font-size: 1.1rem; // 16px *
+		font-size: $button_font_size_medium; // 16px *
 		//padding: .5em .8em .4em;
 		&::before {
 			@extend .#{$fa-css-prefix};
@@ -177,8 +178,8 @@
 
 	// small
 	&[data-bca-btn-size=sm] {
-		font-size:14px;
-		font-size: 0.91rem;
+		font-size: $button_font_size_small;
+		//font-size: 0.91rem;
 		padding: .4em .8em .5em;
 
 		&::before {
@@ -189,7 +190,7 @@
 
 	// xsmall
 	&[data-bca-btn-size=xs] {
-		font-size:12px;
+		font-size: $button_font_size_x_small;
 		font-size: 0.78rem;
 		padding: .4em .8em .5em;
 

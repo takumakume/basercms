@@ -89,13 +89,17 @@
 
 
 				<main id="Contents" class="bca-main">
-					<div class="cbb bca-main-inner">
 
-						<article id="ContentsBody" class="contents-body bca-main-body">
-							<div class="bca-main-body-header">
-								<?php $this->BcBaser->element('contents_menu') ?>
-								<h1 class="bca-main-body-header-title"><?php $this->BcBaser->contentsTitle() ?></h1>
+					<article id="ContentsBody" class="contents-body bca-main__body">
+
+						<div class="bca-main__header">
+							<h1 class="bca-main__header-title"><?php $this->BcBaser->contentsTitle() ?></h1>
+							<div class="bca-main__header-actions">
 								<?php $this->BcBaser->element('main_body_header_links'); ?>
+							</div>
+							<div class="bca-main__header-menu">
+								<?php $this->BcBaser->element('contents_menu') ?>
+							</div>
 							</div>
 
 							<?php if ($this->request->params['controller'] != 'installations' && !empty($this->BcBaser->siteConfig['first_access'])): ?>
@@ -121,13 +125,11 @@
 
 							<?php $this->BcBaser->content() ?>
 
-						<!-- / bca-main-body --></article>
+					<!-- / bca-main__body --></article>
 
 						<?php if (!empty($user)): ?>
-						<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link('▲ トップへ', '#Header') ?></div>
+					<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link('▲ トップへ', '#Header') ?></div>
 						<?php endif ?>
-
-						<!-- / .bca-main-inner --></div>
 
 				<!-- / .bca-main --></main>
 
