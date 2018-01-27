@@ -128,18 +128,34 @@
 .bca-table-listup {
 	border-top: 1px solid #ccc;
 	border-collapse: collapse;
-	width:100%;
+	width:auto;
+	min-width: 100%;
+	font-size: 1.3rem;
+
 	.bca-main-body & {
 		margin-top:15px;
 		margin-bottom:15px;
 	}
 
+	&__thead-th,
+	&__tbody-th,
+	&__tbody-td {
+		padding:1em 1em 1em 0.5em;
+	}
+
 	&__thead-th {
+		white-space: nowrap;
 		vertical-align:middle;
 		color: #fff;
 		background-color: $color_secondary;
+		// 選択
+		&--select {
+			padding:10px;
+			input {
+				margin: 0;
+			}
+		}
 	}
-
 
 	&__a {
 		color: #fff;
@@ -147,17 +163,52 @@
 	&__img {
 		vertical-align:middle;
 	}
-	&__tbody-th,&__tbody-td {
-			border: none;
-			border-bottom: 1px solid #ccc !important;
+	&__tbody-th,
+	&__tbody-td {
+		border: none;
+		border-bottom: 1px solid #ccc;
 	}
+
+	&__tbody-th {
+		white-space: nowrap;
+	}
+	&__tbody-td {
+		// 選択
+		&--select {
+			padding:10px;
+			input {
+				margin: 0;
+			}
+		}
+		// タイトル
+		&--title {
+			min-width:200px;
+			font-size:1.3rem;
+		}
+		// カテゴリ
+		&--category {
+			min-width:100px;
+		}
+		// タグ
+		&--tag {
+			min-width:100px;
+		}
+		// 日付
+		&--date {
+			white-space: nowrap;
+		}
+		// アクション
+		&--actions {
+			padding-left: 1rem;
+			padding-right:1rem;
+			white-space: nowrap;
+		}
+	}
+
 	.disablerow {
 		th,td {
 			background-color: $color_background_menu;
 		}
-	}
-	&__tbody-td {
-		padding:10px 20px;
 	}
 
 	.eye_catch {
