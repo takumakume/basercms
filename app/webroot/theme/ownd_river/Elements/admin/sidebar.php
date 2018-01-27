@@ -15,34 +15,34 @@
  */
 ?>
 
-<div id="SideBar" class="bca-navigations">
+<div id="SideBar" class="bca-nav">
 	<div id="FavoriteArea">
 		<?php $this->BcBaser->element('favorite_menu') ?>
 		<?php $this->BcBaser->element('permission') ?>
 	</div>
 
-	<nav class="bca-nav-main" data-js-tmpl="AdminMenu" hidden>
-		<h2 class="bca-nav-main-title">管理メニュー</h2>
-		<div class="bca-nav-sub" data-content-type="dashboard">
-			<h3 class="bca-nav-sub-title">
-				<a v-bind:href="baseURL" class="bca-nav-sub-title-label">ダッシュボード</a>
+	<nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
+		<h2 class="bca-nav__main-title">管理メニュー</h2>
+		<div class="bca-nav__sub" data-content-type="dashboard">
+			<h3 class="bca-nav__sub-title">
+				<a v-bind:href="baseURL" class="bca-nav__sub-title-label">ダッシュボード</a>
 			</h3>
 		</div>
-		<div v-for="content in contentList" class="bca-nav-sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
-			<h3 class="bca-nav-sub-title">
-				<a v-bind:href="baseURL + content.url" class="bca-nav-sub-title-label">{{ content.title }}</a>
+		<div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
+			<h3 class="bca-nav__sub-title">
+				<a v-bind:href="baseURL + content.url" class="bca-nav__sub-title-label">{{ content.title }}</a>
 			</h3>
-			<ul class="bca-nav-sub-list">
-				<li v-for="subContent in content.menus" class="bca-nav-sub-list-item" v-bind:data-sub-content-is-current="subContent.current">
+			<ul class="bca-nav__sub-list">
+				<li v-for="subContent in content.menus" class="bca-nav__sub-list-item" v-bind:data-sub-content-is-current="subContent.current">
 					<a v-bind:href="baseURL + subContent.url">
-						<span class="bca-nav-sub-list-item-title">{{ subContent.title }}</span>
+						<span class="bca-nav__sub-list-item-title">{{ subContent.title }}</span>
 					</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
 
-	<nav class="bca-nav-main" data-js-container="AdminMenu" hidden></nav>
+	<nav class="bca-nav__main" data-js-container="AdminMenu" hidden></nav>
 
 <?php if(!empty($this->BcBaser->siteConfig['admin_side_banner'])): ?>
 	<div id="BannerArea">

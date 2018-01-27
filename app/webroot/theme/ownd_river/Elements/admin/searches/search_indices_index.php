@@ -33,7 +33,7 @@ $types = BcUtil::unserialize($this->BcBaser->siteConfig['content_types']);
 		<?php echo $this->BcForm->input('SearchIndex.priority', array('type' => 'select', 'options' => $priorities, 'empty' => '指定なし')) ?></span>
 </p>
 <div class="button">
-	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_search.png', array('alt' => '検索', 'class' => 'btn')), "javascript:void(0)", array('id' => 'BtnSearchSubmit')) ?> 
-	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_clear.png', array('alt' => 'クリア', 'class' => 'btn')), "javascript:void(0)", array('id' => 'BtnSearchClear')) ?> 
+	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_search.png', array('alt' => '検索', 'class' => 'btn', 'hidden' => 'hidden')) . '検索', "javascript:void(0)", array('id' => 'BtnSearchSubmit', 'class' => 'bca-btn', 'data-bca-btn-type' => 'search')) ?>
+	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_clear.png', array('alt' => 'クリア', 'class' => 'btn', 'hidden' => 'hidden')) . 'クリア', "javascript:void(0)", array('id' => 'BtnSearchClear', 'class' => 'bca-btn', 'data-bca-btn-type' => 'clear')) ?>
 </div>
 <?php $this->BcForm->end() ?>
