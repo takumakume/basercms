@@ -127,10 +127,10 @@ $this->BcBaser->js('admin/users/edit', false);
 </div>
 
 <div class="submit section">
-	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
 <?php if ($editable): ?>
 	<?php if ($this->request->action == 'admin_edit' && $deletable): ?>
-			<?php $this->BcBaser->link('削除', array('action' => 'delete', $this->BcForm->value('User.id')), array('class' => 'submit-token button'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('User.name')), false); ?>
+			<?php $this->BcBaser->link('削除', array('action' => 'delete', $this->BcForm->value('User.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('User.name')), false); ?>
 	<?php endif; ?>
 <?php endif; ?>
 </div>
@@ -152,7 +152,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			</ul>
 		<?php endif ?>
 		<?php if ($this->Session->check('AuthAgent') || $this->BcBaser->isAdminUser()): ?>
-			<div class="submit"><?php echo $this->BcForm->button($this->request->data['UserGroup']['title'] . 'グループの初期値に設定', array('label' => 'グループ初期データに設定', 'id' => 'btnSetUserGroupDefault', 'class' => 'button')) ?></div>
+			<div class="submit"><?php echo $this->BcForm->button($this->request->data['UserGroup']['title'] . 'グループの初期値に設定', array('label' => 'グループ初期データに設定', 'id' => 'btnSetUserGroupDefault', 'class' => 'button bca-btn')) ?></div>
 		<?php endif ?>
 	</div>
 <?php endif ?>
