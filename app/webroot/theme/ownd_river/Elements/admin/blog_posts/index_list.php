@@ -36,19 +36,22 @@
 </div>
 -->
 
-<!-- 一括処理 -->
-<?php if ($this->BcBaser->isAdminUser()): ?>
-	<div class="bca-action-table-listup">
-		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
-		<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn bca-btn--small')) ?>
-	</div>
-<?php endif ?>
+<div class="bca-data-list__top">
+  <!-- 一括処理 -->
+  <?php if ($this->BcBaser->isAdminUser()): ?>
+    <div class="bca-action-table-listup">
+      <?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
+      <?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn bca-btn--small')) ?>
+    </div>
+  <?php endif ?>
 
-<!-- list-num -->
-<?php $this->BcBaser->element('list_num') ?>
-
-<!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
+  <div class="bca-data-list__sub">
+    <!-- list-num -->
+    <?php $this->BcBaser->element('list_num') ?>
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
+</div>
 
 <!-- list -->
 <table class="list-table bca-table-listup" id="ListTable">
@@ -106,6 +109,10 @@
 <p class="no-data">データが見つかりませんでした。</p>
 <?php endif; ?>
 
-<!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
 
+<div class="bca-data-list__bottom">
+  <div class="bca-data-list__sub">
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
+</div>

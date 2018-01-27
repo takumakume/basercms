@@ -28,4 +28,4 @@ $this->BcBaser->js(array(
 <div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
 <div id="AjaxChangePriorityUrl" class="display-none"><?php echo $this->BcBaser->url(array('action' => 'ajax_change_priority')) ?></div>
 <div id="SearchIndexOpen" class="display-none"><?php echo $this->BcForm->value('SearchIndex.open') ?></div>
-<div id="DataList"><?php $this->BcBaser->element('search_indices/index_list') ?></div>
+<div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('search_indices/index_list') ?></div>
