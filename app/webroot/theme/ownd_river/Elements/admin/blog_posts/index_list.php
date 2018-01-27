@@ -56,7 +56,7 @@
 <table class="list-table bca-table-listup" id="ListTable">
 <thead class="bca-table-listup__thead">
 	<tr>
-		<th class="list-tool bca-table-listup__thead-th"><?php // 一括選択 ?>
+		<th class="list-tool bca-table-listup__thead-th bca-table-listup__thead-th--select"><?php // 一括選択 ?>
 			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
 		</th>
 		<th class="bca-table-listup__thead-th"><?php // No ?>
