@@ -13,14 +13,6 @@
 /**
  * システムナビ
  */
-$config['BcApp.adminNavigation'] = [
-	'Plugin' => [
-		'menus' => [
-			'Blog' => ['title' => 'ブログ設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
-		]
-	]
-];
-
 $BlogContent = ClassRegistry::init('Blog.BlogContent');
 $blogContents = $BlogContent->find('all', ['recursive' => 0]);
 foreach ($blogContents as $blogContent) {
@@ -31,10 +23,10 @@ foreach ($blogContents as $blogContent) {
 		'title' => $content['title'],
 		'type' => 'blog-content',
 		'menus' => [
-			'BlogPostsAdd' . $blog['id'] => ['title' => '記事登録', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'add', $blog['id']]],
-			'BlogPosts' . $blog['id'] => ['title' => '記事一覧', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', $blog['id']]],
-			'BlogCategories' . $blog['id'] => ['title' => 'カテゴリ一覧', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_categories', 'action' => 'index', $blog['id']]],
-			'BlogComments' . $blog['id'] => ['title' => 'コメント一覧', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_comments', 'action' => 'index', $blog['id']]],
+			'BlogPosts' . $blog['id'] => ['title' => '記事', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', $blog['id']]],
+			'BlogCategories' . $blog['id'] => ['title' => 'カテゴリ', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_categories', 'action' => 'index', $blog['id']]],
+			'BlogTags' . $blog['id'] => ['title' => 'タグ', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
+			'BlogComments' . $blog['id'] => ['title' => 'コメント', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_comments', 'action' => 'index', $blog['id']]],
 			'BlogContentsEdit' . $blog['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_contents', 'action' => 'edit', $blog['id']]],
 			'Blog' . $blog['id'] => ['title' => '公開ページ', 'url' => $content['url']],
 		]

@@ -1,0 +1,17 @@
+.bca-label {
+	font-size: 1.2rem;
+	display: inline-block;
+	color: #FFF;
+	background: #444;
+	margin: .5em;
+	padding: 0 .5em;
+	line-height: 2;
+
+	&[data-bca-label-type="required"] {
+		background: #E00;
+	}
+
+	&[data-bca-label-type="optional"] {
+		background: #00E; // 仮
+	}
+}

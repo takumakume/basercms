@@ -86,7 +86,7 @@
 		</header>
 
 		<div id="Wrap" class="bca-container">
-			<div id="SideBar" class="bca-navigations">
+			<div id="SideBar" class="bca-nav">
 				<div id="FavoriteArea">
 					<nav id="FavoriteMenu" class="bca-nav-favorite">
 
@@ -146,28 +146,28 @@
 					</nav>
 				</div>
 
-				<nav class="bca-nav-main" data-js-tmpl="AdminMenu" hidden>
-					<h2 class="bca-nav-main-title">管理メニュー</h2>
-					<div class="bca-nav-sub" data-content-type="dashboard">
-						<h3 class="bca-nav-sub-title">
-							<a v-bind:href="baseURL" class="bca-nav-sub-title-label">ダッシュボード</a>
+				<nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
+					<h2 class="bca-nav__main-title">管理メニュー</h2>
+					<div class="bca-nav__sub" data-content-type="dashboard">
+						<h3 class="bca-nav__sub-title">
+							<a v-bind:href="baseURL" class="bca-nav__sub-title-label">ダッシュボード</a>
 						</h3>
 					</div>
-					<div v-for="content in contentList" class="bca-nav-sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
-						<h3 class="bca-nav-sub-title">
-							<a v-bind:href="baseURL + content.url" class="bca-nav-sub-title-label" v-html="content.title"></a>
+					<div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
+						<h3 class="bca-nav__sub-title">
+							<a v-bind:href="baseURL + content.url" class="bca-nav__sub-title-label" v-html="content.title"></a>
 						</h3>
-						<ul class="bca-nav-sub-list">
-							<li v-for="subContent in content.menus" class="bca-nav-sub-list-item" v-bind:data-sub-content-is-current="subContent.current">
+						<ul class="bca-nav__sub-list">
+							<li v-for="subContent in content.menus" class="bca-nav__sub-list-item" v-bind:data-sub-content-is-current="subContent.current">
 								<a v-bind:href="baseURL + subContent.url">
-									<span class="bca-nav-sub-list-item-title" v-html="content.title"></span>
+									<span class="bca-nav__sub-list-item-title" v-html="content.title"></span>
 								</a>
 							</li>
 						</ul>
 					</div>
 				</nav>
 
-				<nav class="bca-nav-main" data-js-container="AdminMenu" hidden></nav>
+				<nav class="bca-nav__main" data-js-container="AdminMenu" hidden></nav>
 
 				<div id="BannerArea">
 					<ul>
@@ -243,7 +243,8 @@
 									<section>
 										<h2>ボタン</h2>
 										<h5>Preview</h5>
-										<a href="#" class="bca-btn" data-bca-btn-type="publish">公開ボタン</a>
+										<a href="#" class="bca-btn">ボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="publish">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview">確認ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="edit">編集ボタン</a>
@@ -260,7 +261,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="login">ログインボタン</a>
 
 										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-type="publish">公開ボタン</a>
+										<pre class="brush: html;"><a href="#" class="bca-btn">ボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="publish">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview">確認ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="edit">編集ボタン</a>
@@ -281,7 +283,8 @@
 									<section>
 										<h2>ボタン（サイズ）</h2>
 										<h5>Preview</h5>
-										<a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="lg">公開ボタン</a>
+										<a href="#" class="bca-btn" data-bca-btn-size="lg">ボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="lg">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="lg">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="lg">確認ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="edit" data-bca-btn-size="lg">編集ボタン</a>
@@ -299,6 +302,7 @@
 
 <hr>
 
+<a href="#" class="bca-btn" data-bca-btn-size="sm">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="sm">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="sm">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="sm">確認ボタン</a>
@@ -317,6 +321,7 @@
 
 <hr>
 
+<a href="#" class="bca-btn" data-bca-btn-size="xs">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="xs">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="xs">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="xs">確認ボタン</a>
@@ -334,7 +339,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="login" data-bca-btn-size="xs">ログインボタン</a>
 
 										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="lg">公開ボタン</a>
+										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-size="lg">ボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="lg">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="lg">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="lg">確認ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="edit" data-bca-btn-size="lg">編集ボタン</a>
@@ -352,6 +358,7 @@
 
 <hr>
 
+<a href="#" class="bca-btn" data-bca-btn-size="sm">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="sm">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="sm">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="sm">確認ボタン</a>
@@ -370,6 +377,7 @@
 
 <hr>
 
+<a href="#" class="bca-btn" data-bca-btn-size="xs">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="xs">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="xs">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="xs">確認ボタン</a>
@@ -391,7 +399,8 @@
 									<section>
 										<h2>ボタン（ステータス）</h2>
 										<h5>Preview</h5>
-										<a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-status="primary">公開ボタン</a>
+										<a href="#" class="bca-btn" data-bca-btn-status="primary">ボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-status="primary">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-status="primary">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-status="primary">確認ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="edit" data-bca-btn-status="primary">編集ボタン</a>
@@ -408,7 +417,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="login" data-bca-btn-status="primary">ログインボタン</a>
 
 										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-status="primary">公開ボタン</a>
+										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-status="primary">ボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-status="primary">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-status="primary">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-status="primary">確認ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="edit" data-bca-btn-status="primary">編集ボタン</a>
@@ -423,6 +433,124 @@
 <a href="#" class="bca-btn" data-bca-btn-type="permission" data-bca-btn-status="primary">権限ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="home" data-bca-btn-status="primary">ホームボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="login" data-bca-btn-status="primary">ログインボタン</a></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+									<section>
+										<h2>ボタンアイコン</h2>
+										<h5>Preview</h5>
+										<a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home"></a>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home"></a></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+									<section>
+										<h2>ボタンアイコン</h2>
+										<h5>Preview</h5>
+										<a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home" data-bca-btn-size="lg"></a>
+<br>
+
+<a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home"></a>
+<br>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home" data-bca-btn-size="sm"></a>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission" data-bca-btn-size="lg"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home" data-bca-btn-size="lg"></a>
+<br>
+
+<a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home"></a>
+<br>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="edit" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="copy" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="delete" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="favorite" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="menuitem" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="add" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="permission" data-bca-btn-size="sm"></a>
+<a href="#" class="bca-btn-icon" data-bca-btn-type="home" data-bca-btn-size="sm"></a></pre>
 										<small><p>ページタイトル</p>
 </small>
 									</section>
@@ -490,16 +618,16 @@
 <input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxLgA" class="bca-checkbox">
 <label for="checkboxLgA" data-checkbox-size="lg" class="bca-checkbox-label"></label>
 
-<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxLgB" class="bca-checkbox">
-<label for="chckboxLgB" data-checkbox-size="lg" class="bca-checkbox-label">チェックボックス</label>
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（大）" value="2" id="chckboxLgB" class="bca-checkbox">
+<label for="chckboxLgB" data-checkbox-size="lg" class="bca-checkbox-label">チェックボックス（大）</label>
 
 <hr>
 
 <input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxSmA" class="bca-checkbox">
 <label for="checkboxSmA" data-checkbox-size="sm" class="bca-checkbox-label"></label>
 
-<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxSmB" class="bca-checkbox">
-<label for="chckboxSmB" data-checkbox-size="sm" class="bca-checkbox-label">チェックボックス</label>
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（小）" value="2" id="chckboxSmB" class="bca-checkbox">
+<label for="chckboxSmB" data-checkbox-size="sm" class="bca-checkbox-label">チェックボックス（小）</label>
 
 										<h5>Code</h5>
 										<pre class="brush: html;"><input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxA" class="bca-checkbox">
@@ -513,16 +641,16 @@
 <input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxLgA" class="bca-checkbox">
 <label for="checkboxLgA" data-checkbox-size="lg" class="bca-checkbox-label"></label>
 
-<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxLgB" class="bca-checkbox">
-<label for="chckboxLgB" data-checkbox-size="lg" class="bca-checkbox-label">チェックボックス</label>
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（大）" value="2" id="chckboxLgB" class="bca-checkbox">
+<label for="chckboxLgB" data-checkbox-size="lg" class="bca-checkbox-label">チェックボックス（大）</label>
 
 <hr>
 
 <input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxSmA" class="bca-checkbox">
 <label for="checkboxSmA" data-checkbox-size="sm" class="bca-checkbox-label"></label>
 
-<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxSmB" class="bca-checkbox">
-<label for="chckboxSmB" data-checkbox-size="sm" class="bca-checkbox-label">チェックボックス</label></pre>
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（小）" value="2" id="chckboxSmB" class="bca-checkbox">
+<label for="chckboxSmB" data-checkbox-size="sm" class="bca-checkbox-label">チェックボックス（小）</label></pre>
 										<small><p>ページタイトル</p>
 </small>
 									</section>
@@ -532,20 +660,116 @@
 									<section>
 										<h2>セレクトボックス</h2>
 										<h5>Preview</h5>
-										<select name="data[Content][layout_template]" id="ContentLayoutTemplate" class="bca-select">
+										<select name="selectbox" id="selectbox" class="bca-select">
 <option value="">セレクトボックス</option>
 <option value="selectAAA">selectAAA</option>
 <option value="selectBBB">selectBBB</option>
 <option value="selectCCC">selectCCC</option>
 </select>
 
+<hr>
+
+<select name="selectbox" data-select-size="lg" id="selectbox" class="bca-select">
+<option value="">セレクトボックス（大）</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select>
+
+<hr>
+
+<select name="selectbox" data-select-size="sm" id="selectbox" class="bca-select">
+<option value="">セレクトボックス（小）</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select>
+
 										<h5>Code</h5>
-										<pre class="brush: html;"><select name="data[Content][layout_template]" id="ContentLayoutTemplate" class="bca-select">
+										<pre class="brush: html;"><select name="selectbox" id="selectbox" class="bca-select">
 <option value="">セレクトボックス</option>
 <option value="selectAAA">selectAAA</option>
 <option value="selectBBB">selectBBB</option>
 <option value="selectCCC">selectCCC</option>
+</select>
+
+<hr>
+
+<select name="selectbox" data-select-size="lg" id="selectbox" class="bca-select">
+<option value="">セレクトボックス（大）</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select>
+
+<hr>
+
+<select name="selectbox" data-select-size="sm" id="selectbox" class="bca-select">
+<option value="">セレクトボックス（小）</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
 </select></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+							</section>
+							<section>
+								<h1><a id="sceg-cat-parts">parts</a></h1>
+									<section>
+										<h2>フォーム系使用パーツ 横並び（サイズ感確認用）</h2>
+										<h5>Preview</h5>
+										<input type="radio" class="bca-radio" name="radio-size-md" id="radio-size-md-1">
+<label for="radio-size-md-1">ラジオボタン（中）</label>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（中）" value="2" id="chckboxB" class="bca-checkbox">
+<label for="chckboxB" class="bca-checkbox-label">チェックボックス（中）</label>
+
+<select name="selectbox" id="selectbox-size-md" class="bca-select">
+<option value="">セレクトボックス（中）</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select>
+
+<a href="#" class="bca-btn">ボタン（中）</a>
+
+<hr>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><input type="radio" class="bca-radio" name="radio-size-md" id="radio-size-md-1">
+<label for="radio-size-md-1">ラジオボタン（中）</label>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（中）" value="2" id="chckboxB" class="bca-checkbox">
+<label for="chckboxB" class="bca-checkbox-label">チェックボックス（中）</label>
+
+<select name="selectbox" id="selectbox-size-md" class="bca-select">
+<option value="">セレクトボックス（中）</option>
+<option value="selectAAA">selectAAA</option>
+<option value="selectBBB">selectBBB</option>
+<option value="selectCCC">selectCCC</option>
+</select>
+
+<a href="#" class="bca-btn">ボタン（中）</a>
+
+<hr></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+							</section>
+							<section>
+								<h1><a id="sceg-cat-label">label</a></h1>
+									<section>
+										<h2>ラベル・リボン</h2>
+										<h5>Preview</h5>
+										<span class="bca-label">ラベルテキスト</span>
+<span class="bca-label" data-bca-label-type="required">必須</span>
+<span class="bca-label" data-bca-label-type="optional">任意</span>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><span class="bca-label">ラベルテキスト</span>
+<span class="bca-label" data-bca-label-type="required">必須</span>
+<span class="bca-label" data-bca-label-type="optional">任意</span></pre>
 										<small><p>ページタイトル</p>
 </small>
 									</section>
