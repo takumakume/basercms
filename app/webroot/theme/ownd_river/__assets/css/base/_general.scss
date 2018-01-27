@@ -188,9 +188,9 @@ input[type="radio"][disabled]{
     cursor:not-allowed; /* 禁止カーソル */
 }
 select {
-	font-size: 1.2em!important;
-	padding: 1px;
-    height:1.8em;
+	//font-size: 1.2em!important;
+	//padding: 1px;
+  //height:1.8em;
 }
 optgroup option{
 	padding-left:20px;
@@ -217,7 +217,7 @@ body{
 	text-align: left;
 	min-width: 960px;
 	width : expression(document.body.clientWidth < 940? "900px" : "auto"); /* IE */
-	line-height:2em;
+	line-height:1.4;
 	height:100%;
 }
 

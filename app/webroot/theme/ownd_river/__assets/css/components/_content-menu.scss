@@ -19,18 +19,17 @@
 //}
 
 .bca-content-menu {
-	float: right;
 	padding: 0;
-	ul {
-		li {
-			float: left;
-			margin-left: 1em;
-			font-size: 0.8rem;
-			padding:0;
-			background: none;
-			a {
-				color: $color_text_secondary;
-			}
-		}
+
+	&__item {
+		font-size: 0.8em;
+		display: inline-block;
+		margin-left: 1em;
+		padding:0;
+		background: none;
+	}
+
+	&__link {
+		color: $color_text_secondary;
 	}
 }

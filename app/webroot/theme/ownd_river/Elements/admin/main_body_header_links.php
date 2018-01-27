@@ -11,6 +11,9 @@
 			$confirmMessage = $link['confirm'];
 			unset($link['confirm']);
 		}
+		$link['class'] = 'bca-btn';
+		$link['data-bca-btn-type'] = $url['action'];
+		$link['data-bca-btn-size'] = 'sm';
 		?>
 		<?php $this->BcBaser->link($link['title'], $url, $link, $confirmMessage); ?>
 	<?php endforeach; ?>

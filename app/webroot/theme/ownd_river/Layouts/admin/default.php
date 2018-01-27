@@ -89,22 +89,26 @@
 
 
 				<main id="Contents" class="bca-main">
-					<div class="cbb bca-main-inner">
 
-						<article id="ContentsBody" class="contents-body bca-main-body">
-							<div class="bca-main-body-header">
-								<?php $this->BcBaser->element('contents_menu') ?>
-								<h1 class="bca-main-body-header-title"><?php $this->BcBaser->contentsTitle() ?></h1>
+					<article id="ContentsBody" class="contents-body bca-main__body">
+
+						<div class="bca-main__header">
+							<h1 class="bca-main__header-title"><?php $this->BcBaser->contentsTitle() ?></h1>
+							<div class="bca-main__header-actions">
 								<?php $this->BcBaser->element('main_body_header_links'); ?>
+							</div>
+							<div class="bca-main__header-menu">
+								<?php $this->BcBaser->element('contents_menu') ?>
+							</div>
 							</div>
 
 							<?php if ($this->request->params['controller'] != 'installations' && !empty($this->BcBaser->siteConfig['first_access'])): ?>
 								<div id="FirstMessage" class="em-box" style="text-align:left">
-									baserCMSへようこそ。<br />
+									<?php echo __d('baser', 'baserCMSへようこそ。') ?><br>
 									<ul style="font-weight:normal;font-size:14px;">
-										<li>画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。</li>
-										<li>よく使う機能については、画面右側にある「よく使う項目」をクリックして、お気に入りとして登録する事ができます。</li>
-										<li>まずは、画面上部のメニュー、「コンテンツ管理」よりWebサイトの全体像を確認しましょう。</li>
+										<li><?php echo __d('baser', '画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。') ?></li>
+										<li><?php echo __d('baser', 'よく使う機能については、画面右側にある「よく使う項目」をクリックして、お気に入りとして登録する事ができます。') ?></li>
+										<li><?php echo __d('baser', 'まずは、画面上部のメニュー、「コンテンツ管理」よりWebサイトの全体像を確認しましょう。') ?></li>
 									</ul>
 								</div>
 							<?php endif ?>
@@ -121,13 +125,11 @@
 
 							<?php $this->BcBaser->content() ?>
 
-						<!-- / bca-main-body --></article>
+					<!-- / bca-main__body --></article>
 
 						<?php if (!empty($user)): ?>
-						<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link('▲ トップへ', '#Header') ?></div>
+					<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link('▲ トップへ', '#Header') ?></div>
 						<?php endif ?>
-
-						<!-- / .bca-main-inner --></div>
 
 				<!-- / .bca-main --></main>
 

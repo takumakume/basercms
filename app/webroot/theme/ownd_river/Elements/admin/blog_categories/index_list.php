@@ -22,24 +22,24 @@
 		<tr>
 			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
 	<div>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__img', 'hidden' => 'hidden')) . '新規追加', array('action' => 'add', $blogContent['BlogContent']['id']),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn bca-table-listup__img', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add', $blogContent['BlogContent']['id']),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
 	</div>
 	<?php if ($this->BcBaser->isAdminUser()): ?>
 		<div>
-			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
-			<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => '削除'), 'empty' => '一括処理')) ?>
-			<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
+			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'))) ?>
+			<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'))) ?>
+			<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
 		</div>
 	<?php endif ?>
 </th>
-<th class="bca-table-listup__thead-th">NO</th>
-<th class="bca-table-listup__thead-th">ブログカテゴリ名
+<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
+<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリ名') ?>
 	<?php if ($this->BcBaser->siteConfig['category_permission']): ?>
-		<br />管理グループ
+		<br /><?php echo __d('baser', '管理グループ') ?>
 	<?php endif ?>
 </th>
-<th class="bca-table-listup__thead-th">ブログカテゴリタイトル</th>
-<th class="bca-table-listup__thead-th">登録日<br />更新日</th>
+<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリタイトル') ?></th>
+<th class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日') ?><br /><?php echo __d('baser', '更新日') ?></th>
 </tr>
 </thead>
 <tbody class="bca-table-listup__tbody">
@@ -68,7 +68,7 @@
 		<?php endforeach; ?>
 	<?php else: ?>
 		<tr>
-			<td colspan="6" class="bca-table-listup__tbody-td"><p class="no-data">データが見つかりませんでした。</p></td>
+			<td colspan="6" class="bca-table-listup__tbody-td"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。') ?></p></td>
 		</tr>
 	<?php endif; ?>
 </tbody>

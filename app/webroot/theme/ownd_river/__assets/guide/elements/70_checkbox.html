@@ -3,10 +3,25 @@
 	@checkbox
 	ページタイトル
 -->
-<input type="checkbox" name="data1" class="batch-targets bca-checkbox" value="1" id="ListToolBatchTargets1">
-<span class="bca-checkbox-icon"></span>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxA" class="bca-checkbox">
+<label for="checkboxA" class="bca-checkbox-label"></label>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxB" class="bca-checkbox">
+<label for="chckboxB" class="bca-checkbox-label">チェックボックス</label>
 
 <hr>
 
-<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="1" id="ContentExcludeSearch" class="bca-checkbox">
-<label for="ContentExcludeSearch">チェックボックス</label>
+<input type="checkbox"name="data[Content][exclude_search]" label="" value="1" id="checkboxLgA" class="bca-checkbox">
+<label for="checkboxLgA" data-checkbox-size="lg" class="bca-checkbox-label"></label>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（大）" value="2" id="chckboxLgB" class="bca-checkbox">
+<label for="chckboxLgB" data-checkbox-size="lg" class="bca-checkbox-label">チェックボックス（大）</label>
+
+<hr>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxSmA" class="bca-checkbox">
+<label for="checkboxSmA" data-checkbox-size="sm" class="bca-checkbox-label"></label>
+
+<input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（小）" value="2" id="chckboxSmB" class="bca-checkbox">
+<label for="chckboxSmB" data-checkbox-size="sm" class="bca-checkbox-label">チェックボックス（小）</label>
