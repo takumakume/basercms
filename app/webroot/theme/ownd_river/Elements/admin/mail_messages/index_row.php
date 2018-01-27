@@ -17,17 +17,17 @@
 
 
 <tr id="Row<?php echo $count + 1 ?>">
-	<td class="row-tools" style="width:180px;">
+	<td class="row-tools bca-table-listup__tbody-td" style="width:180px;">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['MailMessage']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['MailMessage']['id'])) ?>
 		<?php endif ?>		
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', array('alt' => '詳細', 'class' => 'btn')), array('action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => '詳細', 'class' => 'btn-view')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => '削除', 'class' => 'btn')), array('action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => '削除', 'class' => 'btn-delete')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => '削除', 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 	</td>
-	<td><?php echo $data['MailMessage']['id'] ?></td>
-	<td><?php echo date('Y/m/d', strtotime($data['MailMessage']['created'])) ?></td>
-	<td><?php echo date('H:i', strtotime($data['MailMessage']['created'])) ?></td>
-	<td>
+	<td class="row-tools bca-table-listup__tbody-td"><?php echo $data['MailMessage']['id'] ?></td>
+	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('Y/m/d', strtotime($data['MailMessage']['created'])) ?></td>
+	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('H:i', strtotime($data['MailMessage']['created'])) ?></td>
+	<td class="row-tools bca-table-listup__tbody-td">
 		<?php 
 			$inData = array();
 			$fileExists = false;
@@ -51,7 +51,7 @@
 		<?php endforeach ?>
 		<?php echo $this->Text->truncate(implode(',', $inData), 170) ?>
 	</td>
-	<td>
+	<td class="row-tools bca-table-listup__tbody-td">
 		<?php if($fileExists): ?>
 			○
 		<?php endif ?>
