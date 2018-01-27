@@ -74,6 +74,6 @@
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
-<div class="submit"><?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button')) ?></div>
+<div class="submit"><?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?></div>
 
 <?php echo $this->BcForm->end() ?>
