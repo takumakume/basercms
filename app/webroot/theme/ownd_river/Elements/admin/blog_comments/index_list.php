@@ -18,15 +18,18 @@
 <?php if ($this->BcBaser->isAdminUser()): ?>
 	<div class="bca-action-table-listup">
 		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
-		<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn bca-btn--small')) ?>
+		<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'sm')) ?>
 	</div>
 <?php endif ?>
+
+<!-- list-num -->
+<?php $this->BcBaser->element('list_num') ?>
 
 <!-- pagination -->
 <?php $this->BcBaser->element('pagination') ?>
 
 <!-- list -->
-<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
+<table class="list-table bca-table-listup" id="ListTable">
 <thead>
 	<tr>
 		<th class="list-tool">
@@ -59,5 +62,5 @@
 </tbody>
 </table>
 
-<!-- list-num -->
-<?php $this->BcBaser->element('list_num') ?>
+<!-- pagination -->
+<?php $this->BcBaser->element('pagination') ?>
