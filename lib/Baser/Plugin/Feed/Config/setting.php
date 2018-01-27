@@ -16,7 +16,7 @@
 $config['BcApp.adminNavigation'] = [
 	'Contents' => [
 		'Uploader' => [
-			'title' => __d('baser', 'アップロード管理'),
+			'title' => __d('baser', 'フィード管理'),
 			'type' => 'contents',
 			'menus' => [
 				['title' => __d('baser', 'フィード設定一覧'), 'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'index']],
