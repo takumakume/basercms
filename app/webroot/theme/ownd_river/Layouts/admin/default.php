@@ -90,7 +90,6 @@
 
 				<main id="Contents" class="bca-main">
 					<div class="cbb bca-main-inner">
-						<?php $this->BcBaser->element('crumbs') ?>
 
 						<article id="ContentsBody" class="contents-body bca-main-body">
 							<div class="bca-main-body-header">
@@ -113,8 +112,6 @@
 							<?php $this->BcBaser->flash() ?>
 
 							<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message">&nbsp;</div></div>
-
-							<?php $this->BcBaser->element('submenu') ?>
 
 							<?php if(@$help): ?>
 							<?php $this->BcBaser->element('help', [], ['cache' => ['key' => '_admin_help_' . $help]]) ?>
