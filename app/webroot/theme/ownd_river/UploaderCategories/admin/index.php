@@ -26,4 +26,4 @@ $(document).ready(function(){
 
 <div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(array('controller' => 'uploader_categories', 'action' => 'ajax_batch')) ?></div>
 <div id="AlertMessage" class="message" style="display:none"></div>
-<div id="DataList"><?php $this->BcBaser->element('uploader_categories/index_list') ?></div>
+<div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('uploader_categories/index_list') ?></div>

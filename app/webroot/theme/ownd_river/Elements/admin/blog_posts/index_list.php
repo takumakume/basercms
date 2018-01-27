@@ -36,6 +36,7 @@
 </div>
 -->
 
+<div class="bca-data-list__top">
 <!-- 一括処理 -->
 <?php if ($this->BcBaser->isAdminUser()): ?>
 	<div class="bca-action-table-listup">
@@ -43,12 +44,13 @@
 		<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
 	</div>
 <?php endif ?>
-
-<!-- list-num -->
-<?php $this->BcBaser->element('list_num') ?>
-
-<!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
+  <div class="bca-data-list__sub">
+    <!-- list-num -->
+    <?php $this->BcBaser->element('list_num') ?>
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
+</div>
 
 <!-- list -->
 <table class="list-table bca-table-listup" id="ListTable">
@@ -106,6 +108,10 @@
 <p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。') ?></p>
 <?php endif; ?>
 
-<!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
 
+<div class="bca-data-list__bottom">
+  <div class="bca-data-list__sub">
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
+</div>
