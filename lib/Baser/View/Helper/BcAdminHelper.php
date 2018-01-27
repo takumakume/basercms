@@ -66,7 +66,7 @@ class BcAdminHelper extends AppHelper {
 	}
 
 	public function getJsonMenu() {
-		$adminMenuGroups = Configure::read('BcApp.adminNavi');
+		$adminMenuGroups = Configure::read('BcApp.adminNavigation');
 		$currentSiteId = $this->Session->read('ContentsAdminIndex.named.site_id');
 		if(!$adminMenuGroups) {
 			return null;
