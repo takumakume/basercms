@@ -14,23 +14,23 @@
  * [ADMIN] ブログ記事コメント 一覧　テーブル
  */
 ?>
-
+<!-- 一括処理 -->
+<?php if ($this->BcBaser->isAdminUser()): ?>
+	<div class="bca-action-table-listup">
+		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
+		<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn bca-btn--small')) ?>
+	</div>
+<?php endif ?>
 
 <!-- pagination -->
 <?php $this->BcBaser->element('pagination') ?>
 
 <!-- list -->
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
+<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
 <thead>
 	<tr>
 		<th class="list-tool">
-			<?php if ($this->BcBaser->isAdminUser()): ?>
-			<div>
-				<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
-				<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
-				<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled')) ?>
-			</div>
-			<?php endif ?>
+			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
 		</th>
 		<th><?php echo $this->Paginator->sort('no', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => '昇順', 'title' => '昇順')) . ' NO', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => '降順', 'title' => '降順')) . ' NO'), array('escape' => false, 'class' => 'btn-direction')) ?></th>
 		<th><?php echo $this->Paginator->sort('name', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => '昇順', 'title' => '昇順')) . ' 投稿者', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => '降順', 'title' => '降順')) . ' 投稿者'), array('escape' => false, 'class' => 'btn-direction')) ?></th>
@@ -42,6 +42,9 @@
 		<th>
 			<?php echo $this->Paginator->sort('created', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => '昇順', 'title' => '昇順')) . ' 投稿日', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => '降順', 'title' => '降順')) . ' 投稿日'), array('escape' => false, 'class' => 'btn-direction')) ?><br />
 			<?php echo $this->Paginator->sort('modified', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => '昇順', 'title' => '昇順')) . ' 更新日', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => '降順', 'title' => '降順')) . ' 更新日'), array('escape' => false, 'class' => 'btn-direction')) ?>
+		</th>
+		<th><?php // アクション ?>
+			アクション
 		</th>
 	</tr>
 </thead>
