@@ -20,12 +20,14 @@
 	<div id="ContentsMenu" class="bca-content-menu">
 		<ul>
 			<?php if (!empty($help)): ?>
-				<li>
-					<?php $this->BcBaser->link(' ヘルプ', 'javascript:void(0)', array('id' => 'BtnMenuHelp', 'class'=>'bca-icon--help')) ?></li>
+				<li class="bca-content-menu__item">
+					<?php # TODO: button要素に変更 ?>
+					<?php $this->BcBaser->link(' ヘルプ', 'javascript:void(0)', array('id' => 'BtnMenuHelp', 'class'=>'bca-content-menu__link bca-icon--help')) ?></li>
 			<?php endif ?>
 			<?php if ($this->BcBaser->isAdminUser()): ?>
-				<li>
-					<?php $this->BcBaser->link(' 制限', 'javascript:void(0)', array('id' => 'BtnMenuPermission', 'class'=>'bca-icon--permission')) ?></li>
+				<li class="bca-content-menu__item">
+					<?php # TODO: button要素に変更 ?>
+					<?php $this->BcBaser->link(' 制限', 'javascript:void(0)', array('id' => 'BtnMenuPermission', 'class'=>'bca-content-menu__link bca-icon--permission')) ?></li>
 			<?php endif ?>
 		</ul>
 	</div>

@@ -38,4 +38,4 @@ $(function(){
 <div id="AjaxSorttableUrl" style="display:none"><?php $this->BcBaser->url(array('controller' => 'permissions', 'action' => 'ajax_update_sort', $this->request->params['pass'][0])) ?></div>
 <div id="AlertMessage" class="message" style="display:none"></div>
 <div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
-<div id="DataList"><?php $this->BcBaser->element('permissions/index_list') ?></div>
+<div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('permissions/index_list') ?></div>

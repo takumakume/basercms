@@ -35,11 +35,7 @@
 	<?php else: ?>
 		<tr>
 			<td colspan="6">
-		<?php if(strtotime('2014-03-31 17:00:00') >= time()): ?>
-				<p class="no-data">baserマーケットは、2014年3月31日 17時に公開です。お楽しみに！</p>
-		<?php else: ?>
 				<p class="no-data">baserマーケットのテーマを読み込めませんでした。</p>
-		<?php endif ?>
 			</td>
 		</tr>
 	<?php endif; ?>
