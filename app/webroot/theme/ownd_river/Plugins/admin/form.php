@@ -56,10 +56,10 @@ $(function(){
 
 <div class="submit">
 <?php if ($dbInited): ?>
-		<?php echo $this->BcForm->submit('プラグインのデータを初期化する', array('div' => false, 'class' => 'button', 'id' => 'BtnReset')) ?>
-		<?php echo $this->BcForm->submit('有効化', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+		<?php echo $this->BcForm->submit('プラグインのデータを初期化する', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnReset')) ?>
+		<?php echo $this->BcForm->submit('有効化', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave')) ?>
 <?php else: ?> 
-		<?php echo $this->BcForm->submit('インストール', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+		<?php echo $this->BcForm->submit('インストール', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave')) ?>
 <?php endif; ?>
 </div>
 

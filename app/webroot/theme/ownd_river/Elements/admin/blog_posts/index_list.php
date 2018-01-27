@@ -37,14 +37,13 @@
 -->
 
 <div class="bca-data-list__top">
-  <!-- 一括処理 -->
-  <?php if ($this->BcBaser->isAdminUser()): ?>
-    <div class="bca-action-table-listup">
-      <?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
-      <?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn bca-btn--small')) ?>
-    </div>
-  <?php endif ?>
-
+<!-- 一括処理 -->
+<?php if ($this->BcBaser->isAdminUser()): ?>
+	<div class="bca-action-table-listup">
+		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => '非公開', 'del' => '削除'), 'empty' => '一括処理')) ?>
+		<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
+	</div>
+<?php endif ?>
   <div class="bca-data-list__sub">
     <!-- list-num -->
     <?php $this->BcBaser->element('list_num') ?>

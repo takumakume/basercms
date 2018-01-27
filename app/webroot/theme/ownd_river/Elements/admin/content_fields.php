@@ -77,20 +77,13 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 <?php echo $this->BcForm->hidden('Content.main_site_content_id') ?>
 
 
-<div id="ContentsFormTabs">
-	<ul>
-		<li><a href="#BasicSetting">基本設定</a></li>
-		<li><a href="#OptionalSetting">オプション</a></li>
-		<?php if(count($relatedContents) > 1): ?>
-		<li><a href="#RelatedContentsSetting">関連コンテンツ</a></li>
-		<?php endif ?>
-		<li><a href="#EtcSetting">その他情報</a></li>
-	</ul>
-	<div id="BasicSetting">
-		<table class="form-table" >
+<div id="ContentsFormTabs0">
+	<div id="BasicSetting" class="section">
+		<h3>基本設定</h3>
+		<table class="form-table bca-form-table">
 			<tr>
-				<th><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="required">*</span></th>
-				<td>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="required">*</span></th>
+				<td class="col-input bca-form-table__input">
 					<smalL>[サイト]</smalL> <?php echo $this->BcText->noValue($this->request->data['Site']['display_name'], $mainSiteDisplayName) ?>　
 					<?php if(!$this->request->data['Content']['site_root']): ?>
 					<small>[フォルダ]</small>
@@ -100,7 +93,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 					<?php endif ?>
 					<span class="url">
 						<?php if(!$this->request->data['Content']['site_root'] && !$related): ?>
-							<?php echo $baseUrl ?><?php echo $this->BcForm->input('Content.name', array('type' => 'text', 'size' => 20, 'autofocus' => true)) ?><?php if(!$isOmitViewAction && $this->request->data['Content']['url'] != '/'): ?>/<?php endif ?>　<?php echo $this->BcForm->button('URLコピー', ['id' => 'BtnCopyUrl', 'class' => 'small-button', 'style' => 'font-weight:normal']) ?>
+							<?php echo $baseUrl ?><?php echo $this->BcForm->input('Content.name', array('type' => 'text', 'size' => 20, 'autofocus' => true)) ?><?php if(!$isOmitViewAction && $this->request->data['Content']['url'] != '/'): ?>/<?php endif ?>　<?php echo $this->BcForm->button('URLコピー', ['id' => 'BtnCopyUrl', 'class' => 'small-button bca-btn', 'style' => 'font-weight:normal']) ?>
 							<?php echo $this->BcForm->error('Content.name') ?>
 						<?php else: ?>
 							<?php
@@ -109,16 +102,16 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 								$contentName = $this->BcForm->value('Content.name');
 							}
 							?>
-							<?php echo $baseUrl ?><?php echo $contentName ?><?php if(!$isOmitViewAction && $this->request->data['Content']['url'] != '/' && !$this->request->data['Site']['use_subdomain']): ?>/<?php endif ?>　<?php echo $this->BcForm->button('URLコピー', ['id' => 'BtnCopyUrl', 'class' => 'small-button', 'style' => 'font-weight:normal']) ?>
+							<?php echo $baseUrl ?><?php echo $contentName ?><?php if(!$isOmitViewAction && $this->request->data['Content']['url'] != '/' && !$this->request->data['Site']['use_subdomain']): ?>/<?php endif ?>　<?php echo $this->BcForm->button('URLコピー', ['id' => 'BtnCopyUrl', 'class' => 'small-button bca-btn', 'style' => 'font-weight:normal']) ?>
 							<?php echo $this->BcForm->hidden('Content.name') ?>
 						<?php endif ?>
 					</span>
 				</td>
 			</tr>
 			<tr>
-				<th>
+				<th class="col-head bca-form-table__label">
 					<?php echo $this->BcForm->label('Content.title', 'タイトル') ?>&nbsp;<span class="required">*</span></th>
-				<td>
+				<td class="col-input bca-form-table__input">
 					<?php if(!$this->request->data['Content']['site_root'] && !$disableEdit): ?>
 						<?php echo $this->BcForm->input('Content.title', array('size' => 50)) ?>　
 						<?php echo $this->BcForm->error('Content.title') ?>
@@ -131,7 +124,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 						<?php if(!empty($this->BcContents->settings[$this->BcForm->value('Content.type')])): ?>
 							<?php echo $this->BcContents->settings[$this->BcForm->value('Content.type')]['title'] ?>
 						<?php else: ?>
-							デフォルト	
+							デフォルト
 						<?php endif ?>
 					<?php else: ?>
 					エイリアス
@@ -139,8 +132,8 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				</td>
 			</tr>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('Content.self_status', '公開状態') ?>&nbsp;<span class="required">*</span></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.self_status', '公開状態') ?>&nbsp;<span class="required">*</span></th>
+				<td class="col-input bca-form-table__input">
 					<?php if(!$this->request->data['Content']['site_root'] && !$disableEdit): ?>
 						<?php echo $this->BcForm->input('Content.self_status', array('type' => 'radio', 'options' => $this->BcText->booleanDoList('公開'))) ?>
 					<?php else: ?>
@@ -176,11 +169,12 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 			</tr>
 		</table>
 	</div>
-	<div id="OptionalSetting">
-		<table class="form-table" >
+	<div id="OptionalSetting" class="section">
+		<h3>オプション</h3>
+		<table class="form-table">
 			<tr>
-				<th><?php echo $this->BcForm->label('Content.description', '説明文') ?></th>
-				<td>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.description', '説明文') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php if(!$disableEdit): ?>
 						<?php echo $this->BcForm->input('Content.description', array('type' => 'textarea', 'rows' => 2, 'placeholder' => $this->BcBaser->siteConfig['description'])) ?>　
 					<?php else: ?>
@@ -195,8 +189,8 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo $this->BcForm->label('Content.eyecatch', 'アイキャッチ') ?></th>
-				<td>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.eyecatch', 'アイキャッチ') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php if(!$disableEdit): ?>
 						<?php echo $this->BcForm->file('Content.eyecatch', ['imgsize' => 'thumb']) ?>
 					<?php else: ?>
@@ -206,8 +200,8 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo $this->BcForm->label('Content.author_id', '作成者') ?></th>
-				<td>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.author_id', '作成者') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php if(!$disableEdit): ?>
 					<?php echo $this->BcForm->input('Content.author_id', array('type' => 'select', 'options' => $authors)) ?>　
 					<small>[作成日]</small> <?php echo $this->BcForm->dateTimePicker('Content.created_date', array('size' => 12, 'maxlength' => 10), true) ?>　
@@ -227,15 +221,15 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo $this->BcForm->label('Content.layout_template', 'レイアウトテンプレート') ?></th>
-				<td>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.layout_template', 'レイアウトテンプレート') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->input('Content.layout_template', array('type' => 'select', 'options' => $layoutTemplates)) ?>　
 					<?php echo $this->BcForm->error('Content.layout_template') ?>　
 				</td>
 			</tr>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('Content.exclude_search', 'その他設定') ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.exclude_search', 'その他設定') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php if(!$disableEdit): ?>
 						<span style="white-space: nowrap"><?php echo $this->BcForm->input('Content.exclude_search', array('type' => 'checkbox', 'label' => 'サイト内検索の検索結果より除外する')) ?></span>　
 						<span style="white-space: nowrap"><?php echo $this->BcForm->input('Content.exclude_menu', array('type' => 'checkbox', 'label' => '公開ページのメニューより除外する')) ?></span>　
@@ -265,7 +259,8 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 		</table>
 	</div>
 <?php if(count($relatedContents) > 1): ?>
-	<div id="RelatedContentsSetting">
+	<div id="RelatedContentsSetting" class="section">
+		<h3>関連コンテンツ</h3>
 		<table class="list-table">
 			<tr>
 				<th style="width:170px" class="list-tool">&nbsp;</th>
@@ -344,7 +339,8 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 	</div>
 <?php endif ?>
 <?php if($this->request->action == 'admin_edit' || $this->request->action == 'admin_edit_alias'): ?>
-	<div id="EtcSetting">
+	<div id="EtcSetting" class="section">
+		<h3>その他情報</h3>
 		<div>
 		<p><span>コンテンツID</span>：<?php echo $this->request->data['Content']['id'] ?></p>
 		<p><span>実体ID</span>：<?php echo $this->request->data['Content']['entity_id'] ?></p>
