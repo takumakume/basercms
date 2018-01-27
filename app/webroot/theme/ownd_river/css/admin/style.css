@@ -9950,7 +9950,8 @@ table.cake-sql-log tr td {
   .bca-select[data-select-size=lg] {
     font-size: 1.6rem; }
   .bca-select[data-select-size=sm] {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    line-height: 1.16; }
 
 /* bca-data-list
 ----------------------------------------------- */
