@@ -145,7 +145,7 @@
 
 	&__thead-th {
 		white-space: nowrap;
-		vertical-align:middle;
+		vertical-align:top;
 		color: #fff;
 		background-color: $color_secondary;
 		// 選択
@@ -158,7 +158,32 @@
 	}
 
 	&__a {
+		display: inline-block;
+		line-height: 1;
 		color: #fff;
+		.bca-icon--asc,
+		.bca-icon--desc {
+			position: relative;
+			top:-2px;
+			display: inline-block;
+			margin-right:0.1em;
+			height:1em;
+			overflow: hidden;
+			opacity:0.5;
+			//vertical-align: middle;
+			&:before {
+				line-height: 1;
+				font-size:1.5em;
+			}
+		}
+		&:hover,
+		&.asc,
+		&.desc {
+			.bca-icon--asc,
+			.bca-icon--desc {
+				opacity:1;
+			}
+		}
 	}
 	&__img {
 		vertical-align:middle;
@@ -192,6 +217,14 @@
 		// タグ
 		&--tag {
 			min-width:100px;
+			.tag {
+				&:after {
+					content: ', ';
+				}
+				&:last-child:after {
+					content: none;
+				}
+			}
 		}
 		// 日付
 		&--date {
@@ -202,6 +235,9 @@
 			padding-left: 1rem;
 			padding-right:1rem;
 			white-space: nowrap;
+			.bca-btn-icon {
+				margin-right:0.2em;
+			}
 		}
 	}
 

@@ -128,6 +128,8 @@
 	font-size: 1.6rem;
 	position: relative;
 	flex-basis: 100%;
+	overflow: auto;
+
 
 	// ❗ .contents-body と同じ要素 ❗
 	&__body {
