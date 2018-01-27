@@ -21,7 +21,7 @@
 		<tr>
 			<th style="width:140px" class="list-tool bca-table-listup__thead-th">
 				<div>
-					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__a', 'hidden' => 'hidden')).'新規追加', array('action' => 'add'),array( 'class'=> 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg')) ?>
+					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn bca-table-listup__a', 'hidden' => 'hidden')).'新規追加', array('action' => 'add'), array( 'class'=> 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg')) ?>
 				</div>
 			</th>
 			<th class="bca-table-listup__thead-th">NO</th>
