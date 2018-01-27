@@ -31,7 +31,7 @@ $(document).ready(function(){
 </script>
 
 
-<div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(array('controller' => 'blog_posts', 'action' => 'ajax_batch')) ?></div>
-<div id="AlertMessage" class="message" style="display:none"></div>
-<div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
+<div id="AjaxBatchUrl" hidden><?php $this->BcBaser->url(array('controller' => 'blog_posts', 'action' => 'ajax_batch')) ?></div>
+<div id="AlertMessage" class="message" hidden></div>
+<div id="MessageBox" hidden><div id="flashMessage" class="notice-message"></div></div>
 <div id="DataList"><?php $this->BcBaser->element('blog_posts/index_list') ?></div>
