@@ -4346,10 +4346,10 @@ span#DebugMode {
 /* pagination
 ----------------------------------------------- */
 .bca-pagination {
-  float: right;
   margin-bottom: 10px;
   padding-right: 0;
-  line-height: 32px; }
+  line-height: 32px;
+  text-align: center; }
   .bca-pagination .bca-page-numbers {
     display: inline-block;
     margin-right: 20px;
@@ -4495,7 +4495,7 @@ span#DebugMode {
     line-height: 1; }
 
 .bca-list-num {
-  display: inline-block; }
+  float: right; }
 
 .contents-body .form-table {
   border: 1px solid #DDD;

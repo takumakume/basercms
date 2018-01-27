@@ -22,6 +22,9 @@
 	</div>
 <?php endif ?>
 
+<!-- list-num -->
+<?php $this->BcBaser->element('list_num') ?>
+
 <!-- pagination -->
 <?php $this->BcBaser->element('pagination') ?>
 
@@ -59,5 +62,5 @@
 </tbody>
 </table>
 
-<!-- list-num -->
-<?php $this->BcBaser->element('list_num') ?>
+<!-- pagination -->
+<?php $this->BcBaser->element('pagination') ?>
