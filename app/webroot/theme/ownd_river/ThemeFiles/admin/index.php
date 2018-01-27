@@ -50,7 +50,7 @@ $(function(){
 	<?php endif ?>
 </div>
 
-<div id="DataList"><?php $this->BcBaser->element('theme_files/index_list') ?></div>
+<div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('theme_files/index_list') ?></div>
 
 <div class="submit">
 	<?php if ($writable): ?>

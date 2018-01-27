@@ -41,6 +41,6 @@ echo $this->BcForm->input('BcManageContent', array('type' => 'hidden', 'value' =
 
 <?php $this->BcBaser->element('contents/index_view_setting') ?>
 
-<div id="DataList">&nbsp;</div>
+<div id="DataList" class="bca-data-list">&nbsp;</div>
 
 

@@ -133,7 +133,7 @@
 		@include btn-common;
 	}
 
-	// HOME
+	// Login
 	&[data-bca-btn-type=login] {
 		@include btn-common;
 		color: $color_lightest;
@@ -145,6 +145,22 @@
 			color: $color_lightest;
 			background-image: linear-gradient($color_darken 10%, $color_darken 100%);
 		}
+	}
+
+	// 検索
+	// TODO: デザインは仮です
+	&[data-bca-btn-type=search] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
+	}
+
+	// クリア
+	// TODO: デザインは仮です
+	&[data-bca-btn-type=clear] {
+		@extend .#{$fa-css-prefix}-trash;
+		@include btn-common;
+		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
 	}
 
 	// サイズ
