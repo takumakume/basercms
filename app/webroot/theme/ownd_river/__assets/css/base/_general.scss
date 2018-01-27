@@ -217,7 +217,7 @@ body{
 	text-align: left;
 	min-width: 960px;
 	width : expression(document.body.clientWidth < 940? "900px" : "auto"); /* IE */
-	line-height:2em;
+	line-height:1.4;
 	height:100%;
 }
 

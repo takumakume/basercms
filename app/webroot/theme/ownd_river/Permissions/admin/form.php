@@ -83,9 +83,9 @@
 	</table>
 </div>
 <div class="submit">
-	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-status' => 'save')) ?>
 	<?php if ($this->request->action == 'admin_edit'): ?>
-		<?php $this->BcBaser->link('削除', array('action' => 'delete', $this->request->params['pass'][0], $this->BcForm->value('Permission.id')), array('class' => 'submit-token button'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('Permission.name')), false); ?>
+		<?php $this->BcBaser->link('削除', array('action' => 'delete', $this->request->params['pass'][0], $this->BcForm->value('Permission.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-status' => 'delete'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('Permission.name')), false); ?>
 	<?php endif; ?>
 </div>
 
