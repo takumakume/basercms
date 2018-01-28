@@ -45,7 +45,7 @@ $(function(){
 </div>
 
 <div class="align-center">
-	<?php echo $this->BcForm->input('Plugin.permission', array('type' => 'radio', 'options' => array('1' => '全てのユーザーで利用', '2' => '管理ユーザーのみ利用'))) ?>
+	<?php echo $this->BcForm->input('Plugin.permission', array('type' => 'radio', 'options' => array('1' => __d('baser', '全てのユーザーで利用'), '2' => __d('baser', '管理ユーザーのみ利用')))) ?>
 </div>
 
 <div>
@@ -56,10 +56,10 @@ $(function(){
 
 <div class="submit">
 <?php if ($dbInited): ?>
-		<?php echo $this->BcForm->submit('プラグインのデータを初期化する', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnReset')) ?>
-		<?php echo $this->BcForm->submit('有効化', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave')) ?>
+		<?php echo $this->BcForm->submit(__d('baser', 'プラグインのデータを初期化する'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnReset')) ?>
+		<?php echo $this->BcForm->submit(__d('baser', '有効化'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave')) ?>
 <?php else: ?> 
-		<?php echo $this->BcForm->submit('インストール', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave')) ?>
+		<?php echo $this->BcForm->submit(__d('baser', 'インストール'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave')) ?>
 <?php endif; ?>
 </div>
 
