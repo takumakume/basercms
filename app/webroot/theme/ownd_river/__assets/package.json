@@ -11,7 +11,7 @@
   "scripts": {
     "build": "gulp",
     "dev": "gulp watch",
-	"guide": "gulp guide"
+    "guide": "gulp guide"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
@@ -25,5 +25,7 @@
     "run-sequence": "^2.2.1",
     "stylelint": "^8.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
 }
