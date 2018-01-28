@@ -27,7 +27,7 @@
 				<div>
 					<?php echo $this->BcForm->checkbox('ListTool.checkall', ['title' => '一括選択']) ?>
 					<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['del' => '削除', 'publish' => '公開', 'unpublish' => '非公開'], 'empty' => '一括処理']) ?>
-					<?php echo $this->BcForm->button('適用', ['id' => 'BtnApplyBatch', 'disabled' => 'disabled']) ?>
+					<?php echo $this->BcForm->button('適用', ['id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn']) ?>
 				</div>
 			<?php endif ?>
 		</th>

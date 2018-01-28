@@ -17,7 +17,7 @@
 
 <div class="submit">
 	<?php echo $this->BcForm->file('Theme.file', array('type' => 'file')) ?>
-	<?php echo $this->BcForm->submit('適用', array('class' => 'button', 'div' => false)) ?>
+	<?php echo $this->BcForm->submit('適用', array('class' => 'button bca-btn', 'div' => false)) ?>
 </div>
 			
 <?php echo $this->BcForm->end() ?>
