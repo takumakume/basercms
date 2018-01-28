@@ -274,7 +274,7 @@
 .fa-music:before {
   content: ""; }
 
-.fa-search:before {
+.fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
 .fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
@@ -364,7 +364,7 @@
 .fa-repeat:before {
   content: ""; }
 
-.fa-refresh:before {
+.fa-refresh:before, .bca-btn[data-bca-btn-type=clear]:before {
   content: ""; }
 
 .fa-list-alt:before {
@@ -512,7 +512,7 @@
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-btn[data-bca-btn-type=back-to-list]:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -696,7 +696,7 @@
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before {
+.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -1725,7 +1725,7 @@
 .fa-bell-slash-o:before {
   content: ""; }
 
-.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=save]:before, .bca-btn[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=back-to-list]:before, .bca-btn[data-bca-btn-type=search]:before, .bca-btn[data-bca-btn-type=clear]:before {
+.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=delete]:before {
   content: ""; }
 
 .fa-copyright:before {
@@ -4229,7 +4229,7 @@ span#DebugMode {
 .fa-music:before {
   content: ""; }
 
-.fa-search:before {
+.fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
 .fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
@@ -4319,7 +4319,7 @@ span#DebugMode {
 .fa-repeat:before {
   content: ""; }
 
-.fa-refresh:before {
+.fa-refresh:before, .bca-btn[data-bca-btn-type=clear]:before {
   content: ""; }
 
 .fa-list-alt:before {
@@ -4467,7 +4467,7 @@ span#DebugMode {
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-btn[data-bca-btn-type=back-to-list]:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -4651,7 +4651,7 @@ span#DebugMode {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before {
+.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -5680,7 +5680,7 @@ span#DebugMode {
 .fa-bell-slash-o:before {
   content: ""; }
 
-.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=save]:before, .bca-btn[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=back-to-list]:before, .bca-btn[data-bca-btn-type=search]:before, .bca-btn[data-bca-btn-type=clear]:before {
+.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=delete]:before {
   content: ""; }
 
 .fa-copyright:before {
@@ -7318,7 +7318,7 @@ table.cake-sql-log tr td {
 .fa-music:before {
   content: ""; }
 
-.fa-search:before {
+.fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
 .fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
@@ -7408,7 +7408,7 @@ table.cake-sql-log tr td {
 .fa-repeat:before {
   content: ""; }
 
-.fa-refresh:before {
+.fa-refresh:before, .bca-btn[data-bca-btn-type=clear]:before {
   content: ""; }
 
 .fa-list-alt:before {
@@ -7556,7 +7556,7 @@ table.cake-sql-log tr td {
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-btn[data-bca-btn-type=back-to-list]:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -7740,7 +7740,7 @@ table.cake-sql-log tr td {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before {
+.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -8769,7 +8769,7 @@ table.cake-sql-log tr td {
 .fa-bell-slash-o:before {
   content: ""; }
 
-.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=save]:before, .bca-btn[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=back-to-list]:before, .bca-btn[data-bca-btn-type=search]:before, .bca-btn[data-bca-btn-type=clear]:before {
+.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=delete]:before {
   content: ""; }
 
 .fa-copyright:before {
@@ -9629,8 +9629,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=save]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9678,8 +9677,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=back-to-list]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9885,8 +9883,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=search]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9910,8 +9907,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=clear]::before {
       margin-right: 4px;
       color: #343434; }

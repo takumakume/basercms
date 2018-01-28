@@ -67,11 +67,9 @@
 	}
 
 	// 保存
-	// TODO: デザインは仮です
 	&[data-bca-btn-type=save] {
-		@extend .#{$fa-css-prefix}-trash;
+		@extend .#{$fa-css-prefix}-upload;
 		@include btn-common;
-		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
 	}
 
 	// 削除
@@ -81,11 +79,9 @@
 	}
 
 	// 一覧に戻る
-	// TODO: デザインは仮です
 	&[data-bca-btn-type=back-to-list] {
-		@extend .#{$fa-css-prefix}-trash;
+		@extend .#{$fa-css-prefix}-chevron-left;
 		@include btn-common;
-		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
 	}
 
 	// お気に入り
@@ -151,19 +147,15 @@
 	}
 
 	// 検索
-	// TODO: デザインは仮です
 	&[data-bca-btn-type=search] {
-		@extend .#{$fa-css-prefix}-trash;
+		@extend .#{$fa-css-prefix}-search;
 		@include btn-common;
-		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
 	}
 
 	// クリア
-	// TODO: デザインは仮です
 	&[data-bca-btn-type=clear] {
-		@extend .#{$fa-css-prefix}-trash;
+		@extend .#{$fa-css-prefix}-refresh;
 		@include btn-common;
-		background-image: linear-gradient(#f00 10%, #f00 100%) !important; // TODO: これは仮に適用したスタイルです
 	}
 
 	// サイズ
