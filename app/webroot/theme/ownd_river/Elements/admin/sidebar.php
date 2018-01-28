@@ -25,7 +25,7 @@
 		<h2 class="bca-nav__main-title">管理メニュー</h2>
 		<div class="bca-nav__sub" data-content-type="dashboard">
 			<h3 class="bca-nav__sub-title">
-				<a v-bind:href="baseURL" class="bca-nav__sub-title-label">ダッシュボード</a>
+				<a v-bind:href="baseURL + '/admin'" class="bca-nav__sub-title-label">ダッシュボード</a>
 			</h3>
 		</div>
 		<div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
