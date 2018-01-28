@@ -6873,10 +6873,14 @@ span#DebugMode {
 
 /* BannerArea
 ----------------------------------------------- */
-#BannerArea li {
+.bca-banners__ul {
+  padding: 0; }
+
+.bca-banners__li {
   margin-bottom: 2px;
   padding-left: 1px;
-  padding-right: 1px; }
+  padding-right: 1px;
+  list-style: none; }
 
 /* bca-action-table-listup
 ----------------------------------------------- */

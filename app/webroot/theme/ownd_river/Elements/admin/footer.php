@@ -27,12 +27,12 @@
 		<div id="FooterLink">
 			<h2><?php $this->BcBaser->img('admin/head_link.png', array('width' => 36, 'height' => 16, 'alt' => 'LINK')) ?></h2>
 			<ul>
-				<li><a href="http://basercms.net/" target="_blank">baserCMS 公式サイト</a></li>
-				<li><a href="http://sites.google.com/site/baserusers/" target="_blank">baserCMS ユーザー会</a></li>
-				<li><a href="http://forum.basercms.net/" target="_blank">baserCMS ユーザーズフォーラム</a></li>
-				<li><a href="http://project.e-catchup.jp/projects/basercms" target="_blank">baserCMS コア開発プロジェクト</a></li>
-				<li><a href="http://www.facebook.com/basercms" target="_blank">baserCMS Facebook</a></li>
-				<li><a href="http://twitter.com/basercms" target="_blank">baserCMS Twitter</a></li>
+				<li><a href="http://basercms.net/" target="_blank"><?php echo __d('baser', 'baserCMS 公式サイト') ?></a></li>
+				<li><a href="http://sites.google.com/site/baserusers/" target="_blank"><?php echo __d('baser', 'baserCMS ユーザー会') ?></a></li>
+				<li><a href="http://forum.basercms.net/" target="_blank"><?php echo __d('baser', 'baserCMS ユーザーズフォーラム') ?></a></li>
+				<li><a href="http://project.e-catchup.jp/projects/basercms" target="_blank"><?php echo __d('baser', 'baserCMS コア開発プロジェクト') ?></a></li>
+				<li><a href="http://www.facebook.com/basercms" target="_blank"><?php echo __d('baser', 'baserCMS Facebook') ?></a></li>
+				<li><a href="http://twitter.com/basercms" target="_blank"><?php echo __d('baser', 'baserCMS Twitter') ?></a></li>
 			</ul>
 		</div>
 

@@ -22,12 +22,12 @@
 			<?php if (!empty($help)): ?>
 				<li class="bca-content-menu__item">
 					<?php # TODO: button要素に変更 ?>
-					<?php $this->BcBaser->link(' ヘルプ', 'javascript:void(0)', array('id' => 'BtnMenuHelp', 'class'=>'bca-content-menu__link bca-icon--help')) ?></li>
+					<?php $this->BcBaser->link(__d('baser', 'ヘルプ'), 'javascript:void(0)', array('id' => 'BtnMenuHelp', 'class'=>'bca-content-menu__link bca-icon--help')) ?></li>
 			<?php endif ?>
 			<?php if ($this->BcBaser->isAdminUser()): ?>
 				<li class="bca-content-menu__item">
 					<?php # TODO: button要素に変更 ?>
-					<?php $this->BcBaser->link(' 制限', 'javascript:void(0)', array('id' => 'BtnMenuPermission', 'class'=>'bca-content-menu__link bca-icon--permission')) ?></li>
+					<?php $this->BcBaser->link(__d('baser', '制限'), 'javascript:void(0)', array('id' => 'BtnMenuPermission', 'class'=>'bca-content-menu__link bca-icon--permission')) ?></li>
 			<?php endif ?>
 		</ul>
 	</div>
