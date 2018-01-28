@@ -21,7 +21,7 @@ msgstr ""
 msgid "コーポレートサイトにちょうどいいCMS - baserCMS - "
 msgstr ""
 
-#: Config/setting.php:29;98
+#: Config/setting.php:29;99
 #: View/Elements/admin/footer.php:31
 #: View/Elements/admin/header.php:32
 msgid "コンテンツ管理"
@@ -46,7 +46,7 @@ msgstr ""
 msgid "サイト基本設定"
 msgstr ""
 
-#: Config/setting.php:46;100
+#: Config/setting.php:46;101
 #: View/Elements/admin/footer.php:33
 #: View/Elements/admin/header.php:34
 msgid "テーマ管理"
@@ -76,7 +76,7 @@ msgstr ""
 msgid "データリセット"
 msgstr ""
 
-#: Config/setting.php:57;101
+#: Config/setting.php:57;102
 #: View/Elements/admin/footer.php:34
 #: View/Elements/admin/header.php:35
 msgid "プラグイン管理"
@@ -86,7 +86,7 @@ msgstr ""
 msgid "プラグイン"
 msgstr ""
 
-#: Config/setting.php:64;103
+#: Config/setting.php:64;104
 #: View/Elements/admin/submenus/site_configs.php:24
 msgid "ユーザー管理"
 msgstr ""
@@ -105,7 +105,7 @@ msgstr ""
 msgid "ユーザーグループ"
 msgstr ""
 
-#: Config/setting.php:72;107
+#: Config/setting.php:72;108
 #: Controller/SitesController.php:42
 #: View/Elements/admin/submenus/site_configs.php:28
 msgid "サブサイト管理"
@@ -116,7 +116,7 @@ msgstr ""
 msgid "サブサイト"
 msgstr ""
 
-#: Config/setting.php:79;108
+#: Config/setting.php:79;109
 #: Controller/SiteConfigsController.php:222
 #: View/Elements/admin/submenus/site_configs.php:29
 msgid "ユーティリティ"
@@ -133,120 +133,126 @@ msgid "エディタテンプレート"
 msgstr ""
 
 #: Config/setting.php:84
-msgid "検索インデックス"
+#: View/Themed/ownd_river/BlogContents/admin/form.php:133
+#: View/Themed/ownd_river/MailContents/admin/form.php:172
+msgid "ウィジェットエリア"
 msgstr ""
 
 #: Config/setting.php:85
+msgid "検索インデックス"
+msgstr ""
+
+#: Config/setting.php:86
 #: Controller/SiteConfigsController.php:211
 #: View/Elements/admin/submenus/tools.php:24
 msgid "環境情報"
 msgstr ""
 
-#: Config/setting.php:86
+#: Config/setting.php:87
 #: Controller/ToolsController.php:117;404
 #: View/Elements/admin/submenus/tools.php:25
 msgid "データメンテナンス"
 msgstr ""
 
-#: Config/setting.php:87
+#: Config/setting.php:88
 #: View/Elements/admin/submenus/tools.php:26
 msgid "ログメンテナンス"
 msgstr ""
 
-#: Config/setting.php:88
+#: Config/setting.php:89
 #: Controller/ToolsController.php:314
 #: View/Elements/admin/submenus/tools.php:27
 msgid "スキーマファイル生成"
 msgstr ""
 
-#: Config/setting.php:89
+#: Config/setting.php:90
 #: Controller/ToolsController.php:344
 #: View/Elements/admin/submenus/tools.php:28
 msgid "スキーマファイル読込"
 msgstr ""
 
-#: Config/setting.php:99
+#: Config/setting.php:100
 #: View/Elements/admin/footer.php:32
 #: View/Elements/admin/header.php:33
 msgid "ウィジェット管理"
 msgstr ""
 
-#: Config/setting.php:102
+#: Config/setting.php:103
 #: Controller/SearchIndicesController.php:72
 #: Controller/SiteConfigsController.php:221
 #: Controller/SitesController.php:41
 msgid "システム設定"
 msgstr ""
 
-#: Config/setting.php:104
+#: Config/setting.php:105
 #: View/Elements/admin/submenus/site_configs.php:25
 #: View/Themed/ownd_river/Users/admin/form.php:80
 #: View/Users/admin/form.php:85
 msgid "ユーザーグループ管理"
 msgstr ""
 
-#: Config/setting.php:105
+#: Config/setting.php:106
 #: Controller/SearchIndicesController.php:73
 #: View/Elements/admin/submenus/site_configs.php:26
 msgid "検索インデックス管理"
 msgstr ""
 
-#: Config/setting.php:106
+#: Config/setting.php:107
 #: View/Elements/admin/submenus/site_configs.php:27
 msgid "エディタテンプレート管理"
 msgstr ""
 
-#: Config/setting.php:109
+#: Config/setting.php:110
 msgid "サーバーキャッシュ削除"
 msgstr ""
 
-#: Config/setting.php:109
+#: Config/setting.php:110
 msgid "サーバーキャッシュを削除します。いいですか？"
 msgstr ""
 
-#: Config/setting.php:119
+#: Config/setting.php:120
 #: View/SiteConfigs/admin/form.php:186
 #: View/Themed/ownd_river/MailFields/admin/form.php:92;247
 #: View/Themed/ownd_river/SiteConfigs/admin/form.php:182
 msgid "なし"
 msgstr ""
 
-#: Config/setting.php:176
+#: Config/setting.php:177
 msgid "管理システム"
 msgstr ""
 
-#: Config/setting.php:182
+#: Config/setting.php:183
 msgid "管理システムログイン"
 msgstr ""
 
-#: Config/setting.php:231
+#: Config/setting.php:232
 msgid "ケータイ"
 msgstr ""
 
-#: Config/setting.php:246
+#: Config/setting.php:247
 msgid "スマートフォン"
 msgstr ""
 
-#: Config/setting.php:283
+#: Config/setting.php:284
 #: View/Elements/admin/contents/form_alias.php:21
 #: View/Themed/ownd_river/Elements/admin/contents/form_alias.php:21
 msgid "無所属コンテンツ"
 msgstr ""
 
-#: Config/setting.php:311
+#: Config/setting.php:312
 msgid "フォルダー"
 msgstr ""
 
-#: Config/setting.php:337
+#: Config/setting.php:338
 #: View/Elements/admin/sites/form.php:48
 msgid "エイリアス"
 msgstr ""
 
-#: Config/setting.php:355
+#: Config/setting.php:356
 msgid "リンク"
 msgstr ""
 
-#: Config/setting.php:381
+#: Config/setting.php:382
 msgid "固定ページ"
 msgstr ""
 
@@ -809,6 +815,7 @@ msgstr ""
 #: View/Themed/ownd_river/Elements/admin/blog_comments/index_row.php:57;61
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:43
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:95
+#: View/Themed/ownd_river/Elements/admin/sites/index_row.php:29
 msgid "非公開"
 msgstr ""
 
@@ -822,6 +829,7 @@ msgstr ""
 #: View/Themed/ownd_river/Elements/admin/blog_comments/index_row.php:58;62
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:43
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:96
+#: View/Themed/ownd_river/Elements/admin/sites/index_row.php:30
 msgid "公開"
 msgstr ""
 
@@ -1648,6 +1656,7 @@ msgstr ""
 #: View/Elements/admin/sites/index_row.php:32
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_row.php:28
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:97
+#: View/Themed/ownd_river/Elements/admin/sites/index_row.php:32
 msgid "確認"
 msgstr ""
 
@@ -1664,6 +1673,7 @@ msgstr ""
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_row.php:30
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:98
 #: View/Themed/ownd_river/Elements/admin/blog_tags/index_row.php:24
+#: View/Themed/ownd_river/Elements/admin/sites/index_row.php:34
 msgid "編集"
 msgstr ""
 
@@ -1724,6 +1734,7 @@ msgstr ""
 #: View/Elements/admin/widget_areas/index_list.php:24
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:25
 #: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:28
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:38
 msgid "新規追加"
 msgstr ""
 
@@ -1890,7 +1901,6 @@ msgstr ""
 #: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:34;35;37;39;41;42;44;46
 #: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:37;38;39;40;41
 #: View/Themed/ownd_river/Elements/admin/mail_messages/index_list.php:35;36
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:41;42;43;44;45;46;47;48;49;51;52
 #: View/Themed/ownd_river/Elements/admin/uploader_categories/index_list.php:34;39;44;48
 #: View/Themed/ownd_river/Elements/admin/user_groups/index_list.php:36;37;38;39;40
 #: View/Themed/ownd_river/Elements/admin/users/index_list.php:30;31;32;33;34;35;36
@@ -1906,7 +1916,6 @@ msgstr ""
 #: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:34;35;37;39;41;42;44;46
 #: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:37;38;39;40;41
 #: View/Themed/ownd_river/Elements/admin/mail_messages/index_list.php:35;36
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:41;42;43;44;45;46;47;48;49;51;52
 #: View/Themed/ownd_river/Elements/admin/uploader_categories/index_list.php:35;40;45;49
 #: View/Themed/ownd_river/Elements/admin/user_groups/index_list.php:36;37;38;39;40
 #: View/Themed/ownd_river/Elements/admin/users/index_list.php:30;31;32;33;34;35;36
@@ -1923,6 +1932,7 @@ msgstr ""
 
 #: View/Elements/admin/contents/index_list_table.php:42
 #: View/Elements/admin/sites/index_list.php:47
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:75
 msgid " 公開状態"
 msgstr ""
 
@@ -1938,6 +1948,7 @@ msgstr ""
 #: View/Elements/admin/sites/index_list.php:55
 #: View/Elements/admin/user_groups/index_list.php:43
 #: View/Elements/admin/users/index_list.php:38
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:119
 msgid " 更新日"
 msgstr ""
 
@@ -2114,36 +2125,44 @@ msgid "公開する"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:44
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:52
 msgid " サイト名"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:45
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:60
 msgid " 識別名称"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:46
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:67
 msgid " エイリアス"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:48
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:82
 msgid " デバイス"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:49
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:89
 msgid " 言語"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:50
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:97
 msgid " メインサイト"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:51
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:104
 msgid " テーマ"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:54
 #: View/Elements/admin/user_groups/index_list.php:42
 #: View/Elements/admin/users/index_list.php:37
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:112
 msgid " 登録日"
 msgstr ""
 
@@ -2322,7 +2341,7 @@ msgid "編集する"
 msgstr ""
 
 #: View/Helper/BcBaserHelper.php:1199
-msgid "公開ページ"
+msgid "サイト確認"
 msgstr ""
 
 #: View/Helper/BcContentsHelper.php:184
@@ -2799,11 +2818,6 @@ msgstr ""
 msgid "タグ機能"
 msgstr ""
 
-#: View/Themed/ownd_river/BlogContents/admin/form.php:133
-#: View/Themed/ownd_river/MailContents/admin/form.php:172
-msgid "ウィジェットエリア"
-msgstr ""
-
 #: View/Themed/ownd_river/BlogContents/admin/form.php:144
 msgid "ブログコンテンツで利用するウィジェットエリアを指定します。"
 msgstr ""
@@ -2985,6 +2999,10 @@ msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:27
 msgid "名称"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:44
+msgid " NO"
 msgstr ""
 
 #: View/Themed/ownd_river/Layouts/admin/default.php:107
