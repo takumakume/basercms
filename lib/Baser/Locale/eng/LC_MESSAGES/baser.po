@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: baserCMS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-01-28 11:19+0900\n"
+"PO-Revision-Date: 2018-01-28 11:37+0900\n"
 "Last-Translator: \n"
 "Language-Team: baserCMS Users Community <info@basercms.net>\n"
 "Language: en\n"
@@ -54,7 +54,7 @@ msgstr "Themes"
 
 #: Config/setting.php:49 View/Elements/admin/sites/form.php:149
 msgid "テーマ"
-msgstr "Theme"
+msgstr "Themes"
 
 #: Config/setting.php:50
 msgid "設定"
@@ -2164,7 +2164,7 @@ msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:51
 msgid " テーマ"
-msgstr ""
+msgstr "Themes"
 
 #: View/Elements/admin/sites/index_list.php:54
 #: View/Elements/admin/user_groups/index_list.php:42
