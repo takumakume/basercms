@@ -71,6 +71,13 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 		<div id="UserMenu">
 			<ul class="clearfix">
 				<li>
+					<a href="javascript:void(0)" class="title">よく使う項目<img src="/theme/ownd_river/img/admin/btn_dropdown.png" width="8" height="11" class="bc-btn"></a>
+					<div id="FavoriteArea" hidden>
+						<?php $this->BcBaser->element('favorite_menu') ?>
+						<?php $this->BcBaser->element('permission') ?>
+					</div>
+				</li>
+				<li>
 					<?php if (!empty($user)): ?>
 						<?php $this->BcBaser->link($this->BcBaser->getUserName($user) . ' ' . $this->BcBaser->getImg('admin/btn_dropdown.png', array('width' => 8, 'height' => 11, 'class' => 'bc-btn')), 'javascript:void(0)', array('class' => 'title')) ?>
 						<ul>

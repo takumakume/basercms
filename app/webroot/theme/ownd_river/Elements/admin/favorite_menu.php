@@ -36,7 +36,7 @@
 
 	<ul class="favolite-menu-tools clearfix bca-nav-favorite-functions">
 		<li class="bca-nav-favorite-functions-add">
-			<span id="BtnFavoriteAdd" class="btn">新規追加</span>
+			<span id="BtnFavoriteAdd" data-bca-fn="BtnFavoriteAdd" class="btn">新規追加</span>
 		</li>
 		<li class="bca-nav-favorite-functions-help">
 			<span id="BtnFavoriteHelp" class="btn help">ヘルプ</span>

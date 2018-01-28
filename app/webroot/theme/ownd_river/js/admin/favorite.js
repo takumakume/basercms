@@ -16,7 +16,8 @@
 
 $(function(){
 	$("body").append($("#FavoritesMenu"));
-	$("#BtnFavoriteAdd").click(function(){
+	$('[data-bca-fn="BtnFavoriteAdd"]').click(function () {
+	// $("#BtnFavoriteAdd").click(function(){
 		$("#FavoriteDialog").dialog('option', 'position', { my: "center", at: "center", of: window });
 		$('#FavoriteDialog').dialog('open');
 		return false;
