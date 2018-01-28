@@ -41,6 +41,6 @@
 		box-shadow: 0 0 0px 4px #EEEEEE inset;
 	}
 	&:focus + label:before {
-		box-shadow: 0 0 0px 4px #EEEEEE inset, 0 0 6px 0px #555555;
+		box-shadow: 0 0 0px 4px #EEEEEE inset, $focus_shadow;
 	}
 }

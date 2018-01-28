@@ -17,7 +17,7 @@
 
 <div class="submit">
 	<?php echo $this->BcForm->file('Plugin.file', array('type' => 'file')) ?>
-	<?php echo $this->BcForm->submit('インストール', array('class' => 'button bca-btn', 'div' => false, 'data-bca-btn-status' => 'primary')) ?>
+	<?php echo $this->BcForm->submit(__d('baser', 'インストール'), array('class' => 'button bca-btn', 'div' => false, 'data-bca-btn-status' => 'primary')) ?>
 </div>
 			
 <?php echo $this->BcForm->end() ?>

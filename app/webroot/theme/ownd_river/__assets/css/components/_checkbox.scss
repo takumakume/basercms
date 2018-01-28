@@ -15,7 +15,7 @@
 	&:focus{
 		+ .bca-checkbox-label{
 			&:before{
-				box-shadow: 0 0 6px 0px #555555;
+				box-shadow: $focus_shadow;
 			}
 		}
 	}
