@@ -168,7 +168,7 @@
 
 	// large
 	&[data-bca-btn-size=lg] {
-		font-size: $button_font_size_medium; // 16px *
+		font-size: $button_font_size_large; // 16px *
 		//padding: .5em .8em .4em;
 		&::before {
 			@extend .#{$fa-css-prefix};
@@ -180,7 +180,7 @@
 	&[data-bca-btn-size=sm] {
 		font-size: $button_font_size_small;
 		//font-size: 0.91rem;
-		padding: .4em .8em .5em;
+		//padding: .4em .8em .5em;
 
 		&::before {
 			@extend .#{$fa-css-prefix};

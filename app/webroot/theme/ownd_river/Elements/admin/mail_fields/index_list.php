@@ -16,12 +16,12 @@
 ?>
 
 
-<table cellpadding="0" cellspacing="0" class="list-table sort-table" id="ListTable">
-	<thead>
+<table cellpadding="0" cellspacing="0" class="list-table sort-table bca-table-listup" id="ListTable">
+	<thead class="bca-table-listup__thead">
 		<tr>
-			<th class="list-tool">
+			<th class="list-tool bca-table-listup__thead-th">
 	<div>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn')), array('action' => 'add', $mailContent['MailContent']['id'])) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn','hidden' => 'hidden')).'新規追加', array('action' => 'add', $mailContent['MailContent']['id']),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
 		<?php if (!$sortmode): ?>
 			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_sort.png', array('width' => 65, 'height' => 14, 'alt' => '並び替え', 'class' => 'btn')), array($mailContent['MailContent']['id'], 'sortmode' => 1)) ?>
 		<?php else: ?>
@@ -36,12 +36,12 @@
 		</div>
 	<?php endif ?>
 </th>
-<th>NO</th>
-<th>フィールド名<br />項目名</th>
-<th>タイプ</th>
-<th>グループ名</th>
-<th>必須</th>
-<th>登録日<br />更新日</th>
+<th class="bca-table-listup__thead-th">NO</th>
+<th class="bca-table-listup__thead-th">フィールド名<br />項目名</th>
+<th class="bca-table-listup__thead-th">タイプ</th>
+<th class="bca-table-listup__thead-th">グループ名</th>
+<th class="bca-table-listup__thead-th">必須</th>
+<th class="bca-table-listup__thead-th">登録日<br />更新日</th>
 </tr>
 </thead>
 <tbody>

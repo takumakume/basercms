@@ -73,12 +73,12 @@ $(function(){
 
 		<h2 id="headFeedDetail">フィード一覧</h2>
 
-		<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
-			<thead>
+		<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
+			<thead class="bca-table-listup__thead">
 				<tr>
-					<th scope="col"  style="width:160px" class="list-tool">
+					<th class="bca-table-listup__thead-th" scope="col"  style="width:160px" class="list-tool bca-table-listup__thead-th">
 			<div>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn')), array('controller' => 'feed_details', 'action' => 'add', $this->BcForm->value('FeedConfig.id'))) ?>
+				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn','hidden' => 'hidden')).'新規追加', array('controller' => 'feed_details', 'action' => 'add', $this->BcForm->value('FeedConfig.id')), array( 'class'=> 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg')) ?>
 			</div>
 			<?php if ($this->BcBaser->isAdminUser()): ?>
 				<div>
@@ -88,10 +88,10 @@ $(function(){
 				</div>
 			<?php endif ?>
 			</th>
-			<th scope="col">フィード名</th>
-			<th scope="col">カテゴリフィルター</th>
-			<th scope="col">キャッシュ時間</th>
-			<th scope="col">登録日<br />更新日</th>
+			<th class="bca-table-listup__thead-th" scope="col">フィード名</th>
+			<th class="bca-table-listup__thead-th" scope="col">カテゴリフィルター</th>
+			<th class="bca-table-listup__thead-th" scope="col">キャッシュ時間</th>
+			<th class="bca-table-listup__thead-th" scope="col">登録日<br />更新日</th>
 			</tr>
 			</thead>
 			<tbody>
