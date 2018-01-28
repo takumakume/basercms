@@ -21,7 +21,7 @@
 
 <nav id="FavoriteMenu" class="bca-nav-favorite">
 
-	<h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label">お気に入り</span></h2>
+	<h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label"><?php echo __d('baser', 'お気に入り') ?></span></h2>
 
 	<ul class="favorite-menu-list bca-nav-favorite-list">
 		<?php if (!empty($favorites)): ?>
@@ -30,18 +30,18 @@
 			<?php endforeach ?>
 
 		<?php else: ?>
-			<li class="no-data">新規登録ボタンよりよく使う項目を登録しておく事ができます。</li>
+			<li class="no-data"><?php echo __d('baser', '新規登録ボタンよりよく使う項目を登録しておく事ができます。') ?></li>
 		<?php endif ?>
 	</ul>
 
 	<ul class="favolite-menu-tools clearfix bca-nav-favorite-functions">
 		<li class="bca-nav-favorite-functions-add">
-			<span id="BtnFavoriteAdd" data-bca-fn="BtnFavoriteAdd" class="btn">新規追加</span>
+			<span id="BtnFavoriteAdd" data-bca-fn="BtnFavoriteAdd" class="btn"><?php echo __d('baser', '新規追加') ?></span>
 		</li>
 		<li class="bca-nav-favorite-functions-help">
-			<span id="BtnFavoriteHelp" class="btn help">ヘルプ</span>
+			<span id="BtnFavoriteHelp" class="btn help"><?php echo __d('baser', 'ヘルプ') ?></span>
 			<div class="helptext">
-				<p>よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする事ができます。<br />また、登録済の項目を右クリックする事で編集・削除が行えます。</p>
+				<p><?php echo __d('baser', 'よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする事ができます。<br />また、登録済の項目を右クリックする事で編集・削除が行えます。') ?></p>
 			</div>
 		</li>
 	</ul>
@@ -52,14 +52,14 @@
 	<?php echo $this->BcForm->create('Favorite', array('url' => array('plugin' => null, 'action' => 'ajax'))) ?>
 	<?php echo $this->BcForm->input('Favorite.id', array('type' => 'hidden')) ?>
 	<dl>
-		<dt><?php echo $this->BcForm->label('Favorite.name', 'タイトル') ?></dt><dd><?php echo $this->BcForm->input('Favorite.name', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
-		<dt><?php echo $this->BcForm->label('Favorite.url', 'URL') ?></dt><dd><?php echo $this->BcForm->input('Favorite.url', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
+		<dt><?php echo $this->BcForm->label('Favorite.name', __d('baser', 'タイトル')) ?></dt><dd><?php echo $this->BcForm->input('Favorite.name', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
+		<dt><?php echo $this->BcForm->label('Favorite.url', __d('baser', 'URL')) ?></dt><dd><?php echo $this->BcForm->input('Favorite.url', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
 	</dl>
 	<?php echo $this->BcForm->end() ?>
 </div>
 
 
 <ul id="FavoritesMenu" class="context-menu" style="display:none">
-    <li class="edit"><?php $this->BcBaser->link('編集', '#FavoriteEdit') ?></li>
-    <li class="delete"><?php $this->BcBaser->link('削除', '#FavoriteDelete') ?></li>
+    <li class="edit"><?php $this->BcBaser->link(__d('baser', '編集'), '#FavoriteEdit') ?></li>
+    <li class="delete"><?php $this->BcBaser->link(__d('baser', '削除'), '#FavoriteDelete') ?></li>
 </ul>
