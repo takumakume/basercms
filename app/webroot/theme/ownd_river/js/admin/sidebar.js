@@ -25,21 +25,40 @@ window.addEventListener('DOMContentLoaded', function () {
 			console.warn('管理メニューのデータが破損しています（JSONデータが不正です）')
 		}
 	}
-
-	/**
-	 * for deubg
-	 */
-	// console.log($.extend(true, {}, data));
-
+	
 	if (tmpl && data && data.menuList && data.menuList.length) {
+		
+		var contentList = [];
+		var systemList = [];
+
+		data.menuList.forEach(function (item, i) {
+			if (item.type === 'system') {
+				systemList.push(item);
+			} else {
+				contentList.push(item);
+			}
+		});
+		
+		/**
+		 * for deubg
+		 */
+		console.log($.extend(true, {}, contentList));
+		console.log($.extend(true, {}, systemList));
 
 		tmpl.hidden = false;
 		var app = new Vue({
 			el: tmpl,
 			data: {
+				systemHidden: true,
 				baseURL: $.baseUrl,
 				currentSiteId: data.currentSiteId,
-				contentList: data.menuList
+				contentList: contentList,
+				systemList: systemList
+			},
+			methods: {
+				openSystem: function () {
+					app.systemHidden = !app.systemHidden;
+				}
 			}
 		});
 

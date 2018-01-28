@@ -502,7 +502,7 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav-sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav-sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title::before, .bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .bca-nav-sub-title::before, .bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .bca-nav-sub-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav-sub-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav-sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -559,10 +559,10 @@ template {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -572,10 +572,10 @@ template {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -669,7 +669,7 @@ template {
 .fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
-.fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
+.fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-heart:before, .bca-icon--favorite:before, .bca-nav-favorite-title:before, .bca-btn-icon[data-bca-btn-type=favorite]:before, .bca-btn[data-bca-btn-type=favorite]:before {
@@ -719,13 +719,15 @@ template {
 .fa-gear:before,
 .fa-cog:before,
 .bca-icon--setting:before,
-.bca-nav__sub[data-content-type="system"] .bca-nav-sub-title:before {
+.bca-nav__sub[data-content-type="system"] .bca-nav__sub-title:before,
+.bca-nav__system-title button:before,
+.bca-nav__system-item[data-system-type] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-trash-o:before {
   content: ""; }
 
-.fa-home:before, .bca-icon--home:before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav-sub-title:before, .bca-btn-icon[data-bca-btn-type=home]:before, .bca-btn[data-bca-btn-type=home]:before {
+.fa-home:before, .bca-icon--home:before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title:before, .bca-btn-icon[data-bca-btn-type=home]:before, .bca-btn[data-bca-btn-type=home]:before {
   content: ""; }
 
 .fa-file-o:before {
@@ -795,7 +797,7 @@ template {
 .fa-book:before {
   content: ""; }
 
-.fa-bookmark:before {
+.fa-bookmark:before, .bca-icon--bookmark:before {
   content: ""; }
 
 .fa-print:before {
@@ -1217,7 +1219,7 @@ template {
 .fa-bars:before {
   content: ""; }
 
-.fa-list-ul:before, .bca-icon--list:before, .bca-nav__sub[data-content-type="contents"] .bca-nav-sub-title:before {
+.fa-list-ul:before, .bca-icon--list:before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-list-ol:before {
@@ -1348,7 +1350,7 @@ template {
 .fa-cutlery:before {
   content: ""; }
 
-.fa-file-text-o:before, .bca-icon--blog:before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav-sub-title:before {
+.fa-file-text-o:before, .bca-icon--blog:before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-building-o:before {
@@ -1507,7 +1509,7 @@ template {
 .fa-eraser:before {
   content: ""; }
 
-.fa-puzzle-piece:before, .bca-icon--plugin:before, .bca-nav__sub[data-content-type="plugin"] .bca-nav-sub-title:before {
+.fa-puzzle-piece:before, .bca-icon--plugin:before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-microphone:before {
@@ -2129,7 +2131,7 @@ template {
 .fa-eyedropper:before {
   content: ""; }
 
-.fa-paint-brush:before, .bca-icon--theme:before, .bca-nav__sub[data-content-type="theme"] .bca-nav-sub-title:before {
+.fa-paint-brush:before, .bca-icon--theme:before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-birthday-cake:before {
@@ -2822,6 +2824,87 @@ template {
 
 [class*="bca-icon"] .bca-icon-label {
   display: none; }
+
+.bca-icon--publish::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--unpublish::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--preview::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--edit::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--copy::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--delete::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--favorite::before, .bca-nav-favorite-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--add::before, .bca-nav-favorite-functions-add::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--permission::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--help::before, .bca-nav-favorite-functions-help::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--next::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--back::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--arrow-right::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--arrow-left::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--asc::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--desc::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--plus-square::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--minus-square::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--bookmark::before {
+  margin: 0 .3em 0 0; }
 
 a {
   color: #9C0;
@@ -4108,16 +4191,17 @@ span#DebugMode {
 .bca-nav {
   font-size: 1.6rem;
   flex-basis: 208px;
-  background: #fafafa; }
+  background: #fafafa;
+  position: relative;
+  z-index: 100; }
   .bca-nav__main {
-    font-size: 1.6rem;
+    font-size: 1em;
     position: relative;
-    z-index: 100;
     background: #f4f5f1; }
     .bca-nav__main-title {
       display: none; }
   .bca-nav__sub {
-    font-size: 1.6rem;
+    font-size: 1em;
     position: relative;
     border-top: 2px solid #cccccc;
     background: #fafafa; }
@@ -4180,11 +4264,11 @@ span#DebugMode {
               opacity: 1; }
         .bca-nav__sub-list-item-title {
           margin-left: 4px; }
-    .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-title {
+    .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title {
       color: #343434;
       background: #f4f5f1;
       cursor: default; }
-    .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list {
+    .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list {
       display: block;
       position: relative;
       top: auto;
@@ -4192,18 +4276,18 @@ span#DebugMode {
       width: auto;
       -webkit-transform: none;
               transform: none; }
-      .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list-item[data-sub-content-is-current="true"] {
+      .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] {
         background: #1b6123; }
-        .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list-item[data-sub-content-is-current="true"] a {
+        .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a {
           position: relative;
           color: #fff; }
-          .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list-item[data-sub-content-is-current="true"] a:link, .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list-item[data-sub-content-is-current="true"] a:visited {
+          .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:link, .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:visited {
             color: #fff; }
-          .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list-item[data-sub-content-is-current="true"] a:hover {
+          .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:hover {
             font-weight: normal;
             color: #fff;
             background: #1b6123; }
-          .bca-nav__sub[data-content-is-current="true"] .bca-nav-sub-list-item[data-sub-content-is-current="true"] a::after {
+          .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a::after {
             content: "";
             display: block;
             position: absolute;
@@ -4212,6 +4296,29 @@ span#DebugMode {
             margin-top: -10px;
             border: 10px solid;
             border-color: transparent #fff transparent transparent; }
+  .bca-nav__system {
+    border-top: 0.4em solid #fff;
+    border-bottom: 2px solid #cccccc; }
+    .bca-nav__system-title {
+      margin: 0; }
+      .bca-nav__system-title button {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        text-align: left;
+        font-size: 1em;
+        font-weight: bold;
+        border: none;
+        background: none;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        cursor: pointer; }
+    .bca-nav__system-item {
+      padding: 0 1em; }
+      .bca-nav__system-item-title {
+        font-size: .9em; }
 
 .bca-nav-favorite {
   font-size: 1.6rem;
@@ -4276,7 +4383,7 @@ span#DebugMode {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav-sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav-sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title::before, .bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .bca-nav-sub-title::before, .bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .bca-nav-sub-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav-sub-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav-sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -4333,10 +4440,10 @@ span#DebugMode {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -4346,10 +4453,10 @@ span#DebugMode {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -4443,7 +4550,7 @@ span#DebugMode {
 .fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
-.fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
+.fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-heart:before, .bca-icon--favorite:before, .bca-nav-favorite-title:before, .bca-btn-icon[data-bca-btn-type=favorite]:before, .bca-btn[data-bca-btn-type=favorite]:before {
@@ -4493,13 +4600,15 @@ span#DebugMode {
 .fa-gear:before,
 .fa-cog:before,
 .bca-icon--setting:before,
-.bca-nav__sub[data-content-type="system"] .bca-nav-sub-title:before {
+.bca-nav__sub[data-content-type="system"] .bca-nav__sub-title:before,
+.bca-nav__system-title button:before,
+.bca-nav__system-item[data-system-type] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-trash-o:before {
   content: ""; }
 
-.fa-home:before, .bca-icon--home:before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav-sub-title:before, .bca-btn-icon[data-bca-btn-type=home]:before, .bca-btn[data-bca-btn-type=home]:before {
+.fa-home:before, .bca-icon--home:before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title:before, .bca-btn-icon[data-bca-btn-type=home]:before, .bca-btn[data-bca-btn-type=home]:before {
   content: ""; }
 
 .fa-file-o:before {
@@ -4569,7 +4678,7 @@ span#DebugMode {
 .fa-book:before {
   content: ""; }
 
-.fa-bookmark:before {
+.fa-bookmark:before, .bca-icon--bookmark:before {
   content: ""; }
 
 .fa-print:before {
@@ -4991,7 +5100,7 @@ span#DebugMode {
 .fa-bars:before {
   content: ""; }
 
-.fa-list-ul:before, .bca-icon--list:before, .bca-nav__sub[data-content-type="contents"] .bca-nav-sub-title:before {
+.fa-list-ul:before, .bca-icon--list:before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-list-ol:before {
@@ -5122,7 +5231,7 @@ span#DebugMode {
 .fa-cutlery:before {
   content: ""; }
 
-.fa-file-text-o:before, .bca-icon--blog:before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav-sub-title:before {
+.fa-file-text-o:before, .bca-icon--blog:before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-building-o:before {
@@ -5281,7 +5390,7 @@ span#DebugMode {
 .fa-eraser:before {
   content: ""; }
 
-.fa-puzzle-piece:before, .bca-icon--plugin:before, .bca-nav__sub[data-content-type="plugin"] .bca-nav-sub-title:before {
+.fa-puzzle-piece:before, .bca-icon--plugin:before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-microphone:before {
@@ -5903,7 +6012,7 @@ span#DebugMode {
 .fa-eyedropper:before {
   content: ""; }
 
-.fa-paint-brush:before, .bca-icon--theme:before, .bca-nav__sub[data-content-type="theme"] .bca-nav-sub-title:before {
+.fa-paint-brush:before, .bca-icon--theme:before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-birthday-cake:before {
@@ -6963,8 +7072,6 @@ span#DebugMode {
 
 /* Crumb
 ----------------------------------------------- */
-/* bca-content-menu
------------------------------------------------ */
 .bca-content-menu {
   padding: 0; }
   .bca-content-menu__item {
@@ -7369,7 +7476,7 @@ table.cake-sql-log tr td {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav-sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav-sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title::before, .bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .bca-nav-sub-title::before, .bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .bca-nav-sub-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav-sub-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav-sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -7426,10 +7533,10 @@ table.cake-sql-log tr td {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav-sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav-sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -7439,10 +7546,10 @@ table.cake-sql-log tr td {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav-sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__sub[data-content-type="theme"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__sub[data-content-type="plugin"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav-sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -7536,7 +7643,7 @@ table.cake-sql-log tr td {
 .fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
-.fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
+.fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-heart:before, .bca-icon--favorite:before, .bca-nav-favorite-title:before, .bca-btn-icon[data-bca-btn-type=favorite]:before, .bca-btn[data-bca-btn-type=favorite]:before {
@@ -7586,13 +7693,15 @@ table.cake-sql-log tr td {
 .fa-gear:before,
 .fa-cog:before,
 .bca-icon--setting:before,
-.bca-nav__sub[data-content-type="system"] .bca-nav-sub-title:before {
+.bca-nav__sub[data-content-type="system"] .bca-nav__sub-title:before,
+.bca-nav__system-title button:before,
+.bca-nav__system-item[data-system-type] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-trash-o:before {
   content: ""; }
 
-.fa-home:before, .bca-icon--home:before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav-sub-title:before, .bca-btn-icon[data-bca-btn-type=home]:before, .bca-btn[data-bca-btn-type=home]:before {
+.fa-home:before, .bca-icon--home:before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title:before, .bca-btn-icon[data-bca-btn-type=home]:before, .bca-btn[data-bca-btn-type=home]:before {
   content: ""; }
 
 .fa-file-o:before {
@@ -7662,7 +7771,7 @@ table.cake-sql-log tr td {
 .fa-book:before {
   content: ""; }
 
-.fa-bookmark:before {
+.fa-bookmark:before, .bca-icon--bookmark:before {
   content: ""; }
 
 .fa-print:before {
@@ -8084,7 +8193,7 @@ table.cake-sql-log tr td {
 .fa-bars:before {
   content: ""; }
 
-.fa-list-ul:before, .bca-icon--list:before, .bca-nav__sub[data-content-type="contents"] .bca-nav-sub-title:before {
+.fa-list-ul:before, .bca-icon--list:before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-list-ol:before {
@@ -8215,7 +8324,7 @@ table.cake-sql-log tr td {
 .fa-cutlery:before {
   content: ""; }
 
-.fa-file-text-o:before, .bca-icon--blog:before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav-sub-title:before {
+.fa-file-text-o:before, .bca-icon--blog:before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title:before {
   content: ""; }
 
 .fa-building-o:before {
@@ -8374,7 +8483,7 @@ table.cake-sql-log tr td {
 .fa-eraser:before {
   content: ""; }
 
-.fa-puzzle-piece:before, .bca-icon--plugin:before, .bca-nav__sub[data-content-type="plugin"] .bca-nav-sub-title:before {
+.fa-puzzle-piece:before, .bca-icon--plugin:before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-microphone:before {
@@ -8996,7 +9105,7 @@ table.cake-sql-log tr td {
 .fa-eyedropper:before {
   content: ""; }
 
-.fa-paint-brush:before, .bca-icon--theme:before, .bca-nav__sub[data-content-type="theme"] .bca-nav-sub-title:before {
+.fa-paint-brush:before, .bca-icon--theme:before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title:before {
   content: ""; }
 
 .fa-birthday-cake:before {

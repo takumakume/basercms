@@ -36,6 +36,25 @@
 				</li>
 			</ul>
 		</div>
+		<div class="bca-nav__system">
+			<h3 class="bca-nav__system-title">
+				<button class="bca-nav__sub-title-label" @click="openSystem"><?php echo __d('baser', '設定') ?></button>
+			</h3>
+			<div class="bca-nav__system-list" v-bind:hidden="systemHidden">
+				<div v-for="system in systemList" class="bca-nav__system-item" v-bind:data-system-type="system.name.toLowerCase()" v-bind:data-content-is-current="system.current">
+					<h3 class="bca-nav__system-item-title">
+						<a v-bind:href="baseURL + system.url" class="bca-nav__sub-title-label">{{ system.title }}</a>
+					</h3>
+					<ul class="bca-nav__sub-list">
+						<li v-for="subSystem in system.menus" class="bca-nav__sub-list-item" v-bind:data-sub-content-is-current="subSystem.current">
+							<a v-bind:href="baseURL + subSystem.url">
+								<span class="bca-nav__sub-list-item-title">{{ subSystem.title }}</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</nav>
 
 	<nav class="bca-nav__main" data-js-container="AdminMenu" hidden></nav>
