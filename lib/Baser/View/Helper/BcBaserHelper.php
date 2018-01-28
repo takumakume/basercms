@@ -1196,7 +1196,7 @@ class BcBaserHelper extends AppHelper {
 				$fullUrl = true;
 			}
 			$url = $this->BcContents->getUrl($this->_View->viewVars['publishLink'], $fullUrl, $useSubdomain, false);
-			$this->link(__d('baser', '公開ページ'), $url, ['class' => 'tool-menu']);
+			$this->link('<i class="fa fa-globe" aria-hidden="true"></i>'.__d('baser', 'サイト確認'), $url, ['class' => 'tool-menu bca-toolbar-publish']);
 		}
 	}
 

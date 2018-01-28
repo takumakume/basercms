@@ -3725,6 +3725,7 @@ html, body {
 #ToolBar a, #ToolBar span {
   line-height: 30px;
   height: 30px;
+  margin: 5px 0;
   padding: 0 10px;
   color: #EEE;
   text-decoration: none;
@@ -3752,8 +3753,41 @@ span#DebugMode {
   background-color: #E20;
   font-weight: bold;
   color: #FFF;
-  display: inline !important;
-  padding: 3px 5px; }
+  /*display: inline!important;*/
+  /*padding:3px 5px;*/ }
+
+#ToolBar .bca-debug-mode {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  margin: 8px 0; }
+
+.bca-toolbar-logo {
+  vertical-align: middle; }
+
+.bca-toolbar-logo-image {
+  padding: 4px 7px 4px 4px;
+  margin-right: 8px;
+  border-right: 1px solid #ccc; }
+
+#ToolBar .bca-toolbar-logo-text {
+  display: inline;
+  padding: 0;
+  color: #fff;
+  vertical-align: top;
+  font-size: 13px; }
+
+#ToolBar .bca-toolbar-publish {
+  height: 22px;
+  line-height: 22px;
+  margin: 8px 0;
+  background: #fff;
+  border-radius: 22px;
+  color: #333; }
+
+#ToolBar .bca-toolbar-publish:hover {
+  background: #ccc;
+  color: #333; }
 
 /* UserMenu
 ----------------------------------------------- */
