@@ -17,8 +17,9 @@
 
 
 <!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
-
+ <div class="bca-data-list__sub">
+	<?php $this->BcBaser->element('pagination') ?>
+</div>
 <!-- list -->
 <table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
 	<thead class="bca-table-listup__thead">
@@ -35,11 +36,36 @@
 		</div>
 	<?php endif ?>
 </th>
-<th class="bca-table-listup__thead-th"><?php echo $this->Paginator->sort('id', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' ' . __d('baser', 'NO'), 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' ' . __d('baser', 'NO')), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
-<th class="bca-table-listup__thead-th"><?php echo $this->Paginator->sort('name', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' ' . __d('baser', 'ブログタグ名'), 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' ' . __d('baser', 'ブログタグ名')), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
 <th class="bca-table-listup__thead-th">
-	<?php echo $this->Paginator->sort('created', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' ' . __d('baser', '登録日'), 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' ' . __d('baser', '登録日')), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?><br />
-	<?php echo $this->Paginator->sort('modified', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' ' . __d('baser', '更新日'), 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' ' . __d('baser', '更新日')), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?>
+	<?php 
+	echo $this->Paginator->sort('id', 
+		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', 'NO'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', 'NO')),
+		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+	); 
+	?>
+</th>
+<th class="bca-table-listup__thead-th">
+	<?php 
+	echo $this->Paginator->sort('name', 
+		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', 'ブログタグ名'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', 'ブログタグ名')),
+		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+	); 
+	?>
+</th>
+<th class="bca-table-listup__thead-th">
+	<?php 
+	echo $this->Paginator->sort('created', 
+		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', '登録日'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', '登録日')),
+		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+	); 
+	?>
+	<br />
+	<?php 
+	echo $this->Paginator->sort('modified', 
+		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', '更新日'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', '更新日')),
+		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+	); 
+	?>
 </th>
 </tr>
 </thead>
@@ -56,5 +82,9 @@
 </tbody>
 </table>
 
-<!-- list-num -->
-<?php $this->BcBaser->element('list_num') ?>
+<div class="bca-data-list__bottom">
+  <div class="bca-data-list__sub">
+	<!-- list-num -->
+	<?php $this->BcBaser->element('list_num') ?>
+  </div>
+</div>
