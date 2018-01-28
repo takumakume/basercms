@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: baserCMS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-01-28 10:58+0900\n"
+"PO-Revision-Date: 2018-01-28 11:19+0900\n"
 "Last-Translator: \n"
 "Language-Team: baserCMS Users Community <info@basercms.net>\n"
 "Language: en\n"
@@ -83,7 +83,7 @@ msgstr "Plugin"
 
 #: Config/setting.php:64;103 View/Elements/admin/submenus/site_configs.php:24
 msgid "ユーザー管理"
-msgstr ""
+msgstr "Users"
 
 #: Config/setting.php:67 View/SiteConfigs/admin/form.php:321
 #: View/Themed/ownd_river/SiteConfigs/admin/form.php:317
@@ -100,7 +100,7 @@ msgstr "User Group"
 #: Config/setting.php:72;107 Controller/SitesController.php:42
 #: View/Elements/admin/submenus/site_configs.php:28
 msgid "サブサイト管理"
-msgstr ""
+msgstr "Sub Sites"
 
 #: Config/setting.php:75
 #: View/Elements/admin/searches/search_indices_index.php:26
@@ -110,7 +110,7 @@ msgstr ""
 #: Config/setting.php:79;108 Controller/SiteConfigsController.php:222
 #: View/Elements/admin/submenus/site_configs.php:29
 msgid "ユーティリティ"
-msgstr ""
+msgstr "Utility"
 
 #: Config/setting.php:82 Controller/ToolsController.php:75
 #: View/Elements/admin/submenus/tools.php:23
@@ -206,7 +206,7 @@ msgstr ""
 #: Config/setting.php:283 View/Elements/admin/contents/form_alias.php:21
 #: View/Themed/ownd_river/Elements/admin/contents/form_alias.php:21
 msgid "無所属コンテンツ"
-msgstr ""
+msgstr "Independent content"
 
 #: Config/setting.php:311
 msgid "フォルダー"
@@ -1508,7 +1508,7 @@ msgstr "Debug Mode 2"
 
 #: Plugin/Feed/Config/setting.php:19
 msgid "フィード管理"
-msgstr ""
+msgstr "Feed Setting"
 
 #: Plugin/Feed/Config/setting.php:22
 msgid "フィード設定"
@@ -1520,7 +1520,7 @@ msgstr ""
 
 #: Plugin/Uploader/Config/setting.php:24
 msgid "アップロード管理"
-msgstr ""
+msgstr "Uploads"
 
 #: Plugin/Uploader/Config/setting.php:27
 msgid "アップロードファイル"
@@ -1746,7 +1746,7 @@ msgstr ""
 #: View/UserGroups/admin/form.php:62;76;92;103;117
 #: View/Users/admin/form.php:52;62;72;82;97;115
 msgid "ヘルプ"
-msgstr "Alter Table"
+msgstr "Help"
 
 #: View/Elements/admin/contents_menu.php:29
 #: View/Themed/ownd_river/UploaderConfigs/admin/index.php:96
@@ -2078,7 +2078,7 @@ msgstr "Type"
 #: View/Elements/admin/searches/search_indices_index.php:25;28;31;33
 #: View/Elements/admin/searches/users_index.php:22
 msgid "指定なし"
-msgstr ""
+msgstr "unspecified"
 
 #: View/Elements/admin/searches/search_indices_index.php:32
 msgid "優先度"
@@ -2962,7 +2962,7 @@ msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/sidebar.php:28
 msgid "ダッシュボード"
-msgstr ""
+msgstr "Dashboard"
 
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:42
 #: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:41
