@@ -1109,7 +1109,7 @@ msgstr ""
 #: View/Elements/admin/toolbar.php:93;95
 #: View/Elements/admin/helps/users_index.php:21
 #: View/Elements/admin/users/index_row.php:24
-#: View/Themed/ownd_river/Elements/admin/toolbar.php:93;95
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:100;102
 #: View/Themed/ownd_river/Users/admin/login.php:153
 #: View/Users/admin/login.php:48
 msgid "ログイン"
@@ -1473,6 +1473,10 @@ msgstr ""
 msgid "フィードキャッシュ削除"
 msgstr ""
 
+#: Plugin/Feed/View/Elements/admin/dashboard/baser_news.php:1
+msgid "baserCMSニュース"
+msgstr ""
+
 #: Plugin/Uploader/Config/setting.php:24
 msgid "アップロード管理"
 msgstr ""
@@ -1719,7 +1723,7 @@ msgstr ""
 #: View/ThemeFiles/admin/form_folder.php:50
 #: View/Themed/ownd_river/BlogCategories/admin/form.php:52;96
 #: View/Themed/ownd_river/BlogContents/admin/form.php:52;80;106;141;162
-#: View/Themed/ownd_river/Elements/admin/contents_menu.php:25
+#: View/Themed/ownd_river/Elements/admin/contents_menu.php:29
 #: View/Themed/ownd_river/Elements/admin/favorite_menu.php:42
 #: View/Themed/ownd_river/MailConfigs/admin/form.php:28;37;46;60;69
 #: View/Themed/ownd_river/MailContents/admin/form.php:59;68;77;86;110;122;136;150;163;175;191;209
@@ -1744,6 +1748,7 @@ msgid "制限設定"
 msgstr ""
 
 #: View/Elements/admin/favorite_menu.php:24
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:74
 msgid "よく使う項目"
 msgstr ""
 
@@ -1851,23 +1856,23 @@ msgid "デバッグモード"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:78
-#: View/Themed/ownd_river/Elements/admin/toolbar.php:78
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:85
 msgid "元のユーザーに戻る"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:81;84
-#: View/Themed/ownd_river/Elements/admin/toolbar.php:81;84
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:88;91
 msgid "アカウント設定"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:87
 #: View/Members/mypage/index.php:22
-#: View/Themed/ownd_river/Elements/admin/toolbar.php:87
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:94
 msgid "ログアウト"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:90
-#: View/Themed/ownd_river/Elements/admin/toolbar.php:90
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:97
 msgid "ログインしていません "
 msgstr ""
 
@@ -2296,7 +2301,7 @@ msgid " 表示名"
 msgstr ""
 
 #: View/Elements/admin/user_groups/index_row.php:22
-#: View/Themed/ownd_river/Elements/admin/contents_menu.php:30
+#: View/Themed/ownd_river/Elements/admin/contents_menu.php:35
 msgid "制限"
 msgstr ""
 
@@ -2959,6 +2964,10 @@ msgstr ""
 msgid "データが登録されていません。"
 msgstr ""
 
+#: View/Themed/ownd_river/Elements/admin/contents_menu.php:24
+msgid "よく使う項目に追加"
+msgstr ""
+
 #: View/Themed/ownd_river/Elements/admin/favorite_menu.php:24
 msgid "お気に入り"
 msgstr ""
@@ -2989,15 +2998,15 @@ msgstr ""
 msgid "絞り込み検索"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/sidebar.php:25
+#: View/Themed/ownd_river/Elements/admin/sidebar.php:21
 msgid "管理メニュー"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/sidebar.php:28
+#: View/Themed/ownd_river/Elements/admin/sidebar.php:24
 msgid "ダッシュボード"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/toolbar.php:102
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:109
 msgid "キャッシュクリア"
 msgstr ""
 
@@ -3050,6 +3059,14 @@ msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:88
 msgid "作成日"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/dashboard/contents_info.php:21
+msgid "コンテンツ情報"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/dashboard/update_log.php:16
+msgid "最近の動き"
 msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:43
