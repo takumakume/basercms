@@ -55,10 +55,12 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 
 
 <tr id="Row<?php echo $count + 1 ?>" <?php echo $class; ?>>
-	<td class="bca-table-listup__tbody-td" class="row-tools bca-table-listup__tbody-td" style="width:20%">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--select"><?php // 選択 ?>
 		<?php if ($this->BcBaser->isAdminUser() && empty($data['Content']['site_root'])): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['Content']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Content']['id']]) ?>
 		<?php endif ?>
+	</td>
+	<td class="bca-table-listup__tbody-td" style="width:20%">
 		<?php if($isPublish): ?>
 			<?php $this->BcBaser->link('', $fullUrl, ['title' => '確認', 'class' => 'btn-check bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg', 'target' => '_blank']) ?>
 		<?php endif ?>
