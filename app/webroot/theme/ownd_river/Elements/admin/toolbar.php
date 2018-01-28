@@ -44,8 +44,8 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 					<li><?php $this->BcBaser->link('インストールマニュアル', 'http://basercms.net/manuals/introductions/4.html', array('target' => '_blank')) ?></li>
 				<?php elseif (Configure::read('BcRequest.isUpdater')): ?>
 					<li><?php $this->BcBaser->link('アップデートマニュアル', 'http://basercms.net/manuals/introductions/8.html', array('target' => '_blank')) ?></li>
-				<?php elseif (!empty($this->request->params['admin']) || ('/' . $this->request->url) == $loginUrl): ?>	
-					<li><?php $this->BcBaser->link($this->BcBaser->siteConfig['formal_name'], '/') ?></li>
+				<?php elseif (!empty($this->request->params['admin']) || ('/' . $this->request->url) == $loginUrl): ?>
+					<li><?php $this->BcBaser->link($this->BcBaser->getImg('/theme/ownd_river/img/admin/logo_icon.svg', array('alt' => '', 'width' => '24', 'height' => '21', 'class' => 'bca-toolbar-logo-image')).'<span class="bca-toolbar-logo-text">'.$this->BcBaser->siteConfig['formal_name'].'</span>', '/', array('class' => 'bca-toolbar-logo')) ?></li>
 				<?php else: ?>
 					<?php if (in_array('admin', $currentUserAuthPrefixes)): ?>
 						<li><?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_logo.png', array('alt' => 'baserCMS管理システム', 'class' => 'bc-btn')), array('plugin' => null, 'admin' => true, 'controller' => 'dashboard', 'action' => 'index'), array('title' => 'baserCMS管理システム')) ?></li>
@@ -61,9 +61,9 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 				<?php endif ?>
 				<?php if (!$loginUrl || $this->request->url != $loginUrl): ?>
 					<?php if (Configure::read('debug') == -1 && $this->name != "Installations"): ?>
-						<li>&nbsp;&nbsp;<span id="DebugMode" title="インストールモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">インストールモード</span>&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;<span id="DebugMode" class="bca-debug-mode" title="インストールモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">インストールモード</span>&nbsp;&nbsp;</li>
 					<?php elseif (Configure::read('debug') > 0): ?>
-						<li>&nbsp;&nbsp;<span id="DebugMode" title="デバッグモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">デバッグモード<?php echo mb_convert_kana(Configure::read('debug'), 'N') ?></span>&nbsp;&nbsp;</li>
+						<li>&nbsp;&nbsp;<span id="DebugMode" class="bca-debug-mode" title="デバッグモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">デバッグモード<?php echo mb_convert_kana(Configure::read('debug'), 'N') ?></span>&nbsp;&nbsp;</li>
 					<?php endif; ?>
 				<?php endif ?>
 			</ul>

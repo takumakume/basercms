@@ -274,7 +274,7 @@
 .fa-music:before {
   content: ""; }
 
-.fa-search:before {
+.fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
 .fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
@@ -364,7 +364,7 @@
 .fa-repeat:before {
   content: ""; }
 
-.fa-refresh:before {
+.fa-refresh:before, .bca-btn[data-bca-btn-type=clear]:before {
   content: ""; }
 
 .fa-list-alt:before {
@@ -512,7 +512,7 @@
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-btn[data-bca-btn-type=back-to-list]:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -696,7 +696,7 @@
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before {
+.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -1725,7 +1725,7 @@
 .fa-bell-slash-o:before {
   content: ""; }
 
-.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=save]:before, .bca-btn[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=back-to-list]:before, .bca-btn[data-bca-btn-type=search]:before, .bca-btn[data-bca-btn-type=clear]:before {
+.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=delete]:before {
   content: ""; }
 
 .fa-copyright:before {
@@ -2568,17 +2568,6 @@ pre {
 form {
   display: inline; }
 
-input, textarea, select, option {
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif; }
-
-input[type=text], textarea, select, input[type=password] {
-  margin: 3px 2px;
-  padding: 3px 1px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fff;
-  color: #535A62; }
-
 input[type=checkbox] {
   vertical-align: middle; }
 
@@ -2586,19 +2575,6 @@ input[type=radio],
 input[type=checkbox] {
   margin-left: 5px;
   margin-right: 5px; }
-
-input[type=submit],
-input[type=reset],
-input[type=button] {
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif; }
-
-input[type=text], textarea, input[type=password] {
-  font-size: 1.2em;
-  color: #535A62;
-  padding: 3px 3px; }
-
-input[type=text], input[type=password] {
-  height: 1.4em; }
 
 select[disabled],
 input[type="text"][disabled],
@@ -2956,16 +2932,6 @@ strong {
   width: 600px;
   margin: 0 auto; }
 
-/* panel-box
------------------------------------------------ */
-.panel-box {
-  border: 5px solid #DDD;
-  padding: 10px 20px;
-  margin: 20px 0; }
-
-.panel-box li .date {
-  /*font-weight: bold;*/ }
-
 /* WidgetSetting
 ----------------------------------------------- */
 #WidgetSetting {
@@ -3162,15 +3128,6 @@ strong {
   font-size: 18px;
   border: 1px solid #CCC; }
 
-#Installations .panel-box {
-  margin: 0 auto 20px auto; }
-
-#Installations .panel-box ul li {
-  margin-bottom: 10px;
-  border-left: 5px solid #DFDFDF;
-  padding: 3px 10px;
-  background: none; }
-
 #Installations .step-1 {
   height: 300px;
   background: url(../../img/admin/bg_install.png) no-repeat right bottom #fff; }
@@ -3211,15 +3168,6 @@ strong {
 #AdminDashboard .pagination .disabled,
 #AdminDashboard .pagination .current {
   padding: 1px 6px; }
-
-#AdminDashboard .panel-box {
-  margin: 10px; }
-
-#AdminDashboard .panel-box li {
-  margin-bottom: 5px;
-  border-left: 5px solid #DDD;
-  padding: 3px 10px;
-  background: none; }
 
 /* ==================================================================== */
 /*    Themes
@@ -3567,8 +3515,6 @@ div.jstree-publish-even {
   border-radius: 0;
   background: #f5f5f5; }
 
-/* bca-container
------------------------------------------------ */
 .bca-container {
   position: relative;
   height: auto;
@@ -3749,6 +3695,7 @@ html, body {
 #ToolBar a, #ToolBar span {
   line-height: 30px;
   height: 30px;
+  margin: 5px 0;
   padding: 0 10px;
   color: #EEE;
   text-decoration: none;
@@ -3776,8 +3723,41 @@ span#DebugMode {
   background-color: #E20;
   font-weight: bold;
   color: #FFF;
-  display: inline !important;
-  padding: 3px 5px; }
+  /*display: inline!important;*/
+  /*padding:3px 5px;*/ }
+
+#ToolBar .bca-debug-mode {
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  margin: 8px 0; }
+
+.bca-toolbar-logo {
+  vertical-align: middle; }
+
+.bca-toolbar-logo-image {
+  padding: 4px 7px 4px 4px;
+  margin-right: 8px;
+  border-right: 1px solid #ccc; }
+
+#ToolBar .bca-toolbar-logo-text {
+  display: inline;
+  padding: 0;
+  color: #fff;
+  vertical-align: top;
+  font-size: 13px; }
+
+#ToolBar .bca-toolbar-publish {
+  height: 22px;
+  line-height: 22px;
+  margin: 8px 0;
+  background: #fff;
+  border-radius: 22px;
+  color: #333; }
+
+#ToolBar .bca-toolbar-publish:hover {
+  background: #ccc;
+  color: #333; }
 
 /* UserMenu
 ----------------------------------------------- */
@@ -3928,7 +3908,7 @@ span#DebugMode {
   .bca-nav__main {
     font-size: 1.6rem;
     position: relative;
-    z-index: 9000;
+    z-index: 100;
     background: #f4f5f1; }
     .bca-nav__main-title {
       display: none; }
@@ -4253,7 +4233,7 @@ span#DebugMode {
 .fa-music:before {
   content: ""; }
 
-.fa-search:before {
+.fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
 .fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
@@ -4343,7 +4323,7 @@ span#DebugMode {
 .fa-repeat:before {
   content: ""; }
 
-.fa-refresh:before {
+.fa-refresh:before, .bca-btn[data-bca-btn-type=clear]:before {
   content: ""; }
 
 .fa-list-alt:before {
@@ -4491,7 +4471,7 @@ span#DebugMode {
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-btn[data-bca-btn-type=back-to-list]:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -4675,7 +4655,7 @@ span#DebugMode {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before {
+.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -5704,7 +5684,7 @@ span#DebugMode {
 .fa-bell-slash-o:before {
   content: ""; }
 
-.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=save]:before, .bca-btn[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=back-to-list]:before, .bca-btn[data-bca-btn-type=search]:before, .bca-btn[data-bca-btn-type=clear]:before {
+.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=delete]:before {
   content: ""; }
 
 .fa-copyright:before {
@@ -6785,36 +6765,51 @@ span#DebugMode {
   .bca-content-menu__link {
     color: #656565; }
 
-/* search
------------------------------------------------ */
 .bca-search {
+  font-size: 1.6rem;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 40px; }
-  .bca-search .bca-search-head {
+  .bca-search__head {
     margin: 0;
     padding: 0;
     border: none; }
-    .bca-search .bca-search-head a {
+    .bca-search__head a {
       display: block;
       padding: 10px; }
-      .bca-search .bca-search-head a:hover {
+      .bca-search__head a:hover {
         text-decoration: none; }
-  .bca-search-body {
+  .bca-search__body {
     margin: 0;
-    padding: 0 10px 10px; }
-    .bca-search-body p {
-      display: table;
-      width: 100%; }
-      .bca-search-body p span {
-        display: table-cell;
-        padding-right: 20px; }
-        .bca-search-body p span:last-child {
-          padding-right: 0; }
-        .bca-search-body p span label {
-          display: block; }
-        .bca-search-body p span input, .bca-search-body p span select {
-          width: 98%; }
+    padding: 0 1em 2em; }
+  .bca-search__input-list {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+  .bca-search__input-item {
+    font-size: .875em;
+    -webkit-box-flex: 0;
+            flex: 0 1 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    margin: 0;
+    display: block; }
+  .bca-search__btns {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    margin: 2em 0 0; }
+    .bca-search__btns-item {
+      margin: 0 1em; }
 
 /* bca-pagination
 ----------------------------------------------- */
@@ -7327,7 +7322,7 @@ table.cake-sql-log tr td {
 .fa-music:before {
   content: ""; }
 
-.fa-search:before {
+.fa-search:before, .bca-btn[data-bca-btn-type=search]:before {
   content: ""; }
 
 .fa-envelope-o:before, .bca-icon--mail:before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav-sub-title:before {
@@ -7417,7 +7412,7 @@ table.cake-sql-log tr td {
 .fa-repeat:before {
   content: ""; }
 
-.fa-refresh:before {
+.fa-refresh:before, .bca-btn[data-bca-btn-type=clear]:before {
   content: ""; }
 
 .fa-list-alt:before {
@@ -7565,7 +7560,7 @@ table.cake-sql-log tr td {
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-btn[data-bca-btn-type=back-to-list]:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -7749,7 +7744,7 @@ table.cake-sql-log tr td {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before {
+.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -8778,7 +8773,7 @@ table.cake-sql-log tr td {
 .fa-bell-slash-o:before {
   content: ""; }
 
-.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=save]:before, .bca-btn[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=back-to-list]:before, .bca-btn[data-bca-btn-type=search]:before, .bca-btn[data-bca-btn-type=clear]:before {
+.fa-trash:before, .bca-icon--delete:before, .bca-btn-icon[data-bca-btn-type=delete]:before, .bca-btn[data-bca-btn-type=delete]:before {
   content: ""; }
 
 .fa-copyright:before {
@@ -9482,14 +9477,15 @@ table.cake-sql-log tr td {
   clip: auto; }
 
 .bca-btn {
-  font-size: 1.4rem;
-  box-sizing: border-box;
   display: inline-block;
   border-radius: 3px;
   padding: 0.7em 1em 0.6em;
   line-height: 1.2;
   border: 1px solid #ccc;
   cursor: pointer;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  outline: none;
   color: #343434;
   text-decoration: none;
   background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9502,6 +9498,8 @@ table.cake-sql-log tr td {
     color: #343434;
     background-color: #fafafa;
     background-image: linear-gradient(white 100%, white 100%); }
+  .bca-btn:focus {
+    box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=publish] {
     display: inline-block;
     border-radius: 3px;
@@ -9509,6 +9507,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9521,6 +9522,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=publish]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=unpublish] {
     display: inline-block;
     border-radius: 3px;
@@ -9528,6 +9531,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9540,6 +9546,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=unpublish]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=preview] {
     display: inline-block;
     border-radius: 3px;
@@ -9547,6 +9555,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9559,6 +9570,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=preview]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=edit] {
     display: inline-block;
     border-radius: 3px;
@@ -9566,6 +9579,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9578,6 +9594,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=edit]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=copy] {
     display: inline-block;
     border-radius: 3px;
@@ -9585,6 +9603,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9597,6 +9618,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=copy]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=save] {
     display: inline-block;
     border-radius: 3px;
@@ -9604,11 +9627,13 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=save]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9617,6 +9642,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=save]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=delete] {
     display: inline-block;
     border-radius: 3px;
@@ -9624,6 +9651,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9636,6 +9666,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=delete]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=back-to-list] {
     display: inline-block;
     border-radius: 3px;
@@ -9643,11 +9675,13 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=back-to-list]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9656,6 +9690,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=back-to-list]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=favorite] {
     display: inline-block;
     border-radius: 3px;
@@ -9663,6 +9699,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9675,6 +9714,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=favorite]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=menuitem] {
     display: inline-block;
     border-radius: 3px;
@@ -9682,6 +9723,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9694,6 +9738,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=menuitem]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=add] {
     display: inline-block;
     border-radius: 3px;
@@ -9701,6 +9747,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9716,6 +9765,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=add]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
     .bca-btn[data-bca-btn-type=add]::before {
       color: #fff; }
     .bca-btn[data-bca-btn-type=add]:hover {
@@ -9728,6 +9779,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9740,6 +9794,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=help]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=permission] {
     display: inline-block;
     border-radius: 3px;
@@ -9747,6 +9803,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9759,6 +9818,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=permission]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=home] {
     display: inline-block;
     border-radius: 3px;
@@ -9766,6 +9827,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9778,6 +9842,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=home]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=login] {
     display: inline-block;
     border-radius: 3px;
@@ -9785,6 +9851,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9800,6 +9869,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=login]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
     .bca-btn[data-bca-btn-type=login]:hover, .bca-btn[data-bca-btn-type=login]:focus {
       color: #fff;
       background-image: linear-gradient(#559429 10%, #559429 100%); }
@@ -9810,11 +9881,13 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=search]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9823,6 +9896,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=search]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=clear] {
     display: inline-block;
     border-radius: 3px;
@@ -9830,11 +9905,13 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
-    background-image: linear-gradient(#f00 10%, #f00 100%) !important; }
+    transition: all .5s ease-out 0s; }
     .bca-btn[data-bca-btn-type=clear]::before {
       margin-right: 4px;
       color: #343434; }
@@ -9843,20 +9920,16 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=clear]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-size=lg] {
     font-size: 1.6rem; }
-    .bca-btn[data-bca-btn-size=lg]::before {
-      font-size: 16px !important; }
   .bca-btn[data-bca-btn-size=sm] {
     font-size: 1.2rem; }
-    .bca-btn[data-bca-btn-size=sm]::before {
-      font-size: 16px !important; }
   .bca-btn[data-bca-btn-size=xs] {
     font-size: 1.1rem;
     font-size: 0.78rem;
-    padding: .4em .8em .5em; }
-    .bca-btn[data-bca-btn-size=xs]::before {
-      font-size: 16px !important; }
+    padding: .6em .8em .4em; }
   .bca-btn[data-bca-btn-status=primary] {
     display: inline-block;
     border-radius: 3px;
@@ -9864,6 +9937,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9878,6 +9954,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-status=primary]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
     .bca-btn[data-bca-btn-status=primary]::before {
       color: #fff; }
     .bca-btn[data-bca-btn-status=primary]:hover {
@@ -9898,9 +9976,9 @@ table.cake-sql-log tr td {
     margin-right: 15px;
     padding-left: 2em;
     font-size: 1.6rem; }
-  .bca-radio[data-radio-size=lg] + label {
+  .bca-radio[data-bca-radio-size=lg] + label {
     font-size: 1.8rem; }
-  .bca-radio[data-radio-size=sm] + label {
+  .bca-radio[data-bca-radio-size=sm] + label {
     font-size: 1.4rem; }
   .bca-radio + label:before {
     content: "";
@@ -9960,9 +10038,9 @@ table.cake-sql-log tr td {
             transform: rotate(45deg);
     border-right: 0.24em solid #61a82e;
     border-bottom: 0.24em solid #61a82e; }
-  .bca-checkbox-label[data-checkbox-size=lg] {
+  .bca-checkbox-label[data-bca-checkbox-size=lg] {
     font-size: 1.8rem; }
-  .bca-checkbox-label[data-checkbox-size=sm] {
+  .bca-checkbox-label[data-bca-checkbox-size=sm] {
     font-size: 1.4rem; }
 
 .bca-select {
@@ -9973,12 +10051,15 @@ table.cake-sql-log tr td {
   font-size: 1.4rem;
   padding: 0.7em 2.2em 0.6em 1.2em;
   border: 1px solid #ccc;
-  line-height: 1.2; }
-  .bca-select[data-select-size=lg] {
+  line-height: 1.2;
+  outline: none;
+  border-radius: 3px; }
+  .bca-select[data-bca-select-size=lg] {
     font-size: 1.6rem; }
-  .bca-select[data-select-size=sm] {
-    font-size: 1.2rem;
-    line-height: 1.16; }
+  .bca-select[data-bca-select-size=sm] {
+    font-size: 1.2rem; }
+  .bca-select:focus {
+    box-shadow: 0 0 6px 0px #555555; }
 
 /* bca-data-list
 ----------------------------------------------- */
@@ -10022,6 +10103,80 @@ table.cake-sql-log tr td {
     background: #E00; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
+
+.bca-panel-box {
+  border: 5px solid #cccccc;
+  padding: 10px 20px;
+  margin: 20px 0; }
+  .bca-panel-box__inline-fields {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+            align-items: stretch; }
+    .bca-panel-box__inline-fields-item {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+              align-items: center; }
+    .bca-panel-box__inline-fields-title {
+      font-weight: bold;
+      display: inline-block; }
+    .bca-panel-box__inline-fields-separator {
+      width: 1px;
+      background: #cccccc;
+      margin: 0 2em; }
+      .bca-panel-box__inline-fields-separator::before {
+        content: "";
+        display: block; }
+
+/* 古いスタイル インストール画面など
+----------------------------------------------- */
+.panel-box {
+  border: 5px solid #cccccc;
+  padding: 10px 20px;
+  margin: 20px 0; }
+
+.panel-box li .date {
+  /*font-weight: bold;*/ }
+
+#Installations .panel-box {
+  margin: 0 auto 20px auto; }
+
+#Installations .panel-box ul li {
+  margin-bottom: 10px;
+  border-left: 5px solid #cccccc;
+  padding: 3px 10px;
+  background: none; }
+
+#AdminDashboard .panel-box {
+  margin: 10px; }
+
+#AdminDashboard .panel-box li {
+  margin-bottom: 5px;
+  border-left: 5px solid #cccccc;
+  padding: 3px 10px;
+  background: none; }
+
+.bca-input-text {
+  display: inline-block;
+  outline: none;
+  padding: 0.7em 0.5em 0.6em 0.5em;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  line-height: 1.2;
+  font-size: 1.4rem;
+  color: #535A62; }
+  .bca-input-text[data-input-text-size=lg] {
+    font-size: 1.6rem; }
+  .bca-input-text[data-input-text-size=sm] {
+    font-size: 1.2rem; }
+  .bca-input-text:focus {
+    box-shadow: 0 0 6px 0px #555555; }
 
 .bt-content li {
   padding: 0 20px;

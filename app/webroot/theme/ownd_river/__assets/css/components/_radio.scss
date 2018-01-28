@@ -11,12 +11,12 @@
 		padding-left: 2em;
 		font-size: $label_font_size_medium;
 	}
-	&[data-radio-size=lg] { //大きいサイズ
+	&[data-bca-radio-size=lg] { //大きいサイズ
 		+ label{
 			font-size: $label_font_size_large;
 		}
 	}
-	&[data-radio-size=sm] { //小さいサイズ
+	&[data-bca-radio-size=sm] { //小さいサイズ
 		+ label{
 			font-size: $label_font_size_small;
 		}
@@ -41,6 +41,6 @@
 		box-shadow: 0 0 0px 4px #EEEEEE inset;
 	}
 	&:focus + label:before {
-		box-shadow: 0 0 0px 4px #EEEEEE inset, 0 0 6px 0px #555555;
+		box-shadow: 0 0 0px 4px #EEEEEE inset, $focus_shadow;
 	}
 }
