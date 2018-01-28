@@ -17,17 +17,17 @@
 
 
 <tr>
-	<td class="row-tools">
+	<td class="row-tools bca-table-listup__tbody-td">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['FeedConfig']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['FeedConfig']['id'])) ?>
 		<?php endif ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_check.png', array('alt' => '確認', 'class' => 'btn')), array('controller' => 'feed_configs', 'action' => 'preview', $data['FeedConfig']['id']), array('title' => '確認', 'target' => '_blank')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => '編集', 'class' => 'btn')), array('action' => 'edit', $data['FeedConfig']['id']), array('title' => '編集')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => '削除', 'class' => 'btn')), array('action' => 'ajax_delete', $data['FeedConfig']['id']), array('title' => '削除', 'class' => 'btn-delete')) ?>
+		<?php $this->BcBaser->link('', array('controller' => 'feed_configs', 'action' => 'preview', $data['FeedConfig']['id']), array('title' => '確認', 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'edit', $data['FeedConfig']['id']), array('title' => '編集', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['FeedConfig']['id']), array('title' => '削除', 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 	</td>
-	<td><?php echo $data['FeedConfig']['id']; ?></td>
-	<td><?php $this->BcBaser->link($data['FeedConfig']['name'], array('action' => 'edit', $data['FeedConfig']['id'])) ?></td>
-	<td><?php echo $data['FeedConfig']['display_number'] ?></td>
-	<td><?php echo $this->BcTime->format('Y-m-d', $data['FeedConfig']['created']); ?><br />
+	<td class="bca-table-listup__tbody-td"><?php echo $data['FeedConfig']['id']; ?></td>
+	<td class="bca-table-listup__tbody-td"><?php $this->BcBaser->link($data['FeedConfig']['name'], array('action' => 'edit', $data['FeedConfig']['id'])) ?></td>
+	<td class="bca-table-listup__tbody-td"><?php echo $data['FeedConfig']['display_number'] ?></td>
+	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['FeedConfig']['created']); ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['FeedConfig']['modified']); ?></td>
 </tr>

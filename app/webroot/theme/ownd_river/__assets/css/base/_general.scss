@@ -148,17 +148,17 @@ form {
 	display:inline;
 }
 input, textarea, select, option {
-	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif;
+	//font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif;
 }
 input[type=text], textarea, select, input[type=password] {
-	margin:3px 2px;
-	padding: 3px 1px;
-	border:1px solid #ccc;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	background-color:#fff;
-	color:#535A62;
+	//margin:3px 2px;
+	//padding: 3px 1px;
+	//border:1px solid #ccc;
+	//-webkit-border-radius: 3px;
+	//-moz-border-radius: 3px;
+	//border-radius: 3px;
+	//background-color:#fff;
+	//color:#535A62;
 }
 input[type=checkbox] {
 	vertical-align: middle;
@@ -171,15 +171,15 @@ input[type=checkbox] {
 input[type=submit],
 input[type=reset],
 input[type=button] {
-	font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif;
+	//font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif;
 }
 input[type=text], textarea, input[type=password] {
-	font-size: 1.2em;
-	color:#535A62;
-	padding: 3px 3px;
+	//font-size: 1.2em;
+	//color:#535A62;
+	//padding: 3px 3px;
 }
 input[type=text], input[type=password] {
-	height:1.4em;
+	//height:1.4em;
 }
 select[disabled],
 input[type="text"][disabled],
@@ -188,9 +188,9 @@ input[type="radio"][disabled]{
     cursor:not-allowed; /* 禁止カーソル */
 }
 select {
-	font-size: 1.2em!important;
-	padding: 1px;
-    height:1.8em;
+	//font-size: 1.2em!important;
+	//padding: 1px;
+  //height:1.8em;
 }
 optgroup option{
 	padding-left:20px;
@@ -217,7 +217,7 @@ body{
 	text-align: left;
 	min-width: 960px;
 	width : expression(document.body.clientWidth < 940? "900px" : "auto"); /* IE */
-	line-height:2em;
+	line-height:1.4;
 	height:100%;
 }
 

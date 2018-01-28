@@ -19,7 +19,7 @@
 <div class="section">
 	<h2>ログ(エラーログ)の取得</h2>
 	<p>ログ(エラーログ)をPCにダウンロードします。</p>
-	<p><?php $this->BcBaser->link('ダウンロード', array('download'), array('class' => 'button-small')) ?> </p>
+	<p><?php $this->BcBaser->link(__d('baser', 'ダウンロード'), array('download'), array('class' => 'button-small bca-btn')) ?> </p>
 </div>
 
 <div class="section">
@@ -28,5 +28,5 @@
 	<p>エラーログを削除します。サーバの容量を圧迫する場合時などに利用ください。<br/>
 	エラーログのサイズは、<?php echo number_format($fileSize) ?> bytesです。
 	</p>
-	<p><?php $this->BcBaser->link('削除', array('delete'), array('class' => 'submit-token button-small', 'confirm' => 'エラーログを削除します。いいですか？')) ?> </p>
+	<p><?php $this->BcBaser->link(__d('baser', '削除'), array('delete'), array('class' => 'submit-token button-small bca-btn', 'data-bca-btn-type' =>'delete', 'confirm' => __d('baser', 'エラーログを削除します。いいですか？'))) ?> </p>
 </div>

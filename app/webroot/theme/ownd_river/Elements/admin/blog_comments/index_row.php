@@ -54,13 +54,13 @@ if (!$data['BlogComment']['status']) {
 	</td>
 	<td class="bca-table-listup__tbody-td">
 		<?php if (!empty($this->params['pass'][1])): ?>
-			<?php $this->BcBaser->link('', array('action' => 'ajax_unpublish', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']), array('title' => '非公開', 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg')) ?>
-			<?php $this->BcBaser->link('', array('action' => 'ajax_publish', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']), array('title' => '公開', 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg')) ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => '削除', 'class' => 'btn')), array('action' => 'ajax_delete', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']), array('title' => '削除', 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'ajax_unpublish', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']), array('title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'ajax_publish', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']), array('title' => __d('baser', '公開'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => __d('baser', '削除'), 'class' => 'btn')), array('action' => 'ajax_delete', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 		<?php else: ?>
-			<?php $this->BcBaser->link('', array('action' => 'ajax_unpublish', $blogContent['BlogContent']['id'], 0, $data['BlogComment']['id']), array('title' => '非公開', 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg')) ?>
-			<?php $this->BcBaser->link('', array('action' => 'ajax_publish', $blogContent['BlogContent']['id'], 0, $data['BlogComment']['id']), array('title' => '公開', 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg')) ?>
-			<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $blogContent['BlogContent']['id'], 0, $data['BlogComment']['id']), array('title' => '削除', 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'ajax_unpublish', $blogContent['BlogContent']['id'], 0, $data['BlogComment']['id']), array('title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'ajax_publish', $blogContent['BlogContent']['id'], 0, $data['BlogComment']['id']), array('title' => __d('baser', '公開'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $blogContent['BlogContent']['id'], 0, $data['BlogComment']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 		<?php endif ?>
 	</td>
 </tr>

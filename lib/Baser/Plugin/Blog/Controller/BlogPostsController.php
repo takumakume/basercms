@@ -178,7 +178,6 @@ class BlogPostsController extends BlogAppController {
 		$this->mainBodyHeaderLinks[] = [
 			'url' => ['action' => 'add', $blogContentId],
 			'title' => '新規記事追加',
-			'class' => 'bca-btn--primary bca-btn--small bca-btn--add',
 		];
 
 		if ($this->request->params['Content']['status']) {

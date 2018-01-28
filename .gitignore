@@ -49,3 +49,5 @@ package.json
 
 
 package-lock.json
+app/webroot/theme/ownd_river/__assets/__gulp.command
+app/webroot/theme/ownd_river/__assets/__gulp_yarn_install.command

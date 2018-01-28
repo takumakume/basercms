@@ -1,3 +1,19 @@
 .bca-select{
-	
+	appearance: none;
+	background: url(../../img/admin/icn_select.svg) no-repeat center right 0.5em / 10px auto;
+	font-size: $button_font_size_medium;
+	padding: $button_padding_top 2.2em $button_padding_bottom 1.2em;
+	border: 1px solid #ccc;
+	line-height:1.2;
+	outline: none;
+	border-radius: 3px;
+	&[data-select-size=lg]{
+		font-size: $button_font_size_large;
+	}
+	&[data-select-size=sm]{
+		font-size: $button_font_size_small;
+	}
+	&:focus{
+		box-shadow: $focus_shadow;
+	}
 }

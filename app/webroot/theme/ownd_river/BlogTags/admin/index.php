@@ -24,7 +24,7 @@ $this->BcBaser->js(array(
 
 <script type="text/javascript">
 $(function(){
-	$.baserAjaxDataList.config.methods.del.confirm = 'このデータを本当に削除してもいいですか？\nこのタグに関連する記事は削除されません。';
+	$.baserAjaxDataList.config.methods.del.confirm = <?php echo __d('baser', 'このデータを本当に削除してもいいですか？\nこのタグに関連する記事は削除されません。') ?>;
 	$.baserAjaxDataList.init();
 	$.baserAjaxBatch.init({ url: $("#AjaxBatchUrl").html()});
 });

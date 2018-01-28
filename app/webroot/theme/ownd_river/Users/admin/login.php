@@ -142,26 +142,26 @@ $(function(){
 		<div id="AlertMessage" class="message" style="display:none"></div>
 		<?php echo $this->BcForm->create($userModel, ['url' => ['action' => 'login']]) ?>
 			<div class="login-input bca-login-form-item">
-				<?php echo $this->BcForm->label($userModel . '.name', 'アカウント名') ?>
+				<?php echo $this->BcForm->label($userModel . '.name', __d('baser', 'アカウント名')) ?>
 				<?php echo $this->BcForm->input($userModel . '.name', array('type' => 'text', 'tabindex' => 1, 'autofocus' => true)) ?>
 			</div>
 			<div class="login-input bca-login-form-item">
-				<?php echo $this->BcForm->label($userModel . '.password', 'パスワード') ?>
+				<?php echo $this->BcForm->label($userModel . '.password', __d('baser', 'パスワード')) ?>
 				<?php echo $this->BcForm->input($userModel . '.password', array('type' => 'password', 'tabindex' => 2)) ?>
 			</div>
 			<div class="submit bca-login-form-btn-group">
-				<?php echo $this->BcForm->button('ログイン', array('type' => 'submit', 'div' => false, 'class' => 'bca-btn--login bca-btn', 'data-bca-btn-type' => 'login', 'id' => 'BtnLogin', 'tabindex' => 4)) ?>
+				<?php echo $this->BcForm->button(__d('baser', 'ログイン'), array('type' => 'submit', 'div' => false, 'class' => 'bca-btn--login bca-btn', 'data-bca-btn-type' => 'login', 'id' => 'BtnLogin', 'tabindex' => 4)) ?>
 			</div>
 			<div class="clear login-etc bca-login-form-ctrl">
 				<div class="bca-login-form-checker">
 					<?php echo $this->BcForm->input($userModel . '.saved', array('type' => 'checkbox', 'class' => 'bca-login-form-checkbox', 'tabindex' => 3)) ?>
-					<?php echo $this->BcForm->label($userModel . '.saved', 'ログイン状態を保存する') ?>
+					<?php echo $this->BcForm->label($userModel . '.saved', __d('baser', 'ログイン状態を保存する')) ?>
 				</div>
 				<div class="bca-login-forgot-pass">
 					<?php if ($currentPrefix == 'front'): ?>
-						<?php $this->BcBaser->link('パスワードを忘れた場合はこちら', array('action' => 'reset_password')) ?>
+						<?php $this->BcBaser->link(__d('baser', 'パスワードを忘れた場合はこちら'), array('action' => 'reset_password')) ?>
 					<?php else: ?>
-						<?php $this->BcBaser->link('パスワードを忘れた場合はこちら', array('action' => 'reset_password', $this->request->params['prefix'] => true)) ?>
+						<?php $this->BcBaser->link(__d('baser', 'パスワードを忘れた場合はこちら'), array('action' => 'reset_password', $this->request->params['prefix'] => true)) ?>
 					<?php endif ?>
 				</div>
 			</div>
