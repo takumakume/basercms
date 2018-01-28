@@ -25,7 +25,7 @@
 	</span>
 	<span class="bca-search__input-item">
 		<?php echo $this->BcForm->label('Content.name', __d('baser', '名称')) ?>
-		<?php echo $this->BcForm->input('Content.name', ['type' => 'text', 'size' => 20]) ?>
+		<?php echo $this->BcForm->input('Content.name', ['type' => 'text', 'class' => 'bca-input-text', 'size' => 20]) ?>
 	</span>
 	<span class="bca-search__input-item">
 		<?php echo $this->BcForm->label('Content.type', __d('baser', 'タイプ')) ?>
