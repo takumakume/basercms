@@ -31,8 +31,8 @@
 <!-- 新規追加 -->
 <!--
 <div class="">
-	<?php $this->BcBaser->link(
-		__d('baser', '新規記事追加'), array('action' => 'add', $blogContent['BlogContent']['id']), array('class'=>'bca-btn--small  bca-btn--add')) ?>
+	<?php /*$this->BcBaser->link(
+		__d('baser', '新規記事追加'), array('action' => 'add', $blogContent['BlogContent']['id']), array('class'=>'bca-btn--small  bca-btn--add'))*/ ?>
 </div>
 -->
 
