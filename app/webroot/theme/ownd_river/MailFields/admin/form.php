@@ -267,9 +267,9 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 </div>
 
 <div class="submit">
-	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
 <?php if ($this->action == 'admin_edit'): ?>
-	<?php $this->BcBaser->link('削除', array('action' => 'delete', $mailContent['MailContent']['id'], $this->BcForm->value('MailField.id')), array('class' => 'submit-token button'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('MailField.name')), false); ?>
+	<?php $this->BcBaser->link('削除', array('action' => 'delete', $mailContent['MailContent']['id'], $this->BcForm->value('MailField.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('MailField.name')), false); ?>
 <?php endif ?>
 </div>
 
