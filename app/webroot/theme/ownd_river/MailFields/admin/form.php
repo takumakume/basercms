@@ -24,7 +24,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 <?php endif; ?>
 <?php echo $this->BcForm->hidden('MailField.id') ?>
 
-<h2>基本項目</h2>
+<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 <div class="section">
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">

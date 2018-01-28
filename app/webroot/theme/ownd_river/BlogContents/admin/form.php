@@ -17,7 +17,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 ?>
 
 
-<h2><?php echo __d('baser', '基本項目') ?></h2>
+<h2 class="bca-main__heading" data-bca-heading-size="lg"><?php echo __d('baser', '基本項目') ?></h2>
 
 
 <?php echo $this->BcForm->create('BlogContent') ?>
