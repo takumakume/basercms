@@ -83,7 +83,7 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 		if(!preg_match('/(AdminEditForm|AdminEditAliasForm)$/', $event->data['id'])) {
 			return $event->data['out'];
 		}
-		$output = $View->BcHtml->link(__d('baser', '一覧に戻る'), ['plugin' => '', 'admin' => true, 'controller' => 'contents', 'action' => 'index'], ['class' => 'button']);
+		$output = $View->BcHtml->link(__d('baser', '一覧に戻る'), ['plugin' => '', 'admin' => true, 'controller' => 'contents', 'action' => 'index'], ['class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list']);
 		$setting = Configure::read('BcContents.items.' . $data['Content']['plugin'] . '.' . $data['Content']['type']);
 		if (!empty($setting['preview']) && $data['Content']['type'] != 'ContentFolder') {
 			$output .= "\n" . $View->BcForm->button(__d('baser', 'プレビュー'), ['class' => 'button bca-btn', 'data-bca-btn-type'=>'preview', 'id' => 'BtnPreview']);
