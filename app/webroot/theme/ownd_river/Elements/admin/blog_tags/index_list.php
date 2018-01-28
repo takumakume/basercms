@@ -41,7 +41,7 @@
 <th class="bca-table-listup__thead-th">
 	<?php 
 	echo $this->Paginator->sort('id', 
-		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', 'NO'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', 'NO')),
+		array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'NO'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'NO')),
 		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
 	); 
 	?>
@@ -49,7 +49,7 @@
 <th class="bca-table-listup__thead-th">
 	<?php 
 	echo $this->Paginator->sort('name', 
-		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', 'ブログタグ名'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', 'ブログタグ名')),
+		array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'ブログタグ名'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'ブログタグ名')),
 		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
 	); 
 	?>
@@ -57,14 +57,14 @@
 <th class="bca-table-listup__thead-th">
 	<?php 
 	echo $this->Paginator->sort('created', 
-		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', '登録日'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', '登録日')),
+		array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '登録日'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '登録日')),
 		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
 	); 
 	?>
 	<br />
 	<?php 
 	echo $this->Paginator->sort('modified', 
-		array('asc' => '<i class="bca-icon--asc"></i>'. ' ' . __d('baser', '更新日'), 'desc' => '<i class="bca-icon--desc"></i>'. ' ' . __d('baser', '更新日')),
+		array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '更新日'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '更新日')),
 		array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
 	); 
 	?>
