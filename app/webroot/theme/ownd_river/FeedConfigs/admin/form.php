@@ -31,7 +31,7 @@ $(function(){
 
 <div class="section">
 
-	<h2>基本項目</h2>
+	<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
 		<?php if ($this->action == 'admin_edit'): ?>

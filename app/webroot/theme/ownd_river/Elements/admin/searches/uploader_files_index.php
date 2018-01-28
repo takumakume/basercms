@@ -18,7 +18,7 @@ if(!isset($listId)) {
 
 
 <div class="file-filter submit">
-	<small style="font-weight:bold">名称</small>&nbsp;<?php echo $this->BcForm->input('Filter.name', array('type' => 'text', 'id' => 'FilterName'.$listId, 'class' => 'filter-control', 'style' => 'width:160px')) ?>
+	<small style="font-weight:bold">名称</small>&nbsp;<?php echo $this->BcForm->input('Filter.name', array('type' => 'text', 'class' => 'bca-input-text', 'id' => 'FilterName'.$listId, 'class' => 'filter-control', 'style' => 'width:160px')) ?>
 <?php if(!empty($uploaderCategories)): ?>
 	<small style="font-weight:bold">カテゴリ</small>&nbsp;<?php echo $this->BcForm->input('Filter.uploader_category_id', array('type' => 'select', 'class' => 'bca-select', 'options' => $uploaderCategories, 'empty' => '指定なし', 'id' => 'FilterUploaderCategoryId'.$listId, 'class' => 'filter-control')) ?>
 <?php endif ?>

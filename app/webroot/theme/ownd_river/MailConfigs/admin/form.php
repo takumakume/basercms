@@ -15,7 +15,7 @@
  */
 ?>
 <!-- form -->
-<h2>基本項目</h2>
+<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 <?php echo $this->BcForm->create('MailConfig', ['url' => ['action' => 'form']]) ?>
 <?php echo $this->BcForm->input('MailConfig.id', array('type' => 'hidden')) ?>

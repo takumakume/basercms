@@ -190,7 +190,7 @@ msgstr ""
 #: Config/theme/bc_sample/Elements/mail_input.php:80
 #: Config/theme/bc_sample/Elements/smartphone/mail_input.php:71
 #: Plugin/Mail/Model/MailMessage.php:177;184;256
-#: Plugin/Mail/Test/Case/Model/MailMessageTest.php:120;121;124;130
+#: Plugin/Mail/Test/Case/Model/MailMessageTest.php:134;135;138;144
 #: Plugin/Mail/View/Elements/mail_input.php:82
 #: Plugin/Mail/View/Elements/mobile/mail_input.php:61;74
 msgid "必須項目です。"
@@ -528,7 +528,7 @@ msgstr ""
 msgid "ページトップへ戻る"
 msgstr ""
 
-#: Controller/BcAppController.php:982
+#: Controller/BcAppController.php:1024
 msgid "送信元のメールアドレスが不正です。"
 msgstr ""
 
@@ -573,7 +573,7 @@ msgid "Error : 送信中にエラーが発生しました。しばらくたっ�
 msgstr ""
 
 #: Plugin/Mail/Model/MailMessage.php:192
-#: Plugin/Mail/Test/Case/Model/MailMessageTest.php:122;123
+#: Plugin/Mail/Test/Case/Model/MailMessageTest.php:136;137
 #: Plugin/Mail/View/Elements/mobile/mail_input.php:59;71
 msgid "形式が無効です。"
 msgstr ""
@@ -606,7 +606,7 @@ msgstr ""
 msgid "入力データが不完全です"
 msgstr ""
 
-#: Plugin/Mail/View/Helper/MailformHelper.php:228
+#: Plugin/Mail/View/Helper/MailformHelper.php:245
 msgid "認証画像"
 msgstr ""
 

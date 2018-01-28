@@ -43,6 +43,6 @@ if (isset($this->Paginator->params['paging'][$this->Paginator->defaultModel()]['
 		</div>
 	<?php endif ?>
 	<div class="page-result bca-page-result">
-		<?php echo $this->Paginator->counter(array('format' => '<span class="page-start-num">%start%</span>～<span class="page-end-num">%end%</span> 件 ／ <span class="page-total-num">%count%</span> 件')) ?>
+		<?php echo $this->Paginator->counter(array('format' => __d('baser', '<span class="page-start-num">%start%</span>～<span class="page-end-num">%end%</span> 件 ／ <span class="page-total-num">%count%</span> 件'))) ?>
 	</div>
 </div>

@@ -20,7 +20,7 @@ $config['BcApp.adminNavigation'] = [
 			'type' => 'system',
 			'menus' => [
 				'FeedConfigs' => ['title' => __d('baser', 'フィード設定'), 'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'index']],
-				'FeedDeleteCache' => ['title' => __d('baser', 'フィードキャッシュ削除'), 'url' => ['admin' => true, 'plugin' => 'uploader', 'controller' => 'feed_configs', 'action' => 'delete_cache'], 'options' => ['confirm' => 'フィードキャッシュを削除します。いいですか？']],
+				'FeedDeleteCache' => ['title' => __d('baser', 'フィードキャッシュ削除'), 'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'delete_cache'], 'options' => ['confirm' => 'フィードキャッシュを削除します。いいですか？']],
 			]
 		],
 	],

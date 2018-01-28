@@ -19,15 +19,20 @@
 <?php if (!empty($user)): ?>
 	<div id="ContentsMenu" class="bca-content-menu">
 		<ul>
+			<li class="bca-content-menu__item">
+				<?php # TODO: button要素に変更 ?>
+				<?php $this->BcBaser->link(__d('baser', 'よく使う項目に追加'), 'javascript:void(0)', array('id' => 'BtnFavoriteAdd', 'data-bca-fn' => 'BtnFavoriteAdd', 'class'=>'bca-content-menu__link bca-icon--bookmark')) ?></li>
+			</li>
 			<?php if (!empty($help)): ?>
 				<li class="bca-content-menu__item">
 					<?php # TODO: button要素に変更 ?>
-					<?php $this->BcBaser->link(' ヘルプ', 'javascript:void(0)', array('id' => 'BtnMenuHelp', 'class'=>'bca-content-menu__link bca-icon--help')) ?></li>
+					<?php $this->BcBaser->link(__d('baser', 'ヘルプ'), 'javascript:void(0)', array('id' => 'BtnMenuHelp', 'class'=>'bca-content-menu__link bca-icon--help')) ?></li>
 			<?php endif ?>
 			<?php if ($this->BcBaser->isAdminUser()): ?>
+
 				<li class="bca-content-menu__item">
 					<?php # TODO: button要素に変更 ?>
-					<?php $this->BcBaser->link(' 制限', 'javascript:void(0)', array('id' => 'BtnMenuPermission', 'class'=>'bca-content-menu__link bca-icon--permission')) ?></li>
+					<?php $this->BcBaser->link(__d('baser', '制限'), 'javascript:void(0)', array('id' => 'BtnMenuPermission', 'class'=>'bca-content-menu__link bca-icon--permission')) ?></li>
 			<?php endif ?>
 		</ul>
 	</div>

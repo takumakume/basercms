@@ -79,7 +79,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 
 <div id="ContentsFormTabs0">
 	<div id="BasicSetting" class="section">
-		<h3>基本設定</h3>
+		<h3 class="bca-main__heading" data-bca-heading-size="md">基本設定</h3>
 		<table class="form-table bca-form-table">
 			<tr>
 				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="required">*</span></th>
@@ -170,7 +170,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 		</table>
 	</div>
 	<div id="OptionalSetting" class="section">
-		<h3>オプション</h3>
+		<h3 class="bca-main__heading" data-bca-heading-size="md">オプション</h3>
 		<table class="form-table">
 			<tr>
 				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.description', '説明文') ?></th>
@@ -260,7 +260,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 	</div>
 <?php if(count($relatedContents) > 1): ?>
 	<div id="RelatedContentsSetting" class="section">
-		<h3>関連コンテンツ</h3>
+		<h3 class="bca-main__heading" data-bca-heading-size="md">関連コンテンツ</h3>
 		<table class="list-table">
 			<tr>
 				<th style="width:170px" class="list-tool">&nbsp;</th>
@@ -340,7 +340,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 <?php endif ?>
 <?php if($this->request->action == 'admin_edit' || $this->request->action == 'admin_edit_alias'): ?>
 	<div id="EtcSetting" class="section">
-		<h3>その他情報</h3>
+		<h3 class="bca-main__heading" data-bca-heading-size="md">その他情報</h3>
 		<div>
 		<p><span>コンテンツID</span>：<?php echo $this->request->data['Content']['id'] ?></p>
 		<p><span>実体ID</span>：<?php echo $this->request->data['Content']['entity_id'] ?></p>

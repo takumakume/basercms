@@ -132,14 +132,14 @@ $(function(){
 
 </script>
 
-<div id="UserModel" style="display:none"><?php echo $userModel ?></div>
-<div id="LoginCredit" style="display:none"><?php echo $this->BcBaser->siteConfig['login_credit'] ?></div>
+<div id="UserModel" hidden><?php echo $userModel ?></div>
+<div id="LoginCredit" hidden><?php echo $this->BcBaser->siteConfig['login_credit'] ?></div>
 <div id="Login" class="bca-login">
 
 	<div id="LoginInner">
 		<?php $this->BcBaser->flash() ?>
-		<h1><?php $this->BcBaser->contentsTitle() ?></h1>
-		<div id="AlertMessage" class="message" style="display:none"></div>
+		<h1 hidden><?php $this->BcBaser->contentsTitle() ?></h1>
+		<div id="AlertMessage" class="message" hidden></div>
 		<?php echo $this->BcForm->create($userModel, ['url' => ['action' => 'login']]) ?>
 			<div class="login-input bca-login-form-item">
 				<?php echo $this->BcForm->label($userModel . '.name', __d('baser', 'アカウント名')) ?>
@@ -154,7 +154,7 @@ $(function(){
 			</div>
 			<div class="clear login-etc bca-login-form-ctrl">
 				<div class="bca-login-form-checker">
-					<?php echo $this->BcForm->input($userModel . '.saved', array('type' => 'checkbox', 'class' => 'bca-login-form-checkbox', 'tabindex' => 3)) ?>
+					<?php echo $this->BcForm->input($userModel . '.saved', array('type' => 'checkbox', 'class' => 'bca-login-form-checkbox ', 'tabindex' => 3)) ?>
 					<?php echo $this->BcForm->label($userModel . '.saved', __d('baser', 'ログイン状態を保存する')) ?>
 				</div>
 				<div class="bca-login-forgot-pass">

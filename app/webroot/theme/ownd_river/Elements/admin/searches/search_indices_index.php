@@ -26,7 +26,7 @@ $types = BcUtil::unserialize($this->BcBaser->siteConfig['content_types']);
 	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.site_id', 'サブサイト') ?> <?php echo $this->BcForm->input('SearchIndex.site_id', array('type' => 'select', 'class' => 'bca-select', 'options' => $sites)) ?></span>
 	<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'SearchIndexSiteIdLoader')) ?>
 	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.folder_id', 'フォルダ') ?> <?php echo $this->BcForm->input('SearchIndex.folder_id', array('type' => 'select', 'class' => 'bca-select', 'options' => $folders, 'empty' => '指定なし', 'escape' => false)) ?></span>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.keyword', 'キーワード') ?> <?php echo $this->BcForm->input('SearchIndex.keyword', array('type' => 'text', 'size' => '30')) ?></span>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.keyword', 'キーワード') ?> <?php echo $this->BcForm->input('SearchIndex.keyword', array('type' => 'text', 'class' => 'bca-input-text', 'size' => '30')) ?></span>
 	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.status', '公開状態') ?> 
 		<?php echo $this->BcForm->input('SearchIndex.status', array('type' => 'select', 'class' => 'bca-select', 'options' => $this->BcText->booleanMarkList(), 'empty' => '指定なし')) ?></span>
 	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.priority', '優先度') ?> 

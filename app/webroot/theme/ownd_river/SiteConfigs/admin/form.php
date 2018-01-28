@@ -19,7 +19,7 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 ?>
 
 
-<h2>基本項目</h2>
+<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 
 <?php echo $this->BcForm->create('SiteConfig', ['url' => ['action' => 'form']]) ?>

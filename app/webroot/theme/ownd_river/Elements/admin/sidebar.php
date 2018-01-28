@@ -16,10 +16,6 @@
 ?>
 
 <div id="SideBar" class="bca-nav">
-	<div id="FavoriteArea">
-		<?php $this->BcBaser->element('favorite_menu') ?>
-		<?php $this->BcBaser->element('permission') ?>
-	</div>
 
 	<nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
 		<h2 class="bca-nav__main-title"><?php echo __d('baser', '管理メニュー') ?></h2>
@@ -45,10 +41,10 @@
 	<nav class="bca-nav__main" data-js-container="AdminMenu" hidden></nav>
 
 <?php if(!empty($this->BcBaser->siteConfig['admin_side_banner'])): ?>
-	<div id="BannerArea">
-		<ul>
-			<li><a href="https://market.basercms.net/" target="_blank"><img src="http://basercms.net/img/banner_baser_market.png" width="205" alt="baserマーケット" title="baserマーケット" /></a></li>
-			<li><a href="http://magazine.basercms.net/" target="_blank"><img src="http://basercms.net/img/banner_basers_magazine.png" width="205" alt="basersマガジン" title="baserマーケット" /></a></li>
+	<div id="BannerArea" class="bca-banners">
+		<ul class="bca-banners__ul">
+			<li class="bca-banners__li"><a href="https://market.basercms.net/" target="_blank"><img src="http://basercms.net/img/banner_baser_market.png" width="205" alt="baserマーケット" title="baserマーケット" /></a></li>
+			<li class="bca-banners__li"><a href="http://magazine.basercms.net/" target="_blank"><img src="http://basercms.net/img/banner_basers_magazine.png" width="205" alt="basersマガジン" title="baserマーケット" /></a></li>
 		</ul>
 	</div>
 <?php endif ?>
