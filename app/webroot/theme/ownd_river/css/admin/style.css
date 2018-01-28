@@ -2568,17 +2568,6 @@ pre {
 form {
   display: inline; }
 
-input, textarea, select, option {
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif; }
-
-input[type=text], textarea, select, input[type=password] {
-  margin: 3px 2px;
-  padding: 3px 1px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  background-color: #fff;
-  color: #535A62; }
-
 input[type=checkbox] {
   vertical-align: middle; }
 
@@ -2586,19 +2575,6 @@ input[type=radio],
 input[type=checkbox] {
   margin-left: 5px;
   margin-right: 5px; }
-
-input[type=submit],
-input[type=reset],
-input[type=button] {
-  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", "MS PGothic", "ＭＳ Ｐゴシック", Sans-Serif; }
-
-input[type=text], textarea, input[type=password] {
-  font-size: 1.2em;
-  color: #535A62;
-  padding: 3px 3px; }
-
-input[type=text], input[type=password] {
-  height: 1.4em; }
 
 select[disabled],
 input[type="text"][disabled],
@@ -6785,36 +6761,51 @@ span#DebugMode {
   .bca-content-menu__link {
     color: #656565; }
 
-/* search
------------------------------------------------ */
 .bca-search {
+  font-size: 1.6rem;
   border: 1px solid #ccc;
   border-radius: 3px;
   margin-bottom: 40px; }
-  .bca-search .bca-search-head {
+  .bca-search__head {
     margin: 0;
     padding: 0;
     border: none; }
-    .bca-search .bca-search-head a {
+    .bca-search__head a {
       display: block;
       padding: 10px; }
-      .bca-search .bca-search-head a:hover {
+      .bca-search__head a:hover {
         text-decoration: none; }
-  .bca-search-body {
+  .bca-search__body {
     margin: 0;
-    padding: 0 10px 10px; }
-    .bca-search-body p {
-      display: table;
-      width: 100%; }
-      .bca-search-body p span {
-        display: table-cell;
-        padding-right: 20px; }
-        .bca-search-body p span:last-child {
-          padding-right: 0; }
-        .bca-search-body p span label {
-          display: block; }
-        .bca-search-body p span input, .bca-search-body p span select {
-          width: 98%; }
+    padding: 0 1em 2em; }
+  .bca-search__input-list {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start; }
+  .bca-search__input-item {
+    font-size: .875em;
+    -webkit-box-flex: 0;
+            flex: 0 1 0;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    margin: 0;
+    display: block; }
+  .bca-search__btns {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
+    margin: 2em 0 0; }
+    .bca-search__btns-item {
+      margin: 0 1em; }
 
 /* bca-pagination
 ----------------------------------------------- */
@@ -9482,14 +9473,15 @@ table.cake-sql-log tr td {
   clip: auto; }
 
 .bca-btn {
-  font-size: 1.4rem;
-  box-sizing: border-box;
   display: inline-block;
   border-radius: 3px;
   padding: 0.7em 1em 0.6em;
   line-height: 1.2;
   border: 1px solid #ccc;
   cursor: pointer;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  outline: none;
   color: #343434;
   text-decoration: none;
   background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9502,6 +9494,8 @@ table.cake-sql-log tr td {
     color: #343434;
     background-color: #fafafa;
     background-image: linear-gradient(white 100%, white 100%); }
+  .bca-btn:focus {
+    box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=publish] {
     display: inline-block;
     border-radius: 3px;
@@ -9509,6 +9503,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9521,6 +9518,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=publish]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=unpublish] {
     display: inline-block;
     border-radius: 3px;
@@ -9528,6 +9527,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9540,6 +9542,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=unpublish]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=preview] {
     display: inline-block;
     border-radius: 3px;
@@ -9547,6 +9551,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9559,6 +9566,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=preview]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=edit] {
     display: inline-block;
     border-radius: 3px;
@@ -9566,6 +9575,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9578,6 +9590,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=edit]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=copy] {
     display: inline-block;
     border-radius: 3px;
@@ -9585,6 +9599,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9597,6 +9614,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=copy]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=save] {
     display: inline-block;
     border-radius: 3px;
@@ -9604,6 +9623,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9617,6 +9639,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=save]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=delete] {
     display: inline-block;
     border-radius: 3px;
@@ -9624,6 +9648,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9636,6 +9663,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=delete]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=back-to-list] {
     display: inline-block;
     border-radius: 3px;
@@ -9643,6 +9672,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9656,6 +9688,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=back-to-list]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=favorite] {
     display: inline-block;
     border-radius: 3px;
@@ -9663,6 +9697,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9675,6 +9712,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=favorite]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=menuitem] {
     display: inline-block;
     border-radius: 3px;
@@ -9682,6 +9721,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9694,6 +9736,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=menuitem]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=add] {
     display: inline-block;
     border-radius: 3px;
@@ -9701,6 +9745,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9716,6 +9763,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=add]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
     .bca-btn[data-bca-btn-type=add]::before {
       color: #fff; }
     .bca-btn[data-bca-btn-type=add]:hover {
@@ -9728,6 +9777,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9740,6 +9792,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=help]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=permission] {
     display: inline-block;
     border-radius: 3px;
@@ -9747,6 +9801,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9759,6 +9816,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=permission]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=home] {
     display: inline-block;
     border-radius: 3px;
@@ -9766,6 +9825,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9778,6 +9840,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=home]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=login] {
     display: inline-block;
     border-radius: 3px;
@@ -9785,6 +9849,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9800,6 +9867,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=login]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
     .bca-btn[data-bca-btn-type=login]:hover, .bca-btn[data-bca-btn-type=login]:focus {
       color: #fff;
       background-image: linear-gradient(#559429 10%, #559429 100%); }
@@ -9810,6 +9879,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9823,6 +9895,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=search]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-type=clear] {
     display: inline-block;
     border-radius: 3px;
@@ -9830,6 +9904,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9843,6 +9920,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-type=clear]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-size=lg] {
     font-size: 1.6rem; }
     .bca-btn[data-bca-btn-size=lg]::before {
@@ -9864,6 +9943,9 @@ table.cake-sql-log tr td {
     line-height: 1.2;
     border: 1px solid #ccc;
     cursor: pointer;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    outline: none;
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
@@ -9878,6 +9960,8 @@ table.cake-sql-log tr td {
       color: #343434;
       background-color: #fafafa;
       background-image: linear-gradient(white 100%, white 100%); }
+    .bca-btn[data-bca-btn-status=primary]:focus {
+      box-shadow: 0 0 6px 0px #555555; }
     .bca-btn[data-bca-btn-status=primary]::before {
       color: #fff; }
     .bca-btn[data-bca-btn-status=primary]:hover {
@@ -9973,12 +10057,15 @@ table.cake-sql-log tr td {
   font-size: 1.4rem;
   padding: 0.7em 2.2em 0.6em 1.2em;
   border: 1px solid #ccc;
-  line-height: 1.2; }
+  line-height: 1.2;
+  outline: none;
+  border-radius: 3px; }
   .bca-select[data-select-size=lg] {
     font-size: 1.6rem; }
   .bca-select[data-select-size=sm] {
-    font-size: 1.2rem;
-    line-height: 1.16; }
+    font-size: 1.2rem; }
+  .bca-select:focus {
+    box-shadow: 0 0 6px 0px #555555; }
 
 /* bca-data-list
 ----------------------------------------------- */
@@ -10022,6 +10109,23 @@ table.cake-sql-log tr td {
     background: #E00; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
+
+.bca-input-text {
+  display: inline-block;
+  outline: none;
+  padding: 0.7em 0.5em 0.6em 0.5em;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  line-height: 1.2;
+  font-size: 1.4rem;
+  color: #535A62; }
+  .bca-input-text[data-input-text-size=lg] {
+    font-size: 1.6rem; }
+  .bca-input-text[data-input-text-size=sm] {
+    font-size: 1.2rem; }
+  .bca-input-text:focus {
+    box-shadow: 0 0 6px 0px #555555; }
 
 .bt-content li {
   padding: 0 20px;

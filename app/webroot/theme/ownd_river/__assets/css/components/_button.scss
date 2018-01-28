@@ -1,8 +1,6 @@
 @import '../vender/Font-Awesome/font-awesome';
 
 .bca-btn {
-	font-size: $button_font_size_medium;
-	box-sizing: border-box;
 
 	@mixin btn-common {
 		display: inline-block;
@@ -11,7 +9,9 @@
 		line-height:1.2;
 		border: 1px solid #ccc;
 		cursor: pointer;
-
+		font-size: $button_font_size_medium;
+		box-sizing: border-box;
+		outline: none;
 		color: $color_text_primary;
 		text-decoration: none;
 		background-image:linear-gradient(rgb(255,255,255) 10%,rgb(244,245,241) 100%);
@@ -27,6 +27,9 @@
 			color: $color_text_primary;
 			background-color: $color_background_menu;
 			background-image:linear-gradient(rgb(255,255,255) 100%,rgb(255,255,255) 100%);
+		}
+		&:focus{
+			box-shadow: $focus_shadow;
 		}
 	}
 
