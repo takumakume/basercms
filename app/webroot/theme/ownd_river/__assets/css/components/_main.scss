@@ -34,4 +34,22 @@
 			flex: 0 1 auto;
 		}
 	}
+	&__section{
+		margin-bottom: 30px;
+	}
+	&__heading{
+		margin: 0;
+		padding: 1em 0 0.5em;
+		&[data-bca-heading-size=lg] {
+			font-size: 1.2em;
+		}
+		&[data-bca-heading-size=md] {
+			font-size: 1.1em;
+		}
+	}
+	&__text{
+		margin: 0 0 1em;
+		line-height: 1.5;
+	}
+
 }
