@@ -16,9 +16,11 @@
 ?>
 
 
-<!-- pagination -->
- <div class="bca-data-list__sub">
-	<?php $this->BcBaser->element('pagination') ?>
+<div class="bca-data-list__top">
+	<!-- pagination -->
+	 <div class="bca-data-list__sub">
+		<?php $this->BcBaser->element('pagination') ?>
+	</div>
 </div>
 <!-- list -->
 <table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
