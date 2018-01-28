@@ -4144,6 +4144,8 @@ span#DebugMode {
     .bca-nav__sub:last-child {
       border-bottom: 2px solid #cccccc; }
     .bca-nav__sub-title {
+      margin-top: 0;
+      margin-bottom: 0;
       font-weight: bold;
       padding: 10px;
       cursor: pointer; }
@@ -4169,7 +4171,8 @@ span#DebugMode {
       list-style: none;
       background: #f4f5f1;
       -webkit-transform: translate(0, -50%);
-              transform: translate(0, -50%); }
+              transform: translate(0, -50%);
+      padding-left: 0; }
       .bca-nav__sub-list-item {
         font-size: 0.875em;
         display: block; }
@@ -6870,10 +6873,14 @@ span#DebugMode {
 
 /* BannerArea
 ----------------------------------------------- */
-#BannerArea li {
+.bca-banners__ul {
+  padding: 0; }
+
+.bca-banners__li {
   margin-bottom: 2px;
   padding-left: 1px;
-  padding-right: 1px; }
+  padding-right: 1px;
+  list-style: none; }
 
 /* bca-action-table-listup
 ----------------------------------------------- */

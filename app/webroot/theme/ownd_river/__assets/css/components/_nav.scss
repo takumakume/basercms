@@ -29,6 +29,8 @@
 			border-bottom: 2px solid $color_border;
 		}
 		&-title {
+			margin-top: 0;
+			margin-bottom: 0;
 			font-weight: bold;
 			padding: 10px;
 			cursor: pointer;
@@ -62,6 +64,7 @@
 			list-style: none;
 			background: $color_background_primary;
 			transform: translate(0, -50%);
+			padding-left: 0;
 			&-item {
 				font-size: 0.875em;
 				display: block;

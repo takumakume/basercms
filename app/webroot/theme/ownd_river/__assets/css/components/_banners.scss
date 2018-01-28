@@ -1,7 +1,13 @@
 /* BannerArea
 ----------------------------------------------- */
-#BannerArea li {
-	margin-bottom: 2px;
-	padding-left:1px;
-	padding-right:1px;
+.bca-banners {
+	&__ul {
+		padding: 0;
+	}
+	&__li {
+		margin-bottom: 2px;
+		padding-left:1px;
+		padding-right:1px;
+		list-style: none;
+	}
 }
