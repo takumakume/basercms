@@ -2932,16 +2932,6 @@ strong {
   width: 600px;
   margin: 0 auto; }
 
-/* panel-box
------------------------------------------------ */
-.panel-box {
-  border: 5px solid #DDD;
-  padding: 10px 20px;
-  margin: 20px 0; }
-
-.panel-box li .date {
-  /*font-weight: bold;*/ }
-
 /* WidgetSetting
 ----------------------------------------------- */
 #WidgetSetting {
@@ -3138,15 +3128,6 @@ strong {
   font-size: 18px;
   border: 1px solid #CCC; }
 
-#Installations .panel-box {
-  margin: 0 auto 20px auto; }
-
-#Installations .panel-box ul li {
-  margin-bottom: 10px;
-  border-left: 5px solid #DFDFDF;
-  padding: 3px 10px;
-  background: none; }
-
 #Installations .step-1 {
   height: 300px;
   background: url(../../img/admin/bg_install.png) no-repeat right bottom #fff; }
@@ -3187,15 +3168,6 @@ strong {
 #AdminDashboard .pagination .disabled,
 #AdminDashboard .pagination .current {
   padding: 1px 6px; }
-
-#AdminDashboard .panel-box {
-  margin: 10px; }
-
-#AdminDashboard .panel-box li {
-  margin-bottom: 5px;
-  border-left: 5px solid #DDD;
-  padding: 3px 10px;
-  background: none; }
 
 /* ==================================================================== */
 /*    Themes
@@ -3543,8 +3515,6 @@ div.jstree-publish-even {
   border-radius: 0;
   background: #f5f5f5; }
 
-/* bca-container
------------------------------------------------ */
 .bca-container {
   position: relative;
   height: auto;
@@ -3938,7 +3908,7 @@ span#DebugMode {
   .bca-nav__main {
     font-size: 1.6rem;
     position: relative;
-    z-index: 9000;
+    z-index: 100;
     background: #f4f5f1; }
     .bca-nav__main-title {
       display: none; }
@@ -9954,18 +9924,12 @@ table.cake-sql-log tr td {
       box-shadow: 0 0 6px 0px #555555; }
   .bca-btn[data-bca-btn-size=lg] {
     font-size: 1.6rem; }
-    .bca-btn[data-bca-btn-size=lg]::before {
-      font-size: 16px !important; }
   .bca-btn[data-bca-btn-size=sm] {
     font-size: 1.2rem; }
-    .bca-btn[data-bca-btn-size=sm]::before {
-      font-size: 16px !important; }
   .bca-btn[data-bca-btn-size=xs] {
     font-size: 1.1rem;
     font-size: 0.78rem;
-    padding: .4em .8em .5em; }
-    .bca-btn[data-bca-btn-size=xs]::before {
-      font-size: 16px !important; }
+    padding: .6em .8em .4em; }
   .bca-btn[data-bca-btn-status=primary] {
     display: inline-block;
     border-radius: 3px;
@@ -10012,9 +9976,9 @@ table.cake-sql-log tr td {
     margin-right: 15px;
     padding-left: 2em;
     font-size: 1.6rem; }
-  .bca-radio[data-radio-size=lg] + label {
+  .bca-radio[data-bca-radio-size=lg] + label {
     font-size: 1.8rem; }
-  .bca-radio[data-radio-size=sm] + label {
+  .bca-radio[data-bca-radio-size=sm] + label {
     font-size: 1.4rem; }
   .bca-radio + label:before {
     content: "";
@@ -10074,9 +10038,9 @@ table.cake-sql-log tr td {
             transform: rotate(45deg);
     border-right: 0.24em solid #61a82e;
     border-bottom: 0.24em solid #61a82e; }
-  .bca-checkbox-label[data-checkbox-size=lg] {
+  .bca-checkbox-label[data-bca-checkbox-size=lg] {
     font-size: 1.8rem; }
-  .bca-checkbox-label[data-checkbox-size=sm] {
+  .bca-checkbox-label[data-bca-checkbox-size=sm] {
     font-size: 1.4rem; }
 
 .bca-select {
@@ -10090,9 +10054,9 @@ table.cake-sql-log tr td {
   line-height: 1.2;
   outline: none;
   border-radius: 3px; }
-  .bca-select[data-select-size=lg] {
+  .bca-select[data-bca-select-size=lg] {
     font-size: 1.6rem; }
-  .bca-select[data-select-size=sm] {
+  .bca-select[data-bca-select-size=sm] {
     font-size: 1.2rem; }
   .bca-select:focus {
     box-shadow: 0 0 6px 0px #555555; }
@@ -10139,6 +10103,63 @@ table.cake-sql-log tr td {
     background: #E00; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
+
+.bca-panel-box {
+  border: 5px solid #cccccc;
+  padding: 10px 20px;
+  margin: 20px 0; }
+  .bca-panel-box__inline-fields {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+            align-items: stretch; }
+    .bca-panel-box__inline-fields-item {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+              align-items: center; }
+    .bca-panel-box__inline-fields-title {
+      font-weight: bold;
+      display: inline-block; }
+    .bca-panel-box__inline-fields-separator {
+      width: 1px;
+      background: #cccccc;
+      margin: 0 2em; }
+      .bca-panel-box__inline-fields-separator::before {
+        content: "";
+        display: block; }
+
+/* 古いスタイル インストール画面など
+----------------------------------------------- */
+.panel-box {
+  border: 5px solid #cccccc;
+  padding: 10px 20px;
+  margin: 20px 0; }
+
+.panel-box li .date {
+  /*font-weight: bold;*/ }
+
+#Installations .panel-box {
+  margin: 0 auto 20px auto; }
+
+#Installations .panel-box ul li {
+  margin-bottom: 10px;
+  border-left: 5px solid #cccccc;
+  padding: 3px 10px;
+  background: none; }
+
+#AdminDashboard .panel-box {
+  margin: 10px; }
+
+#AdminDashboard .panel-box li {
+  margin-bottom: 5px;
+  border-left: 5px solid #cccccc;
+  padding: 3px 10px;
+  background: none; }
 
 .bca-input-text {
   display: inline-block;

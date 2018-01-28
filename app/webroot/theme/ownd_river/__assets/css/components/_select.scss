@@ -7,10 +7,10 @@
 	line-height:1.2;
 	outline: none;
 	border-radius: 3px;
-	&[data-select-size=lg]{
+	&[data-bca-select-size=lg]{
 		font-size: $button_font_size_large;
 	}
-	&[data-select-size=sm]{
+	&[data-bca-select-size=sm]{
 		font-size: $button_font_size_small;
 	}
 	&:focus{

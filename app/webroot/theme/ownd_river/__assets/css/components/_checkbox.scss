@@ -50,10 +50,10 @@
 		border-right: 0.24em solid $color_primary;
 		border-bottom: 0.24em solid $color_primary;
 	}
-	&[data-checkbox-size=lg]{
+	&[data-bca-checkbox-size=lg]{
 		font-size: $label_font_size_large;
 	}
-	&[data-checkbox-size=sm]{
+	&[data-bca-checkbox-size=sm]{
 		font-size: $label_font_size_small;
 	}
 }
