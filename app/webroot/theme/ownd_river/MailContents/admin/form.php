@@ -17,7 +17,7 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 ?>
 
 
-<h2>基本項目</h2>
+<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 <?php echo $this->BcForm->create('MailContent', array('novalidate' => true)) ?>
 <?php echo $this->BcForm->input('MailContent.id', array('type' => 'hidden')) ?>

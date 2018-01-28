@@ -3771,6 +3771,18 @@ div.jstree-publish-even {
     .bca-main__header-menu {
       -webkit-box-flex: 0;
               flex: 0 1 auto; }
+  .bca-main__section {
+    margin-bottom: 30px; }
+  .bca-main__heading {
+    margin: 0;
+    padding: 1em 0 0.5em; }
+    .bca-main__heading[data-bca-heading-size=lg] {
+      font-size: 1.2em; }
+    .bca-main__heading[data-bca-heading-size=md] {
+      font-size: 1.1em; }
+  .bca-main__text {
+    margin: 0 0 1em;
+    line-height: 1.5; }
 
 /* ==================================================================== */
 /*    Header
@@ -6999,7 +7011,8 @@ span#DebugMode {
   .bca-search__head {
     margin: 0;
     padding: 0;
-    border: none; }
+    border: none;
+    font-size: 1em; }
     .bca-search__head a {
       display: block;
       padding: 10px; }
@@ -7216,7 +7229,8 @@ span#DebugMode {
     vertical-align: top;
     border: 0 solid #ccc;
     border-width: 1px 0 0;
-    padding: 1.2em 2em 1em 1em; }
+    padding: 1.2em 2em 1em 1em;
+    text-align: left; }
   .bca-form-table__input {
     font-weight: normal;
     vertical-align: top;
@@ -10350,7 +10364,8 @@ table.cake-sql-log tr td {
               align-items: center; }
     .bca-panel-box__inline-fields-title {
       font-weight: bold;
-      display: inline-block; }
+      display: inline-block;
+      margin-right: 0.5em; }
     .bca-panel-box__inline-fields-separator {
       width: 1px;
       background: #cccccc;
