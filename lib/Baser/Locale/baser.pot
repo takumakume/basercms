@@ -1453,6 +1453,14 @@ msgstr ""
 msgid "デバッグモード２"
 msgstr ""
 
+#: Plugin/Blog/Controller/BlogPostsController.php:180
+msgid "新規記事追加"
+msgstr ""
+
+#: Plugin/Blog/Controller/BlogPostsController.php:186
+msgid "[%s] 記事一覧"
+msgstr ""
+
 #: Plugin/Feed/Config/setting.php:19
 msgid "フィード管理"
 msgstr ""
@@ -2967,6 +2975,14 @@ msgstr ""
 #: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:65
 #: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:57
 msgid "URL"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/list_num.php:42
+msgid "表示件数"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/pagination.php:46
+msgid "<span class=\"page-start-num\">%start%</span>～<span class=\"page-end-num\">%end%</span> 件 ／ <span class=\"page-total-num\">%count%</span> 件"
 msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/search.php:24

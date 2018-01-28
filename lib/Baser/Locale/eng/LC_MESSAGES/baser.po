@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: baserCMS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-01-28 13:37+0900\n"
+"PO-Revision-Date: 2018-01-28 14:10+0900\n"
 "Last-Translator: \n"
 "Language-Team: baserCMS Users Community <info@basercms.net>\n"
 "Language: en\n"
@@ -1402,12 +1402,12 @@ msgstr ""
 #: View/Themed/ownd_river/Sites/admin/add.php:25
 #: View/Themed/ownd_river/Sites/admin/edit.php:25
 msgid "一覧に戻る"
-msgstr ""
+msgstr "Back To List"
 
 #: Event/BcContentsEventListener.php:89
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:183;186
 msgid "プレビュー"
-msgstr ""
+msgstr "Preview"
 
 #: Event/BcContentsEventListener.php:94 View/Dblogs/admin/ajax_index.php:36
 #: View/EditorTemplates/admin/form.php:77
@@ -1458,7 +1458,7 @@ msgstr ""
 
 #: Event/BcContentsEventListener.php:96
 msgid "ゴミ箱へ移動"
-msgstr ""
+msgstr "To Trash"
 
 #: Lib/TestSuite/Fixture/BaserTestFixture.php:53
 msgid "Schemaファイルが見つかりません"
@@ -1518,6 +1518,14 @@ msgstr "Debug Mode 1"
 #: Model/SiteConfig.php:97
 msgid "デバッグモード２"
 msgstr "Debug Mode 2"
+
+#: Plugin/Blog/Controller/BlogPostsController.php:180
+msgid "新規記事追加"
+msgstr "Add"
+
+#: Plugin/Blog/Controller/BlogPostsController.php:186
+msgid "[%s] 記事一覧"
+msgstr "[%s] post list"
 
 #: Plugin/Feed/Config/setting.php:19
 msgid "フィード管理"
@@ -1587,7 +1595,7 @@ msgstr ""
 #: View/Themes/admin/form.php:89 View/UserGroups/admin/form.php:133
 #: View/Users/admin/form.php:137 View/WidgetAreas/admin/form.php:104;151
 msgid "保存"
-msgstr ""
+msgstr "Save"
 
 #: View/Dblogs/admin/ajax_index.php:36
 #: View/Themed/ownd_river/Dblogs/admin/ajax_index.php:36
@@ -2490,11 +2498,11 @@ msgstr ""
 #: View/Layouts/admin/default.php:142
 #: View/Themed/ownd_river/Layouts/admin/default.php:131
 msgid "▲ トップへ"
-msgstr ""
+msgstr "▲ To Top"
 
 #: View/Layouts/mobile/default.php:40
 msgid "トップへ"
-msgstr ""
+msgstr "To Top"
 
 #: View/Pages/admin/form.php:60 View/Themed/ownd_river/Pages/admin/form.php:55
 msgid "コード"
@@ -2802,7 +2810,7 @@ msgstr ""
 
 #: View/Themed/ownd_river/BlogContents/admin/form.php:49
 msgid "一覧表示件数"
-msgstr ""
+msgstr "Displayed results"
 
 #: View/Themed/ownd_river/BlogContents/admin/form.php:56
 msgid "公開サイトの一覧に表示する件数を指定します。"
@@ -3029,6 +3037,18 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
+#: View/Themed/ownd_river/Elements/admin/list_num.php:42
+msgid "表示件数"
+msgstr "Displayed results"
+
+#: View/Themed/ownd_river/Elements/admin/pagination.php:46
+msgid ""
+"<span class=\"page-start-num\">%start%</span>～<span class=\"page-end-num\">"
+"%end%</span> 件 ／ <span class=\"page-total-num\">%count%</span> 件"
+msgstr ""
+"Page <span class=“page-start-num”>%start%</span> of <span class=“page-end-"
+"num”>%end%</span> / <span class=“page-total-num”>%count%</span>"
+
 #: View/Themed/ownd_river/Elements/admin/search.php:24
 msgid "絞り込み検索"
 msgstr "Filtered Search"
@@ -3113,7 +3133,7 @@ msgstr "Feed Setting"
 
 #: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:59
 msgid " 表示件数"
-msgstr ""
+msgstr "Displayed results"
 
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:27
 msgid "名称"
