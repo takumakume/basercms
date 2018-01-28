@@ -46,7 +46,7 @@ package.json
 /volumes/*
 /.docker-sync/
 !app/webroot/theme/ownd_river
-
+lib/Baser/View/Themed/*
 
 package-lock.json
 app/webroot/theme/ownd_river/__assets/__gulp.command
