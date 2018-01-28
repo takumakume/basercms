@@ -177,14 +177,13 @@ class BlogPostsController extends BlogAppController {
 
 		$this->mainBodyHeaderLinks[] = [
 			'url' => ['action' => 'add', $blogContentId],
-			'title' => '新規記事追加',
+			'title' => __d('baser', '新規記事追加'),
 		];
 
 		if ($this->request->params['Content']['status']) {
 			$this->set('publishLink', $this->request->params['Content']['url']);
 		}
-
-		$this->pageTitle = '[' . strip_tags($this->request->params['Content']['title']) . '] 記事一覧';
+		$this->pageTitle = sprintf(__d('baser', '[%s] 記事一覧'), strip_tags($this->request->params['Content']['title']));
 		$this->search = 'blog_posts_index';
 		$this->help = 'blog_posts_index';
 	}

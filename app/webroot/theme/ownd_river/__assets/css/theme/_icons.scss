@@ -13,6 +13,7 @@
 	@mixin fa-common {
 		&::before {
 			@extend .#{$fa-css-prefix};
+			margin: 0 .3em 0 0;
 		}
 	}
 
@@ -166,6 +167,12 @@
 	// マイナス
 	&--minus-square {
 		@extend .#{$fa-css-prefix}-minus-square;
+		@include fa-common;
+	}
+
+	// ブックマーク
+	&--bookmark {
+		@extend .#{$fa-css-prefix}-bookmark;
 		@include fa-common;
 	}
 }

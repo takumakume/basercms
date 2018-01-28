@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: baserCMS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-01-28 11:44+0900\n"
+"PO-Revision-Date: 2018-01-28 14:10+0900\n"
 "Last-Translator: \n"
 "Language-Team: baserCMS Users Community <info@basercms.net>\n"
 "Language: en\n"
@@ -53,6 +53,7 @@ msgid "テーマ管理"
 msgstr "Themes"
 
 #: Config/setting.php:49 View/Elements/admin/sites/form.php:149
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:104
 msgid "テーマ"
 msgstr "Themes"
 
@@ -220,6 +221,7 @@ msgid "フォルダー"
 msgstr "Folder"
 
 #: Config/setting.php:338 View/Elements/admin/sites/form.php:48
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:67
 msgid "エイリアス"
 msgstr ""
 
@@ -825,13 +827,13 @@ msgstr ""
 #: View/Elements/admin/sites/index_row.php:29
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:17
 #: View/Themed/ownd_river/Contents/admin/ajax_contents_info.php:19
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:20
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:21
 #: View/Themed/ownd_river/Elements/admin/blog_comments/index_row.php:57;61
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:43
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:95
 #: View/Themed/ownd_river/Elements/admin/sites/index_row.php:29
 msgid "非公開"
-msgstr ""
+msgstr "unpublished"
 
 #: Controller/SitesController.php:201
 #: View/Elements/admin/content_fields.php:176;178
@@ -847,7 +849,7 @@ msgstr ""
 #, fuzzy
 #| msgid "公開状態"
 msgid "公開"
-msgstr "Publish Status"
+msgstr "unpublished"
 
 #: Controller/ThemeConfigsController.php:62
 #: View/Elements/admin/submenus/themes.php:25
@@ -1147,6 +1149,7 @@ msgstr ""
 #: Controller/UsersController.php:145 View/Elements/admin/toolbar.php:93;95
 #: View/Elements/admin/helps/users_index.php:21
 #: View/Elements/admin/users/index_row.php:24
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:93;95
 #: View/Themed/ownd_river/Users/admin/login.php:153
 #: View/Users/admin/login.php:48
 msgid "ログイン"
@@ -1399,12 +1402,12 @@ msgstr ""
 #: View/Themed/ownd_river/Sites/admin/add.php:25
 #: View/Themed/ownd_river/Sites/admin/edit.php:25
 msgid "一覧に戻る"
-msgstr ""
+msgstr "Back To List"
 
 #: Event/BcContentsEventListener.php:89
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:183;186
 msgid "プレビュー"
-msgstr ""
+msgstr "Preview"
 
 #: Event/BcContentsEventListener.php:94 View/Dblogs/admin/ajax_index.php:36
 #: View/EditorTemplates/admin/form.php:77
@@ -1430,13 +1433,14 @@ msgstr ""
 #: View/Themed/ownd_river/BlogTags/admin/form.php:48
 #: View/Themed/ownd_river/Dblogs/admin/ajax_index.php:36
 #: View/Themed/ownd_river/EditorTemplates/admin/form.php:70
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:64
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:30
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_row.php:31
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:20
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:21
 #: View/Themed/ownd_river/Elements/admin/blog_comments/index_row.php:59;63
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:43
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:102
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:33
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:36
 #: View/Themed/ownd_river/Elements/admin/blog_tags/index_row.php:25
 #: View/Themed/ownd_river/MailFields/admin/form.php:272
 #: View/Themed/ownd_river/MailMessages/admin/view.php:71
@@ -1454,7 +1458,7 @@ msgstr ""
 
 #: Event/BcContentsEventListener.php:96
 msgid "ゴミ箱へ移動"
-msgstr ""
+msgstr "To Trash"
 
 #: Lib/TestSuite/Fixture/BaserTestFixture.php:53
 msgid "Schemaファイルが見つかりません"
@@ -1515,6 +1519,14 @@ msgstr "Debug Mode 1"
 msgid "デバッグモード２"
 msgstr "Debug Mode 2"
 
+#: Plugin/Blog/Controller/BlogPostsController.php:180
+msgid "新規記事追加"
+msgstr "Add"
+
+#: Plugin/Blog/Controller/BlogPostsController.php:186
+msgid "[%s] 記事一覧"
+msgstr "[%s] post list"
+
 #: Plugin/Feed/Config/setting.php:19
 msgid "フィード管理"
 msgstr "Feed Setting"
@@ -1538,7 +1550,7 @@ msgstr ""
 #: Plugin/Uploader/Config/setting.php:28 View/Elements/site_search_form.php:32
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:74
 msgid "カテゴリ"
-msgstr ""
+msgstr "Category"
 
 #: View/ContentFolders/admin/edit.php:26
 #: View/Themed/ownd_river/ContentFolders/admin/edit.php:19
@@ -1583,7 +1595,7 @@ msgstr ""
 #: View/Themes/admin/form.php:89 View/UserGroups/admin/form.php:133
 #: View/Users/admin/form.php:137 View/WidgetAreas/admin/form.php:104;151
 msgid "保存"
-msgstr ""
+msgstr "Save"
 
 #: View/Dblogs/admin/ajax_index.php:36
 #: View/Themed/ownd_river/Dblogs/admin/ajax_index.php:36
@@ -1640,6 +1652,7 @@ msgstr ""
 #: View/Elements/admin/searches/search_indices_index.php:36
 #: View/Elements/admin/searches/users_index.php:26
 #: View/Elements/widgets/search.php:36
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:34
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:44
 msgid "検索"
 msgstr "Search"
@@ -1651,20 +1664,26 @@ msgstr ""
 #: View/Elements/admin/content_fields.php:151
 #: View/Elements/admin/favorite_menu.php:52 View/SearchIndices/admin/add.php:25
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:78
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:55
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:71
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:64
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:23
 #: View/Themed/ownd_river/SearchIndices/admin/add.php:25
 #: View/Themed/ownd_river/Themes/admin/form.php:42
 #: View/Themed/ownd_river/WidgetAreas/admin/form.php:98;145
 #: View/Themes/admin/form.php:47 View/WidgetAreas/admin/form.php:98;145
 msgid "タイトル"
-msgstr ""
+msgstr "Title"
 
 #: View/Elements/admin/content_fields.php:173
 #: View/Elements/admin/searches/contents_index.php:35
 #: View/Elements/admin/searches/search_indices_index.php:30
 #: View/Elements/admin/sites/form.php:158 View/SiteConfigs/admin/form.php:217
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:139
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:72
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:30
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:35
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:75
 #: View/Themed/ownd_river/SiteConfigs/admin/form.php:213
 msgid "公開状態"
 msgstr "Publish Status"
@@ -1677,6 +1696,8 @@ msgstr ""
 #: View/Elements/admin/searches/contents_index.php:39
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:153
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:86
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:80
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:31
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:39
 msgid "作成者"
 msgstr "Author"
@@ -1721,6 +1742,7 @@ msgstr ""
 #: View/Elements/admin/user_groups/index_row.php:24
 #: View/Elements/admin/users/index_row.php:21
 #: View/Elements/admin/widget_areas/index_row.php:24
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:63
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_row.php:30
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_row.php:98
 #: View/Themed/ownd_river/Elements/admin/blog_tags/index_row.php:24
@@ -1746,6 +1768,7 @@ msgstr ""
 #: View/Themed/ownd_river/BlogCategories/admin/form.php:52;96
 #: View/Themed/ownd_river/BlogContents/admin/form.php:52;80;106;141;162
 #: View/Themed/ownd_river/Elements/admin/contents_menu.php:25
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:42
 #: View/Themed/ownd_river/MailConfigs/admin/form.php:28;37;46;60;69
 #: View/Themed/ownd_river/MailContents/admin/form.php:59;68;77;86;110;122;136;150;163;175;191;209
 #: View/Themed/ownd_river/MailFields/admin/form.php:44;53;62;77;128;150;174;191;205
@@ -1780,11 +1803,12 @@ msgstr ""
 #: View/Elements/admin/user_groups/index_list.php:35
 #: View/Elements/admin/users/index_list.php:28
 #: View/Elements/admin/widget_areas/index_list.php:24
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:39
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:25
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:28
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:31
 #: View/Themed/ownd_river/Elements/admin/sites/index_list.php:38
 msgid "新規追加"
-msgstr ""
+msgstr "Add"
 
 #: View/Elements/admin/footer.php:24
 msgid "baserCMSロゴ"
@@ -1852,14 +1876,17 @@ msgid "アクセス"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:44
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:44
 msgid "インストールマニュアル"
 msgstr "Install Manual"
 
 #: View/Elements/admin/toolbar.php:46
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:46
 msgid "アップデートマニュアル"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:51
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:51
 msgid "baserCMS管理システム"
 msgstr "baserCMS Management System"
 
@@ -1868,18 +1895,22 @@ msgid "デバッグモード"
 msgstr "Debug Mode"
 
 #: View/Elements/admin/toolbar.php:78
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:78
 msgid "元のユーザーに戻る"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:81;84
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:81;84
 msgid "アカウント設定"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:87 View/Members/mypage/index.php:22
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:87
 msgid "ログアウト"
 msgstr ""
 
 #: View/Elements/admin/toolbar.php:90
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:90
 msgid "ログインしていません "
 msgstr ""
 
@@ -1899,9 +1930,9 @@ msgstr "Source Contents"
 #: View/Elements/admin/theme_files/index_list.php:27
 #: View/Elements/admin/widget_areas/index_list.php:28
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:29
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:36
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:38
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:60
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:32
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:35
 msgid "一括選択"
 msgstr ""
 
@@ -1912,11 +1943,11 @@ msgstr ""
 #: View/Elements/admin/theme_files/index_list.php:28
 #: View/Elements/admin/widget_areas/index_list.php:29
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:30
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:20
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:21
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:43
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:33
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:36
 msgid "一括処理"
-msgstr ""
+msgstr "batch processing"
 
 #: View/Elements/admin/contents/index_list_table.php:31
 #: View/Elements/admin/permissions/index_list.php:38
@@ -1926,9 +1957,9 @@ msgstr ""
 #: View/Elements/admin/themes/index_row.php:32
 #: View/Elements/admin/widget_areas/index_list.php:30
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:31
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:21
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:22
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:44
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:34
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:37
 #: View/Themed/ownd_river/Elements/admin/uploader_categories/index_list.php:28
 #: View/Themed/ownd_river/Themes/admin/add.php:20 View/Themes/admin/add.php:33
 msgid "適用"
@@ -1938,10 +1969,6 @@ msgstr ""
 #: View/Elements/admin/sites/index_list.php:43;44;45;46;47;48;49;50;51;54;55
 #: View/Elements/admin/user_groups/index_list.php:38;39;40;42;43
 #: View/Elements/admin/users/index_list.php:31;32;33;34;35;37;38
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:38;39;41;42;44;46;47
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:38;39;41;42
-#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:34;35;37;39;41;42;44;46
-#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:37;38;39;40;41
 #: View/Themed/ownd_river/Elements/admin/mail_messages/index_list.php:35;36
 #: View/Themed/ownd_river/Elements/admin/uploader_categories/index_list.php:34;39;44;48
 #: View/Themed/ownd_river/Elements/admin/user_groups/index_list.php:36;37;38;39;40
@@ -1953,10 +1980,6 @@ msgstr ""
 #: View/Elements/admin/sites/index_list.php:43;44;45;46;47;48;49;50;51;54;55
 #: View/Elements/admin/user_groups/index_list.php:38;39;40;42;43
 #: View/Elements/admin/users/index_list.php:31;32;33;34;35;37;38
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:38;39;41;42;44;46;47
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:38;39;41;42
-#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:34;35;37;39;41;42;44;46
-#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:37;38;39;40;41
 #: View/Themed/ownd_river/Elements/admin/mail_messages/index_list.php:35;36
 #: View/Themed/ownd_river/Elements/admin/uploader_categories/index_list.php:35;40;45;49
 #: View/Themed/ownd_river/Elements/admin/user_groups/index_list.php:36;37;38;39;40
@@ -1971,11 +1994,10 @@ msgstr "Type"
 
 #: View/Elements/admin/contents/index_list_table.php:40
 msgid " タイトル"
-msgstr ""
+msgstr " Title"
 
 #: View/Elements/admin/contents/index_list_table.php:42
 #: View/Elements/admin/sites/index_list.php:47
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:75
 #, fuzzy
 #| msgid "公開状態"
 msgid " 公開状態"
@@ -1994,7 +2016,7 @@ msgstr ""
 #: View/Elements/admin/sites/index_list.php:55
 #: View/Elements/admin/user_groups/index_list.php:43
 #: View/Elements/admin/users/index_list.php:38
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:119
+#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:72
 msgid " 更新日"
 msgstr ""
 
@@ -2091,11 +2113,13 @@ msgstr "Content Type"
 #: View/Elements/admin/searches/contents_index.php:46
 #: View/Elements/admin/searches/search_indices_index.php:37
 #: View/Elements/admin/searches/users_index.php:27
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:35
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:45
 msgid "クリア"
 msgstr "Clear"
 
 #: View/Elements/admin/searches/search_indices_index.php:25
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:49
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:31
 #: View/Themed/ownd_river/MailFields/admin/form.php:59
 #: View/Themed/ownd_river/Updaters/admin/exec_script.php:21
@@ -2105,6 +2129,7 @@ msgstr "Type"
 
 #: View/Elements/admin/searches/search_indices_index.php:25;28;31;33
 #: View/Elements/admin/searches/users_index.php:22
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:25;28;30;31
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:24;32;36;40
 msgid "指定なし"
 msgstr "unspecified"
@@ -2114,10 +2139,12 @@ msgid "優先度"
 msgstr ""
 
 #: View/Elements/admin/sites/form.php:43
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:60
 msgid "識別名称"
 msgstr ""
 
 #: View/Elements/admin/sites/form.php:57
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:52
 msgid "サイト名"
 msgstr ""
 
@@ -2136,6 +2163,7 @@ msgid "サイト基本説明文"
 msgstr ""
 
 #: View/Elements/admin/sites/form.php:93
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:97
 msgid "メインサイト"
 msgstr ""
 
@@ -2168,44 +2196,37 @@ msgid "公開する"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:44
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:52
 msgid " サイト名"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:45
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:60
 msgid " 識別名称"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:46
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:67
 msgid " エイリアス"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:48
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:82
 msgid " デバイス"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:49
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:89
 msgid " 言語"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:50
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:97
 msgid " メインサイト"
 msgstr ""
 
 #: View/Elements/admin/sites/index_list.php:51
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:104
 msgid " テーマ"
 msgstr "Themes"
 
 #: View/Elements/admin/sites/index_list.php:54
 #: View/Elements/admin/user_groups/index_list.php:42
 #: View/Elements/admin/users/index_list.php:37
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:112
+#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:67
 msgid " 登録日"
 msgstr ""
 
@@ -2389,7 +2410,7 @@ msgstr ""
 
 #: View/Helper/BcBaserHelper.php:1199
 msgid "サイト確認"
-msgstr ""
+msgstr "Check Site"
 
 #: View/Helper/BcContentsHelper.php:184
 msgid "プラグインの BcContent 設定が間違っています。"
@@ -2477,11 +2498,11 @@ msgstr ""
 #: View/Layouts/admin/default.php:142
 #: View/Themed/ownd_river/Layouts/admin/default.php:131
 msgid "▲ トップへ"
-msgstr ""
+msgstr "▲ To Top"
 
 #: View/Layouts/mobile/default.php:40
 msgid "トップへ"
-msgstr ""
+msgstr "To Top"
 
 #: View/Pages/admin/form.php:60 View/Themed/ownd_river/Pages/admin/form.php:55
 msgid "コード"
@@ -2744,7 +2765,7 @@ msgstr ""
 
 #: View/Themed/ownd_river/BlogCategories/admin/form.php:22
 msgid "このカテゴリのURL"
-msgstr ""
+msgstr "URL of this Category"
 
 #: View/Themed/ownd_river/BlogCategories/admin/form.php:49
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:36
@@ -2789,7 +2810,7 @@ msgstr ""
 
 #: View/Themed/ownd_river/BlogContents/admin/form.php:49
 msgid "一覧表示件数"
-msgstr ""
+msgstr "Displayed results"
 
 #: View/Themed/ownd_river/BlogContents/admin/form.php:56
 msgid "公開サイトの一覧に表示する件数を指定します。"
@@ -2918,8 +2939,9 @@ msgid "記事概要"
 msgstr ""
 
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:66
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:25
 msgid "カテゴリー"
-msgstr ""
+msgstr "Category"
 
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:70
 msgid "新しいカテゴリを追加"
@@ -2939,14 +2961,15 @@ msgstr ""
 
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:126
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:78
+#: View/Themed/ownd_river/Elements/admin/searches/blog_posts_index.php:28
 msgid "タグ"
-msgstr ""
+msgstr "Tag"
 
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:170
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:46
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:81
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:88
 msgid "投稿日"
-msgstr ""
+msgstr "Post date"
 
 #: View/Themed/ownd_river/BlogPosts/admin/form.php:188
 msgid ""
@@ -2956,14 +2979,16 @@ msgstr ""
 
 #: View/Themed/ownd_river/BlogTags/admin/form.php:25
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:35
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:38
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:43
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:65;66
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:38
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:44
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:41
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:44
 msgid "NO"
 msgstr ""
 
 #: View/Themed/ownd_river/BlogTags/admin/form.php:33
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:39
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:52
 msgid "ブログタグ名"
 msgstr ""
 
@@ -2991,6 +3016,39 @@ msgstr ""
 msgid "データが登録されていません。"
 msgstr "%s of the theme is not set : %s"
 
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:24
+msgid "お気に入り"
+msgstr "Favorites"
+
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:33
+msgid "新規登録ボタンよりよく使う項目を登録しておく事ができます。"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:44
+msgid ""
+"よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする"
+"事ができます。<br />また、登録済の項目を右クリックする事で編集・削除が行えま"
+"す。"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/favorite_menu.php:56
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:65
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:57
+msgid "URL"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/list_num.php:42
+msgid "表示件数"
+msgstr "Displayed results"
+
+#: View/Themed/ownd_river/Elements/admin/pagination.php:46
+msgid ""
+"<span class=\"page-start-num\">%start%</span>～<span class=\"page-end-num\">"
+"%end%</span> 件 ／ <span class=\"page-total-num\">%count%</span> 件"
+msgstr ""
+"Page <span class=“page-start-num”>%start%</span> of <span class=“page-end-"
+"num”>%end%</span> / <span class=“page-total-num”>%count%</span>"
+
 #: View/Themed/ownd_river/Elements/admin/search.php:24
 msgid "絞り込み検索"
 msgstr "Filtered Search"
@@ -3003,52 +3061,52 @@ msgstr ""
 msgid "ダッシュボード"
 msgstr "Dashboard"
 
+#: View/Themed/ownd_river/Elements/admin/toolbar.php:102
+msgid "キャッシュクリア"
+msgstr "Clear Cache"
+
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:42
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:41
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:60
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:112
 msgid "登録日"
 msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:42
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:47
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:42
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:88
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:67
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:95
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:119
 msgid "更新日"
 msgstr ""
 
 #: View/Themed/ownd_river/Elements/admin/blog_categories/index_list.php:71
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:60
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:104
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:113
-#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:53
+#: View/Themed/ownd_river/Elements/admin/blog_tags/index_list.php:81
 msgid "データが見つかりませんでした。"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:39
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:50
 msgid "投稿者"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:41
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:58
 msgid "メール"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:42
-msgid "URL"
-msgstr ""
-
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:44
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:73
 msgid "メッセージ"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:50
+#: View/Themed/ownd_river/Elements/admin/blog_comments/index_list.php:94
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:95
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:36
 msgid "アクション"
-msgstr ""
-
-#: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:35
-msgid "新規記事追加"
-msgstr ""
+msgstr "Action"
 
 #: View/Themed/ownd_river/Elements/admin/blog_posts/index_list.php:82
 msgid "コメント"
-msgstr ""
+msgstr "Comment"
 
 #: View/Themed/ownd_river/Elements/admin/contents/form_alias.php:41
 msgid ""
@@ -3057,12 +3115,36 @@ msgid ""
 "ツを編集してください。"
 msgstr ""
 
+#: View/Themed/ownd_river/Elements/admin/contents/index_list_table.php:88
+#, fuzzy
+#| msgid "作成者"
+msgid "作成日"
+msgstr "Author"
+
+#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:43
+msgid " NO"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:51
+#, fuzzy
+#| msgid "フィード管理"
+msgid " フィード設定名"
+msgstr "Feed Setting"
+
+#: View/Themed/ownd_river/Elements/admin/feed_configs/index_list.php:59
+msgid " 表示件数"
+msgstr "Displayed results"
+
 #: View/Themed/ownd_river/Elements/admin/searches/contents_index.php:27
 msgid "名称"
 msgstr ""
 
-#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:44
-msgid " NO"
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:82
+msgid "デバイス"
+msgstr ""
+
+#: View/Themed/ownd_river/Elements/admin/sites/index_list.php:89
+msgid "言語"
 msgstr ""
 
 #: View/Themed/ownd_river/Layouts/admin/default.php:107
@@ -3389,7 +3471,7 @@ msgstr ""
 
 #: View/Themed/ownd_river/UploaderCategories/admin/form.php:28
 msgid "カテゴリ名"
-msgstr ""
+msgstr "Category Name"
 
 #: View/Themed/ownd_river/UploaderCategories/admin/form.php:38
 #, fuzzy
