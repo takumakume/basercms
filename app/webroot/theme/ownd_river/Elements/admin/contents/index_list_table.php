@@ -16,6 +16,13 @@
 ?>
 
 <div class="bca-data-list__top">
+	<?php if ($this->BcBaser->isAdminUser()): ?>
+		<div class="bca-action-table-listup">
+			<?php echo $this->BcForm->checkbox('ListTool.checkall', ['title' => '一括選択']) ?>
+			<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['del' => '削除', 'publish' => '公開', 'unpublish' => '非公開'], 'empty' => '一括処理']) ?>
+			<?php echo $this->BcForm->button('適用', ['id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn']) ?>
+		</div>
+	<?php endif ?>
 	<div class="bca-data-list__sub">
 		<?php $this->BcBaser->element('pagination') ?>
 	</div>
@@ -25,14 +32,8 @@
 <table cellpadding="0" cellspacing="0" class="list-table bca-table-listup sort-table" id="ListTable">
 	<thead class="bca-table-listup__thead">
 	<tr>
-		<th class="list-tool bca-table-listup__thead-th">
-			<?php if ($this->BcBaser->isAdminUser()): ?>
-				<div>
-					<?php echo $this->BcForm->checkbox('ListTool.checkall', ['title' => '一括選択']) ?>
-					<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['del' => '削除', 'publish' => '公開', 'unpublish' => '非公開'], 'empty' => '一括処理']) ?>
-					<?php echo $this->BcForm->button('適用', ['id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn']) ?>
-				</div>
-			<?php endif ?>
+		<th class="list-tool bca-table-listup__thead-th"><?php // アクション ?>
+			<?php echo __d('baser', 'アクション') ?>
 		</th>
 		<th class="bca-table-listup__thead-th">
 			<?php 
