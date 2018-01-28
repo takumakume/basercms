@@ -78,8 +78,8 @@
 </div>
 <?php if (!$folderDisabled && $siteConfig['theme'] != $this->BcForm->value('Theme.name')): ?>
 	<div class="submit">
-		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
-		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'del', $this->BcForm->value('Theme.name')), array('class' => 'submit-token btn-gray button'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('Theme.name')), false); ?>
+		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
+		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'del', $this->BcForm->value('Theme.name')), array('class' => 'submit-token btn-gray button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('Theme.name')), false); ?>
 	</div>
 	<?php endif; ?>
 
