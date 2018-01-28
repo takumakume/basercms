@@ -22,7 +22,7 @@ $this->BcBaser->js('admin/sites/edit', false);
 <?php $this->BcBaser->element('sites/form') ?>
 
 <div class="submit">
-	<?php echo $this->BcHtml->link('一覧に戻る', array('plugin' => '', 'admin' => true, 'controller' => 'sites', 'action' => 'index'), array('class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list')) ?>
-	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
-	<?php echo $this->BcForm->button('削除', array('class' => 'button bca-btn', 'data-bca-btn-type' => 'delete', 'id' => 'BtnDelete')) ?>
+	<?php echo $this->BcHtml->link(__d('baser', '一覧に戻る'), array('plugin' => '', 'admin' => true, 'controller' => 'sites', 'action' => 'index'), array('class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list')) ?>
+	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
+	<?php echo $this->BcForm->button(__d('baser', '削除'), array('class' => 'button bca-btn', 'data-bca-btn-type' => 'delete', 'id' => 'BtnDelete')) ?>
 </div>

@@ -104,7 +104,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 			<?php echo $this->BcForm->create('Updater', ['url' => ['action' => $this->request->action, $plugin]]) ?>
 		<?php endif ?>
 		<?php echo $this->BcForm->input('Installation.update', array('type' => 'hidden', 'value' => true)) ?>
-		<?php echo $this->BcForm->end(array('label' => 'アップデート実行', 'class' => 'button btn-red')) ?>
+		<?php echo $this->BcForm->end(array('label' => __d('baser', 'アップデート実行'), 'class' => 'button btn-red')) ?>
 	<?php else: ?>
 		<p>
 			<?php if (!$plugin): ?>
@@ -113,7 +113,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 				<?php $this->BcBaser->link('≫ 管理画面に移動する', '/admin') ?>
 			<?php endif ?>
 		<?php else: ?>
-			<?php $this->BcBaser->link('プラグイン一覧に移動する', array('controller' => 'plugins', 'action' => 'index'), array('class' => 'outside-link')) ?>
+			<?php $this->BcBaser->link(__d('baser', 'プラグイン一覧に移動する'), array('controller' => 'plugins', 'action' => 'index'), array('class' => 'outside-link')) ?>
 		<?php endif ?>
 	</p>
 <?php endif ?>
