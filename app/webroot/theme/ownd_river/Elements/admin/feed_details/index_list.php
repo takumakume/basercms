@@ -73,25 +73,25 @@ $(function(){
 
 		<h2 id="headFeedDetail">フィード一覧</h2>
 
-		<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
-			<thead class="bca-table-listup__thead">
+		<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
+			<thead>
 				<tr>
-					<th class="bca-table-listup__thead-th" scope="col"  style="width:160px" class="list-tool bca-table-listup__thead-th">
+					<th scope="col"  style="width:160px" class="list-tool">
 			<div>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn','hidden' => 'hidden')).'新規追加', array('controller' => 'feed_details', 'action' => 'add', $this->BcForm->value('FeedConfig.id')), array( 'class'=> 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg')) ?>
+				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => '新規追加', 'class' => 'btn')), array('controller' => 'feed_details', 'action' => 'add', $this->BcForm->value('FeedConfig.id'))) ?>
 			</div>
 			<?php if ($this->BcBaser->isAdminUser()): ?>
 				<div>
 					<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
 					<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => '削除'), 'empty' => '一括処理')) ?>
-					<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled')) ?>
+					<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class'=>'bca-btn')) ?>
 				</div>
 			<?php endif ?>
 			</th>
-			<th class="bca-table-listup__thead-th" scope="col">フィード名</th>
-			<th class="bca-table-listup__thead-th" scope="col">カテゴリフィルター</th>
-			<th class="bca-table-listup__thead-th" scope="col">キャッシュ時間</th>
-			<th class="bca-table-listup__thead-th" scope="col">登録日<br />更新日</th>
+			<th scope="col">フィード名</th>
+			<th scope="col">カテゴリフィルター</th>
+			<th scope="col">キャッシュ時間</th>
+			<th scope="col">登録日<br />更新日</th>
 			</tr>
 			</thead>
 			<tbody>
