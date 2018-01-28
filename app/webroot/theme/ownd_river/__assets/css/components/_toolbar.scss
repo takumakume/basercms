@@ -1,24 +1,6 @@
-@charset "UTF-8";
-/**
- * ツールバー
- *
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
- *
- * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
- * @since			baserCMS v 2.0.0
- * @license			http://basercms.net/license/index.html
- */
-
-/* html
------------------------------------------------ */
-
 html {
-	margin-top:31px;
-}
-html, body {
-	min-height: 340px;
+	/* for fixed */
+	margin-top: 41px;
 }
 /* ToolBar
 ----------------------------------------------- */
