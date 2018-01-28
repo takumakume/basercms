@@ -70,7 +70,7 @@ $(function () {
 	$.baserAjaxDataList.init();
 	$.baserAjaxBatch.init({ url: $.baseUrl + '/' + $.bcTree.config.adminPrefix + '/contents/ajax_batch'});
 	
-	$("#Search").before($("#ViewSetting"));
+	// $("#Search").before($("#ViewSetting"));
 	
 	$("#BtnSearchSubmit").click(function(){
 		contentsIndexSearchOpened = true;

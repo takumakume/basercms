@@ -18,12 +18,21 @@ if($this->action == 'admin_index') {
 
 
 <?php if($this->action == 'admin_index'): ?>
-<div class="panel-box" id="ViewSetting">
-<?php if(count($sites) >= 2): ?>
-    <small>サイト</small> <?php echo $this->BcForm->input('ViewSetting.site_id', array('type' => 'select', 'options' => $sites)) ?>　｜　
-<?php else : ?>
-    <?php echo $this->BcForm->input('ViewSetting.site_id', array('type' => 'hidden', 'options' => $sites)) ?>
-<?php endif ?>
-    <small>表示</small> <?php echo $this->BcForm->input('ViewSetting.list_type', array('type' => 'radio', 'options' => $listTypes)) ?>
+<div class="panel-box bca-panel-box" id="ViewSetting">
+    <div class="bca-panel-box__inline-fields">
+        <?php if(count($sites) >= 2): ?>
+            <div class="bca-panel-box__inline-fields-item">
+                <label class="bca-panel-box__inline-fields-title">サイト</label>
+                <?php echo $this->BcForm->input('ViewSetting.site_id', array('type' => 'select', 'class' => 'bca-select', 'options' => $sites)) ?>
+            </div>
+            <div class="bca-panel-box__inline-fields-separator"></div>
+        <?php else : ?>
+            <?php echo $this->BcForm->input('ViewSetting.site_id', array('type' => 'hidden', 'options' => $sites)) ?>
+        <?php endif ?>
+        <div class="bca-panel-box__inline-fields-item">
+            <label class="bca-panel-box__inline-fields-title">表示</label>
+            <?php echo $this->BcForm->input('ViewSetting.list_type', array('type' => 'radio', 'class' => 'bca-radio', 'options' => $listTypes)) ?>
+        </div>
+    </div>
 </div>
 <?php endif ?>
