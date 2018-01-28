@@ -64,10 +64,10 @@
 </div>
 
 <div class="submit section">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
+	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
 	<?php if ($this->action == 'admin_edit'): ?>
 		<?php
-		$this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('EditorTemplate.id')), array('class' => 'button submit-token'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('EditorTemplate.name')), false);
+		$this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('EditorTemplate.id')), array('class' => 'button submit-token bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('EditorTemplate.name')), false);
 		?>
 	<?php endif ?>
 </div>

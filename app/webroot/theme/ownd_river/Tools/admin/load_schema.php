@@ -40,6 +40,6 @@
 	</tr>
 </table>
 
-<div class="submit"><?php echo $this->BcForm->submit(__d('baser', '読み込み'), array('div' => false, 'class' => 'btn-red button')) ?></div>
+<div class="submit"><?php echo $this->BcForm->submit(__d('baser', '読み込み'), array('div' => false, 'class' => 'btn-red button bca-btn')) ?></div>
 
 <?php echo $this->BcForm->end(); ?>
