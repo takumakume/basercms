@@ -44,10 +44,10 @@ $(function(){
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.name', 'フィード設定名') ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.name', __d('baser', 'フィード設定名')) ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('FeedConfig.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('FeedConfig.name') ?>
 				<div id="helptextName" class="helptext">
 					<ul>
@@ -58,7 +58,7 @@ $(function(){
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.display_number', '表示件数') ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.display_number', __d('baser', '表示件数')) ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('FeedConfig.display_number', array('type' => 'text', 'size' => 10, 'maxlength' => 3)) ?>件
 				<?php echo $this->BcForm->error('FeedConfig.display_number') ?>
@@ -72,10 +72,10 @@ $(function(){
 	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption">オプション</a></h2>
 	<table cellpadding="0" cellspacing="0" class="form-table slide-body" id="FormOptionBody">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.feed_title_index', 'フィードタイトルリスト') ?></th>
+			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.feed_title_index', __d('baser', 'フィードタイトルリスト')) ?></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('FeedConfig.feed_title_index', array('type' => 'textarea', 'cols' => 36, 'rows' => 3)) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpFeedTitleIndex', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpFeedTitleIndex', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('FeedConfig.feed_title_index') ?>
 				<div id="helptextFeedTitleIndex" class="helptext">
 					<ul>
@@ -87,10 +87,10 @@ $(function(){
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.category_index', 'カテゴリリスト') ?></th>
+			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.category_index', __d('baser', 'カテゴリリスト')) ?></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('FeedConfig.category_index', array('type' => 'textarea', 'cols' => 36, 'rows' => 3)) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpCategoryIndex', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpCategoryIndex', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('FeedConfig.category_index') ?>
 				<div id="helptextCategoryIndex" class="helptext">
 					<ul>
@@ -102,14 +102,14 @@ $(function(){
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.template', 'テンプレート名') ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head"><?php echo $this->BcForm->label('FeedConfig.template', __d('baser', 'テンプレート名')) ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('FeedConfig.template', array('type' => 'select', 'options' => $this->Feed->getTemplates())) ?>
 				<?php echo $this->BcForm->input('FeedConfig.edit_template', array('type' => 'hidden')) ?>
 				<?php if ($this->action == 'admin_edit'): ?>
 					<?php $this->BcBaser->link('≫ 編集する', 'javascript:void(0)', array('id' => 'EditTemplate')) ?>
 				<?php endif ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpTemplate', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpTemplate', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('FeedConfig.template') ?>
 				<div id="helptextTemplate" class="helptext">
 					<ul>
@@ -125,9 +125,9 @@ $(function(){
 
 <!-- button -->
 <div class="submit">
-	<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button', 'id' => 'BtnSave', 'class'=>'bca-btn', 'data-bca-btn-type'=>'save')) ?>
+	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave', 'class'=>'bca-btn', 'data-bca-btn-type'=>'save')) ?>
 	<?php if ($this->action == 'admin_edit'): ?>
-	<?php $this->BcBaser->link('削除', array('action' => 'delete', $this->BcForm->value('FeedConfig.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type'=>'delete'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('FeedConfig.name')), false); ?>
+	<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('FeedConfig.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type'=>'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('FeedConfig.name')), false); ?>
 	<?php endif ?>
 </div>
 

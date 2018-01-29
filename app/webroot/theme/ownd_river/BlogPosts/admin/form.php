@@ -130,7 +130,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 				</div>
 				<?php echo $this->BcForm->error('BlogTag.BlogTag') ?>
 				<?php echo $this->BcForm->input('BlogTag.name', array('type' => 'text')) ?>
-				<?php echo $this->BcForm->button('新しいタグを追加', array('id' => 'BtnAddBlogTag', 'class' => 'bca-btn')) ?>
+				<?php echo $this->BcForm->button(__d('baser', '新しいタグを追加'), array('id' => 'BtnAddBlogTag', 'class' => 'bca-btn')) ?>
 				<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'TagLoader', 'class' => 'loader')) ?>
 			</td>
 		</tr>

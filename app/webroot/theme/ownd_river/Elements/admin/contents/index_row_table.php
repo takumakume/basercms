@@ -62,23 +62,23 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 	</td>
 	<td class="bca-table-listup__tbody-td" style="width:20%">
 		<?php if($isPublish): ?>
-			<?php $this->BcBaser->link('', $fullUrl, ['title' => '確認', 'class' => 'btn-check bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg', 'target' => '_blank']) ?>
+			<?php $this->BcBaser->link('', $fullUrl, ['title' => __d('baser', '確認'), 'class' => 'btn-check bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg', 'target' => '_blank']) ?>
 		<?php endif ?>
 		<?php if(!$manageDisabled && !empty($this->BcContents->settings[$type]['routes']['manage'])): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', ['width' => 32, 'height' => 32, 'alt' => '管理', 'class' => 'btn']), array_merge($this->BcContents->settings[$type]['routes']['manage'], $urlParams), ['title' => '管理', 'class' => 'btn-manage']) ?>
+			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', ['width' => 32, 'height' => 32, 'alt' => __d('baser', '管理'), 'class' => 'btn']), array_merge($this->BcContents->settings[$type]['routes']['manage'], $urlParams), ['title' => __d('baser', '管理'), 'class' => 'btn-manage']) ?>
 		<?php endif ?>
 		<?php if(!$isSiteRoot && !$isSiteRelated): ?>
-		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => '非公開', 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>
-		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => '公開', 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg']) ?>
+		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>
+		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => __d('baser', '公開'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg']) ?>
 		<?php endif ?>
 		<?php if(!$editDisabled && $type != 'ContentFolder' && !empty($this->BcContents->settings[$type]['routes']['copy'])): ?>
-			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['copy'], $urlParams), ['title' => 'コピー', 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy','data-bca-btn-size' => 'lg']) ?>
+			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['copy'], $urlParams), ['title' => __d('baser', 'コピー'), 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy','data-bca-btn-size' => 'lg']) ?>
 		<?php endif ?>
 		<?php if(!$editDisabled): ?>
-			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['edit'], $urlParams), ['title' => '編集', 'class' => 'btn-edit bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
+			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['edit'], $urlParams), ['title' => __d('baser', '編集'), 'class' => 'btn-edit bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
 		<?php endif ?>
 		<?php if(!$editDisabled && !$isSiteRoot): ?>
-			<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $data['Content']['id']], ['title' => '削除', 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'dlete','data-bca-btn-size' => 'lg']) ?>
+			<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $data['Content']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'dlete','data-bca-btn-size' => 'lg']) ?>
 		<?php endif ?>
 		<form>
 			<input type="hidden" name="data[contentId]" value="<?php echo $data['Content']['id'] ?>">

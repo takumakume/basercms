@@ -26,14 +26,14 @@
 		<th style="white-space: nowrap" class="list-tool bca-table-listup__thead-th">
 			<?php if ($this->BcBaser->isAdminUser()): ?>
 			<div>
-				<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => '一括選択')) ?>
-				<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => '削除'), 'empty' => '一括処理')) ?>
-				<?php echo $this->BcForm->button('適用', array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
+				<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'))) ?>
+				<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'))) ?>
+				<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
 			</div>
 			<?php endif; ?>
 		</th>
 		<th class="bca-table-listup__thead-th" style="white-space: nowrap"><?php echo $this->Paginator->sort('id', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('class' => 'bca-table-listup__img','alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' NO', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('class' => 'bca-table-listup__img','alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' NO'), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
-		<th class="bca-table-listup__thead-th" style="white-space: nowrap" colspan="2"><?php echo $this->Paginator->sort('created', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('class' => 'bca-table-listup__img','alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' 受信日時', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('class' => 'bca-table-listup__img','alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' 受信日時'), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
+		<th class="bca-table-listup__thead-th" style="white-space: nowrap" colspan="2"><?php echo $this->Paginator->sort('created', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('class' => 'bca-table-listup__img','alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . '受信日時', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('class' => 'bca-table-listup__img','alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . __d('baser', '受信日時')), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
 		<th class="bca-table-listup__thead-th" style="white-space: nowrap">受信内容</th>
 		<th class="bca-table-listup__thead-th" style="white-space: nowrap">添付</th>
 	</tr>

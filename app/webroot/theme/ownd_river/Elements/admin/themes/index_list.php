@@ -35,9 +35,9 @@ $(function(){
 				<?php endif ?>
 			</div>
 			<p class="row-tools">
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => 'テンプレート編集', 'class' => 'btn')), array('controller' => 'theme_files', 'action' => 'index', $currentTheme['name']), array('title' => 'テンプレート編集')) ?>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => 'テーマ情報設定', 'class' => 'btn')), array('action' => 'edit', $currentTheme['name']), array('title' => 'テーマ情報設定')) ?>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => 'テーマコピー', 'class' => 'btn')), array('action' => 'ajax_copy', $currentTheme['name']), array('title' => 'テーマコピー', 'class' => 'btn-copy')) ?>
+				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', 'テンプレート編集'), 'class' => 'btn')), array('controller' => 'theme_files', 'action' => 'index', $currentTheme['name']), array('title' => __d('baser', 'テンプレート編集'))) ?>
+				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', 'テーマ情報設定'), 'class' => 'btn')), array('action' => 'edit', $currentTheme['name']), array('title' => __d('baser', 'テーマ情報設定'))) ?>
+				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'テーマコピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $currentTheme['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy')) ?>
 			</p>
 		</div>
 
@@ -55,7 +55,7 @@ $(function(){
 		<?php if ($defaultDataPatterns && $this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->create('Theme', ['url' => ['action' => 'load_default_data_pattern']]) ?>
 			<?php echo $this->BcForm->input('Theme.default_data_pattern', array('type' => 'select', 'options' => $defaultDataPatterns)) ?>
-			<?php echo $this->BcForm->submit('初期データ読込', array('class' => 'button-small', 'div' => false, 'id' => 'BtnLoadDefaultDataPattern')) ?>
+			<?php echo $this->BcForm->submit(__d('baser', '初期データ読込'), array('class' => 'button-small', 'div' => false, 'id' => 'BtnLoadDefaultDataPattern')) ?>
 			<?php echo $this->BcForm->end() ?>
 		<?php endif ?>
 		<br /><br /><br /><br />

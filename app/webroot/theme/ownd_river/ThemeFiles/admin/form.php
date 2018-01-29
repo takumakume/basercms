@@ -36,14 +36,14 @@ $params = explode('/', $path);
 <div class="section">
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('ThemeFile.name', 'ファイル名') ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head"><?php echo $this->BcForm->label('ThemeFile.name', __d('baser', 'ファイル名')) ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input">
 				<?php if ($this->request->action != 'admin_view'): ?>
 					<?php echo $this->BcForm->input('ThemeFile.name', array('type' => 'text', 'size' => 30, 'maxlength' => 255, 'autofocus' => true)) ?>
 					<?php if ($this->BcForm->value('ThemeFile.ext')): ?>.<?php endif ?>
 					<?php echo $this->BcForm->value('ThemeFile.ext') ?>
 					<?php echo $this->BcForm->input('ThemeFile.ext', array('type' => 'hidden')) ?>
-					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 					<?php echo $this->BcForm->error('ThemeFile.name') ?>
 					<div id="helptextName" class="helptext">
 						<ul>
@@ -58,7 +58,7 @@ $params = explode('/', $path);
 		</tr>
 		<?php if ($this->request->action == 'admin_add' || (($this->request->action == 'admin_edit' || $this->request->action == 'admin_view') && in_array($this->request->data['ThemeFile']['type'], array('text', 'image')))): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('ThemeFile.contents', '内容') ?></th>
+				<th class="col-head"><?php echo $this->BcForm->label('ThemeFile.contents', __d('baser', '内容')) ?></th>
 				<td class="col-input">
 					<?php if (($this->request->action == 'admin_edit' || $this->request->action == 'admin_view') && $this->request->data['ThemeFile']['type'] == 'image'): ?>
 						<div class="align-center" style="margin:20px auto">
@@ -82,24 +82,24 @@ $params = explode('/', $path);
 </div>
 <div class="submit">
 	<?php if ($this->request->action == 'admin_add'): ?>
-		<?php $this->BcBaser->link('一覧に戻る', array_merge(array('action' => 'index', $theme, $plugin, $type), $params), array('class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list')); ?>
-		<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
+		<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(array('action' => 'index', $theme, $plugin, $type), $params), array('class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list')); ?>
+		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
 	<?php elseif ($this->request->action == 'admin_edit'): ?>
-		<?php $this->BcBaser->link('一覧に戻る', array_merge(array('action' => 'index', $theme, $plugin, $type), $params), array('class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list')); ?>
+		<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(array('action' => 'index', $theme, $plugin, $type), $params), array('class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list')); ?>
 		<?php if($isWritable): ?>
-			<?php echo $this->BcForm->submit('保存', array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
-			<?php $this->BcBaser->link('削除', array_merge(array('action' => 'del', $theme, $plugin, $type), $params), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf('%s を本当に削除してもいいですか？', basename($path)), false) ?>
+			<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
+			<?php $this->BcBaser->link(__d('baser', '削除'), array_merge(array('action' => 'del', $theme, $plugin, $type), $params), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), basename($path)), false) ?>
 		<?php endif ?>	
 	<?php else: ?>
-		<?php $this->BcBaser->link('一覧に戻る', array_merge(array('action' => 'index', $theme, $plugin, $type), explode('/', dirname($path))), array('class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list')); ?>
+		<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(array('action' => 'index', $theme, $plugin, $type), explode('/', dirname($path))), array('class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list')); ?>
 		<?php // プラグインのアセットの場合はコピーできない ?>
 		<?php if (!$safeModeOn): ?>
 			<?php //if($theme == 'core' && !(($type == 'css' || $type == 'js' || $type == 'img') && $plugin)): ?>
 			<?php if ($theme == 'core'): ?>
-				<?php $this->BcBaser->link('現在のテーマにコピー', array_merge(array('action' => 'copy_to_theme', $theme, $plugin, $type), explode('/', $path)), array('class' => 'submit-token btn-red button bca-btn'), '本当に現在のテーマ「' . Inflector::camelize($siteConfig['theme']) . "」にコピーしてもいいですか？\n既に存在するファイルは上書きされます。"); ?>
+				<?php $this->BcBaser->link(__d('baser', '現在のテーマにコピー'), array_merge(array('action' => 'copy_to_theme', $theme, $plugin, $type), explode('/', $path)), array('class' => 'submit-token btn-red button bca-btn'), sprintf(__d('baser', '本当に現在のテーマ「%s」にコピーしてもいいですか？\n既に存在するファイルは上書きされます。'), Inflector::camelize($siteConfig['theme']))); ?>
 			<?php endif; ?>
 		<?php else: ?>
-			機能制限のセーフモードで動作していますので、現在のテーマへのコピーはできません。
+			<?php echo __d('baser', '機能制限のセーフモードで動作していますので、現在のテーマへのコピーはできません。') ?>
 		<?php endif; ?>
 	<?php endif; ?>
 </div>

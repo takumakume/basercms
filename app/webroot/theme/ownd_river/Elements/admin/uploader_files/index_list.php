@@ -28,7 +28,7 @@ $this->BcBaser->js('admin/vendors/jquery.upload-1.0.0.min');
 	<?php if(!$installMessage): ?>
 	<div>
 		<?php if($uploaderCategories): ?>
-		<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => 'カテゴリ指定なし', 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px')) ?>&nbsp;
+		<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px')) ?>&nbsp;
 		<?php endif ?>
 		<span id="SpanUploadFile<?php echo $listId ?>">
 			<?php echo $this->BcForm->file('UploaderFile.file', array('id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file')) ?>
@@ -56,7 +56,7 @@ $this->BcBaser->js('admin/vendors/jquery.upload-1.0.0.min');
 	<?php if(!$installMessage): ?>
 			<div>
 		<?php if($uploaderCategories): ?>
-				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => 'カテゴリ指定なし', 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px')) ?><br />
+				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px')) ?><br />
 		<?php endif ?>
 				<span id="SpanUploadFile<?php echo $listId ?>">
 					<?php echo $this->BcForm->file('UploaderFile.file', array('id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file')) ?>

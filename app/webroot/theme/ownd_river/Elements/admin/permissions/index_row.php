@@ -24,18 +24,18 @@
 <tr<?php echo $class; ?>>
 	<td style="width:15%" class="row-tools">
 		<?php if ($sortmode): ?>
-			<span class="sort-handle"><?php $this->BcBaser->img('admin/sort.png', array('alt' => '並び替え')) ?></span>
+			<span class="sort-handle"><?php $this->BcBaser->img('admin/sort.png', array('alt' => __d('baser', '並び替え'))) ?></span>
 			<?php echo $this->BcForm->input('Sort.id' . $data['Permission']['id'], array('type' => 'hidden', 'class' => 'id', 'value' => $data['Permission']['id'])) ?>
 		<?php endif ?>
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['Permission']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Permission']['id'])) ?>
 		<?php endif ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_unpublish.png', array('alt' => '無効', 'class' => 'btn')), array('action' => 'ajax_unpublish', $data['Permission']['id']), array('title' => '非公開', 'class' => 'btn-unpublish')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_publish.png', array('alt' => '有効', 'class' => 'btn')), array('action' => 'ajax_publish', $data['Permission']['id']), array('title' => '公開', 'class' => 'btn-publish')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => '編集', 'class' => 'btn')), array('action' => 'edit', $this->request->params['pass'][0], $data['Permission']['id']), array('title' => '編集')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => 'コピー', 'class' => 'btn')), array('action' => 'ajax_copy', $this->request->params['pass'][0], $data['Permission']['id']), array('title' => 'コピー', 'class' => 'btn-copy')) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_unpublish.png', array('alt' => __d('baser', '無効'), 'class' => 'btn')), array('action' => 'ajax_unpublish', $data['Permission']['id']), array('title' => __d('baser', '非公開'), 'class' => 'btn-unpublish')) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_publish.png', array('alt' => __d('baser', '有効'), 'class' => 'btn')), array('action' => 'ajax_publish', $data['Permission']['id']), array('title' => __d('baser', '公開'), 'class' => 'btn-publish')) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', '編集'), 'class' => 'btn')), array('action' => 'edit', $this->request->params['pass'][0], $data['Permission']['id']), array('title' => __d('baser', '編集'))) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'コピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $this->request->params['pass'][0], $data['Permission']['id']), array('title' => __d('baser', 'コピー'), 'class' => 'btn-copy')) ?>
 		<?php if ($data['Permission']['name'] != 'admins'): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => '削除', 'class' => 'btn')), array('action' => 'ajax_delete', $data['Permission']['id']), array('title' => '削除', 'class' => 'btn-delete')) ?>
+			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => __d('baser', '削除'), 'class' => 'btn')), array('action' => 'ajax_delete', $data['Permission']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete')) ?>
 		<?php endif ?>
 	</td>
 	<td style="width:10%"><?php echo $data['Permission']['no']; ?></td>

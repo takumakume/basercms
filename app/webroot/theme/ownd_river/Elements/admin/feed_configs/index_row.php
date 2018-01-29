@@ -21,9 +21,9 @@
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['FeedConfig']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['FeedConfig']['id'])) ?>
 		<?php endif ?>
-		<?php $this->BcBaser->link('', array('controller' => 'feed_configs', 'action' => 'preview', $data['FeedConfig']['id']), array('title' => '確認', 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'edit', $data['FeedConfig']['id']), array('title' => '編集', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['FeedConfig']['id']), array('title' => '削除', 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('controller' => 'feed_configs', 'action' => 'preview', $data['FeedConfig']['id']), array('title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'edit', $data['FeedConfig']['id']), array('title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['FeedConfig']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 	</td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['FeedConfig']['id']; ?></td>
 	<td class="bca-table-listup__tbody-td"><?php $this->BcBaser->link($data['FeedConfig']['name'], array('action' => 'edit', $data['FeedConfig']['id'])) ?></td>

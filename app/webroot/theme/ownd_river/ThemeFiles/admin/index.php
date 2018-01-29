@@ -57,9 +57,9 @@ $(function(){
 		<?php echo $this->BcForm->create('ThemeFile', array('id' => 'ThemeFileUpload', 'url' => array_merge(array('action' => 'upload', $theme, $plugin, $type), $params), 'enctype' => 'multipart/form-data')) ?>
 		<?php echo $this->BcForm->input('ThemeFile.file', array('type' => 'file')) ?>
 		<?php echo $this->BcForm->end() ?>
-		<?php $this->BcBaser->link('フォルダ新規作成', array_merge(array('action' => 'add_folder', $theme, $type), $params), array('class' => 'btn-orange button')) ?>
+		<?php $this->BcBaser->link(__d('baser', 'フォルダ新規作成'), array_merge(array('action' => 'add_folder', $theme, $type), $params), array('class' => 'btn-orange button')) ?>
 	<?php endif ?>
 	<?php if (($path || $type != 'etc') && $type != 'img' && $writable): ?>
-		<?php $this->BcBaser->link('ファイル新規作成', array_merge(array('action' => 'add', $theme, $type), $params), array('class' => 'btn-red button')) ?>
+		<?php $this->BcBaser->link(__d('baser', 'ファイル新規作成'), array_merge(array('action' => 'add', $theme, $type), $params), array('class' => 'btn-red button')) ?>
 	<?php endif ?>
 </div>
