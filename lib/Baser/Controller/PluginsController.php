@@ -115,7 +115,6 @@ class PluginsController extends AppController {
 			]);
 		}
 		unlink(TMP . $zippedName);
-
 		$this->setMessage('新規プラグイン「' . $plugin . '」を追加しました。', false, true);
 		$this->redirect(['action' => 'index']);
 	}
