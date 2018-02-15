@@ -4,12 +4,9 @@
 	padding: 20px;
 	margin-bottom: 20px;
 
-	.row-tools {
-		text-align: center;
-		margin-top: 5px;
-		margin-bottom: 5px;
-		border: 3px solid #ccc;
-		padding: 3px;
+	&__name {
+		margin-top: 0;
+		margin-bottom: 0.2em;
 	}
 
 	&__inner {
@@ -62,6 +59,15 @@
 			}
 		}
 	}
+
+	.row-tools {
+		text-align: center;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		border: 3px solid #ccc;
+		padding: 3px;
+	}
+
 	.error-message {
 		margin: 0;
 		white-space: normal;
@@ -72,6 +78,7 @@
 		padding: 7px;
 		width: 286px;
 	}
+
 }
 
 /*

@@ -12721,12 +12721,9 @@ table.cake-sql-log tr td {
   border: 5px solid #e2e2e2;
   padding: 20px;
   margin-bottom: 20px; }
-  .bca-current-theme .row-tools {
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: 3px solid #ccc;
-    padding: 3px; }
+  .bca-current-theme__name {
+    margin-top: 0;
+    margin-bottom: 0.2em; }
   .bca-current-theme__inner {
     display: -webkit-box;
     display: flex; }
@@ -12757,6 +12754,12 @@ table.cake-sql-log tr td {
       .bca-current-theme .theme-popup-contents .theme-screenshot .theme-description {
         padding-top: 10px;
         margin-top: 10px; }
+  .bca-current-theme .row-tools {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 3px solid #ccc;
+    padding: 3px; }
   .bca-current-theme .error-message {
     margin: 0;
     white-space: normal;

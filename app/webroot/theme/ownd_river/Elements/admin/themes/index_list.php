@@ -23,7 +23,7 @@ $(function(){
 </script>
 
 <div id="CurrentTheme" class="bca-current-theme">
-	<h2>現在のテーマ</h2>
+	<h2 class="bca-current-theme__name">現在のテーマ</h2>
 	<?php if ($currentTheme): ?>
     <div class="bca-current-theme__inner">
       <div class="bca-current-theme__main">
