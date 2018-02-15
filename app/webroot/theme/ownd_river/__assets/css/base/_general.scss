@@ -24,6 +24,10 @@ body{
 	height:100%; // old
 }
 
+body * {
+	box-sizing: border-box;
+}
+
 [hidden] {
 	display: none;
 }

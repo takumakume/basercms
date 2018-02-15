@@ -22,7 +22,7 @@ $(function(){
 });
 </script>
 
-<ul class="list-panel clearfix">
+<ul class="list-panel bca-list-panel">
 	<?php if (!empty($baserThemes)): ?>
 		<?php $key = 0 ?>
 		<?php foreach ($baserThemes as $data): ?>

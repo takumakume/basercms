@@ -22,50 +22,52 @@ $(function(){
 });
 </script>
 
-
-<div id="CurrentTheme" class="clearfix">
+<div id="CurrentTheme" class="bca-current-theme">
 	<h2>現在のテーマ</h2>
 	<?php if ($currentTheme): ?>
-		<div class="current-theme-left">
-			<div class="theme-screenshot">
-				<?php if ($currentTheme['screenshot']): ?>
-					<?php $this->BcBaser->img('/theme/' . $currentTheme['name'] . '/screenshot.png', array('alt' => $currentTheme['title'])) ?>
-				<?php else: ?>
-					<?php $this->BcBaser->img('admin/no-screenshot.png', array('alt' => $currentTheme['title'])) ?>
-				<?php endif ?>
-			</div>
-			<p class="row-tools">
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', 'テンプレート編集'), 'class' => 'btn')), array('controller' => 'theme_files', 'action' => 'index', $currentTheme['name']), array('title' => __d('baser', 'テンプレート編集'))) ?>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', 'テーマ情報設定'), 'class' => 'btn')), array('action' => 'edit', $currentTheme['name']), array('title' => __d('baser', 'テーマ情報設定'))) ?>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'テーマコピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $currentTheme['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy')) ?>
-			</p>
-		</div>
+    <div class="bca-current-theme__inner">
+      <div class="bca-current-theme__main">
+        <div class="theme-screenshot">
+          <?php if ($currentTheme['screenshot']): ?>
+            <?php $this->BcBaser->img('/theme/' . $currentTheme['name'] . '/screenshot.png', array('alt' => $currentTheme['title'])) ?>
+          <?php else: ?>
+            <?php $this->BcBaser->img('admin/no-screenshot.png', array('alt' => $currentTheme['title'])) ?>
+          <?php endif ?>
+        </div>
+        <div class="row-tools">
+          <?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', 'テンプレート編集'), 'class' => 'btn')), array('controller' => 'theme_files', 'action' => 'index', $currentTheme['name']), array('title' => __d('baser', 'テンプレート編集'))) ?>
+          <?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', 'テーマ情報設定'), 'class' => 'btn')), array('action' => 'edit', $currentTheme['name']), array('title' => __d('baser', 'テーマ情報設定'))) ?>
+          <?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'テーマコピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $currentTheme['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy')) ?>
+        </div>
+      </div>
 
-		<div class="theme-info">
-			<p class="theme-name"><strong><?php echo $currentTheme['title'] ?></strong>&nbsp;(&nbsp;<?php echo $currentTheme['name'] ?>&nbsp;)</p>
-			<p class="theme-version">バージョン：<?php echo $currentTheme['version'] ?></p>
-			<p class="theme-author">制作者：<?php if (!empty($currentTheme['url']) && !empty($currentTheme['author'])): ?>
-					<?php $this->BcBaser->link($currentTheme['author'], $currentTheme['url'], array('target' => '_blank')) ?>
-				<?php else: ?>
-					<?php echo $currentTheme['author'] ?>
-				<?php endif ?>
-			</p>
-		</div>
-		<br /><br />
-		<?php if ($defaultDataPatterns && $this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->create('Theme', ['url' => ['action' => 'load_default_data_pattern']]) ?>
-			<?php echo $this->BcForm->input('Theme.default_data_pattern', array('type' => 'select', 'options' => $defaultDataPatterns)) ?>
-			<?php echo $this->BcForm->submit(__d('baser', '初期データ読込'), array('class' => 'button-small', 'div' => false, 'id' => 'BtnLoadDefaultDataPattern')) ?>
-			<?php echo $this->BcForm->end() ?>
-		<?php endif ?>
-		<br /><br /><br /><br />
-		<div class="theme-description"><?php echo nl2br($currentTheme['description']) ?></div>
-	<?php else: ?>
+      <div class="bca-current-theme__sub">
+        <div class="theme-info">
+          <h3 class="theme-name"><strong><?php echo $currentTheme['title'] ?></strong>&nbsp;(&nbsp;<?php echo $currentTheme['name'] ?>&nbsp;)</h3>
+          <p class="theme-version">バージョン：<?php echo $currentTheme['version'] ?></p>
+          <p class="theme-author">制作者：<?php if (!empty($currentTheme['url']) && !empty($currentTheme['author'])): ?>
+              <?php $this->BcBaser->link($currentTheme['author'], $currentTheme['url'], array('target' => '_blank')) ?>
+            <?php else: ?>
+              <?php echo $currentTheme['author'] ?>
+            <?php endif ?>
+          </p>
+        </div>
+        <?php if ($defaultDataPatterns && $this->BcBaser->isAdminUser()): ?>
+          <?php echo $this->BcForm->create('Theme', ['url' => ['action' => 'load_default_data_pattern']]) ?>
+          <?php echo $this->BcForm->input('Theme.default_data_pattern', array('type' => 'select', 'options' => $defaultDataPatterns)) ?>
+          <?php echo $this->BcForm->submit(__d('baser', '初期データ読込'), array('class' => 'button-small', 'div' => false, 'id' => 'BtnLoadDefaultDataPattern')) ?>
+          <?php echo $this->BcForm->end() ?>
+        <?php endif ?>
+        <div class="theme-description"><?php echo nl2br($currentTheme['description']) ?></div>
+      </div>
+    </div>
+
+  <?php else: ?>
 		<p>現在、テーマが選択されていません。</p>
 	<?php endif ?>
 </div>
 
-<ul class="list-panel clearfix">
+<ul class="list-panel bca-list-panel">
 	<?php if (!empty($datas)): ?>
 		<?php foreach ($datas as $data): ?>
 			<?php $this->BcBaser->element('themes/index_row', array('data' => $data)) ?>
