@@ -38,10 +38,10 @@ $url = $this->BcContents->getUrl('/' . $data['Site']['alias'] . '/', true, $data
 	<td class="bca-table-listup__tbody-td"><?php $this->BcBaser->link($data['Site']['name'], array('action' => 'edit', $data['Site']['id'])); ?><br>
 		<?php echo $data['Site']['alias'] ?>
 	</td>
-	<td class="bca-table-listup__tbody-td" style="width:5%;" class="align-center status">
+	<td class="bca-table-listup__tbody-td" style="width:5%;" class="bc-align-center status">
 		<?php echo $this->BcText->booleanMark($data['Site']['status']); ?><br />
 	</td>
-	<td class="bca-table-listup__tbody-td" class="align-center">
+	<td class="bca-table-listup__tbody-td" class="bc-align-center">
 		<?php echo $this->BcText->arrayValue($data['Site']['device'], $devices, ''); ?><br>
 		<?php echo $this->BcText->arrayValue($data['Site']['lang'], $langs, ''); ?>
 	</td>

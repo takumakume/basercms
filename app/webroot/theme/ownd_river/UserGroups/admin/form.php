@@ -120,7 +120,7 @@ $(window).load(function() {
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
-<div class="submit align-center section">
+<div class="submit bc-align-center section">
 	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
 	<?php if ($this->request->action == 'admin_edit'): ?>
 		<?php if ($this->BcForm->value('UserGroup.name') != 'admins'): ?>

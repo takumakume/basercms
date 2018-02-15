@@ -51,7 +51,7 @@
 			'admin/libs/credit',
 			'admin/vendors/validate_messages_ja',
 			'admin/functions',
-			'admin/libs/adjust_scroll',
+//			'admin/libs/adjust_scroll',
 			'admin/libs/jquery.bcUtil',
 			'admin/libs/jquery.bcToken',
 			'admin/sidebar',
@@ -63,30 +63,31 @@
 	</head>
 
 	<body id="<?php $this->BcBaser->contentsName() ?>" class="normal">
-		<div id="Page">
-			<div id="BaseUrl" style="display: none"><?php echo $this->request->base ?></div>
-			<div id="SaveFavoriteBoxUrl" style="display:none"><?php $this->BcBaser->url(array('plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_favorite_box')) ?></div>
-			<div id="SaveSearchBoxUrl" style="display:none"><?php $this->BcBaser->url(array('plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_search_box', $this->BcBaser->getContentsName(true))) ?></div>
-			<div id="SearchBoxOpened" style="display:none"><?php echo $this->Session->read('Baser.searchBoxOpened.' . $this->BcBaser->getContentsName(true)) ?></div>
-			<div id="CurrentPageName" style="display: none"><?php $this->BcBaser->contentsTitle() ?></div>
-			<div id="CurrentPageUrl" style="display: none"><?php echo ($this->request->url == Configure::read('Routing.prefixes.0')) ? '/admin/dashboard/index' : '/' . $this->request->url; ?></div>
 
-			<!-- Waiting -->
-			<div id="Waiting" class="waiting-box" style="display:none">
-				<div class="corner10">
-			<?php echo $this->Html->image('admin/ajax-loader.gif') ?><br />
-					W A I T
-				</div>
-			</div>
+  <div class="bca-data">
+    <div id="BaseUrl" hidden><?php echo $this->request->base ?></div>
+    <div id="SaveFavoriteBoxUrl" hidden><?php $this->BcBaser->url(array('plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_favorite_box')) ?></div>
+    <div id="SaveSearchBoxUrl" hidden><?php $this->BcBaser->url(array('plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_search_box', $this->BcBaser->getContentsName(true))) ?></div>
+    <div id="SearchBoxOpened" hidden><?php echo $this->Session->read('Baser.searchBoxOpened.' . $this->BcBaser->getContentsName(true)) ?></div>
+    <div id="CurrentPageName" hidden><?php $this->BcBaser->contentsTitle() ?></div>
+    <div id="CurrentPageUrl" hidden><?php echo ($this->request->url == Configure::read('Routing.prefixes.0')) ? '/admin/dashboard/index' : '/' . $this->request->url; ?></div>
+    <!-- Waiting -->
+    <div id="Waiting" class="waiting-box bca-waiting-box" hidden>
+      <div class="corner10">
+        <?php echo $this->Html->image('admin/ajax-loader.gif') ?><br />
+        WAIT
+      </div>
+    </div>
+  </div>
 
-			<?php $this->BcBaser->header() ?>
+	<div id="Page" class="bca-app">
+		<?php $this->BcBaser->header() ?>
 
-			<div id="Wrap" class="bca-container">
+		<div id="Wrap" class="bca-container">
 
 <?php if ($this->name != 'Installations' && $this->name != 'Updaters' && ('/' . $this->request->url != Configure::read('BcAuthPrefix.admin.loginAction')) && !empty($user)): ?>
 			<?php $this->BcBaser->element('sidebar') ?>
 <?php endif ?>
-
 
 				<main id="Contents" class="bca-main">
 
@@ -135,9 +136,9 @@
 
 			<!-- / #Wrap --></div>
 
-<?php $this->BcBaser->footer() ?>
+		<?php $this->BcBaser->footer() ?>
 
-			<!-- / #Page --></div>
+	<!-- / #Page --></div>
 
 <?php $this->BcBaser->func() ?>
 	</body>
