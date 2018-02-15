@@ -15,15 +15,12 @@
  */
 ?>
 
-
-<!-- list -->
-<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
-	<thead class="bca-table-listup__thead">
-		<tr>
-			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
 	<div>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn bca-table-listup__img', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add', $blogContent['BlogContent']['id']),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
 	</div>
+
+<div class="bca-data-list__top">
+<!-- 一括処理 -->
 	<?php if ($this->BcBaser->isAdminUser()): ?>
 		<div>
 			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'))) ?>
@@ -31,6 +28,21 @@
 			<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
 		</div>
 	<?php endif ?>
+  <div class="bca-data-list__sub">
+    <!-- list-num -->
+    <?php $this->BcBaser->element('list_num') ?>
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
+</div>
+
+
+
+<!-- list -->
+<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
+	<thead class="bca-table-listup__thead">
+		<tr>
+			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
 </th>
 <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
 <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリ名') ?>
