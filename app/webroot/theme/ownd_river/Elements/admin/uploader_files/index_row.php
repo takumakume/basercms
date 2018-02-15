@@ -46,7 +46,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 		<span><?php echo $file['UploaderFile']['name'] ?></span>
 		<?php if ($file['UploaderFile']['alt']): ?><br /><span><?php echo $this->BcText->truncate($file['UploaderFile']['alt'], 40) ?><span><?php endif ?>
 	</td>
-	<td class="align-center"><?php echo $this->BcText->booleanMark($statusPublish); ?></td>
+	<td class="bc-align-center"><?php echo $this->BcText->booleanMark($statusPublish); ?></td>
 	<td class="user-name"><?php echo $this->BcText->arrayValue($file['UploaderFile']['user_id'], $users) ?></td>
 	<td class="created">
 		<span class="created"><?php echo $this->BcTime->format('Y.m.d',$file['UploaderFile']['created']) ?></span><br />

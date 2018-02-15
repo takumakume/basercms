@@ -35,7 +35,7 @@ $(function(){
 </script>
 
 
-<div class="em-box align-left">
+<div class="em-box bc-align-left">
 	<?php $url = $this->Uploader->getFileUrl($this->request->data['UploaderFile']['name']) ?>
 	<strong>このファイルのURL：<?php $this->BcBaser->link($this->BcBaser->getUri($url), $url) ?></strong>
 </div>
