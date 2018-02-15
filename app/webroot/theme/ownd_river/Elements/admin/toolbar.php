@@ -36,39 +36,62 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 ?>
 
 
-<div id="ToolBar">
-	<div id="ToolbarInner" class="clearfix">
-		<div id="ToolMenu">
-			<ul>
-				<?php if ($this->name == 'Installations'): ?>
-					<li><?php $this->BcBaser->link(__d('baser', 'インストールマニュアル'), 'http://basercms.net/manuals/introductions/4.html', array('target' => '_blank')) ?></li>
-				<?php elseif (Configure::read('BcRequest.isUpdater')): ?>
-					<li><?php $this->BcBaser->link(__d('baser', 'アップデートマニュアル'), 'http://basercms.net/manuals/introductions/8.html', array('target' => '_blank')) ?></li>
-				<?php elseif (!empty($this->request->params['admin']) || ('/' . $this->request->url) == $loginUrl): ?>
-					<li><?php $this->BcBaser->link($this->BcBaser->getImg('/theme/ownd_river/img/admin/logo_icon.svg', array('alt' => '', 'width' => '24', 'height' => '21', 'class' => 'bca-toolbar-logo-image')).'<span class="bca-toolbar-logo-text">'.$this->BcBaser->siteConfig['formal_name'].'</span>', '/', array('class' => 'bca-toolbar-logo')) ?></li>
+<div id="ToolBar" class="bca-toolbar">
+	<div id="ToolbarInner" class="clearfix bca-toolbar__body">
+		<div class="bca-toolbar__logo">
+			<?php
+				# インストール画面
+				if ($this->name == 'Installations'): ?>
+				<?php $this->BcBaser->link(__d('baser', 'インストールマニュアル'), 'http://basercms.net/manuals/introductions/4.html', ['target' => '_blank', 'class' => 'bca-toolbar__link']) ?>
+			<?php
+				# TODO: どういうケースか不明
+				elseif (Configure::read('BcRequest.isUpdater')): ?>
+				<?php $this->BcBaser->link(__d('baser', 'アップデートマニュアル'), 'http://basercms.net/manuals/introductions/8.html', ['target' => '_blank', 'class' => 'bca-toolbar__link']) ?>
+			<?php
+				# 通常
+				elseif (!empty($this->request->params['admin']) || ('/' . $this->request->url) == $loginUrl): ?>
+				<?php
+					$this->BcBaser->link(
+						$this->BcBaser->getImg('/theme/ownd_river/img/admin/logo_icon.svg', ['alt' => '', 'width' => '24', 'height' => '21', 'class' => 'bca-toolbar__logo-symbol'])
+							.'<span class="bca-toolbar__logo-text">'
+							.$this->BcBaser->siteConfig['formal_name']
+							.'</span>', '/'
+						,
+						['class' => 'bca-toolbar__logo-link']
+					)
+				?>
+			<?php
+				# TODO: どういうケースか不明
+				else: ?>
+				<?php if (in_array('admin', $currentUserAuthPrefixes)): ?>
+					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_logo.png', array('alt' => __d('baser', 'baserCMS管理システム'), 'class' => 'bc-btn')), array('plugin' => null, 'admin' => true, 'controller' => 'dashboard', 'action' => 'index'), array('title' => __d('baser', 'baserCMS管理システム'))) ?>
 				<?php else: ?>
-					<?php if (in_array('admin', $currentUserAuthPrefixes)): ?>
-						<li><?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_logo.png', array('alt' => __d('baser', 'baserCMS管理システム'), 'class' => 'bc-btn')), array('plugin' => null, 'admin' => true, 'controller' => 'dashboard', 'action' => 'index'), array('title' => __d('baser', 'baserCMS管理システム'))) ?></li>
-					<?php else: ?>
-						<li><?php $this->BcBaser->link($authName, Configure::read('BcAuthPrefix.' . $currentPrefix . '.loginRedirect'), array('title' => $authName)) ?></li>
-					<?php endif ?>
+					<?php $this->BcBaser->link($authName, Configure::read('BcAuthPrefix.' . $currentPrefix . '.loginRedirect'), array('title' => $authName)) ?>
 				<?php endif ?>
-				<?php if ($this->BcBaser->existsEditLink()): ?>
-					<li><?php $this->BcBaser->editLink() ?></li>
-				<?php endif ?>
-				<?php if ($this->BcBaser->existsPublishLink()): ?>
-					<li><?php $this->BcBaser->publishLink() ?></li>
-				<?php endif ?>
-				<?php if (!$loginUrl || $this->request->url != $loginUrl): ?>
-					<?php if (Configure::read('debug') == -1 && $this->name != "Installations"): ?>
-						<li>&nbsp;&nbsp;<span id="DebugMode" class="bca-debug-mode" title="インストールモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">インストールモード</span>&nbsp;&nbsp;</li>
-					<?php elseif (Configure::read('debug') > 0): ?>
-						<li>&nbsp;&nbsp;<span id="DebugMode" class="bca-debug-mode" title="デバッグモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">デバッグモード<?php echo mb_convert_kana(Configure::read('debug'), 'N') ?></span>&nbsp;&nbsp;</li>
-					<?php endif; ?>
-				<?php endif ?>
-			</ul>
+			<?php endif ?>
 		</div>
-		<div id="UserMenu">
+		<div id="ToolMenu" class="bca-toolbar__tools">
+			<?php if ($this->BcBaser->existsEditLink()): ?>
+				<div class="bca-toolbar__tools-edit">
+					<?php $this->BcBaser->editLink() ?>
+				</div>
+			<?php endif ?>
+			<?php if ($this->BcBaser->existsPublishLink()): ?>
+				<div class="bca-toolbar__tools-edit">
+					<?php $this->BcBaser->publishLink() ?>
+				</div>
+			<?php endif ?>
+			<?php if (!$loginUrl || $this->request->url != $loginUrl): ?>
+				<div class="bca-toolbar__tools-mode">
+					<?php if (Configure::read('debug') == -1 && $this->name != "Installations"): ?>
+						<span id="DebugMode" class="bca-debug-mode" title="インストールモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">インストールモード</span>
+					<?php elseif (Configure::read('debug') > 0): ?>
+						<span id="DebugMode" class="bca-debug-mode" title="デバッグモードです。運営を開始する前にシステム設定よりノーマルモードに戻しましょう。">デバッグモード<?php echo mb_convert_kana(Configure::read('debug'), 'N') ?>
+					<?php endif; ?>
+				</div>
+			<?php endif ?>
+		</div>
+		<div id="UserMenu" class="bca-toolbar__users">
 			<ul class="clearfix">
 				<li>
 					<a href="javascript:void(0)" class="title"><?php echo __d('baser', 'よく使う項目') ?><img src="/theme/ownd_river/img/admin/btn_dropdown.png" width="8" height="11" class="bc-btn"></a>

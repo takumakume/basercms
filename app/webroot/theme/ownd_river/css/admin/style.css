@@ -512,7 +512,7 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -569,10 +569,10 @@ template {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -582,10 +582,10 @@ template {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -1175,7 +1175,7 @@ template {
 .fa-arrow-circle-down:before {
   content: ""; }
 
-.fa-globe:before {
+.fa-globe:before, .bca-icon--globe:before, .bca-toolbar__tools-edit a:before {
   content: ""; }
 
 .fa-wrench:before {
@@ -2917,6 +2917,9 @@ template {
 .bca-icon--bookmark::before {
   margin: 0 .3em 0 0; }
 
+.bca-icon--globe::before, .bca-toolbar__tools-edit a::before {
+  margin: 0 .3em 0 0; }
+
 a {
   color: #9C0;
   text-decoration: none; }
@@ -2932,6 +2935,9 @@ a {
 body {
   min-width: 960px;
   height: 100%; }
+
+body * {
+  box-sizing: border-box; }
 
 [hidden] {
   display: none; }
@@ -3485,123 +3491,6 @@ body {
 /* ==================================================================== */
 /*    Themes
 /* ==================================================================== */
-.list-panel li {
-  padding: 15px;
-  margin: 12px;
-  background: none;
-  background-color: #efefef;
-  width: 244px;
-  float: left;
-  height: 340px; }
-
-.list-panel .row-tools {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 3px solid #ccc;
-  padding: 3px; }
-
-.list-panel .theme-screenshot {
-  border: 1px solid #e2e2e2; }
-
-.list-panel .theme-screenshot img {
-  width: 242px; }
-
-.list-panel .theme-version,
-.list-panel .theme-author {
-  margin-bottom: 3px; }
-
-.list-panel .theme-author a {
-  color: #000;
-  text-decoration: underline; }
-
-.list-panel .theme-author a:hover {
-  text-decoration: none; }
-
-.list-panel li {
-  position: relative; }
-
-.list-panel .error-message {
-  margin: 0;
-  white-space: normal;
-  display: block;
-  line-height: 16px;
-  top: 44px;
-  position: absolute;
-  padding: 7px;
-  width: 230px; }
-
-.list-panel .no-data {
-  float: none;
-  width: auto;
-  margin: 0;
-  text-align: center;
-  height: auto; }
-
-#CurrentTheme {
-  border: 5px solid #e2e2e2;
-  padding: 20px;
-  margin-bottom: 20px; }
-
-#CurrentTheme .theme-screenshot {
-  border: 1px solid #e2e2e2;
-  margin-bottom: 10px; }
-
-#CurrentTheme .theme-screenshot img {
-  width: 298px; }
-
-#CurrentTheme .row-tools {
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: 3px solid #ccc;
-  padding: 3px; }
-
-#CurrentTheme .theme-info {
-  float: left;
-  width: 240px;
-  background-color: #efefef;
-  padding: 20px;
-  margin-right: 50px;
-  height: 90px; }
-
-#CurrentTheme .current-theme-left {
-  width: 300px;
-  margin-right: 20px;
-  float: left; }
-
-#CurrentTheme .theme-description {
-  line-height: 1.6em;
-  clear: right; }
-
-.theme-popup-contents {
-  padding: 20px 20px 30px 20px; }
-
-.theme-popup-contents .theme-screenshot {
-  border: 1px solid #e2e2e2;
-  float: left;
-  margin-right: 20px; }
-
-.theme-popup-contents .theme-screenshot img {
-  width: 298px; }
-
-.theme-popup-contents .theme-description {
-  padding-top: 10px;
-  margin-top: 10px; }
-
-#CurrentTheme {
-  position: relative; }
-
-.current-theme-left .error-message {
-  margin: 0;
-  white-space: normal;
-  display: block;
-  line-height: 16px;
-  top: 56px;
-  position: absolute;
-  padding: 7px;
-  width: 286px; }
-
 .ui-widget-content {
   border: 1px solid #DDD; }
 
@@ -3913,7 +3802,7 @@ div.jstree-publish-even {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -3970,10 +3859,10 @@ div.jstree-publish-even {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -3983,10 +3872,10 @@ div.jstree-publish-even {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -4576,7 +4465,7 @@ div.jstree-publish-even {
 .fa-arrow-circle-down:before {
   content: ""; }
 
-.fa-globe:before {
+.fa-globe:before, .bca-icon--globe:before, .bca-toolbar__tools-edit a:before {
   content: ""; }
 
 .fa-wrench:before {
@@ -6338,239 +6227,74 @@ div.jstree-publish-even {
       .bca-footer__inner--full .bca-footer__main .bca-footer__banner {
         margin: 0; }
 
-html {
-  /* for fixed */
-  margin-top: 41px; }
-
-/* ToolBar
------------------------------------------------ */
-#ToolBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9997;
-  display: block;
-  background-color: #333;
-  width: 100%;
-  border-bottom: 1px solid #444; }
-
-#ToolbarInner {
-  padding: 0 30px;
-  min-width: 960px; }
-
-#ToolbarInner li {
-  font-size: 12px;
-  font-family: Arial,Geneva,sans-serif,"メイリオ",Verdana,"Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","ＭＳ Ｐゴシック";
-  color: #EEE; }
-
-#ToolBar a, #ToolBar span {
-  line-height: 30px;
-  height: 30px;
-  margin: 5px 0;
-  padding: 0 10px;
-  color: #EEE;
-  text-decoration: none;
-  display: block;
-  position: relative;
-  vertical: top; }
-
-#ToolBar span {
-  color: #666; }
-
-#ToolBar a:hover {
-  background-color: #444;
-  color: #FFF; }
-
-#ToolMenu ul, #ToolMenu li, #UserMenu ul, #UserMenu li, #SystemMenu ul, #SystemMenu li {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-#ToolMenu li {
-  float: left;
-  vertical-align: top; }
-
-span#DebugMode {
-  background-color: #E20;
-  font-weight: bold;
-  color: #FFF;
-  /*display: inline!important;*/
-  /*padding:3px 5px;*/ }
-
-#ToolBar .bca-debug-mode {
-  display: inline-block;
-  height: 22px;
-  line-height: 22px;
-  margin: 8px 0; }
-
-.bca-toolbar-logo {
-  vertical-align: middle; }
-
-.bca-toolbar-logo-image {
-  padding: 4px 7px 4px 4px;
-  margin-right: 8px;
-  border-right: 1px solid #ccc; }
-
-#ToolBar .bca-toolbar-logo-text {
-  display: inline;
-  padding: 0;
-  color: #fff;
-  vertical-align: top;
-  font-size: 13px; }
-
-#ToolBar .bca-toolbar-publish {
-  height: 22px;
-  line-height: 22px;
-  margin: 8px 0;
-  background: #fff;
-  border-radius: 22px;
-  color: #333; }
-
-#ToolBar .bca-toolbar-publish:hover {
-  background: #ccc;
-  color: #333; }
-
-/* UserMenu
------------------------------------------------ */
-#UserMenu li img {
-  vertical-align: baseline; }
-
-#UserMenu {
-  margin-right: 10px;
-  float: right;
-  vertical-align: top;
-  height: 30px;
-  text-align: left; }
-
-#UserMenu ul ul {
-  padding: 0 20px 0 0;
-  position: absolute; }
-
-#UserMenu ul li {
-  float: left;
+.bca-toolbar {
+  font-size: 1.3rem;
+  height: 40px;
   position: relative; }
-
-#UserMenu a {
-  outline: none; }
-
-#UserMenu ul li ul,
-#UserMenu ul div#SystemMenu {
-  position: absolute;
-  border: 1px solid #CCC !important;
-  box-shadow: 0 1px 3px #CCC;
-  margin-top: -1px;
-  display: none;
-  background-color: #FFF; }
-
-#UserMenu ul li ul {
-  width: 120px; }
-
-#UserMenu ul div#SystemMenu {
-  width: 600px; }
-
-#UserMenu ul li ul li {
-  padding: 0;
-  float: none;
-  margin: 0;
-  width: 100%; }
-
-#UserMenu .active a {
-  border: 1px solid #CCC;
-  background-color: #FFF;
-  border-bottom: 0;
-  box-shadow: 0 -1px 3px #CCC;
-  display: block;
-  height: 27px;
-  position: relative;
-  z-index: 1;
-  color: #CCC; }
-
-#UserMenu .active ul,
-#UserMenu .active div#SystemMenu {
-  display: block;
-  right: 0; }
-
-#UserMenu .active ul a {
-  box-shadow: 0 0 0 #CCC;
-  color: #535A62;
-  border: 0;
-  width: 100%;
-  padding: 2px 10px 2px 10px; }
-
-#UserMenu .active ul a:hover {
-  background-color: #EDF8C9; }
-
-#UserMenu .active div#SystemMenu {
-  background-color: #FFF;
-  border-bottom: 0;
-  color: #000;
-  border: 0;
-  padding-bottom: 5px;
-  padding-top: 5px; }
-
-#UserMenu .active div div {
-  border-left: 1px solid #EDEDED;
-  border-right: 1px solid #DDD;
-  border-bottom: 1px solid #DDD;
-  margin: 10px; }
-
-#UserMenu .active div#SystemMenu div ul {
-  position: relative;
-  width: auto;
-  padding: 0;
-  box-shadow: none;
-  border: none !important;
-  margin-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin: 0;
-  display: none;
-  overflow: auto;
-  max-height: 400px; }
-
-#UserMenu .active div#SystemMenu div h2 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #535A62;
-  border-top: 1px solid #DDD;
-  border-bottom: 1px solid #EDEDED;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: #F3F3F3;
-  background: -o-linear-gradient(top, #FFF, #F3F3F3);
-  cursor: pointer;
-  margin: 0 !important; }
-
-#UserMenu .active div#SystemMenu div h2:hover {
-  background: #f4f4f4;
-  background: -o-linear-gradient(top, #f4f4f4, #dfdfdf 100%); }
-
-#UserMenu .active div#SystemMenu div h2:active {
-  background: #cdcdcd;
-  background: -o-linear-gradient(top, #cdcdcd, #eee 100%); }
-
-#UserMenu .active div#SystemMenu div ul li {
-  width: auto;
-  border: none;
-  float: left;
-  background: url(../../img/admin/blt_list_2.png) no-repeat left center;
-  padding: 0 20px 0 10px; }
-
-#UserMenu .active div#SystemMenu div ul li a {
-  display: inline;
-  padding: 0 !important;
-  white-space: nowrap; }
-
-#UserMenu .active div#SystemMenu div ul li a:hover {
-  background-color: #FFF;
-  color: #AAA; }
-
-#DebugMode {
-  border-radius: 5px; }
+  .bca-toolbar,
+  .bca-toolbar * {
+    box-sizing: border-box; }
+  .bca-toolbar__body {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    z-index: 150;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between; }
+  .bca-toolbar .bca-toolbar__logo {
+    -webkit-box-flex: 0;
+            flex: 0 1 auto;
+    display: -webkit-box;
+    display: flex;
+    padding: 0 0 0 1em; }
+    .bca-toolbar .bca-toolbar__logo-link {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+              align-items: center;
+      color: currentColor;
+      text-decoration: none; }
+    .bca-toolbar .bca-toolbar__logo-symbol {
+      padding: 4px 7px 4px 4px;
+      margin-right: 8px;
+      border-right: 1px solid #ccc;
+      box-sizing: content-box; }
+    .bca-toolbar .bca-toolbar__logo-text {
+      display: inline;
+      padding: 0;
+      color: #fff;
+      vertical-align: top; }
+  .bca-toolbar__tools {
+    -webkit-box-flex: 1;
+            flex: 1 0 auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+            align-items: center; }
+    .bca-toolbar__tools-edit a {
+      margin: 8px 1em;
+      padding: 3px 8px 3px 5px;
+      background: #fff;
+      border-radius: 22px;
+      color: #333;
+      text-decoration: none; }
+      .bca-toolbar__tools-edit a:hover {
+        background: #ccc;
+        color: #333; }
+    .bca-toolbar__tools-mode span {
+      margin: 8px;
+      padding: 3px 8px 3px 5px;
+      border-radius: 22px;
+      background-color: #E20;
+      font-weight: bold;
+      color: #FFF; }
 
 .bca-nav {
   font-size: 1.6rem;
@@ -6767,7 +6491,7 @@ span#DebugMode {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -6824,10 +6548,10 @@ span#DebugMode {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -6837,10 +6561,10 @@ span#DebugMode {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -7430,7 +7154,7 @@ span#DebugMode {
 .fa-arrow-circle-down:before {
   content: ""; }
 
-.fa-globe:before {
+.fa-globe:before, .bca-icon--globe:before, .bca-toolbar__tools-edit a:before {
   content: ""; }
 
 .fa-wrench:before {
@@ -9865,7 +9589,7 @@ table.cake-sql-log tr td {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -9922,10 +9646,10 @@ table.cake-sql-log tr td {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title::before, .fa-pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-left::before, .bca-nav-favorite-list-item a.fa-pull-left::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-item[data-system-type] .fa-pull-left.bca-nav__system-item-title::before, .fa-pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-left.bca-nav__sub-title::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-footer__sns__link:before, .fa-pull-left.bca-btn-icon::before, .fa-pull-left.bca-btn::before, .fa-pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title::before, .fa-pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.fa-pull-right::before, .bca-nav-favorite-list-item a.fa-pull-right::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .fa-pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-item[data-system-type] .fa-pull-right.bca-nav__system-item-title::before, .fa-pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .fa-pull-right.bca-nav__sub-title::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-footer__sns__link:before, .fa-pull-right.bca-btn-icon::before, .fa-pull-right.bca-btn::before, .fa-pull-right.ui-button::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -9935,10 +9659,10 @@ table.cake-sql-log tr td {
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
+.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-nav-favorite-title::before, .pull-left.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-left::before, .bca-nav-favorite-list-item a.pull-left::before, .pull-left.bca-icon--add::before, .pull-left.bca-nav-favorite-functions-add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-nav-favorite-functions-help::before, .pull-left.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-left.bca-nav__sub-title::before, .bca-nav__system-title button.pull-left::before, .bca-nav__system-item[data-system-type] .pull-left.bca-nav__system-item-title::before, .pull-left.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-left.bca-nav__sub-title::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-footer__sns__link:before, .pull-left.bca-btn-icon::before, .pull-left.bca-btn::before, .pull-left.ui-button::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
+.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-nav-favorite-title::before, .pull-right.bca-icon--menuitem::before, .bca-nav__sub-list-item a.pull-right::before, .bca-nav-favorite-list-item a.pull-right::before, .pull-right.bca-icon--add::before, .pull-right.bca-nav-favorite-functions-add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-nav-favorite-functions-help::before, .pull-right.bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .pull-right.bca-nav__sub-title::before, .bca-nav__system-title button.pull-right::before, .bca-nav__system-item[data-system-type] .pull-right.bca-nav__system-item-title::before, .pull-right.bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .pull-right.bca-nav__sub-title::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-footer__sns__link:before, .pull-right.bca-btn-icon::before, .pull-right.bca-btn::before, .pull-right.ui-button::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -10528,7 +10252,7 @@ table.cake-sql-log tr td {
 .fa-arrow-circle-down:before {
   content: ""; }
 
-.fa-globe:before {
+.fa-globe:before, .bca-icon--globe:before, .bca-toolbar__tools-edit a:before {
   content: ""; }
 
 .fa-wrench:before {
@@ -12889,6 +12613,230 @@ table.cake-sql-log tr td {
   .bca-input-text:focus {
     box-shadow: 0 0 6px 0px #555555; }
 
+/*
+.list-panel li{
+	padding:15px;
+	margin:12px;
+	background: none;
+	background-color:#efefef;
+	width:244px;
+	float:left;
+	height:340px;
+}
+.list-panel .row-tools {
+	text-align: center;
+	margin-top:5px;
+	margin-bottom: 5px;
+	border:3px solid #ccc;
+	padding:3px;
+}
+.list-panel .theme-screenshot {
+	border:1px solid #e2e2e2;
+}
+.list-panel .theme-screenshot img {
+	width:242px;
+}
+.list-panel .theme-version,
+.list-panel .theme-author {
+	margin-bottom: 3px;
+}
+.list-panel .theme-author a {
+	color: #000;
+	text-decoration: underline;
+}
+.list-panel .theme-author a:hover {
+	text-decoration: none;
+}
+.list-panel li {
+	position: relative;
+}
+.list-panel .error-message {
+	margin:0;
+	white-space:normal;
+	display: block;
+	line-height: 16px;
+	top:44px;
+	position: absolute;
+	padding:7px;
+	width:230px;
+}
+.list-panel .no-data {
+	float:none;
+	width:auto;
+	margin:0;
+	text-align: center;
+	height: auto;
+}
+*/
+.bca-list-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  margin: 0;
+  padding: 0; }
+  .bca-list-panel > li {
+    position: relative;
+    margin: 0;
+    padding: 15px;
+    background: #efefef;
+    list-style: none; }
+  .bca-list-panel .row-tools {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 3px solid #ccc;
+    padding: 3px; }
+  .bca-list-panel .theme-name {
+    margin-top: 0; }
+  .bca-list-panel .theme-screenshot {
+    border: 1px solid #e2e2e2; }
+  .bca-list-panel .theme-screenshot img {
+    width: 242px; }
+  .bca-list-panel .theme-version, .bca-list-panel .theme-author {
+    margin-bottom: 3px; }
+  .bca-list-panel .theme-author a {
+    color: #000;
+    text-decoration: underline; }
+    .bca-list-panel .theme-author a:hover {
+      text-decoration: none; }
+  .bca-list-panel .error-message {
+    margin: 0;
+    white-space: normal;
+    display: block;
+    line-height: 16px;
+    top: 44px;
+    position: absolute;
+    padding: 7px;
+    width: 230px; }
+  .bca-list-panel .no-data {
+    float: none;
+    width: auto;
+    margin: 0;
+    text-align: center;
+    height: auto; }
+
+.bca-current-theme {
+  position: relative;
+  border: 5px solid #e2e2e2;
+  padding: 20px;
+  margin-bottom: 20px; }
+  .bca-current-theme__name {
+    margin-top: 0;
+    margin-bottom: 0.2em; }
+  .bca-current-theme__inner {
+    display: -webkit-box;
+    display: flex; }
+  .bca-current-theme__main {
+    margin-right: 20px;
+    width: 300px; }
+  .bca-current-theme__sub {
+    -webkit-box-flex: 1;
+            flex: 1; }
+  .bca-current-theme .theme-name {
+    margin-top: 0; }
+  .bca-current-theme .theme-screenshot {
+    border: 1px solid #e2e2e2;
+    margin-bottom: 10px; }
+    .bca-current-theme .theme-screenshot img {
+      width: 298px; }
+  .bca-current-theme .theme-description {
+    line-height: 1.6em;
+    clear: right; }
+  .bca-current-theme .theme-popup-contents {
+    padding: 20px 20px 30px 20px; }
+    .bca-current-theme .theme-popup-contents .theme-screenshot {
+      border: 1px solid #e2e2e2;
+      float: left;
+      margin-right: 20px; }
+      .bca-current-theme .theme-popup-contents .theme-screenshot img {
+        width: 298px; }
+      .bca-current-theme .theme-popup-contents .theme-screenshot .theme-description {
+        padding-top: 10px;
+        margin-top: 10px; }
+  .bca-current-theme .row-tools {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 3px solid #ccc;
+    padding: 3px; }
+  .bca-current-theme .error-message {
+    margin: 0;
+    white-space: normal;
+    display: block;
+    line-height: 16px;
+    top: 56px;
+    position: absolute;
+    padding: 7px;
+    width: 286px; }
+
+/*
+#CurrentTheme {
+	border:5px solid #e2e2e2;
+	padding:20px;
+	margin-bottom: 20px;
+}
+#CurrentTheme .theme-screenshot {
+	border:1px solid #e2e2e2;
+	margin-bottom: 10px;
+}
+#CurrentTheme .theme-screenshot img {
+	width:298px;
+}
+#CurrentTheme .row-tools {
+	text-align: center;
+	margin-top:5px;
+	margin-bottom: 5px;
+	border:3px solid #ccc;
+	padding:3px;
+}
+#CurrentTheme .theme-info {
+	float:left;
+	width:240px;
+	background-color:#efefef;
+	padding:20px;
+	margin-right:50px;
+	height:90px;
+}
+
+#CurrentTheme .current-theme-left {
+	width:300px;
+	margin-right:20px;
+	float:left;
+}
+#CurrentTheme .theme-description {
+	line-height: 1.6em;
+	clear:right;
+}
+.theme-popup-contents {
+	padding:20px 20px 30px 20px;
+}
+.theme-popup-contents .theme-screenshot {
+	border:1px solid #e2e2e2;
+	float:left;
+	margin-right:20px;
+}
+.theme-popup-contents .theme-screenshot img {
+	width:298px;
+}
+.theme-popup-contents .theme-description {
+	padding-top:10px;
+	margin-top:10px;
+}
+#CurrentTheme {
+	position: relative;
+}
+.current-theme-left .error-message {
+	margin:0;
+	white-space:normal;
+	display: block;
+	line-height: 16px;
+	top:56px;
+	position: absolute;
+	padding:7px;
+	width:286px;
+}
+*/
 .ui-dialog {
   padding: 0 !important; }
   .ui-dialog dt {
