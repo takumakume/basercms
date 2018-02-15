@@ -175,4 +175,10 @@
 		@extend .#{$fa-css-prefix}-bookmark;
 		@include fa-common;
 	}
+
+	// ブックマーク
+	&--globe {
+		@extend .#{$fa-css-prefix}-globe;
+		@include fa-common;
+	}
 }

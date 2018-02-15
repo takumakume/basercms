@@ -22,10 +22,9 @@
 <div class="bca-data-list__top">
 <!-- 一括処理 -->
 	<?php if ($this->BcBaser->isAdminUser()): ?>
-		<div>
-			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'))) ?>
+		<div class="bca-action-table-listup">
 			<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'))) ?>
-			<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
+			<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
 		</div>
 	<?php endif ?>
   <div class="bca-data-list__sub">
@@ -42,18 +41,20 @@
 <table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
 	<thead class="bca-table-listup__thead">
 		<tr>
-			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
-</th>
-<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
-<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリ名') ?>
-	<?php if ($this->BcBaser->siteConfig['category_permission']): ?>
-		<br /><?php echo __d('baser', '管理グループ') ?>
-	<?php endif ?>
-</th>
-<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリタイトル') ?></th>
-<th class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日') ?><br /><?php echo __d('baser', '更新日') ?></th>
-</tr>
-</thead>
+		<th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select"><?php // 一括選択 ?>
+			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'))) ?>
+		</th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリ名') ?>
+		<?php if ($this->BcBaser->siteConfig['category_permission']): ?>
+			<br /><?php echo __d('baser', '管理グループ') ?>
+		<?php endif ?>
+		</th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリタイトル') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日') ?><br /><?php echo __d('baser', '更新日') ?></th>
+		</tr>
+	</thead>
 <tbody class="bca-table-listup__tbody">
 	<?php if (!empty($dbDatas)): ?>
 		<?php $currentDepth = 0 ?>

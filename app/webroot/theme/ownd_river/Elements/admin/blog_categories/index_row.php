@@ -25,7 +25,9 @@ if (isset($user['user_group_id'])) {
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['BlogCategory']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogCategory']['id'])) ?>
 		<?php endif ?>		
-		<?php $this->BcBaser->link('', $this->Blog->getCategoryUrl($data['BlogCategory']['id']), array('title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg')) ?>
+	</td>
+	<td class="bca-table-listup__tbody-td">
+			<?php $this->BcBaser->link('', $this->Blog->getCategoryUrl($data['BlogCategory']['id']), array('title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg')) ?>
 		<?php if (in_array($data['BlogCategory']['owner_id'], $allowOwners) || (isset($user['user_group_id']) && $user['user_group_id'] == Configure::read('BcApp.adminGroupId'))): ?>
 			<?php $this->BcBaser->link('', array('action' => 'edit', $blogContent['BlogContent']['id'], $data['BlogCategory']['id']), array('title' => __d('baser', '編集'),'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
 			<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $blogContent['BlogContent']['id'], $data['BlogCategory']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
