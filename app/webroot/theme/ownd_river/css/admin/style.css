@@ -12913,6 +12913,18 @@ table.cake-sql-log tr td {
   font-size: 1.4rem;
   color: #535A62; }
 
+.ui-tabs {
+  padding: 0 !important;
+  border: none !important; }
+
+.ui-tabs-nav {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important; }
+
+.ui-tabs-panel {
+  border: 1px solid #cccccc !important; }
+
 .ui-widget-content {
   border-radius: 0 !important;
   border-color: #cccccc !important; }
@@ -12930,14 +12942,13 @@ table.cake-sql-log tr td {
   margin-top: -13px !important; }
 
 .ui-button {
-  border: 1px solid #cccccc;
+  border: 1px solid #cccccc !important;
   padding: 0 !important;
   background: #FFFFFF !important;
   display: inline-block !important;
   border-radius: 3px !important;
   padding: 0.7em 1em 0.6em !important;
   line-height: 1.2 !important;
-  border: 1px solid #ccc !important;
   cursor: pointer !important;
   font-size: 1.4rem !important;
   box-sizing: border-box !important;
@@ -12956,6 +12967,17 @@ table.cake-sql-log tr td {
     background-image: linear-gradient(white 100%, white 100%) !important; }
   .ui-button:focus {
     box-shadow: 0 0 6px 0px #555555 !important; }
+
+.ui-state-default {
+  background: #FFFFFF !important;
+  cursor: pointer !important;
+  outline: none !important;
+  color: #343434 !important;
+  text-decoration: none !important;
+  background-image: linear-gradient(white 10%, #f4f5f1 100%) !important; }
+
+.ui-tabs-active {
+  background: #FFFFFF !important; }
 
 .ui-button-text {
   padding: 0 !important; }
