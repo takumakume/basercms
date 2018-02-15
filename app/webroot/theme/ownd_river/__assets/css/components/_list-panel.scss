@@ -67,11 +67,10 @@
 	margin: 0;
 	padding: 0;
 
-	& > li{
-		//width:33.3%;
+	& > li {
 		position: relative;
+		margin: 0;
 		padding:15px;
-		//margin:12px;
 		background:#efefef;
 		list-style: none;
 	}
