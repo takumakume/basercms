@@ -46,6 +46,5 @@ package.json
 /volumes/*
 /.docker-sync/
 !app/webroot/theme/ownd_river
-
-
+/lib/Baser/View/Themed/*
 package-lock.json
