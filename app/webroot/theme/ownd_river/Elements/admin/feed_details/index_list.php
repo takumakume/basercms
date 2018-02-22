@@ -27,6 +27,11 @@
 	));
 	?>
 
+<?php
+$this->BcBaser->i18nScript([
+    'message1' => __d('baser', 'データがありません。')
+]);
+?>
 	<script type="text/javascript">
 $(function(){
 	$.baserAjaxBatch.config.methods.del.result = function() {
@@ -39,7 +44,7 @@ $(function(){
 				$(config.listTable+" tbody tr").removeClass('even odd');
 				$.yuga.stripe();
 			} else {
-				$(config.listTable+" tbody").append('<td colspan="'+colspan+'"><p class="no-data">データがありません。</p></td>');
+				$(config.listTable+" tbody").append('<td colspan="'+colspan+'"><p class="no-data">'+bcI18n.message1+'</p></td>');
 			}
 		});
 	};
@@ -54,7 +59,7 @@ $(function(){
 					$(config.dataList+" tbody tr").removeClass('even odd');
 					$.yuga.stripe();
 				} else {
-					$(config.dataList+" tbody").append('<td colspan="'+colspan+'"><p class="no-data">データがありません。</p></td>');
+					$(config.dataList+" tbody").append('<td colspan="'+colspan+'"><p class="no-data">'+bcI18n.message1+'</p></td>');
 				}
 			});
 		} else {
@@ -71,7 +76,7 @@ $(function(){
 
 	<div class="section">
 
-		<h2 id="headFeedDetail">フィード一覧</h2>
+		<h2 id="headFeedDetail"><?php echo __d('baser', 'フィード一覧')?></h2>
 
 		<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
 			<thead>
@@ -88,10 +93,10 @@ $(function(){
 				</div>
 			<?php endif ?>
 			</th>
-			<th scope="col">フィード名</th>
-			<th scope="col">カテゴリフィルター</th>
-			<th scope="col">キャッシュ時間</th>
-			<th scope="col">登録日<br />更新日</th>
+			<th scope="col"><?php echo __d('baser', 'フィード名')?></th>
+			<th scope="col"><?php echo __d('baser', 'カテゴリフィルター')?></th>
+			<th scope="col"><?php echo __d('baser', 'キャッシュ時間')?></th>
+			<th scope="col"><?php echo __d('baser', '登録日')?><br /><?php echo __d('baser', '更新日')?></th>
 			</tr>
 			</thead>
 			<tbody>
@@ -101,7 +106,7 @@ $(function(){
 					<?php endforeach; ?>
 				<?php else: ?>
 					<tr>
-						<td colspan="6"><p class="no-data">データが見つかりませんでした。「追加する」ボタンをクリックしてフィード詳細を登録してください。</p></td>
+						<td colspan="6"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。「追加する」ボタンをクリックしてフィード詳細を登録してください。')?></p></td>
 					</tr>
 				<?php endif; ?>
 			</tbody>

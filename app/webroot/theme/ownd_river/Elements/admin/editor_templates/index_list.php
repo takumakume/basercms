@@ -25,10 +25,9 @@
 				</div>
 			</th>
 			<th class="bca-table-listup__thead-th">NO</th>
-			<th class="bca-table-listup__thead-th">テンプレート名</th>
-			<th class="bca-table-listup__thead-th">説明文</th>
-			<th class="bca-table-listup__thead-th">登録日<br />
-				更新日</th>
+			<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'テンプレート名')?></th>
+			<th class="bca-table-listup__thead-th"><?php echo __d('baser', '説明文')?></th>
+			<th class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日')?><br /><?php echo __d('baser', '更新日')?></th>
 		</tr>
 	</thead>
 <tbody>
@@ -38,7 +37,7 @@
 		<?php endforeach; ?>
 	<?php else: ?>
 		<tr>
-			<td colspan="5" class="bca-table-listup__tbody-td"><p class="no-data">データが見つかりませんでした。</p></td>
+			<td colspan="5" class="bca-table-listup__tbody-td"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。')?></p></td>
 		</tr>
 	<?php endif; ?>
 </tbody>
