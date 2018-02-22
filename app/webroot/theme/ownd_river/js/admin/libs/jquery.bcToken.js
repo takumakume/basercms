@@ -41,7 +41,7 @@
 		/**
 		 * デフォルトトークンURL
 		 */
-			defaultUrl: '/admin/dashboard/ajax_get_token?requestview=false',
+			defaultUrl: '/admin/site_configs/ajax_get_token?requestview=false',
 
 		/**
 		 * トークンを取得しているかどうかチェックし、取得していない場合取得する
