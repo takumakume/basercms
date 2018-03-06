@@ -25,6 +25,12 @@ $this->BcBaser->js(array(
 ));
 ?>
 
+<?php
+$this->BcBaser->i18nScript([
+	'message1' => __d('baser', 'このデータを本当に削除してもいいですか？\nこのカテゴリに関連する記事は、どのカテゴリにも関連しない状態として残ります。'),
+    'message2' => __d('baser', '削除に失敗しました。'),
+]);
+?>
 
 <script type="text/javascript">
 $(function(){
@@ -33,7 +39,7 @@ $(function(){
 		 */
 		$.baserAjaxDataList.config.methods.del = {
 			button: '.btn-delete',
-			confirm: 'このデータを本当に削除してもいいですか？\nこのカテゴリに関連する記事は、どのカテゴリにも関連しない状態として残ります。',
+			confirm: bcI18n.message1,
 			result: function(row, result) {
 				var config = $.baserAjaxDataList.config;
 			if(result) {
@@ -66,7 +72,7 @@ $(function(){
 					});
 
 				} else {
-					$(config.alertBox).html('削除に失敗しました。');
+					$(config.alertBox).html(bcI18n.message2);
 					$(config.alertBox).fadeIn(500);
 				}
 			}

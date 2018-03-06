@@ -11,6 +11,7 @@
 @import 'base/general';
 @import 'theme/unknown';
 
+@import 'components/app';
 @import 'components/container';
 @import 'components/main';
 
@@ -43,5 +44,9 @@
 @import 'components/label';
 @import 'components/panel-box';
 @import 'components/input-text';
+@import 'components/list-panel';
+@import 'components/current-theme';
+
+@import 'components/jquery-ui';
 
 @import 'vender/jquery.bt.js';
