@@ -56,15 +56,15 @@ class MailContent extends MailAppModel {
 		],
 		'sender_name' => [
 			['rule' => ['notBlank'], 'message' => "送信先名を入力してください。"],
-			['rule' => ['maxLength', 50], 'message' => '送信先名は50文字以内で入力してください。']
+			['rule' => ['maxLength', 255], 'message' => '送信先名は255文字以内で入力してください。']
 		],
 		'subject_user' => [
 			['rule' => ['notBlank'], 'message' => "自動返信メール件名[ユーザー宛]を入力してください。"],
-			['rule' => ['maxLength', 50], 'message' => '自動返信メール件名[ユーザー宛]は50文字以内で入力してください。']
+			['rule' => ['maxLength', 255], 'message' => '自動返信メール件名[ユーザー宛]は255文字以内で入力してください。']
 		],
 		'subject_admin' => [
 			['rule' => ['notBlank'], 'message' => "自動送信メール件名[管理者宛]を入力してください。"],
-			['rule' => ['maxLength', 50], 'message' => '自動返信メール件名[管理者宛]は50文字以内で入力してください。']
+			['rule' => ['maxLength', 255], 'message' => '自動返信メール件名[管理者宛]は255文字以内で入力してください。']
 		],
 		'form_template' => [
 			['rule' => ['halfText'], 'message' => "メールフォームテンプレート名は半角のみで入力してください。", 'allowEmpty' => false],
@@ -78,12 +78,10 @@ class MailContent extends MailAppModel {
 			['rule' => ['maxLength', 255], 'message' => 'リダイレクトURLは255文字以内で入力してください。']
 		],
 		'sender_1' => [
-			['rule' => ['emails'], 'allowEmpty' => true, 'message' => '送信先メールアドレスの形式が不正です。'],
-			['rule' => ['maxLength', 255], 'message' => '送信先メールアドレスは255文字以内で入力してください。']
+			['rule' => ['emails'], 'allowEmpty' => true, 'message' => '送信先メールアドレスの形式が不正です。']
 		],
 		'sender_2' => [
-			['rule' => ['emails'], 'allowEmpty' => true, 'message' => '送信先メールアドレスの形式が不正です。'],
-			['rule' => ['maxLength', 255], 'message' => 'CC用送信先メールアドレスは255文字以内で入力してください。']
+			['rule' => ['emails'], 'allowEmpty' => true, 'message' => '送信先メールアドレスの形式が不正です。']
 		],
 		'ssl_on' => [
 			['rule' => 'checkSslUrl', "message" => 'SSL通信を利用するには、システム設定で、事前にSSL通信用のWebサイトURLを指定してください。']
