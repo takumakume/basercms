@@ -202,7 +202,7 @@ msgstr ""
 #: Plugin/Mail/Model/MailMessage.php:177;184;256
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:134;135;138;144
 #: Plugin/Mail/View/Elements/mail_input.php:93
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:74;87
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:78;91
 msgid "必須項目です。"
 msgstr ""
 
@@ -511,17 +511,17 @@ msgstr ""
 msgid "%s年"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:477
+#: Plugin/Blog/Controller/BlogController.php:478
 #: Plugin/Blog/View/Elements/blog_comments_scripts.php:10
 msgid "送信が完了しました。送信された内容は確認後公開させて頂きます。"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:479
+#: Plugin/Blog/Controller/BlogController.php:480
 #: Plugin/Blog/View/Elements/blog_comments_scripts.php:11
 msgid "コメントの送信が完了しました。"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:484
+#: Plugin/Blog/Controller/BlogController.php:485
 msgid "コメントの送信に失敗しました。"
 msgstr ""
 
@@ -568,7 +568,7 @@ msgstr ""
 
 #: Plugin/Mail/Model/MailMessage.php:192
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:136;137
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:72;84
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:76;88
 msgid "形式が無効です。"
 msgstr ""
 
@@ -596,11 +596,11 @@ msgstr ""
 msgid "クリア"
 msgstr ""
 
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:90
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:94
 msgid "入力データが一致していません"
 msgstr ""
 
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:91
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:95
 msgid "入力データが不完全です"
 msgstr ""
 
