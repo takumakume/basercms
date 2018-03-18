@@ -34,16 +34,16 @@ foreach ($blogContents as $blogContent) {
 }
 // @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
 $config['BcApp.adminNavi.blog'] = [
-	'name' => 'ブログプラグイン',
+	'name' => __d('baser', 'ブログプラグイン'),
 	'contents' => [
-		['name' => 'タグ一覧', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
-		['name' => 'タグ登録', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'add']],
+		['name' =>  __d('baser', 'タグ一覧'), 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
+		['name' =>  __d('baser', 'タグ登録'), 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'add']],
 	]
 ];
 
 $config['BcContents']['items']['Blog'] = [
 	'BlogContent'	=> [
-		'title' => 'ブログ',
+		'title' => __d('baser', 'ブログ'),
 		'multiple'	=> true,
 		'preview'	=> true,
 		'icon'	=> 'admin/icon_blog.png',

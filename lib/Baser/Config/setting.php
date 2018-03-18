@@ -193,7 +193,7 @@ $config['BcAuthPrefix'] = array(
 	)
 	// フロント（例）
 /* 'front' => array(
-	  'name'			=> 'フロント',
+	  'name'			=> __d('baser', 'フロント'),
 	  'loginRedirect'	=> '/',
 	  'userModel'		=> 'User',
 	  'loginAction'	=> '/users/login',
@@ -203,10 +203,10 @@ $config['BcAuthPrefix'] = array(
 	), */
 	// マイページ（例）
 /* 'mypage' => array(
-	  'name'			=> 'マイページ',
+	  'name'			=> __d('baser', 'マイページ'),
 	  'alias'			=> 'mypage',
 	  'loginRedirect'	=> '/mypage/members/index',
-	  'loginTitle'	=> 'マイページログイン',
+	  'loginTitle'	=> __d('baser', 'マイページログイン'),
 	  'userModel'		=> 'Member',
 	  'loginAction'	=> '/mypage/members/login',
 	  'logoutAction'=> '/mypage/members/logout',
@@ -266,7 +266,7 @@ $config['BcAgent'] = array(
 //p($_SERVER['HTTP_ACCEPT_LANGUAGE']);
 $config['BcLang'] = [
 	'english' => [
-		'name' => '英語',
+		'name' => __d('baser', '英語'),
 		'langs' => [
 			'en'
 		]	
