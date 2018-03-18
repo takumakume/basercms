@@ -338,12 +338,12 @@ class BlogController extends BlogAppController {
 					$this->notFound();
 				}
 				$posts = $this->_getBlogPosts(['year' => $year, 'month' => $month, 'day' => $day]);
-				$this->pageTitle = $year . '年';
-				if ($month) {
-					$this->pageTitle .= $month . '月';
-				}
 				if ($day) {
-					$this->pageTitle .= $day . '日';
+					$this->pageTitle = sprintf(__('%s年%s月%s日'), $year, $month, $day);
+				} elseif($month) {
+					$this->pageTitle = sprintf(__('%s年%s月'), $year, $month);
+				} else {
+					$this->pageTitle = sprintf(__('%s年'), $year);
 				}
 				$template = $this->blogContent['BlogContent']['template'] . DS . 'archives';
 
@@ -467,21 +467,22 @@ class BlogController extends BlogAppController {
 		}
 
 		if ($this->BlogPost->BlogComment->add($this->request->data, $this->contentId, $postId, $this->blogContent['BlogContent']['comment_approve'])) {
-
+			$content = $this->BlogPost->BlogContent->Content->findByType('Blog.BlogContent', $this->blogContent['BlogContent']['id']);
+			$this->request->data['Content'] = $content['Content'];
 			$this->_sendCommentAdmin($postId, $this->request->data);
 			// コメント承認機能を利用していない場合は、公開されているコメント投稿者にアラートを送信
 			if (!$this->blogContent['BlogContent']['comment_approve']) {
 				$this->_sendCommentContributor($postId, $this->request->data);
 			}
 			if ($this->blogContent['BlogContent']['comment_approve']) {
-				$commentMessage = '送信が完了しました。送信された内容は確認後公開させて頂きます。';
+				$commentMessage = __('送信が完了しました。送信された内容は確認後公開させて頂きます。');
 			} else {
-				$commentMessage = 'コメントの送信が完了しました。';
+				$commentMessage = __('コメントの送信が完了しました。');
 			}
 			$this->request->data = null;
 		} else {
 
-			$commentMessage = 'コメントの送信に失敗しました。';
+			$commentMessage = __('コメントの送信に失敗しました。');
 		}
 		clearViewCache();
 		$this->set('commentMessage', $commentMessage);
