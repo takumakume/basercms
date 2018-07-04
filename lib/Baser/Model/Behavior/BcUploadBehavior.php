@@ -175,8 +175,6 @@ class BcUploadBehavior extends ModelBehavior {
 			if (!empty($data[$field['name']]) && is_array($data[$field['name']]) && $data[$field['name']]['size'] != 0) {
 				if (!empty($data[$field['name']]['name'])) {
 					$upload = true;
-				} else {
-					unset($Model->data[$Model->name][$field['name']]);
 				}
 			} else {
 				if (!empty($Model->data[$Model->name][$field['name'] . '_tmp'])) {
@@ -189,8 +187,6 @@ class BcUploadBehavior extends ModelBehavior {
 					// 新しいデータが送信されず、既存データを引き継ぐ場合は、元のフィールド名に戻す
 					$Model->data[$Model->name][$field['name']] = $Model->data[$Model->name][$field['name'] . '_'];
 					unset($Model->data[$Model->name][$field['name'] . '_']);
-				} elseif(!empty($Model->data[$Model->name][$field['name']]) && is_array($Model->data[$Model->name][$field['name']])) {
-					unset($Model->data[$Model->name][$field['name']]);
 				}
 			}
 			if ($upload) {
@@ -1042,6 +1038,11 @@ class BcUploadBehavior extends ModelBehavior {
 					} else {
 						continue;
 					}
+				}
+
+				// ファイル名の重複を回避する為の処理、元画像ファイルと同様に、コピー画像ファイルにも対応する
+				if (isset($Model->data[$Model->alias]['name']['name']) && $fileName !== $Model->data[$Model->alias]['name']['name']) {
+					$Model->data[$Model->alias]['name']['name'] = $fileName;
 				}
 				$copy['name'] = $field['name'];
 				$copy['ext'] = $field['ext'];

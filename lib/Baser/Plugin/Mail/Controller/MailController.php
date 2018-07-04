@@ -120,6 +120,9 @@ class MailController extends MailAppController {
 
 		parent::beforeFilter();
 
+		if (empty($this->request->params['entityId'])) {
+			$this->notFound();
+		}
 		$this->MailMessage->setup($this->request->params['entityId']);
 		$this->dbDatas['mailContent'] = $this->MailMessage->mailContent;
 		$this->dbDatas['mailFields'] = $this->MailMessage->mailFields;
@@ -500,7 +503,6 @@ class MailController extends MailAppController {
 				'from'		=> $fromAdmin,
 				'template'	=> 'Mail.' . $mailContent['mail_template'],
 				'replyTo'		=> $fromAdmin,
-				'attachments'	=> $attachments,
 				'agentTemplate' => $agentTemplate,
 				'additionalParameters'	 => '-f ' . $fromAdmin,
 			);
