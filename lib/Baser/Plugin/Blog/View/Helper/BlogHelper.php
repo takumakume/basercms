@@ -117,7 +117,7 @@ class BlogHelper extends AppHelper {
 	}
 
 /**
- * ブログアカウント名を出力する
+ * ブログのコンテンツ名を出力する
  *
  * @return void
  */
@@ -126,7 +126,7 @@ class BlogHelper extends AppHelper {
 	}
 
 /**
- * ブログアカウント名を取得する
+ * ブログのコンテンツ名を取得する
  *
  * @return string
  */
@@ -219,6 +219,10 @@ class BlogHelper extends AppHelper {
  * @return string 記事へのリンク
  */
 	public function getPostLink($post, $title, $options = []) {
+		$options = array_merge([
+			'escape' => true
+		], $options);
+		
 		$url = $this->getPostLinkUrl($post, false);
 
 		// EVENT beforeGetPostLink
@@ -471,7 +475,7 @@ class BlogHelper extends AppHelper {
 		if (!empty($post['BlogTag'])) {
 			foreach ($post['BlogTag'] as $tag) {
 				if($options['link']) {
-					$tags[] = $this->BcBaser->getLink($tag['name'], $this->getTagLinkUrl($crossingId, $tag, false));	
+					$tags[] = $this->BcBaser->getLink($tag['name'], $this->getTagLinkUrl($crossingId, $tag, false), ['escape' => true]);	
 				} else {
 					$tags[] = [
 						'name' => $tag['name'],
@@ -563,7 +567,7 @@ class BlogHelper extends AppHelper {
  * @return void
  */
 	public function author($post) {
-		echo $this->BcBaser->getUserName($post['User']);
+		echo h($this->BcBaser->getUserName($post['User']));
 	}
 
 /**
@@ -1615,7 +1619,7 @@ class BlogHelper extends AppHelper {
 /**
  * Blogの基本情報を全て取得する
  *
- * @param string $name ブログアカウント名を指定するとそのブログのみの基本情報を返す。空指定(default)で、全てのブログの基本情報。 ex) 'news' （初期値 : ''）
+ * @param string $name ブログのコンテンツ名を指定するとそのブログのみの基本情報を返す。空指定(default)で、全てのブログの基本情報。 ex) 'news' （初期値 : ''）
  * @param array $options オプション（初期値 :array()）
  *	- `sort` : データのソート順 取得出来るフィールドのどれかでソートができる ex) 'created DESC'（初期値 : 'id'）
  *  - `siteId` : サブサイトIDで絞り込む場合に指定する（初期値：0）

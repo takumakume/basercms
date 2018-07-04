@@ -86,11 +86,16 @@ class Page extends AppModel {
 			'id' => [
 				['rule' => 'numeric', 'on' => 'update', 'message' => __d('baser', 'IDに不正な値が利用されています。')]],
 			'contents' => [
-				['rule' => 'phpValidSyntax', 'message' => __d('baser', 'PHPの構文エラーが発生しました。')],
-				['rule' => ['maxByte', 64000], 'message' => __d('baser', '本稿欄に保存できるデータ量を超えています。')]],
+				['rule' => 'phpValidSyntax', 'message' => __d('baser', '本稿欄でPHPの構文エラーが発生しました。')],
+				['rule' => ['maxByte', 64000], 'message' => __d('baser', '本稿欄に保存できるデータ量を超えています。')],
+				['rule' => 'containsScript', 'message' => __d('baser', '本稿欄でスクリプトの入力は許可されていません。')]],
 			'draft' => [
+				['rule' => 'phpValidSyntax', 'message' => __d('baser', '草稿欄でPHPの構文エラーが発生しました。')],
+				['rule' => ['maxByte', 64000], 'message' => __d('baser', '草稿欄に保存できるデータ量を超えています。')],
+				['rule' => 'containsScript', 'message' => __d('baser', '草稿欄でスクリプトの入力は許可されていません。')]],
+			'code' => [
 				['rule' => 'phpValidSyntax', 'message' => __d('baser', 'PHPの構文エラーが発生しました。')],
-				['rule' => ['maxByte', 64000], 'message' => __d('baser', '草稿欄に保存できるデータ量を超えています。')]]
+				['rule' => 'containsScript', 'message' => __d('baser', 'スクリプトの入力は許可されていません。')]]
 		];
 	}
 
@@ -745,12 +750,10 @@ class Page extends AppModel {
 		$this->create(['Content' => $data['Content'], 'Page' => $data['Page']]);
 		if ($data = $this->save()) {
 			if ($eyeCatch) {
-				$data['Content']['id'] = $this->Content->getLastInsertID();
 				$data['Content']['eyecatch'] = $eyeCatch;
 				$this->Content->set(['Content' => $data['Content']]);
 				$result = $this->Content->renameToBasenameFields(true);
-				$this->Content->set($result);
-				$result = $this->Content->save();
+				$result = $this->Content->save($result, ['validate' => false, 'callbacks' => false]);
 				$data['Content'] = $result['Content'];
 			}
 
@@ -781,11 +784,12 @@ class Page extends AppModel {
 		if(empty($check[key($check)])) {
 			return true;
 		}
-
+		if(!Configure::read('BcApp.validSyntaxWithPage')) {
+			return true;
+		}
 		if(!function_exists('exec')) {
 			return true;
 		}
-
 		// CL版 php がインストールされてない場合はシンタックスチェックできないので true を返す
 		exec('php --version 2>&1', $output, $exit);
 		if($exit !== 0) {

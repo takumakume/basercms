@@ -569,14 +569,14 @@ class ThemesController extends AppController {
 			if($info) {
 				$message = array_merge($message, [''], $info );
 			}
-			$this->setMessage(implode('<br />', $message), true);
+			$this->setMessage(implode("\n", $message), true);
 		} else {
 			$message = ['テーマ「' . $theme . '」を適用しました。'];
 			if($info) {
 				$message = array_merge($message, [''], $info );
 			}
 
-			$this->setMessage(implode('<br />', $message));
+			$this->setMessage(implode("\n", $message));
 		}
 		return true;
 
@@ -684,7 +684,7 @@ class ThemesController extends AppController {
 		$Folder = new Folder();
 		$Folder->create($tmpDir);
 		$path = BASER_THEMES . $this->siteConfigs['theme'] . DS;
-		$Folder->move([
+		$Folder->copy([
 			'from' => $path,
 			'to' => $tmpDir . $this->siteConfigs['theme'],
 			'chmod' => 0777
