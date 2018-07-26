@@ -15,10 +15,10 @@
 <?php echo $this->BcForm->create() ?>
 <?php echo $this->BcForm->hidden('ContentLink.id') ?>
 
-<table class="form-table">
+<table class="form-table bca-form-table">
 	<tr>
-		<th><?php echo __d('baser', 'リンク先URL') ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo __d('baser', 'リンク先URL') ?></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('ContentLink.url', array('type' => 'text', 'size' => 60, 'placeholder' => 'http://')) ?><br>
 			<?php echo $this->BcForm->error('ContentLink.url') ?>
 		</td>

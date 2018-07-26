@@ -31,16 +31,16 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 <table class="form-table">
 <?php if($this->request->action == 'admin_edit'): ?>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.id', 'NO') ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.id', 'NO') ?></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->value('Site.id') ?>
 			<?php echo $this->BcForm->hidden('Site.id') ?>
 		</td>
 	</tr>
 <?php endif ?>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="required">*</span></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="required">*</span></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.name', array('type' => 'input', 'size' => '30', 'autofocus' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトを特定する事ができる識別名称を入力します。半角英数とハイフン（-）・アンダースコア（_）のみが利用できます。エイリアスを入力しない場合は、URLにも利用されます。</div>
@@ -53,8 +53,8 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		</td>
 	</tr>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="required">*</span></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="required">*</span></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'input', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイト名を入力します。管理システムでの表示に利用されます。日本語の入力が可能ですのでわかりやすい名前をつけてください。</div>
@@ -62,8 +62,8 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		</td>
 	</tr>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="required">*</span></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="required">*</span></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.title', array('type' => 'input', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトのタイトルを入力します。タイトルタグに利用されます。</div>
@@ -71,8 +71,8 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		</td>
 	</tr>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.main_site_id', __d('baser', 'メインサイト')) ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.main_site_id', __d('baser', 'メインサイト')) ?></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.main_site_id', array('type' => 'select', 'options' => $mainSites)) ?>
 			<?php echo $this->BcForm->input('Site.relate_main_site', array('type' => 'checkbox', 'label' => __d('baser', 'エイリアスを利用してメインサイトと自動連携する'))) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -88,8 +88,8 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	</tr>
 <?php if($useSiteDeviceSetting || $useSiteLangSetting): ?>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.device', __d('baser', 'デバイス・言語')) ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.device', __d('baser', 'デバイス・言語')) ?></th>
+		<td class=" bca-form-table__input">
 			<?php if($useSiteDeviceSetting): ?>
 				<small>[デバイス]</small><?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -127,8 +127,8 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	</tr>
 <?php endif ?>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.theme', __d('baser', 'テーマ')) ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.theme', __d('baser', 'テーマ')) ?></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.theme', array('type' => 'select', 'options' => $themes)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトのテンプレートは、各テンプレートの配置フォルダ内にサイト名のサブフォルダを作成する事で別途配置する事ができますが、テーマフォルダ自体を別にしたい場合はここでテーマを指定します。</div>
@@ -136,8 +136,8 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		</td>
 	</tr>
 	<tr>
-		<th><?php echo $this->BcForm->label('Site.status', __d('baser', '公開状態')) ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.status', __d('baser', '公開状態')) ?></th>
+		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.status', array('type' => 'radio', 'options' => array(0 => __d('baser', '公開しない'), 1 => __d('baser', '公開する')))) ?>
 			<?php echo $this->BcForm->error('Site.status') ?>
 		</td>

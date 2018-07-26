@@ -19,19 +19,19 @@
 <!-- form -->
 <?php echo $this->BcForm->create('BlogTag') ?>
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('BlogTag.id', __d('baser', 'NO')) ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogTag.id', __d('baser', 'NO')) ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('BlogTag.id') ?>
 					<?php echo $this->BcForm->input('BlogTag.id', array('type' => 'hidden')) ?>
 				</td>
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('BlogTag.name', __d('baser', 'ブログタグ名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogTag.name', __d('baser', 'ブログタグ名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogTag.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->BcForm->error('BlogTag.name') ?>
 			</td>

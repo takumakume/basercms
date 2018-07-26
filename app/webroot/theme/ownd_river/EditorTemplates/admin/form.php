@@ -20,7 +20,7 @@
 <?php echo $this->BcForm->create('EditorTemplate', array('type' => 'file')) ?>
 
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->action == 'admin_edit'): ?>
 			<tr>
 				<th class="col-head"><?php echo $this->BcForm->label('EditorTemplate.id', 'NO') ?></th>

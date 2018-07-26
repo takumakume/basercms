@@ -35,19 +35,19 @@ $owners = $this->BcForm->getControlSource('BlogCategory.owner_id');
 
 <!-- form -->
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.no', 'NO') ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.no', 'NO') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('BlogCategory.no') ?>
 					<?php echo $this->BcForm->input('BlogCategory.no', array('type' => 'hidden')) ?>
 				</td>
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'ブログカテゴリ名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'ブログカテゴリ名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogCategory.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('BlogCategory.name') ?>
@@ -60,16 +60,16 @@ $owners = $this->BcForm->getControlSource('BlogCategory.owner_id');
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.title', __d('baser', 'ブログカテゴリタイトル')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.title', __d('baser', 'ブログカテゴリタイトル')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogCategory.title', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->error('BlogCategory.title') ?>
 			</td>
 		</tr>
 		<?php if ($parents): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.parent_id', __d('baser', '親カテゴリ')) ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.parent_id', __d('baser', '親カテゴリ')) ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php
 					echo $this->BcForm->input('BlogCategory.parent_id', array(
 						'type' => 'select',
@@ -84,8 +84,8 @@ $owners = $this->BcForm->getControlSource('BlogCategory.owner_id');
 		<?php endif ?>
 		<?php if ($this->BcBaser->siteConfig['category_permission']): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.owner_id', __d('baser', '管理グループ')) ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.owner_id', __d('baser', '管理グループ')) ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php if ($this->BcAdmin->isSystemAdmin()): ?>
 						<?php
 						echo $this->BcForm->input('BlogCategory.owner_id', array(
