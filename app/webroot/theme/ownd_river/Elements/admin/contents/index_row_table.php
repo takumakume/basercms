@@ -78,7 +78,7 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['edit'], $urlParams), ['title' => __d('baser', '編集'), 'class' => 'btn-edit bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
 		<?php endif ?>
 		<?php if(!$editDisabled && !$isSiteRoot): ?>
-			<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $data['Content']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'dlete','data-bca-btn-size' => 'lg']) ?>
+			<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $data['Content']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg']) ?>
 		<?php endif ?>
 		<form>
 			<input type="hidden" name="data[contentId]" value="<?php echo $data['Content']['id'] ?>">
