@@ -20,10 +20,10 @@
 <?php echo $this->BcForm->create('MailConfig', ['url' => ['action' => 'form']]) ?>
 <?php echo $this->BcForm->input('MailConfig.id', array('type' => 'hidden')) ?>
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<tr>
-			<th><?php echo $this->BcForm->label('MailConfig.site_name', __d('baser', '署名：WEBサイト名')) ?></th>
-			<td class="col-input">
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('MailConfig.site_name', __d('baser', '署名：WEBサイト名')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailConfig.site_name', array('type' => 'text', 'size' => 35, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpSiteName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailConfig.site_name') ?>
@@ -31,8 +31,8 @@
 			</td>
 		</tr>
 		<tr>
-			<th><?php echo $this->BcForm->label('MailConfig.site_url', __d('baser', '署名：WEBサイトURL')) ?></th>
-			<td class="col-input">
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('MailConfig.site_url', __d('baser', '署名：WEBサイトURL')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailConfig.site_url', array('type' => 'text', 'size' => 35, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpSiteUrl', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailConfig.site_url') ?>
@@ -40,8 +40,8 @@
 			</td>
 		</tr>
 		<tr>
-			<th><?php echo $this->BcForm->label('MailConfig.site_email', __d('baser', '署名：Eメール')) ?></th>
-			<td class="col-input">
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('MailConfig.site_email', __d('baser', '署名：Eメール')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailConfig.site_email', array('type' => 'text', 'size' => 35, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpSiteEmail', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailConfig.site_email') ?>
@@ -54,8 +54,8 @@
 			</td>
 		</tr>
 		<tr>
-			<th><?php echo $this->BcForm->label('MailConfig.site_tel', __d('baser', '署名：電話番号')) ?></th>
-			<td class="col-input">
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('MailConfig.site_tel', __d('baser', '署名：電話番号')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailConfig.site_tel', array('type' => 'text', 'size' => 35, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpSiteTel', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailConfig.site_tel') ?>
@@ -63,8 +63,8 @@
 			</td>
 		</tr>
 		<tr>
-			<th><?php echo $this->BcForm->label('MailConfig.site_fax', __d('baser', '署名：FAX番号')) ?></th>
-			<td class="col-input">
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('MailConfig.site_fax', __d('baser', '署名：FAX番号')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailConfig.site_fax', array('type' => 'text', 'size' => 35, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpSiteFax', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailConfig.site_fax') ?>

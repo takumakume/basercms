@@ -27,19 +27,19 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 <h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 <?php if ($this->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('MailField.no', 'NO') ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.no', 'NO') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('MailField.no') ?>
 					<?php echo $this->BcForm->input('MailField.no', array('type' => 'hidden')) ?>
 				</td>
 			</tr>
 <?php endif; ?>
 		<tr id="RowFieldName">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.field_name', __d('baser', 'フィールド名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.field_name', __d('baser', 'フィールド名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.field_name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpFieldName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.field_name') ?>
@@ -47,8 +47,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowName">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.name', __d('baser', '項目名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.name', __d('baser', '項目名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.name') ?>
@@ -56,8 +56,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowType">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.type', __d('baser', 'タイプ')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.type', __d('baser', 'タイプ')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.type', array('type' => 'select', 'options' => $this->BcForm->getControlSource('type'))) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpType', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.type') ?>
@@ -71,8 +71,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowHead">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.head', __d('baser', '項目見出し')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.head', __d('baser', '項目見出し')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.head', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpHead', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.head') ?>
@@ -80,50 +80,50 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowNotEmpty">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.not_empty', __d('baser', '必須マーク')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.not_empty', __d('baser', '必須マーク')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.not_empty', array('type' => 'checkbox', 'label' => __d('baser', '項目見出しに必須マークを表示する'))) ?>
 				<?php echo $this->BcForm->error('MailField.not_empty') ?>
 			</td>
 		</tr>
 		<tr id="RowValid">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.valid', __d('baser', '入力チェック')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.valid', __d('baser', '入力チェック')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.valid', array('type' => 'select', 'options' => $this->BcForm->getControlSource('valid'), 'empty' => __d('baser', 'なし'))) ?>
 				<?php echo $this->BcForm->error('MailField.valid') ?>
 			</td>
 		</tr>
 		<tr id="RowAttention">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.attention', __d('baser', '注意書き')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.attention', __d('baser', '注意書き')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.attention', array('type' => 'textarea', 'cols' => 35, 'rows' => 3)) ?>
 				<?php echo $this->BcForm->error('MailField.attention') ?>
 			</td>
 		</tr>
 		<tr id="RowBeforeAttachment">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.before_attachment', __d('baser', '前見出し')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.before_attachment', __d('baser', '前見出し')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.before_attachment', array('type' => 'textarea', 'cols' => 35, 'rows' => 3)) ?>
 				<?php echo $this->BcForm->error('MailField.before_attachment') ?>
 			</td>
 		</tr>
 		<tr id="RowAfterAttachment">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.after_attachment', __d('baser', '後見出し')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.after_attachment', __d('baser', '後見出し')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.after_attachment', array('type' => 'textarea', 'cols' => 35, 'rows' => 3)) ?>
 				<?php echo $this->BcForm->error('MailField.after_attachment') ?>
 			</td>
 		</tr>
 		<tr id="RowDescription">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.description', __d('baser', '説明文')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.description', __d('baser', '説明文')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.description', array('type' => 'textarea', 'cols' => 35, 'rows' => 3)) ?>
 				<?php echo $this->BcForm->error('MailField.description') ?>
 			</td>
 		</tr>
 		<tr id="RowSource">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.source', __d('baser', '選択リスト')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.source', __d('baser', '選択リスト')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.source', array('type' => 'textarea', 'cols' => 35, 'rows' => 4)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpSource', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.source') ?>
@@ -137,15 +137,15 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowSize">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.size', __d('baser', '表示サイズ')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.size', __d('baser', '表示サイズ')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.size', array('type' => 'text', 'size' => 10, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->error('MailField.size') ?>
 			</td>
 		</tr>
 		<tr id="RowRows">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.rows', __d('baser', '行数')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.rows', __d('baser', '行数')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.rows', array('type' => 'text', 'size' => 10, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpRows', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.rows') ?>
@@ -153,8 +153,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowMaxlength">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.maxlength', __d('baser', '最大値')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.maxlength', __d('baser', '最大値')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.maxlength', array('type' => 'text', 'size' => 10, 'maxlength' => 255)) ?>文字
 				<?php echo $this->BcForm->error('MailField.maxlength') ?>
 			</td>
@@ -166,10 +166,10 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 <h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption">オプション</a></h2>
 
 <div class="section">
-	<table cellpadding="0" cellspacing="0" class="form-table slide-body" id="formOptionBody">
+	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
 		<tr id="RowValidEx">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.valid_ex', __d('baser', '拡張入力チェック')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.valid_ex', __d('baser', '拡張入力チェック')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.valid_ex', array('type' => 'select', 'multiple' => 'checkbox', 'options' => $this->BcForm->getControlSource('valid_ex'))) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpValidEx', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.valid_ex') ?>
@@ -185,8 +185,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowGroupField">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.group_field', __d('baser', 'グループ名')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.group_field', __d('baser', 'グループ名')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.group_field', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpGroupField', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.group_field') ?>
@@ -199,8 +199,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowGroupValid">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.group_valid', __d('baser', 'グループ入力チェック')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.group_valid', __d('baser', 'グループ入力チェック')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.group_valid', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpGroupValid', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('MailField.group_valid') ?>
@@ -214,50 +214,50 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowOptions">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.options', __d('baser', 'オプション')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.options', __d('baser', 'オプション')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.options', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->error('MailField.options') ?>
 			</td>
 		</tr>
 		<tr id="RowClass">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.class', __d('baser', 'クラス名')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.class', __d('baser', 'クラス名')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.class', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->error('MailField.class') ?>
 			</td>
 		</tr>
 		<tr id="RowSeparator">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.separator', __d('baser', '区切り文字')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.separator', __d('baser', '区切り文字')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.separator', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->error('MailField.separator') ?>
 			</td>
 		</tr>
 		<tr id="RowDefault">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.default_value', __d('baser', '初期値')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.default_value', __d('baser', '初期値')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.default_value', array('type' => 'textarea', 'cols' => 35, 'rows' => 2)) ?>
 				<?php echo $this->BcForm->error('MailField.default_value') ?>
 			</td>
 		</tr>
 		<tr id="RowAutoConvert">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.auto_convert', __d('baser', '自動変換')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.auto_convert', __d('baser', '自動変換')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.auto_convert', array('type' => 'select', 'options' => $this->BcForm->getControlSource('auto_convert'), 'empty' => __d('baser', 'なし'))) ?>
 				<?php echo $this->BcForm->error('MailField.auto_convert') ?>
 			</td>
 		</tr>
 		<tr id="RowUseField">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.use_field', __d('baser', '利用状態')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.use_field', __d('baser', '利用状態')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.use_field', array('type' => 'checkbox', 'label' => __d('baser', '利用中'))) ?>
 				<?php echo $this->BcForm->error('MailField.use_field') ?>
 			</td>
 		</tr>
 		<tr id="RowNoSend">
-			<th class="col-head"><?php echo $this->BcForm->label('MailField.no_send', __d('baser', 'メール送信')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.no_send', __d('baser', 'メール送信')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.no_send', array('type' => 'radio', 'options' => array(__d('baser', '送信する'), __d('baser', '送信しない')))) ?>
 				<?php echo $this->BcForm->error('MailField.no_send') ?>
 			</td>

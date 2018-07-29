@@ -84,17 +84,17 @@
 
 
 <div id ="FormOptionBody" class="slide-body section">
-	<table cellpadding="0" cellspacing="0" class="form-table">
+	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('UploaderConfig.layout_type', __d('baser', 'レイアウトタイプ')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UploaderConfig.layout_type', __d('baser', 'レイアウトタイプ')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('UploaderConfig.layout_type', array('type' => 'radio', 'options' => array('panel' => __d('baser', 'パネル'), 'table' => __d('baser', 'テーブル')))) ?>
 				<?php echo $this->BcForm->error('UploaderConfig.layout_type') ?>
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('UploaderConfig.use_permission', __d('baser', '制限設定')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UploaderConfig.use_permission', __d('baser', '制限設定')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('UploaderConfig.use_permission', array('type' => 'checkbox', 'label' => __d('baser', '編集/削除を制限する'), 'between' => '&nbsp;')) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('UploaderConfig.use_permission') ?>

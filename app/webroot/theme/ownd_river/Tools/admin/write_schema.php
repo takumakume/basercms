@@ -18,10 +18,10 @@
 
 <?php echo $this->BcForm->create('Tool', ['url' => ['action' => 'write_schema']]) ?>
 
-<table cellpadding="0" cellspacing="0" class="form-table">
+<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 	<tr>
-		<th class="col-head"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.baser', __d('baser', 'コアテーブル名')) ?></th>
-		<td class="col-input">
+		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.baser', __d('baser', 'コアテーブル名')) ?></th>
+		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.core', array(
 				'type' => 'select',
 				'options' => $this->BcForm->getControlSource('Tool.core'),
@@ -31,8 +31,8 @@
 		</td>
 	</tr>
 	<tr>
-		<th class="col-head"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.plugin', __d('baser', 'プラグインテーブル名')) ?></th>
-		<td class="col-input">
+		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.plugin', __d('baser', 'プラグインテーブル名')) ?></th>
+		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.plugin', array(
 				'type' => 'select',
 				'options' => $this->BcForm->getControlSource('Tool.plugin'),

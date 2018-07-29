@@ -37,10 +37,10 @@ $params = explode('/', $path);
 
 <!-- form -->
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('ThemeFolder.name', __d('baser', 'フォルダ名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('ThemeFolder.name', __d('baser', 'フォルダ名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php if ($this->request->action != 'admin_view_folder'): ?>
 					<?php echo $this->BcForm->input('ThemeFolder.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>

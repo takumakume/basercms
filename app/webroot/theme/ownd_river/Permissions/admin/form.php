@@ -21,10 +21,10 @@
 
 <!-- form -->
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Permission.user_group_id', __d('baser', 'ユーザーグループ')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.user_group_id', __d('baser', 'ユーザーグループ')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php $userGroups = $this->BcForm->getControlSource('user_group_id') ?>
 				<?php echo $userGroups[$this->BcForm->value('Permission.user_group_id')] ?>
 				<?php echo $this->BcForm->input('Permission.user_group_id', array('type' => 'hidden')) ?>
@@ -32,15 +32,15 @@
 		</tr>
 		<?php if ($this->request->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('Permission.id', 'NO') ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.id', 'NO') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('Permission.no') ?>
 				</td>
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Permission.name', __d('baser', 'ルール名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.name', __d('baser', 'ルール名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Permission.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->Form->error('Permission.name') ?>
@@ -48,8 +48,8 @@
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Permission.url', __d('baser', 'URL設定')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.url', __d('baser', 'URL設定')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<strong>/<?php echo $permissionAuthPrefix ?>/</strong>
 				<?php echo $this->BcForm->input('Permission.url', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpUrl', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -66,15 +66,15 @@
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Permission.auth', __d('baser', 'アクセス')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.auth', __d('baser', 'アクセス')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Permission.auth', array('type' => 'radio', 'options' => $this->BcText->booleanAllowList(__d('baser', 'アクセス')))) ?>
 				<?php echo $this->BcForm->error('Permission.auth') ?>
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Permission.status', __d('baser', '利用状態')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.status', __d('baser', '利用状態')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Permission.status', array('type' => 'checkbox', 'label' => __d('baser', '有効'))) ?>
 				<?php echo $this->BcForm->error('Permission.status') ?>
 			</td>

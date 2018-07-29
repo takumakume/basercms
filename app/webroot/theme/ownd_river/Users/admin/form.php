@@ -30,19 +30,19 @@ $this->BcBaser->js('admin/users/edit', false);
 <?php echo $this->BcForm->create('User') ?>
 <?php echo $this->BcForm->hidden('User.id') ?>
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->request->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('User.id', 'NO') ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.id', 'NO') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('User.id') ?>
 					<?php echo $this->BcForm->input('User.id', array('type' => 'hidden')) ?>
 				</td>
 			</tr>
 		<?php endif ?>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('User.name', __d('baser', 'アカウント名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.name', __d('baser', 'アカウント名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.name', array('type' => 'text', 'size' => 20, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('User.name') ?>
@@ -50,8 +50,8 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('User.real_name_1', __d('baser', '名前')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.real_name_1', __d('baser', '名前')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<small>[姓]</small> <?php echo $this->BcForm->input('User.real_name_1', array('type' => 'text', 'size' => 12, 'maxlength' => 255)) ?>
 				<small>[名]</small> <?php echo $this->BcForm->input('User.real_name_2', array('type' => 'text', 'size' => 12, 'maxlength' => 255)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpRealName1', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -61,8 +61,8 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('User.nickname', __d('baser', 'ニックネーム')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.nickname', __d('baser', 'ニックネーム')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.nickname', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('User.nickname') ?>
@@ -70,8 +70,8 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('User.user_group_id', __d('baser', 'グループ')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.user_group_id', __d('baser', 'グループ')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php if ($editable): ?>
 					<?php echo $this->BcForm->input('User.user_group_id', array('type' => 'select', 'options' => $userGroups)) ?>
 					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpUserGroupId', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -86,8 +86,8 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('User.email', __d('baser', 'Eメール')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.email', __d('baser', 'Eメール')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.email', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpEmail', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<?php echo $this->BcForm->error('User.email') ?>
@@ -97,13 +97,13 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head">
+			<th class="col-head bca-form-table__label">
 				<?php if ($this->request->action == 'admin_add'): ?>
 					<span class="required">*</span>&nbsp;
 				<?php endif; ?>
 				<?php echo $this->BcForm->label('User.password_1', __d('baser', 'パスワード')) ?>
 			</th>
-			<td class="col-input">
+			<td class="col-input bca-form-table__input">
 				<?php if ($this->request->action == "admin_edit"): ?><small>[パスワードは変更する場合のみ入力してください]</small><br /><?php endif ?>
 				<?php echo $this->BcForm->input('User.password_1', array('type' => 'password', 'size' => 20, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->input('User.password_2', array('type' => 'password', 'size' => 20, 'maxlength' => 255)) ?>

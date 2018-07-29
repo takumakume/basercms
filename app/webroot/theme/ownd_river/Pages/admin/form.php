@@ -40,10 +40,10 @@ $this->BcBaser->js('admin/pages/edit', false);
 
 <?php if (BcUtil::isAdminUser()): ?>
 <div class="section">
-	<table cellpadding="0" cellspacing="0" class="form-table">
+	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Page.page_template', __d('baser', '固定ページテンプレート')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Page.page_template', __d('baser', '固定ページテンプレート')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Page.page_template', array('type' => 'select', 'options' => $pageTemplateList)) ?>
 				<div class="helptext">
 					テーマフォルダ内の、Pages/templates テンプレートを配置する事で、ここでテンプレートを選択できます。
@@ -52,8 +52,8 @@ $this->BcBaser->js('admin/pages/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('Page.code', __d('baser', 'コード')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Page.code', __d('baser', 'コード')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Page.code', array(
 					'type' => 'textarea',
 					'cols' => 36,

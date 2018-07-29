@@ -34,19 +34,19 @@ $(window).load(function() {
 <!-- form -->
 <?php echo $this->BcForm->create('UserGroup') ?>
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->request->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('UserGroup.id', 'NO') ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.id', 'NO') ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('UserGroup.id') ?>
 					<?php echo $this->BcForm->input('UserGroup.id', array('type' => 'hidden')) ?>
 				</td>
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('UserGroup.name', __d('baser', 'ユーザーグループ名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.name', __d('baser', 'ユーザーグループ名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php if ($this->BcForm->value('UserGroup.name') == 'admins' && $this->request->action == 'admin_edit'): ?>
 					<?php echo $this->BcForm->value('UserGroup.name') ?>
 					<?php echo $this->BcForm->input('UserGroup.name', array('type' => 'hidden')) ?>
@@ -64,8 +64,8 @@ $(window).load(function() {
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('UserGroup.title', __d('baser', '表示名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.title', __d('baser', '表示名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('UserGroup.title', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpTitle', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<div id="helptextTitle" class="helptext">日本語が入力できますのでわかりやすい名称を入力します。</div>
@@ -73,8 +73,8 @@ $(window).load(function() {
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('UserGroup.use_admin_globalmenu', __d('baser', 'その他')) ?></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.use_admin_globalmenu', __d('baser', 'その他')) ?></th>
+			<td class="col-input bca-form-table__input">
 				<?php if ($this->BcForm->value('UserGroup.name') == 'admins' && $this->request->action == 'admin_edit'): ?>
 					<?php if ($this->BcForm->value('UserGroup.use_admin_globalmenu')): ?>
 						管理システムのグローバルメニューを利用する
@@ -105,8 +105,8 @@ $(window).load(function() {
 		</tr>
 		<?php if (count($authPrefixes) > 1): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('UserGroup.auth_prefix', __d('baser', '認証プレフィックス設定')) ?>&nbsp;<span class="required">*</span></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.auth_prefix', __d('baser', '認証プレフィックス設定')) ?>&nbsp;<span class="required">*</span></th>
+				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->input('UserGroup.auth_prefix', array('type' => 'select', 'multiple' => 'checkbox', 'options' => $authPrefixes, 'value' => explode(',', $this->BcForm->value('UserGroup.auth_prefix')))) ?>
 					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpAuthPrefix', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 					<?php echo $this->BcForm->error('UserGroup.auth_prefix') ?>

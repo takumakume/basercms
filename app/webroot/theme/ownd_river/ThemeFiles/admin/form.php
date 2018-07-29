@@ -34,10 +34,10 @@ $params = explode('/', $path);
 
 <!-- form -->
 <div class="section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
+	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('ThemeFile.name', __d('baser', 'ファイル名')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('ThemeFile.name', __d('baser', 'ファイル名')) ?>&nbsp;<span class="required">*</span></th>
+			<td class="col-input bca-form-table__input">
 				<?php if ($this->request->action != 'admin_view'): ?>
 					<?php echo $this->BcForm->input('ThemeFile.name', array('type' => 'text', 'size' => 30, 'maxlength' => 255, 'autofocus' => true)) ?>
 					<?php if ($this->BcForm->value('ThemeFile.ext')): ?>.<?php endif ?>
@@ -58,8 +58,8 @@ $params = explode('/', $path);
 		</tr>
 		<?php if ($this->request->action == 'admin_add' || (($this->request->action == 'admin_edit' || $this->request->action == 'admin_view') && in_array($this->request->data['ThemeFile']['type'], array('text', 'image')))): ?>
 			<tr>
-				<th class="col-head"><?php echo $this->BcForm->label('ThemeFile.contents', __d('baser', '内容')) ?></th>
-				<td class="col-input">
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('ThemeFile.contents', __d('baser', '内容')) ?></th>
+				<td class="col-input bca-form-table__input">
 					<?php if (($this->request->action == 'admin_edit' || $this->request->action == 'admin_view') && $this->request->data['ThemeFile']['type'] == 'image'): ?>
 						<div class="align-center" style="margin:20px auto">
 							<?php $this->BcBaser->link(

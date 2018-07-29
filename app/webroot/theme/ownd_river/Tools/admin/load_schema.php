@@ -19,10 +19,10 @@
 <!-- form -->
 <?php echo $this->BcForm->create('Tool', ['url' => ['action' => 'load_schema'], 'type' => 'file']) ?>
 
-<table cellpadding="0" cellspacing="0" class="form-table">
+<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 	<tr>
-		<th class="col-head"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.schema_type', __d('baser', 'スキーマタイプ')) ?></th>
-		<td class="col-input">
+		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.schema_type', __d('baser', 'スキーマタイプ')) ?></th>
+		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.schema_type', array(
 				'type' => 'radio',
 				'options' => array('create' => __d('baser', 'テーブル作成'), 'alter' => __d('baser', 'テーブル構造変更'), 'drop' => __d('baser', 'テーブル削除')),
@@ -32,8 +32,8 @@
 		</td>
 	</tr>
 	<tr>
-		<th class="col-head"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.schema_file', __d('baser', 'スキーマファイル')) ?></th>
-		<td class="col-input">
+		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.schema_file', __d('baser', 'スキーマファイル')) ?></th>
+		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.schema_file', array('type' => 'file')) ?>
 			<?php echo $this->BcForm->error('Tool.schema_file') ?>
 		</td>

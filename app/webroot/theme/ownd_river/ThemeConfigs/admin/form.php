@@ -43,10 +43,10 @@ $(function(){
 
 <?php echo $this->BcForm->create('ThemeConfig', array('type' => 'file')) ?>
 
-<table class="form-table">
+<table class="form-table bca-form-table">
 	<tr>
-		<th>テーマカラー</th>
-		<td>
+		<th class="bca-form-table__label">テーマカラー</th>
+		<td class="bca-form-table__input">
 			<small>[メイン]</small> #<?php echo $this->BcForm->input('color_main', array('type' => 'text', 'size' => 6, 'class' => 'color-picker')) ?>　
 			<small>[サブ]</small> #<?php echo $this->BcForm->input('color_sub', array('type' => 'text', 'size' => 6, 'class' => 'color-picker')) ?><br />
 			<small>[テキストリンク]</small> #<?php echo $this->BcForm->input('color_link', array('type' => 'text', 'size' => 6, 'class' => 'color-picker')) ?>　
@@ -54,8 +54,8 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<th>ロゴ</th>
-		<td>
+		<th class="bca-form-table__label">ロゴ</th>
+		<td class="bca-form-table__input">
 			<p><?php $this->BcBaser->logo(array('thumb' => true, 'popup' => true, 'class' => 'photo', 'maxWidth' => 320, 'maxHeight' => 320)) ?></p>
 			<p><?php echo $this->BcForm->file('logo') ?><?php if ($this->BcForm->value('logo')): ?><?php echo $this->BcForm->input('logo_delete', array('type' => 'checkbox', 'label' => __d('baser', '削除する'), 'value' => false)) ?><?php endif ?></p>
 			<?php echo $this->BcForm->input('logo_alt', array('type' => 'text', 'size' => 50)) ?> <small>[説明文]</small><br />
@@ -63,8 +63,8 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<th>メインイメージ１</th>
-		<td>
+		<th class="bca-form-table__label">メインイメージ１</th>
+		<td class="bca-form-table__input">
 			<?php $this->BcBaser->mainImage(array('num' => 1, 'thumb' => true, 'popup' => true, 'class' => 'photo', 'maxWidth' => 320, 'maxHeight' => 320)) ?></p>
 			<?php echo $this->BcForm->file('main_image_1') ?><?php if ($this->BcForm->value('main_image_1')): ?><?php echo $this->BcForm->input('main_image_1_delete', array('type' => 'checkbox', 'label' => __d('baser', '削除する'), 'value' => false)) ?><?php endif ?></p>
 			<?php echo $this->BcForm->input('main_image_alt_1', array('type' => 'text', 'size' => 50)) ?> <small>[説明文]</small><br />
@@ -72,8 +72,8 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<th>メインイメージ２</th>
-		<td>
+		<th class="bca-form-table__label">メインイメージ２</th>
+		<td class="bca-form-table__input">
 			<p><?php $this->BcBaser->mainImage(array('num' => 2, 'thumb' => true, 'popup' => true, 'class' => 'photo', 'maxWidth' => 320, 'maxHeight' => 320)) ?></p>
 			<p><?php echo $this->BcForm->file('main_image_2') ?><?php if ($this->BcForm->value('main_image_2')): ?><?php echo $this->BcForm->input('main_image_2_delete', array('type' => 'checkbox', 'label' => __d('baser', '削除する'), 'value' => false)) ?><?php endif ?></p>
 			<?php echo $this->BcForm->input('main_image_alt_2', array('type' => 'text', 'size' => 50)) ?> <small>[説明文]</small><br />
@@ -81,8 +81,8 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<th>メインイメージ３</th>
-		<td>
+		<th class="bca-form-table__label">メインイメージ３</th>
+		<td class="bca-form-table__input">
 			<p><?php $this->BcBaser->mainImage(array('num' => 3, 'thumb' => true, 'popup' => true, 'class' => 'photo', 'maxWidth' => 320, 'maxHeight' => 320)) ?></p>
 			<p><?php echo $this->BcForm->file('main_image_3') ?><?php if ($this->BcForm->value('main_image_3')): ?><?php echo $this->BcForm->input('main_image_3_delete', array('type' => 'checkbox', 'label' => __d('baser', '削除する'), 'value' => false)) ?><?php endif ?></p>
 			<?php echo $this->BcForm->input('main_image_alt_3', array('type' => 'text', 'size' => 50)) ?> <small>[説明文]</small><br />
@@ -90,8 +90,8 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<th>メインイメージ４</th>
-		<td>
+		<th class="bca-form-table__label">メインイメージ４</th>
+		<td class="bca-form-table__input">
 			<p><?php $this->BcBaser->mainImage(array('num' => 4, 'thumb' => true, 'popup' => true, 'class' => 'photo', 'maxWidth' => 320, 'maxHeight' => 320)) ?></p>
 			<p><?php echo $this->BcForm->file('main_image_4') ?><?php if ($this->BcForm->value('main_image_4')): ?><?php echo $this->BcForm->input('main_image_4_delete', array('type' => 'checkbox', 'label' => __d('baser', '削除する'), 'value' => false)) ?><?php endif ?></p>
 			<?php echo $this->BcForm->input('main_image_alt_4', array('type' => 'text', 'size' => 50)) ?> <small>[説明文]</small><br />
@@ -99,8 +99,8 @@ $(function(){
 		</td>
 	</tr>
 	<tr>
-		<th>メインイメージ５</th>
-		<td>
+		<th class="bca-form-table__label">メインイメージ５</th>
+		<td class="bca-form-table__input">
 			<p><?php $this->BcBaser->mainImage(array('num' => 5, 'thumb' => true, 'popup' => true, 'class' => 'photo', 'maxWidth' => 320, 'maxHeight' => 320)) ?></p>
 			<p><?php echo $this->BcForm->file('main_image_5') ?><?php if ($this->BcForm->value('main_image_5')): ?><?php echo $this->BcForm->input('main_image_5_delete', array('type' => 'checkbox', 'label' => __d('baser', '削除する'), 'value' => false)) ?><?php endif ?></p>
 			<?php echo $this->BcForm->input('main_image_alt_5', array('type' => 'text', 'size' => 50)) ?> <small>[説明文]</small><br />
