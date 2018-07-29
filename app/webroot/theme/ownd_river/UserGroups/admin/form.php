@@ -133,7 +133,7 @@ $(window).load(function() {
 
 <?php if ($this->request->action == 'admin_edit'): ?>
 	<div class="section">
-		<div class="panel-box corner10">
+		<div class="panel-box bca-panel-box corner10">
 			<h2>「よく使う項目」の初期データ</h2>
 			<p>
 				<small>このグループに新しいユーザーを登録した際、次の「よく使う項目」が登録されます。	</small>

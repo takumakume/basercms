@@ -16,7 +16,7 @@
 ?>
 
 
-<div class="corner10 panel-box section">
+<div class="corner10 panel-box bca-panel-box section">
 	<?php echo $this->BcForm->create('Updater', ['url' => ['action' => $this->request->action]]) ?>
 	<p><?php echo $this->BcForm->label('Updater.plugin', __d('baser', 'タイプ')) ?>&nbsp;<?php echo $this->BcForm->input('Updater.plugin', array('type' => 'select', 'options' => $plugins, 'empty' => __d('baser', 'コア'))) ?></p>
 	<p><?php echo $this->BcForm->label('Updater.version', __d('baser', 'バージョン')) ?>&nbsp;<?php echo $this->BcForm->input('Updater.version', array('type' => 'text')) ?></p>
@@ -25,7 +25,7 @@
 
 
 <?php if ($log): ?>
-	<div class="corner10 panel-box section" id="UpdateLog">
+	<div class="corner10 panel-box bca-panel-box section" id="UpdateLog">
 		<h2>アップデートログ</h2>
 		<?php echo $this->BcForm->textarea('Updater.log', array(
 			'value' => $log,

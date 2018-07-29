@@ -43,7 +43,7 @@ $(function(){
 
 		<!-- basic -->
 		<h2>基本必須条件</h2>
-		<div class="panel-box corner10">
+		<div class="panel-box bca-panel-box corner10">
 			<ul class="section">
 				<li class='<?php if ($phpVersionOk) echo 'check'; else echo 'failed'; ?>'>
 					PHPのバージョン >= <?php echo Configure::read('BcRequire.phpVersion'); ?>
@@ -238,7 +238,7 @@ $(function(){
 		<!-- option -->
 		<h2>オプション</h2>
 
-		<div class="panel-box corner10">
+		<div class="panel-box bca-panel-box corner10">
 			<h3>ファイルデータベース</h3>
 			<div class="section"> データベースサーバーが利用できない場合には、ファイルベースデータベースの SQLite を利用できます。
 				有効にするには、下記のフォルダへの書き込み権限が必要です </div>
@@ -257,7 +257,7 @@ $(function(){
 			</ul>
 		</div>
 
-		<div class="panel-box corner10">
+		<div class="panel-box bca-panel-box corner10">
 			<h3>管理システムの参照ファイル配置</h3>
 			<div class="section">baserCMSでは、インストール時に、管理システムより参照する、画像ファイル、CSSファイル、Javascriptファイルを、下記のパスに自動配置します。既に存在する場合には上書きされてしまいますのでご注意ください。</div>
 			<ul class="section">
@@ -321,7 +321,7 @@ $(function(){
 			</ul>
 		</div>
 		
-		<div class="panel-box corner10">
+		<div class="panel-box bca-panel-box corner10">
 			<h3>PHPのメモリ</h3>
 			<div class="section">PHPのメモリが <?php echo Configure::read('BcRequire.phpMemory') . " MB"; ?> より低い場合、baserCMSの全ての機能が正常に動作しない可能性があります。<br />
 				<small>サーバー環境によってはPHPのメモリ上限が取得できず「0MB」となっている場合もあります。その場合、サーバー業者等へサーバースペックを直接確認してください。</small> </div>
@@ -338,7 +338,7 @@ $(function(){
 			</ul>
 		</div>
 
-		<div class="panel-box corner10">
+		<div class="panel-box bca-panel-box corner10">
 			<h3>PHPセーフモード</h3>
 			<div class="section">セーフモードがOnの場合、PHPを「CGIモード」に切り替えないとbaserCMSの全ての機能を利用する事はできません。<br />
 				<small>ページカテゴリ機能や、テーマ切り替え機能など、プログラム側でフォルダを自動生成する機能は、事前にFTPでの作業を併用する必要があります。</small><br />

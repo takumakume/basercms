@@ -47,7 +47,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 <?php $this->end('script') ?>
 
 
-<div class="corner10 panel-box section">
+<div class="corner10 panel-box bca-panel-box section">
 	<h2>現在のバージョン状況</h2>
 	<ul class="version">
 		<li><?php echo $updateTarget ?> のバージョン： <strong><?php echo $baserVer ?></strong></li>
@@ -76,7 +76,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 </div>
 
 <?php if ($scriptNum): ?>
-	<div class="corner10 panel-box section">
+	<div class="corner10 panel-box bca-panel-box section">
 		<div class="section">
 			<h2>データベースのバックアップは行いましたか？</h2>
 			<p>
@@ -95,7 +95,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 	</div>
 <?php endif ?>
 
-<div class="corner10 panel-box section">
+<div class="corner10 panel-box bca-panel-box section">
 	<?php if ($requireUpdate): ?>
 		<p>「アップデート実行」をクリックしてデータベースのアップデートを完了させてください。</p>
 		<?php if (empty($plugin)): ?>
@@ -120,7 +120,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 </div>
 
 <?php if ($log): ?>
-	<div class="corner10 panel-box section" id="UpdateLog">
+	<div class="corner10 panel-box bca-panel-box section" id="UpdateLog">
 		<h2>アップデートログ</h2>
 		<?php echo $this->BcForm->textarea('Updater.log', array(
 			'value' => $log,

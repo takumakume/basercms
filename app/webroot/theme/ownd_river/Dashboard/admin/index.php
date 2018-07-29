@@ -23,7 +23,7 @@ $this->BcBaser->js('admin/libs/jquery.bcDashboard', false);
 	<?php foreacH($panels as $key => $templates): ?>
 		<?php foreach($templates as $template): ?>
 <div class="float-left" style="width:33%">
-	<div class="panel-box">
+	<div class="panel-box bca-panel-box">
 		<?php if($key == 'Core'): ?>
 			<?php echo $this->BcBaser->element('admin/dashboard/' . $template) ?>
 		<?php else: ?>

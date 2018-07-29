@@ -161,7 +161,7 @@ $(document).ready( function() {
 		<strong>MySQL / PostgreSQLの場合は、データベースが存在し初期化されている必要があります。</strong>
 	</div>
 	<h2>データベース設定</h2>
-	<div class="panel-box corner10">
+	<div class="panel-box bca-panel-box corner10">
 		<div class="section">
 			<h3>接続情報</h3>
 			<ul>

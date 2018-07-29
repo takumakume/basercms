@@ -138,7 +138,7 @@ $this->BcBaser->js('admin/users/edit', false);
 <?php echo $this->BcForm->end() ?>
 
 <?php if ($this->request->action == 'admin_edit'): ?>
-	<div class="panel-box corner10">
+	<div class="panel-box bca-panel-box corner10">
 		<h2>登録されている「よく使う項目」</h2>
 		<?php if ($this->request->data['Favorite']): ?>
 			<ul class="clearfix" id="DefaultFavorites">

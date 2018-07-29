@@ -59,7 +59,7 @@ $(document).ready(function(){
 
 	<?php echo $this->BcForm->create(null, ['url' => ['controller'=>'installations', 'action' => 'step4'], 'id' => 'adminSettings', 'name' => 'adminSettings']) ?>
 
-	<div class="panel-box corner10">
+	<div class="panel-box bca-panel-box corner10">
 		<div class="section">
 			<h3>管理用メールアドレス登録</h3>
 			<ul>
