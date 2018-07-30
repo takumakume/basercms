@@ -117,6 +117,12 @@
 		}
 	}
 
+	// 開く
+	&[data-bca-btn-type=open] {
+		@extend .#{$fa-css-prefix}-folder-open;
+		@include bca-btn-icon-common;
+	}
+
 	// サイズ
 	// ===========================
 
