@@ -141,6 +141,7 @@
 	&__tbody-th,
 	&__tbody-td {
 		padding:1em 1em 1em 0.5em;
+    text-align: left;
 	}
 
 	&__thead-th {
@@ -209,6 +210,7 @@
 		// タイトル
 		&--title {
 			min-width:200px;
+      max-width: 500px;
 			font-size:1.3rem;
 		}
 		// カテゴリ
@@ -248,8 +250,12 @@
 		}
 	}
 
+  .eye_catch-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 	.eye_catch {
-		float: left;
 		margin-right:10px;
 		width: 50px;
 		img {

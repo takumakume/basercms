@@ -9105,12 +9105,10 @@ div.jstree-publish-even {
 ----------------------------------------------- */
 .bca-action-table-listup select {
   margin-top: 0;
-  margin-bottom: 0;
-  height: 32px; }
+  margin-bottom: 0; }
 
 .bca-action-table-listup select + button {
-  position: relative;
-  top: -2px; }
+  position: relative; }
 
 /* list-table
 ----------------------------------------------- */
@@ -9124,7 +9122,8 @@ div.jstree-publish-even {
     margin-top: 15px;
     margin-bottom: 15px; }
   .bca-table-listup__thead-th, .bca-table-listup__tbody-th, .bca-table-listup__tbody-td {
-    padding: 1em 1em 1em 0.5em; }
+    padding: 1em 1em 1em 0.5em;
+    text-align: left; }
   .bca-table-listup__thead-th {
     white-space: nowrap;
     vertical-align: top;
@@ -9170,6 +9169,7 @@ div.jstree-publish-even {
       margin: 0; }
   .bca-table-listup__tbody-td--title {
     min-width: 200px;
+    max-width: 500px;
     font-size: 1.3rem; }
   .bca-table-listup__tbody-td--category {
     min-width: 100px; }
@@ -9189,8 +9189,13 @@ div.jstree-publish-even {
       margin-right: 0.2em; }
   .bca-table-listup .disablerow th, .bca-table-listup .disablerow td {
     background-color: #fafafa; }
+  .bca-table-listup .eye_catch-wrap {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    flex-wrap: nowrap; }
   .bca-table-listup .eye_catch {
-    float: left;
     margin-right: 10px;
     width: 50px; }
     .bca-table-listup .eye_catch img {

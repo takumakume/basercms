@@ -40,7 +40,7 @@
 <!-- 一括処理 -->
 <?php if ($this->BcBaser->isAdminUser()): ?>
 	<div class="bca-action-table-listup">
-		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => __d('baser', '公開'), 'unpublish' => __d('baser', '非公開'), 'del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'))) ?>
+		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => __d('baser', '公開'), 'unpublish' => __d('baser', '非公開'), 'del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'), 'class' => 'bca-select', 'data-bca-select-size' =>'lg')) ?>
 		<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
 	</div>
 <?php endif ?>

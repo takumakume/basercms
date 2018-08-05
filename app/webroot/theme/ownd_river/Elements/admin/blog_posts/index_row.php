@@ -45,8 +45,12 @@ $class = ' class="' . implode(' ', $classies) . '"';
 	</td>
 	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--no"><?php // No ?><?php echo $data['BlogPost']['no']; ?></td>
 	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--title"><?php // アイキャッチ＋タイトル ?>
-		<div class="eye_catch"><?php echo $this->BcUpload->uploadImage('BlogPost.eye_catch',  $data['BlogPost']['eye_catch'], array('imgsize' => 'mobile_thumb')) ?></div>
-		<?php $this->BcBaser->link($data['BlogPost']['name'], array('action' => 'edit', $data['BlogContent']['id'], $data['BlogPost']['id'])) ?>
+    <div class="eye_catch-wrap">
+      <?php if (!empty($data['BlogCategory']['eye_catch'])): ?>
+      <div class="eye_catch"><?php echo $this->BcUpload->uploadImage('BlogPost.eye_catch',  $data['BlogPost']['eye_catch'], array('imgsize' => 'mobile_thumb')) ?></div>
+      <?php endif; ?>
+      <?php $this->BcBaser->link($data['BlogPost']['name'], array('action' => 'edit', $data['BlogContent']['id'], $data['BlogPost']['id'])) ?>
+    </div>
 	</td>
 	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--category"><?php // カテゴリ ?>
 		<?php if (!empty($data['BlogCategory']['title'])): ?>
