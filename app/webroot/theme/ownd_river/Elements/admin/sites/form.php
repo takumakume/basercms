@@ -39,7 +39,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	</tr>
 <?php endif ?>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="required">*</span></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.name', array('type' => 'input', 'size' => '30', 'autofocus' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -53,7 +53,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		</td>
 	</tr>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="required">*</span></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'input', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -62,7 +62,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		</td>
 	</tr>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="required">*</span></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->input('Site.title', array('type' => 'input', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>

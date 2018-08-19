@@ -82,7 +82,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 		<h3 class="bca-main__heading" data-bca-heading-size="md">基本設定</h3>
 		<table class="form-table bca-form-table">
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="required">*</span></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 				<td class="col-input bca-form-table__input">
 					<smalL>[サイト]</smalL> <?php echo $this->BcText->noValue($this->request->data['Site']['display_name'], $mainSiteDisplayName) ?>　
 					<?php if(!$this->request->data['Content']['site_root']): ?>
@@ -110,7 +110,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 			</tr>
 			<tr>
 				<th class="col-head bca-form-table__label">
-					<?php echo $this->BcForm->label('Content.title', __d('baser', 'タイトル')) ?>&nbsp;<span class="required">*</span></th>
+					<?php echo $this->BcForm->label('Content.title', __d('baser', 'タイトル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 				<td class="col-input bca-form-table__input">
 					<?php if(!$this->request->data['Content']['site_root'] && !$disableEdit): ?>
 						<?php echo $this->BcForm->input('Content.title', array('size' => 50)) ?>　
@@ -132,7 +132,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				</td>
 			</tr>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.self_status', __d('baser', '公開状態')) ?>&nbsp;<span class="required">*</span></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.self_status', __d('baser', '公開状態')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 				<td class="col-input bca-form-table__input">
 					<?php if(!$this->request->data['Content']['site_root'] && !$disableEdit): ?>
 						<?php echo $this->BcForm->input('Content.self_status', array('type' => 'radio', 'options' => $this->BcText->booleanDoList('公開'))) ?>
