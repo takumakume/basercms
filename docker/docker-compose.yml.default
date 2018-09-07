@@ -18,12 +18,13 @@ services:
     container_name: basercms-4.1
     image: baserproject/basercms:4.1
     volumes:
-      - .:/var/www/html:cached
+      - ../:/var/www/html:cached
     environment:
       PHP_IDE_CONFIG: "serverName=localhost"
       COMPOSER_ALLOW_SUPERUSER: 1
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - basercms-database
   basercms-smtp:
@@ -32,3 +33,17 @@ services:
     ports:
       - "1080:1080"
       - "1025:1025"
+  basercms-pma:
+    container_name: basercms-pma
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=basercms-database
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    links:
+      - basercms-database
+    ports:
+     - 8080:80
+    volumes:
+       - ./phpmyadmin/sessions:/sessions

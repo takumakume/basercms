@@ -43,10 +43,15 @@ node_modules/
 package.json
 /docker-compose.yml
 /Dockerfile
+/docker/phpmyadmin/
+/docker/ssl/
+/docker/volumes/
+/docker/docker-compose.yml
 /volumes/*
 /.docker-sync/
 !app/webroot/theme/ownd_river
 /lib/Baser/View/Themed/*
 package-lock.json
+/phpmyadmin/
 app/webroot/theme/ownd_river/__assets/__gulp.command
 app/webroot/theme/ownd_river/__assets/__gulp_yarn_install.command

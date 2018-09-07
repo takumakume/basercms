@@ -403,7 +403,7 @@ class BcAppController extends Controller {
 			// ログイン中のユーザーを管理側で削除した場合、ログイン状態を削除する必要がある為
 			// =================================================================
 			$user = $this->BcAuth->user();
-			if ($user && $authConfig) {
+			if ($user && $authConfig && (empty($authConfig['type']) || $authConfig['type'] === 'Form')) {
 				$userModel = $authConfig['userModel'];
 				$User = ClassRegistry::init($userModel);
 				if (strpos($userModel, '.') !== false) {
@@ -716,17 +716,20 @@ class BcAppController extends Controller {
 			$currentPrefix = 'front';
 		}
 		$this->set('currentPrefix', $currentPrefix);
+
+		$user = BcUtil::loginUser();
+		$sessionKey = Configure::read('BcAuthPrefix.admin.sessionKey');
+
 		$authPrefix = Configure::read('BcAuthPrefix.' . $currentPrefix);
-		$user = null;
-		if($authPrefix) {
-			$sessionKey = BcUtil::getLoginUserSessionKey();
-			$user = BcUtil::loginUser($currentPrefix);
-		} else {
-			$sessionKey = Configure::read('BcAuthPrefix.admin.sessionKey');
-			$user = BcUtil::loginUser('admin');
+		if ($authPrefix) {
+			$currentPrefixUser = BcUtil::loginUser($currentPrefix);
+			if ($currentPrefixUser) {
+				$user = $currentPrefixUser;
+				$sessionKey = BcUtil::getLoginUserSessionKey();
+			}
 		}
+
 		/* ログインユーザー */
-		
 		if (BC_INSTALLED && $user && $this->name != 'Installations' && !Configure::read('BcRequest.isUpdater') && !Configure::read('BcRequest.isMaintenance') && $this->name != 'CakeError') {
 			$this->set('user', $user);
 			if (!empty($this->request->params['admin'])) {
@@ -849,7 +852,11 @@ class BcAppController extends Controller {
  * 	- bool agentTemplate : テンプレートの配置場所についてサイト名をサブフォルダとして利用するかどうか（初期値：true）
  * @return bool 送信結果
  */
-		protected function sendMail($to, $title = '', $body = '', $options = []) {
+	public function sendMail($to, $title = '', $body = '', $options = []) {
+  		$dbg = debug_backtrace();
+  		if(!empty($dbg[1]['function']) && $dbg[1]['function'] == 'invokeArgs') {
+  			$this->notFound();
+  		}
 		$options = array_merge([
 			'agentTemplate' => true,
 			'template' => 'default'
