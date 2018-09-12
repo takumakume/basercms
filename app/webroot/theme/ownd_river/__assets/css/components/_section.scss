@@ -2,4 +2,44 @@
   &__post-detail {
     margin-bottom: 1.5em;
   }
+
+  &__submit {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+    text-align: center;
+
+    &__main {
+
+    }
+    &__sub {
+      margin-left: 40px;
+      padding-left: 40px;
+      border-left: 1px solid #ccc;
+
+    }
+
+    [data-bca-btn-type] {
+      margin-right: 20px;
+    }
+    [data-bca-btn-type="delete"] {
+      //margin-right: 100px;
+    }
+  }
+
+
+  &__post-top {
+    display: flex;
+    justify-content:left;
+    margin-bottom: 0.8em;
+    .bca-post__no {
+      margin-right: 2em;
+      font-size: 1.4rem;
+    }
+    .bca-post__url {
+      font-size: 1.4rem;
+    }
+  }
 }

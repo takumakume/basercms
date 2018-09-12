@@ -15,7 +15,7 @@
 		color: $color_text_primary;
 		text-decoration: none;
 		background-image:linear-gradient(rgb(255,255,255) 10%,rgb(244,245,241) 100%);
-		transition: all .5s ease-out 0s;
+		transition: all .3s ease-out 0s;
 
 		&::before {
 			@extend .#{$fa-css-prefix};
@@ -33,7 +33,24 @@
 		}
 	}
 
-	// デフォルトボタン
+  @mixin btn-primary {
+    @include btn-common;
+    color: #fff;
+    border: none;
+    background: $color_primary;
+    &::before {
+      @extend .#{$fa-css-prefix};
+      //font-size: 16px !important;
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      background: $color_secondary;
+    }
+  }
+
+
+  // デフォルトボタン
 	@include btn-common;
 
 	// 公開
@@ -69,7 +86,7 @@
 	// 保存
 	&[data-bca-btn-type=save] {
 		@extend .#{$fa-css-prefix}-upload;
-		@include btn-common;
+		@include btn-primary;
 	}
 
 	// 削除
@@ -99,19 +116,7 @@
 	// 追加
 	&[data-bca-btn-type=add] {
 		@extend .#{$fa-css-prefix}-plus-circle;
-		@include btn-common;
-		color: #fff;
-		border: none;
-		background: $color_primary;
-		&::before {
-			@extend .#{$fa-css-prefix};
-			//font-size: 16px !important;
-			color: #fff;
-		}
-		&:hover {
-			color: #fff;
-			background: $color_secondary;
-		}
+		@include btn-primary;
 	}
 
 	// ヘルプ
@@ -160,7 +165,13 @@
 
 	// サイズ
 	// ===========================
-
+  // xlarge
+  &[data-bca-btn-size=xl] {
+    font-size: $button_font_size_x_large; // 16px *
+    &::before {
+      @extend .#{$fa-css-prefix};
+    }
+  }
 	// large
 	&[data-bca-btn-size=lg] {
 		font-size: $button_font_size_large; // 16px *
@@ -195,6 +206,40 @@
 			//font-size: 1.2rem;
 		}
 	}
+
+  // category
+  // ===========================
+
+  // text
+  &[data-bca-btn-category=text] {
+    font-size: 1.4rem;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: $color_text_link;
+    &::before {
+      //content: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // 色
+  // ===========================
+  &[data-bca-btn-color=danger] {
+    transition: none;
+    &:hover {
+      color: #fff;
+      background: $color_danger;
+      border-color: $color_danger;
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+
 
 	// ステータス
 	// ===========================

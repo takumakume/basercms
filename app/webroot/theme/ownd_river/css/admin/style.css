@@ -512,7 +512,7 @@ template {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=xl]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -2921,7 +2921,7 @@ template {
   margin: 0 .3em 0 0; }
 
 a {
-  color: #9C0;
+  color: #61a82e;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -3795,7 +3795,7 @@ div.jstree-publish-even {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=xl]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -6460,7 +6460,7 @@ div.jstree-publish-even {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=xl]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -9408,6 +9408,8 @@ div.jstree-publish-even {
     border: 0 solid #ccc;
     border-width: 1px 0 0;
     padding: 1em 0; }
+  .bca-form-table__group + .bca-form-table__group {
+    margin-top: 1em; }
 
 .contents-body .btn-slide-form {
   border: 1px solid #CCC;
@@ -9569,7 +9571,7 @@ table.cake-sql-log tr td {
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
+.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--favorite::before, .bca-nav-favorite-title::before, .bca-icon--menuitem::before, .bca-nav__sub-list-item a::before, .bca-nav-favorite-list-item a::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-icon--list::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title::before, .bca-icon--theme::before, .bca-nav__system-item[data-system-type="theme"] .bca-nav__system-item-title::before, .bca-icon--plugin::before, .bca-nav__system-item[data-system-type="plugin"] .bca-nav__system-item-title::before, .bca-icon--setting::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title::before, .bca-nav__system-title button::before, .bca-nav__system-item[data-system-type] .bca-nav__system-item-title::before, .bca-icon--home::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-toolbar__tools-edit a::before, .bca-footer__sns__link:before, .bca-btn-icon::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon[data-bca-btn-type=login]::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon[data-bca-btn-size=lg]::before, .bca-btn-icon[data-bca-btn-size=sm]::before, .bca-btn-icon[data-bca-btn-size=xs]::before, .bca-btn-icon[data-bca-btn-status=primary]::before, .bca-btn::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=preview]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=save]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=login]::before, .bca-btn[data-bca-btn-type=search]::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-btn[data-bca-btn-size=xl]::before, .bca-btn[data-bca-btn-size=lg]::before, .bca-btn[data-bca-btn-size=sm]::before, .bca-btn[data-bca-btn-size=xs]::before, .bca-btn[data-bca-btn-status=primary]::before, .ui-button::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -11903,7 +11905,7 @@ table.cake-sql-log tr td {
   color: #343434;
   text-decoration: none;
   background-image: linear-gradient(white 10%, #f4f5f1 100%);
-  transition: all .5s ease-out 0s; }
+  transition: all .3s ease-out 0s; }
   .bca-btn::before {
     margin-right: 4px;
     color: #343434; }
@@ -11927,7 +11929,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=publish]::before {
       margin-right: 4px;
       color: #343434; }
@@ -11951,7 +11953,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=unpublish]::before {
       margin-right: 4px;
       color: #343434; }
@@ -11975,7 +11977,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=preview]::before {
       margin-right: 4px;
       color: #343434; }
@@ -11999,7 +12001,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=edit]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12023,7 +12025,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=copy]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12047,7 +12049,10 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s;
+    color: #fff;
+    border: none;
+    background: #61a82e; }
     .bca-btn[data-bca-btn-type=save]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12058,6 +12063,11 @@ table.cake-sql-log tr td {
       background-image: linear-gradient(white 100%, white 100%); }
     .bca-btn[data-bca-btn-type=save]:focus {
       box-shadow: 0 0 6px 0px #555555; }
+    .bca-btn[data-bca-btn-type=save]::before {
+      color: #fff; }
+    .bca-btn[data-bca-btn-type=save]:hover {
+      color: #fff;
+      background: #1b6123; }
   .bca-btn[data-bca-btn-type=delete] {
     display: inline-block;
     border-radius: 3px;
@@ -12071,7 +12081,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=delete]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12095,7 +12105,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=back-to-list]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12119,7 +12129,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=favorite]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12143,7 +12153,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=menuitem]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12167,7 +12177,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
+    transition: all .3s ease-out 0s;
     color: #fff;
     border: none;
     background: #61a82e; }
@@ -12199,7 +12209,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=help]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12223,7 +12233,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=permission]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12247,7 +12257,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=home]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12271,7 +12281,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
+    transition: all .3s ease-out 0s;
     color: #fff;
     border: 1px solid #559429;
     background-image: linear-gradient(#61a82e 10%, #559429 100%); }
@@ -12301,7 +12311,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=search]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12325,7 +12335,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s; }
+    transition: all .3s ease-out 0s; }
     .bca-btn[data-bca-btn-type=clear]::before {
       margin-right: 4px;
       color: #343434; }
@@ -12336,6 +12346,8 @@ table.cake-sql-log tr td {
       background-image: linear-gradient(white 100%, white 100%); }
     .bca-btn[data-bca-btn-type=clear]:focus {
       box-shadow: 0 0 6px 0px #555555; }
+  .bca-btn[data-bca-btn-size=xl] {
+    font-size: 2rem; }
   .bca-btn[data-bca-btn-size=lg] {
     font-size: 1.6rem; }
   .bca-btn[data-bca-btn-size=sm] {
@@ -12344,6 +12356,23 @@ table.cake-sql-log tr td {
     font-size: 1.1rem;
     font-size: 0.78rem;
     padding: .6em .8em .4em; }
+  .bca-btn[data-bca-btn-category=text] {
+    font-size: 1.4rem;
+    padding: 0;
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #61a82e; }
+    .bca-btn[data-bca-btn-category=text]:hover {
+      text-decoration: underline; }
+  .bca-btn[data-bca-btn-color=danger] {
+    transition: none; }
+    .bca-btn[data-bca-btn-color=danger]:hover {
+      color: #fff;
+      background: #ce0000;
+      border-color: #ce0000; }
+      .bca-btn[data-bca-btn-color=danger]:hover::before {
+        color: #fff; }
   .bca-btn[data-bca-btn-status=primary] {
     display: inline-block;
     border-radius: 3px;
@@ -12357,7 +12386,7 @@ table.cake-sql-log tr td {
     color: #343434;
     text-decoration: none;
     background-image: linear-gradient(white 10%, #f4f5f1 100%);
-    transition: all .5s ease-out 0s;
+    transition: all .3s ease-out 0s;
     color: #fff;
     background: #61a82e; }
     .bca-btn[data-bca-btn-status=primary]::before {
@@ -12803,6 +12832,30 @@ table.cake-sql-log tr td {
 */
 .bca-section__post-detail {
   margin-bottom: 1.5em; }
+
+.bca-section__submit {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+  text-align: center; }
+  .bca-section__submit__sub {
+    margin-left: 40px;
+    padding-left: 40px;
+    border-left: 1px solid #ccc; }
+  .bca-section__submit [data-bca-btn-type] {
+    margin-right: 20px; }
+
+.bca-section__post-top {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 0.8em; }
+  .bca-section__post-top .bca-post__no {
+    margin-right: 2em;
+    font-size: 1.4rem; }
+  .bca-section__post-top .bca-post__url {
+    font-size: 1.4rem; }
 
 .bca-size-counter {
   display: inline-block;
