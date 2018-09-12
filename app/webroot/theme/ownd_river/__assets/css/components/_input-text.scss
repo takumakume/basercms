@@ -14,6 +14,10 @@
 	&[data-input-text-size=sm]{
 		font-size: $button_font_size_small;
 	}
+  &[data-input-text-size=full-counter]{
+    width: calc(100% - 80px);
+  }
+
 	&:focus{
 		box-shadow: $focus_shadow;
 

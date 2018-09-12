@@ -59,14 +59,14 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table">
 	<?php if ($this->action == 'admin_edit'): ?>
 		<tr>
-			<th class="col-head" style="width:53px"><?php echo $this->BcForm->label('BlogPost.no', 'NO') ?></th>
+			<th class="col-head"><?php echo $this->BcForm->label('BlogPost.no', 'NO') ?></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->value('BlogPost.no') ?>
 				<?php echo $this->BcForm->input('BlogPost.no', ['type' => 'hidden']) ?>
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head" style="width:53px"><?php echo $this->BcForm->label('BlogPost.url', 'URL') ?></th>
+			<th class="col-head"><?php echo $this->BcForm->label('BlogPost.url', 'URL') ?></th>
 			<td class="col-input">
 				<span class="url"><?php echo urldecode($this->BcBaser->getUri($fullUrl)) ?></span>　
 				<?php echo $this->BcForm->button(__d('baser', 'URLコピー'), ['class' => 'small-button', 'style' => 'font-weght:normal', 'id' => 'BtnCopyUrl']) ?>

@@ -345,7 +345,7 @@ class BcFormHelper extends FormHelper {
 		/* カウンター */
 		if (!empty($options['counter'])) {
 			$domId = $this->domId($fieldName, $options);
-			$counter = '<span id="' . $domId . 'Counter' . '" class="size-counter"></span>';
+			$counter = '<span id="' . $domId . 'Counter' . '" class="bca-size-counter"></span>';
 			$script = '$("#' . $domId . '").keyup(countSize);$("#' . $domId . '").keyup();';
 			if (!$this->sizeCounterFunctionLoaded) {
 				$script .= <<< DOC_END
@@ -355,7 +355,7 @@ function countSize() {
 	if(!maxlen || maxlen == -1){
 		maxlen = '-';
 	}
-	$("#"+$(this).attr('id')+'Counter').html(len+'/<small>'+maxlen+'</small>');
+	$("#"+$(this).attr('id')+'Counter').html(len+' /<small>'+maxlen+'</small>');
 }
 DOC_END;
 				$this->sizeCounterFunctionLoaded = true;
@@ -1753,7 +1753,7 @@ DOC_END;
 		// PHP5.3対応のため、is_string($value) 判別を実行
 		$delCheckTag = '';
 		if ($fileLinkTag && $linkOptions['delCheck'] && (is_string($value) || empty($value['session_key']))) {
-			$delCheckTag = $this->checkbox($fieldName . '_delete') . $this->label($fieldName . '_delete', __d('baser', '削除する'));
+			$delCheckTag = $this->checkbox($fieldName . '_delete') . $this->label($fieldName . '_delete',__d('baser', '削除する'));
 		}
 		$hiddenValue = $this->value($fieldName . '_');
 		$fileValue = $this->value($fieldName);
