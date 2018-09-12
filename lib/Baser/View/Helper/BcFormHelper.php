@@ -1716,7 +1716,9 @@ DOC_END;
 			'delCheck' => true,
 			'force' => false,
 			'width' => '',
-			'height' => ''
+			'height' => '',
+			'checkboxClass',
+			'checkboxLabelClass'
 			], $options);
 
 		extract($options);
@@ -1753,7 +1755,7 @@ DOC_END;
 		// PHP5.3対応のため、is_string($value) 判別を実行
 		$delCheckTag = '';
 		if ($fileLinkTag && $linkOptions['delCheck'] && (is_string($value) || empty($value['session_key']))) {
-			$delCheckTag = $this->checkbox($fieldName . '_delete') . $this->label($fieldName . '_delete', __d('baser', '削除する'));
+			$delCheckTag = $this->checkbox($fieldName . '_delete', ['class' => $checkboxClass]) . $this->label($fieldName . '_delete', __d('baser', '削除する'), ['class' => $checkboxLabelClass]);
 		}
 		$hiddenValue = $this->value($fieldName . '_');
 		$fileValue = $this->value($fieldName);
