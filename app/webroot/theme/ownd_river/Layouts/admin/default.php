@@ -22,11 +22,11 @@
 		<?php $this->BcBaser->title() ?>
 		<?php
 		$this->BcBaser->css(array(
+      '../js/admin/vendors/bootstrap-4.1.3/bootstrap.min',
 			'admin/style.css',
 			'admin/jquery-ui/jquery-ui.min',
 			'../js/admin/vendors/jquery.jstree-3.3.1/themes/proton/style.min',
 			'../js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min',
-      '../js/admin/vendors/bootstrap-4.1.3/bootstrap.min',
 			'admin/colorbox/colorbox-1.6.1'))
 		?>
 

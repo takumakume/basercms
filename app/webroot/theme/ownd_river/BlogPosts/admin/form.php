@@ -51,15 +51,13 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 
   <span class="bca-post__url">
   <?php //echo $this->BcForm->label('BlogPost.url', 'URL') ?>
-    <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?></a>　
+    <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?></a>
   <?php echo $this->BcForm->button('', [
     'id' => 'BtnCopyUrl',
     'class' => 'bca-btn',
     'data-bca-btn-type' => 'textcopy',
     'data-bca-btn-category' => 'text',
-    'data-bca-btn-size' => 'sm',
-//    'data-toggle' => 'tooltip',
-//    'data-placement' => 'top'
+    'data-bca-btn-size' => 'sm'
     ]) ?>
 </div>
 <?php endif; ?>

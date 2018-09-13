@@ -32,8 +32,13 @@
 .bca-checkbox + label,
 .bca-checkbox-label{
 	position: relative;
-	//line-height: 1.5;
-	font-size: $label_font_size_medium;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 1.15;
+  font-size: $label_font_size_medium;
+  &:after, &:before {
+    box-sizing: border-box;
+  }
 	&:before{
 		content: "";
 		vertical-align: middle;
@@ -48,13 +53,13 @@
 	}
 	&:after{
 		position: absolute;
-		top: -0em;
+		top: 0em;
 		//left: 0.45em;
 		left: 0.5em;
 		content: "";
 		display: none;
-		width: 0.3em;
-		height: 0.6em;
+		width: 0.5em;
+		height: 0.9em;
 		transform: rotate(45deg);
 		border-right: 0.24em solid $color_primary;
 		border-bottom: 0.24em solid $color_primary;

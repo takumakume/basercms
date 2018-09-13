@@ -2940,7 +2940,8 @@ a {
 
 body {
   min-width: 960px;
-  height: 100%; }
+  height: 100%;
+  line-height: 1.15; }
 
 body * {
   box-sizing: border-box; }
@@ -12542,7 +12543,14 @@ table.cake-sql-log tr td {
 .bca-checkbox + label,
 .bca-checkbox-label {
   position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 1.15;
   font-size: 1.6rem; }
+  .bca-checkbox + label:after, .bca-checkbox + label:before,
+  .bca-checkbox-label:after,
+  .bca-checkbox-label:before {
+    box-sizing: border-box; }
   .bca-checkbox + label:before,
   .bca-checkbox-label:before {
     content: "";
@@ -12558,12 +12566,12 @@ table.cake-sql-log tr td {
   .bca-checkbox + label:after,
   .bca-checkbox-label:after {
     position: absolute;
-    top: -0em;
+    top: 0em;
     left: 0.5em;
     content: "";
     display: none;
-    width: 0.3em;
-    height: 0.6em;
+    width: 0.5em;
+    height: 0.9em;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     border-right: 0.24em solid #61a82e;
@@ -12947,6 +12955,8 @@ table.cake-sql-log tr td {
     font-size: 1.4rem; }
   .bca-section__post-top .bca-post__url {
     font-size: 1.4rem; }
+  .bca-section__post-top .bca-text-url {
+    margin-right: 0.5em; }
 
 .bca-size-counter {
   display: inline-block;
