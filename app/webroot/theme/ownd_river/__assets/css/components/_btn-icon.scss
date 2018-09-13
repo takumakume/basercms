@@ -123,6 +123,12 @@
 		@include bca-btn-icon-common;
 	}
 
+  // テキストコピー
+  &[data-bca-btn-type=textcopy] {
+    @extend .#{$fa-css-prefix}-clipboard;
+    @include bca-btn-icon-common;
+  }
+
 	// サイズ
 	// ===========================
 

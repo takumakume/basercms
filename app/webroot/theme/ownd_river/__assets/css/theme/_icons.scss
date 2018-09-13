@@ -175,10 +175,14 @@
 		@extend .#{$fa-css-prefix}-bookmark;
 		@include fa-common;
 	}
-
-	// ブックマーク
+	// 地球
 	&--globe {
 		@extend .#{$fa-css-prefix}-globe;
 		@include fa-common;
 	}
+  // テキストコピー
+  &--textcopy {
+    @extend .#{$fa-css-prefix}-clipboard;
+    @include fa-common;
+  }
 }

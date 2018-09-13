@@ -43,4 +43,10 @@
 	&:focus + label:before {
 		box-shadow: 0 0 0px 4px #EEEEEE inset, $focus_shadow;
 	}
+
+  &__item {
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+  }
 }
