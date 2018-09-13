@@ -76,6 +76,14 @@ $(function(){
 			contentSelector: "$(this).next('.helptext').html()"
 		});
 	}
+
+  /**
+   * ツールチップ表示
+   * bootstrap4 + jquery
+   */
+  $('[data-toggle="tooltip"]').tooltip({html: true});
+
+
 /**
  * スライド
  * 項目の表示・非表示を切り替える

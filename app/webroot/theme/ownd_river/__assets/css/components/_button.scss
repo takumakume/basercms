@@ -163,6 +163,12 @@
 		@include btn-common;
 	}
 
+  // テキストコピー
+  &[data-bca-btn-type=textcopy] {
+    @extend .#{$fa-css-prefix}-clipboard;
+    @include btn-common;
+  }
+
 	// サイズ
 	// ===========================
   // xlarge

@@ -26,6 +26,7 @@
 			'admin/jquery-ui/jquery-ui.min',
 			'../js/admin/vendors/jquery.jstree-3.3.1/themes/proton/style.min',
 			'../js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min',
+      '../js/admin/vendors/bootstrap-4.1.3/bootstrap.min',
 			'admin/colorbox/colorbox-1.6.1'))
 		?>
 
@@ -44,7 +45,8 @@
 			'admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min',
 			'admin/vendors/jquery.form-2.94',
 			'admin/vendors/jquery.validate.min',
-			'admin/vendors/jquery.colorbox-1.6.1.min',
+      'admin/vendors/jquery.colorbox-1.6.1.min',
+			'admin/vendors/bootstrap-4.1.3/bootstrap.bundle.min',
 			'admin/libs/jquery.mScroll',
 			'admin/libs/jquery.baseUrl',
 			'admin/libs/jquery.bcConfirm',
