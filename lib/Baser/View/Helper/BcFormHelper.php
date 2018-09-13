@@ -345,7 +345,7 @@ class BcFormHelper extends FormHelper {
 		/* カウンター */
 		if (!empty($options['counter'])) {
 			$domId = $this->domId($fieldName, $options);
-			$counter = '<span id="' . $domId . 'Counter' . '" class="size-counter"></span>';
+			$counter = '<span id="' . $domId . 'Counter' . '" class="bca-size-counter"></span>';
 			$script = '$("#' . $domId . '").keyup(countSize);$("#' . $domId . '").keyup();';
 			if (!$this->sizeCounterFunctionLoaded) {
 				$script .= <<< DOC_END
@@ -355,7 +355,7 @@ function countSize() {
 	if(!maxlen || maxlen == -1){
 		maxlen = '-';
 	}
-	$("#"+$(this).attr('id')+'Counter').html(len+'/<small>'+maxlen+'</small>');
+	$("#"+$(this).attr('id')+'Counter').html(len+' /<small>'+maxlen+'</small>');
 }
 DOC_END;
 				$this->sizeCounterFunctionLoaded = true;
