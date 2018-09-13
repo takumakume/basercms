@@ -404,8 +404,23 @@ DOC_END;
 
 		// CUSTOMIZE ADD 2011/05/07 ryuring
 		// >>> hiddenをデフォルトオプションに追加
-		$options = array_merge(['hidden' => true], $options);
+		$options = array_merge([
+			'hidden' => true,
+			'checkboxLabelClass' => '',
+			'checkboxSpanClass' => ''
+		], $options);
 		$hidden = $options['hidden'];
+
+		$checkboxSpanClass = null;
+		if(!empty($options['checkboxSpanClass'])) {
+			$checkboxSpanClass = $options['checkboxSpanClass'];
+		}
+		$labelOptions = [];
+		if(!empty($options['checkboxLabelClass'])) {
+			$labelOptions = ['class' => $options['checkboxLabelClass']];
+		}
+		unset($options['checkboxLabelClass']);
+		unset($options['checkboxSpanClass']);
 		unset($options['hidden']);
 		// <<<
 
@@ -457,7 +472,7 @@ DOC_END;
 		//return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, array('name' => null)));
 		// ---
 		if (!empty($options['label'])) {
-			return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null])) . parent::label($fieldName, $options['label']);
+			return $output . $this->Html->tag('span', $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null])) . parent::label($fieldName, $options['label'], $labelOptions), ['class' => $checkboxSpanClass]);
 		} else {
 			return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null]));
 		}
@@ -1717,8 +1732,9 @@ DOC_END;
 			'force' => false,
 			'width' => '',
 			'height' => '',
-			'checkboxClass',
-			'checkboxLabelClass'
+			'checkboxClass' => '',
+			'checkboxLabelClass' => '',
+			'checkboxSpanClass' => ''
 			], $options);
 
 		extract($options);
@@ -1755,7 +1771,7 @@ DOC_END;
 		// PHP5.3対応のため、is_string($value) 判別を実行
 		$delCheckTag = '';
 		if ($fileLinkTag && $linkOptions['delCheck'] && (is_string($value) || empty($value['session_key']))) {
-			$delCheckTag = $this->checkbox($fieldName . '_delete', ['class' => $checkboxClass]) . $this->label($fieldName . '_delete', __d('baser', '削除する'), ['class' => $checkboxLabelClass]);
+			$delCheckTag = $this->Html->tag('span', $this->checkbox($fieldName . '_delete', ['class' => $checkboxClass]) . $this->label($fieldName . '_delete', __d('baser', '削除する'), ['class' => $checkboxLabelClass]), ['class' => $checkboxSpanClass]);
 		}
 		$hiddenValue = $this->value($fieldName . '_');
 		$fileValue = $this->value($fieldName);

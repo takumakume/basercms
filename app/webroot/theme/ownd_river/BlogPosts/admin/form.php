@@ -45,20 +45,19 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 <?php if ($this->action == 'admin_edit'): ?>
 <div class="bca-section bca-section__post-top">
   <span class="bca-post__no">
-  記事No : <strong><?php echo $this->BcForm->value('BlogPost.no') ?></strong>
+  <?php echo $this->BcForm->label('BlogPost.no', 'NO') ?> : <strong><?php echo $this->BcForm->value('BlogPost.no') ?></strong>
   <?php echo $this->BcForm->input('BlogPost.no', array('type' => 'hidden')) ?>
   </span>
 
   <span class="bca-post__url">
   <?php //echo $this->BcForm->label('BlogPost.url', 'URL') ?>
-  <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?>" class="bca-text-url" target="_blank"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?></a>　
-  <?php echo $this->BcForm->button('<i class="bca-icon--textcopy"></i>' . __d('baser', 'コピー'), [
+  <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?>" class="bca-text-url" target="_blank"><?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?></a>　
+  <?php echo $this->BcForm->button('URL' . __d('baser', 'コピー'), [
     'class' => 'bca-btn',
-    'data-bca-btn-type' => 'textcopy',
+    'data-bca-btn-type' => 'copy',
     'data-bca-btn-category' => 'text',
     'data-bca-btn-size' => 'sm',
     'id' => 'BtnCopyUrl']) ?>
-  </span>
 </div>
 <?php endif; ?>
 
@@ -104,7 +103,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.eye_catch', __d('baser', 'アイキャッチ画像')) ?></th>
 			<td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->file('BlogPost.eye_catch', ['imgsize' => 'thumb', 'width' => '300', 'checkboxClass' => 'bca-checkbox', 'checkboxLabelClass' => 'bca-checkbox-label']) ?>
+        <?php echo $this->BcForm->file('BlogPost.eye_catch', ['imgsize' => 'thumb', 'width' => '300', 'checkboxClass' => 'bca-checkbox', 'checkboxLabelClass' => 'bca-checkbox-label', 'checkboxSpanClass' => 'bca-checkbox-item']) ?>
 				<?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
 			</td>
 		</tr>
@@ -169,15 +168,9 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.status', __d('baser', '公開状態')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
         <div class="bca-form-table__group bca-form-table__data">
-				<?php echo $this->BcForm->input('BlogPost.status',
-          array(
-            'type' => 'radio',
-            'options' => $statuses,
-            'class' => 'bca-radio'
-          )) ?>
+				<?php echo $this->BcForm->input('BlogPost.status', array('type' => 'radio', 'options' => $statuses)) ?>
 				<?php echo $this->BcForm->error('BlogPost.status') ?>
 				&nbsp;&nbsp;
-        <span class="bca-">[公開期間]</span>
 				<?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin',
           array(
             'size' => 12,
@@ -195,11 +188,12 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
         <div class="bca-form-table__group">
 				<?php echo $this->BcForm->input('BlogPost.exclude_search',
 				array(
-				  'type' => 'checkbox',
-				  'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
-          'class' => 'bca-checkbox',
-//          'checkboxLabelClass' => 'bca-checkbox-label'
-        )) ?>
+					'type' => 'checkbox',
+					'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
+					'class' => 'bca-checkbox',
+					'checkboxLabelClass' => 'bca-checkbox-label',
+					'checkboxSpanClass' => 'bca-checkbox-item'
+		        )) ?>
 				<?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
 				<?php echo $this->BcForm->error('BlogPost.publish_end') ?>
         </div>
