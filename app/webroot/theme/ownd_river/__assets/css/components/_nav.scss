@@ -1,5 +1,5 @@
 .bca-nav {
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	flex-basis: 208px;
 	background: $color_background_menu;
 	position: relative;
@@ -8,7 +8,8 @@
 	&__main {
 		font-size: 1em;
 		position: relative;
-		background: $color_background_primary;
+		//background: $color_background_primary;
+    background: $color_background_menu;
 		&-title {
 			display: none;
 		}
@@ -17,7 +18,7 @@
 	&__sub {
 		font-size: 1em;
 		position: relative;
-		border-top: 2px solid $color_border;
+		border-top: 1px solid $color_border;
 		background: $color_background_menu;
 		&,
 		*,
@@ -25,19 +26,19 @@
 		*::after {
 			box-sizing: border-box;
 		}
-		&:last-child {
-			border-bottom: 2px solid $color_border;
+		.bca-nav__main > &:first-of-type {
+			border-top: none;
 		}
 		&-title {
 			margin-top: 0;
 			margin-bottom: 0;
+      font-size: 1em;
 			font-weight: bold;
-			padding: 10px;
 			cursor: pointer;
 			&-label {
-				display: inline-block;
+				display: block;
 				vertical-align: middle;
-				margin-left: 6px;
+        padding: 10px 10px 10px 16px;
 				&:link,
 				&:visited {
 					// a:link のデフォルト設定を消すまで有効
@@ -45,28 +46,49 @@
 				}
 				&:hover {
 					text-decoration: none;
-					color: $color_secondary;
+					color: $color_darkest;
+          background: $color_background_menu_dark;
 				}
 			}
 		}
+    // 閉じている時のメニューhover
 		&:hover {
-			background: $color_background_primary;
-		}
-		&:hover &-list {
-			display: block;
-		}
+      color: $color_primary;
+			//background: $color_background_primary;
+      &:not([data-content-type="dashboard"])::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        right: 0;
+        margin-top: -10px;
+        border: 10px solid;
+        border-color: transparent $color_background_menu transparent transparent;
+      }
+    }
+    // サブメニューを表示
+    &:hover &-list {
+      display: block;
+      background: $color_background_menu;
+      box-shadow: 0 3px 5px rgba(#000, 0.2);
+      z-index: 10;
+    }
+
 		&-list {
 			display: none;
 			position: absolute;
-			top: 50%;
+			top: 0;
 			left: 100%;
 			min-width: 200px;
+      margin: 0;
 			list-style: none;
-			background: $color_background_primary;
-			transform: translate(0, -50%);
+			//background: $color_background_primary;
+			//transform: translate(0, -50%);
 			padding-left: 0;
+
 			&-item {
-				font-size: 0.875em;
+				font-size: 1.4rem;
 				display: block;
 				a {
 					display: block;
@@ -86,8 +108,8 @@
 					&:hover {
 						font-weight: bold;
 						text-decoration: none;
-						color: $color_secondary;
-						background: lighten($color_border, 10%);
+						color: $color_primary;
+						//background: lighten($color_border, 10%);
 						&::before {
 							opacity: 1;
 						}
@@ -98,11 +120,18 @@
 				}
 			}
 		}
+
+    // 中が展開されている時
 		&[data-content-is-current="true"] {
 			.bca-nav__sub-title {
 				color: $color_text_primary;
 				background: $color_background_primary;
 				cursor: default;
+
+        background: $color_background_menu_current;
+        &-label {
+          //color: #fff;
+        }
 			}
 			.bca-nav__sub-list {
 				display: block;
@@ -111,20 +140,28 @@
 				left: auto;
 				width: auto;
 				transform: none;
+        box-shadow: none;
+        background: $color_background_menu_current;
+
 				&-item {
+          // 現在開いているページ
 					&[data-sub-content-is-current="true"] {
-						background: $color_secondary;
+						background: $color_primary;
 						a {
 							position: relative;
 							color: $color_lightest;
+              font-weight: bold;
+              
 							&:link,
 							&:visited {
-								color: $color_lightest;
+                color: $color_lightest;
 							}
 							&:hover {
-								font-weight: normal;
-								color: $color_lightest;
-								background: $color_secondary;
+								//font-weight: normal;
+                //color: $color_primary;
+                //background: none;
+								//color: $color_lightest;
+								//background: $color_secondary;
 							}
 							&::after {
 								content: "";
@@ -142,32 +179,40 @@
 			}
 		}
 
-		&[data-content-type="dashboard"] {
-			.bca-nav__sub-title {
+    &[data-content-type] {
+      .bca-nav__sub-title > a:before {
+        width: 16px;
+        text-align: center;
+      }
+    }
+
+
+    &[data-content-type="dashboard"] {
+			.bca-nav__sub-title > a {
 				@extend .bca-icon--home;
 			}
 		}
 
 		&[data-content-type="contents"] {
-			.bca-nav__sub-title {
+			.bca-nav__sub-title > a {
 				@extend .bca-icon--list;
 			}
 		}
 
 		&[data-content-type="blog-content"] {
-			.bca-nav__sub-title {
+			.bca-nav__sub-title > a {
 				@extend .bca-icon--blog;
 			}
 		}
 
 		&[data-content-type="mail-content"] {
-			.bca-nav__sub-title {
+			.bca-nav__sub-title > a {
 				@extend .bca-icon--mail;
 			}
 		}
 
 		&[data-content-type="system"] {
-			.bca-nav__sub-title {
+			.bca-nav__sub-title > a {
 				@extend .bca-icon--setting;
 			}
 		}
@@ -175,8 +220,8 @@
 
 	//
 	&__system {
-		border-top: .4em solid $color_lightest;
-		border-bottom: 2px solid $color_border;
+		border-top: 1px solid $color_border;
+		border-bottom: 1px solid $color_border;
 
 		&-title {
 			margin: 0;
@@ -185,12 +230,12 @@
 				@extend .bca-icon--setting;
 				appearance: none;
 				text-align: left;
-				font-size: 1em;
+				font-size: 1.4rem;
 				font-weight: bold;
 				border: none;
 				background: none;
 				margin: 0;
-				padding: 10px;
+				padding: 10px 10px 10px 16px;
 				width: 100%;
 				height: 100%;
 				cursor: pointer;
@@ -198,26 +243,35 @@
 		}
 
 		&-item {
-			padding: 0 1em;
+			padding: 0;
 
 			&-title {
+        margin: 0;
 				font-size: .9em;
 			}
 
+      &[data-system-type] {
+        .bca-nav__system-item-title > a:before {
+          width: 16px;
+          text-align: center;
+        }
+      }
+
+
 			&[data-system-type] {
-				.bca-nav__system-item-title {
+				.bca-nav__system-item-title > a {
 					@extend .bca-icon--setting;
 				}
 			}
 
 			&[data-system-type="theme"] {
-				.bca-nav__system-item-title {
+				.bca-nav__system-item-title > a {
 					@extend .bca-icon--theme;
 				}
 			}
 
 			&[data-system-type="plugin"] {
-				.bca-nav__system-item-title {
+				.bca-nav__system-item-title > a {
 					@extend .bca-icon--plugin;
 				}
 			}
