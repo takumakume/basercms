@@ -103,7 +103,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.eye_catch', __d('baser', 'アイキャッチ画像')) ?></th>
 			<td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->file('BlogPost.eye_catch', ['imgsize' => 'thumb', 'width' => '300', 'checkboxClass' => 'bca-checkbox', 'checkboxLabelClass' => 'bca-checkbox-label']) ?>
+        <?php echo $this->BcForm->file('BlogPost.eye_catch', ['imgsize' => 'thumb', 'width' => '300', 'checkboxClass' => 'bca-checkbox', 'checkboxLabelClass' => 'bca-checkbox-label', 'checkboxSpanClass' => 'bca-checkbox-item']) ?>
 				<?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
 			</td>
 		</tr>
@@ -188,11 +188,12 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlog
         <div class="bca-form-table__group">
 				<?php echo $this->BcForm->input('BlogPost.exclude_search',
 				array(
-				  'type' => 'checkbox',
-				  'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
-          'checkboxClass' => 'bca-checkbox',
-          'checkboxLabelClass' => 'bca-checkbox-label'
-        )) ?>
+					'type' => 'checkbox',
+					'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
+					'class' => 'bca-checkbox',
+					'checkboxLabelClass' => 'bca-checkbox-label',
+					'checkboxSpanClass' => 'bca-checkbox-item'
+		        )) ?>
 				<?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
 				<?php echo $this->BcForm->error('BlogPost.publish_end') ?>
         </div>
