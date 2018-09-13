@@ -13,6 +13,9 @@
 
     &__main {
 
+      .bca-btn[data-bca-btn-type="save"] {
+        width: 200px;
+      }
     }
     &__sub {
       margin-left: 40px;
