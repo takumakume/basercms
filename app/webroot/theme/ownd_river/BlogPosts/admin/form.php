@@ -169,7 +169,13 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.status', __d('baser', '公開状態')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
         <div class="bca-form-table__group bca-form-table__data">
-				<?php echo $this->BcForm->input('BlogPost.status', array('type' => 'radio', 'options' => $statuses)) ?>
+				<?php echo $this->BcForm->input('BlogPost.status', [
+					'type' => 'radio',
+					'options' => $statuses,
+					'class' => 'bca-radio',
+					'span' => ['class' => 'bca-radio-item'],
+					'label' => ['class' => 'bca-radio-label']
+				]) ?>
 				<?php echo $this->BcForm->error('BlogPost.status') ?>
 				&nbsp;&nbsp;
 				<?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin',
