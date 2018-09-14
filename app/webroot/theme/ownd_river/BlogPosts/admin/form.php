@@ -147,21 +147,27 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogTag.BlogTag', __d('baser', 'タグ')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<div id="BlogTags" class="bca-form-table__group bca-blogtags">
-					<?php echo $this->BcForm->input('BlogTag.BlogTag', array('type' => 'select', 'multiple' => 'checkbox', 'options' => $this->BcForm->getControlSource('BlogPost.blog_tag_id'))); ?>
-          <?php echo $this->BcForm->error('BlogTag.BlogTag') ?>
+					<?php echo $this->BcForm->input('BlogTag.BlogTag', [
+						'type' => 'select',
+						'multiple' => 'checkbox',
+						'options' => $this->BcForm->getControlSource('BlogPost.blog_tag_id'),
+						'class' => 'bca-checkbox',
+						'span' => ['class' => 'bca-checkbox-item'],
+						'label' => ['class' => 'bca-checkbox-label']
+					]); ?>
+          			<?php echo $this->BcForm->error('BlogTag.BlogTag') ?>
 				</div>
-        <div class="bca-form-table__group">
-				<?php echo $this->BcForm->input('BlogTag.name', array(
-				  'type' => 'text',
-          'class' => 'bca-input-text'
-        )) ?>
-				<?php echo $this->BcForm->button(__d('baser', '新しいタグを追加'),
-          array(
-            'id' => 'BtnAddBlogTag',
-            'class' => 'bca-btn'
-          )) ?>
-				<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'TagLoader', 'class' => 'loader')) ?>
-        </div>
+        		<div class="bca-form-table__group">
+					<?php echo $this->BcForm->input('BlogTag.name', array(
+						'type' => 'text',
+						'class' => 'bca-input-text'
+					)) ?>
+					<?php echo $this->BcForm->button(__d('baser', '新しいタグを追加'), array(
+            			'id' => 'BtnAddBlogTag',
+            			'class' => 'bca-btn'
+          			)) ?>
+					<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'TagLoader', 'class' => 'loader')) ?>
+        		</div>
 			</td>
 		</tr>
 		<?php endif ?>

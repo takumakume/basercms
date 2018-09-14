@@ -13,8 +13,14 @@
 
 
 <?php if($result): ?>
-	<?php echo $this->BcForm->input(
-		'BlogTag.BlogTag',
-		array('type' => 'select', 'multiple' => 'checkbox', 'options' => $result, 'hidden' => false, 'value' => true));
-	?>
+	<?php echo $this->BcForm->input('BlogTag.BlogTag', [
+		'type' => 'select',
+		'multiple' => 'checkbox',
+		'options' => $result,
+		'hidden' => false,
+		'value' => true,
+		'class' => 'bca-checkbox',
+		'span' => ['class' => 'bca-checkbox-item'],
+		'label' => ['class' => 'bca-checkbox-label']
+	]); ?>
 <?php endif ?>

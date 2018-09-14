@@ -278,12 +278,12 @@ class BcFormHelper extends FormHelper {
 		//$label = $this->_getLabel($fieldName, $options);
 		//if ($options['type'] !== 'radio') {
 		// ---
-		if ($options['type'] === 'checkbox') {
+		if ($options['type'] === 'checkbox' || $options['multiple'] === 'checkbox') {
 			$label = '';
 		} else {
 			$label = $this->_getLabel($fieldName, $options);
 		}
-		if ($options['type'] !== 'radio' && $options['type'] !== 'checkbox') {
+		if ($options['type'] !== 'radio' && $options['type'] !== 'checkbox' && $options['multiple'] !== 'checkbox') {
 			// <<<
 			unset($options['label']);
 		}
@@ -896,8 +896,12 @@ DOC_END;
 			'disabled' => false,
 			// CUSTOMIZE ADD 2016/01/26 ryuring
 			// checkboxのdivを外せるオプションを追加
+			// CUSTOMIZE ADD 2018/09/14 ryuring
+			// checkboxk と label を span タグで挟めるようにし、label のオプションを設定できるようにした
 			// >>>
-			'div' => true
+			'div' => true,
+			'span' => null,
+			'label' => null
 			// <<<
 		);
 
@@ -998,8 +1002,12 @@ DOC_END;
 				'disabled' => $attributes['disabled'],
 				// CUSTOMIZE ADD 2016/01/26 ryuring
 				// checkboxのdivを外せるオプションを追加
+				// CUSTOMIZE ADD 2018/09/14 ryuring
+				// span と label のオプションを指定できるようにした
 				// >>>
-				'div' => $div
+				'div' => $div,
+				'span' => $attributes['span'],
+				'label' => $attributes['label']
 				// <<<
 			)
 		));
@@ -1113,7 +1121,17 @@ DOC_END;
 							$attributes['class'] = 'checkbox';
 						} elseif ($attributes['class'] === 'form-error') {
 							$attributes['class'] = 'checkbox ' . $attributes['class'];
+						// CUSTOMIZE MODIFY 2018/09/14 ryuring
+						// >>>
+						//}
+						// ---
+						} else {
+							$htmlOptions['class'] = $attributes['class'];
 						}
+						if(!empty($attributes['label']) && is_array($attributes['label'])) {
+							$label = array_merge($label, $attributes['label']);
+						}
+						// <<<
 
 						// CUSTOMIZE MODIFY 2014/02/24 ryuring
 						// checkboxのdivを外せるオプションを追加
@@ -1121,13 +1139,17 @@ DOC_END;
 						// チェックボックスをラベルタグで囲う仕様に変更した
 						// CUSTOMIZE MODIFY 2017/2/19 ryuring
 						// チェックボックスをラベルタグで囲わない仕様に変更した
+						// CUSTOMIZE MODIFY 2018/09/14 ryuring
+						// チェックボックスとラベルを span タグで挟めるようにした
 						// >>>
 						// $label = $this->label(null, $title, $label);
 						// $item = $this->Html->useTag('checkboxmultiple', $name, $htmlOptions);
 						// $select[] = $this->Html->div($attributes['class'], $item . $label);
 						// ---
 						$item = $this->Html->useTag('checkboxmultiple', $name, $htmlOptions) . $this->label(null, $title, $label);
-						if (isset($attributes['div']) && $attributes['div'] === false) {
+						if (!empty($attributes['span'])) {
+							$select[] = $this->Html->tag('span', $item, $attributes['span']);
+						} elseif (isset($attributes['div']) && $attributes['div'] === false) {
 							$select[] = $item;
 						} else {
 							$select[] = $this->Html->div($attributes['class'], $item);
