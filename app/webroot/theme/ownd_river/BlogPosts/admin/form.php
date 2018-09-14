@@ -16,7 +16,7 @@
 $this->BcBaser->css('admin/ckeditor/editor', array('inline' => true));
 $statuses = array(0 => __d('baser', '非公開'), 1 => __d('baser', '公開'));
 $this->BcBaser->link('&nbsp;', array('controller' => 'blog', 'action' => 'preview', $blogContent['BlogContent']['id'], $previewId, 'view'), array('style' => 'display:none', 'id' => 'LinkPreview'));
-$this->BcBaser->js('Blog.admin/blog_posts/form', false, array('id' => 'AdminBlogBLogPostsEditScript',
+$this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogPostsEditScript',
 	'data-fullurl' => $this->BcContents->getUrl($this->request->params['Content']['url'] . '/archives/' . $this->BcForm->value('BlogPost.no'), true, $this->request->params['Site']['use_subdomain'])
 ));
 ?>
