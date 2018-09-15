@@ -104,7 +104,11 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.eye_catch', __d('baser', 'アイキャッチ画像')) ?></th>
 			<td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->file('BlogPost.eye_catch', ['imgsize' => 'thumb', 'width' => '300', 'checkboxClass' => 'bca-checkbox', 'checkboxLabelClass' => 'bca-checkbox-label', 'checkboxSpanClass' => 'bca-checkbox-item']) ?>
+                <?php echo $this->BcForm->file('BlogPost.eye_catch', [
+                    'imgsize' => 'thumb', 
+                    'width' => '300', 
+                    'class' => 'bca-file'
+                ]) ?>
 				<?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
 			</td>
 		</tr>
@@ -151,9 +155,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 						'type' => 'select',
 						'multiple' => 'checkbox',
 						'options' => $this->BcForm->getControlSource('BlogPost.blog_tag_id'),
-						'class' => 'bca-checkbox',
-						'span' => ['class' => 'bca-checkbox-item'],
-						'label' => ['class' => 'bca-checkbox-label']
+						'class' => 'bca-checkbox'
 					]); ?>
           			<?php echo $this->BcForm->error('BlogTag.BlogTag') ?>
 				</div>
@@ -178,9 +180,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
                     <?php echo $this->BcForm->input('BlogPost.status', [
                         'type' => 'radio',
                         'options' => $statuses,
-                        'class' => 'bca-radio',
-                        'span' => ['class' => 'bca-radio-item'],
-                        'label' => ['class' => 'bca-radio-label']
+                        'class' => 'bca-radio'
                     ]) ?>
 				    <?php echo $this->BcForm->error('BlogPost.status') ?>
                     <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin', [
@@ -199,9 +199,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
                     <?php echo $this->BcForm->input('BlogPost.exclude_search', [
                         'type' => 'checkbox',
                         'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
-                        'class' => 'bca-checkbox',
-                        'checkboxLabelClass' => 'bca-checkbox-label',
-                        'checkboxSpanClass' => 'bca-checkbox-item'
+                        'class' => 'bca-checkbox'
                     ]) ?>
                     <?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
                     <?php echo $this->BcForm->error('BlogPost.publish_end') ?>

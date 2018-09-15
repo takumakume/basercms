@@ -405,22 +405,16 @@ DOC_END;
 		// CUSTOMIZE ADD 2011/05/07 ryuring
 		// >>> hiddenをデフォルトオプションに追加
 		$options = array_merge([
-			'hidden' => true,
-			'checkboxLabelClass' => '',
-			'checkboxSpanClass' => ''
+			'hidden' => true
 		], $options);
 		$hidden = $options['hidden'];
 
-		$checkboxSpanClass = null;
-		if(!empty($options['checkboxSpanClass'])) {
-			$checkboxSpanClass = $options['checkboxSpanClass'];
-		}
+		$spanOptions = [];
 		$labelOptions = [];
-		if(!empty($options['checkboxLabelClass'])) {
-			$labelOptions = ['class' => $options['checkboxLabelClass']];
+		if(!empty($options['class'])) {
+			$spanOptions['class'] = $options['class'] . '-item';
+			$labelOptions['class'] = $options['class'] . '-label';
 		}
-		unset($options['checkboxLabelClass']);
-		unset($options['checkboxSpanClass']);
 		unset($options['hidden']);
 		// <<<
 
@@ -472,7 +466,7 @@ DOC_END;
 		//return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, array('name' => null)));
 		// ---
 		if (!empty($options['label'])) {
-			return $output . $this->Html->tag('span', $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null])) . parent::label($fieldName, $options['label'], $labelOptions), ['class' => $checkboxSpanClass]);
+			return $output . $this->Html->tag('span', $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null])) . parent::label($fieldName, $options['label'], $labelOptions), $spanOptions);
 		} else {
 			return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null]));
 		}
@@ -896,12 +890,8 @@ DOC_END;
 			'disabled' => false,
 			// CUSTOMIZE ADD 2016/01/26 ryuring
 			// checkboxのdivを外せるオプションを追加
-			// CUSTOMIZE ADD 2018/09/14 ryuring
-			// checkboxk と label を span タグで挟めるようにし、label のオプションを設定できるようにした
 			// >>>
 			'div' => true,
-			'span' => null,
-			'label' => null
 			// <<<
 		);
 
@@ -1002,12 +992,8 @@ DOC_END;
 				'disabled' => $attributes['disabled'],
 				// CUSTOMIZE ADD 2016/01/26 ryuring
 				// checkboxのdivを外せるオプションを追加
-				// CUSTOMIZE ADD 2018/09/14 ryuring
-				// span と label のオプションを指定できるようにした
 				// >>>
 				'div' => $div,
-				'span' => $attributes['span'],
-				'label' => $attributes['label']
 				// <<<
 			)
 		));
@@ -1121,15 +1107,18 @@ DOC_END;
 							$attributes['class'] = 'checkbox';
 						} elseif ($attributes['class'] === 'form-error') {
 							$attributes['class'] = 'checkbox ' . $attributes['class'];
-						// CUSTOMIZE MODIFY 2018/09/14 ryuring
-						// >>>
-						//}
-						// ---
-						} else {
-							$htmlOptions['class'] = $attributes['class'];
 						}
-						if(!empty($attributes['label']) && is_array($attributes['label'])) {
-							$label = array_merge($label, $attributes['label']);
+						
+						// CUSTOMIZE MODIFY 2018/09/14 ryuring
+						$spanOptions = [];
+						if(!empty($attributes['class'])) {
+							$htmlOptions['class'] = $attributes['class'];
+							$spanOptions['class'] = $attributes['class'] . '-item';
+							if(!empty($label['class']) && $label['class'] === 'selected') {
+								$label['class'] .= ' ' . $attributes['class'] . '-label';
+							} else {
+								$label['class'] = $attributes['class'] . '-label';
+							}
 						}
 						// <<<
 
@@ -1147,10 +1136,8 @@ DOC_END;
 						// $select[] = $this->Html->div($attributes['class'], $item . $label);
 						// ---
 						$item = $this->Html->useTag('checkboxmultiple', $name, $htmlOptions) . $this->label(null, $title, $label);
-						if (!empty($attributes['span'])) {
-							$select[] = $this->Html->tag('span', $item, $attributes['span']);
-						} elseif (isset($attributes['div']) && $attributes['div'] === false) {
-							$select[] = $item;
+						if (isset($attributes['div']) && $attributes['div'] === false) {
+							$select[] = $this->Html->tag('span', $item, $spanOptions);
 						} else {
 							$select[] = $this->Html->div($attributes['class'], $item);
 						}
@@ -1349,14 +1336,6 @@ DOC_END;
 			$legend = __(Inflector::humanize($this->field()));
 		}
 
-		// CUSTOMIZE ADD 2018/09/14 ryuring
-		$span = false;
-		if (isset($attributes['span'])) {
-			$span = $attributes['span'];
-			unset($attributes['span']);
-		}
-		// <<<
-
 		$fieldsetAttrs = '';
 		if (isset($attributes['fieldset'])) {
 			$fieldsetAttrs = array('class' => $attributes['fieldset']);
@@ -1369,6 +1348,19 @@ DOC_END;
 			unset($attributes['label']);
 		}
 
+		// CUSTOMIZE ADD 2018/09/14 ryuring
+		$spanOptions = [];
+		if(!empty($attributes['class'])) {
+			$spanOptions['class'] = $attributes['class'] . '-item';
+			if(empty($label['class'])) {
+				if($label === true) {
+					$label = [];
+				}
+				$label['class'] = $attributes['class'] . '-label';	
+			}
+		}
+		// <<<
+		
 		$separator = null;
 		if (isset($attributes['separator'])) {
 			$separator = $attributes['separator'];
@@ -1446,10 +1438,7 @@ DOC_END;
 				array_diff_key($allOptions, array('name' => null, 'type' => null, 'id' => null)),
 				$optTitle
 			);
-			if(isset($span)) {
-				$spanOpts = is_array($span) ? $span : [];
-				$radio = $this->Html->tag('span', $radio, $spanOpts);
-			}
+			$radio = $this->Html->tag('span', $radio, $spanOptions);
 			$out[] = $radio;
 			// <<<
 		}
@@ -1942,10 +1931,7 @@ DOC_END;
 			'delCheck' => true,
 			'force' => false,
 			'width' => '',
-			'height' => '',
-			'checkboxClass' => '',
-			'checkboxLabelClass' => '',
-			'checkboxSpanClass' => ''
+			'height' => ''
 			], $options);
 
 		extract($options);
@@ -1982,7 +1968,15 @@ DOC_END;
 		// PHP5.3対応のため、is_string($value) 判別を実行
 		$delCheckTag = '';
 		if ($fileLinkTag && $linkOptions['delCheck'] && (is_string($value) || empty($value['session_key']))) {
-			$delCheckTag = $this->Html->tag('span', $this->checkbox($fieldName . '_delete', ['class' => $checkboxClass]) . $this->label($fieldName . '_delete', __d('baser', '削除する'), ['class' => $checkboxLabelClass]), ['class' => $checkboxSpanClass]);
+			$checkboxOptions = [];
+			$checkboxLabelOptions = [];
+			$checkboxSpanOptions = [];
+			if(!empty($options['class'])) {
+				$checkboxOptions['class'] = $options['class'] . '-checkbox';
+				$checkboxLabelOptions['class'] = $options['class'] . '-checkbox-label';
+				$checkboxSpanOptions['class'] = $options['class'] . '-checkbox-item';
+			}
+			$delCheckTag = $this->Html->tag('span', $this->checkbox($fieldName . '_delete', $checkboxOptions) . $this->label($fieldName . '_delete', __d('baser', '削除する'), $checkboxLabelOptions), $checkboxSpanOptions);
 		}
 		$hiddenValue = $this->value($fieldName . '_');
 		$fileValue = $this->value($fieldName);
