@@ -174,42 +174,38 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.status', __d('baser', '公開状態')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
-        <div class="bca-form-table__group bca-form-table__data">
-				<?php echo $this->BcForm->input('BlogPost.status', [
-					'type' => 'radio',
-					'options' => $statuses,
-					'class' => 'bca-radio',
-					'span' => ['class' => 'bca-radio-item'],
-					'label' => ['class' => 'bca-radio-label']
-				]) ?>
-				<?php echo $this->BcForm->error('BlogPost.status') ?>
-				&nbsp;&nbsp;
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin',
-          array(
-            'size' => 12,
-            'maxlength' => 10,
-            'class' => 'bca-input-text'
-          ), true) ?>
-				&nbsp;〜&nbsp;
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.publish_end',
-          array(
-            'size' => 12,
-            'maxlength' => 10,
-            'class' => 'bca-input-text'
-          ), true) ?>
-        </div>
-        <div class="bca-form-table__group">
-				<?php echo $this->BcForm->input('BlogPost.exclude_search',
-				array(
-					'type' => 'checkbox',
-					'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
-					'class' => 'bca-checkbox',
-					'checkboxLabelClass' => 'bca-checkbox-label',
-					'checkboxSpanClass' => 'bca-checkbox-item'
-		        )) ?>
-				<?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
-				<?php echo $this->BcForm->error('BlogPost.publish_end') ?>
-        </div>
+                <div class="bca-form-table__group bca-form-table__data">
+                    <?php echo $this->BcForm->input('BlogPost.status', [
+                        'type' => 'radio',
+                        'options' => $statuses,
+                        'class' => 'bca-radio',
+                        'span' => ['class' => 'bca-radio-item'],
+                        'label' => ['class' => 'bca-radio-label']
+                    ]) ?>
+				    <?php echo $this->BcForm->error('BlogPost.status') ?>
+                    <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin', [
+                        'size' => 12,
+                        'maxlength' => 10,
+                        'class' => 'bca-datepicker__begin'
+                    ], true) ?>
+                    <span class="bca-datepicker__delimiter">〜</span>
+                    <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_end', [
+                        'size' => 12,
+                        'maxlength' => 10,
+                        'class' => 'bca-datepicker__end'
+                    ], true) ?>
+                </div>
+                <div class="bca-form-table__group">
+                    <?php echo $this->BcForm->input('BlogPost.exclude_search', [
+                        'type' => 'checkbox',
+                        'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
+                        'class' => 'bca-checkbox',
+                        'checkboxLabelClass' => 'bca-checkbox-label',
+                        'checkboxSpanClass' => 'bca-checkbox-item'
+                    ]) ?>
+                    <?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
+                    <?php echo $this->BcForm->error('BlogPost.publish_end') ?>
+                </div>
 			</td>
 		</tr>
 		<tr>

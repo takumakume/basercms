@@ -1806,6 +1806,12 @@ DOC_END;
 		$this->Html->script('admin/vendors/jquery.timepicker', ['inline' => false]);
 		$this->Html->css('admin/jquery.timepicker', 'stylesheet', ['inline' => false]);
 		$timeAttributes = array_merge($attributes, ['size' => 8, 'maxlength' => 8, 'escape' => true]);
+		$options = [];
+		if(!empty($attributes['class'])) {
+			$options['class'] = $attributes['class'];
+			$attributes['class'] = $attributes['class'] .  '__date';
+			$timeAttributes['class'] =  $attributes['class'] .  '__time';
+		}
 		if (!isset($attributes['value'])) {
 			$value = $this->value($fieldName);
 		} else {
@@ -1843,7 +1849,7 @@ $(function(){
 </script>
 DOC_END;
 		$this->_View->append('script', $_script);
-		return $dateTag . $timeTag . $hiddenTag;
+		return $this->Html->tag('span', $dateTag . $timeTag, $options) . $hiddenTag;
 	}
 
 /**
