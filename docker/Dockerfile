@@ -1,4 +1,4 @@
-FROM php:7.1.14-apache-jessie
+FROM php:7.2.10-apache-stretch
 
 # install
 RUN apt-get update \
@@ -6,7 +6,7 @@ RUN apt-get update \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
-        libpng12-dev \
+        libpng-dev \
         openssl libssl-dev \
         libxml2-dev \
         unzip \
@@ -15,7 +15,7 @@ RUN apt-get update \
         libicu-dev \
         ssmtp \
         mailutils \
-    && docker-php-ext-install -j$(nproc) iconv mcrypt pdo_mysql mbstring xml tokenizer zip intl \
+    && docker-php-ext-install -j$(nproc) iconv pdo_mysql mbstring xml tokenizer zip intl \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
 	&& apt-get clean \
