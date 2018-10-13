@@ -141,7 +141,10 @@ class BlogPost extends BlogAppModel {
 				['rule' => ['notBlank'], 'message' => __d('baser', '投稿日を入力してください。'), 'required' => true],
 				['rule' => ['checkDate'], 'message' => __d('baser', '投稿日の形式が不正です。')]],
 			'user_id' => [
-				['rule' => ['notBlank'], 'message' => __d('baser', '投稿者を選択してください。')]]
+				['rule' => ['notBlank'], 'message' => __d('baser', '投稿者を選択してください。')]],
+			'eye_catch' => [
+				['rule' => ['fileExt', ['gif', 'jpg', 'jpeg', 'jpe', 'jfif', 'png']], 'message' => __d('baser', '許可されていないファイルです。')]
+			]
 		];
 	}
 	
@@ -888,7 +891,7 @@ class BlogPost extends BlogAppModel {
 				$query['preview'], $query['sort'], $query['direction'], $query['num'], 
 				$query['force'],$query['no'], $query['siteId'], $query['contentUrl']);
 
-			$this->expects($expects, false);
+			$this->reduceAssociations($expects, false);
 			
 			$this->BlogContent->unbindModel([
 				'hasMany' => ['BlogPost', 'BlogCategory']
