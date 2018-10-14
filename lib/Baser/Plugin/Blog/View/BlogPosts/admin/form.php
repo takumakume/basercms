@@ -96,7 +96,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 		<tr>
 			<th class="col-head"><?php echo $this->BcForm->label('BlogPost.eye_catch', __d('baser', 'アイキャッチ画像')) ?></th>
 			<td class="col-input">
-				<?php echo $this->BcForm->file('BlogPost.eye_catch', ['imgsize' => 'thumb', 'width' => '300']) ?>
+				<?php echo $this->BcForm->input('BlogPost.eye_catch', ['type' => 'file', 'imgsize' => 'thumb', 'width' => '300']) ?>
 				<?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
 			</td>
 		</tr>
@@ -154,9 +154,21 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 				<?php echo $this->BcForm->input('BlogPost.status', ['type' => 'radio', 'options' => $statuses]) ?>
 				<?php echo $this->BcForm->error('BlogPost.status') ?>
                 &nbsp;&nbsp;&nbsp;&nbsp;<small>[公開期間]</small>&nbsp;
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin', ['size' => 12, 'maxlength' => 10], true) ?>
+				<?php echo $this->BcForm->input('BlogPost.publish_begin', [
+				        'type' => 'dateTimePicker', 
+                        'size' => 12, 
+                        'maxlength' => 10,
+						'dateLabel' => ['text' => '開始日付'],
+						'timeLabel' => ['text' => '開始時間']
+                ]) ?>
 				&nbsp;〜&nbsp;
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.publish_end', ['size' => 12, 'maxlength' => 10], true) ?><br />
+				<?php echo $this->BcForm->input('BlogPost.publish_end', [
+				        'type' => 'dateTimePicker', 
+                        'size' => 12, 
+                        'maxlength' => 10,
+						'dateLabel' => ['text' => '終了日付'],
+						'timeLabel' => ['text' => '終了時間']
+                ]) ?><br />
 				<?php echo $this->BcForm->input('BlogPost.exclude_search', ['type' => 'checkbox', 'label' => __d('baser', 'サイト内検索の検索結果より除外する')]) ?>
 				<?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
 				<?php echo $this->BcForm->error('BlogPost.publish_end') ?>
@@ -182,7 +194,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 		<tr>
 			<th class="col-head"><?php echo $this->BcForm->label('BlogPost.posts_date', __d('baser', '投稿日')) ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input">
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.posts_date', ['size' => 12, 'maxlength' => 10], true) ?>
+				<?php echo $this->BcForm->input('BlogPost.posts_date', ['type' => 'dateTimePicker', 'size' => 12, 'maxlength' => 10]) ?>
 				<?php echo $this->BcForm->error('BlogPost.posts_date') ?>
 			</td>
 		</tr>

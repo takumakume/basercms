@@ -226,6 +226,15 @@ class BcFormHelperTest extends BaserTestCase {
 				$event->data['options'][$optionsField] = $optionsData;
 			}
 		}]]);
+		if(@$options['type'] === 'file') {
+			$this->BcForm->BcUpload->request->data = [
+				'Contact' => [
+					'id' => '1',
+					'eye_catch' => 'template1.jpg',
+					'modified' => '2013-07-21 01:41:12', 'created' => '2013-07-21 00:53:42',
+				]
+			];
+		}
 		$result = $this->BcForm->Input($fieldName, $options);
 		$this->assertRegExp('/' . $expected . '/s', $result);
 		$this->resetEvent();
@@ -235,6 +244,8 @@ class BcFormHelperTest extends BaserTestCase {
 		$beginYear = date('Y') - 20;
 		$endYear = date('Y') + 20;
 		return [
+			['value', '', 'User.id', ['type' => 'dateTimePicker'], '<span class="bca-datetimepicker".+?<span class="bca-datetimepicker__date".+?<label .+?class="bca-datetimepicker__date-label".+?<input .+?class="bca-datetimepicker__date-input".+?<span class="bca-datetimepicker__time".+?<label .+?class="bca-datetimepicker__time-label".+?<input .+?class="bca-datetimepicker__time-input".+?'],
+			['value', [1], 'Contact.eye_catch', ['type' => 'file'], '<span class="bca-file".+?<input type="file".+?class="bca-file__input".+?<span class="bca-file__delete".+?<input type="checkbox".+?class="bca-file__delete-input".+?<label.+?class="bca-file__delete-label".+?<figure class="bca-file__figure".+?<a .+?class="bca-file__link".+?<img .+?class="bca-file__img".+?<figcaption class="bca-file__figcaption file-name"'],
 			['value', [1], 'User.id', ['type' => 'select', 'multiple' => 'checkbox', 'options' => [1 => 'abc', 2 => 'def']], '<span class="bca-checkbox-group"><input type="hidden".*?<span class="bca-checkbox"><input type="checkbox".+?class="bca-checkbox__input" \/>&nbsp;<label.+?class="bca-checkbox__label"'],
 			['value', [1], 'User.id', ['type' => 'select', 'options' => [1 => 'abc', 2 => 'def']], '<span class="bca-select"><select.+?class="bca-select__select"'],
 			['value', 'hoge', 'User.id', ['type' => 'textarea'], '<span class="bca-textarea"><textarea name="data\[User\]\[id\]" class="bca-textarea__textarea" maxlength="11" cols="30" rows="6" id="UserId">hoge<\/textarea><\/span>'],
@@ -505,7 +516,7 @@ class BcFormHelperTest extends BaserTestCase {
 
 	public function dateTimePickerDataProvider() {
 		return [
-			['baser', [], 'span class="bca-datetimepicker".+?span class="bca-datetimepicker__date".+?label.+?class="bca-datetimepicker__date-label".+?input.+?class="bca-datetimepicker__date-input".+?id="baser_date".*\$\("#baser_date"\)\.datepicker\(\);.+?span class="bca-datetimepicker__time".+?label.+?class="bca-datetimepicker__time-label".+?input.+?class="bca-datetimepicker__time-input".+?id="baser_time"', 'dateTimePicker()が出力されません'],
+			['baser', [], '<span><label for="baser_date">日付.+?<input .+?<span><label for="baser_time">時間.+?<input .+?<input type="hidden".+?', 'dateTimePicker()が出力されません'],
 			['baser', ['value' => '2010-4-1 11:22:33'], 'value="2010\/4\/1".*value="11:22:33".*value="2010-4-1 11:22:33"', '時間指定が正しく出力できません'],
 			['baser', ['value' => '2010-04-01 11:22:33'], 'value="2010\/04\/01".*value="11:22:33".*value="2010-04-01 11:22:33"', '時間指定が正しく出力できません'],
 			['baser', ['value' => '2010-4-1 '], 'value="2010\/4\/1".*value="".* value="2010-4-1 "', '時間を指定いない場合出力できません'],
@@ -561,17 +572,17 @@ class BcFormHelperTest extends BaserTestCase {
 
 	public function fileDataProvider() {
 		return [
-//			['hoge', [], '<input type="file" name="data\[hoge\]" id="hoge"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['imgsize' => '50'], 'imgsize="50"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['link' => 'page'], 'link="page"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['delCheck' => 'page'], 'delCheck="page"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['force' => 'page'], 'force="page"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['rel' => 'page'], 'rel="page"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['title' => 'page'], 'title="page"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['width' => 'page'], 'width="page"', 'ファイルインプットボックス出力できません'],
+			['hoge', [], '<input type="file" name="data\[hoge\]" id="hoge"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['imgsize' => '50'], 'imgsize="50"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['link' => 'page'], 'link="page"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['delCheck' => 'page'], 'delCheck="page"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['force' => 'page'], 'force="page"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['rel' => 'page'], 'rel="page"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['title' => 'page'], 'title="page"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['width' => 'page'], 'width="page"', 'ファイルインプットボックス出力できません'],
 			['hoge', ['height' => 'page'], 'height="page"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['value' => 'page'], '<input type="file" name="data\[hoge\]" id="hoge"', 'ファイルインプットボックス出力できません'],
-//			['hoge', ['hoge' => 'page'], 'hoge="page"', 'ファイルインプットボックス出力できません']
+			['hoge', ['value' => 'page'], '<input type="file" name="data\[hoge\]" id="hoge"', 'ファイルインプットボックス出力できません'],
+			['hoge', ['hoge' => 'page'], 'hoge="page"', 'ファイルインプットボックス出力できません']
 		];
 	}
 
@@ -666,9 +677,7 @@ class BcFormHelperTest extends BaserTestCase {
 		// 通常
 		$result = $this->BcForm->file($fieldName);
 		$expected = [
-			'span'	=> ['class' => 'bca-file upload-file'],
-			['input' => ['type' => 'file', 'name' => 'data[Contact][upload]', 'class' => 'bca-file__input', 'id' => 'ContactUpload']],
-			'/span'
+			['input' => ['type' => 'file', 'name' => 'data[Contact][upload]', 'id' => 'ContactUpload']],
 		];
 		$this->assertTags($result, $expected);
 	}
@@ -693,28 +702,26 @@ class BcFormHelperTest extends BaserTestCase {
 
 		$result = $this->BcForm->file($fieldName);
 		$expected = [
-			['span'	=> ['class' => 'bca-file upload-file']],
-			['input' => ['type' => 'file', 'name' => 'data[Contact][eye_catch]', 'class' => 'bca-file__input', 'id' => 'ContactEyeCatch']],
+			['input' => ['type' => 'file', 'name' => 'data[Contact][eye_catch]', 'id' => 'ContactEyeCatch']],
 			'&nbsp;',
-			['span' => ['class' => 'bca-file__delete']],
+			['span' => []],
 			['input' => ['type' => 'hidden', 'name' => 'data[Contact][eye_catch_delete]', 'id' => 'ContactEyeCatchDelete_', 'value' => '0']],
-			['input' => ['type' => 'checkbox', 'name' => 'data[Contact][eye_catch_delete]', 'class' => 'bca-file__delete-input', 'value' => '1', 'id' => 'ContactEyeCatchDelete']],
-			['label' => ['for' => 'ContactEyeCatchDelete', 'class' => 'bca-file__delete-label']],
+			['input' => ['type' => 'checkbox', 'name' => 'data[Contact][eye_catch_delete]', 'value' => '1', 'id' => 'ContactEyeCatchDelete']],
+			['label' => ['for' => 'ContactEyeCatchDelete']],
 			'削除する',
 			'/label',
 			'/span',
 			['input' => ['type' => 'hidden', 'name' => 'data[Contact][eye_catch_]', 'value' => 'template1.jpg', 'id' => 'ContactEyeCatch']],
 			['br' => true],
-			['figure' => ['class' => 'bca-file__figure']],	
-			['a' => ['href' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'rel' => 'colorbox', 'title' => '', 'class' => 'bca-file__link']],
-			['img' => ['src' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'alt' => '', 'class' => 'bca-file__img']],
+			['figure' => []],	
+			['a' => ['href' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'rel' => 'colorbox', 'title' => '']],
+			['img' => ['src' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'alt' => '']],
 			'/a',
 			['br' => true],
-			['figcaption' => ['class' => 'bca-file__figcaption file-name']],
+			['figcaption' => ['class' => 'file-name']],
 			'template1.jpg',
 			'/figcaption',
 			'/figure',
-			'/span'
 		];
 
 		$this->assertTags($result, $expected);
@@ -733,9 +740,7 @@ class BcFormHelperTest extends BaserTestCase {
 		$result = $this->BcForm->file($fieldName);
 
 		$expected = [
-			'span'	=> ['class' => 'bca-file upload-file'],
-			['input' => ['type' => 'file', 'name' => 'data[Contact][0][upload]', 'class' => 'bca-file__input', 'id' => 'Contact0Upload']],
-			'/span'
+			['input' => ['type' => 'file', 'name' => 'data[Contact][0][upload]', 'id' => 'Contact0Upload']],
 		];
 		$this->assertTags($result, $expected);
 	}
@@ -763,28 +768,26 @@ class BcFormHelperTest extends BaserTestCase {
 		$result = $this->BcForm->file($fieldName);
 
 		$expected = [
-			['span' => ['class' => 'bca-file upload-file']],
-			['input' => ['type' => 'file', 'name' => 'data[Contact][0][eye_catch]', 'class' => 'bca-file__input', 'id' => 'Contact0EyeCatch']],
+			['input' => ['type' => 'file', 'name' => 'data[Contact][0][eye_catch]', 'id' => 'Contact0EyeCatch']],
 			'&nbsp;',
-			['span' => ['class' => 'bca-file__delete']],
+			['span' => []],
 			['input' => ['type' => 'hidden', 'name' => 'data[Contact][0][eye_catch_delete]', 'id' => 'Contact0EyeCatchDelete_', 'value' => '0']],
-			['input' => ['type' => 'checkbox', 'name' => 'data[Contact][0][eye_catch_delete]', 'class' => 'bca-file__delete-input', 'value' => '1', 'id' => 'Contact0EyeCatchDelete']],
-			'label' => ['for' => 'Contact0EyeCatchDelete', 'class' => 'bca-file__delete-label'],
+			['input' => ['type' => 'checkbox', 'name' => 'data[Contact][0][eye_catch_delete]', 'value' => '1', 'id' => 'Contact0EyeCatchDelete']],
+			'label' => ['for' => 'Contact0EyeCatchDelete'],
 			'削除する',
 			'/label',
 			'/span',
 			['input' => ['type' => 'hidden', 'name' => 'data[Contact][0][eye_catch_]', 'value' => 'template1.jpg', 'id' => 'Contact0EyeCatch']],
 			['br' => true],
-			['figure' => ['class' => 'bca-file__figure']],
-			'a' => ['href' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'rel' => 'colorbox', 'title' => '', 'class' => 'bca-file__link'],
-			['img' => ['src' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'alt' => '', 'class' => 'bca-file__img']],
+			['figure' => []],
+			'a' => ['href' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'rel' => 'colorbox', 'title' => ''],
+			['img' => ['src' => 'preg:/' . preg_quote('/files/template1.jpg?', '/') . '\d+/', 'alt' => '']],
 			'/a',
 			['br' => true],
-			['figcaption' => ['class' => 'bca-file__figcaption file-name']],
+			['figcaption' => ['class' => 'file-name']],
 			'template1.jpg',
 			'/figcaption',
 			'/figure',
-			'/span'
 		];
 
 		$this->assertTags($result, $expected);

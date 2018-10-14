@@ -100,8 +100,9 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.eye_catch', __d('baser', 'アイキャッチ画像')) ?></th>
 			<td class="col-input bca-form-table__input">
-                <?php echo $this->BcForm->file('BlogPost.eye_catch', [
-                    'imgsize' => 'thumb', 
+                <?php echo $this->BcForm->input('BlogPost.eye_catch', [
+					'type' => 'file',
+					'imgsize' => 'thumb', 
                     'width' => '300'
                 ]) ?>
 				<?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
@@ -173,14 +174,20 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
                         'options' => $statuses
                     ]) ?>
 				    <?php echo $this->BcForm->error('BlogPost.status') ?>
-                    <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin', [
-                        'size' => 12,
-                        'maxlength' => 10
+                    <?php echo $this->BcForm->input('BlogPost.publish_begin', [
+						'type' => 'dateTimePicker',
+						'size' => 12,
+                        'maxlength' => 10,
+						'dateLabel' => ['text' => '開始日付'],
+						'timeLabel' => ['text' => '開始時間']
                     ], true) ?>
                     <span class="bca-datepicker__delimiter">〜</span>
-                    <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_end', [
-                        'size' => 12,
-                        'maxlength' => 10
+                    <?php echo $this->BcForm->input('BlogPost.publish_end', [
+						'type' => 'dateTimePicker',
+						'size' => 12,
+                        'maxlength' => 10,
+						'dateLabel' => ['text' => '終了日付'],
+						'timeLabel' => ['text' => '終了時間']
                     ], true) ?>
                 </div>
                 <div class="bca-form-table__group">
@@ -213,8 +220,9 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.posts_date', __d('baser', '投稿日')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.posts_date', [
-                    'size' => 12,
+				<?php echo $this->BcForm->input('BlogPost.posts_date', [
+					'type' => 'dateTimePicker',
+					'size' => 12,
                     'maxlength' => 10
                 ], true) ?>
 				<?php echo $this->BcForm->error('BlogPost.posts_date') ?>

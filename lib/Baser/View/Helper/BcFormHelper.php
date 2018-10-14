@@ -245,6 +245,36 @@ class BcFormHelper extends FormHelper {
 					$options['label'] = false;
 				}
 				break;
+			case 'file':
+				$class = 'bca-file__input';
+				$divClass = 'bca-file';
+				if (!isset($options['label'])) {
+					$options['label'] = false;
+				}
+				$options = array_merge([
+					'link' => ['class' => 'bca-file__link'],
+					'class' => 'bca-file__input',
+					'div' => ['tag' => 'span', 'class' => 'bca-file'],
+					'deleteSpan' => ['class' => 'bca-file__delete'],
+					'deleteCheckbox' => ['class' => 'bca-file__delete-input'],
+					'deleteLabel' => ['class' => 'bca-file__delete-label'],
+					'figure' => ['class' => 'bca-file__figure'],
+					'img' => ['class' => 'bca-file__img'],
+					'figcaption' => ['class' => 'bca-file__figcaption']
+				], $options);
+				break;
+			case 'dateTimePicker':
+				$divClass = 'bca-datetimepicker';
+				$options['label'] = false;
+				$options = array_merge([
+					'dateInput' => ['class' => 'bca-datetimepicker__date-input'],
+					'dateDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__date'],
+					'dateLabel' => ['text' => '日付', 'class' => 'bca-datetimepicker__date-label'],
+					'timeInput' => ['class' => 'bca-datetimepicker__time-input'],
+					'timeDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__time'],
+					'timeLabel' => ['text' => '時間', 'class' => 'bca-datetimepicker__time-label']
+				], $options);
+				break;
 			case 'text':
 			case 'datepicker':	
 				if (!isset($options['label'])) {
@@ -1902,23 +1932,20 @@ DOC_END;
 		$this->Html->css('admin/jquery.timepicker', 'stylesheet', ['inline' => false]);
 		
 		$options = array_merge([
-			'div' => ['tag' => 'span', 'class' => 'bca-datetimepicker'],
-			'dateDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__date'],
-			'dateLabel' => ['text' => '日付', 'class' => 'bca-datetimepicker__date-label'],
-			'timeDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__time'],
-			'timeLabel' => ['text' => '時間', 'class' => 'bca-datetimepicker__time-label']
+			'div' => ['tag' => 'span'],
+			'dateInput' => [],
+			'dateDiv' => ['tag' => 'span'],
+			'dateLabel' => ['text' => '日付'],
+			'timeInput' => [],
+			'timeDiv' => ['tag' => 'span'],
+			'timeLabel' => ['text' => '時間']
 		], $options);
 		
 		$dateOptions = array_merge($options, [
 			'type' => 'datepicker',
 			'div' => $options['dateDiv'],
 			'label' => $options['dateLabel']
-		]);
-		if(!empty($dateOptions['class'])) {
-			$dateOptions['class'] .= '__date-input';
-		} else {
-			$dateOptions['class'] = 'bca-datetimepicker__date-input';
-		}
+		], $options['dateInput']);
 
 		$timeOptions = array_merge($options, [
 			'type' => 'text',
@@ -1927,16 +1954,11 @@ DOC_END;
 			'size' => 8, 
 			'maxlength' => 8, 
 			'escape' => true
-		]);
-		if(!empty($timeOptions['class'])) {
-			$timeOptions['class'] .= '__time-input';
-		} else {
-			$timeOptions['class'] = 'bca-datetimepicker__time-input';
-		}
+		], $options['timeInput']);
 		
-		unset($options['dateDiv'], $options['dateLabel'], $options['timeDiv'], $options['timeLabel']);
-		unset($dateOptions['dateDiv'], $dateOptions['dateLabel'], $dateOptions['timeDiv'], $dateOptions['timeLabel']);
-		unset($timeOptions['dateDiv'], $timeOptions['dateLabel'], $timeOptions['timeDiv'], $timeOptions['timeLabel']);
+		unset($options['dateDiv'], $options['dateLabel'], $options['timeDiv'], $options['timeLabel'], $options['dateInput'], $options['timeInput']);
+		unset($dateOptions['dateDiv'], $dateOptions['dateLabel'], $dateOptions['timeDiv'], $dateOptions['timeLabel'], $dateOptions['dateInput'], $dateOptions['timeInput']);
+		unset($timeOptions['dateDiv'], $timeOptions['dateLabel'], $timeOptions['timeDiv'], $timeOptions['timeLabel'], $timeOptions['dateInput'], $timeOptions['timeInput']);
 		
 		if (!isset($options['value'])) {
 			$value = $this->value($fieldName);
@@ -1950,8 +1972,49 @@ DOC_END;
 			$dateOptions['value'] = $dateValue;
 			$timeOptions['value'] = $timeValue;
 		}
-		$dateTag = $this->input($fieldName . '_date', $dateOptions);
-		$timeTag = $this->input($fieldName . '_time', $timeOptions);
+
+		$dateDivOptions = $timeDivOptions = $dateLabelOptions = $timeLabelOptions = null;
+		if(!empty($dateOptions['div'])) {
+			$dateDivOptions = $dateOptions['div'];
+			unset($dateOptions['div']);
+		}
+		if(!empty($timeOptions['div'])) {
+			$timeDivOptions = $timeOptions['div'];
+			unset($timeOptions['div']);
+		}
+		if(!empty($dateOptions['label'])) {
+			$dateLabelOptions = $dateOptions;
+			unset($dateOptions['type'], $dateOptions['label']);
+		}
+		if(!empty($timeOptions['label'])) {
+			$timeLabelOptions = $timeOptions;
+			unset($timeOptions['type'], $timeOptions['label']);
+		}
+		
+		$dateTag = $this->datepicker($fieldName . '_date', $dateOptions);
+		if($dateLabelOptions['label']) {
+			$dateTag = $this->_getLabel($fieldName, $dateLabelOptions) . $dateTag;
+		}
+		if($dateDivOptions) {
+			$tag = 'div';
+			if(!empty($dateDivOptions['tag'])) {
+				$tag = $dateDivOptions['tag'];
+				unset($dateDivOptions['tag']);
+			}
+			$dateTag = $this->Html->tag($tag, $dateTag, $dateDivOptions);	
+		}
+		$timeTag = $this->text($fieldName . '_time', $timeOptions);
+		if($timeLabelOptions['label']) {
+			$timeTag = $this->_getLabel($fieldName, $timeLabelOptions) . $timeTag;
+		}
+		if($timeDivOptions) {
+			$tag = 'div';
+			if(!empty($timeDivOptions['tag'])) {
+				$tag = $timeDivOptions['tag'];
+				unset($timeDivOptions['tag']);
+			}
+			$timeTag = $this->Html->tag($tag, $timeTag, $timeDivOptions);
+		}
 		$hiddenTag = $this->hidden($fieldName, ['value' => $value]);
 		$domId = $this->domId();
 		$_script = <<< DOC_END
@@ -1977,24 +2040,8 @@ $(function(){
 DOC_END;
 		$this->_View->append('script', $_script);
 		
-		$output = $dateTag . $timeTag . $hiddenTag;
-		if (isset($options['div'])) {
-			if ($options['div'] === false) {
-				return $output;
-			} elseif (is_array($options['div'])) {
-				$divOptions = $options['div'];
-				$tag = 'div';
-				if (!empty($divOptions['tag'])) {
-					$tag = $divOptions['tag'];
-				}
-				unset($divOptions['tag'], $divOptions['errorClass']);
-				return $this->Html->tag($tag, $output, $divOptions);
-			} else {
-				return $this->Html->div($options['class'], $output);
-			}
-		} else {
-			return $output;
-		}
+		return $dateTag . $timeTag . $hiddenTag;
+
 	}
 
 /**
@@ -2083,19 +2130,19 @@ DOC_END;
 			'imgsize' => 'medium', // 画像サイズ
 			'rel' => '', // rel属性
 			'title' => '', // タイトル属性
-			'link' => ['class' => 'bca-file__link'], // 大きいサイズの画像へのリンク有無
+			'link' => true, // 大きいサイズの画像へのリンク有無
 			'delCheck' => true,
 			'force' => false,
 			'width' => '',
 			'height' => '',
-			'class' => 'bca-file__input',
-			'div' => ['tag' => 'span', 'class' => 'bca-file'],
-			'deleteSpan' => ['class' => 'bca-file__delete'],
-			'deleteCheckbox' => ['class' => 'bca-file__delete-input'],
-			'deleteLabel' => ['class' => 'bca-file__delete-label'],
-			'figure' => ['class' => 'bca-file__figure'],
-			'img' => ['class' => 'bca-file__img'],
-			'figcaption' => ['class' => 'bca-file__figcaption']
+			'class' => '',
+			'div' => false,
+			'deleteSpan' => [],
+			'deleteCheckbox' => [],
+			'deleteLabel' => [],
+			'figure' => [],
+			'img' => ['class' => ''],
+			'figcaption' => []
 		], $options);
 
 		$linkOptions = [
@@ -2125,7 +2172,9 @@ DOC_END;
 		if(!empty($options['div'])) {
 			$divOptions = $options['div'];
 		}
-		
+		if(empty($options['class'])) {
+			unset($options['class']);
+		}
 		unset($options['imgsize'], $options['rel'], $options['title'], $options['link']);
 		unset($options['delCheck'], $options['force'], $options['width'], $options['height']);
 		unset($options['deleteSpan'], $options['deleteCheckbox'], $options['deleteLabel']);

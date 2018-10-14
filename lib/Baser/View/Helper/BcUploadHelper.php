@@ -45,7 +45,7 @@ class BcUploadHelper extends BcAppHelper {
 			'width' => '', // 横幅
 			'height' => '', // 高さ
 			'figure' => null,
-			'img' => null,
+			'img' => ['class' => ''],
 			'figcaption' => null
 			], $options);
 
@@ -223,6 +223,9 @@ class BcUploadHelper extends BcAppHelper {
 			'height' => $options['height'],
 			'class' => $options['class']
 		];
+		if(empty($imgOptions['class'])) {
+			unset($imgOptions['class']);	
+		}
 		if ($imgOptions['width'] === '') {
 			unset($imgOptions['width']);
 		}
@@ -236,7 +239,9 @@ class BcUploadHelper extends BcAppHelper {
 		if(!empty($options['link']) && is_array($options['link'])) {
 			$linkOptions = array_merge($linkOptions, $options['link']);
 		}
-
+		if(empty($linkOptions['class'])) {
+			unset($linkOptions['class']);
+		}
 		if (is_array($fileName)) {
 			if (isset($fileName['session_key'])) {
 				$fileName = $fileName['session_key'];
@@ -370,6 +375,7 @@ class BcUploadHelper extends BcAppHelper {
 		unset($options['tmp']);
 		unset($options['force']);
 		unset($options['output']);
+		unset($options['class']);
 		
 		switch($output){
 			case 'url' :
