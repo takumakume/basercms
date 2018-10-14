@@ -232,19 +232,56 @@ class BcFormHelper extends FormHelper {
 			$type = $options['type'];
 		}
 
-		if (!isset($options['div'])) {
-			$options['div'] = false;
-		}
-
 		if (!isset($options['error'])) {
 			$options['error'] = false;
 		}
 
+		$class = 'bca-hidden__input';
+		$divClass = 'bca-hidden'; 
+		$labelClass = $childDivClass = $label = '';
 		switch ($type) {
-			case 'text':
 			default :
 				if (!isset($options['label'])) {
 					$options['label'] = false;
+				}
+				break;
+			case 'text':
+			case 'datepicker':	
+				if (!isset($options['label'])) {
+					$options['label'] = false;
+				}
+				$class = 'bca-textbox__input';
+				$divClass = 'bca-textbox';
+				$labelClass = 'bca-textbox__label';
+				break;
+			case 'textarea':
+				if (!isset($options['label'])) {
+					$options['label'] = false;
+				}
+				$class = 'bca-textarea__textarea';
+				$divClass = 'bca-textarea';
+				break;
+			case 'checkbox':
+				if (!isset($options['label'])) {
+					$options['label'] = false;
+				}
+				$class = 'bca-checkbox__input';
+				$divClass = 'bca-checkbox';
+				$labelClass = 'bca-checkbox__label';
+				break;
+			case 'select':
+				if(!empty($options['multiple']) && $options['multiple'] === 'checkbox') {
+					$options['label'] = true;
+					$class = 'bca-checkbox__input';
+					$divClass = 'bca-checkbox-group';
+					$labelClass = 'bca-checkbox__label';
+					$childDivClass = 'bca-checkbox';
+				} else {
+					if (!isset($options['label'])) {
+						$options['label'] = false;
+					}
+					$class = 'bca-select__select';
+					$divClass = 'bca-select';
 				}
 				break;
 			case 'radio':
@@ -254,7 +291,32 @@ class BcFormHelper extends FormHelper {
 				if (!isset($options['separator'])) {
 					$options['separator'] = '　';
 				}
+				$options['label'] = true;
+				$class = 'bca-radio__input';
+				$divClass = 'bca-radio-group';
+				$labelClass = 'bca-radio__label';
+				$childDivClass = 'bca-radio';
 				break;
+		}
+
+		if (!isset($options['div'])) {
+			$options['div'] = ['tag' => 'span', 'class' => $divClass];
+		}
+		if (!isset($options['class'])) {
+			$options['class'] = $class;
+		}
+		if (!isset($options['label']['class'])) {
+			if(!empty($options['label'])) {
+				if($options['label'] !== true) {
+					$options['label'] = ['text' => $options['label'], 'class' => $labelClass];
+				} else {
+					$options['label'] = ['class' => $labelClass];
+				}
+			}
+			
+		}
+		if(!$type || $type === 'hidden') {
+			unset($options['class']);
 		}
 		// <<<
 
@@ -262,10 +324,21 @@ class BcFormHelper extends FormHelper {
 		$options = $this->_parseOptions($options);
 
 		$divOptions = $this->_divOptions($options);
-		// CUSTOMIZE DELETE 2016/01/26 ryuring
+		// CUSTOMIZE MODIFY 2018/10/13 ryuring
 		// checkboxのdivを外せるオプションを追加
 		// >>>
 		//unset($options['div']);
+		// ---
+		if ($childDivClass) {
+			$options['div']['class'] = $childDivClass;
+		} else {
+			unset($options['div']);
+		}
+		$counter = false;
+		if(isset($options['counter'])) {
+			$counter = true;
+			unset($options['counter']);
+		}
 		// <<<
 
 		if ($options['type'] === 'radio' && isset($options['options'])) {
@@ -278,12 +351,12 @@ class BcFormHelper extends FormHelper {
 		//$label = $this->_getLabel($fieldName, $options);
 		//if ($options['type'] !== 'radio') {
 		// ---
-		if ($options['type'] === 'checkbox' || $options['multiple'] === 'checkbox') {
+		if ($options['type'] === 'checkbox' || (isset($options['multiple']) && $options['multiple'] === 'checkbox')) {
 			$label = '';
 		} else {
 			$label = $this->_getLabel($fieldName, $options);
 		}
-		if ($options['type'] !== 'radio' && $options['type'] !== 'checkbox' && $options['multiple'] !== 'checkbox') {
+		if ($options['type'] !== 'radio' && $options['type'] !== 'checkbox' && @$options['multiple'] !== 'checkbox') {
 			// <<<
 			unset($options['label']);
 		}
@@ -343,9 +416,9 @@ class BcFormHelper extends FormHelper {
 		// ---
 
 		/* カウンター */
-		if (!empty($options['counter'])) {
+		if (!empty($counter)) {
 			$domId = $this->domId($fieldName, $options);
-			$counter = '<span id="' . $domId . 'Counter' . '" class="bca-size-counter"></span>';
+			$counter = '<span id="' . $domId . 'Counter' . '" class="size-counter"></span>';
 			$script = '$("#' . $domId . '").keyup(countSize);$("#' . $domId . '").keyup();';
 			if (!$this->sizeCounterFunctionLoaded) {
 				$script .= <<< DOC_END
@@ -408,14 +481,17 @@ DOC_END;
 			'hidden' => true
 		], $options);
 		$hidden = $options['hidden'];
-
-		$spanOptions = [];
 		$labelOptions = [];
-		if(!empty($options['class'])) {
-			$spanOptions['class'] = $options['class'] . '-item';
-			$labelOptions['class'] = $options['class'] . '-label';
+		if(!empty($options['label']) ) {
+			if(is_array($options['label'])) {
+				$label = $options['label']['text'];
+				unset($options['label']['text']);
+				$labelOptions = $options['label'];
+			} else {
+				$label = $options['label'];
+			}
 		}
-		unset($options['hidden']);
+		unset($options['label'], $options['hidden']);
 		// <<<
 
 		$valueOptions = array();
@@ -465,8 +541,8 @@ DOC_END;
 		// >>> 
 		//return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, array('name' => null)));
 		// ---
-		if (!empty($options['label'])) {
-			return $output . $this->Html->tag('span', $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null])) . parent::label($fieldName, $options['label'], $labelOptions), $spanOptions);
+		if (!empty($label)) {
+			return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null])) . parent::label($fieldName, $label, $labelOptions);
 		} else {
 			return $output . $this->Html->useTag('checkbox', $options['name'], array_diff_key($options, ['name' => null]));
 		}
@@ -890,15 +966,18 @@ DOC_END;
 			'disabled' => false,
 			// CUSTOMIZE ADD 2016/01/26 ryuring
 			// checkboxのdivを外せるオプションを追加
+			// CUSTOMIZE ADD 2018/10/14 ryuring
+			// label のオプションを指定できるようにした
 			// >>>
 			'div' => true,
+			'label' => false
 			// <<<
 		);
 
 		// CUSTOMIZE ADD 2016/01/28 ryuring
 		// checkboxのdivを外せるオプションを追加
 		// >>>
-		$div = (bool)$this->_extractOption('div', $attributes);
+		$div = $this->_extractOption('div', $attributes);
 		unset($attributes['div']);
 		// <<<
 
@@ -992,8 +1071,11 @@ DOC_END;
 				'disabled' => $attributes['disabled'],
 				// CUSTOMIZE ADD 2016/01/26 ryuring
 				// checkboxのdivを外せるオプションを追加
+				// CUSTOMIZE ADD 2018/10/14 ryuring
+				// label のオプションを指定できるようにした
 				// >>>
 				'div' => $div,
+				'label' => $attributes['label']
 				// <<<
 			)
 		));
@@ -1108,19 +1190,6 @@ DOC_END;
 						} elseif ($attributes['class'] === 'form-error') {
 							$attributes['class'] = 'checkbox ' . $attributes['class'];
 						}
-						
-						// CUSTOMIZE MODIFY 2018/09/14 ryuring
-						$spanOptions = [];
-						if(!empty($attributes['class'])) {
-							$htmlOptions['class'] = $attributes['class'];
-							$spanOptions['class'] = $attributes['class'] . '-item';
-							if(!empty($label['class']) && $label['class'] === 'selected') {
-								$label['class'] .= ' ' . $attributes['class'] . '-label';
-							} else {
-								$label['class'] = $attributes['class'] . '-label';
-							}
-						}
-						// <<<
 
 						// CUSTOMIZE MODIFY 2014/02/24 ryuring
 						// checkboxのdivを外せるオプションを追加
@@ -1130,14 +1199,42 @@ DOC_END;
 						// チェックボックスをラベルタグで囲わない仕様に変更した
 						// CUSTOMIZE MODIFY 2018/09/14 ryuring
 						// チェックボックスとラベルを span タグで挟めるようにした
+						// CUSTOMIZE MODIFY 2018/10/14 ryuring
+						// ラベルのクラスを指定できるようにした
+						// span のクラスを指定できるようにした
 						// >>>
 						// $label = $this->label(null, $title, $label);
 						// $item = $this->Html->useTag('checkboxmultiple', $name, $htmlOptions);
 						// $select[] = $this->Html->div($attributes['class'], $item . $label);
 						// ---
+						if(!empty($attributes['class'])) {
+							$htmlOptions['class'] = $attributes['class'];
+						}
+						if(!empty($attributes['label']) && is_array($attributes['label'])) {
+							if(!empty($attributes['label']['class'])) {
+								if(!empty($label['class']) && $label['class'] === 'selected') {
+									$label['class'] .= ' ' . $attributes['label']['class'];
+								} else {
+									$label['class'] = $attributes['label']['class'];
+								}
+							}
+							$label = array_merge($label, $attributes['label']);
+						}
 						$item = $this->Html->useTag('checkboxmultiple', $name, $htmlOptions) . $this->label(null, $title, $label);
-						if (isset($attributes['div']) && $attributes['div'] === false) {
-							$select[] = $this->Html->tag('span', $item, $spanOptions);
+						if (isset($attributes['div'])) {
+							if($attributes['div'] === false) {
+								$select[] = $item;
+							} elseif(is_array($attributes['div'])) {
+								$divOptions = $attributes['div'];
+								$tag = 'div';
+								if(!empty($divOptions['tag'])) {
+									$tag = $divOptions['tag'];
+								}	
+								unset($divOptions['tag'], $divOptions['errorClass']);
+								$select[] = $this->Html->tag($tag, $item, $divOptions);								
+							} else {
+								$select[] = $this->Html->div($attributes['class'], $item);
+							}
 						} else {
 							$select[] = $this->Html->div($attributes['class'], $item);
 						}
@@ -1347,19 +1444,6 @@ DOC_END;
 			$label = $attributes['label'];
 			unset($attributes['label']);
 		}
-
-		// CUSTOMIZE ADD 2018/09/14 ryuring
-		$spanOptions = [];
-		if(!empty($attributes['class'])) {
-			$spanOptions['class'] = $attributes['class'] . '-item';
-			if(empty($label['class'])) {
-				if($label === true) {
-					$label = [];
-				}
-				$label['class'] = $attributes['class'] . '-label';	
-			}
-		}
-		// <<<
 		
 		$separator = null;
 		if (isset($attributes['separator'])) {
@@ -1394,6 +1478,13 @@ DOC_END;
 			$value = $value ? 1 : 0;
 		}
 
+		$div = null;
+		if(!empty($attributes['div'])) {
+			$div = $attributes['div'];
+			unset($attributes['div']);
+		}
+		unset($label['label']);
+		
 		$this->_domIdSuffixes = array();
 		foreach ($options as $optValue => $optTitle) {
 			$optionsHere = array('value' => $optValue, 'disabled' => false);
@@ -1438,8 +1529,23 @@ DOC_END;
 				array_diff_key($allOptions, array('name' => null, 'type' => null, 'id' => null)),
 				$optTitle
 			);
-			$radio = $this->Html->tag('span', $radio, $spanOptions);
-			$out[] = $radio;
+			if (isset($div)) {
+				if($div === false) {
+					$out[] = $radio;
+				} elseif(is_array($div)) {
+					$divOptions = $div;
+					$tag = 'div';
+					if(!empty($divOptions['tag'])) {
+						$tag = $divOptions['tag'];
+					}
+					unset($divOptions['tag'], $divOptions['errorClass']);
+					$out[] = $this->Html->tag($tag, $radio, $divOptions);
+				} else {
+					$out[] = $this->Html->div($attributes['class'], $radio);
+				}
+			} else {
+				$out[] = $radio;
+			}	
 			// <<<
 		}
 		$hidden = null;
@@ -1787,33 +1893,65 @@ DOC_END;
  * 日付カレンダーと時間フィールド
  *
  * @param string $fieldName
- * @param array $attributes
+ * @param array $options
  * @return string
  */
-	public function dateTimePicker($fieldName, $attributes = []) {
+	public function dateTimePicker($fieldName, $options = []) {
 
 		$this->Html->script('admin/vendors/jquery.timepicker', ['inline' => false]);
 		$this->Html->css('admin/jquery.timepicker', 'stylesheet', ['inline' => false]);
-		$timeAttributes = array_merge($attributes, ['size' => 8, 'maxlength' => 8, 'escape' => true]);
-		$options = [];
-		if(!empty($attributes['class'])) {
-			$options['class'] = $attributes['class'];
-			$attributes['class'] = $attributes['class'] .  '__date';
-			$timeAttributes['class'] =  $attributes['class'] .  '__time';
+		
+		$options = array_merge([
+			'div' => ['tag' => 'span', 'class' => 'bca-datetimepicker'],
+			'dateDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__date'],
+			'dateLabel' => ['text' => '日付', 'class' => 'bca-datetimepicker__date-label'],
+			'timeDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__time'],
+			'timeLabel' => ['text' => '時間', 'class' => 'bca-datetimepicker__time-label']
+		], $options);
+		
+		$dateOptions = array_merge($options, [
+			'type' => 'datepicker',
+			'div' => $options['dateDiv'],
+			'label' => $options['dateLabel']
+		]);
+		if(!empty($dateOptions['class'])) {
+			$dateOptions['class'] .= '__date-input';
+		} else {
+			$dateOptions['class'] = 'bca-datetimepicker__date-input';
 		}
-		if (!isset($attributes['value'])) {
+
+		$timeOptions = array_merge($options, [
+			'type' => 'text',
+			'div' => $options['timeDiv'],
+			'label' => $options['timeLabel'],
+			'size' => 8, 
+			'maxlength' => 8, 
+			'escape' => true
+		]);
+		if(!empty($timeOptions['class'])) {
+			$timeOptions['class'] .= '__time-input';
+		} else {
+			$timeOptions['class'] = 'bca-datetimepicker__time-input';
+		}
+		
+		unset($options['dateDiv'], $options['dateLabel'], $options['timeDiv'], $options['timeLabel']);
+		unset($dateOptions['dateDiv'], $dateOptions['dateLabel'], $dateOptions['timeDiv'], $dateOptions['timeLabel']);
+		unset($timeOptions['dateDiv'], $timeOptions['dateLabel'], $timeOptions['timeDiv'], $timeOptions['timeLabel']);
+		
+		if (!isset($options['value'])) {
 			$value = $this->value($fieldName);
 		} else {
-			$value = $attributes['value'];
-			unset($attributes['value']);
+			$value = $options['value'];
+			unset($options['value']);
 		}
+		
 		if ($value && $value != '0000-00-00 00:00:00') {
 			list($dateValue, $timeValue) = explode(' ', $value);
-			$attributes['value'] = $dateValue;
-			$timeAttributes['value'] = $timeValue;
+			$dateOptions['value'] = $dateValue;
+			$timeOptions['value'] = $timeValue;
 		}
-		$dateTag = $this->datepicker($fieldName . '_date', $attributes);
-		$timeTag = $this->text($fieldName . '_time', $timeAttributes);
+		$dateTag = $this->input($fieldName . '_date', $dateOptions);
+		$timeTag = $this->input($fieldName . '_time', $timeOptions);
 		$hiddenTag = $this->hidden($fieldName, ['value' => $value]);
 		$domId = $this->domId();
 		$_script = <<< DOC_END
@@ -1838,7 +1976,25 @@ $(function(){
 </script>
 DOC_END;
 		$this->_View->append('script', $_script);
-		return $this->Html->tag('span', $dateTag . $timeTag, $options) . $hiddenTag;
+		
+		$output = $dateTag . $timeTag . $hiddenTag;
+		if (isset($options['div'])) {
+			if ($options['div'] === false) {
+				return $output;
+			} elseif (is_array($options['div'])) {
+				$divOptions = $options['div'];
+				$tag = 'div';
+				if (!empty($divOptions['tag'])) {
+					$tag = $divOptions['tag'];
+				}
+				unset($divOptions['tag'], $divOptions['errorClass']);
+				return $this->Html->tag($tag, $output, $divOptions);
+			} else {
+				return $this->Html->div($options['class'], $output);
+			}
+		} else {
+			return $output;
+		}
 	}
 
 /**
@@ -1927,35 +2083,54 @@ DOC_END;
 			'imgsize' => 'medium', // 画像サイズ
 			'rel' => '', // rel属性
 			'title' => '', // タイトル属性
-			'link' => true, // 大きいサイズの画像へのリンク有無
+			'link' => ['class' => 'bca-file__link'], // 大きいサイズの画像へのリンク有無
 			'delCheck' => true,
 			'force' => false,
 			'width' => '',
-			'height' => ''
-			], $options);
-
-		extract($options);
-
-		unset($options['imgsize']);
-		unset($options['rel']);
-		unset($options['title']);
-		unset($options['link']);
-		unset($options['delCheck']);
-		unset($options['force']);
-		unset($options['width']);
-		unset($options['height']);
+			'height' => '',
+			'class' => 'bca-file__input',
+			'div' => ['tag' => 'span', 'class' => 'bca-file'],
+			'deleteSpan' => ['class' => 'bca-file__delete'],
+			'deleteCheckbox' => ['class' => 'bca-file__delete-input'],
+			'deleteLabel' => ['class' => 'bca-file__delete-label'],
+			'figure' => ['class' => 'bca-file__figure'],
+			'img' => ['class' => 'bca-file__img'],
+			'figcaption' => ['class' => 'bca-file__figcaption']
+		], $options);
 
 		$linkOptions = [
-			'imgsize' => $imgsize,
-			'rel' => $rel,
-			'title' => $title,
-			'link' => $link,
-			'delCheck' => $delCheck,
-			'force' => $force,
-			'width' => $width,
-			'height' => $height
+			'imgsize' => $options['imgsize'],
+			'rel' => $options['rel'],
+			'title' => $options['title'],
+			'link' => $options['link'],
+			'delCheck' => $options['delCheck'],
+			'force' => $options['force'],
+			'width' => $options['width'],
+			'height' => $options['height'],
+			'figure' => $options['figure'],
+			'img' => $options['img'],
+			'figcaption' => $options['figcaption']
 		];
 
+		$deleteSpanOptions = $deleteCheckboxOptions = $deleteLabelOptions = [];
+		if(!empty($options['deleteSpan'])) {
+			$deleteSpanOptions = $options['deleteSpan'];
+		}
+		if(!empty($options['deleteCheckbox'])) {
+			$deleteCheckboxOptions = $options['deleteCheckbox'];
+		}
+		if(!empty($options['deleteLabel'])) {
+			$deleteLabelOptions = $options['deleteLabel'];
+		}
+		if(!empty($options['div'])) {
+			$divOptions = $options['div'];
+		}
+		
+		unset($options['imgsize'], $options['rel'], $options['title'], $options['link']);
+		unset($options['delCheck'], $options['force'], $options['width'], $options['height']);
+		unset($options['deleteSpan'], $options['deleteCheckbox'], $options['deleteLabel']);
+		unset($options['figure'], $options['img'], $options['figcaption'], $options['div']);
+		
 		$fileLinkTag = $this->BcUpload->fileLink($fieldName, $linkOptions);
 		$fileTag = parent::file($fieldName, $options);
 
@@ -1968,19 +2143,12 @@ DOC_END;
 		// PHP5.3対応のため、is_string($value) 判別を実行
 		$delCheckTag = '';
 		if ($fileLinkTag && $linkOptions['delCheck'] && (is_string($value) || empty($value['session_key']))) {
-			$checkboxOptions = [];
-			$checkboxLabelOptions = [];
-			$checkboxSpanOptions = [];
-			if(!empty($options['class'])) {
-				$checkboxOptions['class'] = $options['class'] . '-checkbox';
-				$checkboxLabelOptions['class'] = $options['class'] . '-checkbox-label';
-				$checkboxSpanOptions['class'] = $options['class'] . '-checkbox-item';
-			}
-			$delCheckTag = $this->Html->tag('span', $this->checkbox($fieldName . '_delete', $checkboxOptions) . $this->label($fieldName . '_delete', __d('baser', '削除する'), $checkboxLabelOptions), $checkboxSpanOptions);
+			$delCheckTag = $this->Html->tag('span', $this->checkbox($fieldName . '_delete', $deleteCheckboxOptions) . $this->label($fieldName . '_delete', __d('baser', '削除する'), $deleteLabelOptions), $deleteSpanOptions);
 		}
 		$hiddenValue = $this->value($fieldName . '_');
 		$fileValue = $this->value($fieldName);
 
+		$hiddenTag = '';
 		if($fileLinkTag) {
 			if (is_array($fileValue) && empty($fileValue['tmp_name']) && $hiddenValue) {
 				$hiddenTag = $this->hidden($fieldName . '_', ['value' => $hiddenValue]);
@@ -1998,7 +2166,27 @@ DOC_END;
 			$out .= '&nbsp;' . $delCheckTag . $hiddenTag . '<br />' . $fileLinkTag;
 		}
 
-		return '<span class="upload-file">' . $out . '</span>';
+		if (isset($divOptions)) {
+			if ($divOptions === false) {
+				return $out;
+			} elseif (is_array($divOptions)) {
+				$tag = 'div';
+				if (!empty($divOptions['tag'])) {
+					$tag = $divOptions['tag'];
+				}
+				if(!empty($divOptions['class'])) {
+					$divOptions['class'] .= ' upload-file';
+				} else {
+					$divOptions['class'] = 'upload-file';
+				}
+				unset($divOptions['tag'], $divOptions['errorClass']);
+				return $this->Html->tag($tag, $out, $divOptions);
+			} else {
+				return $this->Html->div($options['class'], $out);
+			}
+		} else {
+			return $out;
+		}
 	}
 
 /**

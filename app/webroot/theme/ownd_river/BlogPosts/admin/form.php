@@ -69,16 +69,14 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
     <tr>
       <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.name', __d('baser', 'タイトル')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
       <td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->input('BlogPost.name',
-          array(
+        <?php echo $this->BcForm->input('BlogPost.name', [
             'type' => 'text',
             'size' => 80,
             'maxlength' => 255,
             'autofocus' => true,
-            'class' => 'bca-input-text',
             'data-input-text-size' => 'full-counter',
             'counter' => true
-          )) ?>
+          ]) ?>
         <?php echo $this->BcForm->error('BlogPost.name') ?>
       </td>
     </tr>
@@ -86,13 +84,11 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.blog_category_id', __d('baser', 'カテゴリー')) ?></th>
 			<td class="col-input bca-form-table__input">
-				<?php echo $this->BcForm->input('BlogPost.blog_category_id',
-          array(
-            'type' => 'select',
-            'options' => $categories,
-            'class' => 'bca-select',
-            'escape' => false
-          )) ?>&nbsp
+				<?php echo $this->BcForm->input('BlogPost.blog_category_id', [
+                    'type' => 'select',
+                    'options' => $categories,
+                    'escape' => false
+                ]) ?>&nbsp
 				<?php if($hasNewCategoryAddablePermission): ?>
 					<?php echo $this->BcForm->button(__d('baser', '新しいカテゴリを追加'), array('id' => 'BtnAddBlogCategory', 'class' => 'bca-btn')) ?>
 				<?php endif ?>
@@ -106,8 +102,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 			<td class="col-input bca-form-table__input">
                 <?php echo $this->BcForm->file('BlogPost.eye_catch', [
                     'imgsize' => 'thumb', 
-                    'width' => '300', 
-                    'class' => 'bca-file'
+                    'width' => '300'
                 ]) ?>
 				<?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
 			</td>
@@ -116,12 +111,12 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.content', __d('baser', '概要')) ?></th>
 			<td class="col-input bca-form-table__input">
-				<?php echo $this->BcForm->ckeditor('BlogPost.content', array(
+				<?php echo $this->BcForm->ckeditor('BlogPost.content', [
 					'editorWidth' => 'auto',
 					'editorHeight' => '120px',
 					'editorToolType' => 'simple',
 					'editorEnterBr' => @$siteConfig['editor_enter_br']
-				)); ?>
+				]); ?>
 				<?php echo $this->BcForm->error('BlogPost.content') ?>
 			</td>
 		</tr>
@@ -131,17 +126,15 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 
 <div class="bca-section bca-section__post-detail">
   <label for="BlogPostDetailTmp" class="bca-form-table__label -label">本文</label>
-	<?php
-	echo $this->BcForm->editor('BlogPost.detail', array_merge(array(
-		'editor' => @$siteConfig['editor'],
-		'editorUseDraft' => true,
-		'editorDraftField' => 'detail_draft',
-		'editorWidth' => 'auto',
-		'editorHeight' => '480px',
-		'editorEnterBr' => @$siteConfig['editor_enter_br']
-			), $editorOptions))
-	?>
-		<?php echo $this->BcForm->error('BlogPost.detail') ?>
+    <?php echo $this->BcForm->editor('BlogPost.detail', array_merge([
+        'editor' => @$siteConfig['editor'],
+        'editorUseDraft' => true,
+        'editorDraftField' => 'detail_draft',
+        'editorWidth' => 'auto',
+        'editorHeight' => '480px',
+        'editorEnterBr' => @$siteConfig['editor_enter_br']
+    ], $editorOptions))	?>
+    <?php echo $this->BcForm->error('BlogPost.detail') ?>
 </div>
 
 <div class="bca-section">
@@ -154,15 +147,13 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 					<?php echo $this->BcForm->input('BlogTag.BlogTag', [
 						'type' => 'select',
 						'multiple' => 'checkbox',
-						'options' => $this->BcForm->getControlSource('BlogPost.blog_tag_id'),
-						'class' => 'bca-checkbox'
+						'options' => $this->BcForm->getControlSource('BlogPost.blog_tag_id')
 					]); ?>
           			<?php echo $this->BcForm->error('BlogTag.BlogTag') ?>
 				</div>
         		<div class="bca-form-table__group">
 					<?php echo $this->BcForm->input('BlogTag.name', array(
-						'type' => 'text',
-						'class' => 'bca-input-text'
+						'type' => 'text'
 					)) ?>
 					<?php echo $this->BcForm->button(__d('baser', '新しいタグを追加'), array(
             			'id' => 'BtnAddBlogTag',
@@ -179,27 +170,23 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
                 <div class="bca-form-table__group bca-form-table__data">
                     <?php echo $this->BcForm->input('BlogPost.status', [
                         'type' => 'radio',
-                        'options' => $statuses,
-                        'class' => 'bca-radio'
+                        'options' => $statuses
                     ]) ?>
 				    <?php echo $this->BcForm->error('BlogPost.status') ?>
                     <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_begin', [
                         'size' => 12,
-                        'maxlength' => 10,
-                        'class' => 'bca-datepicker__begin'
+                        'maxlength' => 10
                     ], true) ?>
                     <span class="bca-datepicker__delimiter">〜</span>
                     <?php echo $this->BcForm->dateTimePicker('BlogPost.publish_end', [
                         'size' => 12,
-                        'maxlength' => 10,
-                        'class' => 'bca-datepicker__end'
+                        'maxlength' => 10
                     ], true) ?>
                 </div>
                 <div class="bca-form-table__group">
                     <?php echo $this->BcForm->input('BlogPost.exclude_search', [
                         'type' => 'checkbox',
-                        'label' => __d('baser', 'サイト内検索の検索結果より除外する'),
-                        'class' => 'bca-checkbox'
+                        'label' => __d('baser', 'サイト内検索の検索結果より除外する')
                     ]) ?>
                     <?php echo $this->BcForm->error('BlogPost.publish_begin') ?>
                     <?php echo $this->BcForm->error('BlogPost.publish_end') ?>
@@ -212,8 +199,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 				<?php if (isset($user) && $user['user_group_id'] == Configure::read('BcApp.adminGroupId')): ?>
 					<?php echo $this->BcForm->input('BlogPost.user_id', array(
 						'type' => 'select',
-						'options' => $users,
-            'class' => 'bca-select'
+						'options' => $users
 					)); ?>
 					<?php echo $this->BcForm->error('BlogPost.user_id') ?>
 				<?php else: ?>
@@ -227,12 +213,10 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.posts_date', __d('baser', '投稿日')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
-				<?php echo $this->BcForm->dateTimePicker('BlogPost.posts_date',
-          array(
-            'size' => 12,
-            'maxlength' => 10,
-            'class' => 'bca-input-text'
-          ), true) ?>
+				<?php echo $this->BcForm->dateTimePicker('BlogPost.posts_date', [
+                    'size' => 12,
+                    'maxlength' => 10
+                ], true) ?>
 				<?php echo $this->BcForm->error('BlogPost.posts_date') ?>
 			</td>
 		</tr>
