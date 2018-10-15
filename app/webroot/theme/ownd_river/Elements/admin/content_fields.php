@@ -142,9 +142,20 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 					<?php endif ?>
 					&nbsp;&nbsp;
 					<?php if(!$this->request->data['Content']['site_root'] && !$disableEdit): ?>
-						<?php echo $this->BcForm->dateTimePicker('Content.self_publish_begin', array('size' => 12, 'maxlength' => 10), true) ?>
+						<?php echo $this->BcForm->input('Content.self_publish_begin', [
+						        'type' => 'dateTimePicker', 
+                                'size' => 12, 
+                                'maxlength' => 10,
+								'dateLabel' => ['text' => '開始日付'],
+								'timeLabel' => ['text' => '開始時間']
+                        ]) ?>
 						&nbsp;〜&nbsp;
-						<?php echo $this->BcForm->dateTimePicker('Content.self_publish_end', array('size' => 12, 'maxlength' => 10), true) ?>
+						<?php echo $this->BcForm->input('Content.self_publish_end', [
+						        'type' => 'dateTimePicker', 
+                                'size' => 12, 'maxlength' => 10,
+								'dateLabel' => ['text' => '終了日付'],
+								'timeLabel' => ['text' => '終了時間']
+                        ]) ?>
 					<?php else: ?>
 						<?php if($this->BcForm->value('Content.self_publish_begin') || $this->BcForm->value('Content.self_publish_end')): ?>
 							<?php echo $this->BcForm->value('Content.self_publish_begin') ?>&nbsp;〜&nbsp;<?php echo $this->BcForm->value('Content.self_publish_end') ?>
@@ -192,7 +203,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.eyecatch', __d('baser', 'アイキャッチ')) ?></th>
 				<td class="col-input bca-form-table__input">
 					<?php if(!$disableEdit): ?>
-						<?php echo $this->BcForm->file('Content.eyecatch', ['imgsize' => 'thumb']) ?>
+						<?php echo $this->BcForm->input('Content.eyecatch', ['type' => 'file', 'imgsize' => 'thumb']) ?>
 					<?php else: ?>
 						<?php echo $this->BcUpload->uploadImage('Content.eyecatch', $this->BcForm->value('Content.eyecatch'), ['imgsize' => 'thumb']) ?>
 					<?php endif ?>
@@ -204,8 +215,8 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				<td class="col-input bca-form-table__input">
 					<?php if(!$disableEdit): ?>
 					<?php echo $this->BcForm->input('Content.author_id', array('type' => 'select', 'options' => $authors)) ?>　
-					<small>[作成日]</small> <?php echo $this->BcForm->dateTimePicker('Content.created_date', array('size' => 12, 'maxlength' => 10), true) ?>　
-					<small>[更新日]</small> <?php echo $this->BcForm->dateTimePicker('Content.modified_date', array('size' => 12, 'maxlength' => 10), true) ?>
+					<small>[作成日]</small> <?php echo $this->BcForm->input('Content.created_date', array('type' => 'dateTimePicker', 'size' => 12, 'maxlength' => 10)) ?>　
+					<small>[更新日]</small> <?php echo $this->BcForm->input('Content.modified_date', array('type' => 'dateTimePicker', 'size' => 12, 'maxlength' => 10)) ?>
 					<?php else: ?>
 						<?php echo $this->BcText->arrayValue($this->BcForm->value('Content.author_id'), $authors) ?>　
 

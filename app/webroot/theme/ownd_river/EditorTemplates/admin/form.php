@@ -40,7 +40,7 @@
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('EditorTemplate.image', __d('baser', 'アイコン画像')) ?></th>
 			<td class="col-input bca-form-table__input">
-				<?php echo $this->BcForm->file('EditorTemplate.image') ?>
+				<?php echo $this->BcForm->input('EditorTemplate.image', ['type' => 'file']) ?>
 				<?php echo $this->BcForm->error('EditorTemplate.image') ?>
 			</td>
 		</tr>
