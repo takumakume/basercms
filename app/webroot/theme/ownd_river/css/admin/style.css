@@ -6207,7 +6207,7 @@ div.jstree-publish-even {
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 5px 10px; }
+    padding: 7px 10px; }
     .bca-footer__inner--full .bca-footer__main {
       display: flex;
       align-items: center; }
@@ -12521,7 +12521,7 @@ table.cake-sql-log tr td {
     white-space: nowrap;
     cursor: pointer; }
 
-.bca-checkbox {
+.bca-checkbox, .bca-file-checkbox {
   filter: alpha(opacity=0);
   -moz-opacity: 0;
   opacity: 0;
@@ -12529,30 +12529,41 @@ table.cake-sql-log tr td {
   -moz-appearance: none;
        appearance: none;
   background: #cccccc; }
-  .bca-checkbox:checked + label:after,
-  .bca-checkbox:checked + .bca-checkbox-label:after {
+  .bca-checkbox:checked + label:after, .bca-file-checkbox:checked + label:after,
+  .bca-checkbox:checked + .bca-checkbox-label:after,
+  .bca-file-checkbox:checked + .bca-checkbox-label:after,
+  .bca-checkbox:checked + .bca-file-checkbox-label:after,
+  .bca-file-checkbox:checked + .bca-file-checkbox-label:after {
     display: block; }
-  .bca-checkbox:focus + label:before,
-  .bca-checkbox:focus + .bca-checkbox-label:before {
+  .bca-checkbox:focus + label:before, .bca-file-checkbox:focus + label:before,
+  .bca-checkbox:focus + .bca-checkbox-label:before,
+  .bca-file-checkbox:focus + .bca-checkbox-label:before,
+  .bca-checkbox:focus + .bca-file-checkbox-label:before,
+  .bca-file-checkbox:focus + .bca-file-checkbox-label:before {
     box-shadow: 0 0 6px 0px #555555; }
-  .bca-checkbox__item {
+  .bca-checkbox-item, .bca-file-checkbox-item {
     display: inline-block;
+    margin: 0 1em .4em 0;
     white-space: nowrap;
     cursor: pointer; }
 
-.bca-checkbox + label,
-.bca-checkbox-label {
+.bca-checkbox + label, .bca-file-checkbox + label,
+.bca-checkbox-label,
+.bca-file-checkbox-label {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
   line-height: 1.15;
   font-size: 1.6rem; }
-  .bca-checkbox + label:after, .bca-checkbox + label:before,
+  .bca-checkbox + label:after, .bca-file-checkbox + label:after, .bca-checkbox + label:before, .bca-file-checkbox + label:before,
   .bca-checkbox-label:after,
-  .bca-checkbox-label:before {
+  .bca-file-checkbox-label:after,
+  .bca-checkbox-label:before,
+  .bca-file-checkbox-label:before {
     box-sizing: border-box; }
-  .bca-checkbox + label:before,
-  .bca-checkbox-label:before {
+  .bca-checkbox + label:before, .bca-file-checkbox + label:before,
+  .bca-checkbox-label:before,
+  .bca-file-checkbox-label:before {
     content: "";
     vertical-align: middle;
     display: inline-block;
@@ -12563,8 +12574,9 @@ table.cake-sql-log tr td {
     border-radius: 2px;
     box-sizing: border-box;
     margin-right: 0.5em; }
-  .bca-checkbox + label:after,
-  .bca-checkbox-label:after {
+  .bca-checkbox + label:after, .bca-file-checkbox + label:after,
+  .bca-checkbox-label:after,
+  .bca-file-checkbox-label:after {
     position: absolute;
     top: 0em;
     left: 0.5em;
@@ -12576,11 +12588,13 @@ table.cake-sql-log tr td {
             transform: rotate(45deg);
     border-right: 0.24em solid #61a82e;
     border-bottom: 0.24em solid #61a82e; }
-  .bca-checkbox + label[data-bca-checkbox-size=lg],
-  .bca-checkbox-label[data-bca-checkbox-size=lg] {
+  .bca-checkbox + label[data-bca-checkbox-size=lg], .bca-file-checkbox + label[data-bca-checkbox-size=lg],
+  .bca-checkbox-label[data-bca-checkbox-size=lg],
+  .bca-file-checkbox-label[data-bca-checkbox-size=lg] {
     font-size: 1.8rem; }
-  .bca-checkbox + label[data-bca-checkbox-size=sm],
-  .bca-checkbox-label[data-bca-checkbox-size=sm] {
+  .bca-checkbox + label[data-bca-checkbox-size=sm], .bca-file-checkbox + label[data-bca-checkbox-size=sm],
+  .bca-checkbox-label[data-bca-checkbox-size=sm],
+  .bca-file-checkbox-label[data-bca-checkbox-size=sm] {
     font-size: 1.4rem; }
 
 .bca-select {

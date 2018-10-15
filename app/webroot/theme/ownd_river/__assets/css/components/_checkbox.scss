@@ -22,8 +22,9 @@
 		}
 	}
 
-  &__item {
+  &-item {
     display: inline-block;
+    margin: 0 1em .4em 0;
     white-space: nowrap;
     cursor: pointer;
   }
@@ -70,4 +71,16 @@
 	&[data-bca-checkbox-size=sm]{
 		font-size: $label_font_size_small;
 	}
+}
+
+.bca-file {
+  &-checkbox-item{
+    @extend .bca-checkbox-item;
+  }
+  &-checkbox{
+    @extend .bca-checkbox;
+  }
+  &-checkbox-label {
+    @extend .bca-checkbox-label;
+  }
 }
