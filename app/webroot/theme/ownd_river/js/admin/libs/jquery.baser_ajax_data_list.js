@@ -20,6 +20,7 @@
 	 * 初期値
 	 */
 		config: {
+			alertBox		: '#AlertMessage',
 			dataList		: "#DataList",
 			pagination		: ".pagination",
 			direction		: ".btn-direction",
@@ -148,7 +149,7 @@
 								}
 							}};
 						}
-						$.ajax({
+						return $.ajax({
 							type: "POST",
 							url: url,
 							dataType: "html",
@@ -158,6 +159,7 @@
 								$(config.loader).show();
 							},
 							success: function (data) {
+								$.bcToken.key = null;
 								$(config.loader).hide();
 								if(methodsResult) {
 									methodsResult(row, data);
@@ -170,15 +172,16 @@
 											}
 										});
 									} else {
-										$(config.alertBox).html('処理に失敗しました。');
+										$(config.alertBox).html(bcI18n.commonExecFailedMessage);
 										$(config.alertBox).fadeIn(500);
 									}
 								}
 							},
 							error: function(XMLHttpRequest, textStatus, errorThrown) {
+								$.bcToken.key = null;
 								var errorMessage = '';
 								if(XMLHttpRequest.status == 404) {
-									errorMessage = '<br />'+'送信先のプログラムが見つかりません。';
+									errorMessage = '<br />' + bcI18n.commonNotFoundProgramMessage;
 								} else {
 									if(XMLHttpRequest.responseText) {
 										errorMessage = '<br />'+XMLHttpRequest.responseText;
@@ -187,11 +190,11 @@
 									}
 								}
 								$(config.loader).hide();
-								$(config.alertBox).html('処理に失敗しました。('+XMLHttpRequest.status+')'+errorMessage);
+								$(config.alertBox).html(bcI18n.commonExecFailedMessage + '('+XMLHttpRequest.status+')'+errorMessage);
 								$(config.alertBox).fadeIn(500);
 							}
 						});
-					}, {hideLoader: false});
+					}, {useUpdate: false, hideLoader: false});
 
 					return false;
 					
@@ -234,13 +237,13 @@
 						$.baserAjaxDataList.initList();
 						$.yuga.stripe();
 					} else {
-						$(config.alertBox).html('データ取得に失敗しました。');
+						$(config.alertBox).html(bcI18n.commonGetDataFailedMessage);
 						$(config.alertBox).fadeIn(500);
 					}
 				},
 				error: function(result, status) {
 					$(config.loader).hide();
-					$(config.alertBox).html('処理に失敗しました。');
+					$(config.alertBox).html(bcI18n.commonExecFailedMessage);
 					$(config.alertBox).fadeIn(500);
 				},
 				complete: function() {
@@ -255,15 +258,12 @@
 	 * Ajaxで検索フォームによるデータリスト取得を行う
 	 */
 		search: function () {
-			
 			var config = $.baserAjaxDataList.config;
 			$.bcToken.check(function () {
-				
 				var form = $(config.searchBox + " form");
 				form.append($.bcToken.getHiddenToken());
 				var data = form.serialize();
-				form.find('input[name="data[_Token][key]"]').remove();
-				$.ajax({
+				return $.ajax({
 					type: "POST",
 					url: $(config.searchBox + " form").attr('action'),
 					data: data,
@@ -272,20 +272,22 @@
 						$(config.loader).show();
 					},
 					success: function(data){
+						$.bcToken.key = null;
 						$(config.loader).hide();
 						if(data) {
 							$(config.dataList).html(data);
 							$.baserAjaxDataList.initList();
 							$.yuga.stripe();
 						} else {
-							$(config.alertBox).html('データ取得に失敗しました。');
+							$(config.alertBox).html(bcI18n.commonGetDataFailedMessage);
 							$(config.alertBox).fadeIn(500);
 						}
 						$($.baserAjaxDataList).trigger('searchLoaded');
 					},
 					error: function() {
+						$.bcToken.key = null;
 						$(config.loader).hide();
-						$(config.alertBox).html('処理に失敗しました。');
+						$(config.alertBox).html(bcI18n.commonExecFailedMessage);
 						$(config.alertBox).fadeIn(500);
 					}
 				});
