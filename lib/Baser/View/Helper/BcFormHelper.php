@@ -251,7 +251,7 @@ class BcFormHelper extends FormHelper {
 				if (!isset($options['label'])) {
 					$options['label'] = false;
 				}
-				$options = array_merge([
+				$options = [
 					'link' => ['class' => 'bca-file__link'],
 					'class' => 'bca-file__input',
 					'div' => ['tag' => 'span', 'class' => 'bca-file'],
@@ -261,19 +261,19 @@ class BcFormHelper extends FormHelper {
 					'figure' => ['class' => 'bca-file__figure'],
 					'img' => ['class' => 'bca-file__img'],
 					'figcaption' => ['class' => 'bca-file__figcaption']
-				], $options);
+				] + $options;
 				break;
 			case 'dateTimePicker':
 				$divClass = 'bca-datetimepicker';
 				$options['label'] = false;
-				$options = array_merge([
+				$options = [
 					'dateInput' => ['class' => 'bca-datetimepicker__date-input'],
 					'dateDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__date'],
 					'dateLabel' => ['text' => '日付', 'class' => 'bca-datetimepicker__date-label'],
 					'timeInput' => ['class' => 'bca-datetimepicker__time-input'],
 					'timeDiv' => ['tag' => 'span', 'class' => 'bca-datetimepicker__time'],
 					'timeLabel' => ['text' => '時間', 'class' => 'bca-datetimepicker__time-label']
-				], $options);
+				] + $options;
 				break;
 			case 'text':
 			case 'datepicker':	
@@ -386,7 +386,7 @@ class BcFormHelper extends FormHelper {
 		} else {
 			$label = $this->_getLabel($fieldName, $options);
 		}
-		if ($options['type'] !== 'radio' && $options['type'] !== 'checkbox' && @$options['multiple'] !== 'checkbox') {
+		if ($options['type'] !== 'radio' && $options['type'] !== 'checkbox' && (!isset($options['multiple']) || $options['multiple'] !== 'checkbox')) {
 			// <<<
 			unset($options['label']);
 		}
