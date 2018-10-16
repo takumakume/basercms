@@ -11,8 +11,8 @@
   "scripts": {
     "build": "gulp",
     "dev": "gulp watch",
-	"guide": "gulp guide",
-	"capt": "node ./script/scraper/traversal"
+    "guide": "gulp guide",
+    "capt": "node ./script/scraper/traversal"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
