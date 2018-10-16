@@ -78,7 +78,7 @@
 	&__label {
     vertical-align: top;
     width: 200px;
-    padding: 1.2em 2em 1em 1em;
+    padding: 1em 2em 1em 1em;
 		font-weight: bold;
 		border: 0 solid $border-color;
 		border-width: 1px 0 0;
@@ -87,19 +87,39 @@
       display: block;
       border: none;
     }
+    label {
+      padding: 0.2em 0 0;
+      margin-bottom: 0;
+    }
+
+    .bca-label {
+      position: relative;
+      top: -0.15em;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 	}
 
 	&__input {
-		font-weight: normal;
-		vertical-align: top;
+    padding: 1em 0 1em;
+    vertical-align: top;
 		border: 0 solid $border-color;
 		border-width: 1px 0 0;
-		padding: 1em 0;
+    font-weight: normal;
 	}
 
   &__group {
     & + & {
       margin-top: 1em;
+    }
+    &-state {
+      display: flex;
+      flex-wrap: wrap;
+      //align-items: center;
+      .bca-radio-group {
+        margin-right: 1em;
+        //padding: 10px 0 15px;
+      }
     }
   }
 }

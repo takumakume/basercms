@@ -9442,7 +9442,7 @@ div.jstree-publish-even {
   .bca-form-table__label {
     vertical-align: top;
     width: 200px;
-    padding: 1.2em 2em 1em 1em;
+    padding: 1em 2em 1em 1em;
     font-weight: bold;
     border: 0 solid #ccc;
     border-width: 1px 0 0;
@@ -9450,14 +9450,27 @@ div.jstree-publish-even {
     .bca-form-table__label.-label {
       display: block;
       border: none; }
+    .bca-form-table__label label {
+      padding: 0.2em 0 0;
+      margin-bottom: 0; }
+    .bca-form-table__label .bca-label {
+      position: relative;
+      top: -0.15em;
+      margin-top: 0;
+      margin-bottom: 0; }
   .bca-form-table__input {
-    font-weight: normal;
+    padding: 1em 0 1em;
     vertical-align: top;
     border: 0 solid #ccc;
     border-width: 1px 0 0;
-    padding: 1em 0; }
+    font-weight: normal; }
   .bca-form-table__group + .bca-form-table__group {
     margin-top: 1em; }
+  .bca-form-table__group-state {
+    display: flex;
+    flex-wrap: wrap; }
+    .bca-form-table__group-state .bca-radio-group {
+      margin-right: 1em; }
 
 .contents-body .btn-slide-form {
   border: 1px solid #CCC;
@@ -12483,121 +12496,121 @@ table.cake-sql-log tr td {
     border-color: #ddd; }
 
 .bca-radio {
-  opacity: 0;
-  width: 0px;
-  height: 0px;
-  margin: 0px; }
-  .bca-radio + label {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    margin-right: 15px;
-    padding-left: 2em;
-    font-size: 1.6rem; }
-  .bca-radio[data-bca-radio-size=lg] + label {
-    font-size: 1.8rem; }
-  .bca-radio[data-bca-radio-size=sm] + label {
-    font-size: 1.4rem; }
-  .bca-radio + label:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 1.5em;
-    height: 1.5em;
-    box-sizing: border-box;
-    margin: auto;
-    border: 1px solid #999999;
-    border-radius: 50%; }
-  .bca-radio:checked + label:before {
-    background: #61a82e;
-    box-shadow: 0 0 0px 4px #EEEEEE inset; }
-  .bca-radio:focus + label:before {
-    box-shadow: 0 0 0px 4px #EEEEEE inset, 0 0 6px 0px #555555; }
-  .bca-radio__item {
-    display: inline-block;
-    white-space: nowrap;
-    cursor: pointer; }
-
-.bca-checkbox, .bca-file-checkbox {
-  filter: alpha(opacity=0);
-  -moz-opacity: 0;
-  opacity: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  background: #cccccc; }
-  .bca-checkbox:checked + label:after, .bca-file-checkbox:checked + label:after,
-  .bca-checkbox:checked + .bca-checkbox-label:after,
-  .bca-file-checkbox:checked + .bca-checkbox-label:after,
-  .bca-checkbox:checked + .bca-file-checkbox-label:after,
-  .bca-file-checkbox:checked + .bca-file-checkbox-label:after {
-    display: block; }
-  .bca-checkbox:focus + label:before, .bca-file-checkbox:focus + label:before,
-  .bca-checkbox:focus + .bca-checkbox-label:before,
-  .bca-file-checkbox:focus + .bca-checkbox-label:before,
-  .bca-checkbox:focus + .bca-file-checkbox-label:before,
-  .bca-file-checkbox:focus + .bca-file-checkbox-label:before {
-    box-shadow: 0 0 6px 0px #555555; }
-  .bca-checkbox-item, .bca-file-checkbox-item {
-    display: inline-block;
-    margin: 0 1em .4em 0;
-    white-space: nowrap;
-    cursor: pointer; }
-
-.bca-checkbox + label, .bca-file-checkbox + label,
-.bca-checkbox-label,
-.bca-file-checkbox-label {
-  position: relative;
   display: inline-block;
-  box-sizing: border-box;
-  line-height: 1.15;
+  min-height: 1.5em;
+  margin: 0.2em 1em 0 0;
+  white-space: nowrap;
+  cursor: pointer;
   font-size: 1.6rem; }
-  .bca-checkbox + label:after, .bca-file-checkbox + label:after, .bca-checkbox + label:before, .bca-file-checkbox + label:before,
-  .bca-checkbox-label:after,
-  .bca-file-checkbox-label:after,
-  .bca-checkbox-label:before,
-  .bca-file-checkbox-label:before {
-    box-sizing: border-box; }
-  .bca-checkbox + label:before, .bca-file-checkbox + label:before,
-  .bca-checkbox-label:before,
-  .bca-file-checkbox-label:before {
-    content: "";
-    vertical-align: middle;
-    display: inline-block;
-    margin-top: -0.2em;
-    width: 1.5em;
-    height: 1.5em;
-    border: 2px solid #BBBBBB;
-    border-radius: 2px;
-    box-sizing: border-box;
-    margin-right: 0.5em; }
-  .bca-checkbox + label:after, .bca-file-checkbox + label:after,
-  .bca-checkbox-label:after,
-  .bca-file-checkbox-label:after {
-    position: absolute;
-    top: 0em;
-    left: 0.5em;
-    content: "";
-    display: none;
-    width: 0.5em;
-    height: 0.9em;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    border-right: 0.24em solid #61a82e;
-    border-bottom: 0.24em solid #61a82e; }
-  .bca-checkbox + label[data-bca-checkbox-size=lg], .bca-file-checkbox + label[data-bca-checkbox-size=lg],
-  .bca-checkbox-label[data-bca-checkbox-size=lg],
-  .bca-file-checkbox-label[data-bca-checkbox-size=lg] {
+  .bca-radio[data-bca-radio-size=lg] {
     font-size: 1.8rem; }
-  .bca-checkbox + label[data-bca-checkbox-size=sm], .bca-file-checkbox + label[data-bca-checkbox-size=sm],
-  .bca-checkbox-label[data-bca-checkbox-size=sm],
-  .bca-file-checkbox-label[data-bca-checkbox-size=sm] {
+  .bca-radio[data-bca-radio-size=sm] {
     font-size: 1.4rem; }
+  .bca-radio-group {
+    margin-bottom: -0.5em; }
+  .bca-radio__input {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    margin: 0px; }
+    .bca-radio__input + label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      padding-left: 2em;
+      font-size: 1.6rem; }
+    .bca-radio__input[data-bca-radio-size=lg] + label {
+      font-size: 1.8rem; }
+    .bca-radio__input[data-bca-radio-size=sm] + label {
+      font-size: 1.4rem; }
+    .bca-radio__input + label:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 1.5em;
+      height: 1.5em;
+      box-sizing: border-box;
+      margin: auto;
+      border: 1px solid #999999;
+      border-radius: 50%; }
+    .bca-radio__input:checked + label:before {
+      background: #61a82e;
+      box-shadow: 0 0 0px 4px #EEEEEE inset; }
+    .bca-radio__input:focus + label:before {
+      box-shadow: 0 0 0px 4px #EEEEEE inset, 0 0 6px 0px #555555; }
+  .bca-radio__label {
+    margin-bottom: 0; }
 
-.bca-select {
+.bca-checkbox {
+  display: inline-block;
+  min-height: 1.5em;
+  margin: 0.2em 1em 0 0;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 1.6rem; }
+  .bca-checkbox[data-bca-checkbox-size=lg] {
+    font-size: 1.8rem; }
+  .bca-checkbox[data-bca-checkbox-size=sm] {
+    font-size: 1.4rem; }
+  .bca-checkbox-group {
+    margin-bottom: -0.5em; }
+    .bca-checkbox-group .bca-checkbox {
+      margin-bottom: 0.5em; }
+  .bca-checkbox__input {
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    background: #cccccc; }
+    .bca-checkbox__input:checked + label:after,
+    .bca-checkbox__input:checked + .bca-checkbox-label:after {
+      display: block; }
+    .bca-checkbox__input:focus + label:before,
+    .bca-checkbox__input:focus + .bca-checkbox-label:before {
+      box-shadow: 0 0 6px 0px #555555; }
+  .bca-checkbox__input + label, .bca-checkbox__label {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    line-height: 1.15;
+    font-size: 1.6rem; }
+    .bca-checkbox__input + label:after, .bca-checkbox__input + label:before, .bca-checkbox__label:after, .bca-checkbox__label:before {
+      box-sizing: border-box; }
+    .bca-checkbox__input + label:before, .bca-checkbox__label:before {
+      content: "";
+      vertical-align: middle;
+      display: inline-block;
+      margin-top: -0.2em;
+      width: 1.5em;
+      height: 1.5em;
+      border: 2px solid #BBBBBB;
+      border-radius: 2px;
+      box-sizing: border-box;
+      margin-right: 0.5em; }
+    .bca-checkbox__input + label:after, .bca-checkbox__label:after {
+      position: absolute;
+      top: 0em;
+      left: 0.5em;
+      content: "";
+      display: none;
+      width: 0.5em;
+      height: 0.9em;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-right: 0.24em solid #61a82e;
+      border-bottom: 0.24em solid #61a82e; }
+    .bca-checkbox__input + label[data-bca-checkbox-size=lg], .bca-checkbox__label[data-bca-checkbox-size=lg] {
+      font-size: 1.8rem; }
+    .bca-checkbox__input + label[data-bca-checkbox-size=sm], .bca-checkbox__label[data-bca-checkbox-size=sm] {
+      font-size: 1.4rem; }
+
+.bca-select__select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -12608,11 +12621,11 @@ table.cake-sql-log tr td {
   line-height: 1.2;
   outline: none;
   border-radius: 3px; }
-  .bca-select[data-bca-select-size=lg] {
+  .bca-select__select[data-bca-select-size=lg] {
     font-size: 1.6rem; }
-  .bca-select[data-bca-select-size=sm] {
+  .bca-select__select[data-bca-select-size=sm] {
     font-size: 1.2rem; }
-  .bca-select:focus {
+  .bca-select__select:focus {
     box-shadow: 0 0 6px 0px #555555; }
 
 /* bca-data-list
@@ -12640,10 +12653,11 @@ table.cake-sql-log tr td {
   display: inline-block;
   color: #FFF;
   background: #444;
-  margin: .5em;
+  margin: .5em .5em .5em;
   padding: 0 .5em;
   line-height: 2; }
   .bca-label[data-bca-label-type="required"] {
+    white-space: nowrap;
     background: #E00; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
@@ -12718,6 +12732,148 @@ table.cake-sql-log tr td {
     width: calc(100% - 80px); }
   .bca-input-text:focus {
     box-shadow: 0 0 6px 0px #555555; }
+
+.bca-textbox__input {
+  display: inline-block;
+  outline: none;
+  padding: 0.7em 0.5em 0.6em 0.5em;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  line-height: 1.2;
+  font-size: 1.4rem;
+  color: #535A62; }
+  .bca-textbox__input[data-input-text-size=lg] {
+    font-size: 1.6rem; }
+  .bca-textbox__input[data-input-text-size=sm] {
+    font-size: 1.2rem; }
+  .bca-textbox__input[data-input-text-size=full-counter] {
+    width: calc(100% - 80px); }
+  .bca-textbox__input:focus {
+    box-shadow: 0 0 6px 0px #555555; }
+
+.bca-file__delete {
+  display: inline-block;
+  margin: 0 1em .4em 0;
+  white-space: nowrap;
+  cursor: pointer; }
+  .bca-file__delete-input {
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    background: #cccccc; }
+    .bca-file__delete-input:checked + label:after,
+    .bca-file__delete-input:checked + .bca-checkbox-label:after {
+      display: block; }
+    .bca-file__delete-input:focus + label:before,
+    .bca-file__delete-input:focus + .bca-file__delete-label:before {
+      box-shadow: 0 0 6px 0px #555555; }
+  .bca-file__delete-input + label, .bca-file__delete-label {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    line-height: 1.15;
+    font-size: 1.6rem; }
+    .bca-file__delete-input + label:after, .bca-file__delete-input + label:before, .bca-file__delete-label:after, .bca-file__delete-label:before {
+      box-sizing: border-box; }
+    .bca-file__delete-input + label:before, .bca-file__delete-label:before {
+      content: "";
+      vertical-align: middle;
+      display: inline-block;
+      margin-top: -0.2em;
+      width: 1.5em;
+      height: 1.5em;
+      border: 2px solid #BBBBBB;
+      border-radius: 2px;
+      box-sizing: border-box;
+      margin-right: 0.5em; }
+    .bca-file__delete-input + label:after, .bca-file__delete-label:after {
+      position: absolute;
+      top: 0em;
+      left: 0.5em;
+      content: "";
+      display: none;
+      width: 0.5em;
+      height: 0.9em;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-right: 0.24em solid #61a82e;
+      border-bottom: 0.24em solid #61a82e; }
+    .bca-file__delete-input + label[data-bca-checkbox-size=lg], .bca-file__delete-label[data-bca-checkbox-size=lg] {
+      font-size: 1.8rem; }
+    .bca-file__delete-input + label[data-bca-checkbox-size=sm], .bca-file__delete-label[data-bca-checkbox-size=sm] {
+      font-size: 1.4rem; }
+
+/*
+ datepicker
+  span			bca-datepicker
+  span(date)			bca-datepicker__date
+  text(date)			bca-datepicker__date-input
+  label(date)			bca-datepicker__date-label
+  span(time)			bca-datepicker__time
+  text(time)			bca-datepicker__time-input
+  label(time)			bca-datepicker__time-label
+
+<span class="bca-datetimepicker required">
+  <span class="bca-datetimepicker__date">
+    <label for="BlogPostPostsDateDate" class="bca-datetimepicker__date-label">日付</label>
+    <input name="data[BlogPost][posts_date_date]" size="12" maxlength="10"
+      class="bca-datetimepicker__date-input hasDatepicker" value="2018/10/15" type="text" id="BlogPostPostsDateDate">
+    <script></script>
+  </span>
+  <span class="bca-datetimepicker__time">
+    <label for="BlogPostPostsDateTime" class="bca-datetimepicker__time-label">時間</label>
+    <input name="data[BlogPost][posts_date_time]" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" value="19:14:12" type="text" id="BlogPostPostsDateTime" autocomplete="off">
+  </span>
+  <input type="hidden" name="data[BlogPost][posts_date]" value="2018-10-15 19:14:12" id="BlogPostPostsDate">
+</span>
+
+ */
+.bca-datetimepicker {
+  display: inline-block;
+  white-space: nowrap; }
+  .bca-datetimepicker__date, .bca-datetimepicker__time {
+    display: inline-block;
+    white-space: nowrap; }
+    .bca-datetimepicker__date-input, .bca-datetimepicker__time-input {
+      display: inline-block;
+      outline: none;
+      padding: 0.7em calc( 0.5em + 16px) 0.6em 0.5em;
+      border-radius: 3px;
+      box-sizing: border-box;
+      border: 1px solid #cccccc;
+      line-height: 1.2;
+      font-size: 1.4rem;
+      color: #535A62; }
+      .bca-datetimepicker__date-input[data-input-text-size=lg], .bca-datetimepicker__time-input[data-input-text-size=lg] {
+        font-size: 1.6rem; }
+      .bca-datetimepicker__date-input[data-input-text-size=sm], .bca-datetimepicker__time-input[data-input-text-size=sm] {
+        font-size: 1.2rem; }
+      .bca-datetimepicker__date-input[data-input-text-size=full-counter], .bca-datetimepicker__time-input[data-input-text-size=full-counter] {
+        width: calc(100% - 80px); }
+      .bca-datetimepicker__date-input:focus, .bca-datetimepicker__time-input:focus {
+        box-shadow: 0 0 6px 0px #555555; }
+    .bca-datetimepicker__date-label, .bca-datetimepicker__time-label {
+      margin-right: 0.3em; }
+  .bca-datetimepicker__time {
+    margin-left: 1em; }
+  .bca-datetimepicker__delimiter {
+    display: inline-block;
+    padding: 0 0.5em;
+    margin-bottom: 0.5em; }
+  .bca-datetimepicker__group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -0.5em; }
+  .bca-datetimepicker__start, .bca-datetimepicker__end {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    margin-bottom: 0.5em; }
 
 /*
 .list-panel li{
