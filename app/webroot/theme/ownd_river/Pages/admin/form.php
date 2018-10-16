@@ -40,7 +40,7 @@ $this->BcBaser->js('admin/pages/edit', false);
       ]) ?>
   </div>
 <?php endif; ?>
-aaaaaaaaaa
+
 <div class="bca-section bca-section-editor-area">
 	<?php echo $this->BcForm->editor('Page.contents', array_merge(array(
 		'editor' => @$siteConfig['editor'],
