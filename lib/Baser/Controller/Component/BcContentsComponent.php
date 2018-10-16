@@ -270,7 +270,7 @@ class BcContentsComponent extends Component {
 		} else {
 			$mainSiteId = 0;
 		}
-		$siteList = ['' => ''] + $controller->Content->Site->find('list', ['fields' => ['id', 'display_name']]);
+		$siteList = [0 => ''] + $controller->Content->Site->find('list', ['fields' => ['id', 'display_name']]);
 		$controller->set('sites', $siteList);
 		$controller->set('mainSiteDisplayName', $controller->siteConfigs['main_site_display_name']);
 		$data['Site'] = $site['Site'];

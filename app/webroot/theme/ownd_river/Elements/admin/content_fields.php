@@ -327,7 +327,7 @@ $isOmitViewAction = $this->BcContents->settings[$this->request->data['Content'][
 				</td>
 				<td style="width:15%"><?php echo $relatedContent['Site']['display_name'] ?></td>
 				<td style="width:15%">
-					<?php echo $sites[$relatedContent['Site']['main_site_id']] ?>
+					<?php echo $this->BcText->arrayValue($relatedContent['Site']['main_site_id'], $sites,  $mainSiteDisplayName) ?>
 				</td>
 				<td>
 					<?php if(!empty($relatedContent['Content'])): ?>
