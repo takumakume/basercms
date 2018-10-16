@@ -448,7 +448,7 @@ class BcFormHelper extends FormHelper {
 		/* カウンター */
 		if (!empty($counter)) {
 			$domId = $this->domId($fieldName, $options);
-			$counter = '<span id="' . $domId . 'Counter' . '" class="size-counter"></span>';
+			$counter = '<span id="' . $domId . 'Counter' . '" class="bca-size-counter"></span>';
 			$script = '$("#' . $domId . '").keyup(countSize);$("#' . $domId . '").keyup();';
 			if (!$this->sizeCounterFunctionLoaded) {
 				$script .= <<< DOC_END
