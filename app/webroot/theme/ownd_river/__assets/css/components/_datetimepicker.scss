@@ -24,6 +24,8 @@
 
  */
 
+@import '../vender/Font-Awesome/font-awesome';
+
 @mixin mx-datepicker-input {
   display: inline-block;
   outline: none;
@@ -57,17 +59,59 @@
 
   &__date,
   &__time {
+    position: relative;
     display: inline-block;
     white-space: nowrap;
+    &-label {
+      margin-right: 0.3em;
+      cursor: pointer;
+      &::before {
+        @extend .#{$fa-css-prefix};
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        color: #666;
+        //color: $color_primary;
+        //cursor: pointer;
+        transition: 0.2;
+      }
+    }
+
+    &:hover {
+      .bca-datetimepicker{
+        &__date,
+        &__time {
+          &-label {
+            &:before {
+              color: $color_secondary;
+            }
+          }
+        }
+      }
+    }
+
     &-input {
       @include mx-datepicker-input;
     }
+  }
+
+  &__date {
     &-label {
-      margin-right: 0.3em;
+      // カレンダーのアイコン
+      @extend .#{$fa-css-prefix}-calendar-o;
     }
   }
   &__time {
     margin-left: 1em;
+    &-label {
+      // 時計のアイコン
+      @extend .#{$fa-css-prefix}-clock-o;
+    }
+    &-input {
+      width: 6em;
+    }
   }
 
   &__delimiter {
