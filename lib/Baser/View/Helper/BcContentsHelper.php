@@ -542,5 +542,42 @@ class BcContentsHelper extends AppHelper {
 			return false;
 		}
 	}
+	
+	public function getCurrentFolderLinkedUrl() {
+		$this->getFolderLinkedUrl($this->request->data);
+	}
+	public function getFolderLinkedUrl($content) {
+		$urlArray = explode('/', preg_replace('/(^\/|\/$)/', '', $content['Content']['url']));
+		unset($urlArray[count($urlArray) -1]);
+		if($content['Site']['same_main_url']) {
+			$site = BcSite::findById($content['Site']['main_site_id']);
+			array_shift($urlArray);
+			if($site->alias) {
+				$urlArray = explode('/', $site->alias) + $urlArray;
+			}
+		}
+		if($content['Site']['use_subdomain']) {
+			$host = $this->getUrl('/' . $urlArray[0] . '/', true, $content['Site']['use_subdomain']);
+			array_shift($urlArray);
+		} else {
+			$host = $this->getUrl('/', true, $content['Site']['use_subdomain']);
+		}
+		if($content['Site']['alias']) {
+			$checkUrl = '/' . $content['Site']['alias'] . '/';
+		} else {
+			$checkUrl = '/';
+		}
+		$Content = ClassRegistry::init('Content');
+		foreach($urlArray as $key => $value) {
+			$checkUrl .= $value . '/';
+			$entityId = $Content->field('entity_id', ['Content.url' => $checkUrl]);
+			$urlArray[$key] = $this->BcBaser->getLink(urldecode($value), ['admin' => true, 'plugin' => '', 'controller' => 'content_folders', 'action' => 'edit', $entityId], ['forceTitle' => true]);
+		}
+		$folderLinkedUrl = $host;
+		if($urlArray) {
+			$folderLinkedUrl .= implode('/', $urlArray) . '/';
+		}
+		return $folderLinkedUrl;
+	}
 
 }

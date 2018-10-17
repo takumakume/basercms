@@ -68,8 +68,8 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 /**
  * Form After Submit
  *
- * フォームの保存ボタンの前後に、一覧、プレビュー、削除ボタンを配置する
- * プレビューを配置する場合は、設定にて、preview を true にする
+ * フォームの保存ボタンの前後に、一覧、プレビュー、削除ボタン、その他のエレメントを配置する
+ * プレビューを配置する場合は、コンテンツの設定にて、preview を true にする
  *
  * @param CakeEvent $event
  * @return string
@@ -78,17 +78,24 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 		if(!BcUtil::isAdminSystem()) {
 			return $event->data['out'];
 		}
+		/* @var BcAppView $View */
 		$View = $event->subject();
 		$data = $View->request->data;
 		if(!preg_match('/(AdminEditForm|AdminEditAliasForm)$/', $event->data['id'])) {
 			return $event->data['out'];
 		}
-		$output = $View->BcHtml->link(__d('baser', '一覧に戻る'), ['plugin' => '', 'admin' => true, 'controller' => 'contents', 'action' => 'index'], ['class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list']);
 		$setting = Configure::read('BcContents.items.' . $data['Content']['plugin'] . '.' . $data['Content']['type']);
+		// 一覧
+		$outputArray = [
+			$View->BcHtml->link(__d('baser', '一覧に戻る'), ['plugin' => '', 'admin' => true, 'controller' => 'contents', 'action' => 'index'], ['class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list']),
+		];
 		if (!empty($setting['preview']) && $data['Content']['type'] != 'ContentFolder') {
-			$output .= "\n" . $View->BcForm->button(__d('baser', 'プレビュー'), ['class' => 'button bca-btn', 'data-bca-btn-type'=>'preview', 'id' => 'BtnPreview']);
+			$outputArray[] = $View->BcForm->button(__d('baser', 'プレビュー'), ['class' => 'button bca-btn', 'data-bca-btn-type'=>'preview', 'id' => 'BtnPreview']);
 		}
-		$output .= $event->data['out'];
+		// 既存のボタン
+		$outputArray[] = $event->data['out'];
+		$outputArray = [$View->Html->div('bca-section__submit__main', implode("\n", $outputArray))];
+		// 削除ボタン
 		if(empty($data['Content']['site_root'])) {
 			if($data['Content']['alias_id']) {
 				$deleteText = __d('baser', '削除');
@@ -97,11 +104,24 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 			}
 			$PermissionModel = ClassRegistry::init('Permission');
 			if ($PermissionModel->check('/' . Configure::read('Routing.prefixes.0') . '/contents/delete', $View->viewVars['user']['user_group_id'])) {
-				$output .= $View->BcForm->button($deleteText, ['class' => 'button', 'id' => 'BtnDelete']);
+				$outputArray[] = $View->Html->div('bca-section__submit__sub', $View->BcForm->button($deleteText, [
+					'data-bca-btn-type' => 'delete',
+					'data-bca-btn-size' => 'sm',
+					'data-bca-btn-color' => 'danger',
+					'class' => 'button bca-btn', 
+					'id' => 'BtnDelete'
+				]));
 			}
 		}
-		$event->data['out'] = $output;
-		return $output;
+		$outputArray = [$View->Html->div('bca-section__submit', implode("\n", $outputArray))];
+		// その他エレメント
+		$outputArray = array_merge($outputArray, [
+			$View->element('admin/content_options'),
+			$View->element('admin/content_related'),
+			$View->element('admin/content_info')
+		]);
+		$event->data['out'] = implode("\n", $outputArray);
+		return $event->data['out'];
 	}
 
 }

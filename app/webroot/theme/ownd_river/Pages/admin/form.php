@@ -12,6 +12,7 @@
 
 /**
  * [ADMIN] ページ登録・編集フォーム
+ * @var BcAppView $this
  */
 $this->BcBaser->css('admin/ckeditor/editor', array('inline' => true));
 $this->BcBaser->js('admin/pages/edit', false);
@@ -30,7 +31,7 @@ $this->BcBaser->js('admin/pages/edit', false);
   <div class="bca-section bca-section__post-top">
     <span class="bca-post__url">
   <?php //echo $this->BcForm->label('BlogPost.url', 'URL') ?>
-      <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->params['Content']['url']) . '/archives/' . $this->BcForm->value('BlogPost.no')) ?></a>
+      <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->data['Content']['url'])) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->data['Content']['url'])) ?></a>
       <?php echo $this->BcForm->button('', [
         'id' => 'BtnCopyUrl',
         'class' => 'bca-btn',
@@ -89,41 +90,13 @@ $this->BcBaser->js('admin/pages/edit', false);
 <?php endif ?>
 
 
-<!-- button -->
-<div class="bca-section__submit">
-  <?php if ($this->action == 'admin_edit' || $this->action == 'admin_add'): ?>
-    <div class="bca-section__submit__main">
-      <a href="/admin/contents/" class="button bca-btn" data-bca-btn-type="back-to-list">一覧に戻る</a>
-      <?php echo $this->BcForm->button(__d('baser', 'プレビュー'),
-        array(
-          'id' => 'BtnPreview',
-          'div' => false,
-          'class' => 'button bca-btn',
-          'data-bca-btn-type' => 'preview',
-        )) ?>
-      <?php echo $this->BcForm->button(__d('baser', '保存'),
-        array(
-          'type' => 'submit',
-          'id' => 'BtnSave',
-          'div' => false,
-          'class' => 'button bca-btn',
-          'data-bca-btn-type' => 'save',
-          'data-bca-btn-size' => 'xl'
-        )) ?>
-    </div>
-  <?php endif ?>
-  <?php if ($this->action == 'admin_edit'): ?>
-    <div class="bca-section__submit__sub">
-      <?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $blogContent['BlogContent']['id'], $this->BcForm->value('BlogPost.id')),
-        array(
-          'class' => 'submit-token button bca-btn',
-          'data-bca-btn-type' => 'delete',
-          'data-bca-btn-size' => 'sm',
-          'data-bca-btn-color' => 'danger'
-        ), sprintf(__d('baser', '%s を本当に削除してもいいですか？ \n ※ 固定ページはゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('BlogPost.name')), false); ?>
-    </div>
-  <?php endif ?>
-</div>
+<?php echo $this->BcForm->submit(__d('baser', '保存'), [
+    'div' => false,
+    'class' => 'button bca-btn',
+    'data-bca-btn-type' => 'save',
+    'data-bca-btn-size' => 'xl', 
+    'id' => 'BtnSave'
+]) ?>
 
 
 <?php echo $this->BcForm->end(); ?>
