@@ -507,7 +507,7 @@ class BcContentsHelper extends AppHelper {
  * @param string $field 取得したい値
  *  'name','url','title'など　初期値：Null 
  *  省略した場合配列を取得
- * @return array or string or bool
+ * @return array|string|bool
  */
 	public function getContentByEntityId($id, $contentType, $field = null){
 		$conditions = array_merge($this->_Content->getConditionAllowPublish(), ['type' => $contentType, 'entity_id' => $id]);
@@ -526,8 +526,8 @@ class BcContentsHelper extends AppHelper {
 /**
  * IDがコンテンツ自身の親のIDかを判定する
  *
- * @param $id コンテンツ自身のID
- * @param $parentId 親として判定するID
+ * @param int $id コンテンツ自身のID
+ * @param int $parentId 親として判定するID
  * @return bool
  */
 	public function isParentId($id, $parentId) {
@@ -542,10 +542,26 @@ class BcContentsHelper extends AppHelper {
 			return false;
 		}
 	}
-	
+
+/**
+ * 現在のコンテンツが属するフォルダまでのフルパスを取得する
+ * フォルダ名称部分にはフォルダ編集画面へのリンクを付与する
+ * コンテンツ編集画面で利用
+ *
+ * @return string
+ */
 	public function getCurrentFolderLinkedUrl() {
-		$this->getFolderLinkedUrl($this->request->data);
+		return $this->getFolderLinkedUrl($this->request->data);
 	}
+
+/**
+ * 対象コンテンツが属するフォルダまでのフルパスを取得する
+ * フォルダ名称部分にはフォルダ編集画面へのリンクを付与する
+ * コンテンツ編集画面で利用
+ *
+ * @param array $content コンテンツデータ
+ * @return string
+ */
 	public function getFolderLinkedUrl($content) {
 		$urlArray = explode('/', preg_replace('/(^\/|\/$)/', '', $content['Content']['url']));
 		unset($urlArray[count($urlArray) -1]);
