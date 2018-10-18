@@ -12,6 +12,8 @@
 
 /**
  * [管理画面] サイト設定 フォーム
+ *
+ * @var array $themes
  */
 $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteConfigsFormScript',
 	'data-safeModeOn' => (string) $safeModeOn
@@ -91,7 +93,14 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 					100 => __d('baser', '100件')
 			)))
 			?>
-<?php echo $this->BcForm->error('SiteConfig.admin_list_num') ?>
+			<?php echo $this->BcForm->error('SiteConfig.admin_list_num') ?>
+		</td>
+	</tr>
+	<tr>
+		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_list_num', __d('baser', '管理システムの<br>テーマ')) ?>&nbsp;<span class="required">*</span></th>
+		<td class="col-input bca-form-table__input">
+			<?php echo $this->BcForm->input('SiteConfig.admin_theme', ['type' => 'select', 'options' => $themes]) ?>
+			<?php echo $this->BcForm->error('SiteConfig.admin_theme') ?>
 		</td>
 	</tr>
 	<?php echo $this->BcForm->dispatchAfterForm() ?>
