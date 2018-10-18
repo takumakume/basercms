@@ -41,11 +41,11 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.name', array('type' => 'input', 'size' => '30', 'autofocus' => true)) ?>
+			<?php echo $this->BcForm->input('Site.name', array('type' => 'text', 'size' => '30', 'autofocus' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトを特定する事ができる識別名称を入力します。半角英数とハイフン（-）・アンダースコア（_）のみが利用できます。エイリアスを入力しない場合は、URLにも利用されます。</div>
 			　<span style="white-space: nowrap;"><small>[<?php echo $this->BcForm->label('Site.alias', __d('baser', 'エイリアス')) ?>]</small>
-			<?php echo $this->BcForm->input('Site.alias', array('type' => 'input', 'size' => '10')) ?></span>
+			<?php echo $this->BcForm->input('Site.alias', array('type' => 'text', 'size' => '10')) ?></span>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトの識別名称とは別のURLにしたい場合、別名を入力する事ができます。エイリアスは半角英数に加えハイフン（-）・アンダースコア（_）・スラッシュ（/）・ドット（.）が利用できます。</div>
 			<?php echo $this->BcForm->error('Site.name') ?>
@@ -55,7 +55,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'input', 'size' => '60')) ?>
+			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'text', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイト名を入力します。管理システムでの表示に利用されます。日本語の入力が可能ですのでわかりやすい名前をつけてください。</div>
 			<?php echo $this->BcForm->error('Site.display_name') ?>
@@ -64,7 +64,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.title', array('type' => 'input', 'size' => '60')) ?>
+			<?php echo $this->BcForm->input('Site.title', array('type' => 'text', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトのタイトルを入力します。タイトルタグに利用されます。</div>
 			<?php echo $this->BcForm->error('Site.title') ?>

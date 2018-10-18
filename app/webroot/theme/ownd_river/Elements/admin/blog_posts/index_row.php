@@ -40,7 +40,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 <tr<?php echo $class; ?>>
 	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--select"><?php // 選択 ?>
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['BlogPost']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogPost']['id'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['BlogPost']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogPost']['id']]) ?>
 		<?php endif ?>
 	</td>
 	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--no"><?php // No ?><?php echo $data['BlogPost']['no']; ?></td>

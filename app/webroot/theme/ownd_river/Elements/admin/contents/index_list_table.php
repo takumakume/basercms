@@ -18,7 +18,7 @@
 <div class="bca-data-list__top">
 	<?php if ($this->BcBaser->isAdminUser()): ?>
 		<div class="bca-action-table-listup">
-			<?php /*echo $this->BcForm->checkbox('ListTool.checkall', ['title' => __d('baser', '一括選択')])*/ ?>
+			<?php /*echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'title' => __d('baser', '一括選択')])*/ ?>
 			<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['del' => __d('baser', '削除'), 'publish' => __d('baser', '公開'), 'unpublish' => __d('baser', '非公開')], 'empty' => __d('baser', '一括処理')]) ?>
 			<?php echo $this->BcForm->button(__d('baser', '適用'), ['id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn']) ?>
 		</div>
@@ -33,7 +33,7 @@
 	<thead class="bca-table-listup__thead">
 	<tr>
 		<th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select"><?php // 一括選択 ?>
-			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'),'class'=>'bca-checkbox')) ?>
+			<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'title' => __d('baser', '一括選択')]) ?>
 			<label for="ListToolCheckall" data-bca-checkbox-size="sm" class="bca-checkbox-label"></label>
 		</th>
 		<th class="list-tool bca-table-listup__thead-th">

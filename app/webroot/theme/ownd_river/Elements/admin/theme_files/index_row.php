@@ -25,7 +25,7 @@ array_push($params, $data['name']);
 <tr>
 	<td class="row-tools">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . str_replace('.', '_', $data['name']), array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['name'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . str_replace('.', '_', $data['name']), ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['name']]) ?>
 		<?php endif ?>
 		<?php if ($data['type'] == 'folder'): ?>
 			<!-- imgは削除対象 -->

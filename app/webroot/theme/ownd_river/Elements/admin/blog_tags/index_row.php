@@ -19,7 +19,7 @@
 <tr>
 	<td class="bca-table-listup__tbody-td">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['BlogTag']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogTag']['id'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['BlogTag']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogTag']['id']]) ?>
 		<?php endif ?>	
 	</td>
 	<td class="row-tools bca-table-listup__tbody-td">

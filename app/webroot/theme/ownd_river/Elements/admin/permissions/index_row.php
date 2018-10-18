@@ -28,7 +28,7 @@
 			<?php echo $this->BcForm->input('Sort.id' . $data['Permission']['id'], array('type' => 'hidden', 'class' => 'id', 'value' => $data['Permission']['id'])) ?>
 		<?php endif ?>
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['Permission']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Permission']['id'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['Permission']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Permission']['id']]) ?>
 		<?php endif ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_unpublish.png', array('alt' => __d('baser', '無効'), 'class' => 'btn')), array('action' => 'ajax_unpublish', $data['Permission']['id']), array('title' => __d('baser', '非公開'), 'class' => 'btn-unpublish')) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_publish.png', array('alt' => __d('baser', '有効'), 'class' => 'btn')), array('action' => 'ajax_publish', $data['Permission']['id']), array('title' => __d('baser', '公開'), 'class' => 'btn-publish')) ?>

@@ -15,7 +15,7 @@
 <tr>
 	<td class="row-tools">
 <?php if($this->BcBaser->isAdminUser()): ?>
-		<?php echo $this->BcForm->checkbox('ListTool.batch_targets.'.$data['UploaderCategory']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['UploaderCategory']['id'])) ?>
+		<?php echo $this->BcForm->input('ListTool.batch_targets.'.$data['UploaderCategory']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['UploaderCategory']['id']]) ?>
 <?php endif ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', '編集'), 'class' => 'btn')), array('action' => 'edit', $data['UploaderCategory']['id']), array('title' => __d('baser', '編集'))) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'コピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $data['UploaderCategory']['id']), array('title' => __d('baser', 'コピー'), 'class' => 'btn-copy')) ?>

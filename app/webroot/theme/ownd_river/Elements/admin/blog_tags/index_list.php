@@ -40,7 +40,7 @@
 	<thead class="bca-table-listup__thead">
 		<tr>
 			<th class="bca-table-listup__thead-th">
-			<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'),'class'=>'bca-checkbox')) ?>
+			<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'title' => __d('baser', '一括選択')]) ?>
 			<label for="ListToolCheckall" data-bca-checkbox-size="sm" class="bca-checkbox-label"></label>
 			</th>
 			<th style="width:160px" class="list-tool bca-table-listup__thead-th">
