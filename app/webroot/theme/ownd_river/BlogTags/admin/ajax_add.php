@@ -18,9 +18,6 @@
 		'multiple' => 'checkbox',
 		'options' => $result,
 		'hidden' => false,
-		'value' => true,
-		'class' => 'bca-checkbox',
-		'span' => ['class' => 'bca-checkbox-item'],
-		'label' => ['class' => 'bca-checkbox-label']
+		'value' => true
 	]); ?>
 <?php endif ?>

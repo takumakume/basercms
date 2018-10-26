@@ -26,7 +26,7 @@ $priorities = array('0.1' => '0.1', '0.2' => '0.2', '0.3' => '0.3', '0.4' => '0.
 <tr id="Row<?php echo $count + 1 ?>" <?php echo $class; ?>>
 	<td class="row-tools" style="width:22%">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['SearchIndex']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['SearchIndex']['id'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['SearchIndex']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['SearchIndex']['id']]) ?>
 		<?php endif ?>		
 		<?php
 		echo $this->BcForm->input('SearchIndex.priority' . '_' . $data['SearchIndex']['id'], array(

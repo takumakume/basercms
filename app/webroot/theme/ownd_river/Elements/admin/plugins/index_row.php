@@ -28,7 +28,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 			<?php echo $this->BcForm->input('Sort.id' . $data['Plugin']['id'], array('type' => 'hidden', 'class' => 'id', 'value' => $data['Plugin']['id'])) ?>
 		<?php endif ?>
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['Plugin']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Plugin']['id'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['Plugin']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Plugin']['id']]) ?>
 		<?php endif ?>
 		<?php if ($data['Plugin']['update']): ?>
 			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_update.png', array('alt' => __d('baser', 'アップデート'), 'class' => 'btn')), array('controller' => 'updaters', 'action' => 'plugin', $data['Plugin']['name']), array('title' => __d('baser', 'アップデート'), 'class' => 'btn-update')); ?>

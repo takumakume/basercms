@@ -12,13 +12,14 @@
 
 /**
  * [ADMIN] ページ登録・編集フォーム
+ * @var BcAppView $this
  */
 $this->BcBaser->css('admin/ckeditor/editor', array('inline' => true));
 $this->BcBaser->js('admin/pages/edit', false);
 ?>
 
 
-<div class="display-none">
+<div hidden="hidden">
 	<div id="Action"><?php echo $this->request->action ?></div>
 </div>
 
@@ -26,7 +27,22 @@ $this->BcBaser->js('admin/pages/edit', false);
 <?php echo $this->BcForm->input('Page.mode', array('type' => 'hidden')) ?>
 <?php echo $this->BcForm->input('Page.id', array('type' => 'hidden')) ?>
 
-<div class="section editor-area">
+<?php if ($this->action == 'admin_edit'): ?>
+  <div class="bca-section bca-section__post-top">
+    <span class="bca-post__url">
+  <?php //echo $this->BcForm->label('BlogPost.url', 'URL') ?>
+      <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->data['Content']['url'])) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->data['Content']['url'])) ?></a>
+      <?php echo $this->BcForm->button('', [
+        'id' => 'BtnCopyUrl',
+        'class' => 'bca-btn',
+        'data-bca-btn-type' => 'textcopy',
+        'data-bca-btn-category' => 'text',
+        'data-bca-btn-size' => 'sm'
+      ]) ?>
+  </div>
+<?php endif; ?>
+
+<div class="bca-section bca-section-editor-area">
 	<?php echo $this->BcForm->editor('Page.contents', array_merge(array(
 		'editor' => @$siteConfig['editor'],
 		'editorUseDraft' => true,
@@ -39,10 +55,10 @@ $this->BcBaser->js('admin/pages/edit', false);
 </div>
 
 <?php if (BcUtil::isAdminUser()): ?>
-<div class="section">
+<div class="bca-section">
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Page.page_template', __d('baser', '固定ページテンプレート')) ?></th>
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('Page.page_template', __d('baser', '固定ページテンプレート')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Page.page_template', array('type' => 'select', 'options' => $pageTemplateList)) ?>
 				<div class="helptext">
@@ -52,7 +68,7 @@ $this->BcBaser->js('admin/pages/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Page.code', __d('baser', 'コード')) ?></th>
+			<th class="bca-form-table__label"><?php echo $this->BcForm->label('Page.code', __d('baser', 'コード')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Page.code', array(
 					'type' => 'textarea',
@@ -73,8 +89,14 @@ $this->BcBaser->js('admin/pages/edit', false);
 </div>
 <?php endif ?>
 
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
-</div>
+
+<?php echo $this->BcForm->submit(__d('baser', '保存'), [
+    'div' => false,
+    'class' => 'button bca-btn',
+    'data-bca-btn-type' => 'save',
+    'data-bca-btn-size' => 'xl', 
+    'id' => 'BtnSave'
+]) ?>
+
 
 <?php echo $this->BcForm->end(); ?>

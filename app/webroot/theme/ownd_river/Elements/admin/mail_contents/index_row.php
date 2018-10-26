@@ -23,7 +23,7 @@ if (!$data['MailContent']['status']) {
 
 <tr <?php echo $class; ?>>
 	<td class="row-tools">
-		<?php //echo $this->BcForm->checkbox('ListTool.batch_targets.'.$data['MailContent']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['MailContent']['id'])) ?>
+		<?php //echo $this->BcForm->input('ListTool.batch_targets.'.$data['MailContent']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['MailContent']['id']]) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_check.png', array('alt' => __d('baser', '確認'), 'class' => 'btn')), '/' . $data['Content']['name'] . '/index', array('title' => __d('baser', '確認'), 'target' => '_blank')) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', '管理'), 'class' => 'btn')), array('controller' => 'mail_fields', 'action' => 'index', $data['MailContent']['id']), array('title' => __d('baser', '管理'))) ?>
 		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', '編集'), 'class' => 'btn')), array('action' => 'edit', $data['MailContent']['id']), array('title' => __d('baser', '編集'))) ?>

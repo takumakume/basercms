@@ -23,7 +23,7 @@ if($this->action == 'admin_index') {
         <?php if(count($sites) >= 2): ?>
             <div class="bca-panel-box__inline-fields-item">
                 <label class="bca-panel-box__inline-fields-title"><?php echo __d('baser', 'サイト') ?></label>
-                <?php echo $this->BcForm->input('ViewSetting.site_id', array('type' => 'select', 'class' => 'bca-select', 'options' => $sites)) ?>
+                <?php echo $this->BcForm->input('ViewSetting.site_id', array('type' => 'select', 'options' => $sites)) ?>
             </div>
             <div class="bca-panel-box__inline-fields-separator"></div>
         <?php else : ?>
@@ -31,7 +31,7 @@ if($this->action == 'admin_index') {
         <?php endif ?>
         <div class="bca-panel-box__inline-fields-item">
             <label class="bca-panel-box__inline-fields-title"><?php echo __d('baser', '表示') ?></label>
-            <?php echo $this->BcForm->input('ViewSetting.list_type', array('type' => 'radio', 'class' => 'bca-radio', 'options' => $listTypes)) ?>
+            <?php echo $this->BcForm->input('ViewSetting.list_type', array('type' => 'radio', 'options' => $listTypes)) ?>
         </div>
     </div>
 </div>

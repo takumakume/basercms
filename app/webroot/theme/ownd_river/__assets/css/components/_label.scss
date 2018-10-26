@@ -3,11 +3,12 @@
 	display: inline-block;
 	color: #FFF;
 	background: #444;
-	margin: .5em;
+	margin: .5em .5em .5em;
 	padding: 0 .5em;
 	line-height: 2;
 
 	&[data-bca-label-type="required"] {
+    white-space: nowrap;
 		background: #E00;
 	}
 

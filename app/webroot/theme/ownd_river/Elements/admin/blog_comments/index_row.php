@@ -24,7 +24,7 @@ if (!$data['BlogComment']['status']) {
 <tr<?php echo $class; ?>>
 	<td class="row-tools bca-table-listup__tbody-td">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['BlogComment']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogComment']['id'])) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['BlogComment']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['BlogComment']['id']]) ?>
 		<?php endif ?>
 	</td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['BlogComment']['no'] ?></td>

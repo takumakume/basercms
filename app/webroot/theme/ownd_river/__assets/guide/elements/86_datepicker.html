@@ -1,0 +1,62 @@
+<!--
+	# フォーム系 datepicker
+	@parts
+	ページタイトル
+-->
+
+<span class="bca-datepicker">
+  <span class="bca-datepicker__date">
+    <label class="bca-datepicker__date-label">日付</label>
+    <input class="bca-datepicker__date-input"  …>
+  </span>
+
+  <span class="bca-datepicker__time">
+    <label class="bca-datepicker__time-label">時間</label>
+    <input class="bca-datepicker__time-input" …>
+  </span>
+</span>
+
+
+<span class="bca-datepicker-range">
+  <span class="bca-datepicker-range__begin">
+    <span class="bca-datepicker">
+      <span class="bca-datepicker__date">
+        <label class="bca-datepicker__date-label">開始日</label>
+        <input class="bca-datepicker__date-input"  …>
+      </span>
+
+      <span class="bca-datepicker__time">
+        <label class="bca-datepicker__time-label">開始時間</label>
+        <input class="bca-datepicker__time-input" …>
+      </span>
+    </span>
+  </span>
+
+  <span class="bca-datepicker-range__delimiter">〜</span>
+
+  <span class="bca-bca-datepicker-range__end">
+    <span class="bca-datepicker">
+      <span class="bca-datepicker__date">
+        <label class="bca-datepicker__date-label">終了日</label>
+        <input class="bca-datepicker__date-input"  …>
+      </span>
+      <span class="bca-datepicker__time">
+        <label class="bca-datepicker__time-label">終了時間</label>
+        <input class="bca-datepicker__time-input" …>
+      </span>
+    </span>
+  </span>
+</span>
+
+
+
+<span class="bca-datepicker__begin">
+  <input name="data[BlogPost][publish_begin_date]" class="bca-datepicker__begin__date hasDatepicker" …>
+  <input name="data[BlogPost][publish_begin_time]" class="bca-datepicker__begin__date__time ui-timepicker-input" …>
+</span>
+<span class="bca-datepicker__delimiter">〜</span>
+<span class="bca-datepicker__end">
+  <input name="data[BlogPost][publish_end_date]" class="bca-datepicker__end__date hasDatepicker">
+  <input name="data[BlogPost][publish_end_time]" class="bca-datepicker__end__date__time ui-timepicker-input">
+</span>
+

@@ -12,6 +12,8 @@
 
 /**
  * [管理画面] サイト設定 フォーム
+ *
+ * @var array $themes
  */
 $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteConfigsFormScript',
 	'data-safeModeOn' => (string) $safeModeOn
@@ -29,7 +31,7 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 	<tr>
 		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.formal_name', __d('baser', 'WEBサイト名')) ?>&nbsp;<span class="required">*</span></th>
 		<td class="col-input bca-form-table__input">
-			<?php echo $this->BcForm->input('SiteConfig.formal_name', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'autofocus' => true, 'class' => 'full-width')) ?>
+			<?php echo $this->BcForm->input('SiteConfig.formal_name', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'autofocus' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpFormalName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<?php echo $this->BcForm->error('SiteConfig.formal_name') ?>
 			<div id="helptextFormalName" class="helptext">
@@ -43,7 +45,7 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 	<tr>
 		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.name', __d('baser', 'WEBサイトタイトル')) ?>&nbsp;<span class="required">*</span></th>
 		<td class="col-input bca-form-table__input">
-			<?php echo $this->BcForm->input('SiteConfig.name', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'counter' => true, 'class' => 'full-width')) ?>
+			<?php echo $this->BcForm->input('SiteConfig.name', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'counter' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<?php echo $this->BcForm->error('SiteConfig.name') ?>
 			<div id="helptextName" class="helptext">
@@ -57,7 +59,7 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 	</tr>
 	<tr>
 		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.keyword', __d('baser', 'サイト基本キーワード')) ?></th>
-		<td class="col-input bca-form-table__input"><?php echo $this->BcForm->input('SiteConfig.keyword', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'counter' => true, 'class' => 'full-width')) ?>
+		<td class="col-input bca-form-table__input"><?php echo $this->BcForm->input('SiteConfig.keyword', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'counter' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpKeyword', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<?php echo $this->BcForm->error('SiteConfig.keyword') ?>
 			<div id="helptextKeyword" class="helptext">テンプレートで利用する場合は、<br />
@@ -91,7 +93,14 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 					100 => __d('baser', '100件')
 			)))
 			?>
-<?php echo $this->BcForm->error('SiteConfig.admin_list_num') ?>
+			<?php echo $this->BcForm->error('SiteConfig.admin_list_num') ?>
+		</td>
+	</tr>
+	<tr>
+		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_list_num', __d('baser', '管理システムの<br>テーマ')) ?>&nbsp;<span class="required">*</span></th>
+		<td class="col-input bca-form-table__input">
+			<?php echo $this->BcForm->input('SiteConfig.admin_theme', ['type' => 'select', 'options' => $themes]) ?>
+			<?php echo $this->BcForm->error('SiteConfig.admin_theme') ?>
 		</td>
 	</tr>
 	<?php echo $this->BcForm->dispatchAfterForm() ?>

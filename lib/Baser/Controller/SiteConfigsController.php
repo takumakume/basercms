@@ -179,9 +179,16 @@ class SiteConfigsController extends AppController {
 		if (!$writableInstall) {
 			$disableSettingInstallSetting = ['disabled' => 'disabled'];
 		}
-
+		$themes = BcUtil::getThemeList();
+		foreach($themes as $key => $theme) {
+			if(!is_file(WWW_ROOT . 'theme' . DS . $theme . DS . 'Layouts' . DS . 'admin' . DS . 'default.php')) {
+				unset($themes[$key]);
+			}
+		}
+		array_unshift($themes, 'baserCMS標準テーマ');
 		$this->set(compact(
-				'baseUrl', 'userGroups', 'rewriteInstalled', 'writableInstall', 'writableHtaccess', 'writableHtaccess2', 'disableSettingInstallSetting'
+			'baseUrl', 'userGroups', 'rewriteInstalled', 'writableInstall', 'writableHtaccess',
+			'writableHtaccess2', 'disableSettingInstallSetting', 'themes'
 		));
 		$this->subMenuElements = ['site_configs'];
 		$this->pageTitle = __d('baser', 'サイト基本設定');
