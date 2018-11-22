@@ -1729,8 +1729,10 @@ class BcAppModel extends Model {
 /**
  * レコードデータの消毒をおこなう
  * @return array
+ * @deprecated 5.0.0 since 4.1.3 htmlspecialchars を利用してください。
  */
 	public function sanitizeRecord($record) {
+		trigger_error(deprecatedMessage('メソッド：BcAppModel::sanitizeRecord()', '4.0.0', '5.0.0', 'htmlspecialchars を利用してください。'), E_USER_DEPRECATED);
 		foreach ($record as $key => $value) {
 				$record[$key] = $this->sanitize($value);
 		}
@@ -1742,8 +1744,10 @@ class BcAppModel extends Model {
  * 配列には対応しない
  * @param $data
  * @return mixed|string
+ * @deprecated 5.0.0 since 4.1.3 htmlspecialchars を利用してください。
  */
 	public function sanitize($value) {
+		trigger_error(deprecatedMessage('メソッド：BcAppModel::sanitizeRecord()', '4.0.0', '5.0.0', 'htmlspecialchars を利用してください。'), E_USER_DEPRECATED);
 		if (!is_array($value)) {
 			// 既に htmlspecialchars を実行済のものについて一旦元の形式に復元した上で再度サイニタイズ処理をかける。
 			$value = str_replace("&lt;!--", "<!--", $value);
@@ -1762,11 +1766,20 @@ class BcAppModel extends Model {
  * @return bool
  */
 	public function containsScript($check) {
+		$events = ['onclick', 'ondblclick', 'onmousedown', 'onmouseup', 'onmouseover', 'onmousemove',
+					'onmouseout', 'onkeypress', 'onkeydown', 'onkeyup', 'onload', 'onunload',
+					'onfocus', 'onblur', 'onsubmit', 'onreset', 'onselect', 'onchange'];
 		if(BcUtil::isAdminUser() || Configure::read('BcApp.allowedPhpOtherThanAdmins')) {
 			return true;
 		}
 		$value = $check[key($check)];
-		if(preg_match('/(<\?=|<\?php|<script)/', $value)) {
+		if(preg_match('/(<\?=|<\?php|<script)/i', $value)) {
+			return false;
+		}
+		if(preg_match('/<[^>]+?(' . implode('|', $events) . ')=("|\')[^>]*?>/i', $value)) {
+			return false;
+		}
+		if(preg_match('/href=\s*?("|\')[^"\']*?javascript\s*?:/i', $value)) {
 			return false;
 		}
 		return true;
