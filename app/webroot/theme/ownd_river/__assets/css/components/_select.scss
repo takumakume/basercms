@@ -1,7 +1,7 @@
 .bca-select{
   &__select {
     appearance: none;
-    background: url(../../img/admin/icn_select.svg) no-repeat center right 0.5em / 10px auto;
+    background: url(../../img/admin/icn_select.svg) no-repeat center right 0.5em / 10px auto, #FFFFFF;
     font-size: $button_font_size_medium;
     padding: $button_padding_top 2.2em $button_padding_bottom 1.2em;
     border: 1px solid #ccc;
