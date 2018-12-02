@@ -24,10 +24,12 @@
 			<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class'=>'bca-btn')) ?>
 		</div>
 	<?php endif ?>
-	<div class="bca-data-list__sub">
-		<!-- pagination -->
-		<?php $this->BcBaser->element('pagination') ?>
-	</div>
+  <div class="bca-data-list__sub">
+    <!-- list-num -->
+    <?php $this->BcBaser->element('list_num') ?>
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
 </div>
 
 <table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
@@ -89,11 +91,3 @@
 	<?php endif; ?>
 </tbody>
 </table>
-
-
-<div class="bca-data-list__bottom">
-	<div class="bca-data-list__sub">
-		<!-- list-num -->
-		<?php $this->BcBaser->element('list_num') ?>
-	</div>
-</div>
