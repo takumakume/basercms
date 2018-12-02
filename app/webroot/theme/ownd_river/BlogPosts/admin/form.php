@@ -244,42 +244,41 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
-</div>
 
-<!-- button -->
-<div class="bca-section__submit">
-	<?php if ($this->action == 'admin_edit' || $this->action == 'admin_add'): ?>
-  <div class="bca-section__submit__main">
-		<?php echo $this->BcForm->button(__d('baser', 'プレビュー'),
-      array(
-        'id' => 'BtnPreview',
-        'div' => false,
-        'class' => 'button bca-btn',
-        'data-bca-btn-type' => 'preview',
-      )) ?>
-		<?php echo $this->BcForm->button(__d('baser', '保存'),
-      array(
-        'type' => 'submit',
-        'id' => 'BtnSave',
-        'div' => false,
-        'class' => 'button bca-btn',
-        'data-bca-btn-type' => 'save',
-        'data-bca-btn-size' => 'xl'
-      )) ?>
+  <!-- button -->
+  <div class="bca-actions">
+  	<?php if ($this->action == 'admin_edit' || $this->action == 'admin_add'): ?>
+    <div class="bca-actions__main">
+  		<?php echo $this->BcForm->button(__d('baser', 'プレビュー'),
+        array(
+          'id' => 'BtnPreview',
+          'div' => false,
+          'class' => 'button bca-btn bca-actions__item',
+          'data-bca-btn-type' => 'preview',
+        )) ?>
+  		<?php echo $this->BcForm->button(__d('baser', '保存'),
+        array(
+          'type' => 'submit',
+          'id' => 'BtnSave',
+          'div' => false,
+          'class' => 'button bca-btn bca-actions__item',
+          'data-bca-btn-type' => 'save',
+          'data-bca-btn-size' => 'xl'
+        )) ?>
+    </div>
+    <?php endif ?>
+    <?php if ($this->action == 'admin_edit'): ?>
+    <div class="bca-actions__sub">
+      <?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $blogContent['BlogContent']['id'], $this->BcForm->value('BlogPost.id')),
+        array(
+          'class' => 'submit-token button bca-btn bca-actions__item',
+          'data-bca-btn-type' => 'delete',
+          'data-bca-btn-size' => 'sm',
+          'data-bca-btn-color' => 'danger'
+        ), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('BlogPost.name')), false); ?>
+    </div>
+    <?php endif ?>
+
   </div>
-  <?php endif ?>
-  <?php if ($this->action == 'admin_edit'): ?>
-  <div class="bca-section__submit__sub">
-    <?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $blogContent['BlogContent']['id'], $this->BcForm->value('BlogPost.id')),
-      array(
-        'class' => 'submit-token button bca-btn',
-        'data-bca-btn-type' => 'delete',
-        'data-bca-btn-size' => 'sm',
-        'data-bca-btn-color' => 'danger'
-      ), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('BlogPost.name')), false); ?>
-  </div>
-  <?php endif ?>
-
 </div>
-
 <?php echo $this->BcForm->end() ?>

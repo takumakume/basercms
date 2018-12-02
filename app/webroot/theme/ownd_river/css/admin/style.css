@@ -15498,11 +15498,11 @@ table.cake-sql-log tr td {
   justify-content: center;
   margin-top: 20px; }
   .bca-actions__sub {
-    margin-left: 40px;
-    padding-left: 40px;
+    margin-left: 30px;
+    padding-left: 30px;
     border-left: 1px solid #ccc; }
   .bca-actions__item {
-    margin: 0 6px; }
+    margin: 0 10px; }
 
 .ui-dialog {
   padding: 0 !important; }
