@@ -375,6 +375,8 @@ background: #888;
 	color:#535A62;
 	font-size:14px;
 	border-top:1px solid #DDD;
+	border-right:1px solid #DDD;
+	border-left:1px solid #DDD;
 	border-bottom:1px solid #EDEDED;
 	background:#F3F3F3;
 	background:-moz-linear-gradient(top,#FFF,#F3F3F3);
@@ -433,8 +435,19 @@ background: #888;
 #WidgetSetting .ui-widget-content .content p{
 	margin:0!important;
 }
+#WidgetSetting #Source .ui-widget-content{
+	border-left:solid 1px #ddd;
+	border-right:solid 1px #ddd;
+	margin-bottom: 0;
+}
 #WidgetSetting #Source .description{
-	margin:0 12px 20px;
+	/*margin:0 12px 20px;*/
+	padding: 10px 12px;
+	width: 100%;
+	border-left:solid 1px #ddd;
+	border-right:solid 1px #ddd;
+	border-bottom:solid 1px #ddd;
+	margin: 0;
 }
 #WidgetSetting #SourceOuter,
 #WidgetSetting #TargetOuter {

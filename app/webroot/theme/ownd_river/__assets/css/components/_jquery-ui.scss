@@ -41,6 +41,10 @@
 .ui-widget-content{
 	border-radius: 0 !important;
 	border-color: $color_border !important;
+	div:first-child div{
+		border-top: 1px solid #ddd;
+		padding: 3px 10px;
+	}
 }
 .ui-dialog-titlebar{
 	background: $color_primary !important;
