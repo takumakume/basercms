@@ -175,6 +175,12 @@
 		@include btn-common;
 	}
 
+  // ドラック可能
+  &[data-bca-btn-type=draggable] {
+    @extend .#{$fa-css-prefix}-arrows-v;
+    @include btn-common;
+  }
+
 	// サイズ
 	// ===========================
   // xlarge
