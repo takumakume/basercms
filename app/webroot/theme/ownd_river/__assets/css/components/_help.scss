@@ -42,8 +42,13 @@
 #Help .example-box .head{
 	font-weight: bold;
 }
+#Help ul,
+#Help ol{
+	list-style-type: none;
+}
+
 #Help li{
-	padding: 0 20px;
+	/*padding: 0 20px;*/
 	margin:5px 0;
 	background: url(../../img/admin/blt_list_2.png) no-repeat left 1px;
 	padding-left:15px;
