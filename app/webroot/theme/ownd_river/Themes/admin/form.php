@@ -30,7 +30,7 @@
 <div class="section">
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Theme.name', __d('baser', 'テーマ名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Theme.name', __d('baser', 'テーマ名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('Theme.name', array('type' => 'text', 'size' => 20, 'maxlength' => 255, 'autofocus' => true, 'disabled' => $folderDisabled)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -77,10 +77,14 @@
 	</table>
 </div>
 <?php if (!$folderDisabled && $siteConfig['theme'] != $this->BcForm->value('Theme.name')): ?>
-	<div class="submit">
-		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
-		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'del', $this->BcForm->value('Theme.name')), array('class' => 'submit-token btn-gray button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('Theme.name')), false); ?>
+	<div class="submit bca-actions">
+		<div class="bca-actions__main">
+			<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+		</div>
+		<div class="bca-actions__sub">
+			<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'del', $this->BcForm->value('Theme.name')), array('class' => 'submit-token btn-gray button bca-btn bca-actions__item', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'sm'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('Theme.name')), false); ?>
+		</div>
 	</div>
-	<?php endif; ?>
+<?php endif; ?>
 
 <?php echo $this->BcForm->end() ?>
