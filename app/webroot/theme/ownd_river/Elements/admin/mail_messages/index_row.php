@@ -17,12 +17,10 @@
 
 
 <tr id="Row<?php echo $count + 1 ?>">
-	<td class="row-tools bca-table-listup__tbody-td" style="width:180px;">
+	<td class="row-tools bca-table-listup__tbody-td">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['MailMessage']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['MailMessage']['id']]) ?>
 		<?php endif ?>		
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', array('alt' => __d('baser', '詳細'), 'class' => 'btn')), array('action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => __d('baser', '詳細'), 'class' => 'btn-view')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 	</td>
 	<td class="row-tools bca-table-listup__tbody-td"><?php echo $data['MailMessage']['id'] ?></td>
 	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('Y/m/d', strtotime($data['MailMessage']['created'])) ?></td>
@@ -55,5 +53,9 @@
 		<?php if($fileExists): ?>
 			○
 		<?php endif ?>
+	</td>
+	<td class="row-tools bca-table-listup__tbody-td">
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', array('alt' => __d('baser', '詳細'), 'class' => 'btn')), array('action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => __d('baser', '詳細'), 'class' => 'btn-view')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 	</td>
 </tr>
