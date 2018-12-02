@@ -5,6 +5,14 @@
 	align-items: center;
 	justify-content: center;
 	margin-top: 20px;
+	&__main{
+
+	}
+	&__sub{
+		margin-left: 40px;
+		padding-left: 40px;
+		border-left: 1px solid #ccc;
+	}
 	&__item{
 		margin: 0 6px;
 	}

@@ -233,8 +233,10 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 </div>
 
 <!-- button -->
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+	</div>
 </div>
 
 <?php echo $this->BcForm->end() ?>
