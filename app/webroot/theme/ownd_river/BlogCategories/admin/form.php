@@ -113,8 +113,8 @@ $owners = $this->BcForm->getControlSource('BlogCategory.owner_id');
 
 
 <!-- button -->
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
+<div class="submit bca-actions">
+	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save')) ?>
 	<?php if ($this->action == 'admin_edit'): ?>
 		<?php
 		$this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $blogContent['BlogContent']['id'], $this->BcForm->value('BlogCategory.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('BlogCategory.name')), false);
