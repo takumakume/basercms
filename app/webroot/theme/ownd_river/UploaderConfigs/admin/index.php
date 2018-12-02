@@ -18,7 +18,7 @@
 <div class="section">
 	<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
 		<tr>
-			<th><span class="required">*</span>&nbsp;
+			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.large_width', __d('baser', 'PCサイズ（大）')) ?>
 			</th>
 			<td>
@@ -29,7 +29,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="required">*</span>&nbsp;
+			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.midium_width', __d('baser', 'PCサイズ（中）')) ?>
 			</th>
 			<td>
@@ -40,7 +40,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="required">*</span>&nbsp;
+			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.small_width', __d('baser', 'PCサイズ（小）')) ?>
 			</th>
 			<td>
@@ -53,7 +53,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="required">*</span>&nbsp;
+			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.mobile_large_width', __d('baser', '携帯サイズ（大）')) ?>
 			</th>
 			<td>
@@ -64,7 +64,7 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="required">*</span>&nbsp;
+			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.mobile_small_width', __d('baser', '携帯サイズ（小）')) ?>
 			</th>
 			<td>
@@ -108,8 +108,10 @@
 <?php endif ?>
 
 <!-- button -->
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '更新'), array('div' => false, 'class' => 'btn-orange button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'id' => 'btnSubmit')) ?>
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->submit(__d('baser', '更新'), array('div' => false, 'class' => 'btn-orange button bca-btn bca-actions__item', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg', 'id' => 'btnSubmit')) ?>
+	</div>
 </div>
 
 <?php echo $this->BcForm->end() ?>

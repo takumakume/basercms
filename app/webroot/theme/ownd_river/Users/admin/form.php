@@ -41,7 +41,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			</tr>
 		<?php endif ?>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.name', __d('baser', 'アカウント名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.name', __d('baser', 'アカウント名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.name', array('type' => 'text', 'size' => 20, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -50,7 +50,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.real_name_1', __d('baser', '名前')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.real_name_1', __d('baser', '名前')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<small>[姓]</small> <?php echo $this->BcForm->input('User.real_name_1', array('type' => 'text', 'size' => 12, 'maxlength' => 255)) ?>
 				<small>[名]</small> <?php echo $this->BcForm->input('User.real_name_2', array('type' => 'text', 'size' => 12, 'maxlength' => 255)) ?>
@@ -70,7 +70,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.user_group_id', __d('baser', 'グループ')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.user_group_id', __d('baser', 'グループ')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php if ($editable): ?>
 					<?php echo $this->BcForm->input('User.user_group_id', array('type' => 'select', 'options' => $userGroups)) ?>
@@ -99,7 +99,7 @@ $this->BcBaser->js('admin/users/edit', false);
 		<tr>
 			<th class="col-head bca-form-table__label">
 				<?php if ($this->request->action == 'admin_add'): ?>
-					<span class="required">*</span>&nbsp;
+					<span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php endif; ?>
 				<?php echo $this->BcForm->label('User.password_1', __d('baser', 'パスワード')) ?>
 			</th>
@@ -126,12 +126,16 @@ $this->BcBaser->js('admin/users/edit', false);
 	</table>
 </div>
 
-<div class="submit section">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
+<div class="submit section bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl', 'id' => 'BtnSave')) ?>
+	</div>
 <?php if ($editable): ?>
-	<?php if ($this->request->action == 'admin_edit' && $deletable): ?>
-			<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('User.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('User.name')), false); ?>
-	<?php endif; ?>
+	<div class="bca-actions__sub">
+		<?php if ($this->request->action == 'admin_edit' && $deletable): ?>
+			<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('User.id')), array('class' => 'submit-token button bca-btn bca-actions__item', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'sm'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('User.name')), false); ?>
+		<?php endif; ?>
+	</div>
 <?php endif; ?>
 </div>
 

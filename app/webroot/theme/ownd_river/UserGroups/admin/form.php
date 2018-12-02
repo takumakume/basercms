@@ -45,7 +45,7 @@ $(window).load(function() {
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.name', __d('baser', 'ユーザーグループ名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.name', __d('baser', 'ユーザーグループ名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php if ($this->BcForm->value('UserGroup.name') == 'admins' && $this->request->action == 'admin_edit'): ?>
 					<?php echo $this->BcForm->value('UserGroup.name') ?>
@@ -64,7 +64,7 @@ $(window).load(function() {
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.title', __d('baser', '表示名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.title', __d('baser', '表示名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('UserGroup.title', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpTitle', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -105,7 +105,7 @@ $(window).load(function() {
 		</tr>
 		<?php if (count($authPrefixes) > 1): ?>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.auth_prefix', __d('baser', '認証プレフィックス設定')) ?>&nbsp;<span class="required">*</span></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.auth_prefix', __d('baser', '認証プレフィックス設定')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->input('UserGroup.auth_prefix', array('type' => 'select', 'multiple' => 'checkbox', 'options' => $authPrefixes, 'value' => explode(',', $this->BcForm->value('UserGroup.auth_prefix')))) ?>
 					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpAuthPrefix', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -120,12 +120,16 @@ $(window).load(function() {
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
-<div class="submit bc-align-center section">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'save', 'id' => 'BtnSave')) ?>
+<div class="submit bc-align-center section bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'class' => 'bca-btn', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl', 'id' => 'BtnSave')) ?>
+	</div>
 	<?php if ($this->request->action == 'admin_edit'): ?>
-		<?php if ($this->BcForm->value('UserGroup.name') != 'admins'): ?>
-			<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('UserGroup.id')), array('class' => 'submit-token button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n\n削除する場合、関連するユーザーは削除されませんが、関連するアクセス制限設定は全て削除されます。\n※ 関連するユーザーは管理者グループに所属する事になります。'), $this->BcForm->value('UserGroup.name')), false); ?>
-		<?php endif; ?>
+		<div class="bca-actions__sub">
+			<?php if ($this->BcForm->value('UserGroup.name') != 'admins'): ?>
+				<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('UserGroup.id')), array('class' => 'submit-token button bca-btn bca-actions__item', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'sm'), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n\n削除する場合、関連するユーザーは削除されませんが、関連するアクセス制限設定は全て削除されます。\n※ 関連するユーザーは管理者グループに所属する事になります。'), $this->BcForm->value('UserGroup.name')), false); ?>
+			<?php endif; ?>
+		</div>
 	<?php endif; ?>
 </div>
 
