@@ -244,6 +244,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="login">ログインボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="search">検索ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="clear">クリアボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="textcopy">テキストコピー</a>
+<a href="#" class="bca-btn" data-bca-btn-type="download">ダウンロード</a>
 
 										<h5>Code</h5>
 										<pre class="brush: html;"><a href="#" class="bca-btn">ボタン</a>
@@ -263,7 +265,9 @@
 <a href="#" class="bca-btn" data-bca-btn-type="home">ホームボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="login">ログインボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="search">検索ボタン</a>
-<a href="#" class="bca-btn" data-bca-btn-type="clear">クリアボタン</a></pre>
+<a href="#" class="bca-btn" data-bca-btn-type="clear">クリアボタン</a>
+<a href="#" class="bca-btn" data-bca-btn-type="textcopy">テキストコピー</a>
+<a href="#" class="bca-btn" data-bca-btn-type="download">ダウンロード</a></pre>
 										<small><p>ページタイトル</p>
 </small>
 									</section>
@@ -562,6 +566,32 @@
 							</section>
 							<section>
 								<h1><a id="sceg-cat-radio">radio</a></h1>
+									<section>
+										<h2>ボタンを囲む</h2>
+										<h5>Preview</h5>
+										<div class="bca-actions">
+	<div class="bca-actions__main">
+		<a href="#" class="bca-btn bca-actions__item">プレビュー</a>
+		<a href="#" class="bca-btn bca-actions__item">保存</a>
+	</div>
+	<div class="bca-actions__sub">
+		<a href="#" class="bca-btn bca-actions__item">削除</a>
+	</div>
+</div>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><div class="bca-actions">
+	<div class="bca-actions__main">
+		<a href="#" class="bca-btn bca-actions__item">プレビュー</a>
+		<a href="#" class="bca-btn bca-actions__item">保存</a>
+	</div>
+	<div class="bca-actions__sub">
+		<a href="#" class="bca-btn bca-actions__item">削除</a>
+	</div>
+</div></pre>
+										<small><p>ボタンを囲むもの</p>
+</small>
+									</section>
 									<section>
 										<h2>ラジオボタン</h2>
 										<h5>Preview</h5>
@@ -868,6 +898,184 @@
 <input type="text" data-input-text-size="sm" class="bca-input-text">
 <input type="send" class="bca-btn" data-bca-btn-size="sm" value="sendボタン小">
 <a href="#" class="bca-btn" data-bca-btn-size="sm">ボタン（小）</a></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+									<section>
+										<h2>フォーム系 datepicker</h2>
+										<h5>Preview</h5>
+										<span class="bca-datepicker">
+  <span class="bca-datepicker__date">
+    <label class="bca-datepicker__date-label">日付</label>
+    <input class="bca-datepicker__date-input" …="">
+  </span>
+
+  <span class="bca-datepicker__time">
+    <label class="bca-datepicker__time-label">時間</label>
+    <input class="bca-datepicker__time-input" …="">
+  </span>
+</span>
+
+
+<span class="bca-datepicker-range">
+  <span class="bca-datepicker-range__begin">
+    <span class="bca-datepicker">
+      <span class="bca-datepicker__date">
+        <label class="bca-datepicker__date-label">開始日</label>
+        <input class="bca-datepicker__date-input" …="">
+      </span>
+
+      <span class="bca-datepicker__time">
+        <label class="bca-datepicker__time-label">開始時間</label>
+        <input class="bca-datepicker__time-input" …="">
+      </span>
+    </span>
+  </span>
+
+  <span class="bca-datepicker-range__delimiter">〜</span>
+
+  <span class="bca-bca-datepicker-range__end">
+    <span class="bca-datepicker">
+      <span class="bca-datepicker__date">
+        <label class="bca-datepicker__date-label">終了日</label>
+        <input class="bca-datepicker__date-input" …="">
+      </span>
+      <span class="bca-datepicker__time">
+        <label class="bca-datepicker__time-label">終了時間</label>
+        <input class="bca-datepicker__time-input" …="">
+      </span>
+    </span>
+  </span>
+</span>
+
+
+
+<span class="bca-datepicker__begin">
+  <input name="data[BlogPost][publish_begin_date]" class="bca-datepicker__begin__date hasDatepicker" …="">
+  <input name="data[BlogPost][publish_begin_time]" class="bca-datepicker__begin__date__time ui-timepicker-input" …="">
+</span>
+<span class="bca-datepicker__delimiter">〜</span>
+<span class="bca-datepicker__end">
+  <input name="data[BlogPost][publish_end_date]" class="bca-datepicker__end__date hasDatepicker">
+  <input name="data[BlogPost][publish_end_time]" class="bca-datepicker__end__date__time ui-timepicker-input">
+</span>
+
+										<h5>Code</h5>
+										<pre class="brush: html;"><span class="bca-datepicker">
+  <span class="bca-datepicker__date">
+    <label class="bca-datepicker__date-label">日付</label>
+    <input class="bca-datepicker__date-input" …="">
+  </span>
+
+  <span class="bca-datepicker__time">
+    <label class="bca-datepicker__time-label">時間</label>
+    <input class="bca-datepicker__time-input" …="">
+  </span>
+</span>
+
+
+<span class="bca-datepicker-range">
+  <span class="bca-datepicker-range__begin">
+    <span class="bca-datepicker">
+      <span class="bca-datepicker__date">
+        <label class="bca-datepicker__date-label">開始日</label>
+        <input class="bca-datepicker__date-input" …="">
+      </span>
+
+      <span class="bca-datepicker__time">
+        <label class="bca-datepicker__time-label">開始時間</label>
+        <input class="bca-datepicker__time-input" …="">
+      </span>
+    </span>
+  </span>
+
+  <span class="bca-datepicker-range__delimiter">〜</span>
+
+  <span class="bca-bca-datepicker-range__end">
+    <span class="bca-datepicker">
+      <span class="bca-datepicker__date">
+        <label class="bca-datepicker__date-label">終了日</label>
+        <input class="bca-datepicker__date-input" …="">
+      </span>
+      <span class="bca-datepicker__time">
+        <label class="bca-datepicker__time-label">終了時間</label>
+        <input class="bca-datepicker__time-input" …="">
+      </span>
+    </span>
+  </span>
+</span>
+
+
+
+<span class="bca-datepicker__begin">
+  <input name="data[BlogPost][publish_begin_date]" class="bca-datepicker__begin__date hasDatepicker" …="">
+  <input name="data[BlogPost][publish_begin_time]" class="bca-datepicker__begin__date__time ui-timepicker-input" …="">
+</span>
+<span class="bca-datepicker__delimiter">〜</span>
+<span class="bca-datepicker__end">
+  <input name="data[BlogPost][publish_end_date]" class="bca-datepicker__end__date hasDatepicker">
+  <input name="data[BlogPost][publish_end_time]" class="bca-datepicker__end__date__time ui-timepicker-input">
+</span></pre>
+										<small><p>ページタイトル</p>
+</small>
+									</section>
+									<section>
+										<h2>フォーム系 input type&#x3D;&quot;file&quot;</h2>
+										<h5>Preview</h5>
+										// file
+// figureあり + delあり パターン
+<span class="bca-file">
+  <input type="file" class="bca-file__input">
+
+  <span class="bca-file__delete">
+    <input type="checkbox" class="bca-file__delete-input">
+    <label for="" class="bca-file__delete-label">削除する</label>
+  </span>
+
+  <figure class="bca-file__delete-input">
+    <a href="" class="bca-file__link">
+      <img src="" alt="" class="bca-file__img">
+    </a>
+    <figcaption class="bca-file__figcaption">ファイル名</figcaption>
+  </figure>
+</span>
+
+
+// figureあり + delなし パターン
+
+
+// figureなし + delあり パターン
+
+
+// figureなし + delなし パターン
+
+										<h5>Code</h5>
+										<pre class="brush: html;">// file
+// figureあり + delあり パターン
+<span class="bca-file">
+  <input type="file" class="bca-file__input">
+
+  <span class="bca-file__delete">
+    <input type="checkbox" class="bca-file__delete-input">
+    <label for="" class="bca-file__delete-label">削除する</label>
+  </span>
+
+  <figure class="bca-file__delete-input">
+    <a href="" class="bca-file__link">
+      <img src="" alt="" class="bca-file__img">
+    </a>
+    <figcaption class="bca-file__figcaption">ファイル名</figcaption>
+  </figure>
+</span>
+
+
+// figureあり + delなし パターン
+
+
+// figureなし + delあり パターン
+
+
+// figureなし + delなし パターン</pre>
 										<small><p>ページタイトル</p>
 </small>
 									</section>

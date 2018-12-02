@@ -169,6 +169,12 @@
     @include btn-common;
   }
 
+  // ダウンロード
+	&[data-bca-btn-type=download] {
+		@extend .#{$fa-css-prefix}-download;
+		@include btn-common;
+	}
+
 	// サイズ
 	// ===========================
   // xlarge
