@@ -146,8 +146,8 @@ $this->BcBaser->js('admin/widget_areas/form', false, ['id' => 'AdminWidgetFormSc
 								<?php echo $this->BcForm->input($key . '.name', array('type' => 'text', 'class' => 'name')) ?><br />
 								<?php $this->BcBaser->element('widgets/' . $widget[$key]['element'], array('key' => $key, 'plugin' => $widget[$key]['plugin'], 'mode' => 'edit'), array('plugin' => $widget[$key]['plugin'])) ?><br />
 								<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'WidgetUpdateWidgetLoader' . $widget[$key]['id'], 'class' => 'loader')) ?>
-								<?php echo $this->BcForm->input($key . '.use_title', array('type' => 'checkbox', 'label' => __d('baser', 'タイトルを表示'), 'class' => 'use_title')) ?>
-								<?php echo $this->BcForm->input($key . '.status', array('type' => 'checkbox', 'label' => __d('baser', '利用する'), 'class' => 'status')) ?>
+								<?php echo $this->BcForm->input($key . '.use_title', ['type' => 'checkbox', 'label' => [ 'text' => __d('baser', 'タイトルを表示'), 'class' => 'bca-checkbox-label'], 'class' => 'bca-checkbox']) ?> 
+								<?php echo $this->BcForm->input($key . '.status', ['type' => 'checkbox', 'label' => ['text' => __d('baser', '利用する'), 'class' => 'bca-checkbox-label'], 'class' => 'status bca-checkbox']) ?>
 								<?php echo $this->BcForm->end(array('label' => __d('baser', '保存'), 'div' => false, 'id' => 'WidgetUpdateWidgetSubmit' . $widget[$key]['id'], 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
 							</div>
 						</div>
