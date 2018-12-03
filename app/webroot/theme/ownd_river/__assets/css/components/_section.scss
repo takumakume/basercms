@@ -49,4 +49,8 @@
       margin-right: 0.5em;
     }
   }
+
+  &[data-bca-section-type=form-group]{
+    margin-bottom: 60px;
+  }
 }

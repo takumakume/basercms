@@ -122,4 +122,84 @@
       }
     }
   }
+
+  &__inner-table {
+    &-label {
+      padding: 0.5em 1em 0.5em 0;
+      font-weight: normal;
+      text-align: left;
+      vertical-align: middle;
+    }
+    &-input {
+      padding: 0.5em 0;
+      vertical-align: top;
+      vertical-align: middle;
+    }
+  }
+  &__inner-submit {
+    margin: 1em 0 0;
+  }
+
+  &[data-bca-table-type=type2] {
+
+    $border-color: #ccc;
+    font-size: 1.4rem;
+    width: 100%;
+    table-layout: auto;
+    border-bottom: none;
+    .bca-form-table {
+      &__label,
+      &__input {
+        padding-top: 0;
+        padding-bottom: 2em;
+        border: none;
+      }
+
+      &__label {
+        vertical-align: top;
+        width: 240px;
+        padding-top: 0.5em;
+        padding-left: 0.2em;
+        padding-right: 1em;
+        font-weight: bold;
+        text-align: left;
+        &.-label {
+          display: block;
+          border: none;
+        }
+        label {
+          padding: 0.2em 0 0;
+          margin-bottom: 0;
+        }
+
+        .bca-label {
+          position: relative;
+          top: -0.15em;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      }
+
+      &__input {
+        vertical-align: top;
+        font-weight: normal;
+      }
+
+      &__explanation {
+        display: inline-block;
+        margin-left: 1em;
+        font-size: 1.2rem;
+        color: #666;
+      }
+    }
+    .bca-textbox {
+      //margin-bottom: 8px;
+    }
+
+    .btn.help {
+      position: relative;
+      margin-bottom: -3px;
+      margin-left: 3px;
+    }
+  }
 }
