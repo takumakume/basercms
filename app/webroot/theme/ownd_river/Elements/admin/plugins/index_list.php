@@ -30,12 +30,7 @@
 			</div>
 			<?php if ($this->BcBaser->isAdminUser()): ?>
 			<div>
-				
-<<<<<<< HEAD
-				<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'),'class'=>'bca-checkbox')) ?>
-=======
 				<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'title' => __d('baser', '一括選択')]) ?>
->>>>>>> 60b0699c07c1d44400a067674ab0dcb2a5917dd7
 				<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => __d('baser', '一括無効')), 'empty' => __d('baser', '一括処理'))) ?>
 				<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
 			</div>
