@@ -2,231 +2,493 @@
 <html lang="ja">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="robots" content="noindex,nofollow" />
-	<title>スタイルガイド｜baserCMS inc.</title>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>スタイルガイド｜baserCMS inc.</title>
 
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/style.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/jquery-ui/jquery-ui.min.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/../js/admin/vendors/jquery.jstree-3.3.1/themes/proton/style.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/../js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min.css"/>
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/import.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/colorbox/colorbox-1.6.1.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/toolbar.css" />
-	<link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/sidebar_opened.css" />
-	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery-ui-1.11.4.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/i18n/ui.datepicker-ja.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.bt.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.form-2.94.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.colorbox-1.6.1.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.mScroll.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.baseUrl.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcConfirm.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/credit.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/validate_messages_ja.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/functions.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/adjust_scroll.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcUtil.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcToken.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/sidebar.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/startup.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/favorite.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/permission.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.jstree-3.3.1/jstree.min.js"></script>
-	<script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcTree.js"></script>
+  <link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/jquery-ui/jquery-ui.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/../js/admin/vendors/jquery.jstree-3.3.1/themes/proton/style.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/../js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/colorbox/colorbox-1.6.1.css"/>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.3/vue.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery-ui-1.11.4.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/i18n/ui.datepicker-ja.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.bt.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.form-2.94.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.colorbox-1.6.1.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.mScroll.js"></script>
+
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/libs/credit.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/validate_messages_ja.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/functions.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/libs/adjust_scroll.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcUtil.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcToken.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/sidebar.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/startup.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/favorite.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/permission.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.jstree-3.3.1/jstree.min.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/libs/jquery.bcTree.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="/theme/ownd_river/css/admin/jquery.timepicker.css"/>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/ckeditor/ckeditor.js"></script>
+  <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.timepicker.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#BlogPostPublishBeginTime").timepicker({'timeFormat': 'H:i'});
+      $("#BlogPostPublishBeginDate").change(BlogPostPublishBeginChangeResultHandler);
+      $("#BlogPostPublishBeginTime").change(BlogPostPublishBeginChangeResultHandler);
+
+      function BlogPostPublishBeginChangeResultHandler() {
+        if ($("#BlogPostPublishBeginDate").val() && !$("#BlogPostPublishBeginTime").val()) {
+          $("#BlogPostPublishBeginTime").val('00:00');
+        }
+        var value = $("#BlogPostPublishBeginDate").val().replace(/\//g, '-');
+        if ($("#BlogPostPublishBeginTime").val()) {
+          value += ' ' + $("#BlogPostPublishBeginTime").val();
+        }
+        $("#BlogPostPublishBegin").val(value);
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $("#BlogPostPublishEndTime").timepicker({'timeFormat': 'H:i'});
+      $("#BlogPostPublishEndDate").change(BlogPostPublishEndChangeResultHandler);
+      $("#BlogPostPublishEndTime").change(BlogPostPublishEndChangeResultHandler);
+
+      function BlogPostPublishEndChangeResultHandler() {
+        if ($("#BlogPostPublishEndDate").val() && !$("#BlogPostPublishEndTime").val()) {
+          $("#BlogPostPublishEndTime").val('00:00');
+        }
+        var value = $("#BlogPostPublishEndDate").val().replace(/\//g, '-');
+        if ($("#BlogPostPublishEndTime").val()) {
+          value += ' ' + $("#BlogPostPublishEndTime").val();
+        }
+        $("#BlogPostPublishEnd").val(value);
+      }
+    });
+  </script>
+  <script type="text/javascript">
+    $(function () {
+      $("#BlogPostPostsDateTime").timepicker({'timeFormat': 'H:i'});
+      $("#BlogPostPostsDateDate").change(BlogPostPostsDateChangeResultHandler);
+      $("#BlogPostPostsDateTime").change(BlogPostPostsDateChangeResultHandler);
+
+      function BlogPostPostsDateChangeResultHandler() {
+        if ($("#BlogPostPostsDateDate").val() && !$("#BlogPostPostsDateTime").val()) {
+          $("#BlogPostPostsDateTime").val('00:00');
+        }
+        var value = $("#BlogPostPostsDateDate").val().replace(/\//g, '-');
+        if ($("#BlogPostPostsDateTime").val()) {
+          value += ' ' + $("#BlogPostPostsDateTime").val();
+        }
+        $("#BlogPostPostsDate").val(value);
+      }
+    });
+  </script>
 </head>
 
 <body id="AdminContents" class="normal">
-	<div id="Page">
-		<div id="BaseUrl" style="display: none"></div>
-		<div id="SaveFavoriteBoxUrl" style="display:none">/admin/dashboard/ajax_save_favorite_box</div>
-		<div id="SaveSearchBoxUrl" style="display:none">/admin/dashboard/ajax_save_search_box/AdminContentsIndex</div>
-		<div id="SearchBoxOpened" style="display:none"></div>
-		<div id="CurrentPageName" style="display: none">コンテンツ一覧</div>
-		<div id="CurrentPageUrl" style="display: none">/admin/contents/</div>
+<div id="Page">
+  <div id="BaseUrl" style="display: none"></div>
+  <div id="SaveFavoriteBoxUrl" style="display:none">/admin/dashboard/ajax_save_favorite_box</div>
+  <div id="SaveSearchBoxUrl" style="display:none">/admin/dashboard/ajax_save_search_box/AdminContentsIndex</div>
+  <div id="SearchBoxOpened" style="display:none"></div>
+  <div id="CurrentPageName" style="display: none">コンテンツ一覧</div>
+  <div id="CurrentPageUrl" style="display: none">/admin/contents/</div>
 
-		<header id="Header" class="bca-header">
-			<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/outerClick.js"></script>
-			<script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.fixedMenu.js"></script>
-			<script type="text/javascript" src="/theme/ownd_river/js/admin/toolbar.js"></script>
+  <header id="Header" class="bca-header">
+    <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/outerClick.js"></script>
+    <script type="text/javascript" src="/theme/ownd_river/js/admin/vendors/jquery.fixedMenu.js"></script>
+    <script type="text/javascript" src="/theme/ownd_river/js/admin/toolbar.js"></script>
 
-			<div id="ToolBar">
-				<div id="ToolbarInner" class="clearfix">
-					<div id="ToolMenu">
-						<ul>
-							<li><a href="/">baserCMS inc.</a></li>
-						</ul>
-					</div>
-					<div id="UserMenu">
-						<ul class="clearfix">
-							<li>
-								<a href="javascript:void(0)" class="title">admin <img src="/theme/ownd_river/img/admin/btn_dropdown.png" width="8" height="11" class="bc-btn" alt=""/></a>
-								<ul>
-									<li><a href="/admin/users/edit/1">アカウント設定</a></li>
-									<li><a href="/admin/users/logout">ログアウト</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="/admin/site_configs/del_cache" onclick="if (confirm(&quot;\u30ad\u30e3\u30c3\u30b7\u30e5\u30af\u30ea\u30a2\u3057\u307e\u3059\u3002\u3044\u3044\u3067\u3059\u304b\uff1f&quot;)) { return true; } return false;">キャッシュクリア</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="HeaderInner" hidden>
-				<div id="GlobalMenu" hidden></div>
-				<div id="Logo" hidden>
-					<a href="/admin"><img src="/theme/ownd_river/img/admin/logo_header.png" width="153" height="30" alt="baserCMS" /></a>
-				</div>
-			</div>
-		</header>
-
-		<div id="Wrap" class="bca-container">
-			<div id="SideBar" class="bca-nav">
-				<div id="FavoriteArea">
-					<nav id="FavoriteMenu" class="bca-nav-favorite">
-
-						<h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label">お気に入り</span></h2>
-
-						<ul class="favorite-menu-list bca-nav-favorite-list">
+    <div id="ToolBar" class="bca-toolbar">
+      <div id="ToolbarInner" class="clearfix bca-toolbar__body">
+        <div class="bca-toolbar__logo">
+          <a href="/" class="bca-toolbar__logo-link"><img src="/theme/ownd_river/img/admin/logo_icon.svg" alt=""
+                                                          width="24" height="21" class="bca-toolbar__logo-symbol"><span
+            class="bca-toolbar__logo-text">baserCMS inc.</span></a></div>
+        <div id="ToolMenu" class="bca-toolbar__tools">
+          <div class="bca-toolbar__tools-edit">
+            <a href="/news/archives/2" class="tool-menu">サイト確認</a></div>
+          <div class="bca-toolbar__tools-mode">
+          </div>
+        </div>
+        <div id="UserMenu" class="bca-toolbar__users">
+          <ul class="clearfix">
+            <li>
+              <a href="javascript:void(0)" class="title">よく使う項目<img src="/theme/ownd_river/img/admin/btn_dropdown.png"
+                                                                    width="8" height="11" class="bc-btn"></a>
+              <div id="FavoriteArea" hidden="">
 
 
-							<li id="FavoriteRowコンテンツ管理" class="bca-nav-favorite-list-item">
-								<a href="/admin/contents/" title="http://localhost:8888/admin/contents/index"><span class="bca-nav-favorite-list-item-label">コンテンツ管理</span></a>								<input type="hidden" name="data[Favorite][id][1]" value="1" class="favorite-id" id="FavoriteId1" /> <input type="hidden"
-								 name="data[Favorite][name][1]" value="コンテンツ管理" class="favorite-name" id="FavoriteName1" /> <input type="hidden" name="data[Favorite][url][1]"
-								 value="/admin/contents/index" class="favorite-url" id="FavoriteUrl1" /></li>
+                <div id="FavoriteDeleteUrl" style="display: none">/admin/favorites/ajax_delete</div>
+                <div id="FavoriteAjaxSorttableUrl" style="display:none">/admin/favorites/update_sort</div>
 
-							<li id="FavoriteRow新着情報管理" class="bca-nav-favorite-list-item">
-								<a href="/admin/blog/blog_posts/index/1" title="http://localhost:8888/admin/blog/blog_posts/index/1"><span class="bca-nav-favorite-list-item-label">新着情報管理</span></a>								<input type="hidden" name="data[Favorite][id][2]" value="2" class="favorite-id" id="FavoriteId2" /> <input type="hidden"
-								 name="data[Favorite][name][2]" value="新着情報管理" class="favorite-name" id="FavoriteName2" /> <input type="hidden" name="data[Favorite][url][2]"
-								 value="/admin/blog/blog_posts/index/1" class="favorite-url" id="FavoriteUrl2" /></li>
+                <nav id="FavoriteMenu" class="bca-nav-favorite">
 
-							<li id="FavoriteRow新着情報コメント一覧" class="bca-nav-favorite-list-item">
-								<a href="/admin/blog/blog_comments/index/1" title="http://localhost:8888/admin/blog/blog_comments/index/1"><span class="bca-nav-favorite-list-item-label">新着情報コメント一覧</span></a>								<input type="hidden" name="data[Favorite][id][3]" value="3" class="favorite-id" id="FavoriteId3" /> <input type="hidden"
-								 name="data[Favorite][name][3]" value="新着情報コメント一覧" class="favorite-name" id="FavoriteName3" /> <input type="hidden"
-								 name="data[Favorite][url][3]" value="/admin/blog/blog_comments/index/1" class="favorite-url" id="FavoriteUrl3" /></li>
+                  <h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label">お気に入り</span></h2>
 
-							<li id="FavoriteRowお問い合わせ設定" class="bca-nav-favorite-list-item">
-								<a href="/admin/mail/mail_fields/index/1" title="http://localhost:8888/admin/mail/mail_fields/index/1"><span class="bca-nav-favorite-list-item-label">お問い合わせ設定</span></a>								<input type="hidden" name="data[Favorite][id][4]" value="4" class="favorite-id" id="FavoriteId4" /> <input type="hidden"
-								 name="data[Favorite][name][4]" value="お問い合わせ設定" class="favorite-name" id="FavoriteName4" /> <input type="hidden"
-								 name="data[Favorite][url][4]" value="/admin/mail/mail_fields/index/1" class="favorite-url" id="FavoriteUrl4" /></li>
+                  <ul class="favorite-menu-list bca-nav-favorite-list ui-sortable">
 
-							<li id="FavoriteRowお問い合わせ一覧" class="bca-nav-favorite-list-item">
-								<a href="/admin/mail/mail_messages/index/1" title="http://localhost:8888/admin/mail/mail_messages/index/1"><span class="bca-nav-favorite-list-item-label">お問い合わせ一覧</span></a>								<input type="hidden" name="data[Favorite][id][5]" value="5" class="favorite-id" id="FavoriteId5" /> <input type="hidden"
-								 name="data[Favorite][name][5]" value="お問い合わせ一覧" class="favorite-name" id="FavoriteName5" /> <input type="hidden"
-								 name="data[Favorite][url][5]" value="/admin/mail/mail_messages/index/1" class="favorite-url" id="FavoriteUrl5" /></li>
 
-							<li id="FavoriteRowアップロード管理" class="bca-nav-favorite-list-item">
-								<a href="/admin/uploader/uploader_files/" title="http://localhost:8888/admin/uploader/uploader_files/"><span class="bca-nav-favorite-list-item-label">アップロード管理</span></a>								<input type="hidden" name="data[Favorite][id][6]" value="6" class="favorite-id" id="FavoriteId6" /> <input type="hidden"
-								 name="data[Favorite][name][6]" value="アップロード管理" class="favorite-name" id="FavoriteName6" /> <input type="hidden"
-								 name="data[Favorite][url][6]" value="/admin/uploader/uploader_files/" class="favorite-url" id="FavoriteUrl6" /></li>
+                    <li id="FavoriteRow1" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="/admin/contents/" title="http://localhost:8888/admin/contents/index"><span
+                        class="bca-nav-favorite-list-item-label">コンテンツ管理</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][1]"
+                             value="1" id="FavoriteId1">
+                      <input type="hidden" name="data[Favorite][name][1]" value="コンテンツ管理" id="FavoriteName1"> <input
+                      type="hidden" name="data[Favorite][url][1]" value="/admin/contents/index" id="FavoriteUrl1"></li>
 
-							<li id="FavoriteRowクレジット" class="bca-nav-favorite-list-item">
-								<a href="javascript:credit();" title="javascript:credit();"><span class="bca-nav-favorite-list-item-label">クレジット</span></a>								<input type="hidden" name="data[Favorite][id][7]" value="7" class="favorite-id" id="FavoriteId7" /> <input type="hidden"
-								 name="data[Favorite][name][7]" value="クレジット" class="favorite-name" id="FavoriteName7" /> <input type="hidden" name="data[Favorite][url][7]"
-								 value="javascript:credit();" class="favorite-url" id="FavoriteUrl7" /></li>
-						</ul>
+                    <li id="FavoriteRow2" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="/admin/blog/blog_posts/index/1"
+                         title="http://localhost:8888/admin/blog/blog_posts/index/1"><span
+                        class="bca-nav-favorite-list-item-label">新着情報管理</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][2]"
+                             value="2" id="FavoriteId2">
+                      <input type="hidden" name="data[Favorite][name][2]" value="新着情報管理" id="FavoriteName2"> <input
+                      type="hidden" name="data[Favorite][url][2]" value="/admin/blog/blog_posts/index/1"
+                      id="FavoriteUrl2"></li>
 
-						<ul class="favolite-menu-tools clearfix bca-nav-favorite-functions">
-							<li class="bca-nav-favorite-functions-add">
-								<span id="BtnFavoriteAdd" class="btn">新規追加</span>
-							</li>
-							<li class="bca-nav-favorite-functions-help">
-								<span id="BtnFavoriteHelp" class="btn help">ヘルプ</span>
-								<div class="helptext">
-									<p>よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする事ができます。<br />また、登録済の項目を右クリックする事で編集・削除が行えます。</p>
-								</div>
-							</li>
-						</ul>
+                    <li id="FavoriteRow3" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="/admin/blog/blog_comments/index/1"
+                         title="http://localhost:8888/admin/blog/blog_comments/index/1"><span
+                        class="bca-nav-favorite-list-item-label">新着情報コメント一覧</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][3]"
+                             value="3"
+                             id="FavoriteId3"> <input
+                      type="hidden" name="data[Favorite][name][3]" value="新着情報コメント一覧" id="FavoriteName3"> <input
+                      type="hidden" name="data[Favorite][url][3]" value="/admin/blog/blog_comments/index/1"
+                      id="FavoriteUrl3"></li>
 
-					</nav>
-				</div>
+                    <li id="FavoriteRow4" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="/admin/mail/mail_fields/index/1"
+                         title="http://localhost:8888/admin/mail/mail_fields/index/1"><span
+                        class="bca-nav-favorite-list-item-label">お問い合わせ設定</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][4]"
+                             value="4" id="FavoriteId4">
+                      <input type="hidden" name="data[Favorite][name][4]" value="お問い合わせ設定" id="FavoriteName4"> <input
+                      type="hidden" name="data[Favorite][url][4]" value="/admin/mail/mail_fields/index/1"
+                      id="FavoriteUrl4"></li>
 
-				<nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
-					<h2 class="bca-nav__main-title">管理メニュー</h2>
-					<div class="bca-nav__sub" data-content-type="dashboard">
-						<h3 class="bca-nav__sub-title">
-							<a v-bind:href="baseURL" class="bca-nav__sub-title-label">ダッシュボード</a>
-						</h3>
-					</div>
-					<div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
-						<h3 class="bca-nav__sub-title">
-							<a v-bind:href="baseURL + content.url" class="bca-nav__sub-title-label" v-html="content.title"></a>
-						</h3>
-						<ul class="bca-nav__sub-list">
-							<li v-for="subContent in content.menus" class="bca-nav__sub-list-item" v-bind:data-sub-content-is-current="subContent.current">
-								<a v-bind:href="baseURL + subContent.url">
-									<span class="bca-nav__sub-list-item-title" v-html="content.title"></span>
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
+                    <li id="FavoriteRow5" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="/admin/mail/mail_messages/index/1"
+                         title="http://localhost:8888/admin/mail/mail_messages/index/1"><span
+                        class="bca-nav-favorite-list-item-label">お問い合わせ一覧</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][5]"
+                             value="5" id="FavoriteId5">
+                      <input type="hidden" name="data[Favorite][name][5]" value="お問い合わせ一覧" id="FavoriteName5"> <input
+                      type="hidden" name="data[Favorite][url][5]" value="/admin/mail/mail_messages/index/1"
+                      id="FavoriteUrl5"></li>
 
-				<nav class="bca-nav__main" data-js-container="AdminMenu" hidden></nav>
+                    <li id="FavoriteRow6" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="/admin/uploader/uploader_files/"
+                         title="http://localhost:8888/admin/uploader/uploader_files/"><span
+                        class="bca-nav-favorite-list-item-label">アップロード管理</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][6]"
+                             value="6" id="FavoriteId6">
+                      <input type="hidden" name="data[Favorite][name][6]" value="アップロード管理" id="FavoriteName6"> <input
+                      type="hidden" name="data[Favorite][url][6]" value="/admin/uploader/uploader_files/"
+                      id="FavoriteUrl6"></li>
 
-				<div id="BannerArea">
-					<ul>
-						<li>
-							<a href="https://market.basercms.net/" target="_blank"><img src="http://basercms.net/img/banner_baser_market.png" width="205" alt="baserマーケット" title="baserマーケット" /></a>
-						</li>
-						<li>
-							<a href="http://magazine.basercms.net/" target="_blank"><img src="http://basercms.net/img/banner_basers_magazine.png" width="205" alt="basersマガジン" title="baserマーケット" /></a>
-						</li>
-					</ul>
-				</div>
-				<!-- / #SideBar -->
-			</div>
+                    <li id="FavoriteRow7" class="bca-nav-favorite-list-item ui-sortable-handle">
+                      <a href="javascript:credit();" title="javascript:credit();"><span
+                        class="bca-nav-favorite-list-item-label">クレジット</span></a>
+                      <input type="hidden"
+                             name="data[Favorite][id][7]"
+                             value="7" id="FavoriteId7">
+                      <input type="hidden" name="data[Favorite][name][7]" value="クレジット" id="FavoriteName7"> <input
+                      type="hidden" name="data[Favorite][url][7]" value="javascript:credit();" id="FavoriteUrl7"></li>
+                  </ul>
 
-			<script id="AdminMenu" type="application/json">
-				{"currentSiteId":0,"menuList":[{"name":"Default","siteId":null,"current":true,"title":"\u30b3\u30f3\u30c6\u30f3\u30c4\u7ba1\u7406","type":"contents","menus":[{"title":"\u30b3\u30f3\u30c6\u30f3\u30c4\u4e00\u89a7","url":"\/admin\/contents\/","name":"Contents","current":true},{"title":"\u30b4\u30df\u7bb1","url":"\/admin\/contents\/trash_index","name":"ContentsTrash","current":false}],"url":"\/admin\/contents\/"},{"name":"BlogContent1","current":false,"siteId":0,"title":"\u65b0\u7740\u60c5\u5831","type":"blog-content","menus":[{"title":"\u8a18\u4e8b\u767b\u9332","url":"\/admin\/blog\/blog_posts\/add\/1","name":"BlogPostsAdd1","current":false},{"title":"\u8a18\u4e8b\u4e00\u89a7","url":"\/admin\/blog\/blog_posts\/index\/1","name":"BlogPosts1","current":false},{"title":"\u30ab\u30c6\u30b4\u30ea\u4e00\u89a7","url":"\/admin\/blog\/blog_categories\/index\/1","name":"BlogCategories1","current":false},{"title":"\u30b3\u30e1\u30f3\u30c8\u4e00\u89a7","url":"\/admin\/blog\/blog_comments\/index\/1","name":"BlogComments1","current":false},{"title":"\u8a2d\u5b9a","url":"\/admin\/blog\/blog_contents\/edit\/1","name":"BlogContentsEdit1","current":false},{"title":"\u516c\u958b\u30da\u30fc\u30b8","url":"\/news\/","name":"Blog1","current":false}],"url":"\/admin\/blog\/blog_posts\/add\/1"},{"name":"MailContent1","current":false,"siteId":0,"title":"\u304a\u554f\u3044\u5408\u308f\u305b","type":"mail-content","menus":[{"title":"\u53d7\u4fe1\u30e1\u30fc\u30eb\u4e00\u89a7","url":"\/admin\/mail\/mail_messages\/index\/1","name":"MailMessages1","current":false},{"title":"\u30d5\u30a3\u30fc\u30eb\u30c9","url":"\/admin\/mail\/mail_fields\/index\/1","name":"MailFields1","current":false},{"title":"\u8a2d\u5b9a","url":"\/admin\/mail\/mail_contents\/edit\/1","name":"MailContents1","current":false},{"title":"\u516c\u958b\u30da\u30fc\u30b8","url":"\/contact\/","name":"Mail1","current":false}],"url":"\/admin\/mail\/mail_messages\/index\/1"},{"name":"Theme","siteId":null,"current":false,"title":"\u30c6\u30fc\u30de\u7ba1\u7406","type":"theme","menus":[{"name":0,"title":"\u30c6\u30fc\u30de\u7ba1\u7406","url":"\/admin\/themes\/","current":false},{"name":1,"title":"\u30c6\u30fc\u30de\u65b0\u898f\u8ffd\u52a0","url":"\/admin\/themes\/add","current":false},{"name":2,"title":"\u30c6\u30fc\u30de\u8a2d\u5b9a","url":"\/admin\/theme_configs\/form","current":false},{"name":3,"title":"\u30b3\u30a2\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u78ba\u8a8d","url":"\/admin\/theme_files\/index\/core","current":false},{"name":4,"title":"\u30c6\u30fc\u30de\u7528\u521d\u671f\u30c7\u30fc\u30bf\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9","url":"\/admin\/themes\/download_default_data_pattern","current":false},{"name":5,"title":"\u30c7\u30fc\u30bf\u30ea\u30bb\u30c3\u30c8","url":"\/admin\/themes\/reset_data","current":false}],"url":"\/admin\/themes\/"},{"name":"Plugin","siteId":null,"current":false,"title":"\u30d7\u30e9\u30b0\u30a4\u30f3\u8a2d\u5b9a","type":"plugin","menus":[{"name":0,"title":"\u30d7\u30e9\u30b0\u30a4\u30f3\u7ba1\u7406","url":"\/admin\/plugins\/","current":false},{"title":"\u30d6\u30ed\u30b0\u8a2d\u5b9a","url":"\/admin\/blog\/blog_tags\/","name":"Blog","current":false},{"title":"\u30d5\u30a3\u30fc\u30c9\u8a2d\u5b9a","url":"\/admin\/feed\/feed_configs\/add","name":"Feed","current":false},{"title":"\u30e1\u30fc\u30eb\u8a2d\u5b9a","url":"\/admin\/mail\/mail_configs\/form","name":"Mail","current":false},{"title":"\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7","url":"\/admin\/uploader\/uploader_files\/","name":"Uploader","current":false}],"url":"\/admin\/plugins\/"},{"name":"System","siteId":null,"current":false,"title":"\u30b7\u30b9\u30c6\u30e0\u8a2d\u5b9a","type":"system","menus":[{"title":"\u30b5\u30a4\u30c8\u57fa\u672c\u8a2d\u5b9a","url":"\/admin\/site_configs\/form","name":"SiteConfigs","current":false},{"title":"\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\u7ba1\u7406","url":"\/admin\/widget_areas\/","name":"WidgetAreas","current":false},{"title":"\u30e6\u30fc\u30b6\u30fc\u7ba1\u7406","url":"\/admin\/users\/","name":"Users","current":false},{"title":"\u30e6\u30fc\u30b6\u30fc\u30b0\u30eb\u30fc\u30d7\u7ba1\u7406","url":"\/admin\/user_groups\/","name":"UserGroups","current":false},{"title":"\u691c\u7d22\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u7ba1\u7406","url":"\/admin\/search_indices\/","name":"SearchIndices","current":false},{"title":"\u30a8\u30c7\u30a3\u30bf\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u7ba1\u7406","url":"\/admin\/editor_templates\/","name":"EditorTemplates","current":false},{"title":"\u30b5\u30d6\u30b5\u30a4\u30c8\u7ba1\u7406","url":"\/admin\/sites\/","name":"Sites","current":false},{"title":"\u30e6\u30fc\u30c6\u30a3\u30ea\u30c6\u30a3","url":"\/admin\/tools\/","name":"Tools","current":false},{"title":"\u30b5\u30fc\u30d0\u30fc\u30ad\u30e3\u30c3\u30b7\u30e5\u524a\u9664","url":"\/admin\/site_configs\/del_cache","options":{"confirm":"\u30b5\u30fc\u30d0\u30fc\u30ad\u30e3\u30c3\u30b7\u30e5\u3092\u524a\u9664\u3057\u307e\u3059\u3002\u3044\u3044\u3067\u3059\u304b\uff1f"},"name":"SiteConfigsDelCache","current":false}],"url":"\/admin\/site_configs\/form"}]}
-			</script>
+                  <ul class="favolite-menu-tools clearfix bca-nav-favorite-functions">
+                    <li class="bca-nav-favorite-functions-add">
+                      <span id="BtnFavoriteAdd" data-bca-fn="BtnFavoriteAdd" class="btn">新規追加</span>
+                    </li>
+                    <li class="bca-nav-favorite-functions-help">
+                      <span id="BtnFavoriteHelp" class="btn help" title="">ヘルプ</span>
+                      <div class="helptext" style="display: none;">
+                        <p>よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする事ができます。<br>また、登録済の項目を右クリックする事で編集・削除が行えます。</p>
+                      </div>
+                    </li>
+                  </ul>
 
-			<main id="Contents" class="bca-main">
-				<div class="cbb bca-main-inner">
-					<article id="ContentsBody" class="contents-body bca-main__body">
-						<div class="bca-main-body-header">
-							<h1 class="bca-main-body-header-title">スタイルガイド</h1>
-						</div>
+                </nav>
 
-						<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css" rel="stylesheet" />
-						<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreRDark.min.css" rel="stylesheet" />
-						<link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.css" rel="stylesheet" />
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
-						<script>
-							addEventListener('DOMContentLoaded', function() {
-								SyntaxHighlighter.all();
-							});
-						</script>
 
-							<section>
-								<h1><a id="sceg-cat-heading">heading</a></h1>
-									<section>
-										<h2>ページタイトル</h2>
-										<h5>Preview</h5>
-										<div class="bca-main-body-header">
+              </div>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="title">root <img src="/theme/ownd_river/img/admin/btn_dropdown.png"
+                                                                   width="8" height="11" class="bc-btn" alt=""></a>
+              <ul>
+                <li><a href="/admin/users/edit/1">アカウント設定</a></li>
+                <li><a href="/admin/users/logout">ログアウト</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/admin/site_configs/del_cache"
+                 onclick="if (confirm(&quot;\u30ad\u30e3\u30c3\u30b7\u30e5\u30af\u30ea\u30a2\u3057\u307e\u3059\u3002\u3044\u3044\u3067\u3059\u304b\uff1f&quot;)) { return true; } return false;">キャッシュクリア</a>　
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="HeaderInner" hidden>
+      <div id="GlobalMenu" hidden></div>
+      <div id="Logo" hidden>
+        <a href="/admin"><img src="/theme/ownd_river/img/admin/logo_header.png" width="153" height="30" alt="baserCMS"/></a>
+      </div>
+    </div>
+  </header>
+
+  <div id="Wrap" class="bca-container">
+    <div id="SideBar" class="bca-nav">
+      <div id="FavoriteArea">
+        <nav id="FavoriteMenu" class="bca-nav-favorite">
+
+          <h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label">お気に入り</span></h2>
+
+          <ul class="favorite-menu-list bca-nav-favorite-list">
+            <li id="FavoriteRowコンテンツ管理" class="bca-nav-favorite-list-item">
+              <a href="/admin/contents/" title="http://localhost:8888/admin/contents/index"><span
+                class="bca-nav-favorite-list-item-label">コンテンツ管理</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][1]"
+                     value="1" class="favorite-id"
+                     id="FavoriteId1"/> <input
+              type="hidden"
+              name="data[Favorite][name][1]" value="コンテンツ管理" class="favorite-name" id="FavoriteName1"/> <input
+              type="hidden" name="data[Favorite][url][1]"
+              value="/admin/contents/index" class="favorite-url" id="FavoriteUrl1"/></li>
+
+            <li id="FavoriteRow新着情報管理" class="bca-nav-favorite-list-item">
+              <a href="/admin/blog/blog_posts/index/1" title="http://localhost:8888/admin/blog/blog_posts/index/1"><span
+                class="bca-nav-favorite-list-item-label">新着情報管理</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][2]" value="2"
+                     class="favorite-id" id="FavoriteId2"/>
+              <input type="hidden"
+                     name="data[Favorite][name][2]" value="新着情報管理" class="favorite-name" id="FavoriteName2"/> <input
+              type="hidden" name="data[Favorite][url][2]"
+              value="/admin/blog/blog_posts/index/1" class="favorite-url" id="FavoriteUrl2"/></li>
+
+            <li id="FavoriteRow新着情報コメント一覧" class="bca-nav-favorite-list-item">
+              <a href="/admin/blog/blog_comments/index/1"
+                 title="http://localhost:8888/admin/blog/blog_comments/index/1"><span
+                class="bca-nav-favorite-list-item-label">新着情報コメント一覧</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][3]"
+                     value="3" class="favorite-id"
+                     id="FavoriteId3"/> <input
+              type="hidden"
+              name="data[Favorite][name][3]" value="新着情報コメント一覧" class="favorite-name" id="FavoriteName3"/> <input
+              type="hidden"
+              name="data[Favorite][url][3]" value="/admin/blog/blog_comments/index/1" class="favorite-url"
+              id="FavoriteUrl3"/></li>
+
+            <li id="FavoriteRowお問い合わせ設定" class="bca-nav-favorite-list-item">
+              <a href="/admin/mail/mail_fields/index/1"
+                 title="http://localhost:8888/admin/mail/mail_fields/index/1"><span
+                class="bca-nav-favorite-list-item-label">お問い合わせ設定</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][4]"
+                     value="4" class="favorite-id"
+                     id="FavoriteId4"/> <input
+              type="hidden"
+              name="data[Favorite][name][4]" value="お問い合わせ設定" class="favorite-name" id="FavoriteName4"/> <input
+              type="hidden"
+              name="data[Favorite][url][4]" value="/admin/mail/mail_fields/index/1" class="favorite-url"
+              id="FavoriteUrl4"/></li>
+
+            <li id="FavoriteRowお問い合わせ一覧" class="bca-nav-favorite-list-item">
+              <a href="/admin/mail/mail_messages/index/1"
+                 title="http://localhost:8888/admin/mail/mail_messages/index/1"><span
+                class="bca-nav-favorite-list-item-label">お問い合わせ一覧</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][5]"
+                     value="5" class="favorite-id"
+                     id="FavoriteId5"/> <input
+              type="hidden"
+              name="data[Favorite][name][5]" value="お問い合わせ一覧" class="favorite-name" id="FavoriteName5"/> <input
+              type="hidden"
+              name="data[Favorite][url][5]" value="/admin/mail/mail_messages/index/1" class="favorite-url"
+              id="FavoriteUrl5"/></li>
+
+            <li id="FavoriteRowアップロード管理" class="bca-nav-favorite-list-item">
+              <a href="/admin/uploader/uploader_files/"
+                 title="http://localhost:8888/admin/uploader/uploader_files/"><span
+                class="bca-nav-favorite-list-item-label">アップロード管理</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][6]"
+                     value="6" class="favorite-id"
+                     id="FavoriteId6"/> <input
+              type="hidden"
+              name="data[Favorite][name][6]" value="アップロード管理" class="favorite-name" id="FavoriteName6"/> <input
+              type="hidden"
+              name="data[Favorite][url][6]" value="/admin/uploader/uploader_files/" class="favorite-url"
+              id="FavoriteUrl6"/></li>
+
+            <li id="FavoriteRowクレジット" class="bca-nav-favorite-list-item">
+              <a href="javascript:credit();" title="javascript:credit();"><span
+                class="bca-nav-favorite-list-item-label">クレジット</span></a>
+              <input type="hidden"
+                     name="data[Favorite][id][7]" value="7"
+                     class="favorite-id" id="FavoriteId7"/>
+              <input type="hidden"
+                     name="data[Favorite][name][7]" value="クレジット" class="favorite-name" id="FavoriteName7"/> <input
+              type="hidden" name="data[Favorite][url][7]"
+              value="javascript:credit();" class="favorite-url" id="FavoriteUrl7"/></li>
+          </ul>
+
+          <ul class="favolite-menu-tools clearfix bca-nav-favorite-functions">
+            <li class="bca-nav-favorite-functions-add">
+              <span id="BtnFavoriteAdd" class="btn">新規追加</span>
+            </li>
+            <li class="bca-nav-favorite-functions-help">
+              <span id="BtnFavoriteHelp" class="btn help">ヘルプ</span>
+              <div class="helptext">
+                <p>よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする事ができます。<br/>また、登録済の項目を右クリックする事で編集・削除が行えます。</p>
+              </div>
+            </li>
+          </ul>
+
+        </nav>
+      </div>
+
+      <nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
+        <h2 class="bca-nav__main-title">管理メニュー</h2>
+        <div class="bca-nav__sub" data-content-type="dashboard">
+          <h3 class="bca-nav__sub-title">
+            <a v-bind:href="baseURL" class="bca-nav__sub-title-label">ダッシュボード</a>
+          </h3>
+        </div>
+        <div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type"
+             v-bind:data-content-is-current="content.current">
+          <h3 class="bca-nav__sub-title">
+            <a v-bind:href="baseURL + content.url" class="bca-nav__sub-title-label" v-html="content.title"></a>
+          </h3>
+          <ul class="bca-nav__sub-list">
+            <li v-for="subContent in content.menus" class="bca-nav__sub-list-item"
+                v-bind:data-sub-content-is-current="subContent.current">
+              <a v-bind:href="baseURL + subContent.url">
+                <span class="bca-nav__sub-list-item-title" v-html="content.title"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav class="bca-nav__main" data-js-container="AdminMenu" hidden></nav>
+
+      <div id="BannerArea">
+        <ul>
+          <li>
+            <a href="https://market.basercms.net/" target="_blank"><img
+              src="http://basercms.net/img/banner_baser_market.png" width="205" alt="baserマーケット"
+              title="baserマーケット"/></a>
+          </li>
+          <li>
+            <a href="http://magazine.basercms.net/" target="_blank"><img
+              src="http://basercms.net/img/banner_basers_magazine.png" width="205" alt="basersマガジン" title="baserマーケット"/></a>
+          </li>
+        </ul>
+      </div>
+      <!-- / #SideBar -->
+    </div>
+
+    <script id="AdminMenu" type="application/json">
+      {"currentSiteId":0,"menuList":[{"name":"Default","siteId":null,"current":true,"title":"\u30b3\u30f3\u30c6\u30f3\u30c4\u7ba1\u7406","type":"contents","menus":[{"title":"\u30b3\u30f3\u30c6\u30f3\u30c4\u4e00\u89a7","url":"\/admin\/contents\/","name":"Contents","current":true},{"title":"\u30b4\u30df\u7bb1","url":"\/admin\/contents\/trash_index","name":"ContentsTrash","current":false}],"url":"\/admin\/contents\/"},{"name":"BlogContent1","current":false,"siteId":0,"title":"\u65b0\u7740\u60c5\u5831","type":"blog-content","menus":[{"title":"\u8a18\u4e8b\u767b\u9332","url":"\/admin\/blog\/blog_posts\/add\/1","name":"BlogPostsAdd1","current":false},{"title":"\u8a18\u4e8b\u4e00\u89a7","url":"\/admin\/blog\/blog_posts\/index\/1","name":"BlogPosts1","current":false},{"title":"\u30ab\u30c6\u30b4\u30ea\u4e00\u89a7","url":"\/admin\/blog\/blog_categories\/index\/1","name":"BlogCategories1","current":false},{"title":"\u30b3\u30e1\u30f3\u30c8\u4e00\u89a7","url":"\/admin\/blog\/blog_comments\/index\/1","name":"BlogComments1","current":false},{"title":"\u8a2d\u5b9a","url":"\/admin\/blog\/blog_contents\/edit\/1","name":"BlogContentsEdit1","current":false},{"title":"\u516c\u958b\u30da\u30fc\u30b8","url":"\/news\/","name":"Blog1","current":false}],"url":"\/admin\/blog\/blog_posts\/add\/1"},{"name":"MailContent1","current":false,"siteId":0,"title":"\u304a\u554f\u3044\u5408\u308f\u305b","type":"mail-content","menus":[{"title":"\u53d7\u4fe1\u30e1\u30fc\u30eb\u4e00\u89a7","url":"\/admin\/mail\/mail_messages\/index\/1","name":"MailMessages1","current":false},{"title":"\u30d5\u30a3\u30fc\u30eb\u30c9","url":"\/admin\/mail\/mail_fields\/index\/1","name":"MailFields1","current":false},{"title":"\u8a2d\u5b9a","url":"\/admin\/mail\/mail_contents\/edit\/1","name":"MailContents1","current":false},{"title":"\u516c\u958b\u30da\u30fc\u30b8","url":"\/contact\/","name":"Mail1","current":false}],"url":"\/admin\/mail\/mail_messages\/index\/1"},{"name":"Theme","siteId":null,"current":false,"title":"\u30c6\u30fc\u30de\u7ba1\u7406","type":"theme","menus":[{"name":0,"title":"\u30c6\u30fc\u30de\u7ba1\u7406","url":"\/admin\/themes\/","current":false},{"name":1,"title":"\u30c6\u30fc\u30de\u65b0\u898f\u8ffd\u52a0","url":"\/admin\/themes\/add","current":false},{"name":2,"title":"\u30c6\u30fc\u30de\u8a2d\u5b9a","url":"\/admin\/theme_configs\/form","current":false},{"name":3,"title":"\u30b3\u30a2\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u78ba\u8a8d","url":"\/admin\/theme_files\/index\/core","current":false},{"name":4,"title":"\u30c6\u30fc\u30de\u7528\u521d\u671f\u30c7\u30fc\u30bf\u30c0\u30a6\u30f3\u30ed\u30fc\u30c9","url":"\/admin\/themes\/download_default_data_pattern","current":false},{"name":5,"title":"\u30c7\u30fc\u30bf\u30ea\u30bb\u30c3\u30c8","url":"\/admin\/themes\/reset_data","current":false}],"url":"\/admin\/themes\/"},{"name":"Plugin","siteId":null,"current":false,"title":"\u30d7\u30e9\u30b0\u30a4\u30f3\u8a2d\u5b9a","type":"plugin","menus":[{"name":0,"title":"\u30d7\u30e9\u30b0\u30a4\u30f3\u7ba1\u7406","url":"\/admin\/plugins\/","current":false},{"title":"\u30d6\u30ed\u30b0\u8a2d\u5b9a","url":"\/admin\/blog\/blog_tags\/","name":"Blog","current":false},{"title":"\u30d5\u30a3\u30fc\u30c9\u8a2d\u5b9a","url":"\/admin\/feed\/feed_configs\/add","name":"Feed","current":false},{"title":"\u30e1\u30fc\u30eb\u8a2d\u5b9a","url":"\/admin\/mail\/mail_configs\/form","name":"Mail","current":false},{"title":"\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7","url":"\/admin\/uploader\/uploader_files\/","name":"Uploader","current":false}],"url":"\/admin\/plugins\/"},{"name":"System","siteId":null,"current":false,"title":"\u30b7\u30b9\u30c6\u30e0\u8a2d\u5b9a","type":"system","menus":[{"title":"\u30b5\u30a4\u30c8\u57fa\u672c\u8a2d\u5b9a","url":"\/admin\/site_configs\/form","name":"SiteConfigs","current":false},{"title":"\u30a6\u30a3\u30b8\u30a7\u30c3\u30c8\u7ba1\u7406","url":"\/admin\/widget_areas\/","name":"WidgetAreas","current":false},{"title":"\u30e6\u30fc\u30b6\u30fc\u7ba1\u7406","url":"\/admin\/users\/","name":"Users","current":false},{"title":"\u30e6\u30fc\u30b6\u30fc\u30b0\u30eb\u30fc\u30d7\u7ba1\u7406","url":"\/admin\/user_groups\/","name":"UserGroups","current":false},{"title":"\u691c\u7d22\u30a4\u30f3\u30c7\u30c3\u30af\u30b9\u7ba1\u7406","url":"\/admin\/search_indices\/","name":"SearchIndices","current":false},{"title":"\u30a8\u30c7\u30a3\u30bf\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8\u7ba1\u7406","url":"\/admin\/editor_templates\/","name":"EditorTemplates","current":false},{"title":"\u30b5\u30d6\u30b5\u30a4\u30c8\u7ba1\u7406","url":"\/admin\/sites\/","name":"Sites","current":false},{"title":"\u30e6\u30fc\u30c6\u30a3\u30ea\u30c6\u30a3","url":"\/admin\/tools\/","name":"Tools","current":false},{"title":"\u30b5\u30fc\u30d0\u30fc\u30ad\u30e3\u30c3\u30b7\u30e5\u524a\u9664","url":"\/admin\/site_configs\/del_cache","options":{"confirm":"\u30b5\u30fc\u30d0\u30fc\u30ad\u30e3\u30c3\u30b7\u30e5\u3092\u524a\u9664\u3057\u307e\u3059\u3002\u3044\u3044\u3067\u3059\u304b\uff1f"},"name":"SiteConfigsDelCache","current":false}],"url":"\/admin\/site_configs\/form"}]}
+
+    </script>
+
+    <main id="Contents" class="bca-main">
+      <div class="cbb bca-main-inner">
+        <article id="ContentsBody" class="contents-body bca-main__body">
+          <div class="bca-main-body-header">
+            <h1 class="bca-main-body-header-title">スタイルガイド</h1>
+          </div>
+
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css"
+                rel="stylesheet"/>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreRDark.min.css"
+                rel="stylesheet"/>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.css"
+                rel="stylesheet"/>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+          <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushXml.min.js"></script>
+          <script>
+            addEventListener('DOMContentLoaded', function () {
+              SyntaxHighlighter.all();
+            });
+          </script>
+
+
+          <ul>
+            <li>
+              <a href="#sceg-cat-heading">heading</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-button">button</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-radio">radio</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-checkbox">checkbox</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-select">select</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-parts">parts</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-label">label</a>
+            </li>
+            <li>
+              <a href="#sceg-cat-icon">icon</a>
+            </li>
+          </ul>
+
+
+          <section>
+            <h1><a id="sceg-cat-heading">heading</a></h1>
+            <section>
+              <h2>ページタイトル</h2>
+              <h5>Preview</h5>
+              <div class="bca-main-body-header">
 	<h1 class="bca-main-body-header-title">ページタイトル</h1>
 </div>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><div class="bca-main-body-header">
+              <h5>Code</h5>
+              <pre class="brush: html;"><div class="bca-main-body-header">
 	<h1 class="bca-main-body-header-title">ページタイトル</h1>
 </div></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-button">button</a></h1>
-									<section>
-										<h2>ボタン</h2>
-										<h5>Preview</h5>
-										<a href="#" class="bca-btn">ボタン</a>
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-button">button</a></h1>
+            <section>
+              <h2>ボタン</h2>
+              <h5>Preview</h5>
+              <a href="#" class="bca-btn">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview">確認ボタン</a>
@@ -248,8 +510,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="download">ダウンロード</a>
 <a href="#" class="bca-btn" data-bca-btn-type="draggable">ドラック可能</a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn">ボタン</a>
+              <h5>Code</h5>
+              <pre class="brush: html;"><a href="#" class="bca-btn">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview">確認ボタン</a>
@@ -270,13 +532,13 @@
 <a href="#" class="bca-btn" data-bca-btn-type="textcopy">テキストコピー</a>
 <a href="#" class="bca-btn" data-bca-btn-type="download">ダウンロード</a>
 <a href="#" class="bca-btn" data-bca-btn-type="draggable">ドラック可能</a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>ボタン（サイズ）</h2>
-										<h5>Preview</h5>
-										<a href="#" class="bca-btn" data-bca-btn-size="lg">ボタン</a>
+            </section>
+            <section>
+              <h2>ボタン（サイズ）</h2>
+              <h5>Preview</h5>
+              <a href="#" class="bca-btn" data-bca-btn-size="lg">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="lg">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="lg">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="lg">確認ボタン</a>
@@ -337,8 +599,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="search" data-bca-btn-size="xs">検索ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="clear" data-bca-btn-size="xs">クリアボタン</a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-size="lg">ボタン</a>
+              <h5>Code</h5>
+              <pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-size="lg">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-size="lg">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-size="lg">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-size="lg">確認ボタン</a>
@@ -398,13 +660,13 @@
 <a href="#" class="bca-btn" data-bca-btn-type="login" data-bca-btn-size="xs">ログインボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="search" data-bca-btn-size="xs">検索ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="clear" data-bca-btn-size="xs">クリアボタン</a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>ボタン（ステータス）</h2>
-										<h5>Preview</h5>
-										<a href="#" class="bca-btn" data-bca-btn-status="primary">ボタン</a>
+            </section>
+            <section>
+              <h2>ボタン（ステータス）</h2>
+              <h5>Preview</h5>
+              <a href="#" class="bca-btn" data-bca-btn-status="primary">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-status="primary">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-status="primary">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-status="primary">確認ボタン</a>
@@ -423,8 +685,8 @@
 <a href="#" class="bca-btn" data-bca-btn-type="search" data-bca-btn-status="primary">検索ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="clear" data-bca-btn-status="primary">クリアボタン</a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-status="primary">ボタン</a>
+              <h5>Code</h5>
+              <pre class="brush: html;"><a href="#" class="bca-btn" data-bca-btn-status="primary">ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="publish" data-bca-btn-status="primary">公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="unpublish" data-bca-btn-status="primary">非公開ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="preview" data-bca-btn-status="primary">確認ボタン</a>
@@ -442,13 +704,13 @@
 <a href="#" class="bca-btn" data-bca-btn-type="login" data-bca-btn-status="primary">ログインボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="search" data-bca-btn-status="primary">検索ボタン</a>
 <a href="#" class="bca-btn" data-bca-btn-type="clear" data-bca-btn-status="primary">クリアボタン</a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>ボタンアイコン</h2>
-										<h5>Preview</h5>
-										<a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
+            </section>
+            <section>
+              <h2>ボタンアイコン</h2>
+              <h5>Preview</h5>
+              <a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="preview"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="edit"></a>
@@ -464,8 +726,8 @@
 <a href="#" class="bca-btn-icon" data-bca-btn-type="download"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="draggable"></a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
+              <h5>Code</h5>
+              <pre class="brush: html;"><a href="#" class="bca-btn-icon" data-bca-btn-type="publish"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="preview"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="edit"></a>
@@ -480,13 +742,13 @@
 <a href="#" class="bca-btn-icon" data-bca-btn-type="textcopy"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="download"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="draggable"></a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>ボタンアイコン</h2>
-										<h5>Preview</h5>
-										<a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="lg"></a>
+            </section>
+            <section>
+              <h2>ボタンアイコン</h2>
+              <h5>Preview</h5>
+              <a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="lg"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="lg"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="edit" data-bca-btn-size="lg"></a>
@@ -526,8 +788,8 @@
 <a href="#" class="bca-btn-icon" data-bca-btn-type="permission" data-bca-btn-size="sm"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="home" data-bca-btn-size="sm"></a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="lg"></a>
+              <h5>Code</h5>
+              <pre class="brush: html;"><a href="#" class="bca-btn-icon" data-bca-btn-type="publish" data-bca-btn-size="lg"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="lg"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="edit" data-bca-btn-size="lg"></a>
@@ -566,13 +828,13 @@
 <a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="sm"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="permission" data-bca-btn-size="sm"></a>
 <a href="#" class="bca-btn-icon" data-bca-btn-type="home" data-bca-btn-size="sm"></a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>ボタンアイコン+テキスト</h2>
-										<h5>Preview</h5>
-										<a href="#" class="bca-btn-icon-text">ボタン</a>
+            </section>
+            <section>
+              <h2>ボタンアイコン+テキスト</h2>
+              <h5>Preview</h5>
+              <a href="#" class="bca-btn-icon-text">ボタン</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="publish">公開ボタン</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="unpublish">非公開ボタン</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="preview">確認ボタン</a>
@@ -593,8 +855,8 @@
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="download">ダウンロード</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="draggable">ドラック可能</a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><a href="#" class="bca-btn-icon-text">ボタン</a>
+              <h5>Code</h5>
+              <pre class="brush: html;"><a href="#" class="bca-btn-icon-text">ボタン</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="publish">公開ボタン</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="unpublish">非公開ボタン</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="preview">確認ボタン</a>
@@ -614,16 +876,16 @@
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="textcopy">テキストコピー</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="download">ダウンロード</a>
 <a href="#" class="bca-btn-icon-text" data-bca-btn-type="draggable">ドラック可能</a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-radio">radio</a></h1>
-									<section>
-										<h2>ボタンを囲む</h2>
-										<h5>Preview</h5>
-										<div class="bca-actions">
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-radio">radio</a></h1>
+            <section>
+              <h2>ボタンを囲む</h2>
+              <h5>Preview</h5>
+              <div class="bca-actions">
 	<div class="bca-actions__main">
 		<a href="#" class="bca-btn bca-actions__item">プレビュー</a>
 		<a href="#" class="bca-btn bca-actions__item">保存</a>
@@ -633,8 +895,8 @@
 	</div>
 </div>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><div class="bca-actions">
+              <h5>Code</h5>
+              <pre class="brush: html;"><div class="bca-actions">
 	<div class="bca-actions__main">
 		<a href="#" class="bca-btn bca-actions__item">プレビュー</a>
 		<a href="#" class="bca-btn bca-actions__item">保存</a>
@@ -643,13 +905,13 @@
 		<a href="#" class="bca-btn bca-actions__item">削除</a>
 	</div>
 </div></pre>
-										<small><p>ボタンを囲むもの</p>
+              <small><p>ボタンを囲むもの</p>
 </small>
-									</section>
-									<section>
-										<h2>ラジオボタン</h2>
-										<h5>Preview</h5>
-										<input type="radio" class="bca-radio" name="radio01" id="radio01-1">
+            </section>
+            <section>
+              <h2>ラジオボタン</h2>
+              <h5>Preview</h5>
+              <input type="radio" class="bca-radio" name="radio01" id="radio01-1">
 <label for="radio01-1">ラジオボタンA</label>
 <input type="radio" class="bca-radio" name="radio01" id="radio01-2">
 <label for="radio01-2">ラジオボタンB</label>
@@ -668,8 +930,8 @@
 <input type="radio" data-bca-radio-size="sm" class="bca-radio" name="radio-Sm" id="radio-Sm-2">
 <label for="radio-Sm-2">ラジオボタン（小）B</label>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><input type="radio" class="bca-radio" name="radio01" id="radio01-1">
+              <h5>Code</h5>
+              <pre class="brush: html;"><input type="radio" class="bca-radio" name="radio01" id="radio01-1">
 <label for="radio01-1">ラジオボタンA</label>
 <input type="radio" class="bca-radio" name="radio01" id="radio01-2">
 <label for="radio01-2">ラジオボタンB</label>
@@ -687,16 +949,16 @@
 <label for="radio-Sm-1">ラジオボタン（小）A</label>
 <input type="radio" data-bca-radio-size="sm" class="bca-radio" name="radio-Sm" id="radio-Sm-2">
 <label for="radio-Sm-2">ラジオボタン（小）B</label></pre>
-										<small><p>基本ラジオボタン</p>
+              <small><p>基本ラジオボタン</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-checkbox">checkbox</a></h1>
-									<section>
-										<h2>チェックボックス</h2>
-										<h5>Preview</h5>
-										<input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxA" class="bca-checkbox">
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-checkbox">checkbox</a></h1>
+            <section>
+              <h2>チェックボックス</h2>
+              <h5>Preview</h5>
+              <input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxA" class="bca-checkbox">
 <label for="checkboxA" class="bca-checkbox-label"></label>
 
 <input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxB" class="bca-checkbox">
@@ -718,8 +980,8 @@
 <input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（小）" value="2" id="chckboxSmB" class="bca-checkbox">
 <label for="chckboxSmB" data-bca-checkbox-size="sm" class="bca-checkbox-label">チェックボックス（小）</label>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxA" class="bca-checkbox">
+              <h5>Code</h5>
+              <pre class="brush: html;"><input type="checkbox" name="data[Content][exclude_search]" label="" value="1" id="checkboxA" class="bca-checkbox">
 <label for="checkboxA" class="bca-checkbox-label"></label>
 
 <input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス" value="2" id="chckboxB" class="bca-checkbox">
@@ -740,16 +1002,16 @@
 
 <input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（小）" value="2" id="chckboxSmB" class="bca-checkbox">
 <label for="chckboxSmB" data-bca-checkbox-size="sm" class="bca-checkbox-label">チェックボックス（小）</label></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-select">select</a></h1>
-									<section>
-										<h2>セレクトボックス</h2>
-										<h5>Preview</h5>
-										<select name="selectbox" id="selectbox" class="bca-select">
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-select">select</a></h1>
+            <section>
+              <h2>セレクトボックス</h2>
+              <h5>Preview</h5>
+              <select name="selectbox" id="selectbox" class="bca-select">
 <option value="">セレクトボックス</option>
 <option value="selectAAA">selectAAA</option>
 <option value="selectBBB">selectBBB</option>
@@ -774,8 +1036,8 @@
 <option value="selectCCC">selectCCC</option>
 </select>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><select name="selectbox" id="selectbox" class="bca-select">
+              <h5>Code</h5>
+              <pre class="brush: html;"><select name="selectbox" id="selectbox" class="bca-select">
 <option value="">セレクトボックス</option>
 <option value="selectAAA">selectAAA</option>
 <option value="selectBBB">selectBBB</option>
@@ -799,16 +1061,16 @@
 <option value="selectBBB">selectBBB</option>
 <option value="selectCCC">selectCCC</option>
 </select></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-parts">parts</a></h1>
-									<section>
-										<h2>フォーム系使用パーツ 横並び（サイズ感確認用）</h2>
-										<h5>Preview</h5>
-										<input type="radio" class="bca-radio" name="radio-size-md" id="radio-size-md-1">
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-parts">parts</a></h1>
+            <section>
+              <h2>フォーム系使用パーツ 横並び（サイズ感確認用）</h2>
+              <h5>Preview</h5>
+              <input type="radio" class="bca-radio" name="radio-size-md" id="radio-size-md-1">
 <label for="radio-size-md-1">ラジオボタン（中）</label>
 
 <input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（中）" value="2" id="chckboxB" class="bca-checkbox">
@@ -880,8 +1142,8 @@
 <input type="send" class="bca-btn" data-bca-btn-size="sm" value="sendボタン小">
 <a href="#" class="bca-btn" data-bca-btn-size="sm">ボタン（小）</a>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><input type="radio" class="bca-radio" name="radio-size-md" id="radio-size-md-1">
+              <h5>Code</h5>
+              <pre class="brush: html;"><input type="radio" class="bca-radio" name="radio-size-md" id="radio-size-md-1">
 <label for="radio-size-md-1">ラジオボタン（中）</label>
 
 <input type="checkbox" name="data[Content][exclude_search]" label="チェックボックス（中）" value="2" id="chckboxB" class="bca-checkbox">
@@ -952,56 +1214,76 @@
 <input type="text" data-input-text-size="sm" class="bca-input-text">
 <input type="send" class="bca-btn" data-bca-btn-size="sm" value="sendボタン小">
 <a href="#" class="bca-btn" data-bca-btn-size="sm">ボタン（小）</a></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>フォーム系 datepicker</h2>
-										<h5>Preview</h5>
-										<span class="bca-datepicker">
-  <span class="bca-datepicker__date">
-    <label class="bca-datepicker__date-label">日付</label>
-    <input class="bca-datepicker__date-input" …="">
+            </section>
+            <section>
+              <h2>フォーム系 datepicker</h2>
+              <h5>Preview</h5>
+              <span class="bca-datetimepicker">
+  <span class="bca-datetimepicker__date">
+    <label for="DateSample1" class="bca-datetimepicker__date-label">日付</label>
+    <input name="" size="12" maxlength="10" class="bca-datetimepicker__date-input hasDatepicker" type="text" id="DateSample1">
+    <script type="text/javascript">
+    <!--
+    jQuery(function($){
+      $("#DateSample1").datepicker();
+    });
+    //-->
+    </script>
   </span>
-
-  <span class="bca-datepicker__time">
-    <label class="bca-datepicker__time-label">時間</label>
-    <input class="bca-datepicker__time-input" …="">
-  </span>
-</span>
-
-
-<span class="bca-datepicker-range">
-  <span class="bca-datepicker-range__begin">
-    <span class="bca-datepicker">
-      <span class="bca-datepicker__date">
-        <label class="bca-datepicker__date-label">開始日</label>
-        <input class="bca-datepicker__date-input" …="">
-      </span>
-
-      <span class="bca-datepicker__time">
-        <label class="bca-datepicker__time-label">開始時間</label>
-        <input class="bca-datepicker__time-input" …="">
-      </span>
-    </span>
-  </span>
-
-  <span class="bca-datepicker-range__delimiter">〜</span>
-
-  <span class="bca-bca-datepicker-range__end">
-    <span class="bca-datepicker">
-      <span class="bca-datepicker__date">
-        <label class="bca-datepicker__date-label">終了日</label>
-        <input class="bca-datepicker__date-input" …="">
-      </span>
-      <span class="bca-datepicker__time">
-        <label class="bca-datepicker__time-label">終了時間</label>
-        <input class="bca-datepicker__time-input" …="">
-      </span>
-    </span>
+  <span class="bca-datetimepicker__time">
+    <label for="DateSample2" class="bca-datetimepicker__time-label">時間</label>
+    <input name="" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" type="text" id="DateSample2" autocomplete="off">
   </span>
 </span>
 
+<h3>▼開始〜終了</h3>
+<span class="bca-datetimepicker__group">
+  <span class="bca-datetimepicker__start">
+    <span class="bca-datetimepicker">
+      <span class="bca-datetimepicker__date">
+        <label for="BlogPostPublishBeginDate" class="bca-datetimepicker__date-label">開始日付</label>
+        <input name="data[BlogPost][publish_begin_date]" size="12" maxlength="10" class="bca-datetimepicker__date-input hasDatepicker" type="text" id="BlogPostPublishBeginDate">
+        <script type="text/javascript">
+        <!--
+        jQuery(function($){
+          $("#BlogPostPublishBeginDate").datepicker();
+        });
+        //-->
+        </script>
+      </span>
+      <span class="bca-datetimepicker__time">
+        <label for="BlogPostPublishBeginTime" class="bca-datetimepicker__time-label">開始時間</label>
+        <input name="data[BlogPost][publish_begin_time]" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" type="text" id="BlogPostPublishBeginTime" autocomplete="off">
+      </span>
+      <input type="hidden" name="data[BlogPost][publish_begin]" id="BlogPostPublishBegin">
+    </span>
+  </span>
+
+  <span class="bca-datetimepicker__delimiter">〜</span>
+
+  <span class="bca-datetimepicker__end">
+    <span class="bca-datetimepicker">
+      <span class="bca-datetimepicker__date">
+        <label for="BlogPostPublishEndDate" class="bca-datetimepicker__date-label">終了日付</label>
+        <input name="data[BlogPost][publish_end_date]" size="12" maxlength="10" class="bca-datetimepicker__date-input hasDatepicker" type="text" id="BlogPostPublishEndDate">
+        <script type="text/javascript">
+        <!--
+        jQuery(function($){
+          $("#BlogPostPublishEndDate").datepicker();
+        });
+        //-->
+        </script>
+      </span>
+      <span class="bca-datetimepicker__time">
+        <label for="BlogPostPublishEndTime" class="bca-datetimepicker__time-label">終了時間</label>
+        <input name="data[BlogPost][publish_end_time]" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" type="text" id="BlogPostPublishEndTime" autocomplete="off">
+      </span>
+      <input type="hidden" name="data[BlogPost][publish_end]" id="BlogPostPublishEnd">
+    </span>
+  </span>
+</span>
 
 
 <span class="bca-datepicker__begin">
@@ -1014,51 +1296,71 @@
   <input name="data[BlogPost][publish_end_time]" class="bca-datepicker__end__date__time ui-timepicker-input">
 </span>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><span class="bca-datepicker">
-  <span class="bca-datepicker__date">
-    <label class="bca-datepicker__date-label">日付</label>
-    <input class="bca-datepicker__date-input" …="">
+              <h5>Code</h5>
+              <pre class="brush: html;"><span class="bca-datetimepicker">
+  <span class="bca-datetimepicker__date">
+    <label for="DateSample1" class="bca-datetimepicker__date-label">日付</label>
+    <input name="" size="12" maxlength="10" class="bca-datetimepicker__date-input hasDatepicker" type="text" id="DateSample1">
+    <script type="text/javascript">
+    <!--
+    jQuery(function($){
+      $("#DateSample1").datepicker();
+    });
+    //-->
+    </script>
   </span>
-
-  <span class="bca-datepicker__time">
-    <label class="bca-datepicker__time-label">時間</label>
-    <input class="bca-datepicker__time-input" …="">
-  </span>
-</span>
-
-
-<span class="bca-datepicker-range">
-  <span class="bca-datepicker-range__begin">
-    <span class="bca-datepicker">
-      <span class="bca-datepicker__date">
-        <label class="bca-datepicker__date-label">開始日</label>
-        <input class="bca-datepicker__date-input" …="">
-      </span>
-
-      <span class="bca-datepicker__time">
-        <label class="bca-datepicker__time-label">開始時間</label>
-        <input class="bca-datepicker__time-input" …="">
-      </span>
-    </span>
-  </span>
-
-  <span class="bca-datepicker-range__delimiter">〜</span>
-
-  <span class="bca-bca-datepicker-range__end">
-    <span class="bca-datepicker">
-      <span class="bca-datepicker__date">
-        <label class="bca-datepicker__date-label">終了日</label>
-        <input class="bca-datepicker__date-input" …="">
-      </span>
-      <span class="bca-datepicker__time">
-        <label class="bca-datepicker__time-label">終了時間</label>
-        <input class="bca-datepicker__time-input" …="">
-      </span>
-    </span>
+  <span class="bca-datetimepicker__time">
+    <label for="DateSample2" class="bca-datetimepicker__time-label">時間</label>
+    <input name="" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" type="text" id="DateSample2" autocomplete="off">
   </span>
 </span>
 
+<h3>▼開始〜終了</h3>
+<span class="bca-datetimepicker__group">
+  <span class="bca-datetimepicker__start">
+    <span class="bca-datetimepicker">
+      <span class="bca-datetimepicker__date">
+        <label for="BlogPostPublishBeginDate" class="bca-datetimepicker__date-label">開始日付</label>
+        <input name="data[BlogPost][publish_begin_date]" size="12" maxlength="10" class="bca-datetimepicker__date-input hasDatepicker" type="text" id="BlogPostPublishBeginDate">
+        <script type="text/javascript">
+        <!--
+        jQuery(function($){
+          $("#BlogPostPublishBeginDate").datepicker();
+        });
+        //-->
+        </script>
+      </span>
+      <span class="bca-datetimepicker__time">
+        <label for="BlogPostPublishBeginTime" class="bca-datetimepicker__time-label">開始時間</label>
+        <input name="data[BlogPost][publish_begin_time]" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" type="text" id="BlogPostPublishBeginTime" autocomplete="off">
+      </span>
+      <input type="hidden" name="data[BlogPost][publish_begin]" id="BlogPostPublishBegin">
+    </span>
+  </span>
+
+  <span class="bca-datetimepicker__delimiter">〜</span>
+
+  <span class="bca-datetimepicker__end">
+    <span class="bca-datetimepicker">
+      <span class="bca-datetimepicker__date">
+        <label for="BlogPostPublishEndDate" class="bca-datetimepicker__date-label">終了日付</label>
+        <input name="data[BlogPost][publish_end_date]" size="12" maxlength="10" class="bca-datetimepicker__date-input hasDatepicker" type="text" id="BlogPostPublishEndDate">
+        <script type="text/javascript">
+        <!--
+        jQuery(function($){
+          $("#BlogPostPublishEndDate").datepicker();
+        });
+        //-->
+        </script>
+      </span>
+      <span class="bca-datetimepicker__time">
+        <label for="BlogPostPublishEndTime" class="bca-datetimepicker__time-label">終了時間</label>
+        <input name="data[BlogPost][publish_end_time]" size="8" maxlength="8" class="bca-datetimepicker__time-input ui-timepicker-input" type="text" id="BlogPostPublishEndTime" autocomplete="off">
+      </span>
+      <input type="hidden" name="data[BlogPost][publish_end]" id="BlogPostPublishEnd">
+    </span>
+  </span>
+</span>
 
 
 <span class="bca-datepicker__begin">
@@ -1070,13 +1372,13 @@
   <input name="data[BlogPost][publish_end_date]" class="bca-datepicker__end__date hasDatepicker">
   <input name="data[BlogPost][publish_end_time]" class="bca-datepicker__end__date__time ui-timepicker-input">
 </span></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-									<section>
-										<h2>フォーム系 input type&#x3D;&quot;file&quot;</h2>
-										<h5>Preview</h5>
-										// file
+            </section>
+            <section>
+              <h2>フォーム系 input type&#x3D;&quot;file&quot;</h2>
+              <h5>Preview</h5>
+              // file
 // figureあり + delあり パターン
 <span class="bca-file">
   <input type="file" class="bca-file__input">
@@ -1103,8 +1405,8 @@
 
 // figureなし + delなし パターン
 
-										<h5>Code</h5>
-										<pre class="brush: html;">// file
+              <h5>Code</h5>
+              <pre class="brush: html;">// file
 // figureあり + delあり パターン
 <span class="bca-file">
   <input type="file" class="bca-file__input">
@@ -1130,33 +1432,33 @@
 
 
 // figureなし + delなし パターン</pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-label">label</a></h1>
-									<section>
-										<h2>ラベル・リボン</h2>
-										<h5>Preview</h5>
-										<span class="bca-label">ラベルテキスト</span>
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-label">label</a></h1>
+            <section>
+              <h2>ラベル・リボン</h2>
+              <h5>Preview</h5>
+              <span class="bca-label">ラベルテキスト</span>
 <span class="bca-label" data-bca-label-type="required">必須</span>
 <span class="bca-label" data-bca-label-type="optional">任意</span>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><span class="bca-label">ラベルテキスト</span>
+              <h5>Code</h5>
+              <pre class="brush: html;"><span class="bca-label">ラベルテキスト</span>
 <span class="bca-label" data-bca-label-type="required">必須</span>
 <span class="bca-label" data-bca-label-type="optional">任意</span></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
-							<section>
-								<h1><a id="sceg-cat-icon">icon</a></h1>
-									<section>
-										<h2>アイコン</h2>
-										<h5>Preview</h5>
-										<i class="bca-icon--publish"></i>
+            </section>
+          </section>
+          <section>
+            <h1><a id="sceg-cat-icon">icon</a></h1>
+            <section>
+              <h2>アイコン</h2>
+              <h5>Preview</h5>
+              <i class="bca-icon--publish"></i>
 <i class="bca-icon--unpublish"></i>
 <i class="bca-icon--preview"></i>
 <i class="bca-icon--edit"></i>
@@ -1186,8 +1488,8 @@
 <i class="bca-icon--textcopy"></i>
 <i class="bca-icon--draggable"></i>
 
-										<h5>Code</h5>
-										<pre class="brush: html;"><i class="bca-icon--publish"></i>
+              <h5>Code</h5>
+              <pre class="brush: html;"><i class="bca-icon--publish"></i>
 <i class="bca-icon--unpublish"></i>
 <i class="bca-icon--preview"></i>
 <i class="bca-icon--edit"></i>
@@ -1216,36 +1518,39 @@
 <i class="bca-icon--globe"></i>
 <i class="bca-icon--textcopy"></i>
 <i class="bca-icon--draggable"></i></pre>
-										<small><p>ページタイトル</p>
+              <small><p>ページタイトル</p>
 </small>
-									</section>
-							</section>
+            </section>
+          </section>
 
-					</article>
+        </article>
 
-					<div id="ToTop" class="bca-totop"><a href="#Header">▲ トップへ</a></div>
-				</div>
-			</main>
-		</div>
-
-
-    <div id="Footer" class="bca-footer" data-loggedin="true">
-      <div class="bca-footer__inner--full">
-        <div class="bca-footer__main">
-          <div class="bca-footer__baser-version">baserCMS <strong>4.1.0-dev</strong></div>
-          <ul class="bca-footer__banner">
-            <li class="bca-footer__banner__item"><a href="http://basercms.net/" target="_blank" title="baserCMS Power"><img src="/theme/ownd_river/img/baser.power.gif" alt="baserCMS Power"></a></li>
-            <li class="bca-footer__banner__item"><a href="http://cakephp.jp/" target="_blank" title="CakePHP Power"><img src="/theme/ownd_river/img/cake.power.gif" alt="CakePHP Power"></a></li>
-          </ul>
-        </div>
-        <div class="bca-footer__sub">
-          <div class="bca-footer__copyright">Copyright (C) baserCMS Users Community 2009 - 2018 All rights reserved.</div>
-        </div>
+        <div id="ToTop" class="bca-totop"><a href="#Header">▲ トップへ</a></div>
       </div>
+    </main>
+  </div>
+
+
+  <div id="Footer" class="bca-footer" data-loggedin="true">
+    <div class="bca-footer__inner--full">
+      <div class="bca-footer__main">
+        <div class="bca-footer__baser-version">baserCMS <strong>4.1.0-dev</strong></div>
+        <ul class="bca-footer__banner">
+          <li class="bca-footer__banner__item"><a href="http://basercms.net/" target="_blank"
+                                                  title="baserCMS Power"><img
+            src="/theme/ownd_river/img/baser.power.gif" alt="baserCMS Power"></a></li>
+          <li class="bca-footer__banner__item"><a href="http://cakephp.jp/" target="_blank" title="CakePHP Power"><img
+            src="/theme/ownd_river/img/cake.power.gif" alt="CakePHP Power"></a></li>
+        </ul>
+      </div>
+      <div class="bca-footer__sub">
+        <div class="bca-footer__copyright">Copyright (C) baserCMS Users Community 2009 - 2018 All rights reserved.</div>
+      </div>
+    </div>
     <!-- / #Footer --></div>
 
-		<!-- / #Page -->
-	</div>
+  <!-- / #Page -->
+</div>
 
 </body>
 
