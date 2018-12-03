@@ -92,21 +92,6 @@ class BcAppController extends Controller {
  * @var string
  */
 	public $subMenuElements = '';
-	
-/**
- * 管理画面main bodyのタイトル横リンク（ボタン）
- * サンプル: [
- *     [
- *         'url' => ['controller' = 'sample', 'action' => 'index'],
- *         'class' => 'btn btn-info',
- *         'confirm' => '編集ページへジャンプします。いいですか？',
- *     ]
- * ]
- * 
- * @var array ['url' => string or array, 'confirm' => 'confirm message', 'something attributes' => 'attr value']
- */
-	public $mainBodyHeaderLinks = [];
-	
 
 /**
  * パンくずナビ
@@ -678,7 +663,6 @@ class BcAppController extends Controller {
  */
 	private function __loadDataToView() {
 		$this->set('subMenuElements', $this->subMenuElements);	// サブメニューエレメント
-		$this->set('mainBodyHeaderLinks', $this->mainBodyHeaderLinks);
 		$this->set('crumbs', $this->crumbs);					// パンくずなび
 		$this->set('search', $this->search);
 		$this->set('help', $this->help);
