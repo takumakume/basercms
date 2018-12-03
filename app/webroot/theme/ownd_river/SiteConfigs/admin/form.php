@@ -130,7 +130,7 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
   </table>
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
-  <h2 class="bca-main__heading" data-bca-heading-size="lg">管理画面関係</h2>
+  <h2 class="bca-main__heading" data-bca-heading-size="lg">管理画面設定</h2>
   <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
     <tr>
       <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_ssl', __d('baser', '管理画面SSL設定')) ?></th>
