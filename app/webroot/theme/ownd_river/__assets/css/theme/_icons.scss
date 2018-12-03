@@ -185,4 +185,11 @@
     @extend .#{$fa-css-prefix}-clipboard;
     @include fa-common;
   }
+
+  // ドラック可能
+  &--draggable {
+    @extend .#{$fa-css-prefix}-arrows-v;
+    @include fa-common;
+  }
+
 }

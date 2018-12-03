@@ -110,7 +110,7 @@
 		@include bca-btn-icon-text-common;
 	}
 
-	// HOME
+	// ログイン
 	&[data-bca-btn-type=login] {
 		@include bca-btn-icon-text-common;
 		color: $color_lightest;
