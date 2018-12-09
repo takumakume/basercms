@@ -25,7 +25,7 @@ array_push($params, $data['name']);
 <tr>
   <td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--select">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->input('ListTool.batch_targets.' . str_replace('.', '_', $data['name']), ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['name']]) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . str_replace('.', '_', $data['name']), ['type' => 'checkbox', 'label'=> '<span class="bca-visually-hidden">チェックする</span>', 'class' => 'batch-targets bca-checkbox__input', 'value' => $data['name']]) ?>
 		<?php endif ?>
 
   </td>

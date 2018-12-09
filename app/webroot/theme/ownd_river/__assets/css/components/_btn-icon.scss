@@ -152,7 +152,7 @@
     @extend .#{$fa-css-prefix}-toggle-on;
     @include bca-btn-icon-common;
   }
-  
+
   // フォルダ
   &[data-bca-btn-type=folder] {
     @extend .#{$fa-css-prefix}-folder;
