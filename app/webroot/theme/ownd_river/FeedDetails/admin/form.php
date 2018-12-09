@@ -23,7 +23,7 @@
 
 <?php echo $this->BcForm->input('FeedDetail.feed_config_id', array('type' => 'hidden')) ?>
 
-<div class="section">
+<section class="bca-section" data-bca-section-type='form-group'>
 	<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
@@ -52,9 +52,9 @@
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
-</div>
+</section>
 
-<div class="section">
+<section class="bca-section" data-bca-section-type='form-group'>
 	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption">オプション</a></h2>
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="FormOptionBody">
 		<tr>
@@ -86,10 +86,10 @@
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
-</div>
+</section>
 
   <!-- button -->
-  <div class="bca-actions">
+	<div class="bca-actions">
   	<?php if ($this->action == 'admin_edit' || $this->action == 'admin_add'): ?>
     <div class="bca-actions__main">
   		<?php echo $this->BcForm->button(__d('baser', '保存'),
@@ -114,7 +114,7 @@
         ), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('FeedConfig.name')), false); ?>
     </div>
     <?php endif ?>
-
+	</div>
 
 
 

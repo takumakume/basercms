@@ -131,29 +131,33 @@ $(function(){
 
 <!-- button -->
 <div class="bca-actions">
-	<?php echo $this->BcForm->button(__d('baser', '保存'), 
-		array(
-			'type' => 'submit',
-			'id' => 'BtnSave',
-			'div' => false,
-			'class' => 'button bca-btn bca-actions__item',
-			'data-bca-btn-type' => 'save',
-			'data-bca-btn-size' => 'xl'
-	)); ?>
-	<?php if ($this->action == 'admin_edit'): ?>
-	<?php $this->BcBaser->link(__d('baser', '削除'), 
-		array('action' => 'delete', $this->BcForm->value('FeedConfig.id')), 
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '保存'), 
 			array(
-				'class' => 'submit-token button bca-btn bca-actions__item', 
-				'data-bca-btn-type'=>'delete',
-				'data-bca-btn-size' => 'sm',
-				'data-bca-btn-color' => 'danger'
-				), 
-			sprintf(__d('baser', '%s を本当に削除してもいいですか？'), 
-			$this->BcForm->value('FeedConfig.name')
-			), 
-			false);
-		 ?>
+				'type' => 'submit',
+				'id' => 'BtnSave',
+				'div' => false,
+				'class' => 'button bca-btn bca-actions__item',
+				'data-bca-btn-type' => 'save',
+				'data-bca-btn-size' => 'xl'
+		)); ?>
+	</div>
+	<?php if ($this->action == 'admin_edit'): ?>
+		<div class="bca-actions__sub">
+			<?php $this->BcBaser->link(__d('baser', '削除'), 
+				array('action' => 'delete', $this->BcForm->value('FeedConfig.id')), 
+					array(
+						'class' => 'submit-token button bca-btn bca-actions__item', 
+						'data-bca-btn-type'=>'delete',
+						'data-bca-btn-size' => 'sm',
+						'data-bca-btn-color' => 'danger'
+						), 
+					sprintf(__d('baser', '%s を本当に削除してもいいですか？'), 
+					$this->BcForm->value('FeedConfig.name')
+					), 
+					false);
+			?>
+		</div>
 	<?php endif ?>
 </div>
 
