@@ -12249,7 +12249,7 @@ div.jstree-publish-even {
   .bca-form-table__label {
     vertical-align: top;
     width: 200px;
-    padding: 1em 2em 1em 1em;
+    padding: 1.4em 2em 1em 1em;
     font-weight: bold;
     border: 0 solid #ccc;
     border-width: 1px 0 0;
@@ -12271,6 +12271,9 @@ div.jstree-publish-even {
     border: 0 solid #ccc;
     border-width: 1px 0 0;
     font-weight: normal; }
+  .bca-form-table__input-wrap {
+    display: block;
+    padding: 0 0 0 1em; }
   .bca-form-table__group + .bca-form-table__group {
     margin-top: 1em; }
   .bca-form-table__group-state {

@@ -78,7 +78,7 @@
 	&__label {
     vertical-align: top;
     width: 200px;
-    padding: 1em 2em 1em 1em;
+    padding: 1.4em 2em 1em 1em;
 		font-weight: bold;
 		border: 0 solid $border-color;
 		border-width: 1px 0 0;
@@ -107,6 +107,10 @@
 		border-width: 1px 0 0;
     font-weight: normal;
 	}
+  &__input-wrap {
+    display: block;
+    padding: 0 0 0 1em;
+  }
 
   &__group {
     & + & {
