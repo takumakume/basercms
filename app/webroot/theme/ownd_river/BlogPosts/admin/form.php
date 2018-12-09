@@ -65,7 +65,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 
 <!-- form -->
 <div class="bca-section">
-	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
+	<table id="FormTable" class="form-table bca-form-table">
     <tr>
       <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.name', __d('baser', 'タイトル')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
       <td class="col-input bca-form-table__input">

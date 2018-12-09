@@ -18,8 +18,8 @@
 
 
 <?php if($this->request->action == 'admin_edit' || $this->request->action == 'admin_edit_alias'): ?>
-<div id="EtcSetting" class="section">
-	<h3 class="bca-main__heading" data-bca-heading-size="md">その他情報</h3>
+<div id="EtcSetting" class="bca-section">
+	<h2 class="bca-main__heading" data-bca-heading-size="lg">その他情報</h2>
 	<div>
 		<p><span>コンテンツID</span>：<?php echo $this->request->data['Content']['id'] ?></p>
 		<p><span>実体ID</span>：<?php echo $this->request->data['Content']['entity_id'] ?></p>

@@ -16,15 +16,11 @@
 $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 ?>
 
-
-<h2 class="bca-main__heading" data-bca-heading-size="lg"><?php echo __d('baser', '基本項目') ?></h2>
-
-
 <?php echo $this->BcForm->create('BlogContent') ?>
 <?php echo $this->BcForm->input('BlogContent.id', array('type' => 'hidden')) ?>
 
 <div class="section">
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
+	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.description', __d('baser', 'ブログ説明文')) ?></th>
 			<td class="col-input bca-form-table__input">
@@ -42,9 +38,9 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
-<h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption"><?php echo __d('baser', 'オプション') ?></a></h2>
-<div class="section">
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
+
+<div class="bca-section">
+  <table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', '一覧表示件数')) ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input bca-form-table__input">
@@ -196,9 +192,10 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
 </div>
-<!-- button -->
-<div class="submit">
-<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button')) ?>
-</div>
 
+<!-- button -->
+<div class="bca-actions">
+  <?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button')) ?>
+</div>
 <?php echo $this->BcForm->end() ?>
+

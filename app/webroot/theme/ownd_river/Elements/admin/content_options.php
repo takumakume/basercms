@@ -18,10 +18,10 @@
  */
 ?>
 
-
-<div id="OptionalSetting" class="section">
-	<h3 class="bca-main__heading" data-bca-heading-size="md">オプション</h3>
-	<table class="form-table">
+ooooo
+<div id="OptionalSetting" class="bca-section">
+  <h2 class="bca-main__heading" data-bca-heading-size="lg">オプション</h2>
+	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.description', __d('baser', '説明文')) ?></th>
 			<td class="col-input bca-form-table__input">
@@ -108,3 +108,4 @@
 		</tr>
 	</table>
 </div>
+ppppp
