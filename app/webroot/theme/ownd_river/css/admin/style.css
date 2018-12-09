@@ -12309,7 +12309,6 @@ div.jstree-publish-even {
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__label {
       vertical-align: top;
       width: 240px;
-      padding-top: 0.5em;
       padding-left: 0.2em;
       padding-right: 1em;
       font-weight: bold;
@@ -12326,6 +12325,7 @@ div.jstree-publish-even {
         margin-top: 0;
         margin-bottom: 0; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__input {
+      padding-top: 0.2em;
       vertical-align: top;
       font-weight: normal; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__explanation {

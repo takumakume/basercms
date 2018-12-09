@@ -170,7 +170,7 @@
       &__label {
         vertical-align: top;
         width: 240px;
-        padding-top: 0.5em;
+        //padding-top: 0.5em;
         padding-left: 0.2em;
         padding-right: 1em;
         font-weight: bold;
@@ -193,6 +193,7 @@
       }
 
       &__input {
+        padding-top: 0.2em;
         vertical-align: top;
         font-weight: normal;
       }

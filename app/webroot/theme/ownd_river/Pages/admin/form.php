@@ -56,7 +56,7 @@ $this->BcBaser->js('admin/pages/edit', false);
 
 <?php if (BcUtil::isAdminUser()): ?>
 <div class="bca-section">
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
+	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="bca-form-table__label"><?php echo $this->BcForm->label('Page.page_template', __d('baser', '固定ページテンプレート')) ?></th>
 			<td class="col-input bca-form-table__input">
