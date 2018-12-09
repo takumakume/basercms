@@ -15474,7 +15474,8 @@ table.cake-sql-log tr td {
       border: 2px solid #BBBBBB;
       border-radius: 2px;
       box-sizing: border-box;
-      margin-right: 0.5em; }
+      margin-right: 0.5em;
+      background: #FFFFFF; }
     .bca-checkbox__input + label:after, .bca-checkbox__label:after {
       position: absolute;
       top: 0em;
