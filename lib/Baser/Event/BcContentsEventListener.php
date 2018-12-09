@@ -94,17 +94,17 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 		}
 		// 既存のボタン
 		$outputArray[] = $event->data['out'];
-		$outputArray = [$View->Html->div('bca-section__submit__main', implode("\n", $outputArray))];
+		$outputArray = [$View->Html->div('bca-actions__main', implode("\n", $outputArray))];
 		// 削除ボタン
 		if(empty($data['Content']['site_root'])) {
 			if($data['Content']['alias_id']) {
 				$deleteText = __d('baser', '削除');
 			} else {
-				$deleteText = __d('baser', 'ゴミ箱へ移動');
+				$deleteText = __d('baser', 'ゴミ箱');
 			}
 			$PermissionModel = ClassRegistry::init('Permission');
 			if ($PermissionModel->check('/' . Configure::read('Routing.prefixes.0') . '/contents/delete', $View->viewVars['user']['user_group_id'])) {
-				$outputArray[] = $View->Html->div('bca-section__submit__sub', $View->BcForm->button($deleteText, [
+				$outputArray[] = $View->Html->div('bca-actions__sub', $View->BcForm->button($deleteText, [
 					'data-bca-btn-type' => 'delete',
 					'data-bca-btn-size' => 'sm',
 					'data-bca-btn-color' => 'danger',
@@ -113,13 +113,19 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 				]));
 			}
 		}
-		$outputArray = [$View->Html->div('bca-section__submit', implode("\n", $outputArray))];
-		// その他エレメント
-		$outputArray = array_merge($outputArray, [
-			$View->element('admin/content_options'),
-			$View->element('admin/content_related'),
-			$View->element('admin/content_info')
-		]);
+		$outputArray = [$View->Html->div('bca-actions', implode("\n", $outputArray))];
+		// その他エレメント（先頭に追加）
+		array_unshift($outputArray,
+      $View->element('admin/content_options')
+    );
+		// 送信ボタン系の後に「関連コンテンツ」「その他情報」を表示
+    $outputArray = array_merge( $outputArray,
+      [
+        $View->element('admin/content_related'),
+        $View->element('admin/content_info')
+      ]
+    );
+
 		$event->data['out'] = implode("\n", $outputArray);
 		return $event->data['out'];
 	}

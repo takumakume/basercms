@@ -22,4 +22,34 @@
 			// margin-right: 0.4em;
 		}
 	}
+
+
+  &[data-bca-list-type=circle] {
+    margin: 0;
+    .bca-list__item {
+      @extend .#{$fa-css-prefix}-circle;
+      padding: 0;
+      margin-right: 1.5em;
+      white-space: nowrap;
+      &::before{
+        position: relative;
+        top: -2px;
+        color: #aaa;
+        font-size: 1rem;
+        padding-right: 0.4em;
+      }
+    }
+  }
+
+  &[data-bca-list-delimiter=comma] {
+    .bca-list__item {
+      &::after{
+        content:",";
+        display: inline-block;
+      }
+      &:last-child:after {
+        content: none;
+      }
+    }
+  }
 }

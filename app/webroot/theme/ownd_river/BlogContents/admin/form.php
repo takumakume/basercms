@@ -16,15 +16,11 @@
 $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 ?>
 
-
-<h2 class="bca-main__heading" data-bca-heading-size="lg"><?php echo __d('baser', '基本項目') ?></h2>
-
-
 <?php echo $this->BcForm->create('BlogContent') ?>
 <?php echo $this->BcForm->input('BlogContent.id', array('type' => 'hidden')) ?>
 
-<div class="section">
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
+<section class="bca-section" data-bca-section-type="form-group">
+	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.description', __d('baser', 'ブログ説明文')) ?></th>
 			<td class="col-input bca-form-table__input">
@@ -40,13 +36,8 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			</td>
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
-	</table>
-</div>
-<h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption"><?php echo __d('baser', 'オプション') ?></a></h2>
-<div class="section">
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', '一覧表示件数')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', '一覧表示件数')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.list_count', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>&nbsp;件&nbsp;
 <?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpListCount', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -74,7 +65,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', 'RSSフィード出力件数')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', 'RSSフィード出力件数')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.feed_count', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>&nbsp;件&nbsp;
 <?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpFeedCount', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -130,7 +121,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.widget_area', __d('baser', 'ウィジェットエリア')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.widget_area', __d('baser', 'ウィジェットエリア')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php
 				echo $this->BcForm->input('BlogContent.widget_area', array(
@@ -148,7 +139,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.template', __d('baser', 'コンテンツテンプレート名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.template', __d('baser', 'コンテンツテンプレート名')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php
 				echo $this->BcForm->input('BlogContent.template', array(
@@ -157,7 +148,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 				?>
 <?php echo $this->BcForm->input('BlogContent.edit_blog_template', array('type' => 'hidden')) ?>
 <?php if ($this->action == 'admin_edit'): ?>
-	<?php $this->BcBaser->link('≫ ' . __d('baser', '編集する'), 'javascript:void(0)', array('id' => 'EditBlogTemplate')) ?>
+	<?php $this->BcBaser->link('<i class="bca-icon--edit"></i>' . __d('baser', '編集する'), 'javascript:void(0)', array('id' => 'EditBlogTemplate')) ?>
 <?php endif ?>
 <?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpTemplate', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 <?php echo $this->BcForm->error('BlogContent.template') ?>
@@ -170,14 +161,29 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.eye_catch_size_width', __d('baser', 'アイキャッチ画像サイズ')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.eye_catch_size_width', __d('baser', 'アイキャッチ画像サイズ')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
-				<span><?php echo __d('baser', 'PCサイズ') ?></span>　
-				<small>[<?php echo __d('baser', '幅') ?>]</small><?php echo $this->BcForm->input('BlogContent.eye_catch_size_thumb_width', array('type' => 'text', 'size' => '8')) ?>&nbsp;px　×　
-				<small>[<?php echo __d('baser', '高さ') ?>]</small><?php echo $this->BcForm->input('BlogContent.eye_catch_size_thumb_height', array('type' => 'text', 'size' => '8')) ?><br />
-				<span><?php echo __d('baser', '携帯サイズ') ?></span>　
-				<small>[<?php echo __d('baser', '幅') ?>]</small><?php echo $this->BcForm->input('BlogContent.eye_catch_size_mobile_thumb_width', array('type' => 'text', 'size' => '8')) ?>&nbsp;px　×　
-				<small>[<?php echo __d('baser', '高さ') ?>]</small><?php echo $this->BcForm->input('BlogContent.eye_catch_size_mobile_thumb_height', array('type' => 'text', 'size' => '8')) ?>
+        <table class="bca-table" data-bca-table-type="type1">
+          <thead>
+          <tr>
+            <th></th>
+            <th><?php echo __d('baser', '幅') ?></th>
+            <th><?php echo __d('baser', '高さ') ?></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th><?php echo __d('baser', 'PCサイズ') ?></th>
+            <td><?php echo $this->BcForm->input('BlogContent.eye_catch_size_thumb_width', array('type' => 'text', 'size' => '8')) ?>&nbsp;px</td>
+            <td><?php echo $this->BcForm->input('BlogContent.eye_catch_size_thumb_height', array('type' => 'text', 'size' => '8')) ?> px</td>
+          </tr>
+          <tr>
+            <th><?php echo __d('baser', '携帯サイズ') ?></th>
+            <td><?php echo $this->BcForm->input('BlogContent.eye_catch_size_mobile_thumb_width', array('type' => 'text', 'size' => '8')) ?>&nbsp;px</td>
+            <td><?php echo $this->BcForm->input('BlogContent.eye_catch_size_mobile_thumb_height', array('type' => 'text', 'size' => '8')) ?> px</td>
+          </tr>
+          </tbody>
+        </table>
 <?php echo $this->BcForm->error('BlogContent.eye_catch_size') ?>
 				<div id="helptextTemplate" class="helptext">
 					<ul>
@@ -195,10 +201,22 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
-</div>
+</section>
+
 <!-- button -->
-<div class="submit">
-<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button')) ?>
+<div class="bca-section-options">
+<?php /* ToDo
+  * 送信ボタン系とフォームコンテンツの出力を切り分ける
+  * 送信ボタンを input:submit からbuttonタグに切り替える
+*/ ?>
+  <?php echo $this->BcForm->submit(__d('baser', '保存'), array(
+  'div' => false,
+  'type' => 'submit',
+  'class' => 'button bca-btn',
+  'data-bca-btn-type' => 'save',
+  'data-bca-btn-size' => 'xl',
+  'id' => 'BtnSave'
+  )) ?>
 </div>
 
 <?php echo $this->BcForm->end() ?>

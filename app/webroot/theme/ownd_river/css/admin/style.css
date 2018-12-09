@@ -1443,7 +1443,7 @@ template {
 .fa-spinner:before {
   content: ""; }
 
-.fa-circle:before {
+.fa-circle:before, .bca-list[data-bca-list-type=circle] .bca-list__item:before {
   content: ""; }
 
 .fa-mail-reply:before,
@@ -4751,7 +4751,7 @@ div.jstree-publish-even {
 .fa-spinner:before {
   content: ""; }
 
-.fa-circle:before {
+.fa-circle:before, .bca-list[data-bca-list-type=circle] .bca-list__item:before {
   content: ""; }
 
 .fa-mail-reply:before,
@@ -7440,7 +7440,7 @@ div.jstree-publish-even {
 .fa-spinner:before {
   content: ""; }
 
-.fa-circle:before {
+.fa-circle:before, .bca-list[data-bca-list-type=circle] .bca-list__item:before {
   content: ""; }
 
 .fa-mail-reply:before,
@@ -10121,7 +10121,7 @@ div.jstree-publish-even {
 .fa-spinner:before {
   content: ""; }
 
-.fa-circle:before {
+.fa-circle:before, .bca-list[data-bca-list-type=circle] .bca-list__item:before {
   content: ""; }
 
 .fa-mail-reply:before,
@@ -11900,6 +11900,40 @@ div.jstree-publish-even {
 .bca-action-table-listup select + button {
   position: relative; }
 
+.bca-table[data-bca-table-type=type1] thead {
+  text-align: center;
+  font-weight: normal; }
+
+.bca-table[data-bca-table-type=type1] tbody th, .bca-table[data-bca-table-type=type1] tbody td {
+  padding: 5px; }
+
+.bca-table[data-bca-table-type=type1] tbody th {
+  padding-left: 0;
+  text-align: left;
+  font-weight: normal; }
+
+.bca-table[data-bca-table-type=type2] {
+  border-collapse: collapse;
+  width: 100%; }
+  .bca-table[data-bca-table-type=type2] th, .bca-table[data-bca-table-type=type2] td {
+    padding: 1em;
+    border: 1px solid #ddd; }
+  .bca-table[data-bca-table-type=type2] thead th {
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.4rem;
+    background-color: #eee; }
+  .bca-table[data-bca-table-type=type2] tbody th, .bca-table[data-bca-table-type=type2] tbody td {
+    vertical-align: top; }
+  .bca-table[data-bca-table-type=type2] tbody th {
+    padding-left: 0;
+    text-align: left;
+    font-weight: normal; }
+  .bca-table[data-bca-table-type=type2] .cel1 {
+    width: 120px; }
+  .bca-table[data-bca-table-type=type2] .bca-currentrow th, .bca-table[data-bca-table-type=type2] .bca-currentrow td {
+    background: #8ceb11; }
+
 /* list-table
 ----------------------------------------------- */
 .bca-table-listup {
@@ -12255,6 +12289,11 @@ div.jstree-publish-even {
     vertical-align: middle; }
   .bca-form-table__inner-submit {
     margin: 1em 0 0; }
+  .bca-form-table .bca-post__url {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1.4rem;
+    font-weight: bold; }
   .bca-form-table[data-bca-table-type=type2] {
     font-size: 1.4rem;
     width: 100%;
@@ -13393,7 +13432,7 @@ table.cake-sql-log tr td {
 .fa-spinner:before {
   content: ""; }
 
-.fa-circle:before {
+.fa-circle:before, .bca-list[data-bca-list-type=circle] .bca-list__item:before {
   content: ""; }
 
 .fa-mail-reply:before,
@@ -16686,7 +16725,7 @@ table.cake-sql-log tr td {
 .fa-spinner:before {
   content: ""; }
 
-.fa-circle:before {
+.fa-circle:before, .bca-list[data-bca-list-type=circle] .bca-list__item:before {
   content: ""; }
 
 .fa-mail-reply:before,
@@ -18374,7 +18413,10 @@ table.cake-sql-log tr td {
     margin-right: 2em;
     font-size: 1.4rem; }
   .bca-section__post-top .bca-post__url {
-    font-size: 1.4rem; }
+    display: block;
+    margin-top: 0.2em;
+    font-size: 1.4rem;
+    font-weight: bold; }
   .bca-section__post-top .bca-text-url {
     margin-right: 0.5em; }
 
@@ -18427,6 +18469,23 @@ table.cake-sql-log tr td {
       left: 0;
       line-height: 1.2;
       color: #343434; }
+  .bca-list[data-bca-list-type=circle] {
+    margin: 0; }
+    .bca-list[data-bca-list-type=circle] .bca-list__item {
+      padding: 0;
+      margin-right: 1.5em;
+      white-space: nowrap; }
+      .bca-list[data-bca-list-type=circle] .bca-list__item::before {
+        position: relative;
+        top: -2px;
+        color: #aaa;
+        font-size: 1rem;
+        padding-right: 0.4em; }
+  .bca-list[data-bca-list-delimiter=comma] .bca-list__item::after {
+    content: ",";
+    display: inline-block; }
+  .bca-list[data-bca-list-delimiter=comma] .bca-list__item:last-child:after {
+    content: none; }
 
 .bca-list-head {
   display: flex;
@@ -18447,6 +18506,11 @@ table.cake-sql-log tr td {
     width: 100%;
     padding: 20px;
     text-align: center; }
+
+.bca-box {
+  display: block;
+  padding: 1em;
+  background-color: #f4f5f1; }
 
 .ui-dialog {
   padding: 0 !important; }

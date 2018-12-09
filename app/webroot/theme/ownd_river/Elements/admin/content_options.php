@@ -19,14 +19,14 @@
 ?>
 
 
-<div id="OptionalSetting" class="section">
-	<h3 class="bca-main__heading" data-bca-heading-size="md">オプション</h3>
-	<table class="form-table">
+<section id="OptionalSetting" class="bca-section" data-bca-section-type="form-group">
+	<h2 class="bca-main__heading" data-bca-heading-size="md">オプション</h2>
+	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.description', __d('baser', '説明文')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php if(!$disableEditContent): ?>
-					<?php echo $this->BcForm->input('Content.description', array('type' => 'textarea', 'rows' => 2, 'placeholder' => $this->BcBaser->siteConfig['description'])) ?>　
+          <?php echo $this->BcForm->input('Content.description', array('type' => 'textarea', 'cols' => 36, 'rows' => 4,'data-input-text-size' => 'full-counter','placeholder' => $this->BcBaser->siteConfig['description'])) ?>
 				<?php else: ?>
 					<?php if($this->BcForm->value('Content.exclude_search')): ?>
 						<?php echo $this->BcForm->value('Content.description') ?>
@@ -107,4 +107,4 @@
 			</td>
 		</tr>
 	</table>
-</div>
+</section>

@@ -140,6 +140,13 @@
     margin: 1em 0 0;
   }
 
+  .bca-post__url {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
   // 設定画面系：ボーダーなし
   &[data-bca-table-type=type2] {
 
@@ -203,4 +210,7 @@
       margin-left: 3px;
     }
   }
+
+
+  
 }

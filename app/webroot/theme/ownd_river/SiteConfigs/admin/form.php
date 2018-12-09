@@ -277,8 +277,8 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.editor_styles', __d('baser', 'エディタスタイルセット')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('SiteConfig.editor_styles', array('type' => 'textarea', 'cols' => 36, 'rows' => 10,'data-input-text-size' => 'full-counter')) ?>
-						<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
-						<?php echo $this->BcForm->error('SiteConfig.editor_styles') ?>
+        <?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+        <?php echo $this->BcForm->error('SiteConfig.editor_styles') ?>
 				<div id="helptextFormalName" class="helptext">
 					<p>固定ページなどで利用するエディタのスタイルセットをCSS形式で記述する事ができます。</p>
 					<pre>

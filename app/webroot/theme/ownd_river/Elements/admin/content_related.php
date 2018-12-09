@@ -22,16 +22,19 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 
 
 <?php if(count($relatedContents) > 1): ?>
-	<div id="RelatedContentsSetting" class="section">
+	<section id="RelatedContentsSetting" class="bca-section" data-bca-section-type="form-group">
 		<h3 class="bca-main__heading" data-bca-heading-size="md">関連コンテンツ</h3>
-		<table class="list-table">
+		<table class="list-table bca-table" data-bca-table-type="type2">
+      <thead>
 			<tr>
-				<th style="width:170px" class="list-tool">&nbsp;</th>
+				<th>&nbsp</th>
 				<th>サイト名</th>
 				<th>メインサイト</th>
 				<th>タイトル</th>
 				<th>エイリアス</th>
 			</tr>
+      </thead>
+      <tbody>
 			<?php foreach($relatedContents as $relatedContent): ?>
 				<?php
 				$class = $editUrl = $checkUrl = '';
@@ -48,10 +51,10 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 					}
 					if($this->request->data['Content']['id'] == $relatedContent['Content']['id']) {
 						$current = true;
-						$class = ' class="currentrow"';
+						$class = ' class="bca-currentrow"';
 					}
 				} else {
-					$class = ' class="disablerow"';
+					$class = ' class="bca-disablerow"';
 				}
 				$prefix =$relatedContent['Site']['name'];
 				if($relatedContent['Site']['alias']) {
@@ -64,7 +67,7 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 				}
 				?>
 				<tr<?php echo $class ?> id="Row<?php echo $relatedContent['Site']['id'] ?>">
-					<td style="width:10%;white-space: nowrap">
+					<td class="cel1">
 						<?php if(!$current): ?>
 							<?php if(!empty($relatedContent['Content'])): ?>
 								<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_check.png', array('alt' => __d('baser', '確認'))), $relatedContent['Content']['url'], array('title' => __d('baser', '確認'), 'target' => '_blank')) ?>
@@ -77,11 +80,11 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 						<?php echo $this->BcForm->input('Site.display_name' . $relatedContent['Site']['id'], array('type' => 'hidden', 'value' => $relatedContent['Site']['display_name'])) ?>
 						<?php echo $this->BcForm->input('Site.target_url' . $relatedContent['Site']['id'], array('type' => 'hidden', 'value' => $targetUrl)) ?>
 					</td>
-					<td style="width:15%"><?php echo $relatedContent['Site']['display_name'] ?></td>
-					<td style="width:15%">
+					<td class="cel2"><?php echo $relatedContent['Site']['display_name'] ?></td>
+					<td class="cel3">
 						<?php echo $this->BcText->arrayValue($relatedContent['Site']['main_site_id'], $sites,  $mainSiteDisplayName) ?>
 					</td>
-					<td>
+					<td class="cel4">
 						<?php if(!empty($relatedContent['Content'])): ?>
 							<?php echo $relatedContent['Content']['title'] ?>
 							<?php if(!empty($relatedContent['Content'])): ?>
@@ -91,13 +94,14 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 							<small>未登録</small>
 						<?php endif ?>
 					</td>
-					<td style="text-align:center;width:5%">
+					<td class="cel5">
 						<?php if(!empty($relatedContent['Content']) && !empty($relatedContent['Content']['alias_id'])): ?>
-							◯
-						<?php endif ?>
+              <i class="fa fa-check-square" aria-hidden="true"></i>
+            <?php endif ?>
 					</td>
 				</tr>
 			<?php endforeach ?>
+      </tbody>
 		</table>
-	</div>
+	</section>
 <?php endif ?>
