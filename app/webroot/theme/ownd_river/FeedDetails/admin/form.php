@@ -111,7 +111,12 @@
           'data-bca-btn-type' => 'delete',
           'data-bca-btn-size' => 'sm',
           'data-bca-btn-color' => 'danger'
-        ), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('FeedConfig.name')), false); ?>
+        ), 
+        sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('FeedDetail.name')
+        ), 
+        false
+        ); 
+        ?>
     </div>
     <?php endif ?>
 	</div>
