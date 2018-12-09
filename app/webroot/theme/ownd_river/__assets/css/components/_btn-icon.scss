@@ -147,6 +147,13 @@
     @include bca-btn-icon-common;
   }
 
+  // Login
+	&[data-bca-btn-type=switch] {
+		@extend .#{$fa-css-prefix}-toggle-on;
+		@include bca-btn-icon-common;
+	}
+
+
 
   // サイズ
 	// ===========================
