@@ -15372,6 +15372,7 @@ table.cake-sql-log tr td {
     .bca-btn[data-bca-btn-status=primary]::before {
       color: #fff; }
     .bca-btn[data-bca-btn-status=primary]:hover {
+      color: #fff;
       background: #1b6123; }
   .bca-btn[disabled] {
     color: #aaa;
