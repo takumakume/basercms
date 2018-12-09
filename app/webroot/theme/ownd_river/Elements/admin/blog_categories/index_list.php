@@ -37,8 +37,7 @@
 	<thead class="bca-table-listup__thead">
 		<tr>
       <th class="list-tool bca-table-listup__thead-th bca-table-listup__thead-th--select"><?php // 一括選択 ?>
-          <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'title' => __d('baser', '一括選択')]) ?>
-        <label for="ListToolCheckall" data-bca-checkbox-size="sm" class="bca-checkbox-label"></label>
+        <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
       </th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリ名') ?>
