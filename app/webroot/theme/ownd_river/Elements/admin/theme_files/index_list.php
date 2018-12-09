@@ -41,7 +41,7 @@
 	<tr>
     <th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select"><?php // 一括選択 ?>
       <?php if ($this->BcBaser->isAdminUser() && $theme != 'core'): ?>
-        <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
+        <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
       <?php endif ?>
 
       <?php if ($path): ?>
