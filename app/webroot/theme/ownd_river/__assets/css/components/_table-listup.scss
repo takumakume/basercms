@@ -146,7 +146,7 @@
 
 	&__thead-th {
 		white-space: nowrap;
-		vertical-align:top;
+		vertical-align:middle;
 		color: #fff;
 		background-color: $color_secondary;
 		// 選択
@@ -262,4 +262,9 @@
 			width:100%;
 		}
 	}
+
+  [data-bca-text-size=lg] {
+    font-size: 1.6rem;
+  }
+
 }

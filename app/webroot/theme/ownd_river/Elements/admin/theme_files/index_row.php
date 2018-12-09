@@ -23,40 +23,13 @@ array_push($params, $data['name']);
 
 
 <tr>
-	<td class="row-tools">
+  <td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--select">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
 			<?php echo $this->BcForm->input('ListTool.batch_targets.' . str_replace('.', '_', $data['name']), ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['name']]) ?>
 		<?php endif ?>
-		<?php if ($data['type'] == 'folder'): ?>
-			<!-- imgは削除対象 -->
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_open_folder.png', array('alt' => __d('baser', '開く'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'index', $theme, $plugin, $type), $params), array('title' => __d('baser', '開く'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'open', 'data-bca-btn-size' => 'lg')) ?>
-		<?php endif ?>
 
-
-
-		<?php if ($writable): ?>
-			<!-- imgは削除対象 -->
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'コピー'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'ajax_copy', $theme, $type), $params), array('title' => __d('baser', 'コピー'), 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy', 'data-bca-btn-size' => 'lg')) ?>
-			<?php if ($data['type'] == 'folder'): ?>
-				<!-- imgは削除対象 -->
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', '編集'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'edit_folder', $theme, $type), $params), array('title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
-			<?php else: ?>
-				<!-- imgは削除対象 -->
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', '編集'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'edit', $theme, $type), $params), array('title' => __d('baser', '編集'), 'escape' => false, 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
-			<?php endif ?>
-			<!-- imgは削除対象 -->
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => __d('baser', '削除'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'ajax_del', $theme, $type), $params), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'lg')) ?>
-		<?php else: ?>
-			<?php if ($data['type'] == 'folder'): ?>
-				<!-- imgは削除対象 -->
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', array('alt' => __d('baser', '表示'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'view_folder', $theme, $plugin, $type), $params), array('class' => 'btn-gray-s button-s bca-btn-icon', 'data-bca-btn-type' => 'preview', 'data-bca-btn-size' => 'lg')) ?>
-			<?php else: ?>
-				<!-- imgは削除対象 -->
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', array('alt' => __d('baser', '表示'), 'class' => 'btn', 'hidden' => 'hidden')), array_merge(array('action' => 'view', $theme, $plugin, $type), $params), array('class' => 'btn-gray-s button-s bca-btn-icon', 'data-bca-btn-type' => 'preview', 'data-bca-btn-size' => 'lg')) ?>
-			<?php endif ?>
-		<?php endif ?>
-	</td>
-	<td>
+  </td>
+	<td class="bca-table-listup__tbody-td" data-bca-text-size="lg">
 		<?php if ($data['type'] == 'image'): ?>
 			<?php
 			$this->BcBaser->link(
@@ -64,11 +37,53 @@ array_push($params, $data['name']);
 			?>&nbsp;
 			<?php echo $data['name'] ?>
 		<?php elseif ($data['type'] == 'folder'): ?>
-			<?php $this->BcBaser->img('admin/icon_folder.png', array('alt' => $data['name'])) ?>
-			<?php echo $data['name'] ?>/
+      <?php $this->BcBaser->link(
+              '<i class="bca-icon--folder" data-bca-icon-size="lg"></i>'.$data['name'],
+              array_merge(
+                array('action' => 'index', $theme, $plugin, $type),
+                $params
+              ),
+              array(
+                'class' => '',
+              )
+            )
+      ?>/
+
 		<?php else: ?>
-			<?php $this->BcBaser->img('admin/icon_content.png', array('alt' => $data['name'])) ?>
-			<?php echo $data['name'] ?>
+      <?php $this->BcBaser->link(
+        '<i class="bca-icon--file" data-bca-icon-size="lg"></i>'.$data['name'],
+        array_merge(
+          array('action' => 'index', $theme, $plugin, $type),
+          $params
+        ),
+        array(
+          'class' => '',
+        )
+      )
+      ?>
 		<?php endif ?>
 	</td>
+  <td class="row-tools bca-table-listup__tbody-td bca-table-listup__tbody-td--actions"><?php // アクション ?>
+    <?php /* フォルダーは名前にリンクを貼るので不要
+    <?php if ($data['type'] == 'folder'): ?>
+      <?php $this->BcBaser->link('', array_merge(array('action' => 'index', $theme, $plugin, $type), $params), array('title' => __d('baser', '開く'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'open', 'data-bca-btn-size' => 'lg')) ?>
+    <?php endif ?>
+    */ ?>
+    <?php if ($writable): ?>
+      <?php $this->BcBaser->link('', array_merge(array('action' => 'ajax_copy', $theme, $type), $params), array('title' => __d('baser', 'コピー'), 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy', 'data-bca-btn-size' => 'lg')) ?>
+      <?php if ($data['type'] == 'folder'): ?>
+        <?php $this->BcBaser->link('', array_merge(array('action' => 'edit_folder', $theme, $type), $params), array('title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
+      <?php else: ?>
+        <!-- imgは削除対象 -->
+        <?php $this->BcBaser->link('', array_merge(array('action' => 'edit', $theme, $type), $params), array('title' => __d('baser', '編集'), 'escape' => false, 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
+      <?php endif ?>
+      <?php $this->BcBaser->link('', array_merge(array('action' => 'ajax_del', $theme, $type), $params), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'lg')) ?>
+    <?php else: ?>
+      <?php if ($data['type'] == 'folder'): ?>
+        <?php $this->BcBaser->link('', array_merge(array('action' => 'view_folder', $theme, $plugin, $type), $params), array('class' => 'btn-gray-s button-s bca-btn-icon', 'data-bca-btn-type' => 'preview', 'data-bca-btn-size' => 'lg')) ?>
+      <?php else: ?>
+        <?php $this->BcBaser->link('', array_merge(array('action' => 'view', $theme, $plugin, $type), $params), array('class' => 'btn-gray-s button-s bca-btn-icon', 'data-bca-btn-type' => 'preview', 'data-bca-btn-size' => 'lg')) ?>
+      <?php endif ?>
+    <?php endif ?>
+  </td>
 </tr>

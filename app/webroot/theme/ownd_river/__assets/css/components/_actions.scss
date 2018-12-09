@@ -17,4 +17,16 @@
 	&__item{
 		margin: 0 10px;
 	}
+
+  &[data-bca-type=type2] {
+    display: block;
+    .bca-actions {
+      &__form {
+        margin-bottom: 20px;
+      }
+      &__adds {
+        margin: 20px 0;
+      }
+    }
+  }
 }
