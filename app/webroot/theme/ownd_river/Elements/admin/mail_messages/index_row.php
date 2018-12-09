@@ -23,8 +23,7 @@
 		<?php endif ?>		
 	</td>
 	<td class="row-tools bca-table-listup__tbody-td"><?php echo $data['MailMessage']['id'] ?></td>
-	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('Y/m/d', strtotime($data['MailMessage']['created'])) ?></td>
-	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('H:i', strtotime($data['MailMessage']['created'])) ?></td>
+	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('Y/m/d', strtotime($data['MailMessage']['created'])). ' ' . date('H:i', strtotime($data['MailMessage']['created'])) ?></td>
 	<td class="row-tools bca-table-listup__tbody-td">
 		<?php 
 			$inData = array();
