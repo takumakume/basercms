@@ -44,9 +44,9 @@ if(!$this->request->data['Site']['use_subdomain']){
 <?php echo $this->BcForm->hidden('Content.main_site_content_id') ?>
 
 
-<div id="BasicSetting" class="bca-section">
-    <h2 class="bca-main__heading" data-bca-heading-size="lg">基本設定</h2>
-    <table class="form-table bca-form-table" data-bca-table-type="type2">
+<div id="BasicSetting" class="section">
+    <h3 class="bca-main__heading" data-bca-heading-size="md">基本設定</h3>
+    <table class="form-table bca-form-table">
         <tr>
             <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
             <td class="col-input bca-form-table__input">
