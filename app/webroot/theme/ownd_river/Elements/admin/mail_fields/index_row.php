@@ -27,7 +27,7 @@ if (!$data['MailField']['use_field']) {
 		<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['MailField']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['MailField']['id']]) ?>
 		<?php endif ?>	
 		<?php if ($sortmode): ?>
-			<span class="sort-handle"><?php $this->BcBaser->img('admin/sort.png', array('alt' => __d('baser', '並び替え'))) ?></span>
+			<span class="sort-handle"><i class="bca-btn-icon-text" data-bca-btn-type="draggable"></i>ドラッグ可能</span>
 			<?php echo $this->BcForm->hidden('Sort.id' . $data['MailField']['id'], array('class' => 'id', 'value' => $data['MailField']['id'])) ?>
 		<?php endif ?>
 	</td>
