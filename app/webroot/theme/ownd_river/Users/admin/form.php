@@ -145,9 +145,9 @@ $this->BcBaser->js('admin/users/edit', false);
 	<div class="panel-box bca-panel-box corner10">
 		<h2>登録されている「よく使う項目」</h2>
 		<?php if ($this->request->data['Favorite']): ?>
-			<ul class="clearfix" id="DefaultFavorites">
+			<ul class="bca-list" data-bca-list-layout="horizon" id="DefaultFavorites">
 				<?php foreach ($this->request->data['Favorite'] as $key => $favorite): ?>
-					<li style="float:left">
+					<li class="bca-list__item">
 						<?php $this->BcBaser->link($favorite['name'], $favorite['url']) ?>
 						<?php echo $this->BcForm->input('Favorite.name.' . $key, array('type' => 'hidden', 'value' => $favorite['name'], 'class' => 'favorite-name')) ?>
 						<?php echo $this->BcForm->input('Favorite.url.' . $key, array('type' => 'hidden', 'value' => $favorite['url'], 'class' => 'favorite-url')) ?>

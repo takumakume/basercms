@@ -31,7 +31,7 @@
 			</tr>
 		<?php endif ?>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('EditorTemplate.name', __d('baser', 'テンプレート名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('EditorTemplate.name', __d('baser', 'テンプレート名')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('EditorTemplate.name', array('type' => 'text', 'size' => 20, 'maxlength' => 50)) ?>
 				<?php echo $this->BcForm->error('EditorTemplate.name') ?>
@@ -63,13 +63,39 @@
 	</table>
 </div>
 
-<div class="submit section">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
+<!-- button -->
+<div class="bca-actions">
+	<?php if ($this->action == 'admin_edit' || $this->action == 'admin_add'): ?>
+		<div class="bca-actions__main">
+			<?php echo $this->BcForm->button(__d('baser', '保存'),
+				array(
+					'type' => 'submit',
+					'id' => 'BtnSave',
+					'div' => false,
+					'class' => 'button bca-btn bca-actions__item',
+					'data-bca-btn-type' => 'save',
+					'data-bca-btn-size' => 'xl'
+				)
+			);
+			?>
+		</div>
+	<?php endif ?>
 	<?php if ($this->action == 'admin_edit'): ?>
-		<?php
-		$this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('EditorTemplate.id')), array('class' => 'button submit-token bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('EditorTemplate.name')), false);
-		?>
+		<div class="bca-actions__sub">
+			<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('EditorTemplate.id'), $this->BcForm->value('FeedDetail.id')),
+				array(
+					'class' => 'submit-token button bca-btn bca-actions__item',
+					'data-bca-btn-type' => 'delete',
+					'data-bca-btn-size' => 'sm',
+					'data-bca-btn-color' => 'danger'
+				), 
+				sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('EditorTemplate.name')),
+				false
+			); 
+			?>
+		</div>
 	<?php endif ?>
 </div>
+
 
 <?php echo $this->BcForm->end() ?>

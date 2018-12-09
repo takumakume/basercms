@@ -144,9 +144,9 @@ $(window).load(function() {
 			</p>
 			<?php $favorites = BcUtil::unserialize($this->request->data['UserGroup']['default_favorites']) ?>
 			<?php if ($favorites): ?>
-			<ul class="clearfix">
+			<ul class="bca-list" data-bca-list-layout="horizon">
 				<?php foreach ($favorites as $favorite): ?>
-					<li style="float:left"><?php $this->BcBaser->link($favorite['name'], $favorite['url']) ?></li>
+					<li class="bca-list__item"><?php $this->BcBaser->link($favorite['name'], $favorite['url']) ?></li>
 				<?php endforeach; ?>
 			</ul>
 			<?php endif ?>

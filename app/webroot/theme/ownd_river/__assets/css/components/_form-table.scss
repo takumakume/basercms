@@ -140,6 +140,7 @@
     margin: 1em 0 0;
   }
 
+  // 設定画面系：ボーダーなし
   &[data-bca-table-type=type2] {
 
     $border-color: #ccc;
