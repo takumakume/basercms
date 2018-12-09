@@ -18428,6 +18428,26 @@ table.cake-sql-log tr td {
       line-height: 1.2;
       color: #343434; }
 
+.bca-list-head {
+  display: flex;
+  justify-content: space-between; }
+
+.bca-file-list {
+  display: flex;
+  flex-wrap: wrap;
+  background: #eeeeee;
+  padding: 10px; }
+  .bca-file-list__item img {
+    max-width: 100%;
+    height: auto; }
+  .bca-file-list__item > span {
+    padding: 0 !important;
+    height: auto !important; }
+  .bca-file-list__no-data {
+    width: 100%;
+    padding: 20px;
+    text-align: center; }
+
 .ui-dialog {
   padding: 0 !important; }
   .ui-dialog dt {
