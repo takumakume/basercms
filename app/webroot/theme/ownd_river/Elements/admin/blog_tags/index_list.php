@@ -38,8 +38,8 @@
 		<tr>
       <th class="list-tool bca-table-listup__thead-th bca-table-listup__thead-th--select"><?php // 一括選択 ?>
         <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
-			</th>
-			<th class="bca-table-listup__thead-th">
+      </th>
+ 			<th class="bca-table-listup__thead-th">
 				<?php 
 				echo $this->Paginator->sort('id', 
 					array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'NO'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'NO')),
