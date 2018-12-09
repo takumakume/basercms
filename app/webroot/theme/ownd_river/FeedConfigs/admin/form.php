@@ -29,14 +29,16 @@ $(function(){
 
 <?php echo $this->BcForm->create('FeedConfig') ?>
 
-<div class="section">
+<section class="bca-section" data-bca-section-type='form-group'>
 
 	<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedConfig.id', 'NO') ?>&nbsp;<span class="required">*</span></th>
+				<th class="col-head bca-form-table__label">
+					<?php echo $this->BcForm->label('FeedConfig.id', 'NO') ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span>
+				</th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('FeedConfig.id') ?>
 					<?php echo $this->BcForm->input('FeedConfig.id', array('type' => 'hidden')) ?>
@@ -44,7 +46,9 @@ $(function(){
 			</tr>
 		<?php endif; ?>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedConfig.name', __d('baser', 'フィード設定名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label">
+				<?php echo $this->BcForm->label('FeedConfig.name', __d('baser', 'フィード設定名')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span>
+			</th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('FeedConfig.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -58,7 +62,9 @@ $(function(){
 			</td>
 		</tr>
 		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedConfig.display_number', __d('baser', '表示件数')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label">
+				<?php echo $this->BcForm->label('FeedConfig.display_number', __d('baser', '表示件数')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span>
+			</th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('FeedConfig.display_number', array('type' => 'text', 'size' => 10, 'maxlength' => 3)) ?>件
 				<?php echo $this->BcForm->error('FeedConfig.display_number') ?>
@@ -66,9 +72,9 @@ $(function(){
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
-</div>
+</section>
 
-<div class="section">
+<section class="bca-section" data-bca-section-type='form-group'>
 	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption">オプション</a></h2>
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="FormOptionBody">
 		<tr>
@@ -121,13 +127,33 @@ $(function(){
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
-</div>
+</section>
 
 <!-- button -->
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave', 'class'=>'bca-btn', 'data-bca-btn-type'=>'save')) ?>
+<div class="bca-actions">
+	<?php echo $this->BcForm->button(__d('baser', '保存'), 
+		array(
+			'type' => 'submit',
+			'id' => 'BtnSave',
+			'div' => false,
+			'class' => 'button bca-btn bca-actions__item',
+			'data-bca-btn-type' => 'save',
+			'data-bca-btn-size' => 'xl'
+	)); ?>
 	<?php if ($this->action == 'admin_edit'): ?>
-	<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('FeedConfig.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type'=>'delete'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('FeedConfig.name')), false); ?>
+	<?php $this->BcBaser->link(__d('baser', '削除'), 
+		array('action' => 'delete', $this->BcForm->value('FeedConfig.id')), 
+			array(
+				'class' => 'submit-token button bca-btn bca-actions__item', 
+				'data-bca-btn-type'=>'delete',
+				'data-bca-btn-size' => 'sm',
+				'data-bca-btn-color' => 'danger'
+				), 
+			sprintf(__d('baser', '%s を本当に削除してもいいですか？'), 
+			$this->BcForm->value('FeedConfig.name')
+			), 
+			false);
+		 ?>
 	<?php endif ?>
 </div>
 

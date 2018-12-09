@@ -88,12 +88,35 @@
 	</table>
 </div>
 
-<!-- button -->
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button', 'id' => 'BtnSave')) ?>
-	<?php if ($this->action == 'admin_edit'): ?>
-		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('FeedConfig.id'), $this->BcForm->value('FeedDetail.id')), array('class' => 'submit-token button'), sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('FeedConfig.name')), false); ?>
-	<?php endif ?>
-</div>
+  <!-- button -->
+  <div class="bca-actions">
+  	<?php if ($this->action == 'admin_edit' || $this->action == 'admin_add'): ?>
+    <div class="bca-actions__main">
+  		<?php echo $this->BcForm->button(__d('baser', '保存'),
+        array(
+          'type' => 'submit',
+          'id' => 'BtnSave',
+          'div' => false,
+          'class' => 'button bca-btn bca-actions__item',
+          'data-bca-btn-type' => 'save',
+          'data-bca-btn-size' => 'xl'
+        )) ?>
+    </div>
+    <?php endif ?>
+    <?php if ($this->action == 'admin_edit'): ?>
+    <div class="bca-actions__sub">
+      <?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $this->BcForm->value('FeedConfig.id'), $this->BcForm->value('FeedDetail.id')),
+        array(
+          'class' => 'submit-token button bca-btn bca-actions__item',
+          'data-bca-btn-type' => 'delete',
+          'data-bca-btn-size' => 'sm',
+          'data-bca-btn-color' => 'danger'
+        ), sprintf(__d('baser', '%s を本当に削除してもいいですか？\n※ ブログ記事はゴミ箱に入らず完全に消去されます。'), $this->BcForm->value('FeedConfig.name')), false); ?>
+    </div>
+    <?php endif ?>
+
+
+
+
 
 <?php echo $this->BcForm->end() ?>
