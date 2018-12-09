@@ -146,6 +146,16 @@
 		@extend .#{$fa-css-prefix}-arrow-left;
 		@include fa-common;
 	}
+  // 矢印　上
+  &--arrow-up {
+    @extend .#{$fa-css-prefix}-arrow-up;
+    @include fa-common;
+  }
+  // 矢印　下
+  &--arrow-down {
+    @extend .#{$fa-css-prefix}-arrow-down;
+    @include fa-common;
+  }
 
 	// 矢印　三角上
 	&--asc {
@@ -192,4 +202,40 @@
     @include fa-common;
   }
 
+  // フォルダ
+  &--folder {
+    @extend .#{$fa-css-prefix}-folder;
+    @include fa-common;
+  }
+  // ファイル
+  &--file {
+    @extend .#{$fa-css-prefix}-file-o;
+    @include fa-common;
+  }
+
+  // 1階層上に戻る
+  &--up-directory {
+    @extend .#{$fa-css-prefix}-arrow-up;
+    @include fa-common;
+  }
+
+}
+
+// サイズ
+// ===========================
+[class^="bca-icon"] {
+  // large
+  &[data-bca-icon-size=lg] {
+    font-size: 2.4rem;
+  }
+
+  // small
+  &[data-bca-icon-size=sm] {
+    font-size: 1.4rem;
+  }
+
+  // xsmall
+  &[data-bca-icon-size=xs] {
+    font-size: 1.2rem;
+  }
 }
