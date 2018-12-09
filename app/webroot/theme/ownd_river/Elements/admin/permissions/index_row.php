@@ -27,7 +27,7 @@
 			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['Permission']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Permission']['id']]) ?>
 		<?php endif ?>
 		<?php if ($sortmode): ?>
-			<span class="sort-handle"><?php $this->BcBaser->img('admin/sort.png', array('alt' => __d('baser', '並び替え'))) ?></span>
+			<span class="sort-handle"><i class="bca-btn-icon-text" data-bca-btn-type="draggable"></i>ドラッグ可能</span>
 			<?php echo $this->BcForm->input('Sort.id' . $data['Permission']['id'], array('type' => 'hidden', 'class' => 'id', 'value' => $data['Permission']['id'])) ?>
 		<?php endif ?>
 	</td>
