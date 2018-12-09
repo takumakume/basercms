@@ -147,6 +147,12 @@
     @include bca-btn-icon-common;
   }
 
+  // Login
+  &[data-bca-btn-type=switch] {
+    @extend .#{$fa-css-prefix}-toggle-on;
+    @include bca-btn-icon-common;
+  }
+  
   // フォルダ
   &[data-bca-btn-type=folder] {
     @extend .#{$fa-css-prefix}-folder;
@@ -184,6 +190,7 @@
     @extend .#{$fa-css-prefix}-arrow-down;
     @include bca-btn-icon-common;
   }
+
 
   // サイズ
 	// ===========================
