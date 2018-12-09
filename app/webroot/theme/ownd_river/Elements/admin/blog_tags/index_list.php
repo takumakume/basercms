@@ -15,9 +15,6 @@
  */
 ?>
 
-	<div>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add'),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
-	</div>
 <div class="bca-data-list__top">
 <!-- 一括処理 -->
 	<?php if ($this->BcBaser->isAdminUser()): ?>
