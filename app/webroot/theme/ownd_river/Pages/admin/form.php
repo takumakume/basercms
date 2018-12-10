@@ -27,20 +27,7 @@ $this->BcBaser->js('admin/pages/edit', false);
 <?php echo $this->BcForm->input('Page.mode', array('type' => 'hidden')) ?>
 <?php echo $this->BcForm->input('Page.id', array('type' => 'hidden')) ?>
 
-<?php if ($this->action == 'admin_edit'): ?>
-  <div class="bca-section bca-section__post-top">
-    <span class="bca-post__url">
-  <?php //echo $this->BcForm->label('BlogPost.url', 'URL') ?>
-      <a href="<?php echo $this->BcBaser->getUri(urldecode($this->request->data['Content']['url'])) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri(urldecode($this->request->data['Content']['url'])) ?></a>
-      <?php echo $this->BcForm->button('', [
-        'id' => 'BtnCopyUrl',
-        'class' => 'bca-btn',
-        'data-bca-btn-type' => 'textcopy',
-        'data-bca-btn-category' => 'text',
-        'data-bca-btn-size' => 'sm'
-      ]) ?>
-  </div>
-<?php endif; ?>
+
 
 <div class="bca-section bca-section-editor-area">
 	<?php echo $this->BcForm->editor('Page.contents', array_merge(array(

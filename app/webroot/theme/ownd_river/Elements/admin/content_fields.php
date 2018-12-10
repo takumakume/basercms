@@ -46,8 +46,7 @@ if(!$this->request->data['Site']['use_subdomain']){
 
 <div class="bca-section bca-section__post-top">
   <span class="bca-post__url">
-  <?php //echo $this->BcForm->label('BlogPost.url', 'URL') ?>
-    <?php $blogSiteUrl = $this->BcContents->getCurrentFolderLinkedUrl().$contentName; ?>
+    <?php $blogSiteUrl = $this->BcContents->getUrl($this->request->data['Content']['url'], true, $this->request->data['Site']['use_subdomain']); ?>
     <?php if(!$isOmitViewAction && $this->request->data['Content']['url'] != '/' && !$this->request->data['Site']['use_subdomain']){
       $blogSiteUrl .= "/";
     } ?>
@@ -55,6 +54,7 @@ if(!$this->request->data['Site']['use_subdomain']){
     <?php echo $this->BcForm->button('', [
       'id' => 'BtnCopyUrl',
       'class' => 'bca-btn',
+      'type' => 'button',
       'data-bca-btn-type' => 'textcopy',
       'data-bca-btn-category' => 'text',
       'data-bca-btn-size' => 'sm'

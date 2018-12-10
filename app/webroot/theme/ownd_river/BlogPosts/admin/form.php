@@ -55,6 +55,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
       <?php echo $this->BcForm->button('', [
         'id' => 'BtnCopyUrl',
         'class' => 'bca-btn',
+        'type' => 'button',
         'data-bca-btn-type' => 'textcopy',
         'data-bca-btn-category' => 'text',
         'data-bca-btn-size' => 'sm'
