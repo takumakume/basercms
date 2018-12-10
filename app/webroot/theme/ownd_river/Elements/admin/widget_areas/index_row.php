@@ -19,7 +19,7 @@
 <tr>
 	<td class="row-tools bca-table-listup__tbody-td">
 		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['WidgetArea']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['WidgetArea']['id']]) ?>
+		<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['WidgetArea']['id'], ['type' => 'checkbox', 'label'=> '<span class="bca-visually-hidden">チェックする</span>', 'class' => 'batch-targets bca-checkbox__input', 'value' => $data['WidgetArea']['id']]) ?>
 		<?php endif ?>
 	</td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['WidgetArea']['id']; ?></td>
