@@ -1093,7 +1093,7 @@ template {
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -2173,7 +2173,7 @@ template {
 .fa-toggle-off:before {
   content: ""; }
 
-.fa-toggle-on:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
+.fa-toggle-on:before {
   content: ""; }
 
 .fa-bicycle:before {
@@ -4425,7 +4425,7 @@ div.jstree-publish-even {
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -5505,7 +5505,7 @@ div.jstree-publish-even {
 .fa-toggle-off:before {
   content: ""; }
 
-.fa-toggle-on:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
+.fa-toggle-on:before {
   content: ""; }
 
 .fa-bicycle:before {
@@ -7114,7 +7114,7 @@ div.jstree-publish-even {
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -8194,7 +8194,7 @@ div.jstree-publish-even {
 .fa-toggle-off:before {
   content: ""; }
 
-.fa-toggle-on:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
+.fa-toggle-on:before {
   content: ""; }
 
 .fa-bicycle:before {
@@ -9931,7 +9931,7 @@ div.jstree-publish-even {
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -11011,7 +11011,7 @@ div.jstree-publish-even {
 .fa-toggle-off:before {
   content: ""; }
 
-.fa-toggle-on:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
+.fa-toggle-on:before {
   content: ""; }
 
 .fa-bicycle:before {
@@ -13247,7 +13247,7 @@ table.cake-sql-log tr td {
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -14327,7 +14327,7 @@ table.cake-sql-log tr td {
 .fa-toggle-off:before {
   content: ""; }
 
-.fa-toggle-on:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
+.fa-toggle-on:before {
   content: ""; }
 
 .fa-bicycle:before {
@@ -16540,7 +16540,7 @@ table.cake-sql-log tr td {
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -17620,7 +17620,7 @@ table.cake-sql-log tr td {
 .fa-toggle-off:before {
   content: ""; }
 
-.fa-toggle-on:before, .bca-btn-icon[data-bca-btn-type=switch]:before {
+.fa-toggle-on:before {
   content: ""; }
 
 .fa-bicycle:before {

@@ -149,7 +149,7 @@
 
   // Login
   &[data-bca-btn-type=switch] {
-    @extend .#{$fa-css-prefix}-toggle-on;
+    @extend .#{$fa-css-prefix}-sign-in;
     @include bca-btn-icon-common;
   }
 
