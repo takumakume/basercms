@@ -12465,20 +12465,20 @@ div.jstree-publish-even {
     table-layout: auto;
     border-bottom: none; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__label, .bca-form-table[data-bca-table-type=type2] .bca-form-table__input {
-      padding-top: 0;
+      padding-top: 0.5em;
       padding-bottom: 2em;
       border: none; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__label {
       vertical-align: top;
       width: 240px;
       padding-left: 0.2em;
-      padding-right: 1em;
       font-weight: bold;
       text-align: left; }
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__label.-label {
         display: block;
         border: none; }
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__label label {
+        display: inline-block;
         padding: 0.2em 0 0;
         margin-bottom: 0; }
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__label .bca-label {
@@ -12487,9 +12487,14 @@ div.jstree-publish-even {
         margin-top: 0;
         margin-bottom: 0; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__input {
-      padding-top: 0.2em;
       vertical-align: top;
       font-weight: normal; }
+      .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-select,
+      .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textbox,
+      .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textarea {
+        display: inline-block;
+        position: relative;
+        margin-top: -0.5em; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__explanation {
       display: inline-block;
       margin-left: 1em;

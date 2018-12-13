@@ -162,7 +162,7 @@
     .bca-form-table {
       &__label,
       &__input {
-        padding-top: 0;
+        padding-top: 0.5em;
         padding-bottom: 2em;
         border: none;
       }
@@ -170,9 +170,7 @@
       &__label {
         vertical-align: top;
         width: 240px;
-        //padding-top: 0.5em;
         padding-left: 0.2em;
-        padding-right: 1em;
         font-weight: bold;
         text-align: left;
         &.-label {
@@ -180,6 +178,7 @@
           border: none;
         }
         label {
+          display: inline-block;
           padding: 0.2em 0 0;
           margin-bottom: 0;
         }
@@ -193,9 +192,16 @@
       }
 
       &__input {
-        padding-top: 0.2em;
         vertical-align: top;
         font-weight: normal;
+        .bca-select,
+        .bca-textbox,
+        .bca-textarea
+        {
+          display: inline-block;
+          position: relative;
+          margin-top: -0.5em;
+        }
       }
 
       &__explanation {
