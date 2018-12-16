@@ -1,0 +1,10 @@
+.bca-textbox-color{
+	border: 1px solid #cccccc;
+	display: inline-block;
+	padding: 2px;
+	&__input{
+		border: none;
+		width: 110px;
+		padding-right: 10px;
+	}
+}

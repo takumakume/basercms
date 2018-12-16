@@ -15835,6 +15835,15 @@ table.cake-sql-log tr td {
   .bca-input-text:focus {
     box-shadow: 0 0 6px 0px #555555; }
 
+.bca-textbox-color {
+  border: 1px solid #cccccc;
+  display: inline-block;
+  padding: 2px; }
+  .bca-textbox-color__input {
+    border: none;
+    width: 110px;
+    padding-right: 10px; }
+
 .bca-textbox {
   display: inline-block; }
   .bca-textbox__input {
