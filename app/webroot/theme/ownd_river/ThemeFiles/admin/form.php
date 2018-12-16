@@ -61,7 +61,7 @@ $params = explode('/', $path);
 				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('ThemeFile.contents', __d('baser', '内容')) ?></th>
 				<td class="col-input bca-form-table__input">
 					<?php if (($this->request->action == 'admin_edit' || $this->request->action == 'admin_view') && $this->request->data['ThemeFile']['type'] == 'image'): ?>
-						<div class="align-center" style="margin:20px auto">
+						<div style="margin:20px auto">
 							<?php $this->BcBaser->link(
 								$this->BcBaser->getImg(array_merge(array('action' => 'img_thumb', 550, 550, $theme, $plugin, $type), explode('/', $path)), array('alt' => basename($path))), array_merge(array('action' => 'img', $theme, $plugin, $type), explode('/', $path)), array('rel' => 'colorbox', 'title' => basename($path))
 							); ?>
