@@ -75,7 +75,7 @@ $(function(){
 </section>
 
 <section class="bca-section" data-bca-section-type='form-group'>
-	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption">オプション</a></h2>
+	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption" class="bca-btn">オプション</a></h2>
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="FormOptionBody">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedConfig.feed_title_index', __d('baser', 'フィードタイトルリスト')) ?></th>

@@ -97,8 +97,9 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 	</table>	
 </div>
 
-<h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption">オプション</a></h2>
-<div class="section">
+
+<div class="bca-section" data-bca-section-type='form-group'>
+	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption" class="bca-btn">オプション</a></
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailContent.publish_begin', __d('baser', 'フォーム受付期間')) ?></th>
