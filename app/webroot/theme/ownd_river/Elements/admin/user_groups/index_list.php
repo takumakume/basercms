@@ -22,22 +22,33 @@ $(function () {
 });
 </script>
 
-<!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
+<div class="bca-list-head">
+	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add'), array('class' => ' bca-btn', 'data-bca-btn-type' => 'add')) ?>
+	<!-- pagination -->
+	<?php $this->BcBaser->element('pagination') ?>
+</div>
 
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
+<table cellpadding="0" cellspacing="0" class="list-table bca-form-table" id="ListTable">
 <thead>
 	<tr>
-		<th style="width:140px" class="list-tool">
-			<div>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add'), array('class' => ' bca-btn', 'data-bca-btn-type' => 'add')) ?>
-			</div>
+		<th class="bca-table-listup__thead-th"><?php echo $this->Paginator->sort('id',
+        array(
+			        'asc' => '<i class="bca-icon--asc" title="昇順"></i>' . __d('baser', 'NO'),
+              'desc' => '<i class="bca-icon--desc" title="降順"></i>' . __d('baser', 'NO')
+        ),
+        array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
+		<th class="bca-table-listup__thead-th">
+			<?php echo $this->Paginator->sort('name', 
+				array(
+					'asc' => '<i class="bca-icon--asc" title="昇順"></i>' . ' ユーザーグループ名', 
+					'desc' => '<i class="bca-icon--desc" title="降順"></i>' . ' ユーザーグループ名'), 
+				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+			) ?>
 		</th>
-		<th><?php echo $this->Paginator->sort('id', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' NO', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' NO'), array('escape' => false, 'class' => 'btn-direction')) ?></th>
-		<th><?php echo $this->Paginator->sort('name', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' ユーザーグループ名', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' ユーザーグループ名'), array('escape' => false, 'class' => 'btn-direction')) ?></th>
-		<th><?php echo $this->Paginator->sort('title', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' 表示名', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' 表示名'), array('escape' => false, 'class' => 'btn-direction')) ?></th>
-		<th><?php echo $this->Paginator->sort('created', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' 登録日', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' 登録日'), array('escape' => false, 'class' => 'btn-direction')) ?><br />
-			<?php echo $this->Paginator->sort('modified', array('asc' => $this->BcBaser->getImg('admin/blt_list_down.png', array('alt' => __d('baser', '昇順'), 'title' => __d('baser', '昇順'))) . ' 更新日', 'desc' => $this->BcBaser->getImg('admin/blt_list_up.png', array('alt' => __d('baser', '降順'), 'title' => __d('baser', '降順'))) . ' 更新日'), array('escape' => false, 'class' => 'btn-direction')) ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo $this->Paginator->sort('title', array('asc' => '<i class="bca-icon--asc" title="昇順"></i>' . ' 表示名', 'desc' => '<i class="bca-icon--desc" title="降順"></i>' . ' 表示名'), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo $this->Paginator->sort('created', array('asc' => '<i class="bca-icon--asc" title="昇順"></i>' . ' 登録日', 'desc' => '<i class="bca-icon--desc" title="降順"></i>' . ' 登録日'), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?><br />
+			<?php echo $this->Paginator->sort('modified', array('asc' => '<i class="bca-icon--asc" title="昇順"></i>' . ' 更新日', 'desc' => '<i class="bca-icon--desc" title="降順"></i>' . ' 更新日'), array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
+		<th class="bca-table-listup__thead-th">アクション</th>
 	</tr>
 </thead>
 <tbody>
