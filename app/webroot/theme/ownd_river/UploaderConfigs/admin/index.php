@@ -15,13 +15,13 @@
 
 <h2>画像サイズ設定</h2>
 
-<div class="section">
-	<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
+<div class="section bca-section">
+	<table cellpadding="0" cellspacing="0" class="list-table bca-form-table" id="ListTable">
 		<tr>
-			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
+			<th class="bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.large_width', __d('baser', 'PCサイズ（大）')) ?>
 			</th>
-			<td>
+			<td class="bca-form-table__input">
 				<small>[幅]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.large_width', array('type' => 'text', 'size' => 8,'maxlength' => 8, 'autofocus' => true)) ?>&nbsp;px　×　
 				<small>[高さ]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.large_height', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px
 				<?php echo $this->BcForm->error('UploaderConfig.large_width') ?>
@@ -29,10 +29,10 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
+			<th class="bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.midium_width', __d('baser', 'PCサイズ（中）')) ?>
 			</th>
-			<td>
+			<td class="bca-form-table__input">
 				<small>[幅]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.midium_width', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px　×　
 				<small>[高さ]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.midium_height', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px
 				<?php echo $this->BcForm->error('UploaderConfig.midium_width') ?>
@@ -40,10 +40,10 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
+			<th class="bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.small_width', __d('baser', 'PCサイズ（小）')) ?>
 			</th>
-			<td>
+			<td class="bca-form-table__input">
 				<small>[幅]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.small_width', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px　×　
 				<small>[高さ]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.small_height', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px　
 				<?php echo $this->BcForm->input('UploaderConfig.small_thumb', array('type' => 'checkbox', 'label' => __d('baser', '正方形に切り抜く'), 'between' => '&nbsp;')) ?>
@@ -53,10 +53,10 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
+			<th class="bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.mobile_large_width', __d('baser', '携帯サイズ（大）')) ?>
 			</th>
-			<td>
+			<td class="bca-form-table__input">
 				<small>[幅]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.mobile_large_width', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px　×　
 				<small>[高さ]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.mobile_large_height', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px
 				<?php echo $this->BcForm->error('UploaderConfig.mobile_large_width') ?>
@@ -64,10 +64,10 @@
 			</td>
 		</tr>
 		<tr>
-			<th><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
+			<th class="bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;
 				<?php echo $this->BcForm->label('UploaderConfig.mobile_small_width', __d('baser', '携帯サイズ（小）')) ?>
 			</th>
-			<td>
+			<td class="bca-form-table__input">
 				<small>[幅]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.mobile_small_width', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px　×　
 				<small>[高さ]</small>&nbsp;<?php echo $this->BcForm->input('UploaderConfig.mobile_small_height', array('type' => 'text', 'size' => 8,'maxlength' => 8)) ?>&nbsp;px　
 				<?php echo $this->BcForm->input('UploaderConfig.mobile_small_thumb', array('type' => 'checkbox', 'label' => __d('baser', '正方形に切り抜く'), 'between' => '&nbsp;')) ?>
@@ -80,10 +80,9 @@
 </div>
 
 <?php if($user['user_group_id'] == 1): ?>
-<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption" class="bca-btn">オプション</a></h2>
 
-
-<div id ="FormOptionBody" class="slide-body section">
+<div id ="FormOptionBody" class="section">
+	<h3>オプション設定</h3>
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UploaderConfig.layout_type', __d('baser', 'レイアウトタイプ')) ?></th>
@@ -110,7 +109,7 @@
 <!-- button -->
 <div class="submit bca-actions">
 	<div class="bca-actions__main">
-		<?php echo $this->BcForm->submit(__d('baser', '更新'), array('div' => false, 'class' => 'btn-orange button bca-btn bca-actions__item', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg', 'id' => 'btnSubmit')) ?>
+		<?php echo $this->BcForm->submit(__d('baser', '更新'), array('div' => false, 'class' => 'btn-orange button bca-btn bca-actions__item', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'xl', 'id' => 'btnSubmit')) ?>
 	</div>
 </div>
 
