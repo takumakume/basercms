@@ -33,11 +33,7 @@
 	<thead class="bca-table-listup__thead">
 	<tr>
 		<th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select"><?php // 一括選択 ?>
-			<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'title' => __d('baser', '一括選択')]) ?>
-			<label for="ListToolCheckall" data-bca-checkbox-size="sm" class="bca-checkbox-label"></label>
-		</th>
-		<th class="list-tool bca-table-listup__thead-th">
-			<?php echo __d('baser', 'アクション') ?>
+			<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
 		</th>
 		<th class="bca-table-listup__thead-th">
 			<?php 
@@ -100,6 +96,9 @@
 				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
 			); 
 			?>
+		</th>
+		<th class="list-tool bca-table-listup__thead-th">
+			<?php echo __d('baser', 'アクション') ?>
 		</th>
 	</tr>
 	</thead>
