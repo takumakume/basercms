@@ -20,6 +20,10 @@ $this->BcBaser->js(array(
 	'admin/libs/baser_ajax_batch_config',
 	'admin/search_indices/index'
 ));
+$this->BcAdmin->addAdminMainBodyHeaderLinks([
+	'url' => ['action' => 'add'],
+	'title' => __d('baser', '新規追加'),
+]);
 ?>
 
 
