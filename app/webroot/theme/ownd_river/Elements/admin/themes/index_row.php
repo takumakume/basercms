@@ -18,7 +18,7 @@
 
 <li>
 	<p class="theme-name"><strong><?php echo $data['title'] ?></strong>&nbsp;(&nbsp;<?php echo $data['name'] ?>&nbsp;)</p>
-	<p class="theme-screenshot">
+	<p class="bca-current-theme__screenshot">
 		<a class="theme-popup" href="<?php echo '#Contents' . Inflector::camelize($data['name']) ?>">
 			<?php if ($data['screenshot']): ?>
 				<?php $this->BcBaser->img('/theme/' . $data['name'] . '/screenshot.png', array('alt' => $data['title'])) ?>
@@ -29,12 +29,12 @@
 	</p>
 	<p class="row-tools">
 		<?php if ($data['name'] != $this->BcBaser->siteConfig['theme']): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_apply.png', array('alt' => __d('baser', '適用'), 'class' => 'btn')), array('action' => 'apply', $data['name']), array('title' => __d('baser', '適用'), 'class' => 'submit-token')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'apply', $data['name']), array('title' => __d('baser', '適用'), 'class' => 'submit-token bca-btn-icon', 'data-bca-btn-type' => 'publish', 'data-bca-btn-size' => 'lg')) ?>
 		<?php endif ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', 'テンプレート編集'), 'class' => 'btn')), array('controller' => 'theme_files', 'action' => 'index', $data['name']), array('title' => __d('baser', 'テンプレート編集'))) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', 'テーマ情報設定'), 'class' => 'btn')), array('action' => 'edit', $data['name']), array('title' => __d('baser', 'テーマ情報設定'))) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'テーマコピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $data['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy')) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => __d('baser', 'テーマ削除'), 'class' => 'btn')), array('action' => 'ajax_delete', $data['name']), array('title' => __d('baser', 'テーマ削除'), 'class' => 'btn-delete')) ?>
+		<?php $this->BcBaser->link('', array('controller' => 'theme_files', 'action' => 'index', $data['name']), array('title' => __d('baser', 'テンプレート編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'file-list', 'data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'edit', $data['name']), array('title' => __d('baser', 'テーマ情報設定'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_copy', $data['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy', 'data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['name']), array('title' => __d('baser', 'テーマ削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'lg')) ?>
 </p>
 <p class="theme-version">バージョン：<?php echo $data['version'] ?></p>
 <p class="theme-author">制作者：
@@ -46,7 +46,7 @@
 </p>
 <div style='display:none'>
 	<div id="<?php echo 'Contents' . Inflector::camelize($data['name']) ?>" class="theme-popup-contents clearfix">
-		<div class="theme-screenshot">
+		<div class="bca-current-theme__screenshot">
 			<?php if ($data['screenshot']): ?>
 				<?php $this->BcBaser->img('/theme/' . $data['name'] . '/screenshot.png', array('alt' => $data['title'])) ?>
 			<?php else: ?>

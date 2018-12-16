@@ -190,6 +190,11 @@
     @extend .#{$fa-css-prefix}-arrow-down;
     @include bca-btn-icon-common;
   }
+  // ファイルリスト
+  &[data-bca-btn-type=file-list] {
+    @extend .#{$fa-css-prefix}-file-text;
+    @include bca-btn-icon-common;
+  }
 
 
   // サイズ

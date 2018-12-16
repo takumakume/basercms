@@ -27,7 +27,7 @@ $(function(){
 	<?php if ($currentTheme): ?>
     <div class="bca-current-theme__inner">
       <div class="bca-current-theme__main">
-        <div class="theme-screenshot">
+        <div class="bca-current-theme__screenshot">
           <?php if ($currentTheme['screenshot']): ?>
             <?php $this->BcBaser->img('/theme/' . $currentTheme['name'] . '/screenshot.png', array('alt' => $currentTheme['title'])) ?>
           <?php else: ?>
@@ -35,9 +35,9 @@ $(function(){
           <?php endif ?>
         </div>
         <div class="row-tools">
-          <?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', 'テンプレート編集'), 'class' => 'btn')), array('controller' => 'theme_files', 'action' => 'index', $currentTheme['name']), array('title' => __d('baser', 'テンプレート編集'))) ?>
-          <?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', 'テーマ情報設定'), 'class' => 'btn')), array('action' => 'edit', $currentTheme['name']), array('title' => __d('baser', 'テーマ情報設定'))) ?>
-          <?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_copy.png', array('alt' => __d('baser', 'テーマコピー'), 'class' => 'btn')), array('action' => 'ajax_copy', $currentTheme['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy')) ?>
+          <?php $this->BcBaser->link('', array('controller' => 'theme_files', 'action' => 'index', $currentTheme['name']), array('title' => __d('baser', 'テンプレート編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'file-list', 'data-bca-btn-size' => 'lg')) ?>
+          <?php $this->BcBaser->link('', array('action' => 'edit', $currentTheme['name']), array('title' => __d('baser', 'テーマ情報設定'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
+          <?php $this->BcBaser->link('', array('action' => 'ajax_copy', $currentTheme['name']), array('title' => __d('baser', 'テーマコピー'), 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy', 'data-bca-btn-size' => 'lg')) ?>
         </div>
       </div>
 

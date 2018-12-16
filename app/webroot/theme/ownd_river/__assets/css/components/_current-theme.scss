@@ -20,7 +20,16 @@
 		flex: 1;
 	}
 
-
+	&__screenshot{
+		padding: 0;
+		border: 1px solid #ccc;
+		img{
+			display: block;
+			max-width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 	.theme {
 		&-info {
 
@@ -31,11 +40,11 @@
 
 
 		&-screenshot {
-			border: 1px solid #e2e2e2;
-			margin-bottom: 10px;
-			img {
-				width: 298px;
-			}
+			// border: 1px solid #e2e2e2;
+			// margin-bottom: 10px;
+			// img {
+			// 	width: 298px;
+			// }
 		}
 
 		&-description {
