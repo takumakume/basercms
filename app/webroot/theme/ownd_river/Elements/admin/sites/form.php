@@ -28,7 +28,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 ?>
 
 
-<table class="form-table">
+<table class="form-table bca-form-table">
 <?php if($this->request->action == 'admin_edit'): ?>
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.id', 'NO') ?></th>
@@ -91,7 +91,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.device', __d('baser', 'デバイス・言語')) ?></th>
 		<td class=" bca-form-table__input">
 			<?php if($useSiteDeviceSetting): ?>
-				<small>[デバイス]</small><?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
+				<small>[デバイス]</small>&nbsp;<?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<div class="helptext">サブサイトにデバイス属性を持たせ、サイトアクセス時、ユーザーエージェントを判定し適切なサイトを表示する機能を利用します。</div>
 			<?php else: ?>
@@ -103,7 +103,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 				<div class="helptext">サブサイトに言語属性を持たせ、サイトアクセス時、ブラウザの言語設定を判定し適切なサイトを表示する機能を利用します。</div>
 			<?php else: ?>
 				<?php echo $this->BcForm->input('Site.lang', ['type' => 'hidden']) ?>
-			<?php endif ?>				
+			<?php endif ?>デバイス
 			<div id="SectionAccessType" style="display:none">
 				<small>[アクセス設定]</small>
 				<br>
@@ -116,6 +116,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 					<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 					<span class="helptext">メインサイトと別URLでアクセスする際、デバイス設定や言語設定を判定し、適切なサイトへリダイレクトします。</span>　
 				</span>
+				<br>
 				<span id="SpanSiteAutoLink"><?php echo $this->BcForm->input('Site.auto_link', array('type' => 'checkbox', 'label' => __d('baser', '全てのリンクをサブサイト用に変換する'))) ?>&nbsp;
 					<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 					<span class="helptext">メインサイトと別URLでアクセスし、エイリアスを利用して同一コンテンツを利用する場合、コンテンツ内の全てのリンクをサブサイト用に変換します。</span>
