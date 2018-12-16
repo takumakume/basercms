@@ -22,7 +22,9 @@ if (empty($help)) {
 <div id="Help" class="clearfix">
 
 	<h2 class="head">
-		<?php $this->BcBaser->img('admin/head_help.png', array('width' => 69, 'height' => 16, 'alt' => __d('baser', 'ヘルプ'))) ?>
+		<a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="lg"></a>
+		ヘルプ
+		<?php //$this->BcBaser->img('admin/head_help.png', array('width' => 69, 'height' => 16, 'alt' => __d('baser', 'ヘルプ'))) ?>
 	</h2>
 
 	<div class="body">

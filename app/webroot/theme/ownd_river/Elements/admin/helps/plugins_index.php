@@ -21,7 +21,7 @@
 	<div class="head"><?php echo __d('baser', '新しいプラグインのインストール方法')?></div>
 	<ol>
 		<li><?php echo __d('baser', 'app/Plugin/ フォルダに、入手したプラグインのフォルダをアップロードします。')?></li>
-		<li><?php echo sprintf(__d('baser', 'プラグイン一覧に、新しいプラグインが表示されますので、その行の%sをクリックします。'), $this->BcBaser->img('admin/icn_tool_install.png'))?></li>
+		<li><?php echo sprintf(__d('baser', 'プラグイン一覧に、新しいプラグインが表示されますので、その行の%sをクリックします。'), $this->BcBaser->getImg('admin/icn_tool_install.png'))?></li>
 		<li><?php echo __d('baser', '登録画面が表示されますので「登録」ボタンをクリックしてインストールを完了します。')?></li>
 	</ol>
 </div>
