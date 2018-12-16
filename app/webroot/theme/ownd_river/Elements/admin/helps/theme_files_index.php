@@ -25,7 +25,7 @@
 	<li><?php echo sprintf(__d('baser', 'テーマファイルをコピーするには、対象ファイルの%sをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="copy"></i>')?></li>
 	<li><?php echo sprintf(__d('baser', 'テーマファイルを閲覧、編集する場合は、対象ファイルの%sをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="edit"></i>')?></li>
 	<li><?php echo sprintf(__d('baser', 'テーマファイルを削除するには、対象ファイルの%sをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="delete"></i>')?></li>
-	<li><?php echo sprintf(__d('baser', 'テーマファイルを現在のテーマにコピーするには、対象ファイル・フォルダの%sをクリックし、その後表示される画面下の「現在のテーマにコピー」をクリックします。（core テーマのみ）'), $this->BcBaser->getImg('admin/icn_tool_view.png'))?></li>
+	<li><?php echo sprintf(__d('baser', 'テーマファイルを現在のテーマにコピーするには、対象ファイル・フォルダの%sをクリックし、その後表示される画面下の「現在のテーマにコピー」をクリックします。（core テーマのみ）'),'<i class="bca-btn-icon" data-bca-btn-type="preview"></i>')?></li>
 </ul>
 <p><?php echo __d('baser', 'テーマファイルの種類は次の６つとなります。')?></p>
 <ul>
