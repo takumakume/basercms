@@ -15,7 +15,7 @@ try {
 } catch (e) {
 	// void
 }
-const BROWSER_SYNC_PROXY = proxy || 'localhost:8888';
+const BROWSER_SYNC_PROXY = proxy || 'localhost';
 
 const CSS_DEV_DIR = 'css/';
 const CSS_MAIN_SCSS_FILENAME = 'style.scss';
