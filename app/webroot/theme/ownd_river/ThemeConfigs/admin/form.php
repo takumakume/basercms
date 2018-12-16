@@ -47,10 +47,10 @@ $(function(){
 	<tr>
 		<th class="bca-form-table__label">テーマカラー</th>
 		<td class="bca-form-table__input">
-			<small>[メイン]</small> #<?php echo $this->BcForm->input('color_main', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input')) ?>　
-			<small>[サブ]</small> #<?php echo $this->BcForm->input('color_sub', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input')) ?><br />
-			<small>[テキストリンク]</small> #<?php echo $this->BcForm->input('color_link', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input')) ?>　
-			<small>[テキストホバー]</small> #<?php echo $this->BcForm->input('color_hover', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input')) ?>
+			<small>[メイン]</small> #<?php echo $this->BcForm->input('color_main', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input', 'div' => 'bca-textbox-color')) ?>　
+			<small>[サブ]</small> #<?php echo $this->BcForm->input('color_sub', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input', 'div' => 'bca-textbox-color')) ?><br />
+			<small>[テキストリンク]</small> #<?php echo $this->BcForm->input('color_link', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input', 'div' => 'bca-textbox-color')) ?>　
+			<small>[テキストホバー]</small> #<?php echo $this->BcForm->input('color_hover', array('type' => 'text', 'size' => 6, 'class' => 'color-picker bca-textbox-color__input', 'div' => 'bca-textbox-color')) ?>
 		</td>
 	</tr>
 	<tr>
