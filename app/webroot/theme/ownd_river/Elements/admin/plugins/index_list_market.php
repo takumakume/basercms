@@ -16,15 +16,15 @@
 ?>
 
 
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
-<thead>
-	<tr class="list-tool">
-		<th>&nbsp;</th>
-		<th>プラグイン名</th>
+<table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
+<thead class="bca-table-listup__thead">
+	<tr class="list-tool bca-table-listup__thead-th bca-table-listup__thead-th--select">
+		<th class="bca-table-listup__thead-th">&nbsp;</th>
+		<th class="bca-table-listup__thead-th">プラグイン名</th>
 		<th style="white-space: nowrap">バージョン</th>
-		<th>説明</th>
-		<th>開発者</th>
-		<th>登録日<br />更新日</th>
+		<th class="bca-table-listup__thead-th">説明</th>
+		<th class="bca-table-listup__thead-th">開発者</th>
+		<th class="bca-table-listup__thead-th">登録日<br />更新日</th>
 	</tr>
 </thead>
 <tbody>
