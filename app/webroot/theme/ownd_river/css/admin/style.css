@@ -12184,6 +12184,9 @@ div.jstree-publish-even {
   .bca-table-listup__tbody-th, .bca-table-listup__tbody-td {
     border: none;
     border-bottom: 1px solid #ccc; }
+    tr:hover .bca-table-listup__tbody-th, tr:hover .bca-table-listup__tbody-td {
+      background: #f4f5f1;
+      cursor: pointer; }
   .bca-table-listup__tbody-th {
     white-space: nowrap; }
   .bca-table-listup__tbody-td--select {

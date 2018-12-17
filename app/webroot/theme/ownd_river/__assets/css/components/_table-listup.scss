@@ -199,6 +199,11 @@
 	&__tbody-td {
 		border: none;
 		border-bottom: 1px solid #ccc;
+    // 行のホバー
+    tr:hover &{
+      background: $color_background_primary;
+      cursor: pointer;
+    }
 	}
 
 	&__tbody-th {
