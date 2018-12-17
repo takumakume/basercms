@@ -245,3 +245,32 @@ $(function(){
 });
 
 
+/**
+ * collapse　オプション、詳細設定の折りたたみ開閉
+ *
+ * @returns false
+ */
+$(function(){
+  // URLコピー： クリック後にツールチップの表示内容を切替え
+  $("[data-bca-collapse='collapse']").on({
+    'click': function() {
+      const target = $(this).attr('data-bca-target');
+      console.log($(target).attr('data-bca-state'));
+      // data-bca-state属性でtoggle
+      if($(target).attr('data-bca-state') == 'open') {
+        // 対象ID要素:非表示
+        $(target).attr('data-bca-state','').slideUp();
+        // ボタンの制御
+        $(this).attr('data-bca-state','').attr('aria-expanded','true');
+
+      } else {
+        // 対象ID要素:表示
+        $(target).attr('data-bca-state','open').slideDown();
+        // ボタンの制御
+        $(this).attr('data-bca-state','open').attr('aria-expanded','false');
+      }
+      return false;
+    }
+  });
+
+});
