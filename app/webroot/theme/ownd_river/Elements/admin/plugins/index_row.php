@@ -69,7 +69,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 			<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['Plugin']['name']), array(
 			  'aria-label'=>'このプラグインを無効にする',
         'title' => __d('baser', '無効'),
-        'class' => 'btn-unpublish bca-btn-icon',
+        'class' => 'btn-delete bca-btn-icon',
         'data-bca-btn-type' => 'unpublish',
         'data-bca-btn-size' => 'lg'
       )); ?>
@@ -78,7 +78,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
         array('action' => 'install', $data['Plugin']['name']), array(
         'aria-label'=>'インストールする',
         'title' => __d('baser', 'インストール'),
-        'class' => 'btn-download bca-btn-icon',
+        'class' => 'bca-btn-icon',
         'data-bca-btn-type' => 'download',
         'data-bca-btn-size' => 'lg'
         )); ?>
