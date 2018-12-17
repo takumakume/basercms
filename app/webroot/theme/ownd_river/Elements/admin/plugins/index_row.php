@@ -48,19 +48,51 @@ $class = ' class="' . implode(' ', $classies) . '"';
 	</td>
 	<td class="bca-table-listup__tbody-td">
 		<?php if ($data['Plugin']['update']): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_update.png', array('alt' => __d('baser', 'アップデート'), 'class' => 'btn')), array('controller' => 'updaters', 'action' => 'plugin', $data['Plugin']['name']), array('title' => __d('baser', 'アップデート'), 'class' => 'btn-update')); ?>
+			<?php $this->BcBaser->link('',array('controller' => 'updaters', 'action' => 'plugin', $data['Plugin']['name']), array(
+			  'aria-label'=>'このプラグインをアップデートする',
+        'title' => __d('baser', 'アップデート'),
+        'class' => 'btn-update bca-btn-icon',
+        'data-bca-btn-type' => 'update',
+        'data-bca-btn-size' => 'lg'
+      )); ?>
 		<?php endif ?>
 		<?php if ($data['Plugin']['admin_link'] && $data['Plugin']['status'] && !$data['Plugin']['update'] && !$data['Plugin']['old_version']): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', array('alt' => __d('baser', '管理'), 'class' => 'btn')), $data['Plugin']['admin_link'], array('title' => __d('baser', '管理'))) ?>
+			<?php $this->BcBaser->link('', $data['Plugin']['admin_link'], array(
+			  'aria-label'=>'このプラグインの設定を行う',
+        'title' => __d('baser', '管理'),
+        'class' => 'btn-setting  bca-btn-icon',
+        'data-bca-btn-type' => 'setting',
+        'data-bca-btn-size' => 'lg'
+      )); ?>
 		<?php endif; ?>
 		<?php if ($data['Plugin']['status']): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_disable.png', array('alt' => __d('baser', '無効'), 'class' => 'btn')), array('action' => 'ajax_delete', $data['Plugin']['name']), array('title' => __d('baser', '無効'), 'class' => 'btn-delete')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['Plugin']['name']), array(
+			  'aria-label'=>'このプラグインを無効にする',
+        'title' => __d('baser', '無効'),
+        'class' => 'btn-unpublish bca-btn-icon',
+        'data-bca-btn-type' => 'unpublish',
+        'data-bca-btn-size' => 'lg'
+      )); ?>
 		<?php elseif (!$data['Plugin']['status'] && !$data['Plugin']['update'] && !$data['Plugin']['old_version']): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_install.png', array('alt' => __d('baser', 'インストール'), 'class' => 'btn')), array('action' => 'install', $data['Plugin']['name']), array('title' => __d('baser', 'インストール'))) ?>
+			<?php $this->BcBaser->link('',
+        array('action' => 'install', $data['Plugin']['name']), array(
+        'aria-label'=>'インストールする',
+        'title' => __d('baser', 'インストール'),
+        'class' => 'btn-download bca-btn-icon',
+        'data-bca-btn-type' => 'download',
+        'data-bca-btn-size' => 'lg'
+        )); ?>
 		<?php endif ?>
 		<?php if (!$data['Plugin']['status']): ?>
 			<?php if (!in_array($data['Plugin']['name'], $corePlugins)): ?>
-				<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => __d('baser', '削除'), 'class' => 'btn')), array('action' => 'ajax_delete_file', $data['Plugin']['name']), array('title' => __d('baser', '削除'), 'class' => 'btn-delfile')); ?>
+				<?php $this->BcBaser->link('',
+          array('action' => 'ajax_delete_file', $data['Plugin']['name']), array(
+            'aria-label'=>'このプラグインを削除する',
+            'title' => __d('baser', '削除'),
+            'class' => 'btn-delete bca-btn-icon',
+            'data-bca-btn-type' => 'delete',
+            'data-bca-btn-size' => 'lg'
+          )); ?>
 			<?php endif ?>
 		<?php endif; ?>
 	</td>

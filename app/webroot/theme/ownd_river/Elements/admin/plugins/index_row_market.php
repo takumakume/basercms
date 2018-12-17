@@ -18,10 +18,17 @@
 
 <tr>
 	<td class="row-tools bca-table-listup__tbody-td">
-		<div><?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_down.png', array('title' => __d('baser', 'ダウンロード'), 'alt' => __d('baser', 'ダウンロード'))), $data['link'], array('target' => '_blank')) ?></div>
+		<div><?php $this->BcBaser->link('', $data['link'], array(
+		  'target' => '_blank',
+      'aria-label'=>'ダウンロードサイトへ移動する',
+      'title' => __d('baser', 'ダウンロードサイトへ移動する'),
+      'class' => 'btn-download bca-btn-icon',
+      'data-bca-btn-type' => 'download',
+      'data-bca-btn-size' => 'lg'
+      )) ?></div>
 	</td>
 	<td class="bca-table-listup__tbody-td">
-		<?php echo $data['title'] ?>
+    <?php $this->BcBaser->link($data['title'], $data['link'], array('target' => '_blank',)) ?>
 	</td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['version'] ?></td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['description'] ?></td>

@@ -219,6 +219,12 @@
     @include fa-common;
   }
 
+  // update
+  &--update {
+    @extend .#{$fa-css-prefix}-refresh;
+    @include fa-common;
+  }
+
 }
 
 // サイズ

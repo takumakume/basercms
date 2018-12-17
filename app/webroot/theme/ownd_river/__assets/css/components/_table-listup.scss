@@ -144,17 +144,23 @@
     text-align: left;
 	}
 
-	&__thead-th {
+	tr &__thead-th {
 		white-space: nowrap;
 		vertical-align:middle;
 		color: #fff;
 		background-color: $color_secondary;
 		// 選択
-		&--select {
+    &--select {
 			padding:10px;
 			input {
 				margin: 0;
 			}
+      a {
+        color: #fff;
+        .bca-btn-icon-text[data-bca-btn-type=draggable]::before {
+          color: #fff;
+        }
+      }
 		}
 	}
 

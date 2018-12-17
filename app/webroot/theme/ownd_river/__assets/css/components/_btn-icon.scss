@@ -195,6 +195,16 @@
     @extend .#{$fa-css-prefix}-file-text;
     @include bca-btn-icon-common;
   }
+  // アップデート
+  &[data-bca-btn-type=update] {
+    @extend .#{$fa-css-prefix}-refresh;
+    @include bca-btn-icon-common;
+  }
+  // 設定
+  &[data-bca-btn-type=setting] {
+    @extend .#{$fa-css-prefix}-gear;
+    @include bca-btn-icon-common;
+  }
 
 
   // サイズ
