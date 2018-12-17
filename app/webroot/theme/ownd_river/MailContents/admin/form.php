@@ -99,8 +99,11 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 
 
 <div class="bca-section" data-bca-section-type='form-group'>
-	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption" class="bca-btn">オプション</a></
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
+  <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOptionBody" aria-expanded="false" aria-controls="formOptionBody">オプション <i class="bca-icon--desc bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formOptionBody" data-bca-state="">
+	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailContent.publish_begin', __d('baser', 'フォーム受付期間')) ?></th>
 			<td class="col-input bca-form-table__input">
@@ -231,6 +234,7 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
+  </div>
 </div>
 
 <!-- button -->

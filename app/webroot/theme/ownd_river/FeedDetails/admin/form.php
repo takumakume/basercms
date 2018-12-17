@@ -55,8 +55,11 @@
 </section>
 
 <section class="bca-section" data-bca-section-type='form-group'>
-	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="FormOption" class="bca-btn">オプション</a></h2>
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="FormOptionBody">
+  <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOptionBody" aria-expanded="false" aria-controls="formOptionBody">オプション <i class="bca-icon--desc bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formOptionBody" data-bca-state="">
+	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedDetail.cache_time', __d('baser', 'キャッシュ時間')) ?></th>
 			<td class="col-input bca-form-table__input">
@@ -86,6 +89,7 @@
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
+  </div>
 </section>
 
   <!-- button -->
