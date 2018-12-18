@@ -12358,16 +12358,14 @@ div.jstree-publish-even {
 /*    Login
 /* ==================================================================== */
 #Login #flashMessage {
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px; }
+  border-radius: 0px; }
 
 #Login #MessageBox .notice-message {
-  border: 5px solid #5C8A01;
+  border: 5px solid #61a82e;
   background-color: transparent; }
 
 #Login #MessageBox .alert-message {
-  border: 5px solid #F23561;
+  border: 5px solid #ce0000;
   background-color: transparent; }
 
 .bca-login {
@@ -12375,62 +12373,69 @@ div.jstree-publish-even {
   z-index: 100000;
   max-width: 500px;
   margin: 30px auto;
-  padding: 65px 25px 25px;
+  padding: 40px 25px 25px;
   border-radius: 5px;
-  background: #fff url("../../img/admin/logo_header.png") no-repeat center 25px;
+  background: #fff;
   font-size: 1.4rem; }
   .bca-login,
   .bca-login *,
   .bca-login *::before,
   .bca-login *::after {
     box-sizing: border-box; }
-  .bca-login h1 {
+  .bca-login__title {
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
     color: #343434;
     font-weight: bold; }
+  .bca-login__logo {
+    width: 230px; }
   .bca-login-form-item {
-    position: relative; }
+    position: relative;
+    display: block; }
     .bca-login-form-item label {
       color: #656565;
-      font-size: 0.875rem;
+      font-size: 1.2rem;
       display: block;
       position: absolute;
       top: 50%;
-      right: 1em;
+      right: 1.2em;
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
       pointer-events: none; }
-    .bca-login-form-item input[type="text"], .bca-login-form-item input[type="password"] {
-      color: #343434;
-      font-size: 1.125rem;
-      font-weight: bold;
-      line-height: 1;
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none;
-      display: block;
-      width: 100%;
-      border: 4px solid #CCCCCC;
-      margin: 0 0 20px;
-      padding: 1.4558em 1em 1.26em; }
-      .bca-login-form-item input[type="text"]:focus, .bca-login-form-item input[type="password"]:focus {
-        border-color: #61a82e;
-        outline: none; }
+    .bca-login-form-item .bca-textbox {
+      display: block; }
+      .bca-login-form-item .bca-textbox .bca-textbox__input {
+        display: block;
+        width: 100%;
+        height: 52px;
+        border: 3px solid #CCCCCC;
+        border-radius: 3px;
+        margin: 0 0 20px;
+        padding: 0.69em 1em;
+        color: #343434;
+        font-size: 1.6rem;
+        font-weight: bold;
+        line-height: 1;
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none; }
+        .bca-login-form-item .bca-textbox .bca-textbox__input:focus {
+          border-color: #61a82e;
+          outline: none; }
   .bca-login button.bca-btn--login {
-    font-size: 1.125rem;
+    font-size: 1.6rem;
     line-height: 1;
     display: block;
-    width: 100%; }
+    width: 100%;
+    height: 52px; }
   .bca-login .bca-login-form-ctrl {
-    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 20px;
     overflow: hidden; }
-  .bca-login .bca-login-form-checker {
-    float: left; }
-  .bca-login .bca-login-forgot-pass {
-    float: right; }
-  .bca-login .bca-login-form-checkbox {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: 1; }
 
 .bca-list-num {
   display: flex;
@@ -12502,6 +12507,9 @@ div.jstree-publish-even {
     margin-top: 0.5em;
     font-size: 1.4rem;
     font-weight: bold; }
+  .bca-form-table .bca-mailContentSender1 {
+    margin-top: 1em;
+    margin-left: 2em; }
   .bca-form-table[data-bca-table-type=type2] {
     font-size: 1.4rem;
     width: 100%;
@@ -15632,6 +15640,8 @@ table.cake-sql-log tr td {
     font-size: 1.4rem; }
   .bca-radio-group {
     margin-bottom: -0.5em; }
+    .bca-radio-group br + .bca-radio {
+      margin-top: .5em; }
   .bca-radio__input {
     opacity: 0;
     width: 0px;
