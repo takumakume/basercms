@@ -33,11 +33,7 @@ foreach($languages as $key => $lang) {
 <table cellpadding="0" cellspacing="0" class="list-table sort-table bca-table-listup" id="ListTable">
 	<thead class="bca-table-listup__thead">
 		<tr>
-			<th class="list-tool bca-table-listup__thead-th">
-				<div>
-					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn bca-table-listup__img', 'hidden' => 'hidden')). __d('baser', '新規追加'), array('action' => 'add'),array('class'=>' bca-table-listup__a bca-btn', 'data-bca-btn-type' => 'add')) ?>
-				</div>
-			</th>
+			<th class="list-tool bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
 	<th class="bca-table-listup__thead-th">
 		<?php 
 		echo $this->Paginator->sort('id', 
