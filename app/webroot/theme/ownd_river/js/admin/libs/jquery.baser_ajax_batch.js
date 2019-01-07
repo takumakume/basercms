@@ -123,12 +123,13 @@
 			
 			$(config.listTable + " tbody td").click(function(){
 				var checkbox = $(this).parent().find(config.targetCheckbox);
-				if(checkbox.attr('checked') == undefined) {
+				if(!checkbox.prop('checked')) {
 					checkbox.prop('checked', true);
 				} else {
 					checkbox.prop('checked', false);
 				}
 				changeRow(checkbox);
+				return false;
 			});
 			
 			$(config.listTable + " tbody td a").click(function(e){
