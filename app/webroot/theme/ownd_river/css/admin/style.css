@@ -6305,9 +6305,77 @@ div.jstree-publish-even {
       margin: 8px;
       padding: 3px 8px 3px 5px;
       border-radius: 22px;
-      background-color: #E20;
+      background-color: #e20;
       font-weight: bold;
-      color: #FFF; }
+      color: #fff; }
+  .bca-toolbar__users > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%; }
+    .bca-toolbar__users > ul > li {
+      list-style: none;
+      display: block;
+      height: 100%; }
+      .bca-toolbar__users > ul > li > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-bottom: 0;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        color: #ccc;
+        box-shadow: 0 0 0 #ccc;
+        color: #535a62;
+        border: 0;
+        width: 100%;
+        padding: 2px 10px 2px 10px;
+        color: #fff;
+        text-decoration: none; }
+        .bca-toolbar__users > ul > li > a:hover, .bca-toolbar__users > ul > li > a:focus {
+          background-color: #444; }
+      .bca-toolbar__users > ul > li > ul {
+        display: none; }
+    .bca-toolbar__users > ul > li.active {
+      position: relative; }
+      .bca-toolbar__users > ul > li.active > a {
+        color: #ccc;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-bottom: 0; }
+      .bca-toolbar__users > ul > li.active > ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        background-color: #fff;
+        position: absolute;
+        border: 1px solid #ccc !important;
+        box-shadow: 0 1px 3px #ccc;
+        margin-top: -1px;
+        background-color: #fff; }
+        .bca-toolbar__users > ul > li.active > ul li {
+          list-style: none;
+          display: block;
+          white-space: nowrap; }
+        .bca-toolbar__users > ul > li.active > ul a {
+          box-shadow: 0 0 0 #ccc;
+          color: #535a62;
+          border: 0;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding: 2px 10px 2px 10px;
+          text-decoration: none;
+          height: 27px;
+          position: relative;
+          z-index: 1; }
+          .bca-toolbar__users > ul > li.active > ul a:hover {
+            background-color: #edf8c9; }
 
 .bca-nav {
   font-size: 1.4rem;

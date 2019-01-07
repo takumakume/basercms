@@ -25,9 +25,9 @@ window.addEventListener('DOMContentLoaded', function () {
 			console.warn('管理メニューのデータが破損しています（JSONデータが不正です）')
 		}
 	}
-	
+
 	if (tmpl && data && data.menuList && data.menuList.length) {
-		
+
 		var contentList = [];
 		var systemList = [];
 
@@ -38,12 +38,12 @@ window.addEventListener('DOMContentLoaded', function () {
 				contentList.push(item);
 			}
 		});
-		
+
 		/**
 		 * for deubg
 		 */
-		console.log($.extend(true, {}, contentList));
-		console.log($.extend(true, {}, systemList));
+		// console.log($.extend(true, {}, contentList));
+		// console.log($.extend(true, {}, systemList));
 
 		tmpl.hidden = false;
 		var app = new Vue({
