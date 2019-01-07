@@ -16,6 +16,8 @@
 ?>
 
 <div id="SideBar" class="bca-nav">
+	<?php $this->BcBaser->element('favorite_menu') ?>
+	<?php # $this->BcBaser->element('permission') ?>
 
 	<nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
 		<h2 class="bca-nav__main-title"><?php echo __d('baser', '管理メニュー') ?></h2>
