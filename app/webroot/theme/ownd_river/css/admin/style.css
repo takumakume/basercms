@@ -6549,9 +6549,15 @@ div.jstree-publish-even {
       font-size: .875em;
       display: block; }
       .bca-nav-favorite-list-item a {
+        position: relative;
         display: block;
-        padding: 4px 0 4px 4px;
+        padding: 4px 0 8px 12px;
         color: #656565; }
+        .bca-nav-favorite-list-item a:before {
+          position: absolute;
+          left: 0;
+          top: 4px;
+          margin-right: 0; }
         .bca-nav-favorite-list-item a:link, .bca-nav-favorite-list-item a:visited {
           color: #656565; }
         .bca-nav-favorite-list-item a:hover {
@@ -6559,9 +6565,7 @@ div.jstree-publish-even {
           color: #1b6123;
           text-decoration: none; }
       .bca-nav-favorite-list-item-label {
-        display: inline-block;
-        vertical-align: middle;
-        margin-left: 4px; }
+        display: inline-block; }
   .bca-nav-favorite-functions {
     font-size: .75em;
     list-style: none;
