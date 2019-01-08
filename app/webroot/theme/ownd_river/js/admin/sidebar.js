@@ -46,18 +46,20 @@ window.addEventListener('DOMContentLoaded', function () {
 		// console.log($.extend(true, {}, systemList));
 
 		tmpl.hidden = false;
+		var isSystemSettingPage = systemList.some(function (item) { return item.current; });
 		var app = new Vue({
 			el: tmpl,
 			data: {
-				systemHidden: true,
+				systemExpanded: isSystemSettingPage,
 				baseURL: $.baseUrl,
 				currentSiteId: data.currentSiteId,
 				contentList: contentList,
+				isSystemSettingPage: isSystemSettingPage,
 				systemList: systemList
 			},
 			methods: {
 				openSystem: function () {
-					app.systemHidden = !app.systemHidden;
+					app.systemExpanded = !app.systemExpanded;
 				}
 			}
 		});

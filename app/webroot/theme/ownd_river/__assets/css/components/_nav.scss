@@ -55,7 +55,7 @@
 		&:hover {
 			color: $color_primary;
 			//background: $color_background_primary;
-			&:not([data-content-type="dashboard"])::after {
+			&:not([data-content-is-current="true"]):not([data-content-type="dashboard"])::after {
 				content: "";
 				display: block;
 				position: absolute;
@@ -244,36 +244,96 @@
 			}
 		}
 
-		&-item {
-			padding: 0;
+		&-list {
+			&-item {
+				padding: 0;
 
-			&-title {
-				margin: 0;
-				font-size: 0.9em;
-			}
+				&-title {
+					margin: 0;
+					font-size: 0.9em;
+				}
 
-			&[data-system-type] {
-				.bca-nav__system-item-title > a:before {
-					width: 16px;
-					text-align: center;
+				&[data-system-type] {
+					.bca-nav__system-item-list-title > a:before {
+						width: 16px;
+						text-align: center;
+					}
+				}
+
+				&[data-system-type] {
+					.bca-nav__system-item-list-title > a {
+						@extend .bca-icon--setting;
+					}
+				}
+
+				&[data-system-type="theme"] {
+					.bca-nav__system-item-list-title > a {
+						@extend .bca-icon--theme;
+					}
+				}
+
+				&[data-system-type="plugin"] {
+					.bca-nav__system-item-list-title > a {
+						@extend .bca-icon--plugin;
+					}
 				}
 			}
+		}
 
-			&[data-system-type] {
-				.bca-nav__system-item-title > a {
-					@extend .bca-icon--setting;
+		&[data-content-is-current="true"] {
+			.bca-nav__system-title {
+				color: $color_text_primary;
+				background: $color_background_primary;
+				cursor: default;
+
+				background: $color_background_menu_current;
+				&-label {
+					//color: #fff;
 				}
 			}
+			.bca-nav__system-list {
+				display: block;
+				position: relative;
+				top: auto;
+				left: auto;
+				width: auto;
+				transform: none;
+				box-shadow: none;
+				background: $color_background_menu_current;
 
-			&[data-system-type="theme"] {
-				.bca-nav__system-item-title > a {
-					@extend .bca-icon--theme;
-				}
-			}
+				&-item {
+					// 現在開いているページ
+					&[data-content-is-current="true"] {
+						background: $color_primary;
+						a {
+							position: relative;
+							color: $color_lightest;
+							font-weight: bold;
 
-			&[data-system-type="plugin"] {
-				.bca-nav__system-item-title > a {
-					@extend .bca-icon--plugin;
+							&:link,
+							&:visited {
+								color: $color_lightest;
+							}
+							&:hover {
+								//font-weight: normal;
+								//color: $color_primary;
+								//background: none;
+								//color: $color_lightest;
+								background: inherit;
+							}
+							&::after {
+								content: "";
+								display: block;
+								position: absolute;
+								top: 50%;
+								right: 0;
+								margin-top: -10px;
+								border: 10px solid;
+								border-color: transparent $color_lightest
+									transparent transparent;
+							}
+						}
+					}
 				}
 			}
 		}
