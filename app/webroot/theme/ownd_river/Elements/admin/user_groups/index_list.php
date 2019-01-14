@@ -22,11 +22,9 @@ $(function () {
 });
 </script>
 
-<div class="bca-list-head">
-	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add'), array('class' => ' bca-btn', 'data-bca-btn-type' => 'add')) ?>
-	<!-- pagination -->
-	<?php $this->BcBaser->element('pagination') ?>
-</div>
+<?php /*$this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add'), array('class' => ' bca-btn', 'data-bca-btn-type' => 'add'))*/ ?>
+
+<?php $this->BcBaser->element('pagination') ?>
 
 <table cellpadding="0" cellspacing="0" class="list-table bca-form-table" id="ListTable">
 <thead>
