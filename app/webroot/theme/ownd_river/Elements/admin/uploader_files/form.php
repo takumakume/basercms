@@ -126,13 +126,17 @@ $(function(){
 
 
 <?php if(empty($popup)): ?>
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-button', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'id' => 'BtnSave')) ?>
-	<?php $this->BcBaser->link(__d('baser', '削除'),
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-button', 'class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'xl', 'id' => 'BtnSave')) ?>
+	</div>
+	<div class="bca-actions__sub">
+		<?php $this->BcBaser->link(__d('baser', '削除'),
 			array('action' => 'delete', $this->BcForm->value('UploaderFile.id')),
 			array('class' => 'submit-token button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'delete'),
 			sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('UploaderFile.name')),
 			false); ?>
+	</div>
 </div>
 <?php endif; ?>
 
