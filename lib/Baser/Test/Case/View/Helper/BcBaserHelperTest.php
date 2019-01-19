@@ -282,8 +282,8 @@ class BcBaserHelperTest extends BaserTestCase {
 
 	public function getDescriptionDataProvider() {
 		return [
-			['baserCMS は、CakePHPを利用し、環境準備の素早さに重点を置いた基本開発支援プロジェクトです。WEBサイトに最低限必要となるプラグイン、そしてそのプラグインを組み込みやすい管理画面、認証付きのメンバーマイページを最初から装備しています。'],
-			['baserCMS は、CakePHPを利用し、環境準備の素早さに重点を置いた基本開発支援プロジェクトです。WEBサイトに最低限必要となるプラグイン、そしてそのプラグインを組み込みやすい管理画面、認証付きのメンバーマイページを最初から装備しています。', ''],
+			['baserCMS は、CakePHPを利用し、環境準備の素早さに重点を置いた基本開発支援プロジェクトです。WEBサイトに最低限必要となるプラグイン、そしてそのプラグインを組み込みやすい管理画面、認証付きのメンバーマイページを最初から装備しています。', 'baserCMS は、CakePHPを利用し、環境準備の素早さに重点を置いた基本開発支援プロジェクトです。WEBサイトに最低限必要となるプラグイン、そしてそのプラグインを組み込みやすい管理画面、認証付きのメンバーマイページを最初から装備しています。'],
+			['', ''],
 			['国産オープンソースのホームページです', '国産オープンソースのホームページです']
 		];
 	}
@@ -352,7 +352,8 @@ class BcBaserHelperTest extends BaserTestCase {
 		$this->BcBaser->setTitle('会社沿革');
 		$expected = [
 			['name' => '会社案内', 'url' => '/company/index'],
-			['name' => '会社データ', 'url' => '/company/data']
+			['name' => '会社データ', 'url' => '/company/data'],
+			['name' => '会社沿革', 'url' => '']
 		];
 		$this->assertEquals($expected, $this->BcBaser->getCrumbs(true));
 
