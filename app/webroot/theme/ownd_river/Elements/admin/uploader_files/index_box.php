@@ -17,9 +17,8 @@ if (!$this->Uploader->isPublish($file)) {
 	$classies = array('publish', 'selectable-file');
 	$statusPublish = true;
 }
-$class = ' class="' . implode(' ', $classies) . '"';
+$class = ' class="' . implode(' ', $classies) . ' bca-file-list__item"';
 ?>
-
 
 <span<?php echo $class; ?> id="selectedFile<?php echo $file['UploaderFile']['id'] ?>">
 	<?php echo $this->Uploader->file($file, array(

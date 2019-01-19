@@ -14,35 +14,41 @@
 <?php echo $this->BcForm->create('UploaderCategory') ?>
 <?php echo $this->BcForm->input('UploaderCategory.id', array('type' => 'hidden')) ?>
 
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
+<table cellpadding="0" cellspacing="0" class="list-table bca-form-table id="ListTable">
 <?php if($this->action == 'admin_edit'): ?>
 	<tr>
-		<th><?php echo $this->BcForm->label('UploaderCategory.id', 'NO') ?></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('UploaderCategory.id', 'NO') ?></th>
+		<td class="bca-form-table__input">
 			<?php echo $this->BcForm->value('UploaderCategory.id') ?>
 			<?php echo $this->BcForm->input('UploaderCategory.id', array('type' => 'hidden')) ?>
 		</td>
 	</tr>
 <?php endif; ?>
 	<tr>
-		<th><?php echo $this->BcForm->label('UploaderCategory.name', __d('baser', 'カテゴリ名')) ?>&nbsp;<span class="required">*</span></th>
-		<td>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('UploaderCategory.name', __d('baser', 'カテゴリ名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
+		<td class="bca-form-table__input">
 			<?php echo $this->BcForm->input('UploaderCategory.name', array('type' => 'text', 'size' => 40, 'maxlength' => 50, 'autofocus' => true)) ?>
 			<?php echo $this->BcForm->error('UploaderCategory.name') ?>
 		</td>
 	</tr>
 </table>
 
-<div class="submit">
+<div class="submit bca-actions">
 <?php if($this->action == 'admin_add'): ?>
-	<?php echo $this->BcForm->submit(__d('baser', '登録'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '登録'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+	</div>
 <?php else: ?>
-	<?php echo $this->BcForm->submit(__d('baser', '更新'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
-	<?php $this->BcBaser->link(__d('baser', '削除'),
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '更新'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+	</div>
+	<div class="bca-actions__sub">
+		<?php $this->BcBaser->link(__d('baser', '削除'),
 			array('action' => 'delete', $this->BcForm->value('UploaderCategory.id')),
-			array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'),
+			array('class' => 'submit-token button bca-btn bca-actions__item', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'sm'),
 			sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('UploaderCategory.name')),
 			false); ?>
+	</div>
 <?php endif ?>
 </div>
 

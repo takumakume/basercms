@@ -92,21 +92,6 @@ class BcAppController extends Controller {
  * @var string
  */
 	public $subMenuElements = '';
-	
-/**
- * 管理画面main bodyのタイトル横リンク（ボタン）
- * サンプル: [
- *     [
- *         'url' => ['controller' = 'sample', 'action' => 'index'],
- *         'class' => 'btn btn-info',
- *         'confirm' => '編集ページへジャンプします。いいですか？',
- *     ]
- * ]
- * 
- * @var array ['url' => string or array, 'confirm' => 'confirm message', 'something attributes' => 'attr value']
- */
-	public $mainBodyHeaderLinks = [];
-	
 
 /**
  * パンくずナビ
@@ -480,26 +465,29 @@ class BcAppController extends Controller {
  * $this->theme にセットする事
  * 
  * 優先順位
- * $this->request->params['Site']['theme'] > $site->theme > $this->siteConfigs['theme'] > Configure::read('BcApp.adminTheme')
+ * $this->request->params['Site']['theme'] > $site->theme > $this->siteConfigs['theme']
  *
  * @return void
  */
 	protected function setTheme() {
 		$theme = null;
-		if (!empty($this->request->params['Site']['theme'])) {
-			$theme = $this->request->params['Site']['theme'];
-		}
-		if(!$theme) {
-			$site = BcSite::findCurrent();
-			if (!empty($site->theme)) {
-				$theme = $site->theme;
+		if(BcUtil::isAdminSystem()) {
+			if(!$theme) {
+				$theme = $this->adminTheme;
 			}
-		}
-		if (!$theme && !empty($this->siteConfigs['theme'])) {
-			$theme = $this->siteConfigs['theme'];
-		}
-		if(!$theme) {
-			$theme = Configure::read('BcApp.adminTheme');	
+		} else {
+			if (!empty($this->request->params['Site']['theme'])) {
+				$theme = $this->request->params['Site']['theme'];
+			}
+			if(!$theme) {
+				$site = BcSite::findCurrent();
+				if (!empty($site->theme)) {
+					$theme = $site->theme;
+				}
+			}
+			if (!$theme && !empty($this->siteConfigs['theme'])) {
+				$theme = $this->siteConfigs['theme'];
+			}
 		}
 		$this->theme = $theme;
 	}
@@ -514,12 +502,9 @@ class BcAppController extends Controller {
  * @return void
  */
 	protected function setAdminTheme() {
-		$adminTheme = null;
-		if (!empty($this->siteConfigs['admin_theme'])) {
+		$adminTheme = Configure::read('BcApp.adminTheme');
+		if (!$adminTheme && !empty($this->siteConfigs['admin_theme'])) {
 			$adminTheme = $this->siteConfigs['admin_theme'];
-		}
-		if(!$adminTheme) {
-			$adminTheme = Configure::read('BcApp.adminTheme');	
 		}
 		$this->adminTheme = $this->siteConfigs['admin_theme'] = $adminTheme;
 	}
@@ -679,7 +664,6 @@ class BcAppController extends Controller {
  */
 	private function __loadDataToView() {
 		$this->set('subMenuElements', $this->subMenuElements);	// サブメニューエレメント
-		$this->set('mainBodyHeaderLinks', $this->mainBodyHeaderLinks);
 		$this->set('crumbs', $this->crumbs);					// パンくずなび
 		$this->set('search', $this->search);
 		$this->set('help', $this->help);

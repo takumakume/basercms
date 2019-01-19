@@ -86,7 +86,7 @@
 		for(var i = 0; i < ui.item.find('td').length; i++){
 			$(config.placeHolder).append('<td>&nbsp;</td>');
 		}
-		$(config.placeHolder + " td").css('background-color', '#ffffbe');
+		$(config.placeHolder + " td").css('background-color', '#ffffff');
 		$(config.placeHolder + " td").css('border', 'none');
 		
 	}

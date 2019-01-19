@@ -1,4 +1,4 @@
-<?php if ($mainBodyHeaderLinks): ?>
+<?php if (isset($mainBodyHeaderLinks)): ?>
 	<?php foreach($mainBodyHeaderLinks as $link): ?>
 		<?php
 		$url = null;

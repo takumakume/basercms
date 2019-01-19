@@ -17,13 +17,6 @@
 
 
 <tr>
-	<td class="row-tools bca-table-listup__tbody-td">
-		<?php if ($this->BcBaser->isAdminUser()): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['EditorTemplate']['id'], array('type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['EditorTemplate']['id'])) ?>
-		<?php endif ?>
-		<?php $this->BcBaser->link('', array('action' => 'edit', $data['EditorTemplate']['id']), array('title' => __d('baser', '編集'), 'class' => ' bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['EditorTemplate']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
-	</td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['EditorTemplate']['id'] ?></td>
 	<td class="bca-table-listup__tbody-td">
 		<?php if ($data['EditorTemplate']['image']): ?>
@@ -34,4 +27,8 @@
 	<td class="bca-table-listup__tbody-td"><?php echo $data['EditorTemplate']['description']; ?></td>
 	<td class="bca-table-listup__tbody-td" style="white-space:nowrap"><?php echo $this->BcTime->format('Y-m-d', $data['EditorTemplate']['created']) ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['EditorTemplate']['modified']) ?></td>
+	<td class="row-tools bca-table-listup__tbody-td">
+		<?php $this->BcBaser->link('', array('action' => 'edit', $data['EditorTemplate']['id']), array('title' => __d('baser', '編集'), 'class' => ' bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['EditorTemplate']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+	</td>
 </tr>

@@ -1,5 +1,5 @@
 .bca-textbox{
-
+  display: inline-block;
   &__input {
     display: inline-block;
     outline: none;
@@ -19,10 +19,12 @@
     &[data-input-text-size=full-counter]{
       width: calc(100% - 80px);
     }
+    &[data-margin=bottom]{
+      margin-bottom: 10px;
+    }
 
     &:focus{
       box-shadow: $focus_shadow;
-
     }
   }
 }

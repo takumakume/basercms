@@ -21,8 +21,10 @@
 @import 'components/nav';
 @import 'components/nav-favorite';
 @import 'components/btn-icon';
+@import 'components/btn-icon-text';
 @import 'components/banners';
 @import 'components/action-table-listup';
+@import 'components/table';
 @import 'components/table-listup';
 @import 'components/crumb';
 @import 'components/content-menu';
@@ -44,13 +46,22 @@
 @import 'components/label';
 @import 'components/panel-box';
 @import 'components/input-text';
+@import 'components/input-color';
 @import 'components/textbox';
+@import 'components/textarea';
 @import 'components/file';
 @import 'components/datetimepicker';
 @import 'components/list-panel';
 @import 'components/current-theme';
 @import 'components/section';
 @import 'components/size-counter';
+@import 'components/actions';
+@import 'components/list';
+@import 'components/list-head';
+@import 'components/file-list';
+@import 'components/box';
+@import 'components/visually-hidden';
+@import 'components/collaps';
 
 @import 'components/jquery-ui';
 

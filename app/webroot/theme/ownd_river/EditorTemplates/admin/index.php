@@ -17,6 +17,10 @@ $this->BcBaser->js(array(
 	'admin/libs/jquery.baser_ajax_data_list',
 	'admin/libs/baser_ajax_data_list_config',
 ));
+$this->BcAdmin->addAdminMainBodyHeaderLinks([
+	'url' => ['action' => 'add'],
+	'title' => __d('baser', '新規追加'),
+]);
 ?>
 
 

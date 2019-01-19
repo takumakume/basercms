@@ -15,26 +15,53 @@
  */
 ?>
 
+<div class="bca-data-list__top">
+  <!-- 一括処理 -->
+  <?php if ($this->BcBaser->isAdminUser()): ?>
+    <div class="bca-action-table-listup">
+      <?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select',
+        'options' => array(
+          'del' => __d('baser', '削除')
+        ),
+        'empty' => __d('baser', '一括処理'), 'data-bca-select-size' =>'lg')) ?>
+      <?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
+    </div>
+  <?php endif ?>
+  <div class="bca-data-list__sub">
+    <!-- list-num -->
+    <?php $this->BcBaser->element('list_num') ?>
+    <!-- pagination -->
+    <?php $this->BcBaser->element('pagination') ?>
+  </div>
+</div>
 
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
-<thead>
+
+<table class="list-table bca-table-listup" id="ListTable">
+<thead class="bca-table-listup__thead">
 	<tr>
-		<th style="width:160px" class="list-tool">
-			<div>
-				<?php if ($this->BcBaser->isAdminUser() && $theme != 'core'): ?>
-				<?php echo $this->BcForm->checkbox('ListTool.checkall', array('title' => __d('baser', '一括選択'))) ?>
-				<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'))) ?>
-				<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn')) ?>
-				<?php endif ?>
-				<?php if ($path): ?>
-					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/up.gif', array('alt' => __d('baser', '上へ移動'))), array('action' => 'index', $theme, $plugin, $type, dirname($path)), array('title' => __d('baser', '上へ移動'))) ?>
-				<?php endif ?>
-			</div>
+    <th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select"><?php // 一括選択 ?>
+      <?php if ($this->BcBaser->isAdminUser() && $theme != 'core'): ?>
+        <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
+      <?php endif ?>
+
+      <?php if ($path): ?>
+        <?php $this->BcBaser->link('', array('action' => 'index', $theme, $plugin, $type, dirname($path)), array(
+            'title' => __d('baser', '上へ移動'),
+            'class' => 'bca-btn-icon',
+            'data-bca-btn-type'=>'up-directory',
+            'data-bca-btn-size'=>'lg',
+            'data-bca-btn-status'=>'white',
+            'aria-label'=>'一つ上の階層へ'
+          )) ?>
+      <?php endif ?>
 		</th>
-		<th>フォルダ名／テーマファイル名</th>
+		<th class="bca-table-listup__thead-th">フォルダ名／テーマファイル名</th>
+    <th class="bca-table-listup__thead-th"><?php // アクション ?>
+      <?php echo __d('baser', 'アクション') ?>
+    </th>
 	</tr>
 </thead>
-<tbody>
+<tbody class="bca-table-listup__tbody">
 	<?php if (!empty($themeFiles)): ?>
 		<?php foreach ($themeFiles as $data): ?>
 			<?php $this->BcBaser->element('theme_files/index_row', array('data' => $data)) ?>

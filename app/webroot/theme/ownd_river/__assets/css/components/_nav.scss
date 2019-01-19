@@ -9,7 +9,7 @@
 		font-size: 1em;
 		position: relative;
 		//background: $color_background_primary;
-    background: $color_background_menu;
+		background: $color_background_menu;
 		&-title {
 			display: none;
 		}
@@ -32,13 +32,13 @@
 		&-title {
 			margin-top: 0;
 			margin-bottom: 0;
-      font-size: 1em;
+			font-size: 1em;
 			font-weight: bold;
 			cursor: pointer;
 			&-label {
 				display: block;
 				vertical-align: middle;
-        padding: 10px 10px 10px 16px;
+				padding: 10px 10px 10px 16px;
 				&:link,
 				&:visited {
 					// a:link のデフォルト設定を消すまで有効
@@ -47,33 +47,34 @@
 				&:hover {
 					text-decoration: none;
 					color: $color_darkest;
-          background: $color_background_menu_dark;
+					background: $color_background_menu_dark;
 				}
 			}
 		}
-    // 閉じている時のメニューhover
+		// 閉じている時のメニューhover
 		&:hover {
-      color: $color_primary;
+			color: $color_primary;
 			//background: $color_background_primary;
-      &:not([data-content-type="dashboard"])::after {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 20;
-        top: 50%;
-        right: 0;
-        margin-top: -10px;
-        border: 10px solid;
-        border-color: transparent $color_background_menu transparent transparent;
-      }
-    }
-    // サブメニューを表示
-    &:hover &-list {
-      display: block;
-      background: $color_background_menu;
-      box-shadow: 0 3px 5px rgba(#000, 0.2);
-      z-index: 10;
-    }
+			&:not([data-content-is-current="true"]):not([data-content-type="dashboard"])::after {
+				content: "";
+				display: block;
+				position: absolute;
+				z-index: 20;
+				top: 50%;
+				right: 0;
+				margin-top: -10px;
+				border: 10px solid;
+				border-color: transparent $color_background_menu transparent
+					transparent;
+			}
+		}
+		// サブメニューを表示
+		&:hover &-list {
+			display: block;
+			background: $color_background_menu;
+			box-shadow: 0 3px 5px rgba(#000, 0.2);
+			z-index: 10;
+		}
 
 		&-list {
 			display: none;
@@ -81,7 +82,7 @@
 			top: 0;
 			left: 100%;
 			min-width: 200px;
-      margin: 0;
+			margin: 0;
 			list-style: none;
 			//background: $color_background_primary;
 			//transform: translate(0, -50%);
@@ -121,17 +122,17 @@
 			}
 		}
 
-    // 中が展開されている時
+		// 中が展開されている時
 		&[data-content-is-current="true"] {
 			.bca-nav__sub-title {
 				color: $color_text_primary;
 				background: $color_background_primary;
 				cursor: default;
 
-        background: $color_background_menu_current;
-        &-label {
-          //color: #fff;
-        }
+				background: $color_background_menu_current;
+				&-label {
+					//color: #fff;
+				}
 			}
 			.bca-nav__sub-list {
 				display: block;
@@ -140,26 +141,26 @@
 				left: auto;
 				width: auto;
 				transform: none;
-        box-shadow: none;
-        background: $color_background_menu_current;
+				box-shadow: none;
+				background: $color_background_menu_current;
 
 				&-item {
-          // 現在開いているページ
+					// 現在開いているページ
 					&[data-sub-content-is-current="true"] {
 						background: $color_primary;
 						a {
 							position: relative;
 							color: $color_lightest;
-              font-weight: bold;
-              
+							font-weight: bold;
+
 							&:link,
 							&:visited {
-                color: $color_lightest;
+								color: $color_lightest;
 							}
 							&:hover {
 								//font-weight: normal;
-                //color: $color_primary;
-                //background: none;
+								//color: $color_primary;
+								//background: none;
 								//color: $color_lightest;
 								//background: $color_secondary;
 							}
@@ -171,7 +172,8 @@
 								right: 0;
 								margin-top: -10px;
 								border: 10px solid;
-								border-color: transparent $color_lightest transparent transparent;
+								border-color: transparent $color_lightest
+									transparent transparent;
 							}
 						}
 					}
@@ -179,15 +181,14 @@
 			}
 		}
 
-    &[data-content-type] {
-      .bca-nav__sub-title > a:before {
-        width: 16px;
-        text-align: center;
-      }
-    }
+		&[data-content-type] {
+			.bca-nav__sub-title > a:before {
+				width: 16px;
+				text-align: center;
+			}
+		}
 
-
-    &[data-content-type="dashboard"] {
+		&[data-content-type="dashboard"] {
 			.bca-nav__sub-title > a {
 				@extend .bca-icon--home;
 			}
@@ -238,42 +239,101 @@
 				padding: 10px 10px 10px 16px;
 				width: 100%;
 				height: 100%;
-        color: $color_text_secondary;
+				color: $color_text_secondary;
 				cursor: pointer;
 			}
 		}
 
-		&-item {
-			padding: 0;
+		&-list {
+			&-item {
+				padding: 0;
 
-			&-title {
-        margin: 0;
-				font-size: .9em;
-			}
+				&-title {
+					margin: 0;
+					font-size: 0.9em;
+				}
 
-      &[data-system-type] {
-        .bca-nav__system-item-title > a:before {
-          width: 16px;
-          text-align: center;
-        }
-      }
+				&[data-system-type] {
+					.bca-nav__system-item-list-title > a:before {
+						width: 16px;
+						text-align: center;
+					}
+				}
 
+				&[data-system-type] {
+					.bca-nav__system-item-list-title > a {
+						@extend .bca-icon--setting;
+					}
+				}
 
-			&[data-system-type] {
-				.bca-nav__system-item-title > a {
-					@extend .bca-icon--setting;
+				&[data-system-type="theme"] {
+					.bca-nav__system-item-list-title > a {
+						@extend .bca-icon--theme;
+					}
+				}
+
+				&[data-system-type="plugin"] {
+					.bca-nav__system-item-list-title > a {
+						@extend .bca-icon--plugin;
+					}
 				}
 			}
+		}
 
-			&[data-system-type="theme"] {
-				.bca-nav__system-item-title > a {
-					@extend .bca-icon--theme;
+		&[data-content-is-current="true"] {
+			.bca-nav__system-title {
+				color: $color_text_primary;
+				background: $color_background_primary;
+				cursor: default;
+
+				background: $color_background_menu_current;
+				&-label {
+					//color: #fff;
 				}
 			}
+			.bca-nav__system-list {
+				display: block;
+				position: relative;
+				top: auto;
+				left: auto;
+				width: auto;
+				transform: none;
+				box-shadow: none;
+				background: $color_background_menu_current;
 
-			&[data-system-type="plugin"] {
-				.bca-nav__system-item-title > a {
-					@extend .bca-icon--plugin;
+				&-item {
+					// 現在開いているページ
+					&[data-content-is-current="true"] {
+						background: $color_primary;
+						a {
+							position: relative;
+							color: $color_lightest;
+							font-weight: bold;
+
+							&:link,
+							&:visited {
+								color: $color_lightest;
+							}
+							&:hover {
+								//font-weight: normal;
+								//color: $color_primary;
+								//background: none;
+								//color: $color_lightest;
+								background: inherit;
+							}
+							&::after {
+								content: "";
+								display: block;
+								position: absolute;
+								top: 50%;
+								right: 0;
+								margin-top: -10px;
+								border: 10px solid;
+								border-color: transparent $color_lightest
+									transparent transparent;
+							}
+						}
+					}
 				}
 			}
 		}

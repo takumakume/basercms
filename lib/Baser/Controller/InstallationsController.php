@@ -263,7 +263,7 @@ class InstallationsController extends AppController {
 				} else {
                     $User = ClassRegistry::init('User', 'Model');
                     if ( !empty($User->validationErrors) ) {
-                        $errMsg = implode('<br />', Hash::extract($User->validationErrors, '{s}.{n}'));
+                        $errMsg = implode("\n", Hash::extract($User->validationErrors, '{s}.{n}'));
                     }
 					$this->setMessage(__d('baser', '管理ユーザーを作成できませんでした。'), true);
 					$this->setMessage($errMsg, true);
@@ -544,7 +544,7 @@ class InstallationsController extends AppController {
 		} catch (Exception $e) {
 			$message = __d('baser', 'データベースへの接続でエラーが発生しました。データベース設定を見直してください。');
 			if (preg_match('/with message \'(.+?)\' in/s', $e->getMessage(), $matches)) {
-				$message .= '<br />' . $matches[1];
+				$message .= "\n" . $matches[1];
 			}
 					$this->setMessage(__d('baser', 'データベースへの接続でエラーが発生しました。データベース設定を見直してください。\nサーバー上に指定されたデータベースが存在しない可能性が高いです。'), true);
 			return false;

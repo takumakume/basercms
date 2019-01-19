@@ -21,7 +21,7 @@
 
 <table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 	<tr>
-		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.schema_type', __d('baser', 'スキーマタイプ')) ?></th>
+		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Tool.schema_type', __d('baser', 'スキーマタイプ')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.schema_type', array(
 				'type' => 'radio',
@@ -32,7 +32,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.schema_file', __d('baser', 'スキーマファイル')) ?></th>
+		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Tool.schema_file', __d('baser', 'スキーマファイル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.schema_file', array('type' => 'file')) ?>
 			<?php echo $this->BcForm->error('Tool.schema_file') ?>
@@ -40,6 +40,10 @@
 	</tr>
 </table>
 
-<div class="submit"><?php echo $this->BcForm->submit(__d('baser', '読み込み'), array('div' => false, 'class' => 'btn-red button bca-btn')) ?></div>
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->submit(__d('baser', '読み込み'), array('div' => false, 'class' => 'btn-red button bca-btn', 'data-bca-btn-size' => 'lg')) ?>
+	</div>
+</div>
 
 <?php echo $this->BcForm->end(); ?>

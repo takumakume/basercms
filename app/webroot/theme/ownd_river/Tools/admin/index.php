@@ -15,7 +15,7 @@
 <div class="section bca-main__section">
 	<h2 class="bca-main__heading" data-bca-heading-size="lg">サーバーキャッシュ削除</h2>
 	<p class="bca-main__text">baserCMSは、表示速度向上の為、サーバーサイドのキャッシュ機構利用しています。<br>これによりテンプレートを直接編集した際など、変更内容が反映されない場合がありますので、その際には、サーバーサイドのキャッシュを削除します。</p>
-	<?php $this->BcBaser->link(__d('baser', 'サーバーキャッシュを削除する'), array('controller' => 'site_configs', 'action' => 'del_cache'), array('class' => 'submit-token button-small bca-btn', 'confirm' => __d('baser', 'サーバーキャッシュを削除します。いいですか？'))) ?>　
+	<?php $this->BcBaser->link(__d('baser', 'サーバーキャッシュを削除する'), array('controller' => 'site_configs', 'action' => 'del_cache'), array('class' => 'submit-token button-small bca-btn', 'data-bca-btn-type' => 'clear', 'confirm' => __d('baser', 'サーバーキャッシュを削除します。いいですか？'))) ?>　
 </div>
 
 <div class="section bca-main__section">

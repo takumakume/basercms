@@ -17,9 +17,16 @@
 
 
 <!-- view -->
-<table cellpadding="0" cellspacing="0" class="list-table" id="ListTable">
-	<tr><th>NO</th><td><?php echo $message['MailMessage']['id'] ?></td></tr>
-	<tr><th>受信日時</th><td><?php echo $this->BcTime->format('Y/m/d H:i:s', $message['MailMessage']['created']) ?></td></tr>
+<table cellpadding="0" cellspacing="0"  class="list-table bca-form-table" id="ListTable">
+	
+	<tr>
+		<th class="col-head bca-form-table__label">NO</th>
+		<td class="col-input bca-form-table__input"><?php echo $message['MailMessage']['id'] ?></td>
+	</tr>
+	<tr>
+		<th class="col-head bca-form-table__label">受信日時</th>
+		<td class="col-input bca-form-table__input"><?php echo $this->BcTime->format('Y/m/d H:i:s', $message['MailMessage']['created']) ?></td>
+	</tr>
 	<?php
 	$groupField = null;
 	foreach ($mailFields as $key => $mailField) {
@@ -29,8 +36,8 @@
 			/* 項目名 */
 			if ($groupField != $field['group_field'] || (!$groupField && !$field['group_field'])) {
 				echo '<tr>';
-				echo '<th class="col-head" width="160">' . $field['head'] . '</th>';
-				echo '<td class="col-input">';
+				echo '<th class="col-head bca-form-table__label">' . $field['head'] . '</th>';
+				echo '<td class="col-input bca-form-table__input">';
 			}
 			if (!empty($message['MailMessage'][$mailField['MailField']['field_name']])) {
 				echo $field['before_attachment'];
@@ -67,6 +74,22 @@
 </table>
 
 <!-- button -->
-<p class="submit">
-<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $mailContent['MailContent']['id'], $message['MailMessage']['id']), array('class' => 'submit-token btn-gray button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf(__d('baser', '受信メール NO「%s」を削除してもいいですか？'), $message['MailMessage']['id']), false); ?>
-</p>
+<div class="bca-actions">
+<?php 
+$this->BcBaser->link(__d('baser', '削除'), 
+	array(
+		'action' => 'delete', 
+		$mailContent['MailContent']['id'], 
+		$message['MailMessage']['id']), 
+	array(
+		'class' => 'submit-token button bca-btn bca-actions__item', 
+		'data-bca-btn-type'=>'delete',
+		'data-bca-btn-size' => 'sm',
+		'data-bca-btn-color' => 'danger',
+		'data-bca-btn-type' => 'delete'
+	), 
+	sprintf(__d('baser', '受信メール NO「%s」を削除してもいいですか？'), $message['MailMessage']['id']), 
+	false
+); 
+?>
+</div>

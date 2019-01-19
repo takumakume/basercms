@@ -144,17 +144,23 @@
     text-align: left;
 	}
 
-	&__thead-th {
+	tr &__thead-th {
 		white-space: nowrap;
-		vertical-align:top;
+		vertical-align:middle;
 		color: #fff;
 		background-color: $color_secondary;
 		// 選択
-		&--select {
+    &--select {
 			padding:10px;
 			input {
 				margin: 0;
 			}
+      a {
+        color: #fff;
+        .bca-btn-icon-text[data-bca-btn-type=draggable]::before {
+          color: #fff;
+        }
+      }
 		}
 	}
 
@@ -193,6 +199,11 @@
 	&__tbody-td {
 		border: none;
 		border-bottom: 1px solid #ccc;
+    // 行のホバー
+    tr:hover &{
+      background: $color_background_primary;
+      cursor: pointer;
+    }
 	}
 
 	&__tbody-th {
@@ -262,4 +273,9 @@
 			width:100%;
 		}
 	}
+
+  [data-bca-text-size=lg] {
+    font-size: 1.6rem;
+  }
+
 }

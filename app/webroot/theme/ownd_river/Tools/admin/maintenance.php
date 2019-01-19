@@ -19,7 +19,7 @@
 <div class="section bac-main__section">
 	<h2 class="bca-main__heading" data-bca-heading-size="lg">データのバックアップ</h2>
 	<p class="bca-main__text">データベースのデータをバックアップファイルとしてPCにダウンロードします。</p>
-	<p class="bca-main__text"><?php $this->BcBaser->link(__d('baser', 'ダウンロード'), array('backup'), array('class' => 'button-small bca-btn')) ?> </p>
+	<p class="bca-main__text"><?php $this->BcBaser->link(__d('baser', 'ダウンロード'), array('backup'), array('class' => 'button-small bca-btn', 'data-bca-btn-type' =>'download')) ?> </p>
 </div>
 	
 <div class="section bac-main__section">

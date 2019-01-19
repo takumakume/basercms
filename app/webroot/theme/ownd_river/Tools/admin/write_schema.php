@@ -20,7 +20,7 @@
 
 <table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
 	<tr>
-		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.baser', __d('baser', 'コアテーブル名')) ?></th>
+		<th class="col-head bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;<?php echo $this->BcForm->label('Tool.baser', __d('baser', 'コアテーブル名')) ?></th>
 		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.core', array(
 				'type' => 'select',
@@ -31,7 +31,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th class="col-head bca-form-table__label"><span class="required">*</span>&nbsp;<?php echo $this->BcForm->label('Tool.plugin', __d('baser', 'プラグインテーブル名')) ?></th>
+		<th class="col-head bca-form-table__label"><span class="bca-label" data-bca-label-type="required">必須</span>&nbsp;<?php echo $this->BcForm->label('Tool.plugin', __d('baser', 'プラグインテーブル名')) ?></th>
 		<td class="col-input bca-form-table__input">
 			<?php echo $this->BcForm->input('Tool.plugin', array(
 				'type' => 'select',
@@ -43,6 +43,10 @@
 	</tr>
 </table>
 
-<div class="submit"><?php echo $this->BcForm->submit(__d('baser', '生成'), array('div' => false, 'class' => 'btn-red button bca-btn')) ?></div>
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->submit(__d('baser', '生成'), array('div' => false, 'class' => 'btn-red button bca-btn bca-actions__item', 'data-bca-btn-size' =>'lg')) ?>
+	</div>
+</div>
 
 <?php echo $this->BcForm->end() ?>

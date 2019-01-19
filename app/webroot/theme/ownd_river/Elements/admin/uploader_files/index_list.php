@@ -38,40 +38,45 @@ $this->BcBaser->js('admin/vendors/jquery.upload-1.0.0.min');
 </div>
 <?php endif ?>
 
-<?php $this->BcBaser->element('pagination') ?>
 
 <?php if($installMessage): ?>
 <p style="color:#C00;font-weight:bold"><?php echo $installMessage ?></p>
 <?php endif ?>
 
-
-<div class="file-list-body clearfix corner5">
-		
-<table class="list-table">
-
-<thead>
-	<tr>
-<?php if(!$listId): ?>
-		<th id="UploaderForm">
+<div class="bca-list-head">
+	<?php if(!$listId): ?>
+		<div id="UploaderForm">
 	<?php if(!$installMessage): ?>
-			<div>
-		<?php if($uploaderCategories): ?>
-				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px')) ?><br />
-		<?php endif ?>
+		<div>
+			<label for="UploaderFileUploaderCategoryId">アップロード</label>
+			<?php if($uploaderCategories): ?>
+				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId)) ?>
+			<?php endif ?>
 				<span id="SpanUploadFile<?php echo $listId ?>">
 					<?php echo $this->BcForm->input('UploaderFile.file', array('type' => 'file', 'id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file')) ?>
 				</span>
-			</div>
+		</div>
 	<?php endif ?>
-		</th>
-<?php endif ?>
-		<th>NO</th>
-		<th>イメージ</th>
-		<th>カテゴリ</th>
-		<th>ファイル名<br />説明文</th>
-		<th>公開状態</th>
-		<th>投稿者</th>
-		<th>投稿日<br />編集日</th>
+		</div>
+	<?php endif ?>
+
+	<?php $this->BcBaser->element('pagination') ?>
+</div>
+
+<div class="file-list-body clearfix corner5">
+
+<table class="bca-table-listup">
+
+<thead class="bca-table-listup__thead">
+	<tr>
+		<th class="bca-table-listup__thead-th">NO</th>
+		<th class="bca-table-listup__thead-th">イメージ</th>
+		<th class="bca-table-listup__thead-th">カテゴリ</th>
+		<th class="bca-table-listup__thead-th">ファイル名<br />説明文</th>
+		<th class="bca-table-listup__thead-th">公開状態</th>
+		<th class="bca-table-listup__thead-th">投稿者</th>
+		<th class="bca-table-listup__thead-th">投稿日<br />編集日</th>
+		<th class="bca-table-listup__thead-th">アクション</th>
 	</tr>
 </thead>
 <?php if ($files): ?>

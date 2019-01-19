@@ -156,3 +156,119 @@ function p(data) {
 		if ( minute < 10 ) minute = '0' + minute;
 		return hour + ':' + minute;
 	}
+
+/**
+ * String 拡張
+ * sprintf の文字列置き換えのみ対応
+ *
+ * @returns {string}
+ */
+	String.prototype.sprintf = function() {
+		var str = this + '';
+		var args = Array.prototype.slice.call(arguments);
+
+		var ph = true;
+		if (str.indexOf('%s', 0) != -1) {
+			ph = false;
+		}
+
+		if (args.length === 1) {
+			if (ph) {
+				return str.replace(/%1$s/g, args[0]);
+			} else {
+				return str.replace(/%s/g, args[0]);
+			}
+		} else {
+			for (var i=0; i<args.length; i++) {
+				var n = i + 1;
+				if (ph) {
+					str = str.replace('%'+n+'$s', args[i]);
+				} else {
+					str = str.replace('%s', args[i]);
+				}
+			}
+		}
+		return str;
+	};
+
+
+  /**
+   * クリップボードにURLをコピーする
+   *
+   * @returns false
+   */
+$(function(){
+  var fullUrl = $("#AdminBlogBLogPostsEditScript").attr('data-fullurl');
+  var previewurlBase = $("#AdminBlogBLogPostsEditScript").attr('data-previewurl');
+
+  $("input[type=text]").each(function(){
+    $(this).keypress(function(e){
+      if(e.which && e.which === 13) {
+        return false;
+      }
+      return true;
+    });
+  });
+
+  if (!document.queryCommandSupported('copy')) {
+    $("#BtnCopyUrl").hide();
+  }
+
+  // URLコピー： クリック後にツールチップの表示内容を切替え
+  $("#BtnCopyUrl").on({
+    'click': function() {
+      var copyArea = $("<textarea style=\" opacity:0; width:1px; height:1px; margin:0; padding:0; border-style: none;\"/>");
+      copyArea.text(fullUrl);
+      $(this).after(copyArea);
+      copyArea.select();
+      document.execCommand("copy");
+      copyArea.remove();
+
+      // コピー完了のツールチップ表示 bootstrap tooltip
+      $("#BtnCopyUrl").tooltip('dispose'); // 一度削除
+      $("#BtnCopyUrl").tooltip({ title : 'コピーしました'});
+      $("#BtnCopyUrl").tooltip('show');
+      return false;
+    },
+    'mouseenter': function() {
+      // console.log('マウス ホバー');
+      $("#BtnCopyUrl").tooltip('dispose'); // 一度削除
+      $("#BtnCopyUrl").tooltip({ title : '公開URLをコピー'});
+      $("#BtnCopyUrl").tooltip('show');
+    },
+    'mouseleave': function() {
+      // console.log('マウス アウト');
+      $("#BtnCopyUrl").tooltip('hide');
+    }
+  });
+
+});
+
+
+/**
+ * collapse　オプション、詳細設定の折りたたみ開閉
+ *
+ * @returns false
+ */
+$(function(){
+  // URLコピー： クリック後にツールチップの表示内容を切替え
+  $("[data-bca-collapse='collapse']").on({
+    'click': function() {
+      const target = $(this).attr('data-bca-target');
+      // data-bca-state属性でtoggle
+      if($(target).attr('data-bca-state') == 'open') {
+        // 対象ID要素:非表示
+        $(target).attr('data-bca-state','').slideUp();
+        // ボタンの制御
+        $(this).attr('data-bca-state','').attr('aria-expanded','true');
+      } else {
+        // 対象ID要素:表示
+        $(target).attr('data-bca-state','open').slideDown();
+        // ボタンの制御
+        $(this).attr('data-bca-state','open').attr('aria-expanded','false');
+      }
+      return false;
+    }
+  });
+
+});

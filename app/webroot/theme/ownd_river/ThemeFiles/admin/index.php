@@ -52,14 +52,30 @@ $(function(){
 
 <div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('theme_files/index_list') ?></div>
 
-<div class="submit">
+<div class="bca-actions" data-bca-type="type2">
 	<?php if ($writable): ?>
+  <div class="bca-actions__form">
 		<?php echo $this->BcForm->create('ThemeFile', array('id' => 'ThemeFileUpload', 'url' => array_merge(array('action' => 'upload', $theme, $plugin, $type), $params), 'enctype' => 'multipart/form-data')) ?>
-		<?php echo $this->BcForm->input('ThemeFile.file', array('type' => 'file')) ?>
+		  <?php echo $this->BcForm->input('ThemeFile.file', array('type' => 'file')) ?>
 		<?php echo $this->BcForm->end() ?>
-		<?php $this->BcBaser->link(__d('baser', 'フォルダ新規作成'), array_merge(array('action' => 'add_folder', $theme, $type), $params), array('class' => 'btn-orange button')) ?>
-	<?php endif ?>
-	<?php if (($path || $type != 'etc') && $type != 'img' && $writable): ?>
-		<?php $this->BcBaser->link(__d('baser', 'ファイル新規作成'), array_merge(array('action' => 'add', $theme, $type), $params), array('class' => 'btn-red button')) ?>
-	<?php endif ?>
+  </div>
+  <?php endif ?>
+  <div class="bca-actions__adds">
+    <?php if ($writable): ?>
+		<?php $this->BcBaser->link(__d('baser', '<i class="bca-icon--folder"></i> フォルダ新規作成'), array_merge(array('action' => 'add_folder', $theme, $type), $params),
+      array(
+        'class' => 'bca-btn',
+        'data-bca-btn-type' => 'add'
+      )
+    ) ?>
+	  <?php endif ?>
+    <?php if (($path || $type != 'etc') && $type != 'img' && $writable): ?>
+      <?php $this->BcBaser->link(__d('baser', '<i class="bca-icon--file"></i> ファイル新規作成'), array_merge(array('action' => 'add', $theme, $type), $params),
+        array(
+          'class' => 'bca-btn',
+          'data-bca-btn-type' => 'add'
+        )
+      ) ?>
+    <?php endif ?>
+  </div>
 </div>

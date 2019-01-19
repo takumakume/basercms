@@ -26,7 +26,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 
 <h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
-<div class="section">
+<section class="bca-section" data-bca-section-type='form-group'>
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 <?php if ($this->action == 'admin_edit'): ?>
 			<tr>
@@ -38,7 +38,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</tr>
 <?php endif; ?>
 		<tr id="RowFieldName">
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.field_name', __d('baser', 'フィールド名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.field_name', __d('baser', 'フィールド名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.field_name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpFieldName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -47,7 +47,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowName">
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.name', __d('baser', '項目名')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.name', __d('baser', '項目名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -56,7 +56,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			</td>
 		</tr>
 		<tr id="RowType">
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.type', __d('baser', 'タイプ')) ?>&nbsp;<span class="required">*</span></th>
+			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.type', __d('baser', 'タイプ')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.type', array('type' => 'select', 'options' => $this->BcForm->getControlSource('type'))) ?>
 				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpType', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
@@ -155,17 +155,16 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 		<tr id="RowMaxlength">
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.maxlength', __d('baser', '最大値')) ?></th>
 			<td class="col-input bca-form-table__input">
-				<?php echo $this->BcForm->input('MailField.maxlength', array('type' => 'text', 'size' => 10, 'maxlength' => 255)) ?>文字
+				<?php echo $this->BcForm->input('MailField.maxlength', array('type' => 'text', 'size' => 10, 'maxlength' => 255)) ?>&nbsp;文字
 				<?php echo $this->BcForm->error('MailField.maxlength') ?>
 			</td>
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
-</div>
+</section>
 
-<h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption">オプション</a></h2>
-
-<div class="section">
+<div class="bca-section" data-bca-section-type='form-group'>
+	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption" class="bca-btn">オプション</a></h2>
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
 		<tr id="RowValidEx">
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.valid_ex', __d('baser', '拡張入力チェック')) ?></th>
@@ -266,10 +265,14 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 	</table>
 </div>
 
-<div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save')) ?>
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'id' => 'BtnSave', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+	</div>
 <?php if ($this->action == 'admin_edit'): ?>
-	<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $mailContent['MailContent']['id'], $this->BcForm->value('MailField.id')), array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('MailField.name')), false); ?>
+	<div class="bca-actions__sub">
+		<?php $this->BcBaser->link(__d('baser', '削除'), array('action' => 'delete', $mailContent['MailContent']['id'], $this->BcForm->value('MailField.id')), array('class' => 'submit-token button bca-btn bca-actions__item', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'sm'), sprintf('%s を本当に削除してもいいですか？', $this->BcForm->value('MailField.name')), false); ?>
+	</div>
 <?php endif ?>
 </div>
 

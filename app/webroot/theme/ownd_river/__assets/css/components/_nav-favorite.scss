@@ -22,10 +22,18 @@
 			font-size: .875em;
 			display: block;
 			a {
+        position: relative;
 				display: block;
-				padding: $nav_item_padding 0 $nav_item_padding $nav_item_padding;
+				padding: $nav_item_padding 0 $nav_item_padding * 2 $nav_item_padding * 3;
 				color: $color_text_secondary;
 				@extend .bca-icon--menuitem;
+        &:before {
+          position: absolute;
+          left: 0;
+          top: $nav_item_padding * 1;
+          margin-right: 0;
+        }
+
 				&:link,
 				&:visited {
 					// a:link のデフォルト設定を消すまで有効
@@ -39,8 +47,8 @@
 			}
 			&-label {
 				display: inline-block;
-				vertical-align: middle;
-				margin-left: 4px;
+				//vertical-align: middle;
+				//margin-left: 4px;
 			}
 		}
 	}

@@ -28,7 +28,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 ?>
 
 
-<table class="form-table">
+<table class="form-table bca-form-table">
 <?php if($this->request->action == 'admin_edit'): ?>
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.id', 'NO') ?></th>
@@ -41,11 +41,11 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.name', array('type' => 'input', 'size' => '30', 'autofocus' => true)) ?>
+			<?php echo $this->BcForm->input('Site.name', array('type' => 'text', 'size' => '30', 'autofocus' => true)) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトを特定する事ができる識別名称を入力します。半角英数とハイフン（-）・アンダースコア（_）のみが利用できます。エイリアスを入力しない場合は、URLにも利用されます。</div>
 			　<span style="white-space: nowrap;"><small>[<?php echo $this->BcForm->label('Site.alias', __d('baser', 'エイリアス')) ?>]</small>
-			<?php echo $this->BcForm->input('Site.alias', array('type' => 'input', 'size' => '10')) ?></span>
+			<?php echo $this->BcForm->input('Site.alias', array('type' => 'text', 'size' => '10')) ?></span>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトの識別名称とは別のURLにしたい場合、別名を入力する事ができます。エイリアスは半角英数に加えハイフン（-）・アンダースコア（_）・スラッシュ（/）・ドット（.）が利用できます。</div>
 			<?php echo $this->BcForm->error('Site.name') ?>
@@ -55,7 +55,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'input', 'size' => '60')) ?>
+			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'text', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイト名を入力します。管理システムでの表示に利用されます。日本語の入力が可能ですのでわかりやすい名前をつけてください。</div>
 			<?php echo $this->BcForm->error('Site.display_name') ?>
@@ -64,7 +64,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.title', array('type' => 'input', 'size' => '60')) ?>
+			<?php echo $this->BcForm->input('Site.title', array('type' => 'text', 'size' => '60')) ?>
 			<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 			<div class="helptext">サブサイトのタイトルを入力します。タイトルタグに利用されます。</div>
 			<?php echo $this->BcForm->error('Site.title') ?>
@@ -91,7 +91,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.device', __d('baser', 'デバイス・言語')) ?></th>
 		<td class=" bca-form-table__input">
 			<?php if($useSiteDeviceSetting): ?>
-				<small>[デバイス]</small><?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
+				<small>[デバイス]</small>&nbsp;<?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
 				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 				<div class="helptext">サブサイトにデバイス属性を持たせ、サイトアクセス時、ユーザーエージェントを判定し適切なサイトを表示する機能を利用します。</div>
 			<?php else: ?>
@@ -103,7 +103,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 				<div class="helptext">サブサイトに言語属性を持たせ、サイトアクセス時、ブラウザの言語設定を判定し適切なサイトを表示する機能を利用します。</div>
 			<?php else: ?>
 				<?php echo $this->BcForm->input('Site.lang', ['type' => 'hidden']) ?>
-			<?php endif ?>				
+			<?php endif ?>デバイス
 			<div id="SectionAccessType" style="display:none">
 				<small>[アクセス設定]</small>
 				<br>
@@ -116,6 +116,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 					<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 					<span class="helptext">メインサイトと別URLでアクセスする際、デバイス設定や言語設定を判定し、適切なサイトへリダイレクトします。</span>　
 				</span>
+				<br>
 				<span id="SpanSiteAutoLink"><?php echo $this->BcForm->input('Site.auto_link', array('type' => 'checkbox', 'label' => __d('baser', '全てのリンクをサブサイト用に変換する'))) ?>&nbsp;
 					<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
 					<span class="helptext">メインサイトと別URLでアクセスし、エイリアスを利用して同一コンテンツを利用する場合、コンテンツ内の全てのリンクをサブサイト用に変換します。</span>

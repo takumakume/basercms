@@ -74,6 +74,10 @@
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
-<div class="submit"><?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?></div>
+<div class="submit bca-actions">
+	<div class="bca-actions__main">
+		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+	</div>
+</div>
 
 <?php echo $this->BcForm->end() ?>

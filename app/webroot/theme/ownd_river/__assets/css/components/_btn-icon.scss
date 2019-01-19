@@ -67,6 +67,12 @@
 		@include bca-btn-icon-common;
 	}
 
+  // 一覧に戻る
+  &[data-bca-btn-type=back-to-list] {
+    @extend .#{$fa-css-prefix}-chevron-left;
+    @include bca-btn-icon-common;
+  }
+
 	// お気に入り
 	&[data-bca-btn-type=favorite] {
 		@extend .#{$fa-css-prefix}-heart;
@@ -103,7 +109,7 @@
 		@include bca-btn-icon-common;
 	}
 
-	// HOME
+	// ログイン
 	&[data-bca-btn-type=login] {
 		@include bca-btn-icon-common;
 		color: $color_lightest;
@@ -129,7 +135,79 @@
     @include bca-btn-icon-common;
   }
 
-	// サイズ
+  // ダウンロード
+  &[data-bca-btn-type=download] {
+    @extend .#{$fa-css-prefix}-download;
+    @include bca-btn-icon-common;
+  }
+
+  // ドラック可能
+  &[data-bca-btn-type=draggable] {
+    @extend .#{$fa-css-prefix}-arrows-v;
+    @include bca-btn-icon-common;
+  }
+
+  // Login
+  &[data-bca-btn-type=switch] {
+    @extend .#{$fa-css-prefix}-sign-in;
+    @include bca-btn-icon-common;
+  }
+
+  // フォルダ
+  &[data-bca-btn-type=folder] {
+    @extend .#{$fa-css-prefix}-folder;
+    @include bca-btn-icon-common;
+  }
+  // ファイル
+  &[data-bca-btn-type=file] {
+    @extend .#{$fa-css-prefix}-file-o;
+    @include bca-btn-icon-common;
+  }
+
+  // 1階層上に戻る
+  &[data-bca-btn-type=up-directory] {
+    @extend .#{$fa-css-prefix}-arrow-up;
+    @include bca-btn-icon-common;
+  }
+
+  // 矢印　右
+  &[data-bca-btn-type=arrow-right] {
+    @extend .#{$fa-css-prefix}-arrow-right;
+    @include bca-btn-icon-common;
+  }
+  // 矢印　左
+  &[data-bca-btn-type=arrow-left] {
+    @extend .#{$fa-css-prefix}-arrow-left;
+    @include bca-btn-icon-common;
+  }
+  // 矢印　上
+  &[data-bca-btn-type=arrow-up] {
+    @extend .#{$fa-css-prefix}-arrow-up;
+    @include bca-btn-icon-common;
+  }
+  // 矢印　下
+  &[data-bca-btn-type=arrow-down] {
+    @extend .#{$fa-css-prefix}-arrow-down;
+    @include bca-btn-icon-common;
+  }
+  // ファイルリスト
+  &[data-bca-btn-type=file-list] {
+    @extend .#{$fa-css-prefix}-file-text;
+    @include bca-btn-icon-common;
+  }
+  // アップデート
+  &[data-bca-btn-type=update] {
+    @extend .#{$fa-css-prefix}-refresh;
+    @include bca-btn-icon-common;
+  }
+  // 設定
+  &[data-bca-btn-type=setting] {
+    @extend .#{$fa-css-prefix}-gear;
+    @include bca-btn-icon-common;
+  }
+
+
+  // サイズ
 	// ===========================
 
 	// large
@@ -172,6 +250,20 @@
 			background: $color_secondary;
 		}
 	}
+  // 白
+  &[data-bca-btn-status=white] {
+    color: #fff;
+    &::before {
+      color: #fff;
+    }
+    &:hover {
+      color: #fff;
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+
 
 	// disabled
 	&[disabled] {

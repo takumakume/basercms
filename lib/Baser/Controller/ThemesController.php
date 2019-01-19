@@ -84,7 +84,7 @@ class ThemesController extends AppController {
 					$this->redirect(['action' => 'index']);
 				} else {
 					$msg = __d('baser', 'アップロードしたZIPファイルの展開に失敗しました。');
-					$msg .= '<br />'.$BcZip->error;
+					$msg .= "\n" . $BcZip->error;
 					$this->setMessage($msg, true);
 				}
 			}

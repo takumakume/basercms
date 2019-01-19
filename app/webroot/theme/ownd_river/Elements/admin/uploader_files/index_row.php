@@ -20,15 +20,8 @@ if (!$this->Uploader->isPublish($file)) {
 $class = ' class="' . implode(' ', $classies) . '"';
 ?>
 
-
 <tr<?php echo $class; ?> id="selectedFile<?php echo $file['UploaderFile']['id'] ?>">
-<?php if(!$listId): ?>
-	<td class="row-tools" style="width:15%">
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_edit.png', array('alt' => __d('baser', '編集'), 'class' => 'btn')), array('action' => 'edit', $file['UploaderFile']['id']), array('title' => __d('baser', '編集'))) ?>
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_delete.png', array('alt' => __d('baser', '削除'), 'class' => 'btn')), array('action' => 'delete', $file['UploaderFile']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete')) ?>
-	</td>
-<?php endif ?>
-	<td class="id">
+	<td class="id bca-table-listup__tbody-td">
 		<?php echo $file['UploaderFile']['id'] ?>
 		<div  style="display:none">
 			<span class="small"><?php echo $file['UploaderFile']['small'] ?></span>
@@ -40,16 +33,22 @@ $class = ' class="' . implode(' ', $classies) . '"';
 			<span class="alt"><?php echo $file['UploaderFile']['alt'] ?></span>
 		</div>
 	</td>
-	<td class="img"><?php echo $this->Uploader->file($file,array('size'=>'small','alt'=>$file['UploaderFile']['alt'],'style'=>'width:80px')) ?></td>
-	<td><span class="uploader-category-id"><?php echo $this->BcText->arrayValue($file['UploaderFile']['uploader_category_id'], $uploaderCategories) ?></td>
-	<td width="30%">
+	<td class="img bca-table-listup__tbody-td"><?php echo $this->Uploader->file($file,array('size'=>'small','alt'=>$file['UploaderFile']['alt'],'style'=>'width:80px')) ?></td>
+	<td class="bca-table-listup__tbody-td"><span class="uploader-category-id"><?php echo $this->BcText->arrayValue($file['UploaderFile']['uploader_category_id'], $uploaderCategories) ?></td>
+	<td class="bca-table-listup__tbody-td">
 		<span><?php echo $file['UploaderFile']['name'] ?></span>
 		<?php if ($file['UploaderFile']['alt']): ?><br /><span><?php echo $this->BcText->truncate($file['UploaderFile']['alt'], 40) ?><span><?php endif ?>
 	</td>
-	<td class="bc-align-center"><?php echo $this->BcText->booleanMark($statusPublish); ?></td>
-	<td class="user-name"><?php echo $this->BcText->arrayValue($file['UploaderFile']['user_id'], $users) ?></td>
-	<td class="created">
+	<td class="bc-align-center bca-table-listup__tbody-td"><?php echo $this->BcText->booleanMark($statusPublish); ?></td>
+	<td class="user-name bca-table-listup__tbody-td"><?php echo $this->BcText->arrayValue($file['UploaderFile']['user_id'], $users) ?></td>
+	<td class="created bca-table-listup__tbody-td">
 		<span class="created"><?php echo $this->BcTime->format('Y.m.d',$file['UploaderFile']['created']) ?></span><br />
 		<span class="modified"><?php echo $this->BcTime->format('Y.m.d',$file['UploaderFile']['modified']) ?></span>
 	</td>
+<?php if(!$listId): ?>
+	<td class="row-tools bca-table-listup__tbody-td" style="width:15%">
+		<?php $this->BcBaser->link('', array('action' => 'edit', $file['UploaderFile']['id']), array('title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'delete', $file['UploaderFile']['id']), array('title' => __d('baser', '削除'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+	</td>
+<?php endif ?>
 </tr>

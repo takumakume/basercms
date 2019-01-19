@@ -14,8 +14,8 @@
 
 <?php echo $this->BcForm->create() ?>
 <?php echo $this->BcForm->hidden('ContentFolder.id') ?>
-<table class="form-table bca-form-table">
-	<tr>
+<table class="form-table bca-form-table" data-bca-table-type="type2">
+  <tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('ContentFolder.folder_template', __d('baser', 'フォルダーテンプレート')) ?></th>
 		<td class="bca-form-table__input">
 			<?php echo $this->BcForm->input('ContentFolder.folder_template', array('type' => 'select', 'options' => $folderTemplateList)) ?>

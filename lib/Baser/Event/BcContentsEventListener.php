@@ -85,42 +85,22 @@ class BcContentsEventListener extends CakeObject implements CakeEventListener {
 			return $event->data['out'];
 		}
 		$setting = Configure::read('BcContents.items.' . $data['Content']['plugin'] . '.' . $data['Content']['type']);
-		// 一覧
-		$outputArray = [
-			$View->BcHtml->link(__d('baser', '一覧に戻る'), ['plugin' => '', 'admin' => true, 'controller' => 'contents', 'action' => 'index'], ['class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list']),
-		];
-		if (!empty($setting['preview']) && $data['Content']['type'] != 'ContentFolder') {
-			$outputArray[] = $View->BcForm->button(__d('baser', 'プレビュー'), ['class' => 'button bca-btn', 'data-bca-btn-type'=>'preview', 'id' => 'BtnPreview']);
-		}
-		// 既存のボタン
-		$outputArray[] = $event->data['out'];
-		$outputArray = [$View->Html->div('bca-section__submit__main', implode("\n", $outputArray))];
-		// 削除ボタン
-		if(empty($data['Content']['site_root'])) {
-			if($data['Content']['alias_id']) {
-				$deleteText = __d('baser', '削除');
-			} else {
-				$deleteText = __d('baser', 'ゴミ箱へ移動');
-			}
-			$PermissionModel = ClassRegistry::init('Permission');
-			if ($PermissionModel->check('/' . Configure::read('Routing.prefixes.0') . '/contents/delete', $View->viewVars['user']['user_group_id'])) {
-				$outputArray[] = $View->Html->div('bca-section__submit__sub', $View->BcForm->button($deleteText, [
-					'data-bca-btn-type' => 'delete',
-					'data-bca-btn-size' => 'sm',
-					'data-bca-btn-color' => 'danger',
-					'class' => 'button bca-btn', 
-					'id' => 'BtnDelete'
-				]));
-			}
-		}
-		$outputArray = [$View->Html->div('bca-section__submit', implode("\n", $outputArray))];
-		// その他エレメント
-		$outputArray = array_merge($outputArray, [
+
+		$PermissionModel = ClassRegistry::init('Permission');
+		$isAvailablePreview = (!empty($setting['preview']) && $data['Content']['type'] != 'ContentFolder');
+		$isAvailableDelete = (empty($data['Content']['site_root']) && $PermissionModel->check('/' . Configure::read('Routing.prefixes.0') . '/contents/delete', $View->viewVars['user']['user_group_id']));
+
+		$event->data['out'] = implode("\n", [
 			$View->element('admin/content_options'),
-			$View->element('admin/content_related'),
-			$View->element('admin/content_info')
+			$View->element('admin/content_actions', [
+				'isAvailablePreview' => $isAvailablePreview,
+				'isAvailableDelete' => $isAvailableDelete,
+				'currentAction' => $event->data['out'],
+				'isAlias' => ($data['Content']['alias_id'])
+			]),
+        	$View->element('admin/content_related'),
+        	$View->element('admin/content_info')
 		]);
-		$event->data['out'] = implode("\n", $outputArray);
 		return $event->data['out'];
 	}
 

@@ -19,7 +19,7 @@
 <div class="section bca-main__section">
 	<h2 class="bca-main__heading" data-bca-heading-size="lg">ログ(エラーログ)の取得</h2>
 	<p class="bca-main__text">ログ(エラーログ)をPCにダウンロードします。</p>
-	<p class="bca-main__text"><?php $this->BcBaser->link(__d('baser', 'ダウンロード'), array('download'), array('class' => 'button-small bca-btn')) ?> </p>
+	<p class="bca-main__text"><?php $this->BcBaser->link(__d('baser', 'ダウンロード'), array('download'), array('class' => 'button-small bca-btn', 'data-bca-btn-type' =>'download')) ?> </p>
 </div>
 
 <div class="section bca-main__section">

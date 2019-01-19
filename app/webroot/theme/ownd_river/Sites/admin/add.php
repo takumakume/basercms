@@ -21,7 +21,7 @@ $this->BcBaser->js('admin/sites/edit', false);
 
 <?php $this->BcBaser->element('sites/form') ?>
 
-<div class="submit">
-	<?php echo $this->BcHtml->link(__d('baser', '一覧に戻る'), array('plugin' => '', 'admin' => true, 'controller' => 'sites', 'action' => 'index'), array('class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list')) ?>
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save')) ?>
+<div class="submit bca-actions">
+	<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
 </div>
+<?php echo $this->BcHtml->link(__d('baser', '一覧に戻る'), array('plugin' => '', 'admin' => true, 'controller' => 'sites', 'action' => 'index'), array('class' => 'button bca-btn', 'data-bca-btn-type' => 'back-to-list')) ?>

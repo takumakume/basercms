@@ -276,6 +276,7 @@ class BcFormHelper extends FormHelper {
 				], $options);
 				break;
 			case 'text':
+			case 'password':
 			case 'datepicker':	
 				if (!isset($options['label'])) {
 					$options['label'] = false;

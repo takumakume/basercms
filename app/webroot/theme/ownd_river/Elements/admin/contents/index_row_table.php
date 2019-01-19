@@ -57,10 +57,31 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 <tr id="Row<?php echo $count + 1 ?>" <?php echo $class; ?>>
 	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--select"><?php // 選択 ?>
 		<?php if ($this->BcBaser->isAdminUser() && empty($data['Content']['site_root'])): ?>
-			<?php echo $this->BcForm->checkbox('ListTool.batch_targets.' . $data['Content']['id'], ['type' => 'checkbox', 'class' => 'batch-targets', 'value' => $data['Content']['id']]) ?>
+			<?php echo $this->BcForm->input('ListTool.batch_targets.' . $data['Content']['id'], ['type' => 'checkbox', 'label'=> '<span class="bca-visually-hidden">チェックする</span>', 'class' => 'batch-targets bca-checkbox__input', 'value' => $data['Content']['id']]) ?>
 		<?php endif ?>
 	</td>
-	<td class="bca-table-listup__tbody-td" style="width:20%">
+	<td class="bca-table-listup__tbody-td" style="width:5%"><?php echo $data['Content']['id'] ?></td>
+	<td class="bca-table-listup__tbody-td" style="width:5%">
+		<?php $this->BcBaser->img($iconPath, ['title' => $typeTitle]) ?>
+		<?php if($data['Content']['alias_id']): ?>
+		<span class="alias"></span>
+		<?php endif ?>
+	</td>
+	<td class="bca-table-listup__tbody-td" style="word-break: break-all;">
+		<?php $this->BcBaser->link(urldecode($fullUrl), $fullUrl, ['target' => '_blank']) ?><br>
+		<?php echo h($data['Content']['title']) ?>
+	</td>
+	<td class="bca-table-listup__tbody-td" style="width:8%;text-align:center">
+		<?php echo $this->BcText->booleanMark($data['Content']['status']); ?>
+	</td>
+	<td class="bca-table-listup__tbody-td" style="width:8%;text-align:center">
+		<?php echo $this->BcText->arrayValue($data['Content']['author_id'], $authors); ?>
+	</td>
+	<td class="bca-table-listup__tbody-td" style="width:8%;white-space: nowrap">
+		<?php echo $this->BcTime->format('Y-m-d', $data['Content']['created_date']) ?><br />
+		<?php echo $this->BcTime->format('Y-m-d', $data['Content']['modified_date']) ?>
+	</td>
+	<td class="bca-table-listup__tbody-td">
 		<?php if($isPublish): ?>
 			<?php $this->BcBaser->link('', $fullUrl, ['title' => __d('baser', '確認'), 'class' => 'btn-check bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg', 'target' => '_blank']) ?>
 		<?php endif ?>
@@ -90,27 +111,6 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 			<input type="hidden" name="data[status]" value="<?php echo $toStatus ?>">
 			<input type="hidden" name="data[alias]" value="<?php echo (bool) $data['Content']['alias_id'] ?>">
 		</form>
-	</td>
-	<td class="bca-table-listup__tbody-td" style="width:5%"><?php echo $data['Content']['id'] ?></td>
-	<td class="bca-table-listup__tbody-td" style="width:5%">
-		<?php $this->BcBaser->img($iconPath, ['title' => $typeTitle]) ?>
-		<?php if($data['Content']['alias_id']): ?>
-		<span class="alias"></span>
-		<?php endif ?>
-	</td>
-	<td class="bca-table-listup__tbody-td" style="word-break: break-all;">
-		<?php $this->BcBaser->link(urldecode($fullUrl), $fullUrl, ['target' => '_blank']) ?><br>
-		<?php echo h($data['Content']['title']) ?>
-	</td>
-	<td class="bca-table-listup__tbody-td" style="width:8%;text-align:center">
-		<?php echo $this->BcText->booleanMark($data['Content']['status']); ?>
-	</td>
-	<td class="bca-table-listup__tbody-td" style="width:8%;text-align:center">
-		<?php echo $this->BcText->arrayValue($data['Content']['author_id'], $authors); ?>
-	</td>
-	<td class="bca-table-listup__tbody-td" style="width:8%;white-space: nowrap">
-		<?php echo $this->BcTime->format('Y-m-d', $data['Content']['created_date']) ?><br />
-		<?php echo $this->BcTime->format('Y-m-d', $data['Content']['modified_date']) ?>
 	</td>
 </tr>
 

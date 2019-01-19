@@ -175,11 +175,6 @@ class BlogPostsController extends BlogAppController {
 			return;
 		}
 
-		$this->mainBodyHeaderLinks[] = [
-			'url' => ['action' => 'add', $blogContentId],
-			'title' => __d('baser', '新規記事追加'),
-		];
-
 		if ($this->request->params['Content']['status']) {
 			$this->set('publishLink', $this->request->params['Content']['url']);
 		}
