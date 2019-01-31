@@ -33,6 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		data.menuList.forEach(function (item, i) {
 			if (item.type === 'system') {
+				item.menus = item.menus.filter(function (menu) { return menu.url !== item.url });
 				systemList.push(item);
 			} else {
 				contentList.push(item);

@@ -47,10 +47,10 @@
 					<h4 class="bca-nav__system-list-item-title">
 						<a v-bind:href="baseURL + system.url" class="bca-nav__sub-title-label">{{ system.title }}</a>
 					</h4>
-					<ul class="bca-nav__sub-list">
-						<li v-for="subSystem in system.menus" class="bca-nav__sub-list-item" v-bind:data-sub-content-is-current="subSystem.current">
+					<ul v-if="system.menus && system.menus.length" class="bca-nav__system-sub-list">
+						<li v-for="subSystem in system.menus" class="bca-nav__system-sub-list-item" v-bind:data-sub-content-is-current="subSystem.current">
 							<a v-bind:href="baseURL + subSystem.url">
-								<span class="bca-nav__sub-list-item-title">{{ subSystem.title }}</span>
+								<span class="bca-nav__system-sub-list-item-title">{{ subSystem.title }}</span>
 							</a>
 						</li>
 					</ul>

@@ -283,10 +283,9 @@
 		&[data-content-is-current="true"] {
 			.bca-nav__system-title {
 				color: $color_text_primary;
-				background: $color_background_primary;
+				background: $color_background_menu_current;
 				cursor: default;
 
-				background: $color_background_menu_current;
 				&-label {
 					//color: #fff;
 				}
@@ -305,9 +304,17 @@
 					// 現在開いているページ
 					&[data-content-is-current="true"] {
 						background: $color_primary;
+
+						> h4 {
+							background: $color_secondary;
+						}
+
 						a {
-							position: relative;
 							color: $color_lightest;
+						}
+
+						> h4 > a {
+							position: relative;
 							font-weight: bold;
 
 							&:link,
@@ -333,6 +340,32 @@
 									transparent transparent;
 							}
 						}
+					}
+				}
+			}
+
+			.bca-nav__system-sub-list {
+				padding-top: 10px;
+			}
+		}
+
+		&-sub-list {
+			display: block;
+			margin: 0;
+			padding: 0 10px 10px 24px;
+			list-style: none;
+			font-size: .8em;
+
+			&-item {
+				line-height: 1.8;
+				margin: 0;
+				padding: 0;
+
+				a {
+					color: $color_text_primary;
+					@extend .bca-icon--menuitem;
+					&::before {
+						color: currentColor;
 					}
 				}
 			}
