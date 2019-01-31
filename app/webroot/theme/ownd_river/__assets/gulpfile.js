@@ -23,7 +23,7 @@ const CSS_DIST_DIR = '../css/admin/';
 
 gulp.task('css', () => {
 	return gulp
-	.src(`${CSS_DEV_DIR}${CSS_MAIN_SCSS_FILENAME}`)
+	.src(`${CSS_DEV_DIR}*`)
 	.pipe(plumber({
 		errorHandler: function (err) {
 			console.log(err.messageFormatted);
