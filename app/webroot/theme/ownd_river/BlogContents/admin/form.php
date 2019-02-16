@@ -214,7 +214,8 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
   'type' => 'submit',
   'class' => 'button bca-btn',
   'data-bca-btn-type' => 'save',
-  'data-bca-btn-size' => 'xl',
+  'data-bca-btn-size' => 'lg',
+  'data-bca-btn-width' => 'lg',
   'id' => 'BtnSave'
   )) ?>
 </div>

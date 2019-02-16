@@ -142,8 +142,9 @@ $(function(){
 				'id' => 'BtnSave',
 				'div' => false,
 				'class' => 'button bca-btn bca-actions__item',
-				'data-bca-btn-type' => 'save',
-				'data-bca-btn-size' => 'xl'
+        'data-bca-btn-type' => 'save',
+        'data-bca-btn-size' => 'lg',
+        'data-bca-btn-width' => 'lg',
 		)); ?>
 	</div>
 	<?php if ($this->action == 'admin_edit'): ?>

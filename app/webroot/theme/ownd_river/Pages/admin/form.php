@@ -78,11 +78,12 @@ $this->BcBaser->js('admin/pages/edit', false);
 
 
 <?php echo $this->BcForm->submit(__d('baser', '保存'), [
-    'div' => false,
-    'class' => 'button bca-btn',
-    'data-bca-btn-type' => 'save',
-    'data-bca-btn-size' => 'xl', 
-    'id' => 'BtnSave'
+  'div' => false,
+  'class' => 'button bca-btn',
+  'data-bca-btn-type' => 'save',
+  'data-bca-btn-size' => 'lg',
+  'data-bca-btn-width' => 'lg',
+  'id' => 'BtnSave'
 ]) ?>
 
 

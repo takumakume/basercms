@@ -128,7 +128,7 @@ $this->BcBaser->js('admin/users/edit', false);
 
 <div class="submit section bca-actions">
 	<div class="bca-actions__main">
-		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl', 'id' => 'BtnSave')) ?>
+		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'lg', 'data-bca-btn-width' => 'lg','id' => 'BtnSave')) ?>
 	</div>
 <?php if ($editable): ?>
 	<div class="bca-actions__sub">

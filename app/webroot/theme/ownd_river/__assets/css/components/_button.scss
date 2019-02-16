@@ -72,9 +72,9 @@
 		@include btn-common;
 	}
 
-	// 確認
+	// 確認(プレビュー）
 	&[data-bca-btn-type=preview] {
-		@extend .#{$fa-css-prefix}-eye;
+		//@extend .#{$fa-css-prefix}-eye;
 		@include btn-common;
 	}
 
@@ -92,7 +92,7 @@
 
 	// 保存
 	&[data-bca-btn-type=save] {
-		@extend .#{$fa-css-prefix}-upload;
+		//@extend .#{$fa-css-prefix}-upload;
 		@include btn-primary;
 	}
 
@@ -231,6 +231,20 @@
 			//font-size: 1.2rem;
 		}
 	}
+
+  // 横幅
+  // ===========================
+  // xlarge
+  &[data-bca-btn-width=xl] {
+    padding-right: 5em;
+    padding-left: 5em;
+  }
+  // large
+  &[data-bca-btn-width=lg] {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+
 
   // category
   // ===========================
