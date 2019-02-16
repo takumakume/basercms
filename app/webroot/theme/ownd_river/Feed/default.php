@@ -28,7 +28,7 @@
 			<?php else: ?>
 				<?php $class = ' class="bca-feed__list-item feed' . $no . '"' ?>
 			<?php endif ?>
-			<li<?php echo $class ?>> <span class="date"><?php echo date("Y.m.d", strtotime($item['pubDate']['value'])); ?></span><br />
+			<li<?php echo $class ?>> <span class="date bca-feed__list-item-date"><?php echo date("Y.m.d", strtotime($item['pubDate']['value'])); ?></span><br />
 				<span class="title bca-feed__list-item-title"><a href="<?php echo $item['link']['value']; ?>"><?php echo $item['title']['value']; ?></a></span></li>
 		<?php endforeach; ?>
 	</ul>

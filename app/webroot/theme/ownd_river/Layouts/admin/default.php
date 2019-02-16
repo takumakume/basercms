@@ -93,6 +93,12 @@
 			'admin/favorite',
 			'admin/permission'))
 		?>
+	<script>
+		$.bcUtil.init({
+			baseUrl: '<?php echo $this->request->base ?>',
+			adminPrefix: '<?php echo BcUtil::getAdminPrefix() ?>'
+		});
+	</script>
 <?php $this->BcBaser->scripts() ?>
 	</head>
 

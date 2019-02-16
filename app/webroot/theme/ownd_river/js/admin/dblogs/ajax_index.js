@@ -14,7 +14,7 @@ $ (function (){
 	function loadDblogs(){
 		var ajaxurl = $(this).attr('href');
 		if(ajaxurl == undefined) {
-			ajaxurl = $.baseUrl + '/admin/dblogs/ajax_index';
+			ajaxurl = $.baseUrl + '/' + $.bcUtil.adminPrefix + '/dblogs/ajax_index';
 		}
 		$.bcUtil.ajax(ajaxurl, function(response, status){
 			if(response){
@@ -26,9 +26,10 @@ $ (function (){
 				link.click(loadDblogs);
 				$.bcToken.replaceLinkToSubmitToken("#DblogList a.submit-token");
 			}else{
-				$.bcUtil.showAlertMessage('処理に失敗しました。');
+				$.bcUtil.showAlertMessage(bcI18n.alertMessage1);
 			}
 		}, {
+			type: 'GET',
 			loaderType: 'inner',
 			loaderSelector: '#DblogList'
 		});
