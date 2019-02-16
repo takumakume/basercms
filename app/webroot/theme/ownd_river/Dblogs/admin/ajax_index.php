@@ -13,11 +13,12 @@
 
 
 <?php if ($dblogs): ?>
+<div class="bca-update-log">
 	<?php $this->passedArgs['action'] = 'ajax_index' ?>
 	<?php $this->BcBaser->element('pagination', array('modules' => 4, 'options' => array('url' => array('action' => 'ajax_index')))) ?>
-	<ul class="clear">
+	<ul class="clear bca-update-log__list">
 		<?php foreach ($dblogs as $record): ?>
-			<li><span class="date"><?php echo $this->BcTime->format('Y.m.d', $record['Dblog']['created']) ?></span>
+			<li class="bca-update-log__list-item"><span class="date"><?php echo $this->BcTime->format('Y.m.d', $record['Dblog']['created']) ?></span>
 				<small><?php echo $this->BcTime->format('H:i:s', $record['Dblog']['created']) ?>&nbsp;
 					<?php
 					$userName = $this->BcBaser->getUserName($record['User']);
@@ -31,10 +32,11 @@
 	</ul>
 	<?php $this->BcBaser->element('list_num') ?>
 	<?php if(BcUtil::isAdminUser()): ?>
-	<div class="submit clear">
+	<div class="submit clear bca-update-log__delete">
 		<?php
 		$this->BcBaser->link(__d('baser', '削除'), array('action' => 'del'), array('class' => 'btn-gray button submit-token bca-btn', 'data-bca-btn-type' => 'delete'), __d('baser', '最近の動きのログを削除します。いいですか？'))
 		?>
 	</div>
-	<?php endif ?>	
+	<?php endif ?>
+</div>
 <?php endif ?>
