@@ -12385,6 +12385,19 @@ div.jstree-publish-even {
     font-size: 1.4rem;
     line-height: 1.5; }
 
+.bca-feed__title {
+  margin: 0 0 10px;
+  font-size: 1.4rem; }
+
+.bca-feed__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .bca-feed__list-item {
+    margin-bottom: 39px;
+    font-size: 1.4rem;
+    line-height: 1.5; }
+
 .bca-update-log__list {
   margin: 20px 0 30px;
   padding: 0;
@@ -15975,32 +15988,37 @@ table.cake-sql-log tr td {
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
 
-.bca-panel-box {
-  padding: 25px 20px;
-  margin: 0 20px 0 0;
-  background: #fff; }
-  .bca-panel-box__title {
-    margin: 0 0 30px 0;
-    font-size: 1.8rem; }
-  .bca-panel-box__inline-fields {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch; }
-    .bca-panel-box__inline-fields-item {
+.bca-panel {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  .bca-panel-box {
+    width: calc( 33.33% - 20px);
+    padding: 25px 20px;
+    margin: 0;
+    background: #fff; }
+    .bca-panel-box__title {
+      margin: 0 0 30px 0;
+      font-size: 1.8rem; }
+    .bca-panel-box__inline-fields {
       display: flex;
       justify-content: flex-start;
-      align-items: center; }
-    .bca-panel-box__inline-fields-title {
-      font-weight: bold;
-      display: inline-block;
-      margin-right: 0.5em; }
-    .bca-panel-box__inline-fields-separator {
-      width: 1px;
-      background: #cccccc;
-      margin: 0 2em; }
-      .bca-panel-box__inline-fields-separator::before {
-        content: "";
-        display: block; }
+      align-items: stretch; }
+      .bca-panel-box__inline-fields-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+      .bca-panel-box__inline-fields-title {
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 0.5em; }
+      .bca-panel-box__inline-fields-separator {
+        width: 1px;
+        background: #cccccc;
+        margin: 0 2em; }
+        .bca-panel-box__inline-fields-separator::before {
+          content: "";
+          display: block; }
 
 /* 古いスタイル インストール画面など
 ----------------------------------------------- */
