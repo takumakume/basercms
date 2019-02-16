@@ -36,11 +36,11 @@
 <div class="submit bca-actions">
 <?php if($this->action == 'admin_add'): ?>
 	<div class="bca-actions__main">
-		<?php echo $this->BcForm->button(__d('baser', '登録'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+		<?php echo $this->BcForm->button(__d('baser', '登録'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'lg', 'data-bca-btn-width' => 'lg',)) ?>
 	</div>
 <?php else: ?>
 	<div class="bca-actions__main">
-		<?php echo $this->BcForm->button(__d('baser', '更新'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'xl')) ?>
+		<?php echo $this->BcForm->button(__d('baser', '更新'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'lg', 'data-bca-btn-width' => 'lg',)) ?>
 	</div>
 	<div class="bca-actions__sub">
 		<?php $this->BcBaser->link(__d('baser', '削除'),

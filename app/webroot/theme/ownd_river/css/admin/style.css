@@ -997,7 +997,7 @@ template {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -1102,7 +1102,7 @@ template {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -4319,7 +4319,7 @@ div.jstree-publish-even {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -4424,7 +4424,7 @@ div.jstree-publish-even {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -6612,7 +6612,7 @@ div.jstree-publish-even {
         position: relative;
         display: block;
         padding: 4px 0px 8px 14px;
-        font-size: 1.2rem; }
+        font-size: 1.3rem; }
         .bca-nav-favorite-list-item a:before {
           position: absolute;
           left: 0;
@@ -7138,7 +7138,7 @@ div.jstree-publish-even {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -7243,7 +7243,7 @@ div.jstree-publish-even {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -10003,7 +10003,7 @@ div.jstree-publish-even {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -10108,7 +10108,7 @@ div.jstree-publish-even {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -13362,7 +13362,7 @@ table.cake-sql-log tr td {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -13467,7 +13467,7 @@ table.cake-sql-log tr td {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -15766,6 +15766,12 @@ table.cake-sql-log tr td {
     font-size: 1.1rem;
     font-size: 0.78rem;
     padding: .6em .8em .4em; }
+  .bca-btn[data-bca-btn-width=xl] {
+    padding-right: 5em;
+    padding-left: 5em; }
+  .bca-btn[data-bca-btn-width=lg] {
+    padding-right: 3em;
+    padding-left: 3em; }
   .bca-btn[data-bca-btn-category=text] {
     font-size: 1.4rem;
     padding: 0;
@@ -16677,7 +16683,7 @@ table.cake-sql-log tr td {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -16782,7 +16788,7 @@ table.cake-sql-log tr td {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -19415,7 +19421,7 @@ table.cake-sql-log tr td {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -19520,7 +19526,7 @@ table.cake-sql-log tr td {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
@@ -21767,7 +21773,7 @@ table.cake-sql-log tr td {
 .fa-fire:before {
   content: ""; }
 
-.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before, .bca-btn[data-bca-btn-type=preview]:before {
+.fa-eye:before, .bca-icon--preview:before, .bca-btn-icon[data-bca-btn-type=preview]:before, .bca-btn-icon-text[data-bca-btn-type=preview]:before {
   content: ""; }
 
 .fa-eye-slash:before {
@@ -21872,7 +21878,7 @@ table.cake-sql-log tr td {
 .fa-github-square:before {
   content: ""; }
 
-.fa-upload:before, .bca-btn[data-bca-btn-type=save]:before {
+.fa-upload:before {
   content: ""; }
 
 .fa-lemon-o:before {
