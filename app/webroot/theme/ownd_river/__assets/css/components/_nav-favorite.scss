@@ -1,7 +1,7 @@
 .bca-nav-favorite {
 	font-size: 1.6rem;
-  margin-bottom: 5px;
-	padding: $nav_base_padding;
+  margin-bottom: 7px;
+	padding: 12px;
 	border: 0;
 	background: $color_background_menu;
 	&-title {
@@ -18,9 +18,9 @@
 		}
 	}
 	&-list {
-    margin: 4px 0 0;
+    margin: 10px 0 0;
 		list-style: none;
-		padding: 0 0 4px 13px;
+		padding: 0 0 4px 8px;
 		&-item {
 			font-size: .875em;
 			display: block;
