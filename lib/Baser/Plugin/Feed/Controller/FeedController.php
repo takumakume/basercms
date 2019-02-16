@@ -219,6 +219,9 @@ class FeedController extends FeedAppController {
 		if (strpos($id, '.js') !== false) {
 			$id = str_replace('.js', '', $id);
 		}
+		if(!empty($this->request->query['admin_theme'])) {
+			$this->theme = '';
+		}
 		$this->cacheAction = Configure::read('BcCache.duration');
 		$this->layout = "ajax";
 		$this->set('id', $id);
