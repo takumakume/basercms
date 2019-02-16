@@ -61,10 +61,10 @@
 			'bcConfirmTitle1'               => __d('baser', 'ダイアログ'),
             'bcConfirmAlertMessage1'        => __d('baser', 'メッセージを指定してください。'),
             'bcConfirmAlertMessage2'        => __d('baser', 'コールバック処理が登録されていません。'),
-            'favoriteTitle1'                => __d('baser', 'よく使う項目登録'),
-			'favoriteTitle2'                => __d('baser', 'よく使う項目編集'),
+            'favoriteTitle1'                => __d('baser', 'お気に入り登録'),
+			'favoriteTitle2'                => __d('baser', 'お気に入り編集'),
             'favoriteAlertMessage1'         => __d('baser', '並び替えの保存に失敗しました。'),
-			'favoriteAlertMessage2'         => __d('baser', 'よく使う項目の追加に失敗しました。'),
+			'favoriteAlertMessage2'         => __d('baser', 'お気に入りの追加に失敗しました。'),
         ], ['inline' => true]);
         ?>
 		<?php
@@ -148,7 +148,7 @@
 									<?php echo __d('baser', 'baserCMSへようこそ。') ?><br>
 									<ul style="font-weight:normal;font-size:14px;">
 										<li><?php echo __d('baser', '画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。') ?></li>
-										<li><?php echo __d('baser', 'よく使う機能については、画面右側にある「よく使う項目」をクリックして、お気に入りとして登録する事ができます。') ?></li>
+										<li><?php echo __d('baser', 'お気に入り機能については、画面右側にある「お気に入りに追加」をクリックして、お気に入りとして登録する事ができます。') ?></li>
 										<li><?php echo __d('baser', 'まずは、画面上部のメニュー、「コンテンツ管理」よりWebサイトの全体像を確認しましょう。') ?></li>
 									</ul>
 								</div>
