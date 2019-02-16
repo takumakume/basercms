@@ -18,9 +18,9 @@
 		}
 	}
 	&-list {
-    margin: 10px 0 0;
+    margin: 4px 0 0;
 		list-style: none;
-		padding: 0 0 $nav_item_padding #{$nav_base_padding - $nav_item_padding};
+		padding: 0 0 4px 13px;
 		&-item {
 			font-size: .875em;
 			display: block;
