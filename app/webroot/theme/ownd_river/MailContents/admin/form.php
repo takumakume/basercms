@@ -22,22 +22,23 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 <?php echo $this->BcForm->create('MailContent', array('novalidate' => true)) ?>
 <?php echo $this->BcForm->input('MailContent.id', array('type' => 'hidden')) ?>
 
+<section class="bca-section bca-section__mail-description">
+   <label for="MailContentDescriptionTmp" class="bca-form-table__label -label"><?php echo $this->BcForm->label('MailContent.description', __d('baser', 'メールフォーム説明文')) ?></label>
+   <span class="bca-form-table__input-wrap">
+		<?php
+		echo $this->BcForm->ckeditor('MailContent.description', array(
+			'editorWidth' => 'auto',
+			'editorHeight' => '120px',
+			'editorToolType' => 'simple',
+			'editorEnterBr' => @$siteConfig['editor_enter_br']
+		))
+		?>
+		<?php echo $this->BcForm->error('MailContent.description') ?>
+   </span>
+</section>
+
 <div class="section">
   <table class="form-table bca-form-table" data-bca-table-type="type2">
-		<tr>
-			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailContent.description', __d('baser', 'メールフォーム説明文')) ?></th>
-			<td class="col-input bca-form-table__input">
-				<?php
-				echo $this->BcForm->ckeditor('MailContent.description', array(
-					'editorWidth' => 'auto',
-					'editorHeight' => '120px',
-					'editorToolType' => 'simple',
-					'editorEnterBr' => @$siteConfig['editor_enter_br']
-				))
-				?>
-<?php echo $this->BcForm->error('MailContent.description') ?>
-			</td>
-		</tr>
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailContent.sender_1', __d('baser', '送信先メールアドレス')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
