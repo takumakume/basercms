@@ -9,7 +9,6 @@
  */
 
 $(function(){
-
 	$("#BtnMenuPermission").click(function(){
 		$("#PermissionDialog").dialog('option', 'position', { my: "center", at: "center", of: window });
 		$('#PermissionDialog').dialog('open');

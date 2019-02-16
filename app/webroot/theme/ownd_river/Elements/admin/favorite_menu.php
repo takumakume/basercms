@@ -30,25 +30,13 @@
 			<?php endforeach ?>
 
 		<?php else: ?>
-			<li class="no-data"><?php echo __d('baser', '新規登録ボタンよりよく使う項目を登録しておく事ができます。') ?></li>
+			<li class="no-data"><?php echo __d('baser', '「お気に入りに追加」ボタンよりお気に入りを登録しておく事ができます。') ?></li>
 		<?php endif ?>
-	</ul>
-
-	<ul class="favolite-menu-tools clearfix bca-nav-favorite-functions">
-		<li class="bca-nav-favorite-functions-add">
-			<span id="BtnFavoriteAdd" data-bca-fn="BtnFavoriteAdd" class="btn"><?php echo __d('baser', '新規追加') ?></span>
-		</li>
-		<li class="bca-nav-favorite-functions-help">
-			<span id="BtnFavoriteHelp" class="btn help"><?php echo __d('baser', 'ヘルプ') ?></span>
-			<div class="helptext">
-				<p><?php echo __d('baser', 'よく使う項目では、新規登録ボタンで現在開いているページへのリンクを簡単にする事ができます。<br />また、登録済の項目を右クリックする事で編集・削除が行えます。') ?></p>
-			</div>
-		</li>
 	</ul>
 
 </nav>
 
-<div id="FavoriteDialog" title="よく使う項目" style="display:none">
+<div id="FavoriteDialog" title="お気に入り登録" style="display:none">
 	<?php echo $this->BcForm->create('Favorite', array('url' => array('plugin' => null, 'action' => 'ajax'))) ?>
 	<?php echo $this->BcForm->input('Favorite.id', array('type' => 'hidden')) ?>
 	<dl>
