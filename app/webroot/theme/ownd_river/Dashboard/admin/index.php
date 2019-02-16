@@ -19,10 +19,10 @@ $this->BcBaser->js('admin/libs/jquery.bcDashboard', false);
 
 <div id="AlertMessage" class="message" style="display:none"></div>
 
+<div class="bca-panel">
 <?php if($panels): ?>
 	<?php foreacH($panels as $key => $templates): ?>
 		<?php foreach($templates as $template): ?>
-<div class="float-left">
 	<div class="panel-box bca-panel-box">
 		<?php if($key == 'Core'): ?>
 			<?php echo $this->BcBaser->element('admin/dashboard/' . $template) ?>
@@ -30,7 +30,7 @@ $this->BcBaser->js('admin/libs/jquery.bcDashboard', false);
 			<?php echo $this->BcBaser->element($key . '.admin/dashboard/' . $template) ?>
 		<?php endif ?>		
 	</div>
-</div>
 		<?php endforeach ?>
 	<?php endforeach ?>
 <?php endif ?>
+</div>
