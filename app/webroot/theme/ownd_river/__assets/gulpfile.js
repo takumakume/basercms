@@ -11,19 +11,20 @@ const sceg = require('gulp-sceg');
 let proxy;
 try {
 	const proxyJson = require('./proxy.json');
-	proxy = proxyJson ? proxyJson.proxy : null;
+	proxy = proxyJson ? proxyJson : null;
 } catch (e) {
 	// void
 }
-const BROWSER_SYNC_PROXY = proxy || 'localhost';
 
+const BROWSER_SYNC_PROXY = proxy || {'proxy':'localhost'};
+console.log(BROWSER_SYNC_PROXY);
 const CSS_DEV_DIR = 'css/';
 const CSS_MAIN_SCSS_FILENAME = 'style.scss';
 const CSS_DIST_DIR = '../css/admin/';
 
 gulp.task('css', () => {
 	return gulp
-	.src(`${CSS_DEV_DIR}${CSS_MAIN_SCSS_FILENAME}`)
+	.src(`${CSS_DEV_DIR}*`)
 	.pipe(plumber({
 		errorHandler: function (err) {
 			console.log(err.messageFormatted);
@@ -51,9 +52,7 @@ gulp.task('guide', () => {
 });
 
 gulp.task('watch', () => {
-	browserSync.init({
-		proxy: BROWSER_SYNC_PROXY,
-	});
+	browserSync.init(BROWSER_SYNC_PROXY);
 	gulp.watch([`${CSS_DEV_DIR}**/*.scss`], ['css']);
 	gulp.watch([`./guide/elements/*`], ['guide']);
 });

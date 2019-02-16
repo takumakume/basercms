@@ -25,39 +25,42 @@ window.addEventListener('DOMContentLoaded', function () {
 			console.warn('管理メニューのデータが破損しています（JSONデータが不正です）')
 		}
 	}
-	
+
 	if (tmpl && data && data.menuList && data.menuList.length) {
-		
+
 		var contentList = [];
 		var systemList = [];
 
 		data.menuList.forEach(function (item, i) {
 			if (item.type === 'system') {
+				item.menus = item.menus.filter(function (menu) { return menu.url !== item.url });
 				systemList.push(item);
 			} else {
 				contentList.push(item);
 			}
 		});
-		
+
 		/**
 		 * for deubg
 		 */
-		console.log($.extend(true, {}, contentList));
-		console.log($.extend(true, {}, systemList));
+		// console.log($.extend(true, {}, contentList));
+		// console.log($.extend(true, {}, systemList));
 
 		tmpl.hidden = false;
+		var isSystemSettingPage = systemList.some(function (item) { return item.current; });
 		var app = new Vue({
 			el: tmpl,
 			data: {
-				systemHidden: true,
+				systemExpanded: isSystemSettingPage,
 				baseURL: $.baseUrl,
 				currentSiteId: data.currentSiteId,
 				contentList: contentList,
+				isSystemSettingPage: isSystemSettingPage,
 				systemList: systemList
 			},
 			methods: {
 				openSystem: function () {
-					app.systemHidden = !app.systemHidden;
+					app.systemExpanded = !app.systemExpanded;
 				}
 			}
 		});

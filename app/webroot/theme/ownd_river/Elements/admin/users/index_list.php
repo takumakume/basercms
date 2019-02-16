@@ -15,12 +15,8 @@
  */
 ?>
 
-<div class="bca-list-head">
-	<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_add.png', array('width' => 69, 'height' => 18, 'alt' => __d('baser', '新規追加'), 'class' => 'btn', 'hidden' => 'hidden')) . __d('baser', '新規追加'), array('action' => 'add'), array('class' => 'bca-btn', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'lg')) ?>
-	<!-- pagination -->
-	<?php $this->BcBaser->element('pagination') ?>
-</div>
-
+<!-- pagination -->
+<?php $this->BcBaser->element('pagination') ?>
 
 <table cellpadding="0" cellspacing="0" class="list-table bca-table-listup" id="ListTable">
 <thead class="bca-table-listup__thead">
