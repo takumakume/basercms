@@ -13,15 +13,17 @@
 /**
  * [ADMIN] よく使う項目　行
  */
+$favorite['Favorite']['url'] = preg_replace('/^\/admin\//', '/' . BcUtil::getAdminPrefix() . '/', $favorite['Favorite']['url']);
 ?>
 
 
-<li id="FavoriteRow<?php echo $favorite['Favorite']['name'] ?>" class="bca-nav-favorite-list-item">
+<li id="FavoriteRow<?php echo h($favorite['Favorite']['name']) ?>" class="bca-nav-favorite-list-item">
 	<?php $this->BcBaser->link(
-		'<span class="bca-nav-favorite-list-item-label">' . $favorite['Favorite']['name'] . '</span>',
-		$favorite['Favorite']['url'], array('title' => Router::url($favorite['Favorite']['url'], true))
+		'<span class="bca-nav-favorite-list-item-label">' . h($favorite['Favorite']['name']) . '</span>',
+		$favorite['Favorite']['url'],
+		['title' => Router::url($favorite['Favorite']['url'], true)]
 	) ?>
-	<?php echo $this->BcForm->input('Favorite.id.' . $favorite['Favorite']['id'], array('type' => 'hidden', 'value' => $favorite['Favorite']['id'], 'class' => 'favorite-id')) ?>
-	<?php echo $this->BcForm->input('Favorite.name.' . $favorite['Favorite']['id'], array('type' => 'hidden', 'value' => $favorite['Favorite']['name'], 'class' => 'favorite-name')) ?>
-	<?php echo $this->BcForm->input('Favorite.url.' . $favorite['Favorite']['id'], array('type' => 'hidden', 'value' => $favorite['Favorite']['url'], 'class' => 'favorite-url')) ?>
+	<?php echo $this->BcForm->input('Favorite.id.' . $favorite['Favorite']['id'], ['type' => 'hidden', 'value' => $favorite['Favorite']['id'], 'class' => 'favorite-id']) ?>
+	<?php echo $this->BcForm->input('Favorite.name.' . $favorite['Favorite']['id'], ['type' => 'hidden', 'value' => $favorite['Favorite']['name'], 'class' => 'favorite-name']) ?>
+	<?php echo $this->BcForm->input('Favorite.url.' . $favorite['Favorite']['id'], ['type' => 'hidden', 'value' => $favorite['Favorite']['url'], 'class' => 'favorite-url']) ?>
 </li>

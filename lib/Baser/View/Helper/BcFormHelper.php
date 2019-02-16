@@ -346,7 +346,7 @@ class BcFormHelper extends FormHelper {
 			}
 			
 		}
-		if(!$type || $type === 'hidden') {
+		if(!$type) {
 			unset($options['class']);
 		}
 		// <<<

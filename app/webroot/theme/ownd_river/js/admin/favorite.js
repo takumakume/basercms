@@ -16,11 +16,45 @@
 
 $(function(){
 	$("body").append($("#FavoritesMenu"));
-	$('[data-bca-fn="BtnFavoriteAdd"]').click(function () {
-	// $("#BtnFavoriteAdd").click(function(){
+	$("#BtnFavoriteAdd").click(function(){
 		$("#FavoriteDialog").dialog('option', 'position', { my: "center", at: "center", of: window });
 		$('#FavoriteDialog').dialog('open');
 		return false;
+	});
+	$("#BtnFavoriteHelp").bt({
+		trigger: 'click',
+		positions: 'top',
+		shadow: true,
+		shadowOffsetX: 3,
+		shadowOffsetY: 3,
+		shadowBlur: 8,
+		shadowColor: 'rgba(0,0,0,.8)',
+		shadowOverlap: false,
+		noShadowOpts: {
+			strokeStyle: '#999',
+			strokeWidth: 3
+		},
+		width: '360px',
+		/*shrinkToFit: true,*/
+		spikeLength: 12,
+		spikeGirth: 18,
+		padding: 15,
+		cornerRadius: 0,
+		strokeWidth: 6, /*no stroke*/
+		strokeStyle: '#690',
+		fill: 'rgba(255, 255, 255, 1.00)',
+		cssStyles: {
+			fontSize: '12px'
+		},
+		showTip: function(box){
+			$(box).fadeIn(200);
+		},
+		hideTip: function(box, callback){
+			$(box).animate({
+				opacity: 0
+			}, 100, callback);
+		},
+		contentSelector: "$(this).next('.helptext').html()"
 	});
 /**
  * お気に入り初期化
@@ -43,18 +77,18 @@ $(function(){
 		open: function(event, ui){
 
 			if($(".favorite-menu-list .selected").size() == 0) {
-				$(this).dialog('option', 'title', 'よく使う項目登録');
+				$(this).dialog('option', 'title', bcI18n.favoriteTitle1);
 				$("#FavoriteName").val($("#CurrentPageName").html());
 				$("#FavoriteUrl").val($("#CurrentPageUrl").html());
 			} else {
-				$(this).dialog('option', 'title', 'よく使う項目編集');
+				$(this).dialog('option', 'title', bcI18n.favoriteTitle2);
 				$("#FavoriteId").val($(".favorite-menu-list .selected .favorite-id").val());
 				$("#FavoriteName").val($(".favorite-menu-list .selected .favorite-name").val());
 				$("#FavoriteUrl").val($(".favorite-menu-list .selected .favorite-url").val());
 			}
 			$("#FavoriteAjaxForm").submit();
 			$("#FavoriteName").focus();
-			
+
 		},
 		close: function() {
 			$("#FavoriteId").val('');
@@ -62,64 +96,70 @@ $(function(){
 			$("#FavoriteUrl").val('');
 		},
 		buttons: {
-			'キャンセル': function() {
-				$(this).dialog('close');
-			},
-			'保存': function() {
-				var submitUrl = $("#FavoriteAjaxForm").attr('action');
-				if(!$("#FavoriteId").val()) {
-					submitUrl += '_add';
-				} else {
-					submitUrl += '_edit/'+$("#FavoriteId").val();
+			cancel: {
+				text: bcI18n.commonCancel,
+				click: function() {
+					$(this).dialog('close');
 				}
-				var favoriteId = $("#FavoriteId").val();
-				if($("#FavoriteAjaxForm").valid()) {
-					$.bcToken.check(function(){
-						$('#FavoriteAjaxForm input[name="data[_Token][key]"]').val($.bcToken.key);
-						$("#FavoriteAjaxForm").ajaxSubmit({
-							url: submitUrl,
-							beforeSend: function() {
-								$("#Waiting").show();
-							},
-							success: function(response, status) {
-								if(response) {
-									if($("#FavoriteId").val()) {
-										var currentLi = $("#FavoriteId"+favoriteId).parent();
-										currentLi.after(response);
-										currentLi.remove();
+			},
+			save: {
+				text: bcI18n.commonSave,
+				click: function() {
+					var submitUrl = $("#FavoriteAjaxForm").attr('action');
+					if(!$("#FavoriteId").val()) {
+						submitUrl += '_add';
+					} else {
+						submitUrl += '_edit/'+$("#FavoriteId").val();
+					}
+					var favoriteId = $("#FavoriteId").val();
+					if($("#FavoriteAjaxForm").valid()) {
+						$.bcToken.check(function(){
+							$('#FavoriteAjaxForm input[name="data[_Token][key]"]').val($.bcToken.key);
+							return $("#FavoriteAjaxForm").ajaxSubmit({
+								url: submitUrl,
+								beforeSend: function() {
+									$("#Waiting").show();
+								},
+								success: function(response, status) {
+									if(response) {
+										if($("#FavoriteId").val()) {
+											var currentLi = $("#FavoriteId"+favoriteId).parent();
+											currentLi.after(response);
+											currentLi.remove();
+										} else {
+											var favoriteRowId = 1;
+											if($(".favorite-menu-list li.no-data").length == 1) {
+												$(".favorite-menu-list li.no-data").remove();
+											}
+											if($(".favorite-menu-list li").length) {
+												favoriteRowId = Number($(".favorite-menu-list li:last").attr('id').replace('FavoriteRow', ''))+1;
+											}
+											$(".favorite-menu-list li:last").attr('id', 'FavoriteRow'+favoriteRowId);
+											$(".favorite-menu-list").append(response);
+										}
+										initFavoriteList();
+										$("#FavoriteDialog").dialog('close');
 									} else {
-										var favoriteRowId = 1;
-										if($(".favorite-menu-list li.no-data").length == 1) {
-											$(".favorite-menu-list li.no-data").remove();
-										}
-										if($(".favorite-menu-list li").length) {
-											favoriteRowId = Number($(".favorite-menu-list li:last").attr('id').replace('FavoriteRow', ''))+1;
-										}
-										$(".favorite-menu-list li:last").attr('id', 'FavoriteRow'+favoriteRowId);
-										$(".favorite-menu-list").append(response);
+										alert(bcI18n.commonSaveFailedMessage);
 									}
-									initFavoriteList();
-									$("#FavoriteDialog").dialog('close');
-								} else {
-									alert('保存に失敗しました。');
+								},
+								error: function(XMLHttpRequest, textStatus){
+									if(XMLHttpRequest.responseText) {
+										alert(bcI18n.favoriteAlertMessage2 + '\n\n' + XMLHttpRequest.responseText);
+									} else {
+										alert(bcI18n.favoriteAlertMessage2 + '\n\n' + XMLHttpRequest.statusText);
+									}
+								},
+								complete: function(){
+									$("#Waiting").hide();
+									$.bcToken.key = null;
 								}
-							},
-							error: function(XMLHttpRequest, textStatus){
-								if(XMLHttpRequest.responseText) {
-									alert('よく使う項目の追加に失敗しました。\n\n' + XMLHttpRequest.responseText);
-								} else {
-									alert('よく使う項目の追加に失敗しました。\n\n' + XMLHttpRequest.statusText);
-								}
-							},
-							complete: function(){
-								$("#Waiting").hide();
-							}
-						});
-					}, {hideLoader: false});
+							});
+						}, {useUpdate: false, hideLoader: false});
+					}
 				}
 			}
 		}
-
 	});
 
 /**
@@ -145,7 +185,7 @@ $(function(){
 				'data[Sort][offset]': offset,
 				'data[_Token][key]' : $.bcToken.key
 			};
-			$.ajax({
+			return $.ajax({
 				url: $("#FavoriteAjaxSorttableUrl").html(),
 				type: 'POST',
 				data: data,
@@ -160,7 +200,7 @@ $(function(){
 				},
 				error: function(){
 					sortTable.sortable("cancel");
-					alert('並び替えの保存に失敗しました。');
+					alert(bcI18n.favoriteAlertMessage1);
 				},
 				complete: function() {
 					$("#Waiting").hide();
@@ -168,7 +208,7 @@ $(function(){
 			});
 		}, {hideLoader: false});
 	}
-	
+
 /**
  * 行を初期化
  */
@@ -229,7 +269,7 @@ $(function(){
 		});
 
 	}
-	
+
 /**
  * コンテキストメニュークリックハンドラ
  */
@@ -242,14 +282,14 @@ $(function(){
 				break;
 			case 'FavoriteDelete':
 				var id = $(".favorite-menu-list .selected .favorite-id").val();
-				if(confirm('本当に削除してもよろしいですか？')){
+				if(confirm(bcI18n.commonConfirmDeleteMessage)){
 					$.bcToken.check(function(){
 						var data = {
 							data: {
 								Favorite: {id: id},
 								_Token: {key: $.bcToken.key}
 						}};
-						$.ajax({
+						return $.ajax({
 							url: $("#FavoriteDeleteUrl").html(),
 							type: 'POST',
 							data: data,
