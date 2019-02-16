@@ -15998,8 +15998,9 @@ table.cake-sql-log tr td {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between; }
+  .bca-panel > * {
+    width: calc( 33.33% - 20px); }
   .bca-panel-box {
-    width: calc( 33.33% - 20px);
     padding: 25px 20px;
     margin: 0;
     background: #fff; }
