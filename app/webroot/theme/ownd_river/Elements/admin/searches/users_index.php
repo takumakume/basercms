@@ -19,7 +19,7 @@
 <?php echo $this->BcForm->create('User', array('url' => array('action' => 'index'))) ?>
 <p class="bca-search__input-list">
 	<span class="bca-search__input-item">
-		<?php echo $this->BcForm->label('User.user_group_id', __d('baser', 'ユーザーグループ')) ?>
+		<?php echo $this->BcForm->label('User.user_group_id', __d('baser', 'ユーザーグループ'), ['class' => 'bca-search__input-item-label']) ?>
 		<?php echo $this->BcForm->input('User.user_group_id', array('type' => 'select', 'options' => $this->BcForm->getControlSource('User.user_group_id'), 'empty' => __d('baser', '指定なし'))) ?>
 	</span>
 </p>

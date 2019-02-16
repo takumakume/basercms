@@ -22,14 +22,14 @@ $types = BcUtil::unserialize($this->BcBaser->siteConfig['content_types']);
 <?php echo $this->BcForm->create('SearchIndex', array('url' => array('action' => 'index'))) ?>
 <?php echo $this->BcForm->hidden('SearchIndex.open', array('value' => true)) ?>
 <p class="bca-search__input-list">
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.type', __d('baser', 'タイプ')) ?> <?php echo $this->BcForm->input('SearchIndex.type', array('type' => 'select', 'options' => $types, 'empty' => __d('baser', '指定なし'))) ?></span>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.site_id', __d('baser', 'サブサイト')) ?> <?php echo $this->BcForm->input('SearchIndex.site_id', array('type' => 'select', 'options' => $sites)) ?></span>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.type', __d('baser', 'タイプ'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('SearchIndex.type', array('type' => 'select', 'options' => $types, 'empty' => __d('baser', '指定なし'))) ?></span>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.site_id', __d('baser', 'サブサイト'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('SearchIndex.site_id', array('type' => 'select', 'options' => $sites)) ?></span>
 	<?php $this->BcBaser->img('admin/ajax-loader-s.gif', array('style' => 'vertical-align:middle;display:none', 'id' => 'SearchIndexSiteIdLoader')) ?>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.folder_id', __d('baser', 'フォルダ')) ?> <?php echo $this->BcForm->input('SearchIndex.folder_id', array('type' => 'select', 'options' => $folders, 'empty' => __d('baser', '指定なし'), 'escape' => false)) ?></span>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.keyword', __d('baser', 'キーワード')) ?> <?php echo $this->BcForm->input('SearchIndex.keyword', array('type' => 'text', 'class' => 'bca-input-text', 'size' => '30')) ?></span>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.status', __d('baser', '公開状態')) ?>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.folder_id', __d('baser', 'フォルダ'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('SearchIndex.folder_id', array('type' => 'select', 'options' => $folders, 'empty' => __d('baser', '指定なし'), 'escape' => false)) ?></span>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.keyword', __d('baser', 'キーワード'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('SearchIndex.keyword', array('type' => 'text', 'class' => 'bca-input-text', 'size' => '30')) ?></span>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.status', __d('baser', '公開状態'), ['class' => 'bca-search__input-item-label']) ?>
 		<?php echo $this->BcForm->input('SearchIndex.status', array('type' => 'select', 'options' => $this->BcText->booleanMarkList(), 'empty' => __d('baser', '指定なし'))) ?></span>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.priority', __d('baser', '優先度')) ?>
+	<span class="bca-search__input-item"><?php echo $this->BcForm->label('SearchIndex.priority', __d('baser', '優先度'), ['class' => 'bca-search__input-item-label']) ?>
 		<?php echo $this->BcForm->input('SearchIndex.priority', array('type' => 'select', 'options' => $priorities, 'empty' => __d('baser', '指定なし'))) ?></span>
 </p>
 <div class="button bca-search__btns">
