@@ -62,10 +62,10 @@
     }
     &:checked + label:before {
       background: $color_primary;
-      box-shadow: 0 0 0px 4px #EEEEEE inset;
+      box-shadow: 0 0 0px 4px #fff inset;
     }
     &:focus + label:before {
-      box-shadow: 0 0 0px 4px #EEEEEE inset, $focus_shadow;
+      box-shadow: 0 0 0px 4px #fff inset, $focus_shadow;
     }
   }
   &__label {
