@@ -279,8 +279,8 @@ class BcContentsHelperTest extends BaserTestCase {
 			['', ['excludeIds' => [2]], 9],
 			['', ['excludeIds' => [99]], 9],
 			// コンテンツIDに値が入っていれば、false
-			['1', ['excludeIds' => []], 2],
-			['hoge', [], []],
+			[1, ['excludeIds' => []], 2],
+			[99, [], []],
 		];
 	}
 
@@ -311,8 +311,8 @@ class BcContentsHelperTest extends BaserTestCase {
 			[0, ['excludeIds' => [3]], [['prefix' => '','name' => 'パソコン', 'url'=>'/index'],['prefix' => 'mobile','name' => 'ケータイ', 'url'=>'/m/index'],['prefix' => 'smartphone','name' => 'スマートフォン', 'url'=>'/s/index']]],
 			[0, ['excludeIds' => [99]], [['prefix' => '','name' => 'パソコン', 'url'=>'/index'],['prefix' => 'mobile','name' => 'ケータイ', 'url'=>'/m/index'],['prefix' => 'smartphone','name' => 'スマートフォン', 'url'=>'/s/index']]],
 			// IDに値が入っていれば、false
-			[1, ['excludeIds' => [0]], []],
-			['hoge', [], []],
+			[1, ['excludeIds' => [0]], [['prefix' => 'mobile','name' => 'ケータイ', 'url'=>'/m/'],['prefix' => 'smartphone','name' => 'スマートフォン', 'url'=>'/s/']]],
+			[99, [], []],
 		];
 	}	
 
