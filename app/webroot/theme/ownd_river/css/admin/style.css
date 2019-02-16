@@ -3767,7 +3767,7 @@ div.jstree-publish-even {
   display: flex; }
 
 .bca-main {
-  font-size: 1em;
+  font-size: 1.6rem;
   position: relative;
   flex-basis: 100%;
   overflow: auto;
@@ -3777,15 +3777,15 @@ div.jstree-publish-even {
   .bca-main__body {
     padding: 0 30px; }
   .bca-main__header {
-    margin-bottom: 30px;
-    padding: 20px 0;
+    margin-bottom: 7px;
+    padding: 12px 0;
     display: flex;
     justify-content: space-between;
     align-items: center; }
     .bca-main__header-title {
       flex: 0 0 auto;
       margin: 0 1em 0 0;
-      font-size: 1.375em;
+      font-size: 2.2rem;
       font-weight: bold;
       color: #1b6123;
       line-height: 1; }
@@ -6587,7 +6587,7 @@ div.jstree-publish-even {
 
 .bca-nav-favorite {
   font-size: 1.6rem;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   padding: 12px;
   border: 0;
   background: #eee; }
@@ -6602,9 +6602,9 @@ div.jstree-publish-even {
       vertical-align: middle;
       margin-left: 6px; }
   .bca-nav-favorite-list {
-    margin: 4px 0 0;
+    margin: 10px 0 0;
     list-style: none;
-    padding: 0 0 4px 13px; }
+    padding: 0 0 4px 8px; }
     .bca-nav-favorite-list-item {
       font-size: .875em;
       display: block; }
@@ -12365,13 +12365,34 @@ div.jstree-publish-even {
 .bca-content-menu {
   padding: 0; }
   .bca-content-menu__item {
-    font-size: 0.8em;
+    font-size: 1.3rem;
     display: inline-block;
     margin-left: 1em;
     padding: 0;
     background: none; }
   .bca-content-menu__link {
     color: #656565; }
+
+.bca-content-info__title {
+  margin: 0 0 10px;
+  font-size: 1.4rem; }
+
+.bca-content-info__list {
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none; }
+  .bca-content-info__list-item {
+    font-size: 1.4rem;
+    line-height: 1.5; }
+
+.bca-update-log__list {
+  margin: 20px 0 30px;
+  padding: 0;
+  list-style: none; }
+  .bca-update-log__list-item {
+    margin-bottom: 17px;
+    font-size: 1.4rem;
+    line-height: 1.5; }
 
 .bca-search {
   font-size: 1.6rem;
@@ -15955,9 +15976,12 @@ table.cake-sql-log tr td {
     background: #00E; }
 
 .bca-panel-box {
-  border: 5px solid #cccccc;
-  padding: 10px 20px;
-  margin: 20px 0; }
+  padding: 25px 20px;
+  margin: 0 20px 0 0;
+  background: #fff; }
+  .bca-panel-box__title {
+    margin: 0 0 30px 0;
+    font-size: 1.8rem; }
   .bca-panel-box__inline-fields {
     display: flex;
     justify-content: flex-start;
@@ -15983,37 +16007,6 @@ table.cake-sql-log tr td {
 .bca-main__body div.float-left {
   float: left;
   width: 33%; }
-
-.panel-box {
-  border: 5px solid #cccccc;
-  padding: 10px 20px;
-  margin: 20px 0; }
-
-.panel-box li .date {
-  /*font-weight: bold;*/ }
-
-.panel-box ul {
-  list-style-type: none;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0; }
-
-#Installations .panel-box {
-  margin: 0 auto 20px auto; }
-
-#Installations .panel-box ul li {
-  margin-bottom: 10px;
-  border-left: 5px solid #cccccc;
-  padding: 3px 10px;
-  background: none; }
-
-#AdminDashboard .panel-box {
-  margin: 10px; }
-
-#AdminDashboard .panel-box li {
-  margin-bottom: 5px;
-  border-left: 5px solid #cccccc;
-  padding: 3px 10px;
-  background: none; }
 
 .bca-input-text {
   display: inline-block;

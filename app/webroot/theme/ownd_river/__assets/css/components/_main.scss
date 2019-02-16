@@ -1,5 +1,5 @@
 .bca-main {
-	font-size: 1em;
+	font-size: 1.6rem;
 	position: relative;
 	flex-basis: 100%;
 	overflow: auto;
@@ -13,8 +13,8 @@
 	}
 
 	&__header {
-		margin-bottom: 30px;
-		padding: 20px 0;
+		margin-bottom: 7px;
+		padding: 12px 0;
 		//background-color:#F4F5F1;
 		display: flex;
 		justify-content: space-between;
@@ -23,7 +23,7 @@
 		&-title {
 			flex: 0 0 auto;
 			margin: 0 1em 0 0;
-			font-size: 1.375em;
+			font-size: 2.2rem;
 			font-weight: bold;
 			color: $color_secondary;
 			line-height:1;

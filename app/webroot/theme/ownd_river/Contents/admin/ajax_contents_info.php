@@ -13,11 +13,11 @@
 
 
 <?php if($sites): ?>
-<div class="bca-contents-info">
+<div class="bca-content-info">
 <?php foreach($sites as $site): ?>
-<h3 class="bca-contents-info__title"><?php echo $site['Site']['display_name'] ?></h3>
-<ul class="bca-contents-info__list" style="margin-bottom:15px;">
-	<li class="bca-contents-info__list-item"><?php echo __d('baser', '公開中') ?>： <?php echo $site['published'] ?> <?php echo __d('baser', 'ページ') ?><br />
+<h3 class="bca-content-info__title"><?php echo $site['Site']['display_name'] ?></h3>
+<ul class="bca-content-info__list">
+	<li class="bca-content-info__list-item"><?php echo __d('baser', '公開中') ?>： <?php echo $site['published'] ?> <?php echo __d('baser', 'ページ') ?><br />
 		<?php echo __d('baser', '非公開') ?>： <?php echo $site['unpublished'] ?> <?php echo __d('baser', 'ページ') ?><br />
 		<?php echo __d('baser', '合　計') ?>： <?php echo $site['total'] ?> <?php echo __d('baser', 'ページ') ?>
 	</li>
