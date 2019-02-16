@@ -109,22 +109,23 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
         <?php echo $this->BcForm->error('BlogPost.eye_catch') ?>
       </td>
     </tr>
-    <?php if (!empty($blogContent['BlogContent']['use_content'])): ?>
-      <tr>
-        <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogPost.content', __d('baser', '概要')) ?></th>
-        <td class="col-input bca-form-table__input">
-          <?php echo $this->BcForm->ckeditor('BlogPost.content', [
-            'editorWidth' => 'auto',
-            'editorHeight' => '120px',
-            'editorToolType' => 'simple',
-            'editorEnterBr' => @$siteConfig['editor_enter_br']
-          ]); ?>
-          <?php echo $this->BcForm->error('BlogPost.content') ?>
-        </td>
-      </tr>
-    <?php endif ?>
   </table>
 </section>
+
+<?php if (!empty($blogContent['BlogContent']['use_content'])): ?>
+<section class="bca-section bca-section__post-content">
+   <label for="BlogPostContentTmp" class="bca-form-table__label -label"><?php echo $this->BcForm->label('BlogPost.content', __d('baser', '概要')) ?></label>
+   <span class="bca-form-table__input-wrap">
+	  <?php echo $this->BcForm->ckeditor('BlogPost.content', [
+		'editorWidth' => 'auto',
+		'editorHeight' => '120px',
+		'editorToolType' => 'simple',
+		'editorEnterBr' => @$siteConfig['editor_enter_br']
+	  ]); ?>
+	  <?php echo $this->BcForm->error('BlogPost.content') ?>
+   </span>
+</section>
+<?php endif ?>
 
 <section class="bca-section bca-section__post-detail">
   <label for="BlogPostDetailTmp" class="bca-form-table__label -label">本文</label>
