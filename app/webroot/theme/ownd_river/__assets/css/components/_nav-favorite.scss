@@ -1,13 +1,15 @@
 .bca-nav-favorite {
 	font-size: 1.6rem;
+  margin-bottom: 5px;
 	padding: $nav_base_padding;
-	border: 5px solid $color_lightest;
+	border: 0;
 	background: $color_background_menu;
 	&-title {
 		@extend .bca-icon--favorite;
-		font-size: 1em;
+    margin: 0;
+		font-size: 1.2rem;
 		font-weight: bold;
-		padding-bottom: #{$nav_base_padding - 4px};
+		padding-bottom: 9px;
 		border-bottom: 1px solid $color_border;
 		&-label {
 			display: inline-block;
@@ -16,17 +18,19 @@
 		}
 	}
 	&-list {
+    margin: 10px 0 0;
 		list-style: none;
-		padding: $nav_item_padding 0 $nav_item_padding #{$nav_base_padding - $nav_item_padding};
+		padding: 0 0 $nav_item_padding #{$nav_base_padding - $nav_item_padding};
 		&-item {
 			font-size: .875em;
 			display: block;
 			a {
         position: relative;
 				display: block;
-				padding: $nav_item_padding 0 $nav_item_padding * 2 $nav_item_padding * 3;
-				color: $color_text_secondary;
-				@extend .bca-icon--menuitem;
+				padding: 4px 0px 8px 14px;
+				//color: $color_text_secondary;
+        font-size: 1.2rem;
+				//@extend .bca-icon--menuitem;
         &:before {
           position: absolute;
           left: 0;
