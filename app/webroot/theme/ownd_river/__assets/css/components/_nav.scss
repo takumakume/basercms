@@ -18,7 +18,7 @@
 	&__sub {
 		font-size: 1em;
 		position: relative;
-		border-top: 1px solid $color_border;
+		// border-top: 1px solid $color_border;
 		background: $color_background_menu;
 		&,
 		*,
@@ -38,7 +38,7 @@
 			&-label {
 				display: block;
 				vertical-align: middle;
-				padding: 10px 10px 10px 16px;
+				padding: 12px 10px 12px 10px;
 				&:link,
 				&:visited {
 					// a:link のデフォルト設定を消すまで有効
@@ -94,9 +94,11 @@
 				a {
 					display: block;
 					white-space: nowrap;
-					padding: 10px 20px;
+					// padding: 10px 20px;
+					padding: 8px 26px;
 					color: $color_text_secondary;
-					@extend .bca-icon--menuitem;
+					font-size: 1.3rem;
+					// @extend .bca-icon--menuitem;
 					&::before {
 						font-size: 1.5em !important;
 						opacity: 0.7;
@@ -117,7 +119,7 @@
 					}
 				}
 				&-title {
-					margin-left: 4px;
+					// margin-left: 4px;
 				}
 			}
 		}
@@ -147,7 +149,9 @@
 				&-item {
 					// 現在開いているページ
 					&[data-sub-content-is-current="true"] {
-						background: $color_primary;
+						// background: $color_primary;
+						background: #656565;
+						border-left: 10px solid #FFFFFF;
 						a {
 							position: relative;
 							color: $color_lightest;
@@ -164,17 +168,17 @@
 								//color: $color_lightest;
 								//background: $color_secondary;
 							}
-							&::after {
-								content: "";
-								display: block;
-								position: absolute;
-								top: 50%;
-								right: 0;
-								margin-top: -10px;
-								border: 10px solid;
-								border-color: transparent $color_lightest
-									transparent transparent;
-							}
+							// &::after {
+							// 	content: "";
+							// 	display: block;
+							// 	position: absolute;
+							// 	top: 50%;
+							// 	right: 0;
+							// 	margin-top: -10px;
+							// 	border: 10px solid;
+							// 	border-color: transparent $color_lightest
+							// 		transparent transparent;
+							// }
 						}
 					}
 				}
@@ -185,6 +189,7 @@
 			.bca-nav__sub-title > a:before {
 				width: 16px;
 				text-align: center;
+				margin-right: 10px;
 			}
 		}
 
@@ -221,9 +226,11 @@
 
 	//
 	&__system {
-    margin-top: 10px;
-		border-top: 1px solid $color_border;
-		border-bottom: 1px solid $color_border;
+    // margin-top: 10px;
+    border-top: 10px solid #f8f8f8;
+    border-bottom: 10px solid #f8f8f8;
+		// border-top: 1px solid $color_border;
+		// border-bottom: 1px solid $color_border;
 
 		&-title {
 			margin: 0;
@@ -364,10 +371,10 @@
 
 				a {
 					color: $color_text_primary;
-					@extend .bca-icon--menuitem;
-					&::before {
-						color: currentColor;
-					}
+					// @extend .bca-icon--menuitem;
+					// &::before {
+					// 	color: currentColor;
+					// }
 				}
 			}
 		}

@@ -1,13 +1,15 @@
 .bca-nav-favorite {
 	font-size: 1.6rem;
-  margin-bottom: 7px;
+  // margin-bottom: 7px;
+
 	padding: 12px;
-	border: 0;
+	// border: 0;
+	border-bottom: 10px solid #f8f8f8;
 	background: $color_background_menu;
 	&-title {
 		@extend .bca-icon--favorite;
     margin: 0;
-		font-size: 1.2rem;
+		font-size: 1.4rem;
 		font-weight: bold;
 		padding-bottom: 9px;
 		border-bottom: 1px solid $color_border;
@@ -27,7 +29,7 @@
 			a {
         position: relative;
 				display: block;
-				padding: 4px 0px 8px 14px;
+				padding: 4px 0px 7px 14px;
 				//color: $color_text_secondary;
         font-size: 1.3rem;
 				//@extend .bca-icon--menuitem;
