@@ -6438,7 +6438,7 @@ div.jstree-publish-even {
         .bca-nav__sub-list-item a {
           display: block;
           white-space: nowrap;
-          padding: 10px 20px 9px 35px;
+          padding: 13px 20px 11px 35px;
           color: #656565;
           font-size: 1.3rem; }
           .bca-nav__sub-list-item a::before {
@@ -6446,6 +6446,18 @@ div.jstree-publish-even {
             opacity: 0.7; }
           .bca-nav__sub-list-item a:link, .bca-nav__sub-list-item a:visited {
             color: #656565; }
+            .bca-nav__sub-list-item a:link:after, .bca-nav__sub-list-item a:visited:after {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%);
+              content: "";
+              display: block;
+              width: 0;
+              border-right: 10px solid #F8F8F8;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent; }
           .bca-nav__sub-list-item a:hover {
             font-weight: bold;
             text-decoration: none;
@@ -6506,7 +6518,8 @@ div.jstree-publish-even {
       margin-bottom: 14px; }
       .bca-nav__system-list-item-title {
         margin: 0;
-        font-size: 0.9em; }
+        font-size: 0.9em;
+        padding: 0 20px; }
       .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a:before {
         width: 16px;
         text-align: center; }
@@ -23635,10 +23648,9 @@ table.cake-sql-log tr td {
       text-decoration: none; }
 
 .bca-current-box {
-  padding: 1px 15px;
+  padding: 1px 0;
   font-size: 1.4rem;
   margin: -34px auto 15px;
-  text-align: center;
   line-height: 1.6; }
   .bca-current-box a {
     color: #690; }

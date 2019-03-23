@@ -101,7 +101,7 @@
 					display: block;
 					white-space: nowrap;
 					// padding: 10px 20px;
-					padding: 10px 20px 9px 35px;
+					padding: 13px 20px 11px 35px;
 					color: $color_text_secondary;
 					font-size: 1.3rem;
 					// @extend .bca-icon--menuitem;
@@ -113,6 +113,18 @@
 					&:visited {
 						// a:link のデフォルト設定を消すまで有効
 						color: $color_text_secondary;
+						&:after{
+							position: absolute;
+							top: 50%;
+							right: 0;
+							transform: translateY(-50%);
+							content: "";
+							display: block;
+							width: 0;
+							border-right: 10px solid #F8F8F8;
+							border-top: 10px solid transparent;
+							border-bottom: 10px solid transparent;
+						}
 					}
 					&:hover {
 						font-weight: bold;
@@ -266,6 +278,7 @@
 				&-title {
 					margin: 0;
 					font-size: 0.9em;
+					padding: 0 20px;
 				}
 
 				&[data-system-type] {
