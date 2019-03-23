@@ -73,15 +73,15 @@
 	font-size: 1.6rem;
 	width: 100%;
 	table-layout: auto;
-	border-bottom: 1px solid $border-color;
+	// border-bottom: 1px solid $border-color;
 
 	&__label {
     vertical-align: top;
-    width: 200px;
+    width: 250px;
     padding: 1.4em 2em 1em 1em;
 		font-weight: bold;
 		border: 0 solid $border-color;
-		border-width: 1px 0 0;
+		// border-width: 1px 0 0;
 		text-align: left;
     &.-label {
       display: block;
@@ -104,7 +104,7 @@
     padding: 1em 0 1em;
     vertical-align: top;
 		border: 0 solid $border-color;
-		border-width: 1px 0 0;
+		// border-width: 1px 0 0;
     font-weight: normal;
 	}
   &__input-wrap {
