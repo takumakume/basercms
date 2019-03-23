@@ -3072,23 +3072,6 @@ body * {
 
 /* em-box
 ----------------------------------------------- */
-.em-box {
-  border: 5px solid #DDD;
-  padding: 15px;
-  color: #535A62;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 auto 20px;
-  text-align: center;
-  line-height: 24px; }
-
-.em-box a {
-  color: #690; }
-
-.em-box a:hover {
-  color: #9C0;
-  text-decoration: none; }
-
 /* tree empty
 ----------------------------------------------- */
 .tree-empty {

@@ -3083,23 +3083,6 @@ body * {
 
 /* em-box
 ----------------------------------------------- */
-.em-box {
-  border: 5px solid #DDD;
-  padding: 15px;
-  color: #535A62;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 auto 20px;
-  text-align: center;
-  line-height: 24px; }
-
-.em-box a {
-  color: #690; }
-
-.em-box a:hover {
-  color: #9C0;
-  text-decoration: none; }
-
 /* tree empty
 ----------------------------------------------- */
 .tree-empty {
@@ -3776,7 +3759,6 @@ div.jstree-publish-even {
   .bca-main__body {
     padding: 0 30px; }
   .bca-main__header {
-    margin-bottom: 10px;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -12613,15 +12595,13 @@ div.jstree-publish-even {
 .bca-form-table {
   font-size: 1.6rem;
   width: 100%;
-  table-layout: auto;
-  border-bottom: 1px solid #ccc; }
+  table-layout: auto; }
   .bca-form-table__label {
     vertical-align: top;
-    width: 200px;
+    width: 250px;
     padding: 1.4em 2em 1em 1em;
     font-weight: bold;
     border: 0 solid #ccc;
-    border-width: 1px 0 0;
     text-align: left; }
     .bca-form-table__label.-label {
       display: block;
@@ -12638,7 +12618,6 @@ div.jstree-publish-even {
     padding: 1em 0 1em;
     vertical-align: top;
     border: 0 solid #ccc;
-    border-width: 1px 0 0;
     font-weight: normal; }
   .bca-form-table__input-wrap {
     display: block;
@@ -15974,16 +15953,17 @@ table.cake-sql-log tr td {
     margin-top: 15px; }
 
 .bca-label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: inline-block;
   color: #FFF;
   background: #444;
-  margin: .5em .5em .5em;
+  margin: .5em .55em .5em;
   padding: 0 .5em;
-  line-height: 2; }
+  line-height: 1.8; }
   .bca-label[data-bca-label-type="required"] {
     white-space: nowrap;
-    background: #E00; }
+    background: #E00;
+    border-radius: 2px; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
 
@@ -18843,8 +18823,9 @@ table.cake-sql-log tr td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #cccccc; }
   .bca-actions__sub {
     margin-left: 30px;
     padding-left: 30px;
@@ -23639,6 +23620,31 @@ table.cake-sql-log tr td {
     [data-bca-state=open] .bca-collapse__btn-icon {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
+
+.bca-em-box {
+  padding: 1px 15px;
+  background: #FFFFFF;
+  font-size: 1.4rem;
+  margin: 15px auto;
+  text-align: center;
+  line-height: 1.6; }
+  .bca-em-box a {
+    color: #690; }
+    .bca-em-box a:hover {
+      color: #9C0;
+      text-decoration: none; }
+
+.bca-current-box {
+  padding: 1px 15px;
+  font-size: 1.4rem;
+  margin: -34px auto 15px;
+  text-align: center;
+  line-height: 1.6; }
+  .bca-current-box a {
+    color: #690; }
+    .bca-current-box a:hover {
+      color: #9C0;
+      text-decoration: none; }
 
 .ui-dialog {
   padding: 0 !important; }

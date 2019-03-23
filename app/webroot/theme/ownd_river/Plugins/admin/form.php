@@ -37,7 +37,7 @@ $(function(){
 <?php echo $this->BcForm->input('Plugin.status', array('type' => 'hidden')) ?>
 <?php echo $this->BcForm->input('Plugin.version', array('type' => 'hidden')) ?>
 
-<div class="em-box">
+<div class="em-box bca-em-box">
 	<?php echo $this->BcForm->value('Plugin.name') . ' ' . $this->BcForm->value('Plugin.version') ?>
 	<?php if ($this->BcForm->value('Plugin.title')): ?>
 		（<?php echo $this->BcForm->value('Plugin.title') ?>）
