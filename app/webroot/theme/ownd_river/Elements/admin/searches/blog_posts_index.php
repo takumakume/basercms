@@ -20,15 +20,29 @@ $users = $this->BcForm->getControlSource("BlogPost.user_id");
 
 <?php echo $this->BcForm->create('BlogPost', array('url' => array('action' => 'index', $blogContent['BlogContent']['id']))) ?>
 <p class="bca-search__input-list">
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('BlogPost.name', __d('baser', 'タイトル'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('BlogPost.name', array('type' => 'text', 'class' => 'bca-input-text', 'size' => '30')) ?></span>
-	<?php if ($this->BlogCategories): ?>
-		<span class="bca-search__input-item"><?php echo $this->BcForm->label('BlogPost.blog_category_id', __d('baser', 'カテゴリー'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('BlogPost.blog_category_id', array('type' => 'select', 'options' => $this->BlogCategories, 'escape' => false, 'empty' => __d('baser', '指定なし'))) ?></span>
-	<?php endif ?>
-	<?php if ($blogContent['BlogContent']['tag_use'] && $this->BlogTags): ?>
-		<span class="bca-search__input-item"><?php echo $this->BcForm->label('BlogPost.blog_tag_id', __d('baser', 'タグ'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('BlogPost.blog_tag_id', array('type' => 'select', 'options' => $this->BlogTags, 'escape' => false, 'empty' => __d('baser', '指定なし'))) ?></span>
-	<?php endif ?>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('BlogPost.status', __d('baser', '公開状態'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('BlogPost.status', array('type' => 'select', 'options' => $this->BcText->booleanMarkList(), 'empty' => __d('baser', '指定なし'))) ?></span>
-	<span class="bca-search__input-item"><?php echo $this->BcForm->label('BlogPost.user_id', __d('baser', '作成者'), ['class' => 'bca-search__input-item-label']) ?> <?php echo $this->BcForm->input('BlogPost.user_id', array('type' => 'select', 'options' => $users, 'empty' => __d('baser', '指定なし'))) ?></span>
+	<span class="bca-search__input-item">
+		<?php echo $this->BcForm->label('BlogPost.name', __d('baser', 'タイトル'), ['class' => 'bca-search__input-item-label']) ?>
+		<?php echo $this->BcForm->input('BlogPost.name', array('type' => 'text', 'class' => 'bca-input-text', 'size' => '30')) ?></span>
+<?php if ($this->BlogCategories): ?>
+	<span class="bca-search__input-item">
+		<?php echo $this->BcForm->label('BlogPost.blog_category_id', __d('baser', 'カテゴリー'), ['class' => 'bca-search__input-item-label']) ?>
+		<?php echo $this->BcForm->input('BlogPost.blog_category_id', array('type' => 'select', 'options' => $this->BlogCategories, 'escape' => false, 'empty' => __d('baser', '指定なし'))) ?>
+	</span>
+<?php endif ?>
+<?php if ($blogContent['BlogContent']['tag_use'] && $this->BlogTags): ?>
+	<span class="bca-search__input-item">
+		<?php echo $this->BcForm->label('BlogPost.blog_tag_id', __d('baser', 'タグ'), ['class' => 'bca-search__input-item-label']) ?>
+		<?php echo $this->BcForm->input('BlogPost.blog_tag_id', array('type' => 'select', 'options' => $this->BlogTags, 'escape' => false, 'empty' => __d('baser', '指定なし'))) ?>
+	</span>
+<?php endif ?>
+	<span class="bca-search__input-item">
+		<?php echo $this->BcForm->label('BlogPost.status', __d('baser', '公開状態'), ['class' => 'bca-search__input-item-label']) ?>
+		<?php echo $this->BcForm->input('BlogPost.status', array('type' => 'select', 'options' => $this->BcText->booleanMarkList(), 'empty' => __d('baser', '指定なし'))) ?>
+	</span>
+	<span class="bca-search__input-item">
+		<?php echo $this->BcForm->label('BlogPost.user_id', __d('baser', '作成者'), ['class' => 'bca-search__input-item-label']) ?>
+		<?php echo $this->BcForm->input('BlogPost.user_id', array('type' => 'select', 'options' => $users, 'empty' => __d('baser', '指定なし'))) ?>
+	</span>
 </p>
 <div class="button bca-search__btns">
 	<div class="bca-search__btns-item"><?php $this->BcBaser->link(__d('baser', '検索'), "javascript:void(0)", array('id' => 'BtnSearchSubmit', 'class' => 'bca-btn', 'data-bca-btn-type' => 'search')) ?></div>
