@@ -3772,13 +3772,12 @@ div.jstree-publish-even {
   flex-basis: 100%;
   overflow: auto;
   padding-top: 8px;
-  background: #f8f8f8;
-  border-top: 1px solid #ccc; }
+  background: #f8f8f8; }
   .bca-main__body {
     padding: 0 30px; }
   .bca-main__header {
-    margin-bottom: 7px;
-    padding: 12px 0;
+    margin-bottom: 10px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center; }
@@ -6390,6 +6389,7 @@ div.jstree-publish-even {
   .bca-nav__main {
     font-size: 1em;
     position: relative;
+    padding-top: 8px;
     background: #eee; }
     .bca-nav__main-title {
       display: none; }
@@ -6414,6 +6414,10 @@ div.jstree-publish-even {
         display: block;
         vertical-align: middle;
         padding: 12px 10px 12px 10px; }
+        .bca-nav__sub-title-label:before {
+          width: 16px;
+          text-align: center;
+          margin-right: 10px; }
         .bca-nav__sub-title-label:link, .bca-nav__sub-title-label:visited {
           color: #656565; }
         .bca-nav__sub-title-label:hover {
@@ -6452,7 +6456,7 @@ div.jstree-publish-even {
         .bca-nav__sub-list-item a {
           display: block;
           white-space: nowrap;
-          padding: 8px 26px;
+          padding: 10px 20px 9px 35px;
           color: #656565;
           font-size: 1.3rem; }
           .bca-nav__sub-list-item a::before {
@@ -6482,10 +6486,11 @@ div.jstree-publish-even {
       box-shadow: none;
       background: #fafafa; }
       .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] {
-        background: #656565;
-        border-left: 10px solid #FFFFFF; }
+        background: #656565; }
         .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a {
           position: relative;
+          border-left: 10px solid #FFFFFF;
+          padding-left: 25px;
           color: #fff;
           font-weight: bold; }
           .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:link, .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:visited {
@@ -6509,13 +6514,14 @@ div.jstree-publish-even {
         border: none;
         background: none;
         margin: 0;
-        padding: 10px 10px 10px 16px;
+        padding: 12px 10px 12px 10px;
         width: 100%;
         height: 100%;
         color: #656565;
         cursor: pointer; }
     .bca-nav__system-list-item {
-      padding: 0; }
+      padding: 0;
+      margin-bottom: 14px; }
       .bca-nav__system-list-item-title {
         margin: 0;
         font-size: 0.9em; }
