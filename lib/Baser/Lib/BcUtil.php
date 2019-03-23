@@ -50,10 +50,10 @@ class BcUtil extends CakeObject {
  */
 	public static function isAdminUser() {
 		$user = self::loginUser('admin');
-		if (empty($user['UserGroup']['name'])) {
+		if (empty($user['UserGroup']['id'])) {
 			return false;
 		}
-		return ($user['UserGroup']['name'] == 'admins');
+		return ($user['UserGroup']['id'] == Configure::read('BcApp.adminGroupId'));
 	}
 
 /**

@@ -197,9 +197,9 @@ class InstallationsController extends AppController {
 				$errorMessage = __d('baser', 'データベースの構築中にエラーが発生しました。');
 				try {
 					$this->_deleteAllTables();
-					$result = $this->_constructionDb($dbDataPattern);
+					$result = $this->_constructionDb($dbDataPattern, $this->request->data['Installation']['adminTheme']);
 				} catch(Exception $e) {
-					$errorMessage .= '<br>' . $e->getMessage();
+					$errorMessage .= "\n" . $e->getMessage();
 				}
 				if ($result) {
 					$this->setMessage(__d('baser', 'データベースの構築に成功しました。'));
@@ -210,8 +210,8 @@ class InstallationsController extends AppController {
 			}
 		}
 
-		$dbDataPatterns = $this->BcManager->getAllDefaultDataPatterns();
-		$this->set('dbDataPatterns', $dbDataPatterns);
+		$this->set('dbDataPatterns', $this->BcManager->getAllDefaultDataPatterns());
+		$this->set('adminThemes', array_merge(['' => 'old-admin-theme'], $this->BcManager->getAvailableAdminThemes()));
 		$this->pageTitle = __d('baser', 'baserCMSのインストール [ステップ３]');
 		$this->set('dbsource', $dbsource);
 	}
@@ -403,9 +403,9 @@ class InstallationsController extends AppController {
  * @param type $dbDataPattern データパターン
  * @return boolean
  */
-	protected function _constructionDb($dbDataPattern = null) {
+	protected function _constructionDb($dbDataPattern = null, $adminTheme = '') {
 		$dbConfig = $this->_readDbSetting();
-		if (!$this->BcManager->constructionDb($dbConfig, $dbDataPattern)) {
+		if (!$this->BcManager->constructionDb($dbConfig, $dbDataPattern, $adminTheme)) {
 			return false;
 		}
 		return true;

@@ -244,7 +244,8 @@ class MailController extends MailAppController {
 			return;
 		}
 		if (!$this->Session->read('Mail.valid')) {
-			$this->notFound();
+			$this->BcMessage->setError('エラーが発生しました。もう一度操作してください。');
+			$this->redirect($this->request->params['Content']['url'] . '/index');
 		}
 
 		if (!$this->request->data) {
@@ -302,6 +303,7 @@ class MailController extends MailAppController {
 			return;
 		}
 		if (!$this->Session->read('Mail.valid')) {
+			$this->BcMessage->setError('エラーが発生しました。もう一度操作してください。');
 			$this->redirect($this->request->params['Content']['url'] . '/index');
 		}
 
@@ -335,7 +337,7 @@ class MailController extends MailAppController {
 					// validation OK
 					$result = $this->MailMessage->save(null, false);
 				} else {
-					$result = $this->request->data;
+					$result = $this->MailMessage->saveFiles($this->MailMessage->data);
 				}
 
 				if ($result) {
@@ -356,6 +358,23 @@ class MailController extends MailAppController {
 
 					// メール送信
 					$this->_sendEmail($sendEmailOptions);
+
+					if (!$this->dbDatas['mailContent']['MailContent']['save_info']) {
+						$fileRecords = [];
+						foreach($this->dbDatas['mailFields'] as $key => $field) {
+							if($field['MailField']['type'] === 'file') {
+								// 削除フラグをセット
+								$fileRecords['MailMessage'] = [
+									$field['MailField']['field_name'] => $this->request->data['MailMessage'][$field['MailField']['field_name']],
+									$field['MailField']['field_name'] . '_delete' => true,
+								];
+								// BcUploadBehavior::deleteFiles() はデータベースのデータを削除する前提となっているため、
+								// Model->data['MailMessage']['field_name'] に、配列ではなく、文字列がセットされている状態を想定しているので状態を模倣する
+								$this->MailMessage->data['MailMessage'][$field['MailField']['field_name']] = $this->request->data['MailMessage'][$field['MailField']['field_name']];
+							}
+						}
+						$this->MailMessage->deleteFiles($fileRecords);
+					}
 
 					$this->Session->delete('Mail.valid');
 

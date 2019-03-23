@@ -548,7 +548,7 @@ class BcManagerComponent extends Component {
  * @param string $dbDataPattern データパターン
  * @return boolean
  */
-	public function constructionDb($dbConfig, $dbDataPattern = '') {
+	public function constructionDb($dbConfig, $dbDataPattern = '', $adminTheme = '') {
 
 		$coreExcludes = ['users', 'dblogs', 'plugins'];
 
@@ -573,7 +573,7 @@ class BcManagerComponent extends Component {
 			return false;
 		}
 
-		if (!$this->initSystemData($dbConfig)) {
+		if (!$this->initSystemData($dbConfig, ['adminTheme' => $adminTheme])) {
 			$this->log(__d('baser', 'システムデータの初期化に失敗しました。'));
 			return false;
 		}
@@ -745,7 +745,10 @@ class BcManagerComponent extends Component {
  */
 	public function initSystemData($dbConfig = null, $options = []) {
 		
-		$options = array_merge(['excludeUsers' => false], $options);
+		$options = array_merge([
+			'excludeUsers' => false,
+			'adminTheme' => ''
+		], $options);
 		
 		$db = $this->_getDataSource('default', $dbConfig);
 		$corePath = BASER_CONFIGS . 'data' . DS . 'default';
@@ -779,6 +782,7 @@ class BcManagerComponent extends Component {
 		if (!$SiteConfig->updateAll(['SiteConfig.value' => null], ['SiteConfig.name' => 'email']) ||
 			!$SiteConfig->updateAll(['SiteConfig.value' => null], ['SiteConfig.name' => 'google_analytics_id']) ||
 			!$SiteConfig->updateAll(['SiteConfig.value' => true], ['SiteConfig.name' => 'first_access']) ||
+			!$SiteConfig->updateAll(['SiteConfig.value' => "'" . $options['adminTheme'] . "'"], ['SiteConfig.name' => 'admin_theme']) ||
 			!$SiteConfig->deleteAll(['SiteConfig.name' => 'version'], false)) {
 			$this->log(__d('baser', 'site_configs テーブルの初期化に失敗'));
 			$result = false;
@@ -1712,6 +1716,19 @@ class BcManagerComponent extends Component {
 			}
 		}
 		return $result;
+	}
+
+	public function getAvailableAdminThemes() {
+		$themes = BcUtil::getThemeList();
+		$adminThemes = [];
+		if($themes) {
+			foreach($themes as $theme) {
+				if(is_dir(BASER_THEMES . $theme . DS . 'Layouts' . DS . 'admin')) {
+					$adminThemes[$theme] = $theme;
+				}
+			}
+		}
+		return $adminThemes;
 	}
 	
 }
