@@ -36,6 +36,10 @@
 		flex-direction: column;
 		margin: 0;
 		display: block;
+		&-label{
+			display: block;
+			margin-bottom: 8px;
+		}
 	}
 
 	&__btns {

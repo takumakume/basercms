@@ -6564,7 +6564,7 @@ div.jstree-publish-even {
     .bca-nav__system-sub-list {
       display: block;
       margin: 0;
-      padding: 0 10px 0px 26px;
+      padding: 0 0px 0px 30px;
       list-style: none;
       font-size: .8em; }
       .bca-nav__system-sub-list-item {
@@ -12424,6 +12424,9 @@ div.jstree-publish-even {
     flex-direction: column;
     margin: 0;
     display: block; }
+    .bca-search__input-item-label {
+      display: block;
+      margin-bottom: 8px; }
   .bca-search__btns {
     display: flex;
     justify-content: center;
@@ -12635,8 +12638,6 @@ div.jstree-publish-even {
   .bca-form-table__input-wrap {
     display: block;
     padding: 0 0 0 1em; }
-  .bca-form-table__group + .bca-form-table__group {
-    margin-top: 1em; }
   .bca-form-table__group-state {
     display: flex;
     flex-wrap: wrap; }
@@ -18836,6 +18837,7 @@ table.cake-sql-log tr td {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 10px;
   margin-bottom: 20px;
   padding-top: 20px;
   border-top: 1px solid #cccccc; }
