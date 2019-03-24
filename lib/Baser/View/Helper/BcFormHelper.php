@@ -272,7 +272,7 @@ class BcFormHelper extends FormHelper {
 			$radioOptions = (array)$options['options'];
 			unset($options['options']);
 		} else {
-			$radioOptions = array();
+			$radioOptions = [];
 		}
 		
 		// CUSTOMIZE MODIFY 2014/10/27 ryuring
