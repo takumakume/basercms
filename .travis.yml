@@ -41,7 +41,7 @@ before_script:
     psql -U postgres -c \"CREATE USER basercms WITH PASSWORD 'basercms';\";
     psql -U postgres -c \"CREATE DATABASE basercms OWNER basercms ENCODING='utf8'\";
     fi;"
-  - composer self-update;;
+  - composer self-update;
   - if [ -n "$GITHUB_TOKEN" ]; then composer config github-oauth.github.com ${GITHUB_TOKEN}; fi;
   - composer install --dev;
   - cd app
