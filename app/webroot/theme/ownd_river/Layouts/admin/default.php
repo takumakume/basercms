@@ -144,7 +144,7 @@
 							</div>
 
 							<?php if ($this->request->params['controller'] != 'installations' && !empty($this->BcBaser->siteConfig['first_access'])): ?>
-								<div id="FirstMessage" class="em-box" style="text-align:left">
+								<div id="FirstMessage" class="em-box bca-em-box" style="text-align:left">
 									<?php echo __d('baser', 'baserCMSへようこそ。') ?><br>
 									<ul style="font-weight:normal;font-size:14px;">
 										<li><?php echo __d('baser', '画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。') ?></li>

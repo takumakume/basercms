@@ -34,7 +34,7 @@ $(function(){
 
 <div class="step2">
 
-	<div class="em-box">
+	<div class="em-box bca-em-box">
 		インストール環境の条件をチェックしました。<br />
 		次に進む為には、「基本必須条件」の赤い項目を全て解決する必要があります。
 	</div>

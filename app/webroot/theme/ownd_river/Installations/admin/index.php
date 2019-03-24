@@ -18,7 +18,7 @@
 
 <div class="step-1">
 
-	<div class="em-box"><?php echo Configure::read('BcApp.title') ?>のインストールを開始します。<br />
+	<div class="em-box bca-em-box"><?php echo Configure::read('BcApp.title') ?>のインストールを開始します。<br />
 		よろしければ「インストール開始」ボタンをクリックしてください。</div>
 
 	<div class="section">

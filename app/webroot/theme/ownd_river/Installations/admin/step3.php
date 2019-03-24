@@ -156,7 +156,7 @@ $(document).ready( function() {
 
 <div class="step-3">
 
-	<div class="em-box">
+	<div class="em-box bca-em-box">
 		データベースサーバーの場合は、データベースの接続情報を入力し接続テストを実行してください。<br />
 		<strong>MySQL / PostgreSQLの場合は、データベースが存在し初期化されている必要があります。</strong>
 	</div>

@@ -18,7 +18,7 @@ $params = explode('/', $path);
 
 
 <!-- current -->
-<div class="em-box align-left">
+<div class="em-box bca-current-box">
 	現在の位置：<?php echo $currentPath ?>
 </div>
 

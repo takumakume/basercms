@@ -3083,23 +3083,6 @@ body * {
 
 /* em-box
 ----------------------------------------------- */
-.em-box {
-  border: 5px solid #DDD;
-  padding: 15px;
-  color: #535A62;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0 auto 20px;
-  text-align: center;
-  line-height: 24px; }
-
-.em-box a {
-  color: #690; }
-
-.em-box a:hover {
-  color: #9C0;
-  text-decoration: none; }
-
 /* tree empty
 ----------------------------------------------- */
 .tree-empty {
@@ -3776,7 +3759,6 @@ div.jstree-publish-even {
   .bca-main__body {
     padding: 0 30px; }
   .bca-main__header {
-    margin-bottom: 10px;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -6456,7 +6438,7 @@ div.jstree-publish-even {
         .bca-nav__sub-list-item a {
           display: block;
           white-space: nowrap;
-          padding: 10px 20px 9px 35px;
+          padding: 13px 20px 11px 35px;
           color: #656565;
           font-size: 1.3rem; }
           .bca-nav__sub-list-item a::before {
@@ -6464,6 +6446,18 @@ div.jstree-publish-even {
             opacity: 0.7; }
           .bca-nav__sub-list-item a:link, .bca-nav__sub-list-item a:visited {
             color: #656565; }
+            .bca-nav__sub-list-item a:link:after, .bca-nav__sub-list-item a:visited:after {
+              position: absolute;
+              top: 50%;
+              right: 0;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%);
+              content: "";
+              display: block;
+              width: 0;
+              border-right: 10px solid #F8F8F8;
+              border-top: 10px solid transparent;
+              border-bottom: 10px solid transparent; }
           .bca-nav__sub-list-item a:hover {
             font-weight: bold;
             text-decoration: none;
@@ -6524,7 +6518,8 @@ div.jstree-publish-even {
       margin-bottom: 14px; }
       .bca-nav__system-list-item-title {
         margin: 0;
-        font-size: 0.9em; }
+        font-size: 0.9em;
+        padding: 0 20px; }
       .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a:before {
         width: 16px;
         text-align: center; }
@@ -6569,7 +6564,7 @@ div.jstree-publish-even {
     .bca-nav__system-sub-list {
       display: block;
       margin: 0;
-      padding: 0 10px 0px 26px;
+      padding: 0 0px 0px 30px;
       list-style: none;
       font-size: .8em; }
       .bca-nav__system-sub-list-item {
@@ -12429,6 +12424,9 @@ div.jstree-publish-even {
     flex-direction: column;
     margin: 0;
     display: block; }
+    .bca-search__input-item-label {
+      display: block;
+      margin-bottom: 8px; }
   .bca-search__btns {
     display: flex;
     justify-content: center;
@@ -12613,15 +12611,13 @@ div.jstree-publish-even {
 .bca-form-table {
   font-size: 1.6rem;
   width: 100%;
-  table-layout: auto;
-  border-bottom: 1px solid #ccc; }
+  table-layout: auto; }
   .bca-form-table__label {
     vertical-align: top;
-    width: 200px;
+    width: 250px;
     padding: 1.4em 2em 1em 1em;
     font-weight: bold;
     border: 0 solid #ccc;
-    border-width: 1px 0 0;
     text-align: left; }
     .bca-form-table__label.-label {
       display: block;
@@ -12638,13 +12634,10 @@ div.jstree-publish-even {
     padding: 1em 0 1em;
     vertical-align: top;
     border: 0 solid #ccc;
-    border-width: 1px 0 0;
     font-weight: normal; }
   .bca-form-table__input-wrap {
     display: block;
     padding: 0 0 0 1em; }
-  .bca-form-table__group + .bca-form-table__group {
-    margin-top: 1em; }
   .bca-form-table__group-state {
     display: flex;
     flex-wrap: wrap; }
@@ -15974,16 +15967,17 @@ table.cake-sql-log tr td {
     margin-top: 15px; }
 
 .bca-label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   display: inline-block;
   color: #FFF;
   background: #444;
-  margin: .5em .5em .5em;
+  margin: .5em .55em .5em;
   padding: 0 .5em;
-  line-height: 2; }
+  line-height: 1.8; }
   .bca-label[data-bca-label-type="required"] {
     white-space: nowrap;
-    background: #E00; }
+    background: #E00;
+    border-radius: 2px; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
 
@@ -18843,8 +18837,10 @@ table.cake-sql-log tr td {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #cccccc; }
   .bca-actions__sub {
     margin-left: 30px;
     padding-left: 30px;
@@ -23639,6 +23635,30 @@ table.cake-sql-log tr td {
     [data-bca-state=open] .bca-collapse__btn-icon {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
+
+.bca-em-box {
+  padding: 1px 15px;
+  background: #FFFFFF;
+  font-size: 1.4rem;
+  margin: 15px auto;
+  text-align: center;
+  line-height: 1.6; }
+  .bca-em-box a {
+    color: #690; }
+    .bca-em-box a:hover {
+      color: #9C0;
+      text-decoration: none; }
+
+.bca-current-box {
+  padding: 1px 0;
+  font-size: 1.4rem;
+  margin: -34px auto 15px;
+  line-height: 1.6; }
+  .bca-current-box a {
+    color: #690; }
+    .bca-current-box a:hover {
+      color: #9C0;
+      text-decoration: none; }
 
 .ui-dialog {
   padding: 0 !important; }

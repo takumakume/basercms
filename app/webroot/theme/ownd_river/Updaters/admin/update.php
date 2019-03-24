@@ -54,7 +54,7 @@ if (!($baserVerPoint === false || $siteVerPoint === false) && ($baserVer != $sit
 		<li>現在のデータベースのバージョン： <strong><?php echo $siteVer ?></strong></li>
 	</ul>
 <?php if ($scriptNum || $scriptMessages): ?>
-	<div class="em-box">
+	<div class="em-box bca-em-box">
 	<?php if ($baserVerPoint === false || $siteVerPoint === false): ?>
 		<h3>α版の場合はアップデートサポート外です。</h3>
 	<?php elseif ($baserVer != $siteVer || $scriptNum): ?>

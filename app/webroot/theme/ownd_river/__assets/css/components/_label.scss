@@ -1,15 +1,16 @@
 .bca-label {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	display: inline-block;
 	color: #FFF;
 	background: #444;
-	margin: .5em .5em .5em;
+	margin: .5em .55em .5em;
 	padding: 0 .5em;
-	line-height: 2;
+	line-height: 1.8;
 
 	&[data-bca-label-type="required"] {
     white-space: nowrap;
 		background: #E00;
+		border-radius: 2px;
 	}
 
 	&[data-bca-label-type="optional"] {

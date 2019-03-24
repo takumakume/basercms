@@ -44,7 +44,7 @@ $(function(){
 <div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
 
 <!-- current -->
-<div class="em-box align-left">現在の位置：<?php echo $currentPath ?>
+<div class="em-box bca-current-box">現在の位置：<?php echo $currentPath ?>
 	<?php if (!$writable): ?>
 		　<span style="color:#FF3300">[書込不可]</span>
 	<?php endif ?>

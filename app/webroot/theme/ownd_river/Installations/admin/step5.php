@@ -19,7 +19,7 @@ $adminPrefix = Configure::read('Routing.prefixes.0');
 
 <div class="step-5">
 
-	<div class="em-box"> おめでとうございます！baserCMSのインストールが無事完了しました！ <br />
+	<div class="em-box bca-em-box"> おめでとうございます！baserCMSのインストールが無事完了しました！ <br />
 		管理用メールアドレスへインストール完了メールを送信しています。</div>
 	<h2>次は何をしますか？</h2>
 	<div class="panel-box bca-panel-box corner10">

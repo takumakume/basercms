@@ -50,7 +50,7 @@ $(document).ready(function(){
 
 <div id="step-4">
 
-	<div class="em-box">
+	<div class="em-box bca-em-box">
 		最後に管理情報を登録します。<br />
 		ここで入力した管理者アカウント名やパスワードは忘れないようにしておいてください。
 	</div>

@@ -18,8 +18,8 @@ $owners = $this->BcForm->getControlSource('BlogCategory.owner_id');
 
 
 <?php if ($this->action == 'admin_edit'): ?>
-	<div class="em-box bc-align-left">
-		<p><strong><?php echo __d('baser', 'このカテゴリのURL') ?>：<?php $this->BcBaser->link($this->BcBaser->getUri('/' . $this->request->params['Content']['name'] . '/archives/category/' . $this->BcForm->value('BlogCategory.name')), '/' . $this->request->params['Content']['name'] . '/archives/category/' . $this->BcForm->value('BlogCategory.name'), array('target' => '_blank')) ?></strong></p>
+	<div class="em-box bca-current-box">
+		<p><?php echo __d('baser', 'このカテゴリのURL') ?>：<?php $this->BcBaser->link($this->BcBaser->getUri('/' . $this->request->params['Content']['name'] . '/archives/category/' . $this->BcForm->value('BlogCategory.name')), '/' . $this->request->params['Content']['name'] . '/archives/category/' . $this->BcForm->value('BlogCategory.name'), array('target' => '_blank')) ?></p>
 	</div>
 <?php endif ?>
 
