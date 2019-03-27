@@ -1,59 +1,67 @@
 /* Help,Search,Limit共通設定
 ----------------------------------------------- */
-#Help .head, #Limit .head{
-	padding: 0;
-	margin: 0;
+#Help .head, #Limit .head {
+  padding: 0;
+  margin: 0;
 }
-#Help .body, #Limit .body{
-	margin: 10px auto;
-	text-align: center;
-	vertical-align: middle;
+
+#Help .body, #Limit .body {
+  margin: 10px auto;
+  text-align: center;
+  vertical-align: middle;
 }
-#Help .close, #Limit .close{
-	float: right;
-	margin: 0;
-	padding: 0;
-	cursor: pointer;
+
+#Help .close, #Limit .close {
+  float: right;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
-#Help h2, #Limit h2{
-	padding-left:0;
-	border: none;
+
+#Help h2, #Limit h2 {
+  padding-left: 0;
+  border: none;
 }
 
 /* Help
 ----------------------------------------------- */
 
-#Help{
-	display: none;
-	border: 5px solid #669900;
-	padding: 10px 20px;
-	margin: 0 0 20px;
-	background-color:#FFF;
-	overflow: hidden;
-}
-#Help .body {
-	text-align: left;
-}
-#Help .example-box {
-	padding:15px;
-	border:3px solid #DDD;
-	margin-bottom: 20px;
-	color:#000;
-}
-#Help .example-box .head{
-	font-weight: bold;
-}
-#Help ul,
-#Help ol{
-	list-style-type: none;
+#Help {
+  display: none;
+  border: 5px solid #669900;
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  background-color: #FFF;
+  overflow: hidden;
 }
 
-#Help li{
-	/*padding: 0 20px;*/
-	margin:5px 0;
-	background: url(../../img/admin/blt_list_2.png) no-repeat left 1px;
-	padding-left:15px;
+#Help .body {
+  text-align: left;
 }
-#Help li img{
-	vertical-align: middle;
+
+#Help .example-box {
+  padding: 15px;
+  border: 3px solid #DDD;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+#Help .example-box .head {
+  font-weight: bold;
+}
+
+#Help ul,
+#Help ol {
+  list-style-type: none;
+}
+
+#Help li {
+  /*padding: 0 20px;*/
+  margin: 5px 0;
+  background: url(../../img/admin/blt_list_2.png) no-repeat left 1px;
+  padding-left: 15px;
+}
+
+#Help li img {
+  vertical-align: middle;
 }

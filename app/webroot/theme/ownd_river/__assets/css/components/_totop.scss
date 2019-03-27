@@ -22,21 +22,21 @@
 //}
 
 .bca-totop {
-	display: block;
-	clear: both;
-	text-align: right;
-	margin-top:30px;
-	padding-bottom: 15px;
+  display: block;
+  clear: both;
+  text-align: right;
+  margin-top: 30px;
+  padding-bottom: 15px;
 
-	a {
-		border: 1px solid $color_secondary;
-		padding: 4px 10px;
-		text-decoration: none;
-		font-size: 10px;
-		color: $color_secondary;
-		&:hover {
-			background-color: $color_secondary;
-			color: $color_lightest;
-		}
-	}
+  a {
+    border: 1px solid $color_secondary;
+    padding: 4px 10px;
+    text-decoration: none;
+    font-size: 10px;
+    color: $color_secondary;
+    &:hover {
+      background-color: $color_secondary;
+      color: $color_lightest;
+    }
+  }
 }

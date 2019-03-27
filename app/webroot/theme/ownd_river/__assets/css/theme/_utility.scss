@@ -30,22 +30,27 @@
 	font-size: x-large!important;
 }*/
 .align-left {
-	text-align:left!important;
+  text-align: left !important;
 }
+
 .align-right {
-	text-align:right!important;
+  text-align: right !important;
 }
+
 .align-center {
-	text-align:center!important;
+  text-align: center !important;
 }
+
 .bc-align-left {
-	text-align:left!important;
+  text-align: left !important;
 }
+
 .bc-align-right {
-	text-align:right!important;
+  text-align: right !important;
 }
+
 .bc-align-center {
-	text-align:center!important;
+  text-align: center !important;
 }
 
 /* float
@@ -109,16 +114,15 @@
 // サムネイル画像用の枠
 //
 .photo {
-	padding:5px;
-	background-color: #FFF;
-	border:1px solid #DDD;
+  padding: 5px;
+  background-color: #FFF;
+  border: 1px solid #DDD;
 }
-
 
 // 外部リンク用アイコン付きテキストリンク
 .outside-link {
-	background: url(../../img/admin/blt_outside_link.png) no-repeat left -1px;
-	padding-left:18px;
+  background: url(../../img/admin/blt_outside_link.png) no-repeat left -1px;
+  padding-left: 18px;
 }
 
 // たぶん不必要

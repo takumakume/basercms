@@ -1,11 +1,9 @@
 /* ==================================================================== */
 /*    Footer
 /* ==================================================================== */
-
 //
 // TODO: idにスタイルを指定しない
 //
-
 ///* Footer
 //----------------------------------------------- */
 //#Footer{
@@ -94,139 +92,136 @@
 //	font-size:10px;
 //	padding-right:20px;
 //}
-
-
-
 @import '../vender/Font-Awesome/font-awesome';
 
 .bca-footer {
-	width:100%;
-	color: #ccc;
-	background-color: #666;
-	&__inner {
-		min-width: 960px;
-		padding-top:37px;
-		padding-bottom:15px;
-	}
+  width: 100%;
+  color: #ccc;
+  background-color: #666;
+  &__inner {
+    min-width: 960px;
+    padding-top: 37px;
+    padding-bottom: 15px;
+  }
 
-	// ログイン前
-	&__header {
-		text-align: center;
-	}
-	&__logo {
-		width: 82px;
-		margin-bottom:10px;
-	}
-	&__banner {
-		margin: 0;
-		padding: 0;
-		list-style:none;
-		&__item {
-			margin: 0;
-			padding: 0;
-		}
-	}
-	&__baser-version {
-		margin-bottom: 10px;
-	}
+  // ログイン前
+  &__header {
+    text-align: center;
+  }
+  &__logo {
+    width: 82px;
+    margin-bottom: 10px;
+  }
+  &__banner {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &__item {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &__baser-version {
+    margin-bottom: 10px;
+  }
 
-	&__banner {
-		display: flex;
-		justify-content: center;
-		margin: 0 0 30px;
-		padding: 0;
-		list-style: none;
-		&__item {
-			margin: 0;
-			padding: 0 5px;
-		}
-	}
+  &__banner {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+    &__item {
+      margin: 0;
+      padding: 0 5px;
+    }
+  }
 
-	&__sns {
-		display: flex;
-		justify-content: center;
-		margin: 0 0 38px;
-		padding: 0;
-		list-style:none;
-		&__item {
-			margin: 0;
-			padding: 0 5px;
-		}
-		&__link {
-			position: relative;
-			display: inline-block;
-			width:30px;
-			height: 0px;
-			padding-top:30px;
-			overflow: hidden;
-			font-size:2.2rem;
-			background-color: $color_primary;
-			&:before {
-				@extend .#{$fa-css-prefix};
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%,-50%);
-				color: #fff;
-			}
-			&--facebook {
-				@extend .#{$fa-css-prefix}-facebook;
-				background-color: #3F5D93;
-			}
-			&--twitter {
-				@extend .#{$fa-css-prefix}-twitter;
-				background-color: #54ABED;
-			}
-		}
-	}
+  &__sns {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 38px;
+    padding: 0;
+    list-style: none;
+    &__item {
+      margin: 0;
+      padding: 0 5px;
+    }
+    &__link {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 0px;
+      padding-top: 30px;
+      overflow: hidden;
+      font-size: 2.2rem;
+      background-color: $color_primary;
+      &:before {
+        @extend .#{$fa-css-prefix};
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+      }
+      &--facebook {
+        @extend .#{$fa-css-prefix}-facebook;
+        background-color: #3F5D93;
+      }
+      &--twitter {
+        @extend .#{$fa-css-prefix}-twitter;
+        background-color: #54ABED;
+      }
+    }
+  }
 
-	&__links {
-		display: flex;
-		justify-content: center;
-		margin: 0 0 38px;
-		padding: 0;
-		list-style: none;
-		font-size:1.2rem;
-		&__item {
-			padding:0 1em;
-			a {
-				&:link,
-				&:visited,
-				&:active {
-					color: #ccc;
-				}
-				&:hover {
-					color: $color_primary;
-				}
-			}
-		}
-	}
-	&__copyright {
-		margin: 0;
-		text-align: center;
-	}
+  &__links {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 38px;
+    padding: 0;
+    list-style: none;
+    font-size: 1.2rem;
+    &__item {
+      padding: 0 1em;
+      a {
+        &:link,
+        &:visited,
+        &:active {
+          color: #ccc;
+        }
+        &:hover {
+          color: $color_primary;
+        }
+      }
+    }
+  }
+  &__copyright {
+    margin: 0;
+    text-align: center;
+  }
 
-	// ログイン後
-	&__inner--full {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row-reverse;
-		align-items: center;
-		padding:7px 10px;
-		.bca-footer__main {
-			display: flex;
-			align-items: center;
-			.bca-footer__baser-version {
-				padding-right:10px;
-				margin: 0;
-			}
-			.bca-footer__banner {
-				margin: 0;
-			}
-		}
-		.bca-footer__sub {
-		}
-	}
+  // ログイン後
+  &__inner--full {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 7px 10px;
+    .bca-footer__main {
+      display: flex;
+      align-items: center;
+      .bca-footer__baser-version {
+        padding-right: 10px;
+        margin: 0;
+      }
+      .bca-footer__banner {
+        margin: 0;
+      }
+    }
+    .bca-footer__sub {
+    }
+  }
 }
 
 

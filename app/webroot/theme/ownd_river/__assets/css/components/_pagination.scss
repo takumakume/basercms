@@ -70,72 +70,71 @@
 //	color:#DFDFDF;
 //}
 
-
 .bca-pagination {
-	display: block;
-	padding-right: 0;
-	line-height: 32px;
-	text-align: right;
+  display: block;
+  padding-right: 0;
+  line-height: 32px;
+  text-align: right;
 
-	.bca-page-numbers {
-		display: inline-block;
-		//float: right;
-		margin-right:20px;
-		vertical-align: bottom;
-	}
-	.bca-page-result {
-		display: inline-block;
-		margin: 0 5px 0;
-		//float: right;
-		vertical-align: bottom;
-	}
+  .bca-page-numbers {
+    display: inline-block;
+    //float: right;
+    margin-right: 20px;
+    vertical-align: bottom;
+  }
+  .bca-page-result {
+    display: inline-block;
+    margin: 0 5px 0;
+    //float: right;
+    vertical-align: bottom;
+  }
 
-	span a,
-	span span a,
-	.disabled,
-	.current {
-		display: inline-block;
-		float: left;
-		margin: 0 2px;
-		padding: 0;
-		width:28px;
-		text-align: center;
-		vertical-align: middle;
-		line-height: 28px;
-		font-size:15px;
-		border: 1px solid #ccc;
-		text-decoration: none;
-		box-sizing: border-box;
-	}
+  span a,
+  span span a,
+  .disabled,
+  .current {
+    display: inline-block;
+    float: left;
+    margin: 0 2px;
+    padding: 0;
+    width: 28px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 28px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
 
-	span span a {
-		color: $color_primary;
-		&:hover {
-			background-color: $color_primary;
-			color: #FFFFFF;
-		}
-	}
-	.current {
-		background-color: #fff;
-		color: #999;
-	}
-	.next, .prev {
-		border-color: $color_background_menu;
-		background-color: $color_background_menu;
-		a {
-			border-color: $color_background_menu;
-			background-color: $color_background_menu;
-			&:hover {
-				background-color: $color_primary;
-				color: #fff;
-			}
-		}
-	}
+  span span a {
+    color: $color_primary;
+    &:hover {
+      background-color: $color_primary;
+      color: #FFFFFF;
+    }
+  }
+  .current {
+    background-color: #fff;
+    color: #999;
+  }
+  .next, .prev {
+    border-color: $color_background_menu;
+    background-color: $color_background_menu;
+    a {
+      border-color: $color_background_menu;
+      background-color: $color_background_menu;
+      &:hover {
+        background-color: $color_primary;
+        color: #fff;
+      }
+    }
+  }
 
-	.disabled,
-	.disabled:hover {
-		color: #999;
-		border-color: $color_background_menu;
-		background-color: $color_background_menu;
-	}
+  .disabled,
+  .disabled:hover {
+    color: #999;
+    border-color: $color_background_menu;
+    background-color: $color_background_menu;
+  }
 }

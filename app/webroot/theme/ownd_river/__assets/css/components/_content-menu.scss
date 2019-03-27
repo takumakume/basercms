@@ -1,15 +1,15 @@
 .bca-content-menu {
-	padding: 0;
+  padding: 0;
 
-	&__item {
-		font-size: 1.3rem;
-		display: inline-block;
-		margin-left: 1em;
-		padding:0;
-		background: none;
-	}
+  &__item {
+    font-size: 1.3rem;
+    display: inline-block;
+    margin-left: 1em;
+    padding: 0;
+    background: none;
+  }
 
-	&__link {
-		color: $color_text_secondary;
-	}
+  &__link {
+    color: $color_text_secondary;
+  }
 }

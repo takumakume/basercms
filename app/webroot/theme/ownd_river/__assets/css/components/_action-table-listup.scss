@@ -2,13 +2,13 @@
 ----------------------------------------------- */
 
 .bca-action-table-listup {
-	select {
-		margin-top:0;
-		margin-bottom:0;
-		//height:32px;
-	}
-	select + button {
-		position: relative;
-		//top:-2px;
-	}
+  select {
+    margin-top: 0;
+    margin-bottom: 0;
+    //height:32px;
+  }
+  select + button {
+    position: relative;
+    //top:-2px;
+  }
 }

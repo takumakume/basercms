@@ -3,32 +3,34 @@
 /* ==================================================================== */
 
 #Login #flashMessage {
-    border-radius: 0px;
+  border-radius: 0px;
 }
-#Login #MessageBox .notice-message{
-	border:5px solid $color_primary;
-	background-color: transparent;
+
+#Login #MessageBox .notice-message {
+  border: 5px solid $color_primary;
+  background-color: transparent;
 }
-#Login #MessageBox .alert-message{
-	border:5px solid $color_danger;
-	background-color: transparent;
+
+#Login #MessageBox .alert-message {
+  border: 5px solid $color_danger;
+  background-color: transparent;
 }
 
 .bca-login {
-	&,
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-	position: relative;
-	z-index: 100000;
-	max-width: 500px;
-	margin: 30px auto;
-	padding: 40px 25px 25px;
-	border-radius: 5px;
-	background: $color_lightest;
-	font-size:1.4rem;
+  &,
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  position: relative;
+  z-index: 100000;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 40px 25px 25px;
+  border-radius: 5px;
+  background: $color_lightest;
+  font-size: 1.4rem;
 
   &__title {
     margin-top: 0;
@@ -41,22 +43,22 @@
     width: 230px;
   }
 
-	&-form-item {
-		position: relative;
+  &-form-item {
+    position: relative;
     display: block;
-		label {
-			color: $color_text_secondary;
-			font-size: 1.2rem;
-			display: block;
-			position: absolute;
-			top: 50%;
-			right: 1.2em;
-			transform: translate(0, -50%);
-			pointer-events: none;
-		}
+    label {
+      color: $color_text_secondary;
+      font-size: 1.2rem;
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 1.2em;
+      transform: translate(0, -50%);
+      pointer-events: none;
+    }
     .bca-textbox {
       display: block;
-      .bca-textbox__input{
+      .bca-textbox__input {
         display: block;
         width: 100%;
         height: 52px;
@@ -76,30 +78,30 @@
         }
       }
     }
-	}
-	button.bca-btn--login {
-		font-size: 1.6rem;
-		line-height: 1;
-		display: block;
-		width: 100%;
+  }
+  button.bca-btn--login {
+    font-size: 1.6rem;
+    line-height: 1;
+    display: block;
+    width: 100%;
     height: 52px;
-	}
-	.bca-login-form-ctrl {
+  }
+  .bca-login-form-ctrl {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
 
-		margin-top: 20px;
-		overflow: hidden;
-	}
-	.bca-login-form-checker {
-	}
-	.bca-login-forgot-pass {
-	}
-	.bca-login-form-checkbox {
-		//display: inline-block;
-		//vertical-align: middle;
-		//line-height: 1;
-	}
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  .bca-login-form-checker {
+  }
+  .bca-login-forgot-pass {
+  }
+  .bca-login-form-checkbox {
+    //display: inline-block;
+    //vertical-align: middle;
+    //line-height: 1;
+  }
 }

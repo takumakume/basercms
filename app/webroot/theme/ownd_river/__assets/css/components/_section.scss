@@ -32,11 +32,10 @@
   //   }
   // }
 
-
   // ブログ新着記事の上部
   &__post-top {
     display: flex;
-    justify-content:flex-end;
+    justify-content: flex-end;
     margin-bottom: 0.8em;
     .bca-post__no {
       margin-right: 2em;
@@ -53,7 +52,7 @@
     }
   }
 
-  &[data-bca-section-type=form-group]{
+  &[data-bca-section-type=form-group] {
     margin-bottom: 60px;
   }
 }

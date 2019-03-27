@@ -1,4 +1,4 @@
-.bca-textarea{
+.bca-textarea {
   display: inline-block;
   width: calc(100% - 120px);
 
@@ -11,22 +11,22 @@
     border: 1px solid #cccccc;
     line-height: 1.2;
     font-size: $button_font_size_medium;
-    color:#535A62;
-    &[data-input-text-size=lg]{
+    color: #535A62;
+    &[data-input-text-size=lg] {
       font-size: $button_font_size_large;
     }
-    &[data-input-text-size=sm]{
+    &[data-input-text-size=sm] {
       font-size: $button_font_size_small;
     }
-    &[data-input-text-size=full-counter]{
+    &[data-input-text-size=full-counter] {
       width: calc(100%);
     }
 
-    &[data-width=full]{
+    &[data-width=full] {
       width: calc(100% - 80px);
     }
 
-    &:focus{
+    &:focus {
       box-shadow: $focus_shadow;
 
     }

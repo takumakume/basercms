@@ -1,13 +1,13 @@
 // table系
 
-.bca-table{
+.bca-table {
   &[data-bca-table-type=type1] {
     thead {
       text-align: center;
       font-weight: normal;
     }
     tbody {
-      th,td {
+      th, td {
         padding: 5px;
       }
       th {
@@ -39,7 +39,7 @@
       }
     }
     tbody {
-      th,td {
+      th, td {
         vertical-align: top;
       }
       th {
@@ -51,9 +51,11 @@
 
       }
     }
-    .cel1 {width: 120px;}
+    .cel1 {
+      width: 120px;
+    }
     .bca-currentrow {
-      th,td {
+      th, td {
         background: $color_background_menu_current_primary;
       }
     }

@@ -134,43 +134,51 @@
 					<article id="ContentsBody" class="contents-body bca-main__body">
 
 						<div class="bca-main__header">
+
 							<h1 class="bca-main__header-title"><?php $this->BcBaser->contentsTitle() ?></h1>
+
 							<div class="bca-main__header-actions">
 								<?php $this->BcBaser->element('main_body_header_links'); ?>
 							</div>
+
 							<div class="bca-main__header-menu">
 								<?php $this->BcBaser->element('contents_menu') ?>
 							</div>
-							</div>
 
-							<?php if ($this->request->params['controller'] != 'installations' && !empty($this->BcBaser->siteConfig['first_access'])): ?>
-								<div id="FirstMessage" class="em-box bca-em-box" style="text-align:left">
-									<?php echo __d('baser', 'baserCMSへようこそ。') ?><br>
-									<ul style="font-weight:normal;font-size:14px;">
-										<li><?php echo __d('baser', '画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。') ?></li>
-										<li><?php echo __d('baser', 'お気に入り機能については、画面右側にある「お気に入りに追加」をクリックして、お気に入りとして登録する事ができます。') ?></li>
-										<li><?php echo __d('baser', 'まずは、画面上部のメニュー、「コンテンツ管理」よりWebサイトの全体像を確認しましょう。') ?></li>
-									</ul>
-								</div>
-							<?php endif ?>
+						</div>
 
-							<?php $this->BcBaser->flash() ?>
+<?php if ($this->request->params['controller'] != 'installations' && !empty($this->BcBaser->siteConfig['first_access'])): ?>
+						<div id="FirstMessage" class="em-box bca-em-box" style="text-align:left">
+							<?php echo __d('baser', 'baserCMSへようこそ。') ?><br>
+							<ul style="font-weight:normal;font-size:14px;">
+								<li><?php echo __d('baser', '画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。') ?></li>
+								<li><?php echo __d('baser', 'お気に入り機能については、画面右側にある「お気に入りに追加」をクリックして、お気に入りとして登録する事ができます。') ?></li>
+								<li><?php echo __d('baser', 'まずは、画面上部のメニュー、「コンテンツ管理」よりWebサイトの全体像を確認しましょう。') ?></li>
+							</ul>
+						</div>
+<?php endif ?>
 
-							<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message">&nbsp;</div></div>
+						<?php $this->BcBaser->flash() ?>
 
-							<?php if(@$help): ?>
-							<?php $this->BcBaser->element('help', [], ['cache' => ['key' => '_admin_help_' . $help]]) ?>
-							<?php endif ?>
+						<div id="BcMessageBox">
+							<div id="BcSystemMessage" class="notice-message"></div>
+						</div>
 
-							<?php $this->BcBaser->element('search') ?>
+<?php if(@$help): ?>
+						<?php $this->BcBaser->element('help', [], ['cache' => ['key' => '_admin_help_' . $help]]) ?>
+<?php endif ?>
 
+						<?php $this->BcBaser->element('search') ?>
+
+						<div class="bca-main__contents">
 							<?php $this->BcBaser->content() ?>
+						</div>
 
 					<!-- / bca-main__body --></article>
 
-						<?php if (!empty($user)): ?>
+<?php if (!empty($user)): ?>
 					<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link(__d('baser', '▲ トップへ'), '#Header') ?></div>
-						<?php endif ?>
+<?php endif ?>
 
 				<!-- / .bca-main --></main>
 

@@ -5,68 +5,68 @@
 
 .bca-btn-icon-text {
 
-	@mixin bca-btn-icon-text-common {
-		display: inline-block;
-		width:auto;
-		font-size: 1.8rem;
-		line-height:1;
-		cursor: pointer;
-		text-decoration: none;
-		text-align: center;
+  @mixin bca-btn-icon-text-common {
+    display: inline-block;
+    width: auto;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 
-		&::before {
-			@extend .#{$fa-css-prefix};
+    &::before {
+      @extend .#{$fa-css-prefix};
       margin-right: 0.2em;
-			color: $color_primary;
-			transition: 0.2;
-		}
-		&:hover {
-			text-decoration: none;
-			color: $color_secondary;
-			&:before {
-				color: $color_secondary;
-			}
-		}
-	}
+      color: $color_primary;
+      transition: 0.2;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $color_secondary;
+      &:before {
+        color: $color_secondary;
+      }
+    }
+  }
 
-	// デフォルトボタン
-	@include bca-btn-icon-text-common;
+  // デフォルトボタン
+  @include bca-btn-icon-text-common;
 
-	// 公開
-	&[data-bca-btn-type=publish] {
-		@extend .#{$fa-css-prefix}-play-circle-o;
-		@include bca-btn-icon-text-common;
-	}
+  // 公開
+  &[data-bca-btn-type=publish] {
+    @extend .#{$fa-css-prefix}-play-circle-o;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 非公開
-	&[data-bca-btn-type=unpublish] {
-		@extend .#{$fa-css-prefix}-pause-circle-o;
-		@include bca-btn-icon-text-common;
-	}
+  // 非公開
+  &[data-bca-btn-type=unpublish] {
+    @extend .#{$fa-css-prefix}-pause-circle-o;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 確認
-	&[data-bca-btn-type=preview] {
-		@extend .#{$fa-css-prefix}-eye;
-		@include bca-btn-icon-text-common;
-	}
+  // 確認
+  &[data-bca-btn-type=preview] {
+    @extend .#{$fa-css-prefix}-eye;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 編集
-	&[data-bca-btn-type=edit] {
-		@extend .#{$fa-css-prefix}-pencil;
-		@include bca-btn-icon-text-common;
-	}
+  // 編集
+  &[data-bca-btn-type=edit] {
+    @extend .#{$fa-css-prefix}-pencil;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 複製
-	&[data-bca-btn-type=copy] {
-		@extend .#{$fa-css-prefix}-copy;
-		@include bca-btn-icon-text-common;
-	}
+  // 複製
+  &[data-bca-btn-type=copy] {
+    @extend .#{$fa-css-prefix}-copy;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 削除
-	&[data-bca-btn-type=delete] {
-		@extend .#{$fa-css-prefix}-trash;
-		@include bca-btn-icon-text-common;
-	}
+  // 削除
+  &[data-bca-btn-type=delete] {
+    @extend .#{$fa-css-prefix}-trash;
+    @include bca-btn-icon-text-common;
+  }
 
   // 一覧に戻る
   &[data-bca-btn-type=back-to-list] {
@@ -74,61 +74,61 @@
     @include bca-btn-icon-text-common;
   }
 
-	// お気に入り
-	&[data-bca-btn-type=favorite] {
-		@extend .#{$fa-css-prefix}-heart;
-		@include bca-btn-icon-text-common;
-	}
+  // お気に入り
+  &[data-bca-btn-type=favorite] {
+    @extend .#{$fa-css-prefix}-heart;
+    @include bca-btn-icon-text-common;
+  }
 
-	// メニューアイテム
-	&[data-bca-btn-type=menuitem] {
-		@extend .#{$fa-css-prefix}-angle-right;
-		@include bca-btn-icon-text-common;
-	}
+  // メニューアイテム
+  &[data-bca-btn-type=menuitem] {
+    @extend .#{$fa-css-prefix}-angle-right;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 追加
-	&[data-bca-btn-type=add] {
-		@extend .#{$fa-css-prefix}-plus-circle;
-		@include bca-btn-icon-text-common;
-	}
+  // 追加
+  &[data-bca-btn-type=add] {
+    @extend .#{$fa-css-prefix}-plus-circle;
+    @include bca-btn-icon-text-common;
+  }
 
-	// ヘルプ
-	&[data-bca-btn-type=help] {
-		@extend .#{$fa-css-prefix}-life-ring;
-		@include bca-btn-icon-text-common;
-	}
+  // ヘルプ
+  &[data-bca-btn-type=help] {
+    @extend .#{$fa-css-prefix}-life-ring;
+    @include bca-btn-icon-text-common;
+  }
 
-	// 制限（鍵)
-	&[data-bca-btn-type=permission] {
-		@extend .#{$fa-css-prefix}-lock;
-		@include bca-btn-icon-text-common;
-	}
+  // 制限（鍵)
+  &[data-bca-btn-type=permission] {
+    @extend .#{$fa-css-prefix}-lock;
+    @include bca-btn-icon-text-common;
+  }
 
-	// HOME
-	&[data-bca-btn-type=home] {
-		@extend .#{$fa-css-prefix}-home;
-		@include bca-btn-icon-text-common;
-	}
+  // HOME
+  &[data-bca-btn-type=home] {
+    @extend .#{$fa-css-prefix}-home;
+    @include bca-btn-icon-text-common;
+  }
 
-	// ログイン
-	&[data-bca-btn-type=login] {
-		@include bca-btn-icon-text-common;
-		color: $color_lightest;
-		$color_darken: darken($color_primary, 5%);
-		border: 1px solid $color_darken;
-		background-image: linear-gradient($color_primary 10%, $color_darken 100%);
-		&:hover,
-		&:focus {
-			color: $color_lightest;
-			background-image: linear-gradient($color_darken 10%, $color_darken 100%);
-		}
-	}
+  // ログイン
+  &[data-bca-btn-type=login] {
+    @include bca-btn-icon-text-common;
+    color: $color_lightest;
+    $color_darken: darken($color_primary, 5%);
+    border: 1px solid $color_darken;
+    background-image: linear-gradient($color_primary 10%, $color_darken 100%);
+    &:hover,
+    &:focus {
+      color: $color_lightest;
+      background-image: linear-gradient($color_darken 10%, $color_darken 100%);
+    }
+  }
 
-	// 開く
-	&[data-bca-btn-type=open] {
-		@extend .#{$fa-css-prefix}-folder-open;
-		@include bca-btn-icon-text-common;
-	}
+  // 開く
+  &[data-bca-btn-type=open] {
+    @extend .#{$fa-css-prefix}-folder-open;
+    @include bca-btn-icon-text-common;
+  }
 
   // テキストコピー
   &[data-bca-btn-type=textcopy] {
@@ -148,55 +148,54 @@
     @include bca-btn-icon-text-common;
   }
 
-
   // サイズ
-	// ===========================
+  // ===========================
 
-	// large
-	&[data-bca-btn-size=lg] {
-		font-size: 2.4rem;
-		&::before {
-			@extend .#{$fa-css-prefix};
-		}
-	}
+  // large
+  &[data-bca-btn-size=lg] {
+    font-size: 2.4rem;
+    &::before {
+      @extend .#{$fa-css-prefix};
+    }
+  }
 
-	// small
-	&[data-bca-btn-size=sm] {
-		font-size: 1.4rem;
-		&::before {
-			@extend .#{$fa-css-prefix};
-		}
-	}
+  // small
+  &[data-bca-btn-size=sm] {
+    font-size: 1.4rem;
+    &::before {
+      @extend .#{$fa-css-prefix};
+    }
+  }
 
-	// xsmall
-	&[data-bca-btn-size=xs] {
-		font-size:1.2rem;
-		&::before {
-			@extend .#{$fa-css-prefix};
-		}
-	}
+  // xsmall
+  &[data-bca-btn-size=xs] {
+    font-size: 1.2rem;
+    &::before {
+      @extend .#{$fa-css-prefix};
+    }
+  }
 
-	// ステータス
-	// ===========================
+  // ステータス
+  // ===========================
 
-	// プライマリー
-	&[data-bca-btn-status=primary] {
-		@include bca-btn-icon-text-common;
-		color: #fff;
-		background: $color_primary;
-		&::before {
-			@extend .#{$fa-css-prefix};
-			color: #fff;
-		}
-		&:hover {
-			background: $color_secondary;
-		}
-	}
+  // プライマリー
+  &[data-bca-btn-status=primary] {
+    @include bca-btn-icon-text-common;
+    color: #fff;
+    background: $color_primary;
+    &::before {
+      @extend .#{$fa-css-prefix};
+      color: #fff;
+    }
+    &:hover {
+      background: $color_secondary;
+    }
+  }
 
-	// disabled
-	&[disabled] {
-		color: #aaa;
-		border-color: #ddd;
-		//background: #eee;
-	}
+  // disabled
+  &[disabled] {
+    color: #aaa;
+    border-color: #ddd;
+    //background: #eee;
+  }
 }

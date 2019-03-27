@@ -69,20 +69,20 @@
 // }
 
 .bca-form-table {
-	$border-color: #ccc;
-	font-size: 1.6rem;
-	width: 100%;
-	table-layout: auto;
-	// border-bottom: 1px solid $border-color;
+  $border-color: #ccc;
+  font-size: 1.6rem;
+  width: 100%;
+  table-layout: auto;
+  // border-bottom: 1px solid $border-color;
 
-	&__label {
+  &__label {
     vertical-align: top;
     width: 250px;
     padding: 1.4em 2em 1em 1em;
-		font-weight: bold;
-		border: 0 solid $border-color;
-		// border-width: 1px 0 0;
-		text-align: left;
+    font-weight: bold;
+    border: 0 solid $border-color;
+    // border-width: 1px 0 0;
+    text-align: left;
     &.-label {
       display: block;
       border: none;
@@ -98,15 +98,15 @@
       margin-top: 0;
       margin-bottom: 0;
     }
-	}
+  }
 
-	&__input {
+  &__input {
     padding: 1em 0 1em;
     vertical-align: top;
-		border: 0 solid $border-color;
-		// border-width: 1px 0 0;
+    border: 0 solid $border-color;
+    // border-width: 1px 0 0;
     font-weight: normal;
-	}
+  }
   &__input-wrap {
     display: block;
     padding: 0 0 0 1em;
@@ -156,7 +156,6 @@
     margin-left: 2em;
   }
 
-
   // 設定画面系：ボーダーなし
   &[data-bca-table-type=type2] {
 
@@ -202,8 +201,7 @@
         font-weight: normal;
         .bca-select,
         .bca-textbox,
-        .bca-textarea
-        {
+        .bca-textarea {
           display: inline-block;
           position: relative;
           margin-top: -0.5em;
@@ -228,6 +226,4 @@
     }
   }
 
-
-  
 }

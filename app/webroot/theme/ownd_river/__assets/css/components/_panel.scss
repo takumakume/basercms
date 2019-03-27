@@ -3,7 +3,7 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   & > * {
-    width: calc( 33.33% - 20px );
+    width: calc(33.33% - 20px);
   }
 
   &-box {
@@ -50,9 +50,10 @@
 /* 古いスタイル インストール画面など
 ----------------------------------------------- */
 .bca-main__body div.float-left {
-	float: left;
-	width: 33%;
+  float: left;
+  width: 33%;
 }
+
 //.panel-box {
 //	border:5px solid $color_border;
 //	padding:10px 20px;
