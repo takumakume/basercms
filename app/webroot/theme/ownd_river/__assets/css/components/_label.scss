@@ -4,13 +4,13 @@
   color: #FFF;
   background: #444;
   margin: .5em .55em .5em;
-  padding: 0 .5em;
+  padding: .1em .6em;
   line-height: 1.8;
 
   &[data-bca-label-type="required"] {
     white-space: nowrap;
     background: #E00;
-    border-radius: 2px;
+    border-radius: 3px;
   }
 
   &[data-bca-label-type="optional"] {

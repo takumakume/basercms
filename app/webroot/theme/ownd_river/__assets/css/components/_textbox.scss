@@ -8,8 +8,8 @@
     box-sizing: border-box;
     border: 1px solid #cccccc;
     line-height: 1.2;
-    font-size: $button_font_size_medium;
-    color: #535A62;
+    font-size: $input_text_font_size;
+    color: $color_text_secondary;
     &[data-input-text-size=lg] {
       font-size: $button_font_size_large;
     }

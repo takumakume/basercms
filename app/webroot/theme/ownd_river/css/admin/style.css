@@ -3629,9 +3629,6 @@ div.jstree-unpublish-odd,
 div.jstree-unpublish-even {
   background-color: #fff; }
 
-div.jstree-publish-odd {
-  background-color: #FFF; }
-
 div.jstree-publish-even {
   /*background-color: #F2F2F2;*/ }
 
@@ -3739,6 +3736,9 @@ div.jstree-publish-even {
 .display-none {
   display: none; }
 
+#UploaderForm .uploader-file-file {
+  font-size: 1.3rem !important; }
+
 .bca-app {
   display: grid;
   min-height: 100vh;
@@ -3750,7 +3750,7 @@ div.jstree-publish-even {
   display: flex; }
 
 .bca-main {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   position: relative;
   flex-basis: 100%;
   overflow: auto;
@@ -3763,7 +3763,7 @@ div.jstree-publish-even {
     background-color: #fff;
     border: 1px solid #EEE; }
   .bca-main__header {
-    padding: 0 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -3783,11 +3783,12 @@ div.jstree-publish-even {
     margin-bottom: 30px; }
   .bca-main__heading {
     margin: 0 0 1em;
-    padding: 1em 0 0.5em; }
+    padding: 1em 0 0.5em;
+    font-weight: normal; }
     .bca-main__heading[data-bca-heading-size=lg] {
-      font-size: 1.2em; }
+      font-size: 2rem; }
     .bca-main__heading[data-bca-heading-size=md] {
-      font-size: 1.1em; }
+      font-size: 1.6rem; }
   .bca-main__text {
     margin: 0 0 1em;
     line-height: 1.5; }
@@ -3798,8 +3799,7 @@ div.jstree-publish-even {
 /* Header
 ----------------------------------------------- */
 #Header {
-  background-color: #FFF;
-  border-bottom: 1px solid #DDD; }
+  background-color: #FFF; }
 
 /* Logo
 ----------------------------------------------- */
@@ -6466,7 +6466,7 @@ div.jstree-publish-even {
           .bca-nav__sub-list-item a:hover {
             font-weight: bold;
             text-decoration: none;
-            color: #457f02; }
+            color: #FFF; }
             .bca-nav__sub-list-item a:hover::before {
               opacity: 1; }
     .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title {
@@ -12274,7 +12274,8 @@ div.jstree-publish-even {
     white-space: nowrap;
     vertical-align: middle;
     color: #fff;
-    background-color: #457f02; }
+    background-color: #457f02;
+    line-height: 1.6; }
     tr .bca-table-listup__thead-th--select {
       padding: 10px; }
       tr .bca-table-listup__thead-th--select input {
@@ -12309,37 +12310,39 @@ div.jstree-publish-even {
     vertical-align: middle; }
   .bca-table-listup__tbody-th, .bca-table-listup__tbody-td {
     border: none;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid #ddd; }
     tr:hover .bca-table-listup__tbody-th, tr:hover .bca-table-listup__tbody-td {
       background: #f8f8f8;
       cursor: pointer; }
   .bca-table-listup__tbody-th {
     white-space: nowrap; }
-  .bca-table-listup__tbody-td--select {
-    padding: 10px;
-    width: 12.5px; }
-    .bca-table-listup__tbody-td--select input {
-      margin: 0; }
-  .bca-table-listup__tbody-td--title {
-    min-width: 200px;
-    max-width: 500px;
-    font-size: 1.3rem; }
-  .bca-table-listup__tbody-td--category {
-    min-width: 100px; }
-  .bca-table-listup__tbody-td--tag {
-    min-width: 100px; }
-    .bca-table-listup__tbody-td--tag .tag:after {
-      content: ', '; }
-    .bca-table-listup__tbody-td--tag .tag:last-child:after {
-      content: none; }
-  .bca-table-listup__tbody-td--date {
-    white-space: nowrap; }
-  .bca-table-listup__tbody-td--actions {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    white-space: nowrap; }
-    .bca-table-listup__tbody-td--actions .bca-btn-icon {
-      margin-right: 0.2em; }
+  .bca-table-listup__tbody-td {
+    line-height: 1.6; }
+    .bca-table-listup__tbody-td--select {
+      padding: 10px;
+      width: 12.5px; }
+      .bca-table-listup__tbody-td--select input {
+        margin: 0; }
+    .bca-table-listup__tbody-td--title {
+      min-width: 200px;
+      max-width: 500px;
+      font-size: 1.3rem; }
+    .bca-table-listup__tbody-td--category {
+      min-width: 100px; }
+    .bca-table-listup__tbody-td--tag {
+      min-width: 100px; }
+      .bca-table-listup__tbody-td--tag .tag:after {
+        content: ', '; }
+      .bca-table-listup__tbody-td--tag .tag:last-child:after {
+        content: none; }
+    .bca-table-listup__tbody-td--date {
+      white-space: nowrap; }
+    .bca-table-listup__tbody-td--actions {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      white-space: nowrap; }
+      .bca-table-listup__tbody-td--actions .bca-btn-icon {
+        margin-right: 0.2em; }
   .bca-table-listup .disablerow th, .bca-table-listup .disablerow td {
     background-color: #081f01; }
   .bca-table-listup .eye_catch-wrap {
@@ -12403,14 +12406,17 @@ div.jstree-publish-even {
 
 .bca-search {
   font-size: 1.6rem;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   border-radius: 3px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  background-color: #fff; }
   .bca-search__head {
     margin: 0;
-    padding: 0;
+    padding: 10px;
     border: none;
-    font-size: 1em; }
+    font-size: 1em;
+    font-weight: normal; }
     .bca-search__head a {
       display: block;
       padding: 10px; }
@@ -12604,7 +12610,7 @@ div.jstree-publish-even {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 1; }
   .bca-list-num__title {
     font-weight: bold;
@@ -12612,18 +12618,19 @@ div.jstree-publish-even {
   .bca-list-num__data {
     margin: 0;
     padding: 0;
-    font-size: 1.6rem; }
+    font-size: 1.3rem; }
 
 .bca-form-table {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   width: 100%;
-  table-layout: auto; }
+  table-layout: auto;
+  font-weight: normal; }
   .bca-form-table__label {
     vertical-align: top;
     width: 250px;
     padding: 1.4em 2em 1em 1em;
-    font-weight: bold;
-    border: 0 solid #ccc;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
     text-align: left; }
     .bca-form-table__label.-label {
       display: block;
@@ -12639,11 +12646,14 @@ div.jstree-publish-even {
   .bca-form-table__input {
     padding: 1em 0 1em;
     vertical-align: top;
-    border: 0 solid #ccc;
+    border-bottom: 1px solid #ddd;
     font-weight: normal; }
   .bca-form-table__input-wrap {
     display: block;
     padding: 0 0 0 1em; }
+  .bca-form-table tr:last-child th,
+  .bca-form-table tr:last-child td {
+    border-bottom: none !important; }
   .bca-form-table__group-state {
     display: flex;
     flex-wrap: wrap; }
@@ -12673,16 +12683,12 @@ div.jstree-publish-even {
     width: 100%;
     table-layout: auto;
     border-bottom: none; }
-    .bca-form-table[data-bca-table-type=type2] .bca-form-table__label, .bca-form-table[data-bca-table-type=type2] .bca-form-table__input {
-      padding-top: 0.5em;
-      padding-bottom: 2em;
-      border: none; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__label {
       vertical-align: top;
       width: 240px;
       padding-left: 0.2em;
-      font-weight: bold;
-      text-align: left; }
+      text-align: left;
+      white-space: nowrap; }
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__label.-label {
         display: block;
         border: none; }
@@ -15824,9 +15830,9 @@ table.cake-sql-log tr td {
   cursor: pointer;
   font-size: 1.6rem; }
   .bca-radio[data-bca-radio-size=lg] {
-    font-size: 1.8rem; }
+    font-size: 2rem; }
   .bca-radio[data-bca-radio-size=sm] {
-    font-size: 1.4rem; }
+    font-size: 1.3rem; }
   .bca-radio-group {
     margin-bottom: -0.5em; }
     .bca-radio-group br + .bca-radio {
@@ -15841,11 +15847,11 @@ table.cake-sql-log tr td {
       position: relative;
       cursor: pointer;
       padding-left: 2em;
-      font-size: 1.6rem; }
+      font-size: 1.3rem; }
     .bca-radio__input[data-bca-radio-size=lg] + label {
-      font-size: 1.8rem; }
+      font-size: 2rem; }
     .bca-radio__input[data-bca-radio-size=sm] + label {
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
     .bca-radio__input + label:before {
       content: "";
       display: inline-block;
@@ -15875,9 +15881,9 @@ table.cake-sql-log tr td {
   cursor: pointer;
   font-size: 1.6rem; }
   .bca-checkbox[data-bca-checkbox-size=lg] {
-    font-size: 1.8rem; }
+    font-size: 2rem; }
   .bca-checkbox[data-bca-checkbox-size=sm] {
-    font-size: 1.4rem; }
+    font-size: 1.3rem; }
   .bca-checkbox-group {
     margin-bottom: -0.5em; }
     .bca-checkbox-group .bca-checkbox {
@@ -15902,7 +15908,7 @@ table.cake-sql-log tr td {
     margin-bottom: 0;
     box-sizing: border-box;
     line-height: 1.15;
-    font-size: 1.6rem; }
+    font-size: 1.3rem; }
     .bca-checkbox__input + label:after, .bca-checkbox__input + label:before, .bca-checkbox__label:after, .bca-checkbox__label:before {
       box-sizing: border-box; }
     .bca-checkbox__input + label:before, .bca-checkbox__label:before {
@@ -15930,9 +15936,9 @@ table.cake-sql-log tr td {
       border-right: 0.24em solid #457f02;
       border-bottom: 0.24em solid #457f02; }
     .bca-checkbox__input + label[data-bca-checkbox-size=lg], .bca-checkbox__label[data-bca-checkbox-size=lg] {
-      font-size: 1.8rem; }
+      font-size: 2rem; }
     .bca-checkbox__input + label[data-bca-checkbox-size=sm], .bca-checkbox__label[data-bca-checkbox-size=sm] {
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
 
 .bca-select__select {
   -webkit-appearance: none;
@@ -15978,12 +15984,12 @@ table.cake-sql-log tr td {
   color: #FFF;
   background: #444;
   margin: .5em .55em .5em;
-  padding: 0 .5em;
+  padding: .1em .6em;
   line-height: 1.8; }
   .bca-label[data-bca-label-type="required"] {
     white-space: nowrap;
     background: #E00;
-    border-radius: 2px; }
+    border-radius: 3px; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
 
@@ -16014,7 +16020,7 @@ table.cake-sql-log tr td {
         margin-right: 0.5em; }
       .bca-panel-box__inline-fields-separator {
         width: 1px;
-        background: #cccccc;
+        background: #ddd;
         margin: 0 2em; }
         .bca-panel-box__inline-fields-separator::before {
           content: "";
@@ -16064,8 +16070,8 @@ table.cake-sql-log tr td {
     box-sizing: border-box;
     border: 1px solid #cccccc;
     line-height: 1.2;
-    font-size: 1.4rem;
-    color: #535A62; }
+    font-size: 1.6rem;
+    color: #656565; }
     .bca-textbox__input[data-input-text-size=lg] {
       font-size: 1.6rem; }
     .bca-textbox__input[data-input-text-size=sm] {
@@ -16087,9 +16093,9 @@ table.cake-sql-log tr td {
     border-radius: 3px;
     box-sizing: border-box;
     border: 1px solid #cccccc;
-    line-height: 1.2;
-    font-size: 1.4rem;
-    color: #535A62; }
+    line-height: 1.6;
+    font-size: 1.6rem;
+    color: #656565; }
     .bca-textarea__textarea[data-input-text-size=lg] {
       font-size: 1.6rem; }
     .bca-textarea__textarea[data-input-text-size=sm] {
@@ -16125,7 +16131,7 @@ table.cake-sql-log tr td {
     display: inline-block;
     box-sizing: border-box;
     line-height: 1.15;
-    font-size: 1.6rem; }
+    font-size: 1.3rem; }
     .bca-file__delete-input + label:after, .bca-file__delete-input + label:before, .bca-file__delete-label:after, .bca-file__delete-label:before {
       box-sizing: border-box; }
     .bca-file__delete-input + label:before, .bca-file__delete-label:before {
@@ -16152,9 +16158,9 @@ table.cake-sql-log tr td {
       border-right: 0.24em solid #457f02;
       border-bottom: 0.24em solid #457f02; }
     .bca-file__delete-input + label[data-bca-checkbox-size=lg], .bca-file__delete-label[data-bca-checkbox-size=lg] {
-      font-size: 1.8rem; }
+      font-size: 2rem; }
     .bca-file__delete-input + label[data-bca-checkbox-size=sm], .bca-file__delete-label[data-bca-checkbox-size=sm] {
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
 
 /*
  datepicker
@@ -23700,11 +23706,11 @@ table.cake-sql-log tr td {
   background: none !important; }
 
 .ui-tabs-panel {
-  border: 1px solid #cccccc !important; }
+  border: 1px solid #ddd !important; }
 
 .ui-widget-content {
   border-radius: 0 !important;
-  border-color: #cccccc !important; }
+  border-color: #ddd !important; }
 
 .ui-dialog-titlebar {
   background: #457f02 !important;
@@ -23719,7 +23725,7 @@ table.cake-sql-log tr td {
   margin-top: -13px !important; }
 
 .ui-button {
-  border: 1px solid #cccccc !important;
+  border: 1px solid #ddd !important;
   padding: 0 !important;
   background: #FFFFFF !important;
   display: inline-block !important;

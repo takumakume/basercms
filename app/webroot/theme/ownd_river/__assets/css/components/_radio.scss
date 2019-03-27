@@ -33,7 +33,7 @@
       cursor: pointer;
       //margin-right: 15px;
       padding-left: 2em;
-      font-size: $label_font_size_medium;
+      font-size: $label_font_size_small;
     }
     &[data-bca-radio-size=lg] { //大きいサイズ
       + label {

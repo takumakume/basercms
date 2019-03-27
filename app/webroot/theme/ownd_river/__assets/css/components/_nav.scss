@@ -128,7 +128,7 @@
           &:hover {
             font-weight: bold;
             text-decoration: none;
-            color: $color_primary;
+            color: $color_menu_hover;
             //background: lighten($color_border, 10%);
             &::before {
               opacity: 1;

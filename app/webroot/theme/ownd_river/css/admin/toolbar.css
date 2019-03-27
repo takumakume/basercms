@@ -3618,9 +3618,6 @@ div.jstree-unpublish-odd,
 div.jstree-unpublish-even {
   background-color: #fff; }
 
-div.jstree-publish-odd {
-  background-color: #FFF; }
-
 div.jstree-publish-even {
   /*background-color: #F2F2F2;*/ }
 
@@ -3727,6 +3724,9 @@ div.jstree-publish-even {
 
 .display-none {
   display: none; }
+
+#UploaderForm .uploader-file-file {
+  font-size: 1.3rem !important; }
 
 .bca-toolbar {
   font-size: 1.3rem;

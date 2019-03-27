@@ -128,7 +128,7 @@
   border-collapse: collapse;
   width: auto;
   min-width: 100%;
-  font-size: 1.3rem;
+  font-size: $label_font_size_small;
 
   .bca-main-body & {
     margin-top: 15px;
@@ -147,6 +147,7 @@
     vertical-align: middle;
     color: #fff;
     background-color: $color_primary;
+    line-height: 1.6;
     // 選択
     &--select {
       padding: 10px;
@@ -196,7 +197,7 @@
   &__tbody-th,
   &__tbody-td {
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid $color_table_border_color;
     // 行のホバー
     tr:hover & {
       background: $color_background_primary;
@@ -208,6 +209,7 @@
     white-space: nowrap;
   }
   &__tbody-td {
+    line-height: 1.6;
     // 選択
     &--select {
       padding: 10px;

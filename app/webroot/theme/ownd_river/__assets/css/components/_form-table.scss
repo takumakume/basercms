@@ -69,19 +69,18 @@
 // }
 
 .bca-form-table {
-  $border-color: #ccc;
-  font-size: 1.6rem;
+  font-size: $label_font_size_small;
   width: 100%;
   table-layout: auto;
+  font-weight: normal;
   // border-bottom: 1px solid $border-color;
 
   &__label {
     vertical-align: top;
     width: 250px;
     padding: 1.4em 2em 1em 1em;
-    font-weight: bold;
-    border: 0 solid $border-color;
-    // border-width: 1px 0 0;
+    font-weight: normal;
+    border-bottom:1px solid $color_table_border_color;
     text-align: left;
     &.-label {
       display: block;
@@ -91,7 +90,6 @@
       padding: 0.2em 0 0;
       margin-bottom: 0;
     }
-
     .bca-label {
       position: relative;
       top: -0.15em;
@@ -99,19 +97,20 @@
       margin-bottom: 0;
     }
   }
-
   &__input {
     padding: 1em 0 1em;
     vertical-align: top;
-    border: 0 solid $border-color;
-    // border-width: 1px 0 0;
+    border-bottom:1px solid $color_table_border_color;
     font-weight: normal;
   }
   &__input-wrap {
     display: block;
     padding: 0 0 0 1em;
   }
-
+  tr:last-child th,
+  tr:last-child td{
+    border-bottom: none!important;
+  }
   &__group {
     & + & {
       // margin-top: 1em;
@@ -159,25 +158,19 @@
   // 設定画面系：ボーダーなし
   &[data-bca-table-type=type2] {
 
-    $border-color: #ccc;
+    $color_table_border_color: #ccc;
     font-size: 1.4rem;
     width: 100%;
     table-layout: auto;
     border-bottom: none;
     .bca-form-table {
-      &__label,
-      &__input {
-        padding-top: 0.5em;
-        padding-bottom: 2em;
-        border: none;
-      }
 
       &__label {
         vertical-align: top;
         width: 240px;
         padding-left: 0.2em;
-        font-weight: bold;
         text-align: left;
+        white-space: nowrap;
         &.-label {
           display: block;
           border: none;

@@ -855,10 +855,6 @@ div.jstree-unpublish-even {
 
 }
 
-div.jstree-publish-odd {
-  background-color: #FFF;
-}
-
 div.jstree-publish-even {
   /*background-color: #F2F2F2;*/
 }
@@ -993,4 +989,9 @@ div.jstree-publish-even {
 
 .display-none {
   display: none;
+}
+
+
+#UploaderForm .uploader-file-file {
+    font-size: $label_font_size_small!important;
 }

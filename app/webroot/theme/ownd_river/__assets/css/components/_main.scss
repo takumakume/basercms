@@ -1,5 +1,5 @@
 .bca-main {
-  font-size: 1.6rem;
+  font-size: $label_font_size_small;
   position: relative;
   flex-basis: 100%;
   overflow: auto;
@@ -9,6 +9,12 @@
   // ❗ .contents-body と同じ要素 ❗
   &__body {
     padding: 0;
+    //a:link {
+    //  color:$color_primary;
+    //}
+    //a:hover {
+    //  color:$color_secondary;
+    //}
   }
   &__contents {
     padding: 20px;
@@ -17,7 +23,7 @@
     border: 1px solid $color_background_secondary_border;
   }
   &__header {
-    padding: 0 20px;
+    padding: 10px 20px;
     //background-color:#F4F5F1;
     display: flex;
     justify-content: space-between;
@@ -46,11 +52,12 @@
   &__heading {
     margin: 0 0 1em;
     padding: 1em 0 0.5em;
+    font-weight: normal;
     &[data-bca-heading-size=lg] {
-      font-size: 1.2em;
+      font-size: $label_font_size_large;
     }
     &[data-bca-heading-size=md] {
-      font-size: 1.1em;
+      font-size: $label_font_size_medium;
     }
   }
   &__text {
