@@ -108,7 +108,7 @@ class MailMessagesController extends MailAppController {
 			return;
 		}
 
-		$this->pageTitle = sprintf(__d('baser', '[%s] 受信メール一覧'), $this->request->params['Content']['title']);
+		$this->pageTitle = sprintf(__d('baser', '%s｜受信メール一覧'), $this->request->params['Content']['title']);
 		$this->help = 'mail_messages_index';
 	}
 
@@ -132,7 +132,7 @@ class MailMessagesController extends MailAppController {
 
 		$this->crumbs[] = array('name' => __d('baser', '受信メール一覧'), 'url' => array('controller' => 'mail_messages', 'action' => 'index', $this->params['pass'][0]));
 		$this->set(compact('message', 'mailFields'));
-		$this->pageTitle = __d('baser', '受信メール詳細');
+		$this->pageTitle = sprintf(__d('baser', '%s｜受信メール詳細'), $this->request->params['Content']['title']);
 	}
 
 /**

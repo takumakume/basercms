@@ -115,7 +115,7 @@ class BlogCategoriesController extends BlogAppController {
 		/* 表示設定 */
 		$this->set('owners', $this->BlogCategory->getControlSource('owner_id'));
 		$this->set('dbDatas', $dbDatas);
-		$this->pageTitle = sprintf(__d('baser', '[%s] カテゴリ一覧'), $this->request->params['Content']['title']);
+		$this->pageTitle = sprintf(__d('baser', '%s｜カテゴリ一覧'), $this->request->params['Content']['title']);
 		$this->help = 'blog_categories_index';
 	}
 
@@ -166,7 +166,7 @@ class BlogCategoriesController extends BlogAppController {
 			$parents = ['' => __d('baser', '指定しない')];
 		}
 		$this->set('parents', $parents);
-		$this->pageTitle = sprintf(__d('baser', '[%s] 新規カテゴリ登録'), $this->request->params['Content']['title']);
+		$this->pageTitle = sprintf(__d('baser', '%s｜新規カテゴリ登録'), $this->request->params['Content']['title']);
 		$this->help = 'blog_categories_form';
 		$this->render('form');
 	}
@@ -214,7 +214,7 @@ class BlogCategoriesController extends BlogAppController {
 			$parents = ['' => __d('baser', '指定しない')];
 		}
 		$this->set('parents', $parents);
-		$this->pageTitle = sprintf(__d('baser', '[%s] カテゴリ編集'), $this->request->params['Content']['title']);
+		$this->pageTitle = sprintf(__d('baser', '%s｜カテゴリ編集'), $this->request->params['Content']['title']);
 		$this->help = 'blog_categories_form';
 		$this->render('form');
 	}

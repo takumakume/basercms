@@ -181,7 +181,7 @@ class MailContentsController extends MailAppController {
 		}
 		$this->set('mailContent', $this->request->data);
 		$this->subMenuElements = ['mail_fields'];
-		$this->pageTitle = sprintf(__d('baser', 'メールフォーム設定編集：%s'), $this->request->data['Content']['title']);
+		$this->pageTitle = __d('baser', 'メールフォーム設定編集');
 		$this->help = 'mail_contents_form';
 		$this->render('form');
 	}
