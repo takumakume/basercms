@@ -54,3 +54,4 @@ package-lock.json
 /phpmyadmin/
 app/webroot/theme/ownd_river/__assets/__gulp.command
 app/webroot/theme/ownd_river/__assets/__gulp_yarn_install.command
+app/webroot/theme/ownd_river/css/admin/map/*

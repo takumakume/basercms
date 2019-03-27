@@ -5,6 +5,7 @@ const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 const sceg = require('gulp-sceg');
 
@@ -25,6 +26,7 @@ const CSS_DIST_DIR = '../css/admin/';
 gulp.task('css', () => {
 	return gulp
 	.src(`${CSS_DEV_DIR}*`)
+	.pipe(sourcemaps.init())
 	.pipe(plumber({
 		errorHandler: function (err) {
 			console.log(err.messageFormatted);
@@ -37,6 +39,7 @@ gulp.task('css', () => {
 			'last 1 version',
 		]}),
 	]))
+	.pipe(sourcemaps.write('map/'))
 	.pipe(gulp.dest(CSS_DIST_DIR))
 	.pipe(browserSync.stream());
 });
