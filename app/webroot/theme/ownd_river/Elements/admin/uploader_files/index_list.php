@@ -9,6 +9,9 @@
  * @since			baserCMS v 3.0.10
  * @license			http://basercms.net/license/index.html
  */
+/**
+ * @var BcAppView $this
+ */
 // IE文字化け対策
 header('Content-type: text/html; charset=utf-8');
 $users = $this->BcForm->getControlSource("UploaderFile.user_id");
@@ -17,7 +20,10 @@ $this->passedArgs['action'] = 'ajax_list';
 //==============================================================================
 // Ajaxで呼び出される事が前提の為インラインで呼びだし
 //==============================================================================
-$this->BcBaser->js('admin/vendors/jquery.upload-1.0.0.min');
+$this->BcBaser->js([
+	'admin/vendors/jquery.upload-1.0.0.min',
+	'Uploader.admin/uploader_files/uploader_list_table'
+]);
 ?>
 
 

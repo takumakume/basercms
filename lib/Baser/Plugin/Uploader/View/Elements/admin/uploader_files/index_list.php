@@ -17,7 +17,10 @@ $this->passedArgs['action'] = 'ajax_list';
 //==============================================================================
 // Ajaxで呼び出される事が前提の為インラインで呼びだし
 //==============================================================================
-$this->BcBaser->js('admin/vendors/jquery.upload-1.0.0.min');
+$this->BcBaser->js([
+	'admin/vendors/jquery.upload-1.0.0.min',
+	'Uploader.admin/uploader_files/uploader_list_table'
+]);
 ?>
 
 
