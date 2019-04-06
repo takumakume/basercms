@@ -38,6 +38,7 @@ $(function(){
 });
 </script>
 
+<?php $this->BcBaser->element('submenus/theme_files'); ?>
 
 <div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(array_merge(array('controller' => 'theme_files', 'action' => 'ajax_batch', $theme, $type), $params)) ?></div>
 <div id="AlertMessage" class="message" style="display:none"></div>
