@@ -43,7 +43,7 @@ $params = explode('/', $path);
 					<?php if ($this->BcForm->value('ThemeFile.ext')): ?>.<?php endif ?>
 					<?php echo $this->BcForm->value('ThemeFile.ext') ?>
 					<?php echo $this->BcForm->input('ThemeFile.ext', array('type' => 'hidden')) ?>
-					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+					<i class="bca-icon--question-circle btn help bca-help"></i>
 					<?php echo $this->BcForm->error('ThemeFile.name') ?>
 					<div id="helptextName" class="helptext">
 						<ul>

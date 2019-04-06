@@ -44,7 +44,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.name', __d('baser', 'アカウント名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.name', array('type' => 'text', 'size' => 20, 'maxlength' => 255, 'autofocus' => true)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('User.name') ?>
 				<div id="helptextName" class="helptext">半角英数字とハイフン、アンダースコアのみで入力してください。</div>
 			</td>
@@ -54,7 +54,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			<td class="col-input bca-form-table__input">
 				<small>[姓]</small> <?php echo $this->BcForm->input('User.real_name_1', array('type' => 'text', 'size' => 12, 'maxlength' => 255)) ?>
 				<small>[名]</small> <?php echo $this->BcForm->input('User.real_name_2', array('type' => 'text', 'size' => 12, 'maxlength' => 255)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpRealName1', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('User.real_name_1', __d('baser', '姓を入力してください')) ?>
 				<?php echo $this->BcForm->error('User.real_name_2', __d('baser', '名を入力してください')) ?>
 				<div id="helptextRealName1" class="helptext"> 「名」は省略する事ができます。 </div>
@@ -64,7 +64,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.nickname', __d('baser', 'ニックネーム')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.nickname', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('User.nickname') ?>
 				<div id="helptextNickname" class="helptext">ニックネームを設定している場合は全ての表示にニックネームが利用されます。</div>
 			</td>
@@ -74,7 +74,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			<td class="col-input bca-form-table__input">
 				<?php if ($editable): ?>
 					<?php echo $this->BcForm->input('User.user_group_id', array('type' => 'select', 'options' => $userGroups)) ?>
-					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpUserGroupId', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+					<i class="bca-icon--question-circle btn help bca-help"></i>
 					<?php echo $this->BcForm->error('User.user_group_id', __d('baser', 'グループを選択してください')) ?>
 					<div id="helptextUserGroupId" class="helptext"> ユーザーグループごとにコンテンツへのアクセス制限をかける場合などには
 						<?php $this->BcBaser->link(__d('baser', 'ユーザーグループ管理'), array('controller' => 'user_groups', 'action' => 'index')) ?>
@@ -89,7 +89,7 @@ $this->BcBaser->js('admin/users/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.email', __d('baser', 'Eメール')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('User.email', array('type' => 'text', 'size' => 40, 'maxlength' => 255)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpEmail', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('User.email') ?>
 				<div id="helptextEmail" class="helptext">
 					連絡用メールアドレスを入力します。<br /><small>※ パスワードを忘れた場合の新パスワードの通知先等</small>
@@ -107,7 +107,7 @@ $this->BcBaser->js('admin/users/edit', false);
 				<?php if ($this->request->action == "admin_edit"): ?><small>[パスワードは変更する場合のみ入力してください]</small><br /><?php endif ?>
 				<?php echo $this->BcForm->input('User.password_1', array('type' => 'password', 'size' => 20, 'maxlength' => 255)) ?>
 				<?php echo $this->BcForm->input('User.password_2', array('type' => 'password', 'size' => 20, 'maxlength' => 255)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpPassword', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('User.password') ?>
 				<div id="helptextPassword" class="helptext">
 					<ul>

@@ -40,7 +40,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', '一覧表示件数')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.list_count', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>&nbsp;件&nbsp;
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpListCount', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.list_count') ?>
 				<div id="helptextListCount" class="helptext">
 					<ul>
@@ -54,7 +54,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_direction', __d('baser', '一覧に表示する順番')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.list_direction', array('type' => 'select', 'options' => array('DESC' => __d('baser', '新しい記事順'), 'ASC' => __d('baser', '古い記事順')))) ?>
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpListDirection', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.list_direction') ?>
 				<div id="helptextListDirection" class="helptext">
 					<ul>
@@ -68,7 +68,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', 'RSSフィード出力件数')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.feed_count', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>&nbsp;件&nbsp;
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpFeedCount', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.feed_count') ?>
 				<div id="helptextFeedCount" class="helptext">
 					<ul>
@@ -94,7 +94,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.comment_approve', __d('baser', 'コメント承認機能')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.comment_approve', array('type' => 'checkbox', 'label' => __d('baser', '利用する'))) ?>
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpCommentApprove', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.comment_approve') ?>
 				<div id="helptextCommentApprove" class="helptext"><?php echo __d('baser', '承認機能を利用すると、コメントが投稿されてもすぐに公開されず、管理者側で確認する事ができます。') ?></div>
 			</td>
@@ -103,7 +103,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailContent.auth_capthca', __d('baser', 'コメントイメージ認証')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogContent.auth_captcha', array('type' => 'checkbox', 'label' => __d('baser', '利用する'))) ?>
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpAuthCaptcha', 'class' => 'btn help', 'alt' => 'ヘルプ')) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.auth_captcha') ?>
 				<div id="helptextAuthCaptcha" class="helptext">
 					<ul>
@@ -129,7 +129,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 					'options' => $this->BcForm->getControlsource('WidgetArea.id'),
 					'empty' => __d('baser', 'サイト基本設定に従う')))
 				?>
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpWidgetArea', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.widget_area') ?>
 				<div id="helptextWidgetArea" class="helptext">
 					<?php echo __d('baser', 'ブログコンテンツで利用するウィジェットエリアを指定します。') ?><br>
@@ -150,7 +150,7 @@ $this->BcBaser->js('Blog.admin/blog_contents/edit', false);
 <?php if ($this->action == 'admin_edit'): ?>
 	<?php $this->BcBaser->link('<i class="bca-icon--edit"></i>' . __d('baser', '編集する'), 'javascript:void(0)', array('id' => 'EditBlogTemplate')) ?>
 <?php endif ?>
-<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpTemplate', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('BlogContent.template') ?>
 				<div id="helptextTemplate" class="helptext">
 					<ul>

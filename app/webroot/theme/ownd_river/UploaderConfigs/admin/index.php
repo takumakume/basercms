@@ -95,7 +95,7 @@
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UploaderConfig.use_permission', __d('baser', '制限設定')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('UploaderConfig.use_permission', array('type' => 'checkbox', 'label' => __d('baser', '編集/削除を制限する'), 'between' => '&nbsp;')) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('UploaderConfig.use_permission') ?>
 				<div id="helptextUsePermission" class="helptext">
 					管理者以外のユーザーは、自分がアップロードしたファイル以外、編集・削除をできないようにします。

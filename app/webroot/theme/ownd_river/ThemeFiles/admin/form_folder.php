@@ -43,7 +43,7 @@ $params = explode('/', $path);
 			<td class="col-input bca-form-table__input">
 				<?php if ($this->request->action != 'admin_view_folder'): ?>
 					<?php echo $this->BcForm->input('ThemeFolder.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
-					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+					<i class="bca-icon--question-circle btn help bca-help"></i>
 					<div id="helptextName" class="helptext">
 						<ul>
 							<li>フォルダ名は半角で入力してください。</li>

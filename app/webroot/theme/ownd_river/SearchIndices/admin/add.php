@@ -32,7 +32,7 @@
 			<th class="col-head"><?php echo $this->BcForm->label('SearchIndex.url', 'URL') ?>&nbsp;<span class="required">*</span></th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('SearchIndex.url', array('type' => 'text', 'size' => 60, 'maxlength' => 255, 'autofocus' => true)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpUrl', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('SearchIndex.url') ?>
 				<div id="helptextUrl" class="helptext">
 					<ul>

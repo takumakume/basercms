@@ -83,6 +83,12 @@
 		@include fa-common;
 	}
 
+
+	&--chevron-down {
+		@extend .#{$fa-css-prefix}-chevron-down;
+		@include fa-common;
+	}
+
 	// 一覧
 	&--list {
 		@extend .#{$fa-css-prefix}-list-ul;

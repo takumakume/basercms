@@ -53,7 +53,7 @@ $(window).load(function() {
 				<?php else: ?>
 					<?php echo $this->BcForm->text('UserGroup.name', array('size' => 20, 'maxlength' => 255, 'autofocus' => true)) ?>
 				<?php endif ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('UserGroup.name') ?>
 				<div id="helptextName" class="helptext">
 					<ul>
@@ -67,7 +67,7 @@ $(window).load(function() {
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.title', __d('baser', '表示名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('UserGroup.title', array('type' => 'text', 'size' => 20, 'maxlength' => 255)) ?>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpTitle', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<div id="helptextTitle" class="helptext">日本語が入力できますのでわかりやすい名称を入力します。</div>
 				<?php echo $this->BcForm->error('UserGroup.title') ?>
 			</td>
@@ -83,7 +83,7 @@ $(window).load(function() {
 					<?php endif ?>
 				<?php else: ?>
 					<span style="white-space: nowrap"><?php echo $this->BcForm->input('UserGroup.use_admin_globalmenu', array('type' => 'checkbox', 'label' => __d('baser', '管理システムのグローバルメニューを利用する'))) ?>　</span>
-					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+					<i class="bca-icon--question-circle btn help bca-help"></i>
 					<div id="helptextName" class="helptext">
 						<ul>
 							<li>管理システムでグローバルメニューを利用するかどうか設定します。</li>
@@ -94,7 +94,7 @@ $(window).load(function() {
 				<?php endif ?>
 				<br>
 				<span style="white-space: nowrap"><?php echo $this->BcForm->input('UserGroup.use_move_contents', array('type' => 'checkbox', 'label' => __d('baser', 'コンテンツのドラッグ＆ドロップ移動機能を利用する'))) ?></span>
-				<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<div id="helptextName" class="helptext">
 					<span>
 						コンテンツ一覧のツリー構造において、ドラッグ＆ドロップでコンテンツの移動を許可するかどうかを設定します。
@@ -108,7 +108,7 @@ $(window).load(function() {
 				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.auth_prefix', __d('baser', '認証プレフィックス設定')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->input('UserGroup.auth_prefix', array('type' => 'select', 'multiple' => 'checkbox', 'options' => $authPrefixes, 'value' => explode(',', $this->BcForm->value('UserGroup.auth_prefix')))) ?>
-					<?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpAuthPrefix', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+					<i class="bca-icon--question-circle btn help bca-help"></i>
 					<?php echo $this->BcForm->error('UserGroup.auth_prefix') ?>
 					<div id="helptextAuthPrefix" class="helptext">
 						認証プレフィックスの設定を指定します。<br />
