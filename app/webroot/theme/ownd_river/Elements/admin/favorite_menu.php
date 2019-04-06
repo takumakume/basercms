@@ -21,7 +21,7 @@
 
 <nav id="FavoriteMenu" class="bca-nav-favorite">
 
-	<h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label"><?php echo __d('baser', 'お気に入り') ?></span></h2>
+	<h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label"><?php echo __d('baser', 'お気に入り') ?></span> <i class="bca-icon--arrow-down bca-nav-favorite-title-icon"></i></h2>
 
 	<ul class="favorite-menu-list bca-nav-favorite-list">
 		<?php if (!empty($favorites)): ?>
