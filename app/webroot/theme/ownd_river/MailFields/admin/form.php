@@ -30,7 +30,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 <?php if ($this->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.no', 'NO') ?></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.no', 'No') ?></th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('MailField.no') ?>
 					<?php echo $this->BcForm->input('MailField.no', array('type' => 'hidden')) ?>

@@ -213,7 +213,7 @@
 }
 
 .ui-dialog label.error, .error-message {
-  background-color: #E02;
+  background-color: $color_alert;
   color: #FFF;
   font-size: 12px;
   padding: 3px 8px;

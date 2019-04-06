@@ -933,7 +933,7 @@ template {
 .fa-check-circle:before {
   content: ""; }
 
-.fa-question-circle:before, .bca-icon--question-circle:before {
+.fa-question-circle:before, .bca-icon--help:before, .bca-icon--question-circle:before {
   content: ""; }
 
 .fa-info-circle:before, .bca-icon--info-circle:before {
@@ -1996,8 +1996,7 @@ template {
 .fa-life-buoy:before,
 .fa-life-saver:before,
 .fa-support:before,
-.fa-life-ring:before,
-.bca-icon--help:before {
+.fa-life-ring:before {
   content: ""; }
 
 .fa-circle-o-notch:before {
@@ -3140,7 +3139,7 @@ body * {
   font-weight: bold; }
 
 .ui-dialog label.error, .error-message {
-  background-color: #E02;
+  background-color: #d90000;
   color: #FFF;
   font-size: 12px;
   padding: 3px 8px;

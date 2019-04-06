@@ -92,7 +92,8 @@
       //background: $color_background_primary;
       //transform: translate(0, -50%);
       padding-left: 0;
-
+      padding-top:11px;
+      padding-bottom:11px;
       &-item {
         font-size: 1.4rem;
         display: block;
@@ -100,7 +101,7 @@
           display: block;
           white-space: nowrap;
           // padding: 10px 20px;
-          padding: 13px 20px 11px 35px;
+          padding: 7px 20px 5px 35px;
           color: $color_text_secondary;
           font-size: 1.3rem;
           // @extend .bca-icon--menuitem;
@@ -120,7 +121,6 @@
               content: "";
               display: block;
               width: 0;
-              border-right: 10px solid #F8F8F8;
               border-top: 10px solid transparent;
               border-bottom: 10px solid transparent;
             }
@@ -161,7 +161,7 @@
         transform: none;
         box-shadow: none;
         background: $color_background_menu_current;
-
+        padding-top:0;
         &-item {
           // 現在開いているページ
           &[data-sub-content-is-current="true"] {
@@ -169,11 +169,11 @@
             background: #656565;
             a {
               position: relative;
-              border-left: 10px solid #FFFFFF;
-              padding-left: 25px;
+              padding-left: 35px;
               color: $color_lightest;
               font-weight: bold;
-
+              padding-top:13px;
+              padding-bottom:11px;
               &:link,
               &:visited {
                 color: $color_lightest;

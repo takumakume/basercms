@@ -31,8 +31,8 @@ $(function () {
 	<tr>
 		<th class="bca-table-listup__thead-th"><?php echo $this->Paginator->sort('id',
         array(
-			        'asc' => '<i class="bca-icon--asc" title="昇順"></i>' . __d('baser', 'NO'),
-              'desc' => '<i class="bca-icon--desc" title="降順"></i>' . __d('baser', 'NO')
+			        'asc' => '<i class="bca-icon--asc" title="昇順"></i>' . __d('baser', 'No'),
+              'desc' => '<i class="bca-icon--desc" title="降順"></i>' . __d('baser', 'No')
         ),
         array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')) ?></th>
 		<th class="bca-table-listup__thead-th">

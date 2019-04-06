@@ -17,7 +17,7 @@
 <table cellpadding="0" cellspacing="0" class="list-table bca-form-table id="ListTable">
 <?php if($this->action == 'admin_edit'): ?>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('UploaderCategory.id', 'NO') ?></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('UploaderCategory.id', 'No') ?></th>
 		<td class="bca-form-table__input">
 			<?php echo $this->BcForm->value('UploaderCategory.id') ?>
 			<?php echo $this->BcForm->input('UploaderCategory.id', array('type' => 'hidden')) ?>

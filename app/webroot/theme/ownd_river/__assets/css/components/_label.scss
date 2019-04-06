@@ -9,7 +9,7 @@
 
   &[data-bca-label-type="required"] {
     white-space: nowrap;
-    background: #E00;
+    background: $color_alert;
     border-radius: 3px;
   }
 

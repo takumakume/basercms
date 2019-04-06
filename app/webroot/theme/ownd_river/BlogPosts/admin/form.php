@@ -45,7 +45,7 @@ $this->BcBaser->js('admin/blog_posts/form', false, array('id' => 'AdminBlogBLogP
 <?php if ($this->action == 'admin_edit'): ?>
   <div class="bca-section bca-section__post-top">
   <span class="bca-post__no">
-  <?php echo $this->BcForm->label('BlogPost.no', 'NO') ?> : <strong><?php echo $this->BcForm->value('BlogPost.no') ?></strong>
+  <?php echo $this->BcForm->label('BlogPost.no', 'No') ?> : <strong><?php echo $this->BcForm->value('BlogPost.no') ?></strong>
     <?php echo $this->BcForm->input('BlogPost.no', array('type' => 'hidden')) ?>
   </span>
 

@@ -40,7 +40,7 @@
 		<th class="bca-table-listup__thead-th">
 			<?php 
 			echo $this->Paginator->sort('no', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'NO'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'NO')),
+				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'No'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'No')),
 				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
 			); 
 			?>

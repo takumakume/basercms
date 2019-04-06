@@ -39,7 +39,7 @@
       <th class="list-tool bca-table-listup__thead-th bca-table-listup__thead-th--select"><?php // 一括選択 ?>
         <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
       </th>
-      <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
+      <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'No') ?></th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'カテゴリ名') ?>
       <?php if ($this->BcBaser->siteConfig['category_permission']): ?>
         <br /><?php echo __d('baser', '管理グループ') ?>

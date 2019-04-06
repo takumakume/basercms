@@ -33,7 +33,7 @@ $this->BcBaser->js('admin/users/edit', false);
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->request->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.id', 'NO') ?></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('User.id', 'No') ?></th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('User.id') ?>
 					<?php echo $this->BcForm->input('User.id', array('type' => 'hidden')) ?>

@@ -25,7 +25,7 @@
       </ul>
     </div>
     <div class="bca-footer__sub">
-      <div class="bca-footer__copyright">Copyright (C) baserCMS Users Community <?php $this->BcBaser->copyYear(2009) ?> All rights reserved.</div>
+      <div class="bca-footer__copyright">Copyright &copy; baserCMS Users Community <?php $this->BcBaser->copyYear(2009) ?> All rights reserved.</div>
     </div>
   </div>
 <?php else: //未ログイン ?>
@@ -53,7 +53,7 @@
       <li class="bca-footer__links__item"><a href="http://project.e-catchup.jp/projects/basercms" target="_blank">baserCMS コア開発プロジェクト</a></li>
     </ul>
 
-    <div class="bca-footer__copyright">Copyright (C) baserCMS Users Community <?php $this->BcBaser->copyYear(2009) ?> All rights reserved.</div>
+    <div class="bca-footer__copyright">Copyright &copy; baserCMS Users Community <?php $this->BcBaser->copyYear(2009) ?> All rights reserved.</div>
   </div>
 <?php endif; ?>
 <!-- / #Footer --></div>

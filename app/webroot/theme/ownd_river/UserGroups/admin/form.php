@@ -37,7 +37,7 @@ $(window).load(function() {
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->request->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.id', 'NO') ?></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UserGroup.id', 'No') ?></th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('UserGroup.id') ?>
 					<?php echo $this->BcForm->input('UserGroup.id', array('type' => 'hidden')) ?>

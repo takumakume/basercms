@@ -52,7 +52,7 @@ $(function(){
 				strokeStyle: '#999',
 				strokeWidth: 1
 			},
-			width: '360px',
+			width: '600px',
 			/*shrinkToFit: true,*/
 			spikeLength: 12,
 			spikeGirth: 18,

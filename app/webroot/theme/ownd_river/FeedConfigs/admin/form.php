@@ -37,7 +37,7 @@ $(function(){
 		<?php if ($this->action == 'admin_edit'): ?>
 			<tr>
 				<th class="col-head bca-form-table__label">
-					<?php echo $this->BcForm->label('FeedConfig.id', 'NO') ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span>
+					<?php echo $this->BcForm->label('FeedConfig.id', 'No') ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span>
 				</th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('FeedConfig.id') ?>

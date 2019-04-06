@@ -176,10 +176,6 @@
 
 					<!-- / bca-main__body --></article>
 
-<?php if (!empty($user)): ?>
-					<div id="ToTop" class="bca-totop"><?php $this->BcBaser->link(__d('baser', '▲ トップへ'), '#Header') ?></div>
-<?php endif ?>
-
 				<!-- / .bca-main --></main>
 
 			<!-- / #Wrap --></div>

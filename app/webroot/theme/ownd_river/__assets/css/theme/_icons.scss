@@ -79,7 +79,7 @@
 
 	// ヘルプ
 	&--help {
-		@extend .#{$fa-css-prefix}-life-ring;
+		@extend .#{$fa-css-prefix}-question-circle;
 		@include fa-common;
 	}
 

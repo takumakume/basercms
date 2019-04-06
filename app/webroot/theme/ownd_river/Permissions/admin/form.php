@@ -32,7 +32,7 @@
 		</tr>
 		<?php if ($this->request->action == 'admin_edit'): ?>
 			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.id', 'NO') ?></th>
+				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Permission.id', 'No') ?></th>
 				<td class="col-input bca-form-table__input">
 					<?php echo $this->BcForm->value('Permission.no') ?>
 				</td>

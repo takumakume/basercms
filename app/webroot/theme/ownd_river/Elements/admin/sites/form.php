@@ -31,7 +31,7 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 <table class="form-table bca-form-table">
 <?php if($this->request->action == 'admin_edit'): ?>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.id', 'NO') ?></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.id', 'No') ?></th>
 		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->value('Site.id') ?>
 			<?php echo $this->BcForm->hidden('Site.id') ?>

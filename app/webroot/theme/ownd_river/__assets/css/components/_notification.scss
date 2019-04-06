@@ -1,5 +1,5 @@
 .message {
-  color: #F30;
+  color: $color_alert;
   font-weight: bold;
   margin: 20px;
 }
@@ -17,8 +17,8 @@
 #AlertMessage,
 #BcMessageBox .alert-message,
 #UpdateMessage {
-  color: #F23561;
-  background: #F7E9EC url(../../img/admin/warning.png) no-repeat 10px 13px;
+  color: $color_alert;
+  //background: #F7E9EC url(../../img/admin/warning.png) no-repeat 10px 13px;
 }
 
 /* flashMessage
