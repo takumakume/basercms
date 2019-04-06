@@ -68,7 +68,11 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 		<?php endif ?>
 	</td>
 	<td class="bca-table-listup__tbody-td" style="word-break: break-all;">
-		<?php $this->BcBaser->link(urldecode($fullUrl), $fullUrl, ['target' => '_blank']) ?><br>
+		<?php if($isPublish): ?>
+			<?php $this->BcBaser->link(urldecode($fullUrl), $fullUrl, ['target' => '_blank']) ?><br>
+		<?php else: ?>
+			<?php echo urldecode($fullUrl); ?><br>
+		<?php endif; ?>
 		<?php echo h($data['Content']['title']) ?>
 	</td>
 	<td class="bca-table-listup__tbody-td" style="width:8%;text-align:center">
