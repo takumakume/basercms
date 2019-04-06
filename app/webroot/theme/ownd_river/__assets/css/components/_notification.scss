@@ -7,8 +7,8 @@
 #MessageBox .message,
 #MessageBox .notice-message,
 #BcMessageBox .notice-message {
-  color: #5C8A01;
-  background: #EBF5E1 url(../../img/admin/icn_info.png) no-repeat 10px 13px;
+  color: $color_primary;
+  //background: #EBF5E1 url(../../img/admin/icn_info.png) no-repeat 10px 13px;
 }
 
 // jQuery.bcUtil.js で使用
@@ -28,7 +28,7 @@
 #AlertMessage,
 #BcSystemMessage,
 #UpdateMessage {
-  padding: 10px 10px 10px 36px;
+  padding: 10px 10px 10px 25px;
   margin: 20px 0;
   font-size: 16px;
   border-radius: 10px;

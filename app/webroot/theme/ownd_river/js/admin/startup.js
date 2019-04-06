@@ -43,26 +43,26 @@ $(function(){
 			trigger: 'click',
 			positions: 'top',
 			shadow: true,
-			shadowOffsetX: 3,
-			shadowOffsetY: 3,
+			shadowOffsetX: 1,
+			shadowOffsetY: 1,
 			shadowBlur: 8,
-			shadowColor: 'rgba(0,0,0,.8)',
+			shadowColor: 'rgba(101,101,101,.6)',
 			shadowOverlap: false,
 			noShadowOpts: {
 				strokeStyle: '#999',
-				strokeWidth: 3
+				strokeWidth: 1
 			},
 			width: '360px',
 			/*shrinkToFit: true,*/
 			spikeLength: 12,
 			spikeGirth: 18,
-			padding: 15,
+			padding: 20,
 			cornerRadius: 0,
-			strokeWidth: 6, /*no stroke*/
-			strokeStyle: '#690',
+			strokeWidth: 1, /*no stroke*/
+			strokeStyle: '#656565',
 			fill: 'rgba(255, 255, 255, 1.00)',
 			cssStyles: {
-				fontSize: '12px'
+				fontSize: '14px'
 			},
 			showTip: function(box){
 				$(box).fadeIn(200);

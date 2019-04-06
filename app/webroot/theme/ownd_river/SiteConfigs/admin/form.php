@@ -30,7 +30,7 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
       <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.formal_name', __d('baser', 'WEBサイト名')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
       <td class="col-input bca-form-table__input">
         <?php echo $this->BcForm->input('SiteConfig.formal_name', array('type' => 'text', 'size' => 55, 'maxlength' => 255, 'autofocus' => true)) ?>
-        <?php echo $this->Html->image('admin/icn_help.png', array('id' => 'helpFormalName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+        <i class="bca-icon--question-circle btn help bca-help"></i>
         <?php echo $this->BcForm->error('SiteConfig.formal_name') ?>
         <div id="helptextFormalName" class="helptext">
           <ul>

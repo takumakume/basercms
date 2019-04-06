@@ -102,15 +102,22 @@
     vertical-align: middle;
     line-height: 28px;
     font-size: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #e2e2e2;
     text-decoration: none;
     box-sizing: border-box;
   }
+  .current {
+    border:none;
+    color:$color_pagination_link!important;
+  }
+  .disabled {
+    color: #ccc!important;
+  }
 
   span span a {
-    color: $color_primary;
+    color: $color_pagination_link;
     &:hover {
-      background-color: $color_primary;
+      background-color: $color_pagination_link;
       color: #FFFFFF;
     }
   }
@@ -122,10 +129,11 @@
     border-color: $color_background_menu;
     background-color: $color_background_menu;
     a {
+      color: $color_pagination_link;
       border-color: $color_background_menu;
       background-color: $color_background_menu;
       &:hover {
-        background-color: $color_primary;
+        background-color: $color_pagination_link;
         color: #fff;
       }
     }
