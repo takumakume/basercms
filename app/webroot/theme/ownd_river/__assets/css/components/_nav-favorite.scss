@@ -17,6 +17,12 @@
       margin-left: 6px;
       color: $color_menu_link;
     }
+    &-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
+      float: right;
+    }
   }
   &-list {
     margin: 10px 0 0;

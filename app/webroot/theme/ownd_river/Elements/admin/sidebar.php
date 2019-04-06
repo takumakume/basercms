@@ -40,7 +40,7 @@
 		</div>
 		<div class="bca-nav__system" v-bind:data-content-is-current="isSystemSettingPage">
 			<h3 class="bca-nav__system-title">
-				<button class="bca-nav__sub-title-label" @click="openSystem"><?php echo __d('baser', '設定') ?></button>
+				<button class="bca-nav__sub-title-label" @click="openSystem"><?php echo __d('baser', '設定') ?>  <i class="bca-icon--arrow-down bca-nav-favorite-title-icon"></i></button>
 			</h3>
 			<div class="bca-nav__system-list" v-bind:hidden="!systemExpanded">
 				<div v-for="system in systemList" class="bca-nav__system-list-item" v-bind:data-system-type="system.name.toLowerCase()" v-bind:data-content-is-current="system.current">
