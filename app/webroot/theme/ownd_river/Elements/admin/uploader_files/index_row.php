@@ -48,7 +48,7 @@ $class = ' class="' . implode(' ', $classies) . '"';
 <?php if(!$listId): ?>
 	<td class="row-tools bca-table-listup__tbody-td" style="width:15%">
 		<?php $this->BcBaser->link('', array('action' => 'edit', $file['UploaderFile']['id']), array('title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'delete', $file['UploaderFile']['id']), array('title' => __d('baser', '削除'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', array('action' => 'delete', $file['UploaderFile']['id']), array('title' => __d('baser', '削除'), 'class' => 'bca-btn-icon btn-delete', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
 	</td>
 <?php endif ?>
 </tr>

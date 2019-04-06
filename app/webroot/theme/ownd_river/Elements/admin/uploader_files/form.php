@@ -133,7 +133,7 @@ $(function(){
 	<div class="bca-actions__sub">
 		<?php $this->BcBaser->link(__d('baser', '削除'),
 			array('action' => 'delete', $this->BcForm->value('UploaderFile.id')),
-			array('class' => 'submit-token button bca-btn', 'class' => 'bca-btn', 'data-bca-btn-type' => 'delete'),
+			array('class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete'),
 			sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('UploaderFile.name')),
 			false); ?>
 	</div>
