@@ -85,19 +85,27 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 		<?php echo $this->BcTime->format('Y-m-d', $data['Content']['created_date']) ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['Content']['modified_date']) ?>
 	</td>
-	<td class="bca-table-listup__tbody-td">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php if($isPublish): ?>
 			<?php $this->BcBaser->link('', $fullUrl, ['title' => __d('baser', '確認'), 'class' => 'btn-check bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg', 'target' => '_blank']) ?>
+		<?php else: ?>
+			<a title="管理" class="btn bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
 		<?php endif ?>
 		<?php if(!$manageDisabled && !empty($this->BcContents->settings[$type]['routes']['manage'])): ?>
 			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', ['width' => 32, 'height' => 32, 'alt' => __d('baser', '管理'), 'class' => 'btn']), array_merge($this->BcContents->settings[$type]['routes']['manage'], $urlParams), ['title' => __d('baser', '管理'), 'class' => 'btn-manage']) ?>
+		<?php else: ?>
+			<a title="管理" class="btn bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
 		<?php endif ?>
 		<?php if(!$isSiteRoot && !$isSiteRelated): ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => __d('baser', '公開'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg']) ?>
+		<?php else: ?>
+			<a title="非公開" class="btn bca-btn-icon" data-bca-btn-type="unpublish" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
 		<?php endif ?>
 		<?php if(!$editDisabled && $type != 'ContentFolder' && !empty($this->BcContents->settings[$type]['routes']['copy'])): ?>
 			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['copy'], $urlParams), ['title' => __d('baser', 'コピー'), 'class' => 'btn-copy bca-btn-icon', 'data-bca-btn-type' => 'copy','data-bca-btn-size' => 'lg']) ?>
+		<?php else: ?>
+			<a title="コピー" class="bca-btn-icon" data-bca-btn-type="copy" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
 		<?php endif ?>
 		<?php if(!$editDisabled): ?>
 			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['edit'], $urlParams), ['title' => __d('baser', '編集'), 'class' => 'btn-edit bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>

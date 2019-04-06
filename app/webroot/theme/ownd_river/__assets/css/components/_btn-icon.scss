@@ -262,6 +262,19 @@
       }
     }
   }
+  // グレー
+  &[data-bca-btn-status=gray] {
+    color: $color_secondary;
+    &::before {
+      color: $color_background_secondary_border;
+    }
+    &:hover {
+      color: $color_background_secondary_border;
+      &::before {
+        color: $color_background_secondary_border;
+      }
+    }
+  }
 
   // disabled
   &[disabled] {
