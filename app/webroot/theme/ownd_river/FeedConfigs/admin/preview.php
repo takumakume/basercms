@@ -14,5 +14,5 @@
  * [ADMIN] フィードプレビュー
  */
 ?>
-<h2><?php $this->BcBaser->contentsTitle() ?></h2>
+<h2><?php echo h($feedConfig['FeedConfig']['name']); ?></h2>
 <?php echo $this->BcBaser->js('/feed/ajax/' . $id) ?>

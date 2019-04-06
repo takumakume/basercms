@@ -26,18 +26,21 @@
   }
 
   &__input-list {
-    display: flex;
+    margin-top: 0;
+    /*display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-start;*/
   }
 
   &__input-item {
     font-size: .875em;
-    flex: 0 1 0;
+    /*flex: 0 1 0;
     display: flex;
     flex-direction: column;
     margin: 0;
-    display: block;
+    display: block;*/
+    display: inline-block;
+    margin-right: 0.2vw;
     &-label {
       display: block;
       margin-bottom: 8px;
@@ -45,13 +48,14 @@
   }
 
   &__btns {
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;*/
     margin: 2em 0 0;
 
     &-item {
-      margin: 0 1em;
+      margin: 0 1em 0 0;
+      display: inline-block;
     }
   }
 }

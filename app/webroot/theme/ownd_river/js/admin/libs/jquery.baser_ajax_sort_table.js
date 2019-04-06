@@ -52,7 +52,7 @@
 			var sortableOptions = {
 				scroll: true,
 				items: config.items,
-				opacity: 0.80,
+				opacity: 1,
 				zIndex: 55,
 				containment: 'body',
 				tolerance: 'pointer',
@@ -81,10 +81,10 @@
 		
 		var config = $.baserAjaxSortTable.config;
 		
-		ui.item.css('border','2px solid #CCC');
+		ui.item.css('border','1px solid #CCC');
 		$(config.placeHolder).css('height',ui.item.height());
 		for(var i = 0; i < ui.item.find('td').length; i++){
-			$(config.placeHolder).append('<td>&nbsp;</td>');
+			$(config.placeHolder).append('<td></td>');
 		}
 		$(config.placeHolder + " td").css('background-color', '#ffffff');
 		$(config.placeHolder + " td").css('border', 'none');

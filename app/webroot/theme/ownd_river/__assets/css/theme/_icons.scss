@@ -230,6 +230,12 @@
     @include fa-common;
   }
 
+  // 検索
+  &--search {
+    @extend .#{$fa-css-prefix}-search;
+    @include fa-common;
+  }
+
   // update
   &--update {
     @extend .#{$fa-css-prefix}-refresh;
