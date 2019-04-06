@@ -15,11 +15,6 @@
  */
 header("Content-type: text/javascript charset=UTF-8");
 $this->BcBaser->cacheHeader(MONTH, 'js');
-$requestUrl = ['plugin' => 'feed', 'controller' => 'feed', 'action' => 'index', $id];
-if($feedAdminTheme) {
-	$requestUrl['?'] = ['admin_theme' => true];
-}
-$requestUrl = Router::url($requestUrl);
 ?>
 document.write('<div id="feeds<?php echo $id; ?>"><?php echo $this->html->image('admin/ajax-loader.gif', array('alt' => 'loading now...', 'style' => 'display:block;margin:auto')) ?></div>');
 
@@ -43,7 +38,7 @@ var errorCallback = function (xml, status, e)
 //  リクエスト処理
 $.ajax({
 	type: 'GET',
-	url:      '<?php echo $requestUrl; ?>',
+	url:      '<?php echo Router::url(array('plugin' => 'feed', 'controller' => 'feed', 'action' => 'index', $id)); ?>',
 	cache: false,
 	success:  successCallback,
 	error:    errorCallback

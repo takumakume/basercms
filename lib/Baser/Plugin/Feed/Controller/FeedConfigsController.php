@@ -292,7 +292,7 @@ class FeedConfigsController extends FeedAppController {
 		if (!$id) {
 			$this->notFound();
 		}
-		$this->pageTitle = __d('baser', 'プレビュー');
+		$this->pageTitle = __d('baser', 'プレビュー') . '：' . $this->FeedConfig->field('name', ['FeedConfig.id' => $id]);
 		$this->set('id', $id);
 	}
 
