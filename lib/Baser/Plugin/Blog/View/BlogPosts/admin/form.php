@@ -19,11 +19,11 @@ $fullUrl = $this->BcBaser->getContentsUrl($url, true, $this->request->params['Si
 $statuses = [0 => __d('baser', '非公開'), 1 => __d('baser', '公開')];
 $this->BcBaser->css('admin/ckeditor/editor', ['inline' => true]);
 $this->BcBaser->i18nScript([
-    'alertMessage1' => __d('baser', 'ブログタグの追加に失敗しました。既に登録されていないか確認してください。'),
-    'alertMessage2' => __d('baser', 'ブログタグの追加に失敗しました。'),
-    'alertMessage3' => __d('baser', 'ブログカテゴリの追加に失敗しました。入力したブログカテゴリ名が既に登録されていないか確認してください。'),
-    'alertMessage4' => __d('baser', 'ブログカテゴリの追加に失敗しました。'),
-    'alertMessage5' => __d('baser', 'ブログカテゴリの追加に失敗しました。')
+    'alertMessage1' => __d('baser', 'タグの追加に失敗しました。既に登録されていないか確認してください。'),
+    'alertMessage2' => __d('baser', 'タグの追加に失敗しました。'),
+    'alertMessage3' => __d('baser', 'カテゴリの追加に失敗しました。入力したカテゴリ名が既に登録されていないか確認してください。'),
+    'alertMessage4' => __d('baser', 'カテゴリの追加に失敗しました。'),
+    'alertMessage5' => __d('baser', 'カテゴリの追加に失敗しました。')
 ]);
 $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
     'id' => 'AdminBlogBLogPostsEditScript',
@@ -221,7 +221,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 <?php echo $this->BcForm->end() ?>
 
 <div id="AddBlogCategoryForm" style="display:none">
-	<h3><?php echo __d('baser', '新しいブログカテゴリを入力してください。')?></h3>
+	<h3><?php echo __d('baser', '新しいカテゴリを入力してください。')?></h3>
 	<table>
 		<tr>
 			<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.title', __d('baser', 'カテゴリタイトル')) ?>&nbsp;<span class="required">*</span></th>

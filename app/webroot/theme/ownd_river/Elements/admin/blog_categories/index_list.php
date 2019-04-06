@@ -40,12 +40,12 @@
         <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
       </th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'NO') ?></th>
-      <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリ名') ?>
+      <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'カテゴリ名') ?>
       <?php if ($this->BcBaser->siteConfig['category_permission']): ?>
         <br /><?php echo __d('baser', '管理グループ') ?>
       <?php endif ?>
       </th>
-      <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ブログカテゴリタイトル') ?></th>
+      <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'カテゴリタイトル') ?></th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日') ?><br /><?php echo __d('baser', '更新日') ?></th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
 		</tr>
