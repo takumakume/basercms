@@ -5,7 +5,7 @@
   border-radius: 3px;
   padding: $button_padding_top 1em $button_padding_bottom;
   line-height: 1.2;
-  border: 1px solid #ccc;
+  border: 1px solid $color_control_border_color;
   cursor: pointer;
   font-size: $button_font_size_medium;
   box-sizing: border-box;

@@ -20,7 +20,7 @@
     padding: 20px;
     margin: 20px;
     background-color: $color_background_secondary;
-    border: 1px solid $color_background_secondary_border;
+    border: 1px solid $color_main_contents_border_color;
   }
   &__header {
     padding: 10px 20px;
@@ -29,6 +29,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: $color_background_secondary;
+    border-bottom: 1px solid $color_main_contents_border_color;
     &-title {
       flex: 0 0 auto;
       margin: 0 1em 0 0;

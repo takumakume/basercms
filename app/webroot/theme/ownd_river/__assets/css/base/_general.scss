@@ -15,7 +15,7 @@ a {
 :root {
   font-size: $general_root_font_size;
   font-family: Arial, Geneva, sans-serif, "メイリオ", Verdana, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック";
-  color: #535A62; // old
+  color: $color_text_primary; // old
   background: #FFF; // old
 }
 

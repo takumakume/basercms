@@ -5,37 +5,55 @@
 // SASSの関数で明度を変更することを推奨する。
 //
 
+// base
 $color_primary: #61a82e;
-$color_secondary: #656565;
-$color_light_primary: #ffffe6;
+//$color_primary: #FF6F61;
+$color_secondary: #424f44;
+$color_light_primary: #ff000;
 $color_lightest: #fff;
-$color_darkest: #343434;
+$color_darkest: $color_secondary;
 $color_danger: #ce0000;
 $color_warning: #ffd24d;
 $color_warning_low: #fff6af;
-$color_disabled: #CCCCCC;
+$color_disabled: #ccc;
+
+// text
 $color_text_primary: $color_darkest;
-$color_text_secondary: #656565;
+$color_text_secondary: $color_darkest;
+
+// link
 $color_text_link: $color_primary;
 $color_text_hover: $color_primary;
-$color_pagination_link: #656565;
-$color_pagination_hover: #656565;
-$color_border: #ddd;
-$color_table_border_color: #ddd;
-$color_main_title: #535A62;
+
+// background
 $color_background_primary: #f8f8f8;
 $color_background_secondary: #fff;
-$color_background_secondary_border: #EEE;
 
-$color_background_menu: #eee;
-$color_background_menu_current: #fafafa;
-$color_background_menu_current_primary: #8ceb11;
+// border
+$color_border: #eeeeea;
+$color_table_border_color: $color_border;
+$color_control_border_color: #ccc;
+$color_menu_border: #fff;
+$color_background_secondary_border: $color_border;
+$color_main_contents_border_color:$color_border;
+
+// menu
+$color_background_menu: $color_border;
+$color_background_menu_current: $color_background_primary;
 $color_background_menu_dark: #ddd;
-
-$color_menu_link: #535A62;
+$color_menu_link: $color_darkest;
 $color_menu_hover: $color_secondary;
-$color_menu_border: #FFF;
 
-$color_toolbar: #333;
+// table
+$color_background_table_listup: $color_background_menu;
+$color_text_link_table_listup: $color_darkest;
 
-$color_alert: #d90000;
+// toolbar
+$color_toolbar: #2a332c;
+$color_footer: $color_toolbar;
+
+// parts
+$color_main_title: $color_darkest;
+$color_pagination_link: $color_darkest;
+$color_pagination_hover: $color_darkest;
+$color_background_menu_current_primary: #8ceb11;

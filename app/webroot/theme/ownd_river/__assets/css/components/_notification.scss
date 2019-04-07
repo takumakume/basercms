@@ -1,5 +1,5 @@
 .message {
-  color: $color_alert;
+  color: $color_danger;
   font-weight: bold;
   margin: 20px;
 }
@@ -17,7 +17,7 @@
 #AlertMessage,
 #BcMessageBox .alert-message,
 #UpdateMessage {
-  color: $color_alert;
+  color: $color_danger;
   //background: #F7E9EC url(../../img/admin/warning.png) no-repeat 10px 13px;
 }
 

@@ -103,7 +103,7 @@
           white-space: nowrap;
           // padding: 10px 20px;
           padding: 7px 20px 5px 35px;
-          color: $color_text_secondary;
+          color: $color_text_primary;
           font-size: 1.3rem;
           // @extend .bca-icon--menuitem;
           &::before {
@@ -113,7 +113,7 @@
           &:link,
           &:visited {
             // a:link のデフォルト設定を消すまで有効
-            color: $color_text_secondary;
+            color: $color_text_primary;
             &:after {
               position: absolute;
               top: 50%;
@@ -167,7 +167,7 @@
           // 現在開いているページ
           &[data-sub-content-is-current="true"] {
             // background: $color_primary;
-            background: #656565;
+            background: $color_secondary;
             a {
               position: relative;
               padding-left: 35px;

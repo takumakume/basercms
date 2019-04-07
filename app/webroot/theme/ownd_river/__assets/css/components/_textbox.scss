@@ -6,7 +6,7 @@
     padding: $button_padding_top 0.5em $button_padding_bottom 0.5em;
     border-radius: 3px;
     box-sizing: border-box;
-    border: 1px solid #cccccc;
+    border: 1px solid $color_control_border_color;
     line-height: 1.2;
     font-size: $input_text_font_size;
     color: $color_text_secondary;

@@ -1,8 +1,6 @@
 .bca-search {
   font-size: $label_font_size_medium;
-  border-bottom: 1px solid $color_border;
-  border-top: 1px solid $color_border;
-  border-radius: 3px;
+  border-bottom: 1px solid $color_main_contents_border_color;
   margin-bottom: 40px;
   background-color: #fff;
   &__head {
