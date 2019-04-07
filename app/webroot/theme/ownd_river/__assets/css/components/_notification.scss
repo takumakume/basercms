@@ -8,6 +8,7 @@
 #MessageBox .notice-message,
 #BcMessageBox .notice-message {
   color: $color_primary;
+  @extend .bca-icon--info-circle;
   //background: #EBF5E1 url(../../img/admin/icn_info.png) no-repeat 10px 13px;
 }
 
@@ -18,6 +19,7 @@
 #BcMessageBox .alert-message,
 #UpdateMessage {
   color: $color_danger;
+  @extend .bca-icon--exclamation-triangle;
   //background: #F7E9EC url(../../img/admin/warning.png) no-repeat 10px 13px;
 }
 

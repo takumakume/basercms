@@ -59,6 +59,12 @@
 		@include fa-common;
 	}
 
+    // お気に入り
+    &--exclamation-triangle {
+      @extend .#{$fa-css-prefix}-exclamation-triangle;
+      @include fa-common;
+    }
+  
 	// メニューアイテム
 	&--menuitem {
 		@extend .#{$fa-css-prefix}-angle-right;
