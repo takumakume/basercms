@@ -19,22 +19,15 @@ if (empty($help)) {
 ?>
 
 
-<div id="Help" class="clearfix" class="bca-help">
+<div id="Help" class="clearfix bca-help">
 
 	<h2 class="head bca-help__title">
-		<a href="#" class="bca-btn-icon" data-bca-btn-type="help" data-bca-btn-size="lg"></a>
+		<i class="bca-icon--question-circle" data-bca-btn-size="md"></i>
 		ヘルプ
-		<?php //$this->BcBaser->img('admin/head_help.png', array('width' => 69, 'height' => 16, 'alt' => __d('baser', 'ヘルプ'))) ?>
 	</h2>
 
 	<div class="body bca-help__body">
 		<?php $this->BcBaser->element('helps/' . $help) ?>
-	</div>
-
-	<div class="clearfix close">
-		<div id="CloseHelp">
-			<a><?php $this->BcBaser->img('admin/btn_close.png', array('width' => 14, 'height' => 14, 'alt' => 'Close', 'class' => 'btn')) ?></a>
-		</div>
 	</div>
 
 <!-- / #Help --></div>

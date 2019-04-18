@@ -62,7 +62,7 @@ if(!$this->request->data['Site']['use_subdomain']){
 </div>
 
 <section id="BasicSetting" class="bca-section">
-  <h2 class="bca-main__heading" data-bca-heading-size="md" data-bca-table-type="type2">基本設定</h2>
+  <h2 class="bca-main__heading" data-bca-heading-size="lg" data-bca-table-type="type2">基本設定</h2>
   <table class="form-table bca-form-table" data-bca-table-type="type2">
     <tr>
       <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>

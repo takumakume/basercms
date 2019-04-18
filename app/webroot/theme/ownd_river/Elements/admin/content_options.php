@@ -20,7 +20,7 @@
 
 
 <section id="OptionalSetting" class="bca-section" data-bca-section-type="form-group">
-	<h2 class="bca-main__heading" data-bca-heading-size="md">オプション</h2>
+	<h2 class="bca-main__heading" data-bca-heading-size="lg">オプション</h2>
 	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.description', __d('baser', '説明文')) ?></th>

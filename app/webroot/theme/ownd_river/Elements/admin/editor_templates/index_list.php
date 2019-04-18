@@ -48,6 +48,8 @@
 
 <div class="bca-data-list__bottom">
 	<div class="bca-data-list__sub">
+		<!-- pagination -->
+		<?php $this->BcBaser->element('pagination') ?>
 		<!-- list-num -->
 		<?php $this->BcBaser->element('list_num') ?>
 	</div>

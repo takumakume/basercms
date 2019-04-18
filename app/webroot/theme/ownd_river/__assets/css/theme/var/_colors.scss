@@ -6,8 +6,8 @@
 //
 
 // base
-$color_primary: #61a82e;
-//$color_primary: #FF6F61;
+//$color_primary: #61a82e;
+$color_primary: #FF6F61;
 $color_secondary: #424f44;
 $color_light_primary: #ff000;
 $color_lightest: #fff;
@@ -47,6 +47,7 @@ $color_menu_hover: $color_secondary;
 // table
 $color_background_table_listup: $color_background_menu;
 $color_text_link_table_listup: $color_darkest;
+$color_table_listup_hover: $color_background_primary;
 
 // toolbar
 $color_toolbar: #2a332c;

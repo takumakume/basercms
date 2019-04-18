@@ -93,7 +93,7 @@
 
   // ヘルプ
   &[data-bca-btn-type=help] {
-    @extend .#{$fa-css-prefix}-life-ring;
+    @extend .#{$fa-css-prefix}-question-circle;
     @include bca-btn-icon-common;
   }
 

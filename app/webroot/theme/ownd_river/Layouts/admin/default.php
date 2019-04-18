@@ -102,7 +102,7 @@
 <?php $this->BcBaser->scripts() ?>
 	</head>
 
-	<body id="<?php $this->BcBaser->contentsName() ?>" class="normal">
+	<body id="<?php $this->BcBaser->contentsName(true) ?>" class="normal">
 
   <div class="bca-data">
     <div id="BaseUrl" hidden><?php echo $this->request->base ?></div>

@@ -1,18 +1,13 @@
 .bca-feed {
-  //margin-top: 47px;
-  &__title {
-    margin: 0 0 10px;
-    font-size: 1.4rem;
-  }
   &__list {
     margin: 0;
     padding: 0;
     list-style: none;
-    //font-size: 1.6rem;
     &-item {
-      margin-bottom: 39px;
-      font-size: 1.4rem;
+      padding-bottom:9px;
+      margin-bottom: 8px;
       line-height: 1.5;
+      border-bottom: 1px solid $color_border;
     }
   }
 }

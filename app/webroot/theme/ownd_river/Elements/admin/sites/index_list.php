@@ -26,14 +26,17 @@ foreach($languages as $key => $lang) {
 ?>
 
 
-<!-- pagination -->
-<?php $this->BcBaser->element('pagination') ?>
+<div class="bca-data-list__top">
+	<div class="bca-data-list__sub">
+		<!-- pagination -->
+		<?php $this->BcBaser->element('pagination') ?>
+	</div>
+</div>
 
 <!-- ListTable -->
 <table cellpadding="0" cellspacing="0" class="list-table sort-table bca-table-listup" id="ListTable">
 	<thead class="bca-table-listup__thead">
 		<tr>
-			<th class="list-tool bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
 	<th class="bca-table-listup__thead-th">
 		<?php 
 		echo $this->Paginator->sort('id', 
@@ -117,6 +120,7 @@ foreach($languages as $key => $lang) {
 		); 
 		?>
 	</th>
+	<th class="list-tool bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
 </tr>
 </thead>
 <tbody class="bca-table-listup__tbody">
@@ -134,7 +138,9 @@ foreach($languages as $key => $lang) {
 
 <div class="bca-data-list__bottom">
 	<div class="bca-data-list__sub">
-	<!-- list-num -->
-	<?php $this->BcBaser->element('list_num') ?>
+		<!-- pagination -->
+		<?php $this->BcBaser->element('pagination') ?>
+		<!-- list-num -->
+		<?php $this->BcBaser->element('list_num') ?>
 	</div>
 </div>

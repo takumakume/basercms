@@ -29,7 +29,7 @@ array_push($params, $data['name']);
 		<?php endif ?>
 
   </td>
-	<td class="bca-table-listup__tbody-td" data-bca-text-size="lg">
+	<td class="bca-table-listup__tbody-td" data-bca-text-size="md">
 		<?php if ($data['type'] == 'image'): ?>
 			<?php
 			$this->BcBaser->link(
@@ -38,7 +38,7 @@ array_push($params, $data['name']);
 			<?php echo $data['name'] ?>
 		<?php elseif ($data['type'] == 'folder'): ?>
       <?php $this->BcBaser->link(
-              '<i class="bca-icon--folder" data-bca-icon-size="lg"></i>'.$data['name'],
+              '<i class="bca-icon--folder" data-bca-icon-size="md"></i>'.$data['name'],
               array_merge(
                 array('action' => 'index', $theme, $plugin, $type),
                 $params
@@ -51,7 +51,7 @@ array_push($params, $data['name']);
 
 		<?php else: ?>
       <?php $this->BcBaser->link(
-        '<i class="bca-icon--file" data-bca-icon-size="lg"></i>'.$data['name'],
+        '<i class="bca-icon--file" data-bca-icon-size="md"></i>'.$data['name'],
         array_merge(
           array('action' => 'index', $theme, $plugin, $type),
           $params

@@ -19,8 +19,11 @@
 }
 
 #Help h2, #Limit h2 {
-  padding-left: 0;
   border: none;
+  margin: 0;
+  padding: 10px;
+  font-size: $label_font_size_medium;
+  font-weight: normal;
 }
 
 /* Help
@@ -28,11 +31,11 @@
 
 #Help {
   display: none;
-  border: 5px solid #669900;
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  border-bottom: 1px solid $color_border;
+  padding: 20px;
   background-color: #FFF;
   overflow: hidden;
+  line-height: 1.6;
 }
 
 #Help .body {
@@ -52,14 +55,15 @@
 
 #Help ul,
 #Help ol {
-  list-style-type: none;
+  margin-left: 0;
+  padding-left: 20px;
+  list-style-position: outside;
 }
 
 #Help li {
   /*padding: 0 20px;*/
-  margin: 5px 0;
-  background: url(../../img/admin/blt_list_2.png) no-repeat left 1px;
-  padding-left: 15px;
+  margin: 10px 0;
+  line-height: 1.6;
 }
 
 #Help li img {

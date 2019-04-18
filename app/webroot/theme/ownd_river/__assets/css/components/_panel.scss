@@ -8,12 +8,13 @@
 
   &-box {
     padding: 25px 20px;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
     background: #fff;
-
+    border: 1px solid $color_border;
     &__title {
       margin: 0 0 30px 0;
-      font-size: 1.8rem;
+      font-size: $label_font_size_large;
+      font-weight: normal;
     }
 
     &__inline-fields {

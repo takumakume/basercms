@@ -19,7 +19,7 @@
 
 <?php if($this->request->action == 'admin_edit' || $this->request->action == 'admin_edit_alias'): ?>
 <section id="EtcSetting" class="bca-section" data-bca-section-type="form-group">
-	<h3 class="bca-main__heading" data-bca-heading-size="md">その他情報</h3>
+	<h3 class="bca-main__heading" data-bca-heading-size="lg">その他情報</h3>
 	<div class="bca-box">
     <ul class="bca-list" data-bca-list-layout="horizon" data-bca-list-type='circle'>
       <li class="bca-list__item"><span>コンテンツID</span>：<?php echo $this->request->data['Content']['id'] ?></li>

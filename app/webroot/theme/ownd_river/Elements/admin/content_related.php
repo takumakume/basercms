@@ -23,7 +23,7 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 
 <?php if(count($relatedContents) > 1): ?>
 	<section id="RelatedContentsSetting" class="bca-section" data-bca-section-type="form-group">
-		<h3 class="bca-main__heading" data-bca-heading-size="md">関連コンテンツ</h3>
+		<h3 class="bca-main__heading" data-bca-heading-size="lg">関連コンテンツ</h3>
 		<table class="list-table bca-table" data-bca-table-type="type2">
       <thead>
 			<tr>

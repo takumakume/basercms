@@ -200,7 +200,7 @@
     border-bottom: 1px solid $color_table_border_color;
     // 行のホバー
     tr:hover & {
-      background: $color_background_primary;
+      background: $color_table_listup_hover;
       cursor: pointer;
     }
   }
@@ -257,7 +257,7 @@
 
   .disablerow {
     th, td {
-      background-color: $color_background_menu;
+      background-color: $color_disabled;
     }
   }
 
