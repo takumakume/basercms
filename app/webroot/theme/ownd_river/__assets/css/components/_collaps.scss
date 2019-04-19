@@ -6,7 +6,9 @@
   overflow: hidden;
   //max-height: 0;
   //transition: 0.4s all;
-
+  &__btn-icon {
+    font-size: $button_font_size_large;
+  }
   // 非表示
   .bca-collapse__inner {
     //overflow: hidden;
@@ -43,12 +45,13 @@
     background: none;
     display: inline-block;
     width: auto;
-    font-size: 1.8rem;
+    font-size: $button_font_size_x_large;
     line-height: 1;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     color: $color_primary;
+    padding-left:0;
     &:hover {
       text-decoration: none;
       color: $color_secondary;

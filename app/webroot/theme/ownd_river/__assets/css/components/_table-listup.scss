@@ -277,5 +277,10 @@
   [data-bca-text-size=lg] {
     font-size: 1.6rem;
   }
-
+  .bca-currentrow {
+    th, td {
+      background: $color_background_menu_current_primary;
+      color:#FFF;
+    }
+  }
 }

@@ -51,7 +51,7 @@ $(function(){
 			</th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('FeedConfig.name', array('type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true)) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('FeedConfig.name') ?>
 				<div id="helptextName" class="helptext">
 					<ul>
@@ -76,7 +76,7 @@ $(function(){
 
 <section class="bca-section" data-bca-section-type='form-group'>
   <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#FormOptionBody" aria-expanded="false" aria-controls="formOptionBody">オプション <i class="bca-icon--desc bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#FormOptionBody" aria-expanded="false" aria-controls="formOptionBody">詳細設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="FormOptionBody" data-bca-state="">
   <table cellpadding="0" cellspacing="0" class="form-table bca-form-table">
@@ -84,7 +84,7 @@ $(function(){
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedConfig.feed_title_index', __d('baser', 'フィードタイトルリスト')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('FeedConfig.feed_title_index', array('type' => 'textarea', 'cols' => 36, 'rows' => 3)) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpFeedTitleIndex', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('FeedConfig.feed_title_index') ?>
 				<div id="helptextFeedTitleIndex" class="helptext">
 					<ul>
@@ -99,7 +99,7 @@ $(function(){
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedConfig.category_index', __d('baser', 'カテゴリリスト')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('FeedConfig.category_index', array('type' => 'textarea', 'cols' => 36, 'rows' => 3)) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpCategoryIndex', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('FeedConfig.category_index') ?>
 				<div id="helptextCategoryIndex" class="helptext">
 					<ul>
@@ -118,7 +118,7 @@ $(function(){
 				<?php if ($this->action == 'admin_edit'): ?>
 					<?php $this->BcBaser->link('≫ 編集する', 'javascript:void(0)', array('id' => 'EditTemplate')) ?>
 				<?php endif ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', array('id' => 'helpTemplate', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ'))) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('FeedConfig.template') ?>
 				<div id="helptextTemplate" class="helptext">
 					<ul>

@@ -130,65 +130,72 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
   </table>
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
-  <h2 class="bca-main__heading" data-bca-heading-size="lg">管理画面設定</h2>
-  <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
-    <tr>
-      <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_ssl', __d('baser', '管理画面SSL設定')) ?></th>
-      <td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->input('SiteConfig.admin_ssl', array_merge(array('type' => 'radio', 'options' => $this->BcText->booleanDoList(__d('baser', 'SSL通信を利用')), 'separator' => '　', 'legend' => false), $disableSettingInstallSetting)) ?>
-        <i class="bca-icon--question-circle btn help bca-help"></i>
-        <?php echo $this->BcForm->error('SiteConfig.admin_ssl') ?>
-        <div id="helptextAdminSslOn" class="helptext">管理者ページでSSLを利用する場合は、事前にSSLの申込、設定が必要です。<br />
-          また、SSL用のWebサイトURLの指定が必要です。</div>
-      </td>
-    </tr>
-    <tr>
-      <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_list_num', __d('baser', '管理画面テーマ')) ?></th>
-      <td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->input('SiteConfig.admin_theme', ['type' => 'select', 'options' => $themes]) ?>
-        <?php echo $this->BcForm->error('SiteConfig.admin_theme') ?>
-      </td>
-    </tr>
-    <tr>
-      <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_list_num', __d('baser', '初期一覧件数')) ?></th>
-      <td class="col-input bca-form-table__input">
-        <?php
-        echo $this->BcForm->input('SiteConfig.admin_list_num', array('type' => 'select', 'options' => array(
-            10 => __d('baser', '10件'),
-            20 => __d('baser', '20件'),
-            50 => __d('baser', '50件'),
-            100 => __d('baser', '100件')
-        )))
-        ?>
-        <?php echo $this->BcForm->error('SiteConfig.admin_list_num') ?>
-        <i class="bca-icon--question-circle btn help bca-help"></i>
-        <div id="helptextAdminListNum" class="helptext">ダッシュボードに表示される「最近の動き」などの表示件数を設定します</div>
-      </td>
-    </tr>
-    <tr>
-      <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.login_credit', __d('baser', 'ログインページのクレジット表示')) ?></th>
-      <td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->input('SiteConfig.login_credit', array('type' => 'radio', 'options' => $this->BcText->booleanDoList(__d('baser', '利用')))) ?>
-        <i class="bca-icon--question-circle btn help bca-help"></i>
-        <div class="helptext">ログインページに表示されているクレジット表示を利用するかどうか設定します。</div>
-        <?php echo $this->BcForm->error('SiteConfig.login_credit') ?>
-      </td>
-    </tr>
-    <tr>
-      <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_side_banner', __d('baser', 'サイドバーのバナー表示')) ?></th>
-      <td class="col-input bca-form-table__input">
-        <?php echo $this->BcForm->input('SiteConfig.admin_side_banner', array('type' => 'radio', 'options' => $this->BcText->booleanDoList(__d('baser', '利用')))) ?>
-        <i class="bca-icon--question-circle btn help bca-help"></i>
-        <div class="helptext">管理システムのサイド部分にバナーを表示するかどうか設定します。</div>
-        <?php echo $this->BcForm->error('SiteConfig.admin_side_banner') ?>
-      </td>
-    </tr>
-    <?php echo $this->BcForm->dispatchAfterForm() ?>
-  </table>
+  <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formAdminSettingBody" aria-expanded="false" aria-controls="formOptionBody">管理画面設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formAdminSettingBody" data-bca-state="">
+	  <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
+		<tr>
+		  <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_ssl', __d('baser', '管理画面SSL設定')) ?></th>
+		  <td class="col-input bca-form-table__input">
+			<?php echo $this->BcForm->input('SiteConfig.admin_ssl', array_merge(array('type' => 'radio', 'options' => $this->BcText->booleanDoList(__d('baser', 'SSL通信を利用')), 'separator' => '　', 'legend' => false), $disableSettingInstallSetting)) ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<?php echo $this->BcForm->error('SiteConfig.admin_ssl') ?>
+			<div id="helptextAdminSslOn" class="helptext">管理者ページでSSLを利用する場合は、事前にSSLの申込、設定が必要です。<br />
+			  また、SSL用のWebサイトURLの指定が必要です。</div>
+		  </td>
+		</tr>
+		<tr>
+		  <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_list_num', __d('baser', '管理画面テーマ')) ?></th>
+		  <td class="col-input bca-form-table__input">
+			<?php echo $this->BcForm->input('SiteConfig.admin_theme', ['type' => 'select', 'options' => $themes]) ?>
+			<?php echo $this->BcForm->error('SiteConfig.admin_theme') ?>
+		  </td>
+		</tr>
+		<tr>
+		  <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_list_num', __d('baser', '初期一覧件数')) ?></th>
+		  <td class="col-input bca-form-table__input">
+			<?php
+			echo $this->BcForm->input('SiteConfig.admin_list_num', array('type' => 'select', 'options' => array(
+				10 => __d('baser', '10件'),
+				20 => __d('baser', '20件'),
+				50 => __d('baser', '50件'),
+				100 => __d('baser', '100件')
+			)))
+			?>
+			<?php echo $this->BcForm->error('SiteConfig.admin_list_num') ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<div id="helptextAdminListNum" class="helptext">ダッシュボードに表示される「最近の動き」などの表示件数を設定します</div>
+		  </td>
+		</tr>
+		<tr>
+		  <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.login_credit', __d('baser', 'ログインページのクレジット表示')) ?></th>
+		  <td class="col-input bca-form-table__input">
+			<?php echo $this->BcForm->input('SiteConfig.login_credit', array('type' => 'radio', 'options' => $this->BcText->booleanDoList(__d('baser', '利用')))) ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<div class="helptext">ログインページに表示されているクレジット表示を利用するかどうか設定します。</div>
+			<?php echo $this->BcForm->error('SiteConfig.login_credit') ?>
+		  </td>
+		</tr>
+		<tr>
+		  <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.admin_side_banner', __d('baser', 'サイドバーのバナー表示')) ?></th>
+		  <td class="col-input bca-form-table__input">
+			<?php echo $this->BcForm->input('SiteConfig.admin_side_banner', array('type' => 'radio', 'options' => $this->BcText->booleanDoList(__d('baser', '利用')))) ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<div class="helptext">管理システムのサイド部分にバナーを表示するかどうか設定します。</div>
+			<?php echo $this->BcForm->error('SiteConfig.admin_side_banner') ?>
+		  </td>
+		</tr>
+		<?php echo $this->BcForm->dispatchAfterForm() ?>
+	  </table>
+  </div>
 </section>
 
 <section class="bca-section" data-bca-section-type='form-group'>
-  <h2 class="bca-main__heading" data-bca-heading-size="lg">外部サービス設定</h2>
+  <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOuterServiceSettingBody" aria-expanded="false" aria-controls="formOptionBody">外部サービス設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formOuterServiceSettingBody" data-bca-state="">
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table"data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.address', __d('baser', 'GoogleMaps住所')) ?></th>
@@ -223,10 +230,14 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
 			</td>
 		</tr>
   </table>
+  </div>
 </section>
 
 <section class="bca-section" data-bca-section-type='form-group'>
-  <h2 class="bca-main__heading" data-bca-heading-size="lg">サブサイト設定</h2>
+  <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formSubSiteSettingBody" aria-expanded="false" aria-controls="formOptionBody">サブサイト設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formSubSiteSettingBody" data-bca-state="">
   <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
     <tr>
       <th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.main_site_display_name', __d('baser', 'メインサイト表示名称')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required">必須</span></th>
@@ -252,9 +263,13 @@ $this->BcBaser->js('admin/site_configs/form', false, array('id' => 'AdminSiteCon
       </td>
     </tr>
   </table>
+  </div>
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
-  <h2 class="bca-main__heading" data-bca-heading-size="lg">エディタ設定</h2>
+ <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formEditorSettingBody" aria-expanded="false" aria-controls="formOptionBody">エディタ設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formEditorSettingBody" data-bca-state="">
   <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.editor_enter_br', __d('baser', 'エディタタイプ')) ?></th>
@@ -303,9 +318,13 @@ h2 {}
 			</td>
 		</tr>
   </table>
+  </div>
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
-  <h2 class="bca-main__heading" data-bca-heading-size="lg">メール設定</h2>
+ <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formMailSettingBody" aria-expanded="false" aria-controls="formOptionBody">メール設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formMailSettingBody" data-bca-state="">
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="bca-form-table__label"><?php echo $this->BcForm->label('SiteConfig.mail_encode', __d('baser', 'メール送信文字コード')) ?></th>
@@ -386,8 +405,10 @@ h2 {}
 			</td>
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
-	</table>
 
+	</table>
+	</div>
+</section>
   <div class="bca-actions">
     <?php echo $this->BcForm->button(__d('baser', '保存'),
       array(

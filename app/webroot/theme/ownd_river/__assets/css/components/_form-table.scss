@@ -78,7 +78,7 @@
   &__label {
     vertical-align: top;
     width: 250px;
-    padding: 1.4em 2em 1em 1em;
+    padding: 1.4em 2em 1em 0;
     font-weight: normal;
     border-bottom:1px solid $color_table_border_color;
     text-align: left;
@@ -105,7 +105,7 @@
   }
   &__input-wrap {
     display: block;
-    padding: 0 0 0 1em;
+    padding: 0;
   }
   tr:last-child th,
   tr:last-child td{
@@ -224,3 +224,7 @@
 
 }
 
+#BasicSetting table {
+  border-bottom:1px solid $color_border;
+  margin-bottom:20px;
+}

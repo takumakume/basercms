@@ -22,19 +22,22 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 
 
 <?php if(count($relatedContents) > 1): ?>
-	<section id="RelatedContentsSetting" class="bca-section" data-bca-section-type="form-group">
-		<h3 class="bca-main__heading" data-bca-heading-size="lg">関連コンテンツ</h3>
-		<table class="list-table bca-table" data-bca-table-type="type2">
-      <thead>
+<section id="RelatedContentsSetting" class="bca-section" data-bca-section-type="form-group">
+  <div class="bca-collapse__action">
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formRelatedContentsBody" aria-expanded="false" aria-controls="formOptionBody">関連コンテンツ&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+  </div>
+  <div class="bca-collapse" id="formRelatedContentsBody" data-bca-state="">
+  	<table class="list-table bca-table-listup"">
+      <thead class="bca-table-listup__thead">
 			<tr>
-				<th>&nbsp</th>
-				<th>サイト名</th>
-				<th>メインサイト</th>
-				<th>タイトル</th>
-				<th>エイリアス</th>
+				<th class="bca-table-listup__thead-th">サイト名</th>
+				<th class="bca-table-listup__thead-th">メインサイト</th>
+				<th class="bca-table-listup__thead-th">タイトル</th>
+				<th class="bca-table-listup__thead-th">エイリアス</th>
+				<th class="bca-table-listup__thead-th">アクション</th>
 			</tr>
       </thead>
-      <tbody>
+      <tbody class="bca-table-listup__tbody">
 			<?php foreach($relatedContents as $relatedContent): ?>
 				<?php
 				$class = $editUrl = $checkUrl = '';
@@ -67,7 +70,26 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 				}
 				?>
 				<tr<?php echo $class ?> id="Row<?php echo $relatedContent['Site']['id'] ?>">
-					<td class="cel1">
+					<td class="cel2 bca-table-listup__tbody-td"><?php echo $relatedContent['Site']['display_name'] ?></td>
+					<td class="cel3 bca-table-listup__tbody-td">
+						<?php echo $this->BcText->arrayValue($relatedContent['Site']['main_site_id'], $sites,  $mainSiteDisplayName) ?>
+					</td>
+					<td class="cel4 bca-table-listup__tbody-td">
+						<?php if(!empty($relatedContent['Content'])): ?>
+							<?php echo $relatedContent['Content']['title'] ?>
+							<?php if(!empty($relatedContent['Content'])): ?>
+								<small>（<?php echo $this->BcContents->settings[$relatedContent['Content']['type']]['title'] ?>）</small>
+							<?php endif ?>
+						<?php else: ?>
+							<small>未登録</small>
+						<?php endif ?>
+					</td>
+					<td class="cel5 bca-table-listup__tbody-td">
+						<?php if(!empty($relatedContent['Content']) && !empty($relatedContent['Content']['alias_id'])): ?>
+              <i class="fa fa-check-square" aria-hidden="true"></i>
+            <?php endif ?>
+					</td>
+					<td class="cel1 bca-table-listup__tbody-td">
 						<?php if(!$current): ?>
 							<?php if(!empty($relatedContent['Content'])): ?>
 								<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_check.png', array('alt' => __d('baser', '確認'))), $relatedContent['Content']['url'], array('title' => __d('baser', '確認'), 'target' => '_blank')) ?>
@@ -80,28 +102,10 @@ $pureUrl = $this->BcContents->getPureUrl($this->request->data['Content']['url'],
 						<?php echo $this->BcForm->input('Site.display_name' . $relatedContent['Site']['id'], array('type' => 'hidden', 'value' => $relatedContent['Site']['display_name'])) ?>
 						<?php echo $this->BcForm->input('Site.target_url' . $relatedContent['Site']['id'], array('type' => 'hidden', 'value' => $targetUrl)) ?>
 					</td>
-					<td class="cel2"><?php echo $relatedContent['Site']['display_name'] ?></td>
-					<td class="cel3">
-						<?php echo $this->BcText->arrayValue($relatedContent['Site']['main_site_id'], $sites,  $mainSiteDisplayName) ?>
-					</td>
-					<td class="cel4">
-						<?php if(!empty($relatedContent['Content'])): ?>
-							<?php echo $relatedContent['Content']['title'] ?>
-							<?php if(!empty($relatedContent['Content'])): ?>
-								<small>（<?php echo $this->BcContents->settings[$relatedContent['Content']['type']]['title'] ?>）</small>
-							<?php endif ?>
-						<?php else: ?>
-							<small>未登録</small>
-						<?php endif ?>
-					</td>
-					<td class="cel5">
-						<?php if(!empty($relatedContent['Content']) && !empty($relatedContent['Content']['alias_id'])): ?>
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            <?php endif ?>
-					</td>
 				</tr>
 			<?php endforeach ?>
       </tbody>
-		</table>
-	</section>
+      </table>
+  </div>
+</section>
 <?php endif ?>

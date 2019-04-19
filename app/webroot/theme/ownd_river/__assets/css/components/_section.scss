@@ -34,8 +34,9 @@
 
   // ブログ新着記事の上部
   &__post-top {
-    display: flex;
-    justify-content: flex-end;
+    //display: flex;
+    //justify-content: flex-end;
+    float:right;
     margin-bottom: 0.8em;
     .bca-post__no {
       margin-right: 2em;

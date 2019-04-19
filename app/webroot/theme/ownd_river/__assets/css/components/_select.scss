@@ -9,6 +9,7 @@
     outline: none;
     border-radius: 3px;
     color:$color_text_secondary;
+    margin:4px;
     &[data-bca-select-size=lg] {
       font-size: $button_font_size_large;
     }

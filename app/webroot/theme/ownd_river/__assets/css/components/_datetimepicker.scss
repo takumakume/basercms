@@ -29,6 +29,7 @@
   display: inline-block;
   outline: none;
   padding: $button_padding_top calc(0.5em + 16px) $button_padding_bottom 0.5em;
+  margin:4px;
   border-radius: 3px;
   box-sizing: border-box;
   border: 1px solid $color_control_border_color;

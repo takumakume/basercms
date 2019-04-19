@@ -24,7 +24,6 @@
 <?php echo $this->BcForm->input('FeedDetail.feed_config_id', array('type' => 'hidden')) ?>
 
 <section class="bca-section" data-bca-section-type='form-group'>
-	<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
 
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
 		<?php if ($this->action == 'admin_edit'): ?>
@@ -56,7 +55,7 @@
 
 <section class="bca-section" data-bca-section-type='form-group'>
   <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOptionBody" aria-expanded="false" aria-controls="formOptionBody">オプション <i class="bca-icon--desc bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOptionBody" aria-expanded="false" aria-controls="formOptionBody">詳細設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formOptionBody" data-bca-state="">
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table">

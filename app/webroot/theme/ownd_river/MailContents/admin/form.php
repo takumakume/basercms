@@ -17,8 +17,6 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 ?>
 
 
-<h2 class="bca-main__heading" data-bca-heading-size="lg">基本項目</h2>
-
 <?php echo $this->BcForm->create('MailContent', array('novalidate' => true)) ?>
 <?php echo $this->BcForm->input('MailContent.id', array('type' => 'hidden')) ?>
 
@@ -101,7 +99,7 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 
 <div class="bca-section" data-bca-section-type='form-group'>
   <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOptionBody" aria-expanded="false" aria-controls="formOptionBody">オプション <i class="bca-icon--desc bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOptionBody" aria-expanded="false" aria-controls="formOptionBody">詳細設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formOptionBody" data-bca-state="">
     <table class="form-table bca-form-table" data-bca-table-type="type2">
@@ -239,13 +237,16 @@ $this->BcBaser->js('Mail.admin/mail_contents/edit', false);
 </div>
 
 <!-- button -->
-<div class="submit bca-actions">
+<div class="submit">
 	<div class="bca-actions__main">
-		<?php echo $this->BcForm->button(__d('baser', '保存'), array('div' => false, 'class' => 'button bca-btn bca-actions__item', 'id' => 'BtnSave',
-      'data-bca-btn-type' => 'save',
-      'data-bca-btn-size' => 'lg',
-      'data-bca-btn-width' => 'lg',
-    )) ?>
+		<?php echo $this->BcForm->submit(__d('baser', '保存'), [
+			'div' => false,
+			'class' => 'button bca-btn bca-actions__item',
+			'id' => 'BtnSave',
+      		'data-bca-btn-type' => 'save',
+      		'data-bca-btn-size' => 'lg',
+      		'data-bca-btn-width' => 'lg'
+    	]) ?>
 	</div>
 </div>
 
