@@ -117,6 +117,13 @@ class BcAdminHelper extends AppHelper {
 				$adminMenuGroup = array_merge(['type' => null], $adminMenuGroup);
 			}
 			$adminMenuGroup = array_merge(['name' => $group], $adminMenuGroup);
+			if(!empty($adminMenuGroup['url'])) {
+				$adminMenuGroup['url'] = preg_replace('/^' . preg_quote($this->request->base, '/') . '\//', '/', $this->BcBaser->getUrl($adminMenuGroup['url']));
+				if(preg_match('/^' . preg_quote($adminMenuGroup['url'], '/') . '$/', $currentUrl)) {
+					$adminMenuGroup['current'] = true;
+				}
+			}
+
 			$covertedAdminMenus = [];
 			if(!empty($adminMenuGroup['menus'])) {
 				foreach($adminMenuGroup['menus'] as $menu => $adminMenu) {
@@ -129,12 +136,13 @@ class BcAdminHelper extends AppHelper {
 						}
 						$adminMenu['url'] = $url;
 						$current = false;
-						if(preg_match('/^' . preg_quote($url, '/') . '/', $currentUrl)) {
+						if(preg_match('/^' . preg_quote($url, '/') . '$/', $currentUrl)) {
 							$current = true;
 						}
 						if($current) {
 							$adminMenu['current'] = true;
-							$adminMenuGroup['current'] = true;
+							$adminMenuGroup['current'] = false;
+							$adminMenuGroup['expanded'] = true;
 						} else {
 							$adminMenu['current'] = false;
 						}

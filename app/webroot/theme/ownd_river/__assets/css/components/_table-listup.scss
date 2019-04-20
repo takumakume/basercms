@@ -157,7 +157,7 @@
       a {
         color: #fff;
         .bca-btn-icon-text[data-bca-btn-type=draggable]::before {
-          color: #fff;
+          color: $color_text_link;
         }
       }
     }

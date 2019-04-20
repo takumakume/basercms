@@ -35,6 +35,12 @@
 		@include fa-common;
 	}
 
+	// アップロード
+	&--image {
+		@extend .#{$fa-css-prefix}-image;
+		@include fa-common;
+	}
+
 	// 編集
 	&--edit {
 		@extend .#{$fa-css-prefix}-pencil;
@@ -101,6 +107,12 @@
 		@include fa-common;
 	}
 
+	&--id-card {
+		@extend .#{$fa-css-prefix}-id-card-o;
+		@include fa-common;
+	}
+
+
 	// ブログ
 	&--blog {
 		@extend .#{$fa-css-prefix}-file-text-o;
@@ -121,7 +133,36 @@
 
 	// プラグイン
 	&--plugin {
-		@extend .#{$fa-css-prefix}-puzzle-piece;
+		@extend .#{$fa-css-prefix}-plug;
+		@include fa-common;
+	}
+
+	// サイトマップ
+	&--sitemap {
+		@extend .#{$fa-css-prefix}-sitemap;
+		@include fa-common;
+	}
+
+	// フィード
+	&--rss {
+		@extend .#{$fa-css-prefix}-rss;
+		@include fa-common;
+	}
+
+	// 基本設定
+	&--bars {
+		@extend .#{$fa-css-prefix}-bars;
+		@include fa-common;
+	}
+
+	// ユーティリティ
+	&--wrench {
+		@extend .#{$fa-css-prefix}-wrench;
+		@include fa-common;
+	}
+
+	&--user {
+		@extend .#{$fa-css-prefix}-user-o;
 		@include fa-common;
 	}
 

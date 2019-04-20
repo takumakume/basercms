@@ -1,6 +1,6 @@
 .message {
   color: $color_primary;
-  font-weight: bold;
+  font-weight: normal;
   margin: 20px;
   line-height: 1.6;
 }
@@ -37,7 +37,7 @@
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 #BcMessageBox {

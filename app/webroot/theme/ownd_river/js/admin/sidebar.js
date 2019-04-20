@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 		data.menuList.forEach(function (item, i) {
 			if (item.type === 'system') {
-				item.menus = item.menus.filter(function (menu) { return menu.url !== item.url });
+				//item.menus = item.menus.filter(function (menu) { return menu.url !== item.url });
 				systemList.push(item);
 			} else {
 				contentList.push(item);
@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function () {
 		// console.log($.extend(true, {}, systemList));
 
 		tmpl.hidden = false;
-		var isSystemSettingPage = systemList.some(function (item) { return item.current; });
+		var isSystemSettingPage = systemList.some(function (item) { return (item.current || item.expanded); });
 		var app = new Vue({
 			el: tmpl,
 			data: {

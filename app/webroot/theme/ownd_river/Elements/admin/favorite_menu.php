@@ -21,9 +21,11 @@
 
 <nav id="FavoriteMenu" class="bca-nav-favorite">
 
-	<h2 class="bca-nav-favorite-title"><span class="bca-nav-favorite-title-label"><?php echo __d('baser', 'お気に入り') ?></span> <i class="bca-icon--chevron-down bca-nav-favorite-title-icon"></i></h2>
+	<h2 class="bca-nav-favorite-title">
+		<button type="button" id="btn-favorite-expand" class="bca-collapse__btn bca-nav-favorite-title-button" data-bca-collapse="favorite-collapse" data-bca-target="#favoriteBody" aria-expanded="false" aria-controls="favoriteBody" data-bca-state="<?php echo ($favoriteBoxOpened)? "open" : '' ?>">
+			<?php echo __d('baser', 'お気に入り') ?> <i class="bca-icon--chevron-down bca-nav-favorite-title-icon"></i></button></h2>
 
-	<ul class="favorite-menu-list bca-nav-favorite-list">
+	<ul class="favorite-menu-list bca-nav-favorite-list bca-collapse" id="favoriteBody">
 		<?php if (!empty($favorites)): ?>
 			<?php foreach ($favorites as $favorite): ?>
 				<?php $this->BcBaser->element('favorite_menu_row', array('favorite' => $favorite)) ?>

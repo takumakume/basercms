@@ -25,6 +25,11 @@ $config['BcApp'] = [
 	// システムナビ
 	'adminNavigation' => [
 		'Contents' => [
+			'Dashboard' => [
+				'title' => __d('baser', 'ダッシュボード'),
+				'type' => 'dashboard',
+				'url' => '/admin',
+			],
 			'Default' => [
 				'title' => __d('baser', 'コンテンツ管理'),
 				'type' => 'contents',
@@ -38,35 +43,7 @@ $config['BcApp'] = [
 			'SiteConfigs' => [
 				'title' => __d('baser', 'サイト基本設定'),
 				'type' => 'system',
-				'menus' => [
-					'SiteConfigs' => ['title' => __d('baser', 'サイト基本設定'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'site_configs', 'action' => 'form']],
-				]
-			],
-			'Theme' => [
-				'title' => __d('baser', 'テーマ管理'),
-				'type' => 'system',
-				'menus' => [
-					'Themes' => ['title' => __d('baser', 'テーマ'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'index']],
-					'ThemeConfigs' => ['title' => __d('baser', '設定'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'theme_configs', 'action' => 'form']],
-					'ThemeAdd' => ['title' => __d('baser', '新規追加'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'add']],
-				]
-			],
-			'ThemeCreate' => [
-				'title' => __d('baser', 'テーマ制作'),
-				'type' => 'system',
-				'menus' => [
-					'ThemeFiles' => ['title' => __d('baser', 'コアテンプレート確認'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'theme_files', 'action' => 'index', 'core']],
-					'ThemesDownload' => ['title' => __d('baser', '利用中テーマダウンロード'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'download']],
-					'ThemesDownloadDefaultDataPattern' => ['title' => __d('baser', 'テーマ用初期データダウンロード'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'download_default_data_pattern']],
-					'ThemesResetData' => ['title' => __d('baser', 'データリセット'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'reset_data']],
-				]
-			],
-			'Plugin' => [
-				'title' => __d('baser', 'プラグイン管理'),
-				'type' => 'system',
-				'menus' => [
-					'Plugins' => ['title' => __d('baser', 'プラグイン'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'plugins', 'action' => 'index']],
-				]
+				'url' => ['admin' => true, 'plugin' => null, 'controller' => 'site_configs', 'action' => 'form'],
 			],
 			'Users' => [
 				'title' => __d('baser', 'ユーザー管理'),
@@ -83,6 +60,24 @@ $config['BcApp'] = [
 					'Sites' => ['title' => __d('baser', 'サブサイト'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'sites', 'action' => 'index']],
 				]
 			],
+			'Theme' => [
+				'title' => __d('baser', 'テーマ管理'),
+				'type' => 'system',
+				'menus' => [
+					'Themes' => ['title' => __d('baser', 'テーマ'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'index']],
+					'ThemeConfigs' => ['title' => __d('baser', '設定'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'theme_configs', 'action' => 'form']],
+					'ThemeAdd' => ['title' => __d('baser', '新規追加'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'add']],
+					'ThemesDownload' => ['title' => __d('baser', '利用中テーマダウンロード'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'download']],
+					'ThemesDownloadDefaultDataPattern' => ['title' => __d('baser', 'テーマ用初期データダウンロード'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'download_default_data_pattern']],
+				]
+			],
+			'Plugin' => [
+				'title' => __d('baser', 'プラグイン管理'),
+				'type' => 'system',
+				'menus' => [
+					'Plugins' => ['title' => __d('baser', 'プラグイン'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'plugins', 'action' => 'index']],
+				]
+			],
 			'Tools' => [
 				'title' => __d('baser', 'ユーティリティ'),
 				'type' => 'system',
@@ -92,7 +87,9 @@ $config['BcApp'] = [
 					'WidgetAreas' => ['title' => __d('baser', 'ウィジェットエリア'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'widget_areas', 'action' => 'index']],
 					'SearchIndices' => ['title' => __d('baser', '検索インデックス'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'search_indices', 'action' => 'index']],
 					'SiteConfigsInfo' => ['title' => __d('baser', '環境情報'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'site_configs', 'action' => 'info']],
+					'ThemeFiles' => ['title' => __d('baser', 'コアテンプレート確認'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'theme_files', 'action' => 'index', 'core']],
 					'ToolsMaintenance' => ['title' => __d('baser', 'データメンテナンス'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'maintenance']],
+					'ThemesResetData' => ['title' => __d('baser', 'データリセット'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'reset_data']],
 					'ToolsLog' => ['title' => __d('baser', 'ログメンテナンス'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'log']],
 					'ToolsWriteSchema' => ['title' => __d('baser', 'スキーマファイル生成'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'write_schema']],
 					'ToolsLoadSchema' => ['title' => __d('baser', 'スキーマファイル読込'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'load_schema']],

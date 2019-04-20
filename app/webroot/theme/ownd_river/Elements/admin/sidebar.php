@@ -21,16 +21,11 @@
 
 	<nav class="bca-nav__main" data-js-tmpl="AdminMenu" hidden>
 		<h2 class="bca-nav__main-title"><?php echo __d('baser', '管理メニュー') ?></h2>
-		<div class="bca-nav__sub" data-content-type="dashboard">
-			<h3 class="bca-nav__sub-title">
-				<a v-bind:href="baseURL + '/admin'" class="bca-nav__sub-title-label"><?php echo __d('baser', 'ダッシュボード') ?></a>
-			</h3>
-		</div>
-		<div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current">
+		<div v-for="content in contentList" class="bca-nav__sub" v-bind:data-content-type="content.type" v-bind:data-content-is-current="content.current" v-bind:data-content-is-expanded="content.expanded">
 			<h3 class="bca-nav__sub-title">
 				<a v-bind:href="baseURL + content.url" class="bca-nav__sub-title-label">{{ content.title }}</a>
 			</h3>
-			<ul class="bca-nav__sub-list">
+			<ul v-if="content.menus.length" class="bca-nav__sub-list">
 				<li v-for="subContent in content.menus" class="bca-nav__sub-list-item" v-bind:data-sub-content-is-current="subContent.current">
 					<a v-bind:href="baseURL + subContent.url">
 						<span class="bca-nav__sub-list-item-title">{{ subContent.title }}</span>
@@ -38,17 +33,18 @@
 				</li>
 			</ul>
 		</div>
-		<div class="bca-nav__system" v-bind:data-content-is-current="isSystemSettingPage">
+
+		<div class="bca-nav__system" v-bind:data-content-is-expanded="isSystemSettingPage" v-bind:data-bca-state="systemExpanded">
 			<h3 class="bca-nav__system-title">
-				<button class="bca-nav__sub-title-label" @click="openSystem"><?php echo __d('baser', '設定') ?>  <i class="bca-icon--chevron-down bca-nav-favorite-title-icon"></i></button>
+				<button class="bca-nav__sub-title-label" @click="openSystem"><?php echo __d('baser', '設定') ?>  <i class="bca-icon--chevron-down bca-nav__system-title-icon"></i></button>
 			</h3>
 			<div class="bca-nav__system-list" v-bind:hidden="!systemExpanded">
-				<div v-for="system in systemList" class="bca-nav__system-list-item" v-bind:data-system-type="system.name.toLowerCase()" v-bind:data-content-is-current="system.current">
+				<div v-for="system in systemList" class="bca-nav__system-list-item" v-bind:data-system-type="system.name.toLowerCase()" v-bind:data-sub-content-is-expanded="system.expanded" v-bind:data-sub-content-is-current="system.current">
 					<h4 class="bca-nav__system-list-item-title">
-						<a v-bind:href="baseURL + system.url" class="bca-nav__sub-title-label">{{ system.title }}</a>
+						<a v-bind:href="baseURL + system.url" class="bca-nav__system-list-item-title-label">{{ system.title }}</a>
 					</h4>
 					<ul v-if="system.menus && system.menus.length" class="bca-nav__system-sub-list">
-						<li v-for="subSystem in system.menus" class="bca-nav__system-sub-list-item" v-bind:data-sub-content-is-current="subSystem.current">
+						<li v-for="subSystem in system.menus" class="bca-nav__system-sub-list-item" v-bind:data-sub-item-is-current="subSystem.current">
 							<a v-bind:href="baseURL + subSystem.url">
 								<span class="bca-nav__system-sub-list-item-title">{{ subSystem.title }}</span>
 							</a>
