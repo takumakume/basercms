@@ -1,22 +1,24 @@
+body {
+  margin-top: 40px !important;
+}
+
 .bca-toolbar {
   $height: 40px;
-  font-size: 1.3rem;
+  font-size: 12px;
   height: $height;
-  position: relative;
-
+  position: fixed;
+  z-index: 150;
+  width: 100%;
+  top: 0;
+  left: 0;
   &,
   * {
     box-sizing: border-box;
   }
 
   &__body {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: $height;
     background-color: $color_toolbar;
-    z-index: 150;
     display: flex;
     justify-content: space-between;
   }
