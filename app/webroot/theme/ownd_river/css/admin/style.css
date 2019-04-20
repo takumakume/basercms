@@ -12647,7 +12647,8 @@ body {
 .bca-search {
   font-size: 1.6rem;
   border-bottom: 1px solid #eeeeea;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  align-self: auto;
   background-color: #fff; }
   .bca-search__head {
     margin: 0;
