@@ -3192,84 +3192,6 @@ body * {
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
   border-top-right-radius: 0px; }
 
-/* ui-dialog
------------------------------------------------ */
-.ui-dialog label {
-  font-weight: bold; }
-
-.ui-dialog label.error, .error-message {
-  background-color: #ce0000;
-  color: #FFF;
-  font-size: 12px;
-  padding: 3px 8px;
-  margin-left: 5px;
-  display: inline;
-  white-space: nowrap; }
-
-.ui-dialog .ui-button-text {
-  font-weight: bold; }
-
-.ui-dialog .required {
-  color: #333; }
-
-.ui-dialog label.error {
-  border-radius: 10px; }
-
-.ui-dialog .ui-dialog-titlebar {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border: none;
-  background-color: #333;
-  font-size: 11px;
-  color: #FFF; }
-
-.ui-widget-header {
-  border: none;
-  background: #888; }
-
-.ui-dialog-titlebar-close {
-  display: none; }
-
-.ui-dialog dl {
-  margin: 5px; }
-
-.ui-dialog dt {
-  padding: 0; }
-
-.ui-dialog dd {
-  padding: 0 0 10px 0;
-  margin-bottom: 10px; }
-
-.ui-dialog dd {
-  border-bottom: 1px dotted #CCC; }
-
-.ui-widget-content {
-  color: #535A62 !important; }
-
-.ui-dialog dt label {
-  color: #424f44 !important;
-  font-size: 14px; }
-
-.ui-dialog input[type=radio] {
-  margin-right: 7px; }
-
-.ui-dialog {
-  padding: 0; }
-
-.ui-dialog .ui-dialog-titlebar {
-  padding: 1px 10px; }
-
-.ui-dialog .ui-state-default {
-  background: none;
-  border: 1px solid #CCC;
-  cursor: pointer;
-  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
-  border-radius: 2px;
-  -o-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
-  background: #F3F3F3;
-  background: -o-linear-gradient(top, #FFF, #F3F3F3); }
-
 /* Credit
 ----------------------------------------------- */
 #Credit {
@@ -24050,10 +23972,20 @@ table.cake-sql-log tr td {
   padding: 0.7em 0.5em 0.6em 0.5em;
   border-radius: 3px;
   box-sizing: border-box;
-  border: 1px solid #cccccc;
-  line-height: 1.2;
+  border: 1px solid #ccc;
+  line-height: 1.6;
   font-size: 1.4rem;
-  color: #535A62; }
+  color: #424f44; }
+  .ui-widget input[type="text"]:focus,
+  .ui-widget input[type="password"]:focus,
+  .ui-widget input[type="submit"]:focus,
+  .ui-widget input[type="search"]:focus,
+  .ui-widget input[type="tel"]:focus,
+  .ui-widget input[type="url"]:focus,
+  .ui-widget input[type="email"]:focus {
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
+    border-width: 1px; }
 
 .ui-tabs {
   padding: 0 !important;
@@ -24143,6 +24075,81 @@ table.cake-sql-log tr td {
   .ui-icon-closethick:after {
     -webkit-transform: translate(-50%, -50%) rotate(-45deg);
             transform: translate(-50%, -50%) rotate(-45deg); }
+
+/* ui-dialog
+----------------------------------------------- */
+.ui-dialog label.error, .error-message {
+  background-color: #ce0000;
+  color: #FFF;
+  font-size: 12px;
+  padding: 3px 8px;
+  margin-left: 5px;
+  display: inline;
+  white-space: nowrap; }
+
+.ui-dialog .ui-button-text {
+  font-weight: bold; }
+
+.ui-dialog .required {
+  color: #333; }
+
+.ui-dialog label.error {
+  border-radius: 10px; }
+
+.ui-dialog .ui-dialog-titlebar {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border: none;
+  background-color: #333;
+  font-size: 11px;
+  color: #FFF; }
+
+.ui-widget-header {
+  border: none;
+  background: #888; }
+
+.ui-dialog-titlebar-close {
+  display: none; }
+
+.ui-dialog dl {
+  margin: 5px; }
+
+.ui-dialog dt {
+  padding: 0; }
+
+.ui-dialog dd {
+  padding: 0 0 10px 0;
+  margin-bottom: 10px; }
+
+.ui-dialog dd {
+  border-bottom: 1px solid #eeeeea; }
+
+.ui-widget-content {
+  color: #535A62 !important; }
+
+.ui-dialog dt label {
+  color: #424f44 !important;
+  font-size: 14px; }
+
+.ui-dialog input[type=radio] {
+  margin-right: 7px; }
+
+.ui-dialog {
+  padding: 0; }
+
+.ui-dialog .ui-dialog-titlebar {
+  padding: 1px 10px; }
+
+.ui-dialog .ui-state-default {
+  background: none;
+  border: 1px solid #CCC;
+  cursor: pointer;
+  text-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0;
+  border-radius: 2px;
+  -o-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4);
+  background: #F3F3F3;
+  background: -o-linear-gradient(top, #FFF, #F3F3F3); }
 
 .jstree-proton .jstree-wholerow-hovered {
   background: #ddd !important; }

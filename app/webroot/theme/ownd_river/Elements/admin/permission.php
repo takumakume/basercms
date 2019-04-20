@@ -24,7 +24,7 @@
 		<dd class="col-input">
 			<?php echo $this->BcForm->input('Permission.user_group_id', array('type' => 'select', 'options' => $this->BcForm->getControlSource('Permission.user_group_id'))) ?>
 		</dd>
-		<dt><h4><?php echo $this->BcForm->label('Permission.name', __d('baser', 'ルール名')) ?></h4></dt>
+		<dt><?php echo $this->BcForm->label('Permission.name', __d('baser', 'ルール名')) ?></dt>
 		<dd><?php echo $this->BcForm->input('Permission.name', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
 		<dt><?php echo $this->BcForm->label('Permission.url', __d('baser', 'URL設定')) ?></dt>
 		<dd><strong id="PermissionAdmin">/<?php echo Configure::read('Routing.prefixes.0') ?>/</strong><?php echo $this->BcForm->input('Permission.url', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
