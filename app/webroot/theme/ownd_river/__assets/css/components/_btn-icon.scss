@@ -103,6 +103,12 @@
     @include bca-btn-icon-common;
   }
 
+  // 適用
+  &[data-bca-btn-type=apply] {
+    @extend .#{$fa-css-prefix}-check-square-o;
+    @include bca-btn-icon-common;
+  }
+
   // HOME
   &[data-bca-btn-type=home] {
     @extend .#{$fa-css-prefix}-home;

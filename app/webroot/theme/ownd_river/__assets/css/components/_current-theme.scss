@@ -1,6 +1,6 @@
 .bca-current-theme {
   position: relative;
-  border: 5px solid #e2e2e2;
+  border: 3px solid $color_primary;
   padding: 20px;
   margin-bottom: 20px;
 
@@ -87,6 +87,24 @@
     width: 286px;
   }
 
+}
+
+#CurrentTheme {
+  h2 {
+    font-weight: normal;
+    font-size: $label_font_size_large;
+    margin-bottom:20px;
+  }
+  .theme-description {
+    font-size: $label_font_size_small;
+  }
+  #ThemeLoadDefaultDataPatternForm {
+    margin-bottom:20px;
+  }
+}
+
+.button-small {
+  @include btn-common;
 }
 
 /*

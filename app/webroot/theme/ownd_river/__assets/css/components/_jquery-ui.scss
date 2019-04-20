@@ -45,7 +45,7 @@
 }
 
 .ui-tabs-panel {
-  border: 1px solid $color_border !important;
+  border: 1px solid #CCC !important;
 }
 
 .ui-widget-content {
@@ -267,4 +267,23 @@
   background: -moz-linear-gradient(top, #FFF, #F3F3F3);
   background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(100%, #F3F3F3));
   background: -o-linear-gradient(top, #FFF, #F3F3F3);
+}
+
+.ui-widget {
+    font-family: Arial, Geneva, sans-serif, "メイリオ", Verdana, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック"!important;
+    font-size: $label_font_size_small!important;
+    color:$color_text_primary;
+    p {
+      line-height: 1.6;
+    }
+}
+.ui-tabs-panel {
+    a {
+      color:$color_text_link!important;;
+      text-decoration: none!important;;
+    }
+    a:hover {
+      color:$color_text_hover;
+      text-decoration: underline!important;
+    }
 }

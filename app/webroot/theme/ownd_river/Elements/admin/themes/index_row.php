@@ -29,7 +29,7 @@
 	</p>
 	<p class="row-tools">
 		<?php if ($data['name'] != $this->BcBaser->siteConfig['theme']): ?>
-			<?php $this->BcBaser->link('', array('action' => 'apply', $data['name']), array('title' => __d('baser', '適用'), 'class' => 'submit-token bca-btn-icon', 'data-bca-btn-type' => 'publish', 'data-bca-btn-size' => 'lg')) ?>
+			<?php $this->BcBaser->link('', array('action' => 'apply', $data['name']), array('title' => __d('baser', '適用'), 'class' => 'submit-token bca-btn-icon', 'data-bca-btn-type' => 'apply', 'data-bca-btn-size' => 'lg')) ?>
 		<?php endif ?>
 		<?php $this->BcBaser->link('', array('controller' => 'theme_files', 'action' => 'index', $data['name']), array('title' => __d('baser', 'テンプレート編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'file-list', 'data-bca-btn-size' => 'lg')) ?>
 		<?php $this->BcBaser->link('', array('action' => 'edit', $data['name']), array('title' => __d('baser', 'テーマ情報設定'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg')) ?>
