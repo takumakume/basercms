@@ -13,7 +13,6 @@
 /**
  * [ADMIN] ログイン
  */
-echo $this->Flash->render('auth');
 $userModel = Configure::read('BcAuthPrefix.' . $currentPrefix . '.userModel');
 if (!$userModel) {
 	$userModel = 'User';

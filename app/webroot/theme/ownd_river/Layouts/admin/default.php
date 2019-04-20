@@ -160,9 +160,7 @@
 
 						<?php $this->BcBaser->flash() ?>
 
-						<div id="BcMessageBox">
-							<div id="BcSystemMessage" class="notice-message"></div>
-						</div>
+						<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message"></div></div>
 
 <?php if(@$help): ?>
 						<?php $this->BcBaser->element('help', [], ['cache' => ['key' => '_admin_help_' . $help]]) ?>

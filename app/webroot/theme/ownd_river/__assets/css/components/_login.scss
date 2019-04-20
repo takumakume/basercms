@@ -2,20 +2,6 @@
 /*    Login
 /* ==================================================================== */
 
-#Login #flashMessage {
-  border-radius: 0px;
-}
-
-#Login #MessageBox .notice-message {
-  border: 5px solid $color_primary;
-  background-color: transparent;
-}
-
-#Login #MessageBox .alert-message {
-  border: 5px solid $color_danger;
-  background-color: transparent;
-}
-
 .bca-login {
   &,
   *,

@@ -1,7 +1,8 @@
 .message {
-  color: $color_danger;
+  color: $color_primary;
   font-weight: bold;
   margin: 20px;
+  line-height: 1.6;
 }
 
 #MessageBox .message,
@@ -18,7 +19,7 @@
 #AlertMessage,
 #BcMessageBox .alert-message,
 #UpdateMessage {
-  color: $color_danger;
+  color: $color_danger!important;
   @extend .bca-icon--exclamation-triangle;
   //background: #F7E9EC url(../../img/admin/warning.png) no-repeat 10px 13px;
 }

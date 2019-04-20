@@ -83,7 +83,7 @@ $(function(){
 		<div class="bca-main__header-actions">
 			<a href="/admin/feed/feed_details/add/<?php echo $this->BcForm->value('FeedConfig.id') ?>" title="新規追加" class="bca-btn" data-bca-btn-type="add" data-bca-btn-size="sm">新規記事追加</a>	
 		</div>
-	
+
 		<div class="bca-data-list__top">
 			<!-- 一括処理 -->
 			<?php if ($this->BcBaser->isAdminUser()): ?>

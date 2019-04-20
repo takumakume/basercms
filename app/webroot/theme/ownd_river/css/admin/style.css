@@ -12714,17 +12714,6 @@ div.jstree-publish-even {
 /* ==================================================================== */
 /*    Login
 /* ==================================================================== */
-#Login #flashMessage {
-  border-radius: 0px; }
-
-#Login #MessageBox .notice-message {
-  border: 5px solid #FF6F61;
-  background-color: transparent; }
-
-#Login #MessageBox .alert-message {
-  border: 5px solid #ce0000;
-  background-color: transparent; }
-
 .bca-login {
   position: relative;
   z-index: 100000;
@@ -12920,9 +12909,10 @@ div.jstree-publish-even {
   margin-bottom: 20px; }
 
 .message {
-  color: #ce0000;
+  color: #FF6F61;
   font-weight: bold;
-  margin: 20px; }
+  margin: 20px;
+  line-height: 1.6; }
 
 #MessageBox .message,
 #MessageBox .notice-message,
@@ -12934,7 +12924,7 @@ div.jstree-publish-even {
 #AlertMessage,
 #BcMessageBox .alert-message,
 #UpdateMessage {
-  color: #ce0000; }
+  color: #ce0000 !important; }
 
 /* flashMessage
 ----------------------------------------------- */
