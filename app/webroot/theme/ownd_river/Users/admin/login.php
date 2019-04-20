@@ -56,6 +56,7 @@ $(function(){
 	if($("#LoginCredit").html() == 1) {
 		$("body").hide();
 	}
+
 	// $("body").prepend($("#Login"));
 	changeNavi("#"+$("#UserModel").html()+"Name");
 	changeNavi("#"+$("#UserModel").html()+"Password");

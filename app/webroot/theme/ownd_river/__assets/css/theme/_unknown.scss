@@ -324,9 +324,10 @@
   background-color: #000;
   position: absolute;
   top: 0;
+  min-height:945px; // 解決方法がわからず、一旦決め打ちで
   height: 100%;
   width: 100%;
-  z-index: 9999;
+  z-index: 90;
 
   opacity: 0.85;
   filter: alpha(opacity=85); /* IE lt 8 */

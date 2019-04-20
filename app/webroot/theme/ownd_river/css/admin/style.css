@@ -3276,9 +3276,10 @@ body * {
   background-color: #000;
   position: absolute;
   top: 0;
+  min-height: 945px;
   height: 100%;
   width: 100%;
-  z-index: 9999;
+  z-index: 90;
   opacity: 0.85;
   filter: alpha(opacity=85);
   /* IE lt 8 */
@@ -6265,7 +6266,7 @@ div.jstree-publish-even {
   .bca-footer__banner {
     display: flex;
     justify-content: center;
-    margin: 0 0 30px;
+    margin: 0 0 20px;
     padding: 0;
     list-style: none; }
     .bca-footer__banner__item {
@@ -6274,7 +6275,7 @@ div.jstree-publish-even {
   .bca-footer__sns {
     display: flex;
     justify-content: center;
-    margin: 0 0 38px;
+    margin: 0 0 20px;
     padding: 0;
     list-style: none; }
     .bca-footer__sns__item {
@@ -12716,7 +12717,7 @@ div.jstree-publish-even {
 /* ==================================================================== */
 .bca-login {
   position: relative;
-  z-index: 100000;
+  z-index: 100;
   max-width: 500px;
   margin: 30px auto;
   padding: 40px 25px 25px;

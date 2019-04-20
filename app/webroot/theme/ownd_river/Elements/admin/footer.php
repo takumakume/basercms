@@ -32,13 +32,7 @@
   <div class="bca-footer__inner">
     <div class="bca-footer__header">
       <?php $this->BcBaser->link($this->BcBaser->getImg('admin/logo_icon.svg', array('alt' => '', 'class'=>'bca-footer__logo')), array('controller' => 'dashboard', 'action' => 'index')) ?>
-
       <div class="bca-footer__baser-version">baserCMS <strong><?php echo $baserVersion ?></strong></div>
-
-      <ul class="bca-footer__banner">
-        <li class="bca-footer__banner__item"><?php $this->BcBaser->link($this->BcBaser->getImg('baser.power.gif', array('alt' => 'baserCMS Power')), 'http://basercms.net/', array('target' => '_blank', 'title' => 'baserCMS Power')) ?></li>
-        <li class="bca-footer__banner__item"><?php $this->BcBaser->link($this->BcBaser->getImg('cake.power.gif', array('alt' => 'CakePHP Power')), 'http://cakephp.jp/', array('target' => '_blank', 'title' => 'CakePHP Power')) ?></li>
-      </ul>
     </div>
 
     <ul class="bca-footer__sns">
@@ -47,11 +41,16 @@
     </ul>
 
     <ul class="bca-footer__links">
-      <li class="bca-footer__links__item"><a href="http://basercms.net/" target="_blank">baserCMS 公式サイト</a></li>
-      <li class="bca-footer__links__item"><a href="http://sites.google.com/site/baserusers/" target="_blank">baserCMS ユーザー会</a></li>
-      <li class="bca-footer__links__item"><a href="http://forum.basercms.net/" target="_blank">baserCMS ユーザーズフォーラム</a></li>
+      <li class="bca-footer__links__item"><a href="https://basercms.net/" target="_blank">baserCMS 公式サイト</a></li>
+      <li class="bca-footer__links__item"><a href="https://basercms.net/community/index" target="_blank">baserCMS ユーザーコミュニティ</a></li>
+      <li class="bca-footer__links__item"><a href="https://forum.basercms.net/" target="_blank">baserCMS ユーザーズフォーラム</a></li>
       <li class="bca-footer__links__item"><a href="http://project.e-catchup.jp/projects/basercms" target="_blank">baserCMS コア開発プロジェクト</a></li>
     </ul>
+
+	<ul class="bca-footer__banner">
+	<li class="bca-footer__banner__item"><?php $this->BcBaser->link($this->BcBaser->getImg('baser.power.gif', array('alt' => 'baserCMS Power')), 'http://basercms.net/', array('target' => '_blank', 'title' => 'baserCMS Power')) ?></li>
+	<li class="bca-footer__banner__item"><?php $this->BcBaser->link($this->BcBaser->getImg('cake.power.gif', array('alt' => 'CakePHP Power')), 'http://cakephp.jp/', array('target' => '_blank', 'title' => 'CakePHP Power')) ?></li>
+	</ul>
 
     <div class="bca-footer__copyright">Copyright &copy; baserCMS Users Community <?php $this->BcBaser->copyYear(2009) ?> All rights reserved.</div>
   </div>
