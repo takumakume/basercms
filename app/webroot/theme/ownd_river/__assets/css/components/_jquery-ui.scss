@@ -287,3 +287,26 @@
       text-decoration: underline!important;
     }
 }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid $color_border!important;
+  //background:none!important;
+}
+.ui-widget-header {
+    border: none!important;
+    background-color: $color_control_border_color!important;
+    background-image: none!important;
+    color: $color_text_primary!important;
+}
+.ui-datepicker table {
+  font-size:$label_font_size_small!important;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border:none!important;
+  background: none!important;
+  color:$color_text_primary!important;
+}

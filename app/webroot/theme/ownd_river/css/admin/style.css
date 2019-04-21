@@ -24374,6 +24374,28 @@ table.cake-sql-log tr td {
   color: #FF6F61;
   text-decoration: underline !important; }
 
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  border: 1px solid #eeeeea !important; }
+
+.ui-widget-header {
+  border: none !important;
+  background-color: #ccc !important;
+  background-image: none !important;
+  color: #424f44 !important; }
+
+.ui-datepicker table {
+  font-size: 1.4rem !important; }
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  border: none !important;
+  background: none !important;
+  color: #424f44 !important; }
+
 .jstree-proton .jstree-wholerow-hovered {
   background: #ddd !important; }
 

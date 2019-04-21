@@ -158,15 +158,15 @@
 						</div>
 <?php endif ?>
 
-						<?php $this->BcBaser->flash() ?>
-
-						<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message"></div></div>
-
 <?php if(@$help): ?>
 						<?php $this->BcBaser->element('help', [], ['cache' => ['key' => '_admin_help_' . $help]]) ?>
 <?php endif ?>
 
 						<?php $this->BcBaser->element('search') ?>
+
+						<?php $this->BcBaser->flash() ?>
+
+						<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message"></div></div>
 
 						<div class="bca-main__contents">
 							<?php $this->BcBaser->content() ?>
