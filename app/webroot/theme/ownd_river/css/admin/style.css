@@ -24396,6 +24396,9 @@ table.cake-sql-log tr td {
   background: none !important;
   color: #424f44 !important; }
 
+.ui-datepicker {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important; }
+
 .jstree-proton .jstree-wholerow-hovered {
   background: #ddd !important; }
 
