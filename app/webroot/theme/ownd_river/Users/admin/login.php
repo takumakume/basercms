@@ -33,9 +33,6 @@ $this->append('script', <<< CSS_END
 html {
 	margin-top:0;
 }
-#ToolBar {
-	position:relative;
-}
 .bca-container {
 	height: auto !important;
 	background: #F4F5F1;
