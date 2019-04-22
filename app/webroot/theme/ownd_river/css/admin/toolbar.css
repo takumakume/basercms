@@ -2630,7 +2630,7 @@
   font-size: small; }
 
 .form-error {
-  background-color: #FCF5EB; }
+  border: 1px solid #c04949 !important; }
 
 .error {
   color: #C30; }

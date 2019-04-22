@@ -155,7 +155,7 @@
         margin: 0;
       }
       a {
-        color: #fff;
+        color: $color_text_link;
         .bca-btn-icon-text[data-bca-btn-type=draggable]::before {
           color: $color_text_link;
         }

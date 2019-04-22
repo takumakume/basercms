@@ -165,13 +165,15 @@
 ----------------------------------------------- */
 
 .ui-dialog label.error, .error-message {
-  background-color: $color_danger;
-  color: #FFF;
-  font-size: 12px;
-  padding: 3px 8px;
+  //background-color: $color_danger;
+  color: $color_danger;
+  font-size: $label_font_size_small;
+  padding: 2px;
   margin-left: 5px;
-  display: inline;
+  display: block;
+  font-weight: normal;
   white-space: nowrap;
+  @extend .bca-icon--exclamation-triangle;
 }
 
 .ui-dialog .ui-button-text {
