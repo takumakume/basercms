@@ -18,6 +18,7 @@ if(!isset($listId)) {
 if(empty($popup)) {
 	$users = $this->BcForm->getControlSource("UploaderFile.user_id");
 }
+$url = $this->BcBaser->getUri($this->Uploader->getFileUrl($this->request->data['UploaderFile']['name']));
 ?>
 
 
@@ -30,15 +31,17 @@ $(function(){
 	var imgUrl = $.baseUrl + '/' + $("#AdminPrefix").html() + '/uploader/uploader_files/ajax_image/'+name+'/midium';
 	$.get(imgUrl,function(res){
 		$("#UploaderFileImage").html(res);
-	});	
+	});
 });
 </script>
 
-
-<div class="em-box bca-current-box">
-	<?php $url = $this->Uploader->getFileUrl($this->request->data['UploaderFile']['name']) ?>
-	<p>このファイルのURL：<?php $this->BcBaser->link($this->BcBaser->getUri($url), $url) ?></p>
+<div class="bca-section bca-section__post-top">
+  <span class="bca-post__url">
+	  <a href="<?php echo $url ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="" data-original-title="公開URLを開きます">
+	  <i class="bca-icon--globe"></i><?php echo $url ?></a>
+  </span>
 </div>
+
 <?php endif ?>
 
 
@@ -65,12 +68,13 @@ $(function(){
 <?php endif ?>
 	</tr>
 <?php if(empty($popup)): ?>
-	<tr><th>アップロードファイル</th><td><?php echo $this->BcForm->input('UploaderFile.name', array('type' => 'file', 'delCheck' => false, 'imgsize' => 'midium', 'force' => 'true')) ?></td></tr>
+	<tr><th class="bca-form-table__label"><?php echo $this->BcForm->label('UploaderFile.name', __d('baser', 'アップロードファイル')) ?></th>
+	<td class="col-input bca-form-table__input"><?php echo $this->BcForm->input('UploaderFile.name', array('type' => 'file', 'delCheck' => false, 'imgsize' => 'midium', 'force' => 'true')) ?></td></tr>
 <?php else: ?>
 	<tr>
 		<th class="col-head bca-form-table__label"><!--<span class="required">*</span>&nbsp;--><?php echo $this->BcForm->label('UploaderFile.name', __d('baser', 'ファイル名')) ?></th>
 		<td class="col-input bca-form-table__input">
-			<?php echo $this->BcForm->text('UploaderFile.name', array('size'=>30,'maxlength'=>255,'readonly'=>'readonly','id'=>'UploaderFileName'.$listId, 'class' => 'uploader-file-name')) ?>
+			<?php echo $this->BcForm->input('UploaderFile.name', array('type' => 'text', 'size'=>30,'maxlength'=>255,'readonly'=>'readonly','id'=>'UploaderFileName'.$listId, 'class' => 'uploader-file-name')) ?>
 			<?php echo $this->BcForm->error('UploaderFile.name', __d('baser', 'ファイル名を入力して下さい')) ?>&nbsp;
 		</td>
 	</tr>
@@ -78,7 +82,7 @@ $(function(){
 	<tr>
 		<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('UploaderFile.alt', __d('baser', '説明文')) ?></th>
 		<td class="col-input bca-form-table__input">
-			<?php echo $this->BcForm->text('UploaderFile.alt', array('size'=>51,'maxlength'=>255,'id'=>'UploaderFileAlt'.$listId, 'class' => 'uploader-file-alt')) ?>&nbsp;
+			<?php echo $this->BcForm->input('UploaderFile.alt', array('type' => 'text', 'size'=>51,'maxlength'=>255, 'id'=>'UploaderFileAlt'.$listId, 'class' => 'uploader-file-alt bca-textbox__input')) ?>&nbsp;
 		</td>
 	</tr>
 	<tr>
