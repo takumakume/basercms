@@ -60,6 +60,9 @@ $(function(){
 			<?php echo $this->BcForm->text('UploaderFile.id', array('size'=>30,'maxlength'=>255,'readonly'=>'readonly','id'=>'UploaderFileId'.$listId, 'class' => 'uploader-file-id')) ?>&nbsp;
 		<?php endif ?>
 		</td>
+<?php if(!empty($popup)): ?>
+		<td rowspan="5" id="UploaderFileImage<?php echo $listId ?>" class="uploader-file-image"><?php echo $this->Html->image('admin/ajax-loader.gif') ?></td>
+<?php endif ?>
 	</tr>
 <?php if(empty($popup)): ?>
 	<tr><th>アップロードファイル</th><td><?php echo $this->BcForm->input('UploaderFile.name', array('type' => 'file', 'delCheck' => false, 'imgsize' => 'midium', 'force' => 'true')) ?></td></tr>
@@ -119,9 +122,6 @@ $(function(){
 			<?php echo $this->BcForm->input('UploaderFile.user_id', array('type' => 'hidden', 'id' => 'UploaderFileUserId'.$listId)) ?>
 		</td>
 	</tr>
-<?php if(!empty($popup)): ?>
-	<tr><td colspan="2" id="UploaderFileImage<?php echo $listId ?>" class="uploader-file-image"><?php echo $this->Html->image('admin/ajax-loader.gif') ?></td></tr>
-<?php endif ?>
 </table>
 
 

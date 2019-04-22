@@ -24415,6 +24415,12 @@ table.cake-sql-log tr td {
 .ui-datepicker {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2) !important; }
 
+.ui-dialog th {
+  padding: 1.4em 2em 1em 0 !important; }
+
+.ui-dialog td {
+  padding: 1em 0 !important; }
+
 .jstree-proton .jstree-wholerow-hovered {
   background: #ddd !important; }
 
@@ -24423,6 +24429,19 @@ table.cake-sql-log tr td {
 
 .jstree-proton .jstree-wholerow-clicked {
   background: #FF6F61 !important; }
+
+.ui-dialog .uploader-file-image .url {
+  border: none !important;
+  width: auto !important;
+  padding: 0 !important;
+  max-width: 400px !important;
+  margin-left: 20px; }
+
+.ui-dialog .uploader-file-image .url a {
+  color: #FF6F61 !important; }
+
+.ui-dialog #UploaderFileImage {
+  width: 500px; }
 
 .bt-content {
   line-height: 1.5em; }
