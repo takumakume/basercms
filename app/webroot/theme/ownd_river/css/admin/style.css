@@ -16371,13 +16371,30 @@ table.cake-sql-log tr td {
     border-width: 1px; }
 
 .bca-textbox-color {
-  border: 1px solid #cccccc;
-  display: inline-block;
-  padding: 2px; }
+  display: inline-block; }
   .bca-textbox-color__input {
-    border: none;
-    width: 110px;
-    padding-right: 10px; }
+    display: inline-block;
+    outline: none;
+    padding: 0.7em 0.5em 0.6em 0.5em;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    line-height: 1.2;
+    font-size: 1.6rem;
+    color: #424f44;
+    margin: 4px; }
+    .bca-textbox-color__input[data-input-text-size=lg] {
+      font-size: 1.6rem; }
+    .bca-textbox-color__input[data-input-text-size=sm] {
+      font-size: 1.2rem; }
+    .bca-textbox-color__input[data-input-text-size=full-counter] {
+      width: calc(100% - 80px); }
+    .bca-textbox-color__input[data-margin=bottom] {
+      margin-bottom: 10px; }
+    .bca-textbox-color__input:focus {
+      box-shadow: 0 0 4px 0px #FF6F61;
+      border-color: #FF6F61;
+      border-width: 1px; }
 
 .bca-textbox {
   display: inline-block; }
