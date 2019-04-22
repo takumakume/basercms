@@ -6353,7 +6353,7 @@ body {
       margin: 8px;
       padding: 3px 8px 3px 5px;
       border-radius: 22px;
-      background-color: #e20;
+      background-color: #c04949;
       font-weight: bold;
       color: #fff; }
   .bca-toolbar__users > ul {
@@ -24188,13 +24188,13 @@ table.cake-sql-log tr td {
 
 .bca-current-box {
   padding: 1px 0;
-  font-size: 1.4rem;
-  margin: -34px auto 15px;
+  font-size: 1.6rem;
+  margin: 20px auto 20px;
   line-height: 1.6; }
   .bca-current-box a {
-    color: #690; }
+    color: #c04949; }
     .bca-current-box a:hover {
-      color: #9C0;
+      color: #FF6F61;
       text-decoration: none; }
 
 .ui-dialog {
@@ -24462,6 +24462,23 @@ table.cake-sql-log tr td {
 
 .ui-dialog #UploaderFileImage {
   width: 500px; }
+
+.bca-main__submenu-title {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0; }
+
+.bca-main__submenu-list {
+  padding-left: 20px;
+  border-bottom: 1px solid #eeeeea;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+  .bca-main__submenu-list-item {
+    float: left;
+    font-size: 1.2rem;
+    margin-right: 40px;
+    margin-bottom: 5px; }
 
 .bt-content {
   line-height: 1.5em; }
