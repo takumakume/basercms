@@ -3302,15 +3302,11 @@ body * {
 #WidgetSetting .ui-widget-content .head {
   cursor: move;
   margin: 10px auto 5px;
-  font-weight: bold;
+  font-weight: normal;
   color: #535A62;
-  font-size: 14px;
-  border-top: 1px solid #DDD;
-  border-right: 1px solid #DDD;
-  border-left: 1px solid #DDD;
-  border-bottom: 1px solid #EDEDED;
-  background: #F3F3F3;
-  background: -o-linear-gradient(top, #FFF, #F3F3F3); }
+  font-size: 1.4rem;
+  border: 1px solid #eeeeea;
+  background: #f8f8f8; }
 
 #WidgetSetting .ui-widget-content .head:hover {
   background: #f4f4f4;
@@ -3324,30 +3320,25 @@ body * {
   /*width:100%;*/ }
 
 #WidgetSetting .ui-widget-content .head {
-  height: 24px;
-  padding: 3px 10px;
-  font-weight: bold;
-  margin: 0; }
+  padding: 8px 15px;
+  margin: 0;
+  font-weight: bold; }
 
 #WidgetSetting .setting .head {
   color: #999; }
 
 #WidgetSetting .setting .del {
   float: right;
-  height: 24px;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   border-left: 1px solid #DFDFDF;
-  padding: 3px 0;
-  width: 40px; }
+  padding: 8px 10px; }
 
 #WidgetSetting .ui-widget-content .action {
-  padding: 3px 0;
+  padding: 8px 10px;
   float: right;
-  height: 24px;
   font-weight: bold;
-  width: 40px;
   cursor: pointer;
   text-align: center;
   border-left: 1px solid #DFDFDF; }
@@ -3367,11 +3358,11 @@ body * {
 
 #WidgetSetting #Source .description {
   /*margin:0 12px 20px;*/
-  padding: 10px 12px;
+  padding: 15px 15px;
   width: 100%;
-  border-left: solid 1px #ddd;
-  border-right: solid 1px #ddd;
-  border-bottom: solid 1px #ddd;
+  border-left: solid 1px #eeeeea;
+  border-right: solid 1px #eeeeea;
+  border-bottom: solid 1px #eeeeea;
   margin: 0; }
 
 #WidgetSetting #SourceOuter,
@@ -3380,7 +3371,7 @@ body * {
   float: left; }
 
 #WidgetSetting #Source {
-  border: 5px solid #DDD;
+  border: 1px solid #eeeeea;
   padding: 20px;
   margin: 10px;
   /*-webkit-border-radius: 10px;*/
@@ -3389,7 +3380,7 @@ body * {
 
 #WidgetSetting #Target {
   min-height: 210px;
-  border: 5px solid #DDD;
+  border: 1px solid #eeeeea;
   padding: 20px;
   margin: 10px; }
 
@@ -3417,14 +3408,21 @@ body * {
 
 #WidgetSetting #Source h3 {
   border: none;
-  border-bottom: 3px solid #535A62;
+  border-bottom: 1px solid #eeeeea;
   padding-left: 0;
-  color: #535A62; }
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin-top: 40px;
+  padding-bottom: 10px; }
 
 #ListAjaxLoader {
   display: none;
   vertical-align: bottom;
   padding: 6px; }
+
+#WidgetSetting h2 {
+  font-size: 2rem;
+  font-weight: normal; }
 
 /* ==================================================================== */
 /*    Pages
@@ -3745,6 +3743,11 @@ div.jstree-publish-even {
 .bca-search__btns .bca-btn-lg {
   padding-left: 2em;
   padding-right: 2em; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
 
 .bca-app {
   display: grid;

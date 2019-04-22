@@ -299,17 +299,12 @@
 #WidgetSetting .ui-widget-content .head {
   cursor: move;
   margin: 10px auto 5px;
-  font-weight: bold;
+  font-weight: normal;
   color: #535A62;
-  font-size: 14px;
-  border-top: 1px solid #DDD;
-  border-right: 1px solid #DDD;
-  border-left: 1px solid #DDD;
-  border-bottom: 1px solid #EDEDED;
-  background: #F3F3F3;
-  background: -moz-linear-gradient(top, #FFF, #F3F3F3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(100%, #F3F3F3));
-  background: -o-linear-gradient(top, #FFF, #F3F3F3);
+  font-size: $label_font_size_small;
+  border: 1px solid $color_border;
+  background: $color_background_primary;
+
 }
 
 #WidgetSetting .ui-widget-content .head:hover {
@@ -331,10 +326,9 @@
 }
 
 #WidgetSetting .ui-widget-content .head {
-  height: 24px;
-  padding: 3px 10px;
+  padding: 8px 15px;
+  margin: 0;
   font-weight: bold;
-  margin: 0
 }
 
 #WidgetSetting .setting .head {
@@ -343,21 +337,17 @@
 
 #WidgetSetting .setting .del {
   float: right;
-  height: 24px;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   border-left: 1px solid #DFDFDF;
-  padding: 3px 0;
-  width: 40px;
+  padding: 8px 10px;
 }
 
 #WidgetSetting .ui-widget-content .action {
-  padding: 3px 0;
+  padding: 8px 10px;
   float: right;
-  height: 24px;
   font-weight: bold;
-  width: 40px;
   cursor: pointer;
   text-align: center;
   border-left: 1px solid #DFDFDF;
@@ -381,11 +371,11 @@
 
 #WidgetSetting #Source .description {
   /*margin:0 12px 20px;*/
-  padding: 10px 12px;
+  padding: 15px 15px;
   width: 100%;
-  border-left: solid 1px #ddd;
-  border-right: solid 1px #ddd;
-  border-bottom: solid 1px #ddd;
+  border-left: solid 1px $color_border;
+  border-right: solid 1px $color_border;
+  border-bottom: solid 1px $color_border;
   margin: 0;
 }
 
@@ -396,7 +386,7 @@
 }
 
 #WidgetSetting #Source {
-  border: 5px solid #DDD;
+  border: 1px solid $color_border;
   padding: 20px;
   margin: 10px;
   /*-webkit-border-radius: 10px;*/
@@ -406,7 +396,7 @@
 
 #WidgetSetting #Target {
   min-height: 210px;
-  border: 5px solid #DDD;
+  border: 1px solid $color_border;
   padding: 20px;
   margin: 10px;
 }
@@ -441,9 +431,12 @@
 
 #WidgetSetting #Source h3 {
   border: none;
-  border-bottom: 3px solid #535A62;
+  border-bottom: 1px solid $color_border;
   padding-left: 0;
-  color: #535A62;
+  font-weight: normal;
+  font-size: $label_font_size_medium;
+  margin-top:40px;
+  padding-bottom:10px;
 }
 
 #ListAjaxLoader {
@@ -452,6 +445,10 @@
   padding: 6px;
 }
 
+#WidgetSetting h2 {
+  font-size:$label_font_size_large;
+  font-weight: normal;
+}
 /* ==================================================================== */
 /*    Pages
 /* ==================================================================== */
@@ -881,4 +878,10 @@ div.jstree-publish-even {
 .bca-search__btns .bca-btn-lg {
   padding-left: 2em;
   padding-right: 2em;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }

@@ -19,6 +19,6 @@ $description = __d('baser', 'PHPコードが書かれたテンプレートの読
 
 
 <?php echo $this->BcForm->label($key . '.template', __d('baser', 'PHPテンプレート名')) ?>
-<?php echo $this->BcForm->text($key . '.template', array('size' => 14)) ?> <?php echo $this->ext ?>
+<?php echo $this->BcForm->input($key . '.template', array('type' => 'text', 'size' => 14)) ?> <?php echo $this->ext ?>
 <p style="text-align:left"><small>テンプレートを利用中のテーマ内の次のパスに保存してください。<br />
 		/app/webroot/theme/{テーマ名}/Elements/widgets/</small></p>

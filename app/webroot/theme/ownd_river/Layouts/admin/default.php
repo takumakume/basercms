@@ -168,7 +168,7 @@
 
 						<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message"></div></div>
 
-						<div class="bca-main__contents">
+						<div class="bca-main__contents clearfix">
 							<?php $this->BcBaser->content() ?>
 						</div>
 
