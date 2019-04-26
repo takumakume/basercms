@@ -59,6 +59,12 @@
 		@include fa-common;
 	}
 
+	// 一覧
+	&--th-list {
+		@extend .#{$fa-css-prefix}-th-list;
+		@include fa-common;
+	}
+
 	// お気に入り
 	&--favorite {
 		@extend .#{$fa-css-prefix}-heart;

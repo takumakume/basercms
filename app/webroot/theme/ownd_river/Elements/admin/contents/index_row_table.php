@@ -92,9 +92,9 @@ $fullUrl = $this->BcContents->getUrl($data['Content']['url'], true, $data['Site'
 			<a title="管理" class="btn bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
 		<?php endif ?>
 		<?php if(!$manageDisabled && !empty($this->BcContents->settings[$type]['routes']['manage'])): ?>
-			<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_manage.png', ['width' => 32, 'height' => 32, 'alt' => __d('baser', '管理'), 'class' => 'btn']), array_merge($this->BcContents->settings[$type]['routes']['manage'], $urlParams), ['title' => __d('baser', '管理'), 'class' => 'btn-manage']) ?>
+			<?php $this->BcBaser->link('', array_merge($this->BcContents->settings[$type]['routes']['manage'], $urlParams),  ['title' => __d('baser', '管理'), 'class' => 'btn-check bca-btn-icon', 'data-bca-btn-type' => 'th-list','data-bca-btn-size' => 'lg']) ?>
 		<?php else: ?>
-			<a title="管理" class="btn bca-btn-icon" data-bca-btn-type="preview" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
+			<a title="管理" class="btn bca-btn-icon" data-bca-btn-type="th-list" data-bca-btn-size="lg" data-bca-btn-status="gray"></a>
 		<?php endif ?>
 		<?php if(!$isSiteRoot && !$isSiteRelated): ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_change_status'], ['title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>

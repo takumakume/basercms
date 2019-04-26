@@ -67,6 +67,12 @@
     @include bca-btn-icon-common;
   }
 
+  // 一覧
+  &[data-bca-btn-type=th-list] {
+    @extend .#{$fa-css-prefix}-th-list;
+    @include bca-btn-icon-common;
+  }
+
   // 一覧に戻る
   &[data-bca-btn-type=back-to-list] {
     @extend .#{$fa-css-prefix}-chevron-left;
