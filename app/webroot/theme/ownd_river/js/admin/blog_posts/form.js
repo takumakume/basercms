@@ -1,6 +1,7 @@
 $(function(){
 
-
+	var previewurlBase = $("#AdminBlogBLogPostsEditScript").attr('data-previewurl');
+p(previewurlBase);
 	$("#BtnPreview").click(function(){
 		window.open('', 'preview');
 		var form = $(this).parents('form');
