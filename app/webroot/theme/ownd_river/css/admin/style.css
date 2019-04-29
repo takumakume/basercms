@@ -12938,7 +12938,8 @@ body {
     padding: 1em 0 1em;
     vertical-align: top;
     border-bottom: 1px solid #eeeeea;
-    font-weight: normal; }
+    font-weight: normal;
+    white-space: nowrap; }
   .bca-form-table__input-wrap {
     display: block;
     padding: 0; }
@@ -12998,7 +12999,6 @@ body {
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-select,
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textbox,
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textarea {
-        display: inline-block;
         position: relative;
         margin-top: -0.5em; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__explanation {
