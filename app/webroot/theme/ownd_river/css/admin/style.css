@@ -3791,14 +3791,17 @@ div.jstree-publish-even {
       color: #424f44;
       line-height: 40px; }
     .bca-main__header-actions {
+      display: inline-block;
+      vertical-align: top;
       flex: 1 1 auto; }
     .bca-main__header-menu {
       flex: 0 1 auto; }
   .bca-main__section {
     margin-bottom: 30px; }
   .bca-main__heading {
-    margin: 0 0 1em;
-    padding: 0 0 0.5em;
+    display: inline-block;
+    margin: 0 1em 1em 0;
+    padding: 0.25em 0 0.25em;
     font-weight: normal; }
     .bca-main__heading[data-bca-heading-size=lg] {
       font-size: 2rem; }
