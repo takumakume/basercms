@@ -2800,7 +2800,8 @@
 
 #CreditScroller ul {
   margin-bottom: 20px;
-  font-size: 16px; }
+  font-size: 16px;
+  list-style: none; }
 
 #CreditScroller ul li {
   line-height: 30px; }
