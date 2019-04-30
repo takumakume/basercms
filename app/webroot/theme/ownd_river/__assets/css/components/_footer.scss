@@ -92,8 +92,6 @@
 //	font-size:10px;
 //	padding-right:20px;
 //}
-@import '../vender/Font-Awesome/font-awesome';
-
 .bca-footer {
   width: 100%;
   color: #ccc;
@@ -157,7 +155,6 @@
       font-size: 2.2rem;
       background-color: $color_primary;
       &:before {
-        @extend .#{$fa-css-prefix};
         position: absolute;
         top: 50%;
         left: 50%;
@@ -165,11 +162,11 @@
         color: #fff;
       }
       &--facebook {
-        @extend .#{$fa-css-prefix}-facebook;
+        @include bca-icon(facebook);
         background-color: #3F5D93;
       }
       &--twitter {
-        @extend .#{$fa-css-prefix}-twitter;
+        @include bca-icon(twitter);
         background-color: #54ABED;
       }
     }
