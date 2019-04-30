@@ -1,0 +1,32 @@
+.bca-icon {
+  @each $item, $fa-key in $bca-icons {
+    &--#{$item} {
+      @include bca-icon($item) {
+        margin: 0 .3em 0 0;
+      }
+    }
+  }
+}
+// ラベルテキスト：デフォルトは非表示
+[class*="bca-icon"] .bca-icon-label {
+  display: none;
+}
+
+// サイズ
+// ===========================
+[class^="bca-icon"] {
+  // large
+  &[data-bca-icon-size=lg] {
+    font-size: 2.4rem;
+  }
+
+  // small
+  &[data-bca-icon-size=sm] {
+    font-size: 1.4rem;
+  }
+
+  // xsmall
+  &[data-bca-icon-size=xs] {
+    font-size: 1.2rem;
+  }
+}

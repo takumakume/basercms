@@ -1,0 +1,115 @@
+//
+// # アイコン
+//
+@import '../../vender/Font-Awesome/font-awesome';
+
+$bca-icons: (
+  // HOME
+  'home': 'home',
+  // 公開
+  'publish': 'play-circle-o',
+  // 非公開
+  'unpublish': 'pause-circle-o',
+  // 確認
+  'preview': 'eye',
+  // アップロード
+  'image': 'image',
+  // 編集
+  'edit': 'pencil',
+  // 複製
+  'copy': 'copy',
+  // 削除
+  'delete': 'trash',
+  // 一覧
+  'th-list': 'th-list',
+  // お気に入り
+  'favorite': 'heart',
+  // お気に入り
+  'exclamation-triangle': 'exclamation-triangle',
+  // メニューアイテム
+  'menuitem': 'angle-right',
+  // 追加
+  'add': 'plus-circle',
+  // 制限（鍵)
+  'permission': 'lock',
+  // ヘルプ
+  'help': 'question-circle',
+  //
+  'chevron-down': 'chevron-down',
+  // 一覧
+  'list': 'list-ul',
+  //
+  'id-card': 'id-card-o',
+  // ブログ
+  'blog': 'file-text-o',
+  // メール
+  'mail': 'envelope-o',
+  // テーマ
+  'theme': 'paint-brush',
+  // プラグイン
+  'plugin': 'plug',
+  // サイトマップ
+  'sitemap': 'sitemap',
+  // フィード
+  'rss': 'rss',
+  // 基本設定
+  'bars': 'bars',
+  // ユーティリティ
+  'wrench': 'wrench',
+  //
+  'user': 'user-o',
+  // 設定
+  'setting': 'cog',
+  // 次
+  'next': 'angle-right',
+  // 前
+  'back': 'angle-left',
+  // 矢印　右
+  'arrow-right': 'arrow-right',
+  // 矢印　左
+  'arrow-left': 'arrow-left',
+  // 矢印　上
+  'arrow-up': 'arrow-up',
+  // 矢印　下
+  'arrow-down': 'arrow-down',
+  // 矢印　三角上
+  'asc': 'caret-up',
+  // 矢印　三角下
+  'desc': 'caret-down',
+  // プラス
+  'plus-square': 'plus-square',
+  //
+  'info-circle': 'info-circle',
+  //
+  'question-circle': 'question-circle',
+  // マイナス
+  'minus-square': 'minus-square',
+  // ブックマーク
+  'bookmark': 'bookmark',
+  // 地球
+  'globe': 'globe',
+  // テキストコピー
+  'textcopy': 'clipboard',
+  // ドラック可能
+  'draggable': 'arrows-v',
+  // フォルダ
+  'folder': 'folder',
+  // ファイル
+  'file': 'file-o',
+  // 1階層上に戻る
+  'up-directory': 'arrow-up',
+  // 検索
+  'search': 'search',
+  // update
+  'update': 'refresh',
+);
+
+
+@mixin bca-icon($id) {
+  @extend .#{$fa-css-prefix}-#{map-get($bca-icons, $id)};
+  &::before {
+    @extend .#{$fa-css-prefix};
+    @content;
+  }
+}
+

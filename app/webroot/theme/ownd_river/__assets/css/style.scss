@@ -4,8 +4,8 @@
 
 @import 'theme/var/colors';
 @import 'theme/var/dimensions';
+@import 'theme/var/icons';
 @import 'theme/utility';
-@import 'theme/icons';
 
 
 @import 'base/general';
@@ -15,6 +15,7 @@
 @import 'components/container';
 @import 'components/main';
 
+@import 'components/icons';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/toolbar';

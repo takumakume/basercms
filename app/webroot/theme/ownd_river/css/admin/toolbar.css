@@ -1,114 +1,4 @@
 @charset "UTF-8";
-/* display
------------------------------------------------ */
-/*.display-none {
-	display:none;
-}*/
-/* text
------------------------------------------------ */
-/*
-.weight-normal {
-	font-weight: normal!important;
-}
-.weight-bold {
-	font-weight:bold!important;
-}
-.size-small {
-	font-size:small!important;
-}
-.size-smaller {
-	font-size: x-small!important;
-}
-.size-medium {
-	font-size:medium!important;
-}
-.size-large {
-	font-size:large!important;
-}
-.size-larger {
-	font-size: x-large!important;
-}*/
-.align-left {
-  text-align: left !important; }
-
-.align-right {
-  text-align: right !important; }
-
-.align-center {
-  text-align: center !important; }
-
-.bc-align-left {
-  text-align: left !important; }
-
-.bc-align-right {
-  text-align: right !important; }
-
-.bc-align-center {
-  text-align: center !important; }
-
-/* float
------------------------------------------------ */
-/*.float-left {
-	float:left;
-}
-.float-right {
-	float:right;
-}
-.img-right {
-	float:right;
-	margin-left:10px;
-	margin-bottom:10px;
-}
-.img-left {
-	float:left;
-	margin-right:10px;
-	margin-bottom:10px;
-}*/
-/* clear
------------------------------------------------ */
-/*.clear {
-	clear:both;
-}
-.clearfix:after {
-	content: " ";
-	display: block;
-	clear: both;
-	height: 0;
-}
-.clearfix {
-	display: inline-block;
-}
-.clearfix {
-	display: block;
-}*/
-/* 縦方向中央揃え
------------------------------------------------ */
-/*.vertical-middle{
-		position: relative!important;
-}
-.vertical-middle .inner{
-		position: absolute!important;
-		top: 50%!important;
-		margin-top: -1em!important;
-}*/
-/*
-.required {
-	color:#C30;
-	font-size:16px;
-}
-*/
-.photo {
-  padding: 5px;
-  background-color: #FFF;
-  border: 1px solid #DDD; }
-
-.outside-link {
-  background: url(../../img/admin/blt_outside_link.png) no-repeat left -1px;
-  padding-left: 18px; }
-
-/*.full-width {
-	width:100%;
-}*/
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -122,7 +12,7 @@
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--image::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--th-list::before, .bca-icon--favorite::before, .bca-icon--exclamation-triangle::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--id-card::before, .bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--sitemap::before, .bca-icon--rss::before, .bca-icon--bars::before, .bca-icon--wrench::before, .bca-icon--user::before, .bca-icon--setting::before, .bca-icon--home::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--info-circle::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-icon--textcopy::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--search::before, .bca-icon--update::before {
+.fa, .bca-icon--home::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--image::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--th-list::before, .bca-icon--favorite::before, .bca-icon--exclamation-triangle::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--id-card::before, .bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--sitemap::before, .bca-icon--rss::before, .bca-icon--bars::before, .bca-icon--wrench::before, .bca-icon--user::before, .bca-icon--setting::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--info-circle::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-icon--textcopy::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--search::before, .bca-icon--update::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -179,10 +69,10 @@
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--image::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-icon--exclamation-triangle::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--id-card::before, .fa-pull-left.bca-icon--blog::before, .fa-pull-left.bca-icon--mail::before, .fa-pull-left.bca-icon--theme::before, .fa-pull-left.bca-icon--plugin::before, .fa-pull-left.bca-icon--sitemap::before, .fa-pull-left.bca-icon--rss::before, .fa-pull-left.bca-icon--bars::before, .fa-pull-left.bca-icon--wrench::before, .fa-pull-left.bca-icon--user::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--info-circle::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-icon--update::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--image::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-icon--exclamation-triangle::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--id-card::before, .fa-pull-left.bca-icon--blog::before, .fa-pull-left.bca-icon--mail::before, .fa-pull-left.bca-icon--theme::before, .fa-pull-left.bca-icon--plugin::before, .fa-pull-left.bca-icon--sitemap::before, .fa-pull-left.bca-icon--rss::before, .fa-pull-left.bca-icon--bars::before, .fa-pull-left.bca-icon--wrench::before, .fa-pull-left.bca-icon--user::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--info-circle::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-icon--update::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--image::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-icon--exclamation-triangle::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--id-card::before, .fa-pull-right.bca-icon--blog::before, .fa-pull-right.bca-icon--mail::before, .fa-pull-right.bca-icon--theme::before, .fa-pull-right.bca-icon--plugin::before, .fa-pull-right.bca-icon--sitemap::before, .fa-pull-right.bca-icon--rss::before, .fa-pull-right.bca-icon--bars::before, .fa-pull-right.bca-icon--wrench::before, .fa-pull-right.bca-icon--user::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--info-circle::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-icon--update::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--image::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-icon--exclamation-triangle::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--id-card::before, .fa-pull-right.bca-icon--blog::before, .fa-pull-right.bca-icon--mail::before, .fa-pull-right.bca-icon--theme::before, .fa-pull-right.bca-icon--plugin::before, .fa-pull-right.bca-icon--sitemap::before, .fa-pull-right.bca-icon--rss::before, .fa-pull-right.bca-icon--bars::before, .fa-pull-right.bca-icon--wrench::before, .fa-pull-right.bca-icon--user::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--info-circle::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-icon--update::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -192,10 +82,10 @@
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--image::before, .pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--th-list::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-icon--exclamation-triangle::before, .pull-left.bca-icon--menuitem::before, .pull-left.bca-icon--add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-icon--chevron-down::before, .pull-left.bca-icon--list::before, .pull-left.bca-icon--id-card::before, .pull-left.bca-icon--blog::before, .pull-left.bca-icon--mail::before, .pull-left.bca-icon--theme::before, .pull-left.bca-icon--plugin::before, .pull-left.bca-icon--sitemap::before, .pull-left.bca-icon--rss::before, .pull-left.bca-icon--bars::before, .pull-left.bca-icon--wrench::before, .pull-left.bca-icon--user::before, .pull-left.bca-icon--setting::before, .pull-left.bca-icon--home::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--arrow-up::before, .pull-left.bca-icon--arrow-down::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--info-circle::before, .pull-left.bca-icon--question-circle::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .pull-left.bca-icon--textcopy::before, .pull-left.bca-icon--draggable::before, .pull-left.bca-icon--folder::before, .pull-left.bca-icon--file::before, .pull-left.bca-icon--up-directory::before, .pull-left.bca-icon--search::before, .pull-left.bca-icon--update::before {
+.fa.pull-left, .pull-left.bca-icon--home::before, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--image::before, .pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--th-list::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-icon--exclamation-triangle::before, .pull-left.bca-icon--menuitem::before, .pull-left.bca-icon--add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-icon--chevron-down::before, .pull-left.bca-icon--list::before, .pull-left.bca-icon--id-card::before, .pull-left.bca-icon--blog::before, .pull-left.bca-icon--mail::before, .pull-left.bca-icon--theme::before, .pull-left.bca-icon--plugin::before, .pull-left.bca-icon--sitemap::before, .pull-left.bca-icon--rss::before, .pull-left.bca-icon--bars::before, .pull-left.bca-icon--wrench::before, .pull-left.bca-icon--user::before, .pull-left.bca-icon--setting::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--arrow-up::before, .pull-left.bca-icon--arrow-down::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--info-circle::before, .pull-left.bca-icon--question-circle::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .pull-left.bca-icon--textcopy::before, .pull-left.bca-icon--draggable::before, .pull-left.bca-icon--folder::before, .pull-left.bca-icon--file::before, .pull-left.bca-icon--up-directory::before, .pull-left.bca-icon--search::before, .pull-left.bca-icon--update::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--image::before, .pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--th-list::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-icon--exclamation-triangle::before, .pull-right.bca-icon--menuitem::before, .pull-right.bca-icon--add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-icon--chevron-down::before, .pull-right.bca-icon--list::before, .pull-right.bca-icon--id-card::before, .pull-right.bca-icon--blog::before, .pull-right.bca-icon--mail::before, .pull-right.bca-icon--theme::before, .pull-right.bca-icon--plugin::before, .pull-right.bca-icon--sitemap::before, .pull-right.bca-icon--rss::before, .pull-right.bca-icon--bars::before, .pull-right.bca-icon--wrench::before, .pull-right.bca-icon--user::before, .pull-right.bca-icon--setting::before, .pull-right.bca-icon--home::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--arrow-up::before, .pull-right.bca-icon--arrow-down::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--info-circle::before, .pull-right.bca-icon--question-circle::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .pull-right.bca-icon--textcopy::before, .pull-right.bca-icon--draggable::before, .pull-right.bca-icon--folder::before, .pull-right.bca-icon--file::before, .pull-right.bca-icon--up-directory::before, .pull-right.bca-icon--search::before, .pull-right.bca-icon--update::before {
+.fa.pull-right, .pull-right.bca-icon--home::before, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--image::before, .pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--th-list::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-icon--exclamation-triangle::before, .pull-right.bca-icon--menuitem::before, .pull-right.bca-icon--add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-icon--chevron-down::before, .pull-right.bca-icon--list::before, .pull-right.bca-icon--id-card::before, .pull-right.bca-icon--blog::before, .pull-right.bca-icon--mail::before, .pull-right.bca-icon--theme::before, .pull-right.bca-icon--plugin::before, .pull-right.bca-icon--sitemap::before, .pull-right.bca-icon--rss::before, .pull-right.bca-icon--bars::before, .pull-right.bca-icon--wrench::before, .pull-right.bca-icon--user::before, .pull-right.bca-icon--setting::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--arrow-up::before, .pull-right.bca-icon--arrow-down::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--info-circle::before, .pull-right.bca-icon--question-circle::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .pull-right.bca-icon--textcopy::before, .pull-right.bca-icon--draggable::before, .pull-right.bca-icon--folder::before, .pull-right.bca-icon--file::before, .pull-right.bca-icon--up-directory::before, .pull-right.bca-icon--search::before, .pull-right.bca-icon--update::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -2441,165 +2331,116 @@
   overflow: visible;
   clip: auto; }
 
-[class*="bca-icon"] .bca-icon-label {
-  display: none; }
+/* display
+----------------------------------------------- */
+/*.display-none {
+	display:none;
+}*/
+/* text
+----------------------------------------------- */
+/*
+.weight-normal {
+	font-weight: normal!important;
+}
+.weight-bold {
+	font-weight:bold!important;
+}
+.size-small {
+	font-size:small!important;
+}
+.size-smaller {
+	font-size: x-small!important;
+}
+.size-medium {
+	font-size:medium!important;
+}
+.size-large {
+	font-size:large!important;
+}
+.size-larger {
+	font-size: x-large!important;
+}*/
+.align-left {
+  text-align: left !important; }
 
-.bca-icon--publish::before {
-  margin: 0 .3em 0 0; }
+.align-right {
+  text-align: right !important; }
 
-.bca-icon--unpublish::before {
-  margin: 0 .3em 0 0; }
+.align-center {
+  text-align: center !important; }
 
-.bca-icon--preview::before {
-  margin: 0 .3em 0 0; }
+.bc-align-left {
+  text-align: left !important; }
 
-.bca-icon--image::before {
-  margin: 0 .3em 0 0; }
+.bc-align-right {
+  text-align: right !important; }
 
-.bca-icon--edit::before, .bca-toolbar__tools-edit a::before {
-  margin: 0 .3em 0 0; }
+.bc-align-center {
+  text-align: center !important; }
 
-.bca-icon--copy::before {
-  margin: 0 .3em 0 0; }
+/* float
+----------------------------------------------- */
+/*.float-left {
+	float:left;
+}
+.float-right {
+	float:right;
+}
+.img-right {
+	float:right;
+	margin-left:10px;
+	margin-bottom:10px;
+}
+.img-left {
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}*/
+/* clear
+----------------------------------------------- */
+/*.clear {
+	clear:both;
+}
+.clearfix:after {
+	content: " ";
+	display: block;
+	clear: both;
+	height: 0;
+}
+.clearfix {
+	display: inline-block;
+}
+.clearfix {
+	display: block;
+}*/
+/* 縦方向中央揃え
+----------------------------------------------- */
+/*.vertical-middle{
+		position: relative!important;
+}
+.vertical-middle .inner{
+		position: absolute!important;
+		top: 50%!important;
+		margin-top: -1em!important;
+}*/
+/*
+.required {
+	color:#C30;
+	font-size:16px;
+}
+*/
+.photo {
+  padding: 5px;
+  background-color: #FFF;
+  border: 1px solid #DDD; }
 
-.bca-icon--delete::before {
-  margin: 0 .3em 0 0; }
+.outside-link {
+  background: url(../../img/admin/blt_outside_link.png) no-repeat left -1px;
+  padding-left: 18px; }
 
-.bca-icon--th-list::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--favorite::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--exclamation-triangle::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--menuitem::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--add::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--permission::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--help::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--chevron-down::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--list::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--id-card::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--blog::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--mail::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--theme::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--plugin::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--sitemap::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--rss::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--bars::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--wrench::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--user::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--setting::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--home::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--next::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--back::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--arrow-right::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--arrow-left::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--arrow-up::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--arrow-down::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--asc::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--desc::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--plus-square::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--info-circle::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--question-circle::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--minus-square::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--bookmark::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--globe::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--textcopy::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--draggable::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--folder::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--file::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--up-directory::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--search::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--update::before {
-  margin: 0 .3em 0 0; }
-
-[class^="bca-icon"][data-bca-icon-size=lg] {
-  font-size: 2.4rem; }
-
-[class^="bca-icon"][data-bca-icon-size=sm] {
-  font-size: 1.4rem; }
-
-[class^="bca-icon"][data-bca-icon-size=xs] {
-  font-size: 1.2rem; }
-
+/*.full-width {
+	width:100%;
+}*/
 /* ==================================================================== */
 /* 旧CSSからの不明クラス取扱所
 /* ==================================================================== */
@@ -3279,6 +3120,165 @@ div.jstree-publish-even {
   content: "";
   display: block;
   clear: both; }
+
+.bca-icon--home::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--publish::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--unpublish::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--preview::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--image::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--edit::before, .bca-toolbar__tools-edit a::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--copy::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--delete::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--th-list::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--favorite::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--exclamation-triangle::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--menuitem::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--add::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--permission::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--help::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--chevron-down::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--list::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--id-card::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--blog::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--mail::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--theme::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--plugin::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--sitemap::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--rss::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--bars::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--wrench::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--user::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--setting::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--next::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--back::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--arrow-right::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--arrow-left::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--arrow-up::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--arrow-down::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--asc::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--desc::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--plus-square::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--info-circle::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--question-circle::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--minus-square::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--bookmark::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--globe::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--textcopy::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--draggable::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--folder::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--file::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--up-directory::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--search::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--update::before {
+  margin: 0 .3em 0 0; }
+
+[class*="bca-icon"] .bca-icon-label {
+  display: none; }
+
+[class^="bca-icon"][data-bca-icon-size=lg] {
+  font-size: 2.4rem; }
+
+[class^="bca-icon"][data-bca-icon-size=sm] {
+  font-size: 1.4rem; }
+
+[class^="bca-icon"][data-bca-icon-size=xs] {
+  font-size: 1.2rem; }
 
 body {
   margin-top: 40px !important; }
