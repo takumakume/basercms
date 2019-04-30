@@ -67,7 +67,7 @@ class BlogCategory extends BlogAppModel {
 		$this->validate = [
 			'name' => [
 				['rule' => ['notBlank'], 'message' => __d('baser', 'カテゴリ名を入力してください。'), 'required' => true],
-				['rule' => 'halfText', 'message' => __d('baser', 'カテゴリ名は半角のみで入力してください。')],
+				['rule' => 'alphaNumericDashUnderscore', 'message' => __d('baser', 'カテゴリ名は半角のみで入力してください。')],
 				['rule' => ['duplicateBlogCategory'], 'message' => __d('baser', '入力されたカテゴリ名は既に登録されています。')],
 				['rule' => ['maxLength', 255], 'message' => __d('baser', 'カテゴリ名は255文字以内で入力してください。')]],
 			'title' => [
