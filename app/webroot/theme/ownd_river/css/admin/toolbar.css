@@ -12,7 +12,7 @@
   font-weight: normal;
   font-style: normal; }
 
-.fa, .bca-icon--dashboard::before, .bca-icon--contents::before, .bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--uploader::before, .bca-icon--system::before, .bca-icon--siteconfigs::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--tools::before, .bca-icon--feed::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--th-list::before, .bca-icon--favorite::before, .bca-icon--exclamation-triangle::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--permission::before, .bca-icon--help::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--info-circle::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-icon--textcopy::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--search::before, .bca-icon--update::before, .bca-icon--facebook::before, .bca-icon--twitter::before {
+.fa, .bca-icon--dashboard::before, .bca-icon--contents::before, .bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--uploader::before, .bca-icon--system::before, .bca-icon--siteconfigs::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--tools::before, .bca-icon--feed::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--th-list::before, .bca-icon--back-to-list::before, .bca-icon--favorite::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--help::before, .bca-icon--permission::before, .bca-icon--apply::before, .bca-icon--home::before, .bca-icon--switch::before, .bca-icon--open::before, .bca-icon--textcopy::before, .bca-icon--download::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--file-list::before, .bca-icon--update::before, .bca-icon--setting::before, .bca-icon--exclamation-triangle::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--plus-square::before, .bca-icon--info-circle::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .bca-icon--search::before, .bca-icon--facebook::before, .bca-icon--twitter::before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -69,10 +69,10 @@
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--dashboard::before, .fa-pull-left.bca-icon--contents::before, .fa-pull-left.bca-icon--blog::before, .fa-pull-left.bca-icon--mail::before, .fa-pull-left.bca-icon--uploader::before, .fa-pull-left.bca-icon--system::before, .fa-pull-left.bca-icon--siteconfigs::before, .fa-pull-left.bca-icon--users::before, .fa-pull-left.bca-icon--sites::before, .fa-pull-left.bca-icon--theme::before, .fa-pull-left.bca-icon--plugin::before, .fa-pull-left.bca-icon--tools::before, .fa-pull-left.bca-icon--feed::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-icon--exclamation-triangle::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--info-circle::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-icon--update::before, .fa-pull-left.bca-icon--facebook::before, .fa-pull-left.bca-icon--twitter::before {
+.fa.fa-pull-left, .fa-pull-left.bca-icon--dashboard::before, .fa-pull-left.bca-icon--contents::before, .fa-pull-left.bca-icon--blog::before, .fa-pull-left.bca-icon--mail::before, .fa-pull-left.bca-icon--uploader::before, .fa-pull-left.bca-icon--system::before, .fa-pull-left.bca-icon--siteconfigs::before, .fa-pull-left.bca-icon--users::before, .fa-pull-left.bca-icon--sites::before, .fa-pull-left.bca-icon--theme::before, .fa-pull-left.bca-icon--plugin::before, .fa-pull-left.bca-icon--tools::before, .fa-pull-left.bca-icon--feed::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-icon--back-to-list::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--apply::before, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-icon--switch::before, .fa-pull-left.bca-icon--open::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-icon--download::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-icon--file-list::before, .fa-pull-left.bca-icon--update::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-icon--exclamation-triangle::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--info-circle::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-icon--facebook::before, .fa-pull-left.bca-icon--twitter::before {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--dashboard::before, .fa-pull-right.bca-icon--contents::before, .fa-pull-right.bca-icon--blog::before, .fa-pull-right.bca-icon--mail::before, .fa-pull-right.bca-icon--uploader::before, .fa-pull-right.bca-icon--system::before, .fa-pull-right.bca-icon--siteconfigs::before, .fa-pull-right.bca-icon--users::before, .fa-pull-right.bca-icon--sites::before, .fa-pull-right.bca-icon--theme::before, .fa-pull-right.bca-icon--plugin::before, .fa-pull-right.bca-icon--tools::before, .fa-pull-right.bca-icon--feed::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-icon--exclamation-triangle::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--info-circle::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-icon--update::before, .fa-pull-right.bca-icon--facebook::before, .fa-pull-right.bca-icon--twitter::before {
+.fa.fa-pull-right, .fa-pull-right.bca-icon--dashboard::before, .fa-pull-right.bca-icon--contents::before, .fa-pull-right.bca-icon--blog::before, .fa-pull-right.bca-icon--mail::before, .fa-pull-right.bca-icon--uploader::before, .fa-pull-right.bca-icon--system::before, .fa-pull-right.bca-icon--siteconfigs::before, .fa-pull-right.bca-icon--users::before, .fa-pull-right.bca-icon--sites::before, .fa-pull-right.bca-icon--theme::before, .fa-pull-right.bca-icon--plugin::before, .fa-pull-right.bca-icon--tools::before, .fa-pull-right.bca-icon--feed::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-icon--back-to-list::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--apply::before, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-icon--switch::before, .fa-pull-right.bca-icon--open::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-icon--download::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-icon--file-list::before, .fa-pull-right.bca-icon--update::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-icon--exclamation-triangle::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--info-circle::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-icon--facebook::before, .fa-pull-right.bca-icon--twitter::before {
   margin-left: .3em; }
 
 /* Deprecated as of 4.4.0 */
@@ -82,10 +82,10 @@
 .pull-left {
   float: left; }
 
-.fa.pull-left, .pull-left.bca-icon--dashboard::before, .pull-left.bca-icon--contents::before, .pull-left.bca-icon--blog::before, .pull-left.bca-icon--mail::before, .pull-left.bca-icon--uploader::before, .pull-left.bca-icon--system::before, .pull-left.bca-icon--siteconfigs::before, .pull-left.bca-icon--users::before, .pull-left.bca-icon--sites::before, .pull-left.bca-icon--theme::before, .pull-left.bca-icon--plugin::before, .pull-left.bca-icon--tools::before, .pull-left.bca-icon--feed::before, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--th-list::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-icon--exclamation-triangle::before, .pull-left.bca-icon--menuitem::before, .pull-left.bca-icon--add::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--help::before, .pull-left.bca-icon--chevron-down::before, .pull-left.bca-icon--list::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--arrow-up::before, .pull-left.bca-icon--arrow-down::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--info-circle::before, .pull-left.bca-icon--question-circle::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .pull-left.bca-icon--textcopy::before, .pull-left.bca-icon--draggable::before, .pull-left.bca-icon--folder::before, .pull-left.bca-icon--file::before, .pull-left.bca-icon--up-directory::before, .pull-left.bca-icon--search::before, .pull-left.bca-icon--update::before, .pull-left.bca-icon--facebook::before, .pull-left.bca-icon--twitter::before {
+.fa.pull-left, .pull-left.bca-icon--dashboard::before, .pull-left.bca-icon--contents::before, .pull-left.bca-icon--blog::before, .pull-left.bca-icon--mail::before, .pull-left.bca-icon--uploader::before, .pull-left.bca-icon--system::before, .pull-left.bca-icon--siteconfigs::before, .pull-left.bca-icon--users::before, .pull-left.bca-icon--sites::before, .pull-left.bca-icon--theme::before, .pull-left.bca-icon--plugin::before, .pull-left.bca-icon--tools::before, .pull-left.bca-icon--feed::before, .pull-left.bca-icon--publish::before, .pull-left.bca-icon--unpublish::before, .pull-left.bca-icon--preview::before, .pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-left::before, .pull-left.bca-icon--copy::before, .pull-left.bca-icon--delete::before, .pull-left.bca-icon--th-list::before, .pull-left.bca-icon--back-to-list::before, .pull-left.bca-icon--favorite::before, .pull-left.bca-icon--menuitem::before, .pull-left.bca-icon--add::before, .pull-left.bca-icon--help::before, .pull-left.bca-icon--permission::before, .pull-left.bca-icon--apply::before, .pull-left.bca-icon--home::before, .pull-left.bca-icon--switch::before, .pull-left.bca-icon--open::before, .pull-left.bca-icon--textcopy::before, .pull-left.bca-icon--download::before, .pull-left.bca-icon--draggable::before, .pull-left.bca-icon--folder::before, .pull-left.bca-icon--file::before, .pull-left.bca-icon--up-directory::before, .pull-left.bca-icon--arrow-right::before, .pull-left.bca-icon--arrow-left::before, .pull-left.bca-icon--arrow-up::before, .pull-left.bca-icon--arrow-down::before, .pull-left.bca-icon--file-list::before, .pull-left.bca-icon--update::before, .pull-left.bca-icon--setting::before, .pull-left.bca-icon--exclamation-triangle::before, .pull-left.bca-icon--chevron-down::before, .pull-left.bca-icon--list::before, .pull-left.bca-icon--next::before, .pull-left.bca-icon--back::before, .pull-left.bca-icon--asc::before, .pull-left.bca-icon--desc::before, .pull-left.bca-icon--plus-square::before, .pull-left.bca-icon--info-circle::before, .pull-left.bca-icon--question-circle::before, .pull-left.bca-icon--minus-square::before, .pull-left.bca-icon--bookmark::before, .pull-left.bca-icon--globe::before, .pull-left.bca-icon--search::before, .pull-left.bca-icon--facebook::before, .pull-left.bca-icon--twitter::before {
   margin-right: .3em; }
 
-.fa.pull-right, .pull-right.bca-icon--dashboard::before, .pull-right.bca-icon--contents::before, .pull-right.bca-icon--blog::before, .pull-right.bca-icon--mail::before, .pull-right.bca-icon--uploader::before, .pull-right.bca-icon--system::before, .pull-right.bca-icon--siteconfigs::before, .pull-right.bca-icon--users::before, .pull-right.bca-icon--sites::before, .pull-right.bca-icon--theme::before, .pull-right.bca-icon--plugin::before, .pull-right.bca-icon--tools::before, .pull-right.bca-icon--feed::before, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--th-list::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-icon--exclamation-triangle::before, .pull-right.bca-icon--menuitem::before, .pull-right.bca-icon--add::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--help::before, .pull-right.bca-icon--chevron-down::before, .pull-right.bca-icon--list::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--arrow-up::before, .pull-right.bca-icon--arrow-down::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--info-circle::before, .pull-right.bca-icon--question-circle::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .pull-right.bca-icon--textcopy::before, .pull-right.bca-icon--draggable::before, .pull-right.bca-icon--folder::before, .pull-right.bca-icon--file::before, .pull-right.bca-icon--up-directory::before, .pull-right.bca-icon--search::before, .pull-right.bca-icon--update::before, .pull-right.bca-icon--facebook::before, .pull-right.bca-icon--twitter::before {
+.fa.pull-right, .pull-right.bca-icon--dashboard::before, .pull-right.bca-icon--contents::before, .pull-right.bca-icon--blog::before, .pull-right.bca-icon--mail::before, .pull-right.bca-icon--uploader::before, .pull-right.bca-icon--system::before, .pull-right.bca-icon--siteconfigs::before, .pull-right.bca-icon--users::before, .pull-right.bca-icon--sites::before, .pull-right.bca-icon--theme::before, .pull-right.bca-icon--plugin::before, .pull-right.bca-icon--tools::before, .pull-right.bca-icon--feed::before, .pull-right.bca-icon--publish::before, .pull-right.bca-icon--unpublish::before, .pull-right.bca-icon--preview::before, .pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.pull-right::before, .pull-right.bca-icon--copy::before, .pull-right.bca-icon--delete::before, .pull-right.bca-icon--th-list::before, .pull-right.bca-icon--back-to-list::before, .pull-right.bca-icon--favorite::before, .pull-right.bca-icon--menuitem::before, .pull-right.bca-icon--add::before, .pull-right.bca-icon--help::before, .pull-right.bca-icon--permission::before, .pull-right.bca-icon--apply::before, .pull-right.bca-icon--home::before, .pull-right.bca-icon--switch::before, .pull-right.bca-icon--open::before, .pull-right.bca-icon--textcopy::before, .pull-right.bca-icon--download::before, .pull-right.bca-icon--draggable::before, .pull-right.bca-icon--folder::before, .pull-right.bca-icon--file::before, .pull-right.bca-icon--up-directory::before, .pull-right.bca-icon--arrow-right::before, .pull-right.bca-icon--arrow-left::before, .pull-right.bca-icon--arrow-up::before, .pull-right.bca-icon--arrow-down::before, .pull-right.bca-icon--file-list::before, .pull-right.bca-icon--update::before, .pull-right.bca-icon--setting::before, .pull-right.bca-icon--exclamation-triangle::before, .pull-right.bca-icon--chevron-down::before, .pull-right.bca-icon--list::before, .pull-right.bca-icon--next::before, .pull-right.bca-icon--back::before, .pull-right.bca-icon--asc::before, .pull-right.bca-icon--desc::before, .pull-right.bca-icon--plus-square::before, .pull-right.bca-icon--info-circle::before, .pull-right.bca-icon--question-circle::before, .pull-right.bca-icon--minus-square::before, .pull-right.bca-icon--bookmark::before, .pull-right.bca-icon--globe::before, .pull-right.bca-icon--search::before, .pull-right.bca-icon--facebook::before, .pull-right.bca-icon--twitter::before {
   margin-left: .3em; }
 
 .fa-spin {
@@ -226,7 +226,7 @@
 .fa-signal:before {
   content: ""; }
 
-.fa-gear:before,
+.fa-gear:before, .bca-icon--setting:before,
 .fa-cog:before,
 .bca-icon--system:before {
   content: ""; }
@@ -234,7 +234,7 @@
 .fa-trash-o:before {
   content: ""; }
 
-.fa-home:before, .bca-icon--dashboard:before {
+.fa-home:before, .bca-icon--dashboard:before, .bca-icon--home:before {
   content: ""; }
 
 .fa-file-o:before, .bca-icon--file:before {
@@ -246,7 +246,7 @@
 .fa-road:before {
   content: ""; }
 
-.fa-download:before {
+.fa-download:before, .bca-icon--download:before {
   content: ""; }
 
 .fa-arrow-circle-o-down:before {
@@ -378,7 +378,7 @@
 .fa-share-square-o:before {
   content: ""; }
 
-.fa-check-square-o:before {
+.fa-check-square-o:before, .bca-icon--apply:before {
   content: ""; }
 
 .fa-arrows:before {
@@ -414,7 +414,7 @@
 .fa-eject:before {
   content: ""; }
 
-.fa-chevron-left:before {
+.fa-chevron-left:before, .bca-icon--back-to-list:before {
   content: ""; }
 
 .fa-chevron-right:before {
@@ -456,7 +456,7 @@
 .fa-arrow-right:before, .bca-icon--arrow-right:before {
   content: ""; }
 
-.fa-arrow-up:before, .bca-icon--arrow-up:before, .bca-icon--up-directory:before {
+.fa-arrow-up:before, .bca-icon--up-directory:before, .bca-icon--arrow-up:before {
   content: ""; }
 
 .fa-arrow-down:before, .bca-icon--arrow-down:before {
@@ -534,7 +534,7 @@
 .fa-folder:before, .bca-icon--folder:before {
   content: ""; }
 
-.fa-folder-open:before {
+.fa-folder-open:before, .bca-icon--open:before {
   content: ""; }
 
 .fa-arrows-v:before, .bca-icon--draggable:before {
@@ -590,7 +590,7 @@
 .fa-external-link:before {
   content: ""; }
 
-.fa-sign-in:before {
+.fa-sign-in:before, .bca-icon--switch:before {
   content: ""; }
 
 .fa-trophy:before {
@@ -1164,7 +1164,7 @@
 .fa-file:before {
   content: ""; }
 
-.fa-file-text:before {
+.fa-file-text:before, .bca-icon--file-list:before {
   content: ""; }
 
 .fa-sort-alpha-asc:before {
@@ -3182,10 +3182,10 @@ div.jstree-publish-even {
 .bca-icon--th-list::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--favorite::before {
+.bca-icon--back-to-list::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--exclamation-triangle::before {
+.bca-icon--favorite::before {
   margin: 0 .3em 0 0; }
 
 .bca-icon--menuitem::before {
@@ -3194,22 +3194,40 @@ div.jstree-publish-even {
 .bca-icon--add::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--permission::before {
-  margin: 0 .3em 0 0; }
-
 .bca-icon--help::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--chevron-down::before {
+.bca-icon--permission::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--list::before {
+.bca-icon--apply::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--next::before {
+.bca-icon--home::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--back::before {
+.bca-icon--switch::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--open::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--textcopy::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--download::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--draggable::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--folder::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--file::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--up-directory::before {
   margin: 0 .3em 0 0; }
 
 .bca-icon--arrow-right::before {
@@ -3222,6 +3240,30 @@ div.jstree-publish-even {
   margin: 0 .3em 0 0; }
 
 .bca-icon--arrow-down::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--file-list::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--update::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--setting::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--exclamation-triangle::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--chevron-down::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--list::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--next::before {
+  margin: 0 .3em 0 0; }
+
+.bca-icon--back::before {
   margin: 0 .3em 0 0; }
 
 .bca-icon--asc::before {
@@ -3248,25 +3290,7 @@ div.jstree-publish-even {
 .bca-icon--globe::before {
   margin: 0 .3em 0 0; }
 
-.bca-icon--textcopy::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--draggable::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--folder::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--file::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--up-directory::before {
-  margin: 0 .3em 0 0; }
-
 .bca-icon--search::before {
-  margin: 0 .3em 0 0; }
-
-.bca-icon--update::before {
   margin: 0 .3em 0 0; }
 
 .bca-icon--facebook::before {

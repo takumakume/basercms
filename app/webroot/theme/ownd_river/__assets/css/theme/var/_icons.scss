@@ -5,7 +5,9 @@
 
 $bca-icons: (
   /**
+   *
    * 左ナビ
+   *
    */
   // ダッシュボード
   'dashboard': 'home',
@@ -21,7 +23,9 @@ $bca-icons: (
   'system': 'cog',
 
   /**
+   *
    * 左ナビ（設定）
+   *
    */
   // サイト基本設定
   'siteconfigs': 'bars',
@@ -38,12 +42,11 @@ $bca-icons: (
   // フィード
   'feed': 'rss',
 
-
-
-
-
-
-
+  /**
+   *
+   * ボタンアイコン
+   *
+   */
   // 公開
   'publish': 'play-circle-o',
   // 非公開
@@ -58,26 +61,38 @@ $bca-icons: (
   'delete': 'trash',
   // 一覧
   'th-list': 'th-list',
+  // 一覧に戻る
+  'back-to-list': 'chevron-left',
   // お気に入り
   'favorite': 'heart',
-  // お気に入り
-  'exclamation-triangle': 'exclamation-triangle',
   // メニューアイテム
   'menuitem': 'angle-right',
   // 追加
   'add': 'plus-circle',
-  // 制限（鍵)
-  'permission': 'lock',
   // ヘルプ
   'help': 'question-circle',
-  //
-  'chevron-down': 'chevron-down',
-  // 一覧
-  'list': 'list-ul',
-  // 次
-  'next': 'angle-right',
-  // 前
-  'back': 'angle-left',
+  // 制限（鍵)
+  'permission': 'lock',
+  // 適用
+  'apply': 'check-square-o',
+  // HOME
+  'home': 'home',
+  // ログイン（切り替え）
+  'switch': 'sign-in',
+  // 開く
+  'open': 'folder-open',
+  // テキストコピー
+  'textcopy': 'clipboard',
+  // ダウンロード
+  'download': 'download',
+  // ドラッグ可能
+  'draggable': 'arrows-v',
+  // フォルダ
+  'folder': 'folder',
+  // ファイル
+  'file': 'file-o',
+  // 1階層上に戻る
+  'up-directory': 'arrow-up',
   // 矢印　右
   'arrow-right': 'arrow-right',
   // 矢印　左
@@ -86,6 +101,24 @@ $bca-icons: (
   'arrow-up': 'arrow-up',
   // 矢印　下
   'arrow-down': 'arrow-down',
+  // ファイルリスト
+  'file-list': 'file-text',
+  // アップデート
+  'update': 'refresh',
+  // 設定
+  'setting': 'gear',
+
+
+  // お気に入り
+  'exclamation-triangle': 'exclamation-triangle',
+  //
+  'chevron-down': 'chevron-down',
+  // 一覧
+  'list': 'list-ul',
+  // 次
+  'next': 'angle-right',
+  // 前
+  'back': 'angle-left',
   // 矢印　三角上
   'asc': 'caret-up',
   // 矢印　三角下
@@ -102,20 +135,8 @@ $bca-icons: (
   'bookmark': 'bookmark',
   // 地球
   'globe': 'globe',
-  // テキストコピー
-  'textcopy': 'clipboard',
-  // ドラック可能
-  'draggable': 'arrows-v',
-  // フォルダ
-  'folder': 'folder',
-  // ファイル
-  'file': 'file-o',
-  // 1階層上に戻る
-  'up-directory': 'arrow-up',
   // 検索
   'search': 'search',
-  // update
-  'update': 'refresh',
   // Facebook
   'facebook': 'facebook',
   // Twitter
