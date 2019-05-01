@@ -7,7 +7,9 @@
     margin: 0;
     font-weight: bold;
     &-button {
-      @extend .bca-icon--favorite;
+      @include bca-icon(favorite) {
+        margin: 0 .3em 0 0;
+      }
       display: block!important;
       padding: 12px!important;
       vertical-align: middle;
@@ -74,14 +76,18 @@
     list-style: none;
     padding-left: #{$nav_base_padding - $nav_item_padding};
     &-add {
-      @extend .bca-icon--add;
+      @include bca-icon(add) {
+        margin: 0 .3em 0 0;
+      }
       display: inline-block;
       vertical-align: middle;
       cursor: pointer;
       color: $color_text_link;
     }
     &-help {
-      @extend .bca-icon--help;
+      @include bca-icon(help) {
+        margin: 0 .3em 0 0;
+      }
       display: inline-block;
       vertical-align: middle;
       cursor: pointer;
