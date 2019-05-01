@@ -59,7 +59,9 @@ body {
 
     &-edit {
       a {
-        @extend .bca-icon--edit;
+        @include bca-icon(edit) {
+          margin: 0 .3em 0 0;
+        }
         margin: 8px 1em;
         padding: 3px 8px 3px 5px;
         background: #fff;
