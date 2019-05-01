@@ -1,124 +1,84 @@
 //
 // # ボタンアイコン（アイコンのみ/テキストなし)
 //
-@import '../vender/Font-Awesome/font-awesome';
-
 .bca-btn-icon-text {
+  display: inline-block;
+  width: auto;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
 
-  @mixin bca-btn-icon-text-common {
-    display: inline-block;
-    width: auto;
-    font-size: 1.8rem;
-    line-height: 1;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-
-    &::before {
-      @extend .#{$fa-css-prefix};
-      margin-right: 0.2em;
-      color: $color_primary;
-      transition: 0.2;
-    }
-    &:hover {
-      text-decoration: none;
-      color: $color_secondary;
-      &:before {
-        color: $color_secondary;
-      }
-    }
+  &::before {
+    margin-right: 0.2em;
   }
-
-  // デフォルトボタン
-  @include bca-btn-icon-text-common;
+  &:hover {
+    text-decoration: none;
+    color: $color_secondary;
+  }
 
   // 公開
   &[data-bca-btn-type=publish] {
-    @extend .#{$fa-css-prefix}-play-circle-o;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(publish);
   }
-
   // 非公開
   &[data-bca-btn-type=unpublish] {
-    @extend .#{$fa-css-prefix}-pause-circle-o;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(unpublish);
   }
-
   // 確認
   &[data-bca-btn-type=preview] {
-    @extend .#{$fa-css-prefix}-eye;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(preview);
   }
-
   // 編集
   &[data-bca-btn-type=edit] {
-    @extend .#{$fa-css-prefix}-pencil;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(edit);
   }
-
   // 複製
   &[data-bca-btn-type=copy] {
-    @extend .#{$fa-css-prefix}-copy;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(copy);
   }
-
   // 削除
   &[data-bca-btn-type=delete] {
-    @extend .#{$fa-css-prefix}-trash;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(delete);
   }
-
   // 一覧
   &[data-bca-btn-type=th-list] {
-    @extend .#{$fa-css-prefix}-th-list;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(th-list);
   }
-
   // 一覧に戻る
   &[data-bca-btn-type=back-to-list] {
-    @extend .#{$fa-css-prefix}-chevron-left;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(back-to-list);
   }
-
   // お気に入り
   &[data-bca-btn-type=favorite] {
-    @extend .#{$fa-css-prefix}-heart;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(favorite);
   }
-
   // メニューアイテム
   &[data-bca-btn-type=menuitem] {
-    @extend .#{$fa-css-prefix}-angle-right;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(menuitem);
   }
-
   // 追加
   &[data-bca-btn-type=add] {
-    @extend .#{$fa-css-prefix}-plus-circle;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(add);
   }
-
   // ヘルプ
   &[data-bca-btn-type=help] {
-    @extend .#{$fa-css-prefix}-life-ring;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(help);
+    // @include bca-icon(rescue);
   }
-
   // 制限（鍵)
   &[data-bca-btn-type=permission] {
-    @extend .#{$fa-css-prefix}-lock;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(permission);
   }
-
   // HOME
   &[data-bca-btn-type=home] {
-    @extend .#{$fa-css-prefix}-home;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(home);
   }
 
   // ログイン
   &[data-bca-btn-type=login] {
-    @include bca-btn-icon-text-common;
     color: $color_lightest;
     $color_darken: darken($color_primary, 5%);
     border: 1px solid $color_darken;
@@ -132,26 +92,19 @@
 
   // 開く
   &[data-bca-btn-type=open] {
-    @extend .#{$fa-css-prefix}-folder-open;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(open);
   }
-
   // テキストコピー
   &[data-bca-btn-type=textcopy] {
-    @extend .#{$fa-css-prefix}-clipboard;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(textcopy);
   }
-
   // ダウンロード
   &[data-bca-btn-type=download] {
-    @extend .#{$fa-css-prefix}-download;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(download);
   }
-
   // ドラック可能
   &[data-bca-btn-type=draggable] {
-    @extend .#{$fa-css-prefix}-arrows-v;
-    @include bca-btn-icon-text-common;
+    @include bca-icon(draggable);
   }
 
   // サイズ
@@ -160,25 +113,16 @@
   // large
   &[data-bca-btn-size=lg] {
     font-size: 2.4rem;
-    &::before {
-      @extend .#{$fa-css-prefix};
-    }
   }
 
   // small
   &[data-bca-btn-size=sm] {
     font-size: 1.4rem;
-    &::before {
-      @extend .#{$fa-css-prefix};
-    }
   }
 
   // xsmall
   &[data-bca-btn-size=xs] {
     font-size: 1.2rem;
-    &::before {
-      @extend .#{$fa-css-prefix};
-    }
   }
 
   // ステータス
@@ -186,11 +130,9 @@
 
   // プライマリー
   &[data-bca-btn-status=primary] {
-    @include bca-btn-icon-text-common;
     color: #fff;
     background: $color_primary;
     &::before {
-      @extend .#{$fa-css-prefix};
       color: #fff;
     }
     &:hover {
