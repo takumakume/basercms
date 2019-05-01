@@ -114,13 +114,20 @@ $bca-icons: (
   // クリア
   'clear': 'refresh',
 
+  /**
+   *
+   * フォーム関連
+   *
+   */
+  // datetimepicker（日付）
+  'datetimepicker-date': 'calendar-o',
+  // datetimepicker（時刻）
+  'datetimepicker-time': 'clock-o',
 
-  // お気に入り
-  'exclamation-triangle': 'exclamation-triangle',
-  //
-  'chevron-down': 'chevron-down',
-  // 一覧
-  'list': 'list-ul',
+
+
+
+
   // 次
   'next': 'angle-right',
   // 前
@@ -129,6 +136,16 @@ $bca-icons: (
   'asc': 'caret-up',
   // 矢印　三角下
   'desc': 'caret-down',
+
+
+
+
+  // お気に入り
+  'exclamation-triangle': 'exclamation-triangle',
+  //
+  'chevron-down': 'chevron-down',
+  // 一覧
+  'list': 'list-ul',
   // プラス
   'plus-square': 'plus-square',
   //

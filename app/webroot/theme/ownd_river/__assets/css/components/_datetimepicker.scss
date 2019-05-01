@@ -23,35 +23,6 @@
 </span>
 
  */
-@import '../vender/Font-Awesome/font-awesome';
-
-@mixin mx-datepicker-input {
-  display: inline-block;
-  outline: none;
-  padding: $button_padding_top calc(0.5em + 16px) $button_padding_bottom 0.5em;
-  margin:4px;
-  border-radius: 3px;
-  box-sizing: border-box;
-  border: 1px solid $color_control_border_color;
-  line-height: 1.2;
-  font-size: $button_font_size_medium;
-  color: $color_text_secondary;
-  &[data-input-text-size=lg] {
-    font-size: $button_font_size_large;
-  }
-  &[data-input-text-size=sm] {
-    font-size: $button_font_size_small;
-  }
-  &[data-input-text-size=full-counter] {
-    width: calc(100% - 80px);
-  }
-
-  &:focus {
-    box-shadow: $focus_shadow;
-
-  }
-}
-
 .bca-datetimepicker {
 
   display: inline-block;
@@ -66,7 +37,6 @@
       margin-right: 0.3em;
       cursor: pointer;
       &::before {
-        @extend .#{$fa-css-prefix};
         position: absolute;
         top: 50%;
         right: 8px;
@@ -93,7 +63,25 @@
     }
 
     &-input {
-      @include mx-datepicker-input;
+      display: inline-block;
+      outline: none;
+      padding: $button_padding_top calc(0.5em + 16px) $button_padding_bottom 0.5em;
+      margin:4px;
+      border-radius: 3px;
+      box-sizing: border-box;
+      border: 1px solid $color_control_border_color;
+      line-height: 1.2;
+      font-size: $button_font_size_medium;
+      color: $color_text_secondary;
+      &[data-input-text-size=lg] {
+        font-size: $button_font_size_large;
+      }
+      &[data-input-text-size=sm] {
+        font-size: $button_font_size_small;
+      }
+      &[data-input-text-size=full-counter] {
+        width: calc(100% - 80px);
+      }
       &:focus {
         box-shadow: $focus_shadow;
         border-color: $color_primary;
@@ -104,15 +92,13 @@
 
   &__date {
     &-label {
-      // カレンダーのアイコン
-      @extend .#{$fa-css-prefix}-calendar-o;
+      @include bca-icon(datetimepicker-date);
     }
   }
   &__time {
     margin-left: 1em;
     &-label {
-      // 時計のアイコン
-      @extend .#{$fa-css-prefix}-clock-o;
+      @include bca-icon(datetimepicker-time);
     }
     &-input {
       width: 6em;
