@@ -11,14 +11,12 @@
     margin-bottom: 8px;
     margin-right: 30px;
     line-height: 1.4;
-    @extend .#{$fa-css-prefix}-angle-right;
-    &::before {
+    @include bca-icon(list-default) {
       position: absolute;
       top: 0;
       left: 0;
       line-height: 1.2;
       color: $color_text_primary;
-      @extend .#{$fa-css-prefix};
       // margin-right: 0.4em;
     }
   }
@@ -26,7 +24,7 @@
   &[data-bca-list-type=circle] {
     margin: 0;
     .bca-list__item {
-      @extend .#{$fa-css-prefix}-circle;
+      @include bca-icon(list-circle);
       padding: 0;
       margin-right: 1.5em;
       white-space: nowrap;
