@@ -4,16 +4,52 @@
 @import '../../vender/Font-Awesome/font-awesome';
 
 $bca-icons: (
-  // HOME
-  'home': 'home',
+  /**
+   * 左ナビ
+   */
+  // ダッシュボード
+  'dashboard': 'home',
+  // コンテンツ管理
+  'contents': 'sitemap',
+  // ブログ
+  'blog': 'file-text-o',
+  // メール
+  'mail': 'envelope-o',
+  // アップロード管理
+  'uploader': 'image',
+  // 設定
+  'system': 'cog',
+
+  /**
+   * 左ナビ（設定）
+   */
+  // サイト基本設定
+  'siteconfigs': 'bars',
+  // ユーザー管理
+  'users': 'user-o',
+  // サブサイト管理
+  'sites': 'id-card-o',
+  // テーマ管理
+  'theme': 'paint-brush',
+  // プラグイン管理
+  'plugin': 'plug',
+  // ユーティリティ
+  'tools': 'wrench',
+  // フィード
+  'feed': 'rss',
+
+
+
+
+
+
+
   // 公開
   'publish': 'play-circle-o',
   // 非公開
   'unpublish': 'pause-circle-o',
   // 確認
   'preview': 'eye',
-  // アップロード
-  'image': 'image',
   // 編集
   'edit': 'pencil',
   // 複製
@@ -38,28 +74,6 @@ $bca-icons: (
   'chevron-down': 'chevron-down',
   // 一覧
   'list': 'list-ul',
-  //
-  'id-card': 'id-card-o',
-  // ブログ
-  'blog': 'file-text-o',
-  // メール
-  'mail': 'envelope-o',
-  // テーマ
-  'theme': 'paint-brush',
-  // プラグイン
-  'plugin': 'plug',
-  // サイトマップ
-  'sitemap': 'sitemap',
-  // フィード
-  'rss': 'rss',
-  // 基本設定
-  'bars': 'bars',
-  // ユーティリティ
-  'wrench': 'wrench',
-  //
-  'user': 'user-o',
-  // 設定
-  'setting': 'cog',
   // 次
   'next': 'angle-right',
   // 前
