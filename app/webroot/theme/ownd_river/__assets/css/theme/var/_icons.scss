@@ -134,6 +134,28 @@ $bca-icons: (
    // 丸
    'list-circle': 'circle',
 
+  /**
+   *
+   * エラー / アラート表示
+   *
+   */
+   // エラー
+   'error': 'exclamation-triangle',
+   // アラート
+   'alert': 'exclamation-triangle',
+   // 注意
+   'notification': 'info-circle',
+
+  /**
+   *
+   * SNS
+   *
+   */
+  // Facebook
+  'facebook': 'facebook',
+  // Twitter
+  'twitter': 'twitter',
+
 
 
   // 次
@@ -146,18 +168,14 @@ $bca-icons: (
   'desc': 'caret-down',
 
 
-
-
-  // お気に入り
-  'exclamation-triangle': 'exclamation-triangle',
-  //
+  // 下矢印
   'chevron-down': 'chevron-down',
+
+
   // 一覧
   'list': 'list-ul',
   // プラス
   'plus-square': 'plus-square',
-  //
-  'info-circle': 'info-circle',
   //
   'question-circle': 'question-circle',
   // マイナス
@@ -166,10 +184,6 @@ $bca-icons: (
   'bookmark': 'bookmark',
   // 地球
   'globe': 'globe',
-  // Facebook
-  'facebook': 'facebook',
-  // Twitter
-  'twitter': 'twitter',
 );
 
 

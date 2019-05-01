@@ -177,7 +177,9 @@
   display: block;
   font-weight: normal;
   white-space: nowrap;
-  @extend .bca-icon--exclamation-triangle;
+  @include bca-icon(error) {
+    margin: 0 .3em 0 0;
+  }
 }
 
 .ui-dialog .ui-button-text {

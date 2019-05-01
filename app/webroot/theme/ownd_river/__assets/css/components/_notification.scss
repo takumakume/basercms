@@ -9,7 +9,9 @@
 #MessageBox .notice-message,
 #BcMessageBox .notice-message {
   color: $color_primary;
-  @extend .bca-icon--info-circle;
+  @include bca-icon(notification) {
+    margin: 0 .3em 0 0;
+  }
   //background: #EBF5E1 url(../../img/admin/icn_info.png) no-repeat 10px 13px;
 }
 
@@ -20,7 +22,9 @@
 #BcMessageBox .alert-message,
 #UpdateMessage {
   color: $color_danger!important;
-  @extend .bca-icon--exclamation-triangle;
+  @include bca-icon(alert) {
+    margin: 0 .3em 0 0;
+  }
   //background: #F7E9EC url(../../img/admin/warning.png) no-repeat 10px 13px;
 }
 
