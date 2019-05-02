@@ -16,6 +16,7 @@
  * @var array $authors 作成者リスト
  * @var array $layoutTemplates レイアウトテンプレートリスト
  */
+$disableEdit = false;
 if($this->BcContents->isEditable()) {
 	$disableEdit = true;
 }

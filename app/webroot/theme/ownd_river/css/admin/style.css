@@ -6472,11 +6472,20 @@ table.cake-sql-log tr td {
 .jstree-proton .jstree-wholerow-hovered {
   background: #ddd !important; }
 
+.jstree-proton .jstree-hovered.jstree-clicked {
+  color: #fff !important; }
+
 .jstree-proton .jstree-hovered {
   color: #424f44 !important; }
 
 .jstree-proton .jstree-wholerow-clicked {
   background: #FF6F61 !important; }
+
+.jstree-proton .content-name {
+  position: relative; }
+
+.jstree-proton .jstree-clicked + .content-name {
+  color: #fff !important; }
 
 .ui-dialog .uploader-file-image .url {
   border: none !important;
