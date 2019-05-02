@@ -44,7 +44,7 @@ $this->BcListTable->setColumnNumber(5);
 		<?php $this->BcBaser->link('<i class="bca-btn-icon-text" data-bca-btn-type="draggable"></i>' . __d('baser', 'ノーマル'), ['sortmode' => 0, $this->request->params['pass'][0]]) ?>
 	<?php endif ?>
 </th>
-<th class="bca-table-listup__thead-th">NO</th>
+<th class="bca-table-listup__thead-th">No</th>
 <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ルール名')?><br><?php echo __d('baser', 'URL設定')?></th>
 <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクセス')?></th>
 <?php echo $this->BcListTable->dispatchShowHead() ?>

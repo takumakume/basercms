@@ -3022,8 +3022,7 @@ body * {
 
 .no-data {
   padding: 10px 10px 10px 10px;
-  color: #999;
-  font-weight: bold; }
+  text-align: center; }
 
 .size-counter {
   font-size: 20px;
@@ -4987,8 +4986,7 @@ body {
     padding: 1em 0 1em;
     vertical-align: top;
     border-bottom: 1px solid #eeeeea;
-    font-weight: normal;
-    white-space: nowrap; }
+    font-weight: normal; }
   .bca-form-table__input-wrap {
     display: block;
     padding: 0; }
@@ -5638,7 +5636,7 @@ table.cake-sql-log tr td {
     font-size: 1.6rem;
     color: #424f44;
     margin: 4px;
-    width: calc(100% - 40px); }
+    width: calc(100% - 80px); }
     .bca-textarea__textarea[data-input-text-size=lg] {
       font-size: 1.6rem; }
     .bca-textarea__textarea[data-input-text-size=sm] {

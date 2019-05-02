@@ -2557,8 +2557,7 @@
 
 .no-data {
   padding: 10px 10px 10px 10px;
-  color: #999;
-  font-weight: bold; }
+  text-align: center; }
 
 .size-counter {
   font-size: 20px;

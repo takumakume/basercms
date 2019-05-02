@@ -30,7 +30,7 @@
 	<?php //echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled')) ?>
 	</div>-->
 </th>
-<th>NO</th>
+<th>No</th>
 <th>メールフォームアカウント</th>
 <th>メールフォームタイトル</th>
 <th>登録日<br />更新日</th>

@@ -24,6 +24,6 @@
 <div class="example-box">
 	<p class="head"><?php echo __d('baser', '（例）ページ管理全体を許可しない設定')?></p>
 	<p>　/admin/pages/*</p>
-	<p class="head"><?php echo __d('baser', '（例）ブログコンテンツNO:2 の管理を許可しない設定')?></p>
+	<p class="head"><?php echo __d('baser', '（例）ブログコンテンツNo:2 の管理を許可しない設定')?></p>
 	<p>　/admin/blog/*/*/2</p>
 </div>

@@ -25,7 +25,7 @@
 	<li><?php echo sprintf(__d('baser', '一覧左上の「並び替え」をクリックすると、その際に各データの操作欄に表示される %s マークをドラッグアンドドロップして行の並び替えができます。'), '<span class="sort-handle ui-sortable-handle" style="cursor: move;"><i class="bca-btn-icon-text" data-bca-btn-type="draggable"></i>ドラッグ可能</span>')?></li>
 </ul>
 <div class="example-box">
-	<div class="head"><?php echo __d('baser', '（例）ページ管理全体は許可しないが、特定のページ「NO: ２」のみ許可を与える場合')?></div>
+	<div class="head"><?php echo __d('baser', '（例）ページ管理全体は許可しないが、特定のページ「No: ２」のみ許可を与える場合')?></div>
 	<ol>
 		<li><?php echo __d('baser', '1つ目のルールとして、　/admin/pages/*　を「不可」として追加します。')?></li>
 		<li><?php echo __d('baser', '2つ目のルールとして、　/admin/pages/edit/2　を「可」として追加します。')?></li>
