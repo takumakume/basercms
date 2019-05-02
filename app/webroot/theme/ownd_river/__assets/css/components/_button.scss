@@ -12,7 +12,7 @@
   text-decoration: none;
   background-image: linear-gradient(rgb(255, 255, 255) 10%, rgb(244, 245, 241) 100%);
   transition: all .3s ease-out 0s;
-
+  white-space: nowrap;
   &::before {
     margin-right: 4px;
     color: $color_text_primary;

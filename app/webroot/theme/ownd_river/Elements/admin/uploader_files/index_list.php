@@ -54,7 +54,7 @@ $this->BcBaser->js([
 		<div id="UploaderForm">
 	<?php if(!$installMessage): ?>
 		<div>
-			<label for="UploaderFileUploaderCategoryId">アップロード</label>
+			<label for="UploaderFileUploaderCategoryId"><?php echo __d('baser', 'アップロード') ?></label>
 			<?php if($uploaderCategories): ?>
 				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', ['type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId]) ?>
 			<?php endif ?>

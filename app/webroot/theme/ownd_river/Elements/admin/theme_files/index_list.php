@@ -18,7 +18,7 @@
  * @var string $plugin
  * @var string $type
  */
-$this->BcListTable->setColumnNumber(2);
+$this->BcListTable->setColumnNumber(3);
 ?>
 
 
@@ -48,7 +48,7 @@ $this->BcListTable->setColumnNumber(2);
 	<tr>
     <th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select">
       <?php if ($this->BcBaser->isAdminUser() && $theme != 'core'): ?>
-        <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
+        <?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
       <?php endif ?>
 
       <?php if ($path): ?>

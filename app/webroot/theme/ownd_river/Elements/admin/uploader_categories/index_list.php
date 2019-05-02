@@ -32,7 +32,7 @@ $this->BcListTable->setColumnNumber(5);
 			<th class="list-tool bca-table-listup__thead-th">
 				<?php if($this->BcBaser->isAdminUser()): ?>
 					<div>
-						<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
+						<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
 					</div>
 				<?php endif ?>
 			</th>

@@ -15,7 +15,7 @@
  *
  * @var BcAppView $this
  */
-$this->BcListTable->setColumnNumber(6);
+$this->BcListTable->setColumnNumber(8);
 ?>
 
 
@@ -78,7 +78,7 @@ $(function(){
 	<thead class="bca-table-listup__thead">
 		<tr>
 			<th class="list-tool bca-table-listup__thead-th bca-table-listup__thead-th--select">
-				<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
+				<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
 			</th>
 <th class="bca-table-listup__thead-th">No</th>
 <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'タイプ') ?><br><?php echo __d('baser', 'タイトル') ?></th>

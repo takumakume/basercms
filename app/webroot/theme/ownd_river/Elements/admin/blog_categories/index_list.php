@@ -13,7 +13,7 @@
 /**
  * [ADMIN] ブログカテゴリ 一覧　テーブル
  */
-$this->BcListTable->setColumnNumber(5);
+$this->BcListTable->setColumnNumber(6);
 ?>
 
 

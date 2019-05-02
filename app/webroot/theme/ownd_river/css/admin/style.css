@@ -5234,7 +5234,8 @@ table.cake-sql-log tr td {
   color: #424f44;
   text-decoration: none;
   background-image: linear-gradient(white 10%, #f4f5f1 100%);
-  transition: all .3s ease-out 0s; }
+  transition: all .3s ease-out 0s;
+  white-space: nowrap; }
   .bca-btn::before, .ui-dialog-buttonset button::before, .button-small::before {
     margin-right: 4px;
     color: #424f44; }
@@ -5533,7 +5534,8 @@ table.cake-sql-log tr td {
       .bca-panel-box__inline-fields-title {
         font-weight: bold;
         display: inline-block;
-        margin-right: 0.5em; }
+        margin-right: 0.5em;
+        white-space: nowrap; }
       .bca-panel-box__inline-fields-separator {
         width: 1px;
         background: #eeeeea;

@@ -13,7 +13,7 @@
 /**
  * [ADMIN] ブログ記事コメント 一覧　テーブル
  */
-$this->BcListTable->setColumnNumber(6);
+$this->BcListTable->setColumnNumber(7);
 ?>
 
 

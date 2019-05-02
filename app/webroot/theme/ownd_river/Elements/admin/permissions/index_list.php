@@ -16,7 +16,7 @@
  * @var BcAppView $this
  * @var bool $sortmode
  */
-$this->BcListTable->setColumnNumber(5);
+$this->BcListTable->setColumnNumber(6);
 ?>
 
 

@@ -16,7 +16,7 @@
  * @var BcAppView $this
  */
 
-$this->BcListTable->setColumnNumber(7);
+$this->BcListTable->setColumnNumber(8);
 ?>
 
 <div class="bca-data-list__top">
@@ -36,7 +36,7 @@ $this->BcListTable->setColumnNumber(7);
 	<thead class="bca-table-listup__thead">
 	<tr>
 		<th class="list-tool bca-table-listup__thead-th  bca-table-listup__thead-th--select"><?php // 一括選択 ?>
-			<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => '<span class="bca-visually-hidden">' . __d('baser', '一括選択'). '</span>']) ?>
+			<?php echo $this->BcForm->input('ListTool.checkall', ['type' => 'checkbox', 'label' => __d('baser', '一括選択')]) ?>
 		</th>
 		<th class="bca-table-listup__thead-th">
 			<?php echo $this->Paginator->sort('id',
