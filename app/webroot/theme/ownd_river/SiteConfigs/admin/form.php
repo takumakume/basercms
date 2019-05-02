@@ -131,7 +131,7 @@ $this->BcBaser->js('admin/site_configs/form', false, ['id' => 'AdminSiteConfigsF
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
   <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formAdminSettingBody" aria-expanded="false" aria-controls="formOptionBody"><?php echo __d('baser', '管理画面設定') ?>&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formAdminSettingBody" aria-expanded="false" aria-controls="formAdminSettingBody"><?php echo __d('baser', '管理画面設定') ?>&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formAdminSettingBody" data-bca-state="">
 	  <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
@@ -192,7 +192,7 @@ $this->BcBaser->js('admin/site_configs/form', false, ['id' => 'AdminSiteConfigsF
 
 <section class="bca-section" data-bca-section-type='form-group'>
   <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOuterServiceSettingBody" aria-expanded="false" aria-controls="formOptionBody">外部サービス設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formOuterServiceSettingBody" aria-expanded="false" aria-controls="formOuterServiceSettingBody">外部サービス設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formOuterServiceSettingBody" data-bca-state="">
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table"data-bca-table-type="type2">
@@ -228,7 +228,7 @@ $this->BcBaser->js('admin/site_configs/form', false, ['id' => 'AdminSiteConfigsF
 
 <section class="bca-section" data-bca-section-type='form-group'>
   <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formSubSiteSettingBody" aria-expanded="false" aria-controls="formOptionBody">サブサイト設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formSubSiteSettingBody" aria-expanded="false" aria-controls="formSubSiteSettingBody">サブサイト設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formSubSiteSettingBody" data-bca-state="">
   <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
@@ -260,7 +260,7 @@ $this->BcBaser->js('admin/site_configs/form', false, ['id' => 'AdminSiteConfigsF
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
  <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formEditorSettingBody" aria-expanded="false" aria-controls="formOptionBody"><?php echo __d('baser', 'エディタ設定') ?>&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formEditorSettingBody" aria-expanded="false" aria-controls="formEditorSettingBody"><?php echo __d('baser', 'エディタ設定') ?>&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formEditorSettingBody" data-bca-state="">
   <table cellpadding="0" cellspacing="0" class="form-table bca-form-table section" data-bca-table-type="type2">
@@ -314,7 +314,7 @@ h2 {}
 </section>
 <section class="bca-section" data-bca-section-type='form-group'>
  <div class="bca-collapse__action">
-    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formMailSettingBody" aria-expanded="false" aria-controls="formOptionBody">メール設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+    <button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#formMailSettingBody" aria-expanded="false" aria-controls="formMailSettingBody">メール設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
   </div>
   <div class="bca-collapse" id="formMailSettingBody" data-bca-state="">
 	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table" data-bca-table-type="type2">

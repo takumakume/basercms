@@ -166,9 +166,12 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 	</table>
 </section>
 
-<div class="bca-section" data-bca-section-type='form-group'>
-	<h2 class="btn-slide-form"><a href="javascript:void(0)" id="formOption" class="bca-btn"><?php echo __d('baser', '詳細設定') ?></a></h2>
-	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table slide-body" id="formOptionBody">
+<section class="bca-section" data-bca-section-type="form-group">
+	<div class="bca-collapse__action">
+    	<button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#mailFieldSettingBody" aria-expanded="false" aria-controls="mailFieldSettingBody">詳細設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+	</div>
+  <div class="bca-collapse" id="mailFieldSettingBody" data-bca-state="">
+	<table cellpadding="0" cellspacing="0" class="form-table bca-form-table" id="formOptionBody">
 		<tr id="RowValidEx">
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.valid_ex', __d('baser', '拡張入力チェック')) ?></th>
 			<td class="col-input bca-form-table__input">
@@ -273,7 +276,8 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
-</div>
+  </div>
+</section>
 
 <?php echo $this->BcFormTable->dispatchAfter() ?>
 

@@ -42,6 +42,15 @@ $this->BcBaser->i18nScript([
 			</td>
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
+	</table>
+</section>
+
+<section class="bca-section" data-bca-section-type="form-group">
+	<div class="bca-collapse__action">
+    	<button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#blogContentsSettingBody" aria-expanded="false" aria-controls="blogContentsSettingBody">詳細設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+	</div>
+  <div class="bca-collapse" id="blogContentsSettingBody" data-bca-state="">
+	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogContent.list_count', __d('baser', '一覧表示件数')) ?>&nbsp;<span class="required bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
@@ -207,6 +216,7 @@ $this->BcBaser->i18nScript([
 		</tr>
 		<?php echo $this->BcForm->dispatchAfterForm('option') ?>
 	</table>
+  </div>
 </section>
 
 <?php echo $this->BcFormTable->dispatchAfter() ?>
