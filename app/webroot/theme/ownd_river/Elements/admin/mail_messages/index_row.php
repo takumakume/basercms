@@ -54,7 +54,7 @@
 		<?php endif ?>
 	</td>
 	<td class="row-tools bca-table-listup__tbody-td">
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', ['alt' => __d('baser', '詳細'), 'class' => 'btn']), ['action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '詳細'), 'class' => 'btn-view']) ?>
+		<?php $this->BcBaser->link('', ['action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '詳細'), 'class' => 'btn-view bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg']) ?>
 	</td>
 	<?php echo $this->BcListTable->dispatchShowRow($data) ?>
