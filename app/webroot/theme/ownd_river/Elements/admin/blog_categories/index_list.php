@@ -1,25 +1,28 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Blog.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * [ADMIN] ブログカテゴリ 一覧　テーブル
  */
+$this->BcListTable->setColumnNumber(5);
 ?>
+
+
 <div class="bca-data-list__top">
 <!-- 一括処理 -->
 	<?php if ($this->BcBaser->isAdminUser()): ?>
 		<div class="bca-action-table-listup">
-			<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => array('del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'), 'data-bca-select-size' =>'lg']) ?>
-			<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
+			<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['del' => __d('baser', '削除')], 'empty' => __d('baser', '一括処理'), 'data-bca-select-size' =>'lg']) ?>
+			<?php echo $this->BcForm->button(__d('baser', '適用'), ['id' => 'BtnApplyBatch', 'disabled' => 'disabled', 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg']) ?>
 		</div>
 	<?php endif ?>
   <div class="bca-data-list__sub">
@@ -44,6 +47,7 @@
       <?php endif ?>
       </th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'カテゴリタイトル') ?></th>
+      <?php echo $this->BcListTable->dispatchShowHead() ?>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日') ?><br /><?php echo __d('baser', '更新日') ?></th>
       <th class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
 		</tr>
@@ -63,18 +67,18 @@
           }
         }
         $currentDepth = $data['BlogCategory']['depth'];
-        $rowGroupId = array();
+        $rowGroupId = [];
         foreach ($rowIdTmps as $rowIdTmp) {
           $rowGroupId[] = 'row-group-' . $rowIdTmp;
         }
         $rowGroupClass = ' class="depth-' . $data['BlogCategory']['depth'] . ' ' . implode(' ', $rowGroupId) . '"';
         ?>
         <?php $currentDepth = $data['BlogCategory']['depth'] ?>
-        <?php $this->BcBaser->element('blog_categories/index_row', array('data' => $data, 'rowGroupClass' => $rowGroupClass)) ?>
+        <?php $this->BcBaser->element('blog_categories/index_row', ['data' => $data, 'rowGroupClass' => $rowGroupClass]) ?>
       <?php endforeach; ?>
     <?php else: ?>
       <tr>
-        <td colspan="6" class="bca-table-listup__tbody-td"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。') ?></p></td>
+        <td colspan="<?php echo $this->BcListTable->getColumnNumber() ?>" class="bca-table-listup__tbody-td"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。') ?></p></td>
       </tr>
     <?php endif; ?>
   </tbody>

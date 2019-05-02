@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -26,7 +26,7 @@
 	<td class="row-tools bca-table-listup__tbody-td"><?php echo date('Y/m/d H:i', strtotime($data['MailMessage']['created'])); ?></td>
 	<td class="row-tools bca-table-listup__tbody-td">
 		<?php 
-			$inData = array();
+			$inData = [];
 			$fileExists = false;
 		?>
 		<?php foreach ($mailFields as $mailField): ?>
@@ -54,7 +54,8 @@
 		<?php endif ?>
 	</td>
 	<td class="row-tools bca-table-listup__tbody-td">
-		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', array('alt' => __d('baser', '詳細'), 'class' => 'btn')), array('action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => __d('baser', '詳細'), 'class' => 'btn-view')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link($this->BcBaser->getImg('admin/icn_tool_view.png', ['alt' => __d('baser', '詳細'), 'class' => 'btn']), ['action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '詳細'), 'class' => 'btn-view']) ?>
+		<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg']) ?>
 	</td>
+	<?php echo $this->BcListTable->dispatchShowRow($data) ?>
 </tr>

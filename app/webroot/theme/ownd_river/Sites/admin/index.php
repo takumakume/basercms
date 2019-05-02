@@ -1,22 +1,22 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 4.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * サブサイト一覧
  */
-$this->BcBaser->js(array(
+$this->BcBaser->js([
 	'admin/libs/jquery.baser_ajax_data_list',
 	'admin/libs/baser_ajax_data_list_config',
-	), false);
+	], false);
 $this->BcAdmin->addAdminMainBodyHeaderLinks([
 	'url' => ['action' => 'add'],
 	'title' => __d('baser', '新規追加'),

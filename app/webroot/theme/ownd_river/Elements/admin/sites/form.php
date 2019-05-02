@@ -1,17 +1,21 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 4.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * サブサイトフォーム
+ *
+ * @var BcAppView $this
+ * @var array $themes
+ * @var array $mainSites
  */
 $agents = Configure::read('BcAgent');
 $devices = ['' => __d('baser', '指定しない')];
@@ -28,60 +32,74 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 ?>
 
 
+<?php echo $this->BcForm->hidden('Site.id') ?>
+
 <table class="form-table bca-form-table">
 <?php if($this->request->action == 'admin_edit'): ?>
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.id', 'No') ?></th>
 		<td class=" bca-form-table__input">
 			<?php echo $this->BcForm->value('Site.id') ?>
-			<?php echo $this->BcForm->hidden('Site.id') ?>
 		</td>
 	</tr>
 <?php endif ?>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.name', __d('baser', '識別名称')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.name', array('type' => 'text', 'size' => '30', 'autofocus' => true)) ?>
+			<?php echo $this->BcForm->input('Site.name', ['type' => 'text', 'size' => '30', 'autofocus' => true]) ?>
 			<i class="bca-icon--question-circle btn help bca-help"></i>
-			<div class="helptext">サブサイトを特定する事ができる識別名称を入力します。半角英数とハイフン（-）・アンダースコア（_）のみが利用できます。エイリアスを入力しない場合は、URLにも利用されます。</div>
+			<div class="helptext"><?php echo __d('baser', 'サブサイトを特定する事ができる識別名称を入力します。半角英数とハイフン（-）・アンダースコア（_）のみが利用できます。エイリアスを入力しない場合は、URLにも利用されます。') ?></div>
 			　<span style="white-space: nowrap;"><small>[<?php echo $this->BcForm->label('Site.alias', __d('baser', 'エイリアス')) ?>]</small>
-			<?php echo $this->BcForm->input('Site.alias', array('type' => 'text', 'size' => '10')) ?></span>
+			<?php echo $this->BcForm->input('Site.alias', ['type' => 'text', 'size' => '10']) ?></span>
 			<i class="bca-icon--question-circle btn help bca-help"></i>
-			<div class="helptext">サブサイトの識別名称とは別のURLにしたい場合、別名を入力する事ができます。エイリアスは半角英数に加えハイフン（-）・アンダースコア（_）・スラッシュ（/）・ドット（.）が利用できます。</div>
+			<div class="helptext"><?php echo __d('baser', 'サブサイトの識別名称とは別のURLにしたい場合、別名を入力する事ができます。エイリアスは半角英数に加えハイフン（-）・アンダースコア（_）・スラッシュ（/）・ドット（.）が利用できます。') ?></div>
 			<?php echo $this->BcForm->error('Site.name') ?>
 			<?php echo $this->BcForm->error('Site.alias') ?>
 		</td>
 	</tr>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.display_name', __d('baser', 'サイト名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.display_name', array('type' => 'text', 'size' => '60')) ?>
+			<?php echo $this->BcForm->input('Site.display_name', ['type' => 'text', 'size' => '60']) ?>
 			<i class="bca-icon--question-circle btn help bca-help"></i>
-			<div class="helptext">サブサイト名を入力します。管理システムでの表示に利用されます。日本語の入力が可能ですのでわかりやすい名前をつけてください。</div>
+			<div class="helptext"><?php echo __d('baser', 'サブサイト名を入力します。管理システムでの表示に利用されます。日本語の入力が可能ですのでわかりやすい名前をつけてください。') ?></div>
 			<?php echo $this->BcForm->error('Site.display_name') ?>
 		</td>
 	</tr>
 	<tr>
-		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required">必須</span></th>
-		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.title', array('type' => 'text', 'size' => '60')) ?>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.title', __d('baser', 'サイトタイトル')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
+		<td class="bca-form-table__input">
+			<?php echo $this->BcForm->input('Site.title', ['type' => 'text', 'size' => '60']) ?>
 			<i class="bca-icon--question-circle btn help bca-help"></i>
-			<div class="helptext">サブサイトのタイトルを入力します。タイトルタグに利用されます。</div>
+			<div class="helptext"><?php echo __d('baser', 'サブサイトのタイトルを入力します。タイトルタグに利用されます。') ?></div>
 			<?php echo $this->BcForm->error('Site.title') ?>
+		</td>
+	</tr>
+	<tr>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.keyword', __d('baser', 'サイト基本キーワード')) ?></th>
+		<td class="bca-form-table__input"><?php echo $this->BcForm->input('Site.keyword', ['type' => 'text', 'size' => 55, 'maxlength' => 255, 'counter' => true, 'class' => 'bca-textbox__input full-width']) ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<div id="helptextKeyword" class="helptext"><?php echo __d('baser', 'テンプレートで利用する場合は、<br>&lt;?php $this->BcBaser->keywords() ?&gt; で出力します。')?></div>
+			<?php echo $this->BcForm->error('Site.keyword') ?>
+		</td>
+	</tr>
+	<tr>
+		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.description', __d('baser', 'サイト基本説明文')) ?></th>
+		<td class="bca-form-table__input"><?php echo $this->BcForm->input('Site.description', ['type' => 'textarea', 'cols' => 20, 'rows' => 6, 'maxlength' => 255, 'counter' => true]) ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<div id="helptextDescription" class="helptext"><?php echo __d('baser', 'テンプレートで利用する場合は、<br>&lt;?php $this->BcBaser->description() ?&gt; で出力します。')?></div>
+			<?php echo $this->BcForm->error('Site.description') ?>
 		</td>
 	</tr>
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.main_site_id', __d('baser', 'メインサイト')) ?></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.main_site_id', array('type' => 'select', 'options' => $mainSites)) ?>
-			<?php echo $this->BcForm->input('Site.relate_main_site', array('type' => 'checkbox', 'label' => __d('baser', 'エイリアスを利用してメインサイトと自動連携する'))) ?>
+			<?php echo $this->BcForm->input('Site.main_site_id', ['type' => 'select', 'options' => $mainSites]) ?>
+			<?php echo $this->BcForm->input('Site.relate_main_site', ['type' => 'checkbox', 'label' => __d('baser', 'エイリアスを利用してメインサイトと自動連携する')]) ?>
 			<i class="bca-icon--question-circle btn help bca-help"></i>
 			<div class="helptext">
-				<p>サブサイトの主として連携させたいサイトを選択します。</p>
-				<p>
-					「エイリアスを利用してメインサイトと自動連携する」にチェックを入れておくと、メインサイトでコンテンツの追加や削除が発生した場合、
-					エイリアスを利用して自動的にサブサイトで同様の処理を実行します。
-				</p>
+				<p><?php echo __d('baser', 'サブサイトの主として連携させたいサイトを選択します。') ?></p>
+				<p><?php echo __d('baser', '「エイリアスを利用してメインサイトと自動連携する」にチェックを入れておくと、メインサイトでコンテンツの追加や削除が発生した場合、エイリアスを利用して自動的にサブサイトで同様の処理を実行します。') ?></p>
 			</div>
 			<?php echo $this->BcForm->error('Site.main_site_id') ?>
 		</td>
@@ -91,35 +109,35 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.device', __d('baser', 'デバイス・言語')) ?></th>
 		<td class=" bca-form-table__input">
 			<?php if($useSiteDeviceSetting): ?>
-				<small>[デバイス]</small>&nbsp;<?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
+				<small><?php echo __d('baser', '[デバイス]') ?></small>&nbsp;<?php echo $this->BcForm->input('Site.device', ['type' => 'select', 'options' => $devices]) ?>
 				<i class="bca-icon--question-circle btn help bca-help"></i>
-				<div class="helptext">サブサイトにデバイス属性を持たせ、サイトアクセス時、ユーザーエージェントを判定し適切なサイトを表示する機能を利用します。</div>
+				<div class="helptext"><?php echo __d('baser', 'サブサイトにデバイス属性を持たせ、サイトアクセス時、ユーザーエージェントを判定し適切なサイトを表示する機能を利用します。') ?></div>
 			<?php else: ?>
 				<?php echo $this->BcForm->input('Site.device', ['type' => 'hidden']) ?>
 			<?php endif ?>
 			<?php if($useSiteLangSetting): ?>
-				<small>[言語]</small><?php echo $this->BcForm->input('Site.lang', ['type' => 'select', 'options' => $langs]) ?>
+				<small><?php echo __d('baser', '[言語]') ?></small><?php echo $this->BcForm->input('Site.lang', ['type' => 'select', 'options' => $langs]) ?>
 				<i class="bca-icon--question-circle btn help bca-help"></i>
-				<div class="helptext">サブサイトに言語属性を持たせ、サイトアクセス時、ブラウザの言語設定を判定し適切なサイトを表示する機能を利用します。</div>
+				<div class="helptext"><?php echo __d('baser', 'サブサイトに言語属性を持たせ、サイトアクセス時、ブラウザの言語設定を判定し適切なサイトを表示する機能を利用します。') ?></div>
 			<?php else: ?>
 				<?php echo $this->BcForm->input('Site.lang', ['type' => 'hidden']) ?>
-			<?php endif ?>デバイス
+			<?php endif ?>
 			<div id="SectionAccessType" style="display:none">
-				<small>[アクセス設定]</small>
+				<small><?php echo __d('baser', '[アクセス設定]') ?></small>
 				<br>
-				<span id="SpanSiteSameMainUrl"><?php echo $this->BcForm->input('Site.same_main_url', array('type' => 'checkbox', 'label' => __d('baser', 'メインサイトと同一URLでアクセス'))) ?>&nbsp;
+				<span id="SpanSiteSameMainUrl"><?php echo $this->BcForm->input('Site.same_main_url', ['type' => 'checkbox', 'label' => __d('baser', 'メインサイトと同一URLでアクセス')]) ?>&nbsp;
 					<i class="bca-icon--question-circle btn help bca-help"></i>
-					<div class="helptext">メインサイトと同一URLでアクセスし、デバイス設定や言語設定を判定し、適切なサイトを表示します。このオプションをオフにした場合は、エイリアスを利用した別URLを利用したアクセスとなります。</div>
+					<div class="helptext"><?php echo __d('baser', 'メインサイトと同一URLでアクセスし、デバイス設定や言語設定を判定し、適切なサイトを表示します。このオプションをオフにした場合は、エイリアスを利用した別URLを利用したアクセスとなります。') ?></div>
 				</span>
 				<br>
-				<span id="SpanSiteAutoRedirect"><?php echo $this->BcForm->input('Site.auto_redirect', array('type' => 'checkbox', 'label' => __d('baser', 'メインサイトから自動的にリダイレクト'))) ?>&nbsp;
+				<span id="SpanSiteAutoRedirect"><?php echo $this->BcForm->input('Site.auto_redirect', ['type' => 'checkbox', 'label' => __d('baser', 'メインサイトから自動的にリダイレクト')]) ?>&nbsp;
 					<i class="bca-icon--question-circle btn help bca-help"></i>
-					<span class="helptext">メインサイトと別URLでアクセスする際、デバイス設定や言語設定を判定し、適切なサイトへリダイレクトします。</span>　
+					<span class="helptext"><?php echo __d('baser', 'メインサイトと別URLでアクセスする際、デバイス設定や言語設定を判定し、適切なサイトへリダイレクトします。') ?></span>　
 				</span>
 				<br>
-				<span id="SpanSiteAutoLink"><?php echo $this->BcForm->input('Site.auto_link', array('type' => 'checkbox', 'label' => __d('baser', '全てのリンクをサブサイト用に変換する'))) ?>&nbsp;
+				<span id="SpanSiteAutoLink"><?php echo $this->BcForm->input('Site.auto_link', ['type' => 'checkbox', 'label' => __d('baser', '全てのリンクをサブサイト用に変換する')]) ?>&nbsp;
 					<i class="bca-icon--question-circle btn help bca-help"></i>
-					<span class="helptext">メインサイトと別URLでアクセスし、エイリアスを利用して同一コンテンツを利用する場合、コンテンツ内の全てのリンクをサブサイト用に変換します。</span>
+					<span class="helptext"><?php echo __d('baser', 'メインサイトと別URLでアクセスし、エイリアスを利用して同一コンテンツを利用する場合、コンテンツ内の全てのリンクをサブサイト用に変換します。') ?></span>
 				</span>
 			</div>
 			<?php echo $this->BcForm->error('Site.device') ?>
@@ -130,17 +148,18 @@ $useSiteLangSetting = @$this->get('siteConfig')['use_site_lang_setting'];
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.theme', __d('baser', 'テーマ')) ?></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.theme', array('type' => 'select', 'options' => $themes)) ?>
+			<?php echo $this->BcForm->input('Site.theme', ['type' => 'select', 'options' => $themes]) ?>
 			<i class="bca-icon--question-circle btn help bca-help"></i>
-			<div class="helptext">サブサイトのテンプレートは、各テンプレートの配置フォルダ内にサイト名のサブフォルダを作成する事で別途配置する事ができますが、テーマフォルダ自体を別にしたい場合はここでテーマを指定します。</div>
+			<div class="helptext"><?php echo __d('baser', 'サブサイトのテンプレートは、各テンプレートの配置フォルダ内にサイト名のサブフォルダを作成する事で別途配置する事ができますが、テーマフォルダ自体を別にしたい場合はここでテーマを指定します。') ?></div>
 			<?php echo $this->BcForm->error('Site.theme') ?>
 		</td>
 	</tr>
 	<tr>
 		<th class="bca-form-table__label"><?php echo $this->BcForm->label('Site.status', __d('baser', '公開状態')) ?></th>
 		<td class=" bca-form-table__input">
-			<?php echo $this->BcForm->input('Site.status', array('type' => 'radio', 'options' => array(0 => __d('baser', '公開しない'), 1 => __d('baser', '公開する')))) ?>
+			<?php echo $this->BcForm->input('Site.status', ['type' => 'radio', 'options' => [0 => __d('baser', '公開しない'), 1 => __d('baser', '公開する')]]) ?>
 			<?php echo $this->BcForm->error('Site.status') ?>
 		</td>
 	</tr>
+	<?php echo $this->BcForm->dispatchAfterForm() ?>
 </table>

@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 4.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -16,14 +16,21 @@
  ?>
 
 
-<?php echo $this->BcForm->create('Content', array('url' => array('content_id' => $this->BcForm->value('Content.id')))) ?>
-<?php echo $this->BcForm->input('Content.alias_id', array('type' => 'hidden')) ?>
-<?php echo $this->BcForm->input('Content.site_id', array('type' => 'hidden')) ?>
+<?php echo $this->BcForm->create('Content', ['url' => ['content_id' => $this->BcForm->value('Content.id')]]) ?>
+<?php echo $this->BcFormTable->dispatchBefore() ?>
+<?php echo $this->BcForm->input('Content.alias_id', ['type' => 'hidden']) ?>
+<?php echo $this->BcForm->input('Content.site_id', ['type' => 'hidden']) ?>
 
 <?php $this->BcBaser->element('admin/contents/form_alias') ?>
 
+<?php echo $this->BcFormTable->dispatchAfter() ?>
+
 <div class="submit">
-	<?php echo $this->BcForm->submit(__d('baser', '保存'), array('class' => 'button bca-btn', 'data-bca-btn-type'=>'save', 'div' => false)) ?>
+	<?php echo $this->BcForm->submit(__d('baser', '保存'), [
+		'class' => 'button bca-btn',
+		'data-bca-btn-type'=>'save',
+		'div' => false
+	]) ?>
 </div>
 
 <?php echo $this->BcForm->end() ?>

@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Feed.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -23,13 +23,14 @@
 		<?php endif ?>
 	</td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['FeedConfig']['id']; ?></td>
-	<td class="bca-table-listup__tbody-td"><?php $this->BcBaser->link($data['FeedConfig']['name'], array('action' => 'edit', $data['FeedConfig']['id'])) ?></td>
+	<td class="bca-table-listup__tbody-td"><?php $this->BcBaser->link($data['FeedConfig']['name'], ['action' => 'edit', $data['FeedConfig']['id']]) ?></td>
 	<td class="bca-table-listup__tbody-td"><?php echo $data['FeedConfig']['display_number'] ?></td>
+	<?php echo $this->BcListTable->dispatchShowRow($data) ?>
 	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['FeedConfig']['created']); ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['FeedConfig']['modified']); ?></td>
 	<td class="bca-table-listup__tbody-td">
-		<?php $this->BcBaser->link('', array('controller' => 'feed_configs', 'action' => 'preview', $data['FeedConfig']['id']), array('title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'edit', $data['FeedConfig']['id']), array('title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg')) ?>
-		<?php $this->BcBaser->link('', array('action' => 'ajax_delete', $data['FeedConfig']['id']), array('title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg')) ?>
+		<?php $this->BcBaser->link('', ['controller' => 'feed_configs', 'action' => 'preview', $data['FeedConfig']['id']], ['title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg']) ?>
+		<?php $this->BcBaser->link('', ['action' => 'edit', $data['FeedConfig']['id']], ['title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
+		<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $data['FeedConfig']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg']) ?>
 	</td>
 </tr>

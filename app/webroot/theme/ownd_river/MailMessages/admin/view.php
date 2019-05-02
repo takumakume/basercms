@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Mail.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -20,18 +20,18 @@
 <table cellpadding="0" cellspacing="0"  class="list-table bca-form-table" id="ListTable">
 	
 	<tr>
-		<th class="col-head bca-form-table__label">NO</th>
+		<th class="col-head bca-form-table__label">No</th>
 		<td class="col-input bca-form-table__input"><?php echo $message['MailMessage']['id'] ?></td>
 	</tr>
 	<tr>
-		<th class="col-head bca-form-table__label">受信日時</th>
+		<th class="col-head bca-form-table__label"><?php echo __d('baser', '受信日時') ?></th>
 		<td class="col-input bca-form-table__input"><?php echo $this->BcTime->format('Y/m/d H:i:s', $message['MailMessage']['created']) ?></td>
 	</tr>
 	<?php
 	$groupField = null;
 	foreach ($mailFields as $key => $mailField) {
 		$field = $mailField['MailField'];
-		if ($field['use_field'] && $field['type'] != 'hidden') {
+		if ($field['use_field']) {
 			$nextKey = $key + 1;
 			/* 項目名 */
 			if ($groupField != $field['group_field'] || (!$groupField && !$field['group_field'])) {
@@ -77,18 +77,18 @@
 <div class="bca-actions">
 <?php 
 $this->BcBaser->link(__d('baser', '削除'), 
-	array(
+	[
 		'action' => 'delete', 
 		$mailContent['MailContent']['id'], 
-		$message['MailMessage']['id']), 
-	array(
+		$message['MailMessage']['id']], 
+	[
 		'class' => 'submit-token button bca-btn bca-actions__item', 
 		'data-bca-btn-type'=>'delete',
 		'data-bca-btn-size' => 'sm',
 		'data-bca-btn-color' => 'danger',
 		'data-bca-btn-type' => 'delete'
-	), 
-	sprintf(__d('baser', '受信メール NO「%s」を削除してもいいですか？'), $message['MailMessage']['id']), 
+	], 
+	sprintf(__d('baser', '受信メール No「%s」を削除してもいいですか？'), $message['MailMessage']['id']),
 	false
 ); 
 ?>

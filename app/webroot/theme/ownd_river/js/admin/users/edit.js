@@ -1,21 +1,23 @@
 $(function(){
 	$("#BtnSave").click(function(){
 		if($("#SelfUpdate").html()) {
-			if(confirm('更新内容をログイン情報に反映する為、一旦ログアウトします。よろしいですか？')) {
+			if(confirm(bcI18n.confirmMessage1)) {
+				$.bcUtil.showLoader();
 				return true;
 			}
 		} else {
+			$.bcUtil.showLoader();
 			return true;
 		}
 		return false;
 	});
 	$("#btnSetUserGroupDefault").click(function() {
-		if(!confirm('登録されている「よく使う項目」を、このユーザーが所属するユーザーグループの初期設定として登録します。よろしいですか？')) {
+		if(!confirm(bcI18n.confirmMessage2)) {
 			return true;
 		}
-		var data = {};
+		var data = {'data': []};
 		$("#DefaultFavorites li").each(function(i){
-			data[i] ={
+			data.data[i] ={
 				'name' : $(this).find('.favorite-name').val(),
 				'url' :$(this).find('.favorite-url').val()
 			};
@@ -27,7 +29,7 @@ $(function(){
 					key: $.bcToken.key
 				}
 			});
-			$.ajax({
+			return $.ajax({
 				url: $("#UserGroupSetDefaultFavoritesUrl").html(),
 				type: 'POST',
 				data: data,
@@ -39,28 +41,28 @@ $(function(){
 				success: function(result){
 					$("#ToTop a").click();
 					if(result) {
-						alertBox('登録されている「よく使う項目」を所属するユーザーグループの初期値として設定しました。');
+						$.bcUtil.showNoticeMessage(bcI18n.infoMessage1);
 					} else {
-						alertBox('処理に失敗しました。');
+						$.bcUtil.showAlertMessage(bcI18n.alertMessage1);
 					}
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown){
 					var errorMessage = '';
 					if(XMLHttpRequest.status == 404) {
-						errorMessage = '<br />'+'送信先のプログラムが見つかりません。';
+						errorMessage = '<br>' + bcI18n.alertMessage2;
 					} else {
 						if(XMLHttpRequest.responseText) {
-							errorMessage = '<br />'+XMLHttpRequest.responseText;
+							errorMessage = '<br>'+XMLHttpRequest.responseText;
 						} else {
-							errorMessage = '<br />'+errorThrown;
+							errorMessage = '<br>'+errorThrown;
 						}
 					}
-					alertBox('処理に失敗しました。('+XMLHttpRequest.status+')'+errorMessage);
+					$.bcUtil.showAlertMessage(bcI18n.alertMessage1 + '(' + XMLHttpRequest.status + ')' + errorMessage);
 				},
 				complete: function() {
 					$("#Waiting").hide();
 				}
 			});
-		});
+		}, {hideLoader: false});
 	});
 });

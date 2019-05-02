@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 2.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -16,8 +16,8 @@
 ?>
 
 
-<div id="FavoriteDeleteUrl" style="display: none"><?php $this->BcBaser->url(array('plugin' => null, 'controller' => 'favorites', 'action' => 'ajax_delete')) ?></div>
-<div id="FavoriteAjaxSorttableUrl" style="display:none"><?php $this->BcBaser->url(array('plugin' => null, 'controller' => 'favorites', 'action' => 'update_sort')) ?></div>
+<div id="FavoriteDeleteUrl" style="display: none"><?php $this->BcBaser->url(['plugin' => null, 'controller' => 'favorites', 'action' => 'ajax_delete']) ?></div>
+<div id="FavoriteAjaxSorttableUrl" style="display:none"><?php $this->BcBaser->url(['plugin' => null, 'controller' => 'favorites', 'action' => 'update_sort']) ?></div>
 
 <nav id="FavoriteMenu" class="bca-nav-favorite">
 
@@ -28,7 +28,7 @@
 	<ul class="favorite-menu-list bca-nav-favorite-list bca-collapse" id="favoriteBody">
 		<?php if (!empty($favorites)): ?>
 			<?php foreach ($favorites as $favorite): ?>
-				<?php $this->BcBaser->element('favorite_menu_row', array('favorite' => $favorite)) ?>
+				<?php $this->BcBaser->element('favorite_menu_row', ['favorite' => $favorite]) ?>
 			<?php endforeach ?>
 
 		<?php else: ?>
@@ -39,11 +39,11 @@
 </nav>
 
 <div id="FavoriteDialog" title="お気に入り登録" style="display:none">
-	<?php echo $this->BcForm->create('Favorite', array('url' => array('plugin' => null, 'action' => 'ajax'))) ?>
-	<?php echo $this->BcForm->input('Favorite.id', array('type' => 'hidden')) ?>
+	<?php echo $this->BcForm->create('Favorite', ['url' => ['plugin' => null, 'action' => 'ajax']]) ?>
+	<?php echo $this->BcForm->input('Favorite.id', ['type' => 'hidden']) ?>
 	<dl>
-		<dt><?php echo $this->BcForm->label('Favorite.name', __d('baser', 'タイトル')) ?></dt><dd><?php echo $this->BcForm->input('Favorite.name', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
-		<dt><?php echo $this->BcForm->label('Favorite.url', __d('baser', 'URL')) ?></dt><dd><?php echo $this->BcForm->input('Favorite.url', array('type' => 'text', 'size' => 30, 'class' => 'required')) ?></dd>
+		<dt><?php echo $this->BcForm->label('Favorite.name', __d('baser', 'タイトル')) ?></dt><dd><?php echo $this->BcForm->input('Favorite.name', ['type' => 'text', 'size' => 30, 'class' => 'required']) ?></dd>
+		<dt><?php echo $this->BcForm->label('Favorite.url', __d('baser', 'URL')) ?></dt><dd><?php echo $this->BcForm->input('Favorite.url', ['type' => 'text', 'size' => 30, 'class' => 'required']) ?></dd>
 	</dl>
 	<?php echo $this->BcForm->end() ?>
 </div>

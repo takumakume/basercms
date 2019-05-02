@@ -1,28 +1,28 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Blog.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * [ADMIN] ブログカテゴリ 一覧
  */
-$allowOwners = array();
+$allowOwners = [];
 if (isset($user['user_group_id'])) {
-	$allowOwners = array('', $user['user_group_id']);
+	$allowOwners = ['', $user['user_group_id']];
 }
-$this->BcBaser->js(array(
+$this->BcBaser->js([
 	'admin/libs/jquery.baser_ajax_data_list',
 	'admin/libs/jquery.baser_ajax_batch',
 	'admin/libs/baser_ajax_data_list_config',
 	'admin/libs/baser_ajax_batch_config'
-));
+]);
 $this->BcAdmin->addAdminMainBodyHeaderLinks([
 	'url' => ['action' => 'add', $this->request->params['pass'][0]],
 	'title' => __d('baser', '新規追加'),
@@ -87,7 +87,7 @@ $(function(){
 	});
 </script>
 
-<div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(array('controller' => 'blog_categories', 'action' => 'ajax_batch', $this->request->pass[0])) ?></div>
+<div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(['controller' => 'blog_categories', 'action' => 'ajax_batch', $this->request->pass[0]]) ?></div>
 <div id="AlertMessage" class="message" style="display:none"></div>
 <div id="MessageBox" style="display:none"><div id="flashMessage" class="notice-message"></div></div>
 <div id="DataList" class="bca-data-list"><?php $this->BcBaser->element('blog_categories/index_list') ?></div>

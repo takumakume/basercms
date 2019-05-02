@@ -1,30 +1,35 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Feed.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * [ADMIN] フィード設定一覧
  */
+$this->BcListTable->setColumnNumber(6);
+$this->BcBaser->i18nScript([
+    'message1' => __d('baser', 'データがありません。'),
+    'message2' => __d('baser', '削除に失敗しました。'),
+]);
 ?>
 
 
 <?php if ($this->action != 'admin_add'): ?>
 
 	<?php
-	$this->BcBaser->js(array(
+	$this->BcBaser->js([
 		'admin/libs/jquery.baser_ajax_data_list',
 		'admin/libs/jquery.baser_ajax_batch',
 		'admin/libs/baser_ajax_data_list_config',
 		'admin/libs/baser_ajax_batch_config'
-	));
+	]);
 	?>
 
 <?php
@@ -63,7 +68,7 @@ $(function(){
 				}
 			});
 		} else {
-			$(config.alertBox).html('削除に失敗しました。');
+			$(config.alertBox).html(bcI18n.message2);
 			$(config.alertBox).fadeIn(500);
 		}
 	};
@@ -72,7 +77,7 @@ $(function(){
 });
 	</script>
 
-	<div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(array('plugin' => 'feed', 'controller' => 'feed_details', 'action' => 'ajax_batch', $this->request->params['pass'][0])) ?></div>
+	<div id="AjaxBatchUrl" style="display:none"><?php $this->BcBaser->url(['plugin' => 'feed', 'controller' => 'feed_details', 'action' => 'ajax_batch', $this->request->params['pass'][0]]) ?></div>
 
 	<div class="section">
 
@@ -81,15 +86,19 @@ $(function(){
 			<?php echo __d('baser', 'フィード一覧')?> 
 		</h2>
 		<div class="bca-main__header-actions">
-			<a href="/admin/feed/feed_details/add/<?php echo $this->BcForm->value('FeedConfig.id') ?>" title="新規追加" class="bca-btn" data-bca-btn-type="add" data-bca-btn-size="sm">新規記事追加</a>	
+			<?php $this->BcBaser->link(__d('baser', '新規詳細設定追加'), ['controller' => 'feed_details', 'action' => 'add', $this->BcForm->value('FeedConfig.id')], [
+				'class' => 'bca-btn',
+				'data-bca-btn-type' => 'add',
+				'data-bca-btn-size' => 'sm'
+			]) ?>　
 		</div>
 
 		<div class="bca-data-list__top">
 			<!-- 一括処理 -->
 			<?php if ($this->BcBaser->isAdminUser()): ?>
 				<div class="bca-action-table-listup">
-					<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'), 'data-bca-select-size' =>'lg')) ?>
-					<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg')) ?>
+					<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['del' => __d('baser', '削除')], 'empty' => __d('baser', '一括処理'), 'data-bca-select-size' =>'lg']) ?>
+					<?php echo $this->BcForm->button(__d('baser', '適用'), ['id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'lg']) ?>
 				</div>
 			<?php endif ?>
 		</div>
@@ -104,6 +113,7 @@ $(function(){
 			<th scope="col" class="bca-table-listup__thead-th"><?php echo __d('baser', 'フィード名')?></th>
 			<th scope="col" class="bca-table-listup__thead-th"><?php echo __d('baser', 'カテゴリフィルター')?></th>
 			<th scope="col" class="bca-table-listup__thead-th"><?php echo __d('baser', 'キャッシュ時間')?></th>
+			<?php echo $this->BcListTable->dispatchShowHead() ?>
 			<th scope="col" class="bca-table-listup__thead-th"><?php echo __d('baser', '登録日')?><br /><?php echo __d('baser', '更新日')?></th>
 			<th scope="col" class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクション')?></th>
 			</tr>
@@ -111,11 +121,11 @@ $(function(){
 			<tbody>
 				<?php if (!empty($feedConfig['FeedDetail'])): ?>
 					<?php foreach ($feedConfig['FeedDetail'] as $feedDetail): ?>
-						<?php $this->BcBaser->element('feed_details/index_row', array('data' => $feedDetail)) ?>
+						<?php $this->BcBaser->element('feed_details/index_row', ['data' => $feedDetail]) ?>
 					<?php endforeach; ?>
 				<?php else: ?>
 					<tr>
-						<td colspan="6"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。「追加する」ボタンをクリックしてフィード詳細を登録してください。')?></p></td>
+						<td colspan="<?php echo $this->BcListTable->getColumnNumber() ?>"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。「追加する」ボタンをクリックしてフィード詳細を登録してください。')?></p></td>
 					</tr>
 				<?php endif; ?>
 			</tbody>

@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 2.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -21,7 +21,7 @@
 	<div class="head"><?php echo __d('baser', '新しいプラグインのインストール方法')?></div>
 	<ol>
 		<li><?php echo __d('baser', 'app/Plugin/ フォルダに、入手したプラグインのフォルダをアップロードします。')?></li>
-		<li><?php echo sprintf(__d('baser', 'プラグイン一覧に、新しいプラグインが表示されますので、その行の%sをクリックします。'), $this->BcBaser->getImg('admin/icn_tool_install.png'))?></li>
+		<li><?php echo sprintf(__d('baser', 'プラグイン一覧に、新しいプラグインが表示されますので、その行の %s をクリックします。'), $this->BcBaser->getImg('admin/icn_tool_install.png'))?></li>
 		<li><?php echo __d('baser', '登録画面が表示されますので「登録」ボタンをクリックしてインストールを完了します。')?></li>
 	</ol>
 </div>

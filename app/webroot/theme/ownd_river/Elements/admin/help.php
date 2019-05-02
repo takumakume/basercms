@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 2.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
@@ -23,7 +23,7 @@ if (empty($help)) {
 
 	<h2 class="head bca-help__title">
 		<i class="bca-icon--question-circle" data-bca-btn-size="md"></i>
-		ヘルプ
+		<?php echo __d('baser', 'ヘルプ') ?>
 	</h2>
 
 	<div class="body bca-help__body">

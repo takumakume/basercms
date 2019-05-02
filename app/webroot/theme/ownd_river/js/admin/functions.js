@@ -166,12 +166,12 @@ function p(data) {
 	String.prototype.sprintf = function() {
 		var str = this + '';
 		var args = Array.prototype.slice.call(arguments);
-
+		
 		var ph = true;
 		if (str.indexOf('%s', 0) != -1) {
 			ph = false;
 		}
-
+		
 		if (args.length === 1) {
 			if (ph) {
 				return str.replace(/%1$s/g, args[0]);

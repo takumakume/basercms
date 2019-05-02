@@ -19,7 +19,8 @@ $(function () {
 	$.bcTree.init({
 		isAdmin: $("#AdminContentsIndexScript").attr('data-isAdmin'),
 		isUseMoveContents: $("#AdminContentsIndexScript").attr('data-isUseMoveContents'),
-		adminPrefix: $("#AdminContentsIndexScript").attr('data-adminPrefix')
+		adminPrefix: $("#AdminContentsIndexScript").attr('data-adminPrefix'),
+		editInIndexDisabled: $("#AdminContentsIndexScript").attr('data-editInIndexDisabled')
 	});
 
 	// マウスダウンイベント
@@ -48,8 +49,8 @@ $(function () {
 
 	loadView();
 	
-	$.baserAjaxDataList.config.methods.del.confirm = 'コンテンツをゴミ箱に移動してもよろしいですか？';
-	$.baserAjaxBatch.config.methods.del.confirm = '選択したデータを全てゴミ箱に移動します。よろしいですか？\n※ エイリアスは直接削除します。';
+	$.baserAjaxDataList.config.methods.del.confirm = bcI18n.confirmMessage1;
+	$.baserAjaxBatch.config.methods.del.confirm = bcI18n.confirmMessage2;
 	$.baserAjaxBatch.config.methods.unpublish.result = function() {
 		$.bcUtil.showLoader();
 		loadTable();
@@ -65,20 +66,31 @@ $(function () {
 		$.bcUtil.showLoader();
 		$("#ToTop a").click();
 		loadTable();
-		$.bcUtil.showNoticeMessage('ターゲットと同じフォルダにコピー「' + $.parseJSON(result).title + '」を作成しました。一覧に表示されていない場合は検索してください。');
+		$.bcUtil.showNoticeMessage(bcI18n.infoMessage1.sprintf($.parseJSON(result).title));
 	};
 	$.baserAjaxDataList.init();
 	$.baserAjaxBatch.init({ url: $.baseUrl + '/' + $.bcTree.config.adminPrefix + '/contents/ajax_batch'});
 	
-	// $("#Search").before($("#ViewSetting"));
-	
+	//$("#Search").before($("#ViewSetting"));
+
+	// 検索の際強制的に表示設定を表敬式に設定
+	// ここで検索処理を登録する代わりに basreAjaxDataList側のイベントを削除
 	$("#BtnSearchSubmit").click(function(){
 		contentsIndexSearchOpened = true;
 		$("input[name='data[ViewSetting][list_type]']:eq(1)").prop('checked', true);
 		loadView();
+		return false;
 	});
-	// basreAjaxDataList側の検索ボタンクリックイベントを削除
 	$._data($("#BtnSearchSubmit").get(0)).events.click.shift();
+	$._data($("#ContentIndexForm").get(0)).events.submit.shift();
+
+	$("#BtnOpenTree").click(function(){
+		$.bcTree.jsTree.open_all();
+	});
+	$("#BtnCloseTree").click(function(){
+		$.bcTree.jsTree.close_all();
+		$.bcTree.jsTree.open_node($.bcTree.jsTree.get_json(), false, false);
+	});
 	
 /**
  * 表示初期化
@@ -123,6 +135,7 @@ $(function () {
 				} else {
 					contentsIndexSearchOpened = true;
 				}
+				$("#GrpChangeTreeOpenClose").show();
 				break;
 			case "2":
 				loadTable();
@@ -132,6 +145,7 @@ $(function () {
 				} else {
 					$("#Search").hide();
 				}
+				$("#GrpChangeTreeOpenClose").hide();
 				break;
 		}
 

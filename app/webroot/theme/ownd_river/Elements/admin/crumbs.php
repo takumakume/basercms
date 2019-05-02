@@ -1,20 +1,20 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 4.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * [ADMIN] パンくずナビゲーション
  */
 if ($this->viewPath != 'dashboard') {
-	$this->BcBaser->addCrumb('<span itemprop="title" class="bca-icon--home"><span class="bca-icon-label">ホーム</span></span>', array('plugin' => null, 'controller' => 'dashboard'));
+	$this->BcBaser->addCrumb('<span itemprop="title" class="bca-icon--home"><span class="bca-icon-label">' . __d('baser', 'ホーム') . '</span></span>', ['plugin' => null, 'controller' => 'dashboard']);
 }
 $crumbs = $this->BcBaser->getCrumbs();
 if ($this->name == 'CakeError') {
@@ -29,10 +29,10 @@ if (!empty($crumbs)) {
 		}
 		if ($this->BcArray->last($crumbs, $key)) {
 			if ($this->viewPath != 'home' && $crumb['name']) {
-				$this->BcBaser->addCrumb($crumb['name']);
+				$this->BcBaser->addCrumb(h($crumb['name']));
 			}
 		} else {
-			$this->BcBaser->addCrumb(strip_tags($crumb['name']), $crumb['url']);
+			$this->BcBaser->addCrumb(h($crumb['name']), $crumb['url']);
 		}
 	}
 }

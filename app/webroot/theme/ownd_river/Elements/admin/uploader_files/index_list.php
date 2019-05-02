@@ -1,13 +1,13 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Uploader.View
  * @since			baserCMS v 3.0.10
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 /**
  * @var BcAppView $this
@@ -34,10 +34,10 @@ $this->BcBaser->js([
 	<?php if(!$installMessage): ?>
 	<div>
 		<?php if($uploaderCategories): ?>
-		<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px')) ?>&nbsp;
+		<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', ['type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId, 'style' => 'width:100px']) ?>&nbsp;
 		<?php endif ?>
 		<span id="SpanUploadFile<?php echo $listId ?>">
-			<?php echo $this->BcForm->input('UploaderFile.file', array('type' => 'file', 'id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file')) ?>
+			<?php echo $this->BcForm->input('UploaderFile.file', ['type' => 'file', 'id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file', 'div' => false]) ?>
 		</span>
 	</div>
 	<?php endif ?>
@@ -56,10 +56,10 @@ $this->BcBaser->js([
 		<div>
 			<label for="UploaderFileUploaderCategoryId">アップロード</label>
 			<?php if($uploaderCategories): ?>
-				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', array('type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId)) ?>
+				<?php echo $this->BcForm->input('UploaderFile.uploader_category_id', ['type' => 'select', 'options' => $uploaderCategories, 'empty' => __d('baser', 'カテゴリ指定なし'), 'id' => 'UploaderFileUploaderCategoryId'.$listId]) ?>
 			<?php endif ?>
 				<span id="SpanUploadFile<?php echo $listId ?>">
-					<?php echo $this->BcForm->input('UploaderFile.file', array('type' => 'file', 'id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file')) ?>
+					<?php echo $this->BcForm->input('UploaderFile.file', ['type' => 'file', 'id'=>'UploaderFileFile'.$listId, 'class' => 'uploader-file-file', 'div' => false]) ?>
 				</span>
 		</div>
 	<?php endif ?>
@@ -75,24 +75,24 @@ $this->BcBaser->js([
 
 <thead class="bca-table-listup__thead">
 	<tr>
-		<th class="bca-table-listup__thead-th">NO</th>
-		<th class="bca-table-listup__thead-th">イメージ</th>
-		<th class="bca-table-listup__thead-th">カテゴリ</th>
-		<th class="bca-table-listup__thead-th">ファイル名<br />説明文</th>
-		<th class="bca-table-listup__thead-th">公開状態</th>
-		<th class="bca-table-listup__thead-th">投稿者</th>
-		<th class="bca-table-listup__thead-th">投稿日<br />編集日</th>
-		<th class="bca-table-listup__thead-th">アクション</th>
+		<th class="bca-table-listup__thead-th">No</th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'イメージ') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'カテゴリ') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'ファイル名') ?><br><?php echo __d('baser', '説明文') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '公開状態') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '投稿者') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '投稿日') ?><br><?php echo __d('baser', '編集日') ?></th>
+		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
 	</tr>
 </thead>
 <?php if ($files): ?>
 <tbody>
 	<?php foreach ($files as $file): ?>
-		<?php $this->BcBaser->element('uploader_files/index_row', array('file' => $file, 'users' => $users, 'uploaderCategories' => $uploaderCategories)) ?>
+		<?php $this->BcBaser->element('uploader_files/index_row', ['file' => $file, 'users' => $users, 'uploaderCategories' => $uploaderCategories]) ?>
 	<?php endforeach ?>
 </tbody>
 <?php else: ?>
-<tbody><tr><td colspan="8" class="no-data">ファイルが存在しません</td></tr></tbody>
+<tbody><tr><td colspan="8" class="no-data"><?php echo __d('baser', 'ファイルが存在しません') ?></td></tr></tbody>
 <?php endif ?>
 </table>
 

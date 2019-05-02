@@ -1,25 +1,28 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Blog.View
  * @since			baserCMS v 0.1.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * [ADMIN] ブログ記事コメント 一覧　テーブル
  */
+$this->BcListTable->setColumnNumber(6);
 ?>
+
+
 <!-- 一括処理 -->
 <div class="bca-data-list__top">
 <?php if ($this->BcBaser->isAdminUser()): ?>
 	<div class="bca-action-table-listup">
-		<?php echo $this->BcForm->input('ListTool.batch', array('type' => 'select', 'options' => array('publish' => '公開', 'unpublish' => __d('baser', '非公開'), 'del' => __d('baser', '削除')), 'empty' => __d('baser', '一括処理'))) ?>
-		<?php echo $this->BcForm->button(__d('baser', '適用'), array('id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'sm')) ?>
+		<?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select', 'options' => ['publish' => '公開', 'unpublish' => __d('baser', '非公開'), 'del' => __d('baser', '削除')], 'empty' => __d('baser', '一括処理')]) ?>
+		<?php echo $this->BcForm->button(__d('baser', '適用'), ['id' => 'BtnApplyBatch', 'disabled' => 'disabled' , 'class' => 'bca-btn', 'data-bca-btn-size' => 'sm']) ?>
 	</div>
 <?php endif ?>
 	<div class="bca-data-list__sub">
@@ -37,53 +40,54 @@
 		<th class="bca-table-listup__thead-th">
 			<?php 
 			echo $this->Paginator->sort('no', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'No'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'No')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'No'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'No')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			); 
 			?>
 		</th>
 		<th class="bca-table-listup__thead-th">
 			<?php echo $this->Paginator->sort('name', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '投稿者'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '投稿者')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '投稿者'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '投稿者')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			); 
 			?>
 		</th>
 		<th class="bca-table-listup__thead-th">
 			<?php 
 			echo $this->Paginator->sort('email', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'メール'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'メール')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'メール'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'メール')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			); 
 			?>
 			<br />
 			<?php 
 			echo $this->Paginator->sort('url',
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'URL'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'URL')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'URL'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'URL')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			 ); 
 			 ?>
 		</th>
 		<th class="bca-table-listup__thead-th">
 			<?php 
 			echo $this->Paginator->sort('message', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'メッセージ'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'メッセージ')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', 'メッセージ'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', 'メッセージ')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			); 
 			?>
 		</th>
+		<?php echo $this->BcListTable->dispatchShowHead() ?>
 		<th class="bca-table-listup__thead-th">
 			<?php 
 			echo $this->Paginator->sort('created', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '投稿日'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '投稿日')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '投稿日'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '投稿日')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			); 
 			?>
 			<br />
 			<?php 
 			echo $this->Paginator->sort('modified', 
-				array('asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '更新日'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '更新日')),
-				array('escape' => false, 'class' => 'btn-direction bca-table-listup__a')
+				['asc' => '<i class="bca-icon--asc"></i>'. __d('baser', '更新日'), 'desc' => '<i class="bca-icon--desc"></i>'. __d('baser', '更新日')],
+				['escape' => false, 'class' => 'btn-direction bca-table-listup__a']
 			); 
 			?>
 		</th>
@@ -95,10 +99,10 @@
 <tbody class="bca-table-listup__tbody">
 	<?php if (!empty($dbDatas)): ?>
 		<?php foreach ($dbDatas as $data): ?>
-			<?php $this->BcBaser->element('blog_comments/index_row', array('data' => $data)) ?>
+			<?php $this->BcBaser->element('blog_comments/index_row', ['data' => $data]) ?>
 		<?php endforeach; ?>
 	<?php else: ?>
-		<tr><td colspan="6" class="bca-table-listup__tbody-td"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。') ?></p></td></tr>
+		<tr><td colspan="<?php echo $this->BcListTable->getColumnNumber() ?>" class="bca-table-listup__tbody-td"><p class="no-data"><?php echo __d('baser', 'データが見つかりませんでした。') ?></p></td></tr>
 	<?php endif; ?>
 </tbody>
 </table>

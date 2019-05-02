@@ -11,6 +11,7 @@
 
 $(function(){
 	var safeModeOn = $("#AdminSiteConfigsFormScript").attr('data-safeModeOn');
+	var isAdminSsl = $("#AdminSiteConfigsFormScript").attr('data-isAdminSsl');
 	/**
 	 * 「保存」ボタンを押下した際の動作
 	 */
@@ -18,15 +19,37 @@ $(function(){
 		if (!isSafeModeCheck()) {
 			return false;
 		}
-		if (!hasCheckSmtpInput()) {
+		if (!isAdminSslCheck()) {
 			return false;
 		}
+		$.bcUtil.showLoader();
 	});
+
+	function isAdminSslCheck() {
+		if(isAdminSsl == "0" && $("input[name='data[SiteConfig][admin_ssl]']:checked").val() == "1") {
+			if(!$("#SiteConfigSslUrl").val()) {
+				alert(bcI18n.alertMessage1);
+				window.location.hash = 'SiteConfigSslUrl';
+				return false;
+			}
+			var adminSslAlert = bcI18n.confirmMessage1;
+			$.bcConfirm.show({
+				title			: bcI18n.confirmTitle1,
+				message			: adminSslAlert,
+				defaultCancel	: true,
+				ok				: function(){
+					$.bcUtil.showLoader();
+					$("#SiteConfigFormForm").submit();
+				}
+			});
+			return false;
+		}
+		return true;
+	}
 
 	function isSafeModeCheck() {
 		var theme = $("#SiteConfigTheme").val();
-		var safemodeAlert = '機能制限のセーフモードで動作しています。テーマの切り替えを行う場合、あらかじめ切り替え対象のテーマ内に、データベースに登録されているページカテゴリ用のフォルダを作成しておき、書込権限を与えておく必要があります。\n'+
-			'ページカテゴリ用のフォルダが存在しない状態でテーマの切り替えを実行すると、対象ページカテゴリ内のWebページは正常に表示できなくなりますのでご注意ください。';
+		var safemodeAlert = bcI18n.alertMessage2;
 
 		if(safeModeOn && (theme != $("#SiteConfigTheme").val())) {
 			if(!confirm(safemodeAlert)) {
@@ -38,21 +61,20 @@ $(function(){
 
 	// SMTP送信テスト
 	$("#BtnCheckSendmail").click(function(){
-		if(!confirm('テストメールを送信します。いいですか？')) {
+		if(!confirm(bcI18n.confirmMessage2)) {
 			return false;
 		}
 		$.bcToken.check(function(){
-			$("#SiteConfigFormForm").append($.bcToken.getHiddenToken());
-			$.ajax({
+			return $.ajax({
 				type: 'POST',
-				url: $.baseUrl + '/admin/site_configs/check_sendmail',
+				url: $.baseUrl + '/' + $.bcUtil.adminPrefix + '/site_configs/check_sendmail',
 				data: $("#SiteConfigFormForm").serialize(),
 				beforeSend: function() {
 					$("#ResultCheckSendmail").hide();
 					$("#AjaxLoaderCheckSendmail").show();
 				},
 				success: function(result){
-					$("#ResultCheckSendmail").html("テストメールを送信しました。");
+					$("#ResultCheckSendmail").html(bcI18n.infoMessage1);
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown) {
 					var errorMessage = '';
@@ -61,14 +83,14 @@ $(function(){
 					} else {
 						errorMessage = errorThrown;
 					}
-					$("#ResultCheckSendmail").html("テストメールを送信に失敗しました。" + errorMessage);
+					$("#ResultCheckSendmail").html(bcI18n.alertMessage3 + errorMessage);
 				},
 				complete: function() {
 					$("#ResultCheckSendmail").show();
 					$("#AjaxLoaderCheckSendmail").hide();
 				}
 			});
-		});
+		}, {loaderType: 'none'});
 		return false;
 	});
 

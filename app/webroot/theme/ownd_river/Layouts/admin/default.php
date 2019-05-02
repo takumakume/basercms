@@ -1,42 +1,39 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Baser.View
  * @since			baserCMS v 2.0.0
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 
 /**
  * [ADMIN] レイアウト
+ *
+ * @var BcAppView $this
  */
 ?>
-<!DOCTYPE html>
+<?php $this->BcBaser->docType() ?>
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="robots" content="noindex,nofollow" />
 		<?php $this->BcBaser->title() ?>
 		<?php
-		$this->BcBaser->css(array(
-      '../js/admin/vendors/bootstrap-4.1.3/bootstrap.min',
+		$this->BcBaser->css([
+      		'../js/admin/vendors/bootstrap-4.1.3/bootstrap.min',
 			'admin/style.css',
 			'admin/jquery-ui/jquery-ui.min',
 			'../js/admin/vendors/jquery.jstree-3.3.1/themes/proton/style.min',
 			'../js/admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min',
-			'admin/colorbox/colorbox-1.6.1'))
+			'admin/colorbox/colorbox-1.6.1'])
 		?>
-
-		<?php # if($favoriteBoxOpened): ?>
-			<?php # $this->BcBaser->css('admin/sidebar_opened') ?>
-		<?php # endif ?>
-
-		<!--[if IE]><?php $this->BcBaser->js(array('admin/vendors/excanvas')) ?><![endif]-->
+		<!--[if IE]><?php $this->BcBaser->js(['admin/vendors/excanvas']) ?><![endif]-->
 		<?php
-        echo $this->BcBaser->declarationI18n();
+		echo $this->BcBaser->declarationI18n();
         echo $this->BcBaser->i18nScript([
 			'commonCancel'                  => __d('baser', 'キャンセル'),
 			'commonSave'                    => __d('baser', '保存'),
@@ -61,14 +58,14 @@
 			'bcConfirmTitle1'               => __d('baser', 'ダイアログ'),
             'bcConfirmAlertMessage1'        => __d('baser', 'メッセージを指定してください。'),
             'bcConfirmAlertMessage2'        => __d('baser', 'コールバック処理が登録されていません。'),
-            'favoriteTitle1'                => __d('baser', 'お気に入り登録'),
-			'favoriteTitle2'                => __d('baser', 'お気に入り編集'),
+            'favoriteTitle1'                => __d('baser', 'よく使う項目登録'),
+			'favoriteTitle2'                => __d('baser', 'よく使う項目編集'),
             'favoriteAlertMessage1'         => __d('baser', '並び替えの保存に失敗しました。'),
-			'favoriteAlertMessage2'         => __d('baser', 'お気に入りの追加に失敗しました。'),
+			'favoriteAlertMessage2'         => __d('baser', 'よく使う項目の追加に失敗しました。'),
         ], ['inline' => true]);
         ?>
 		<?php
-		$this->BcBaser->js(array(
+		$this->BcBaser->js([
 			'admin/vue.min',
 			'admin/vendors/jquery-2.1.4.min',
 			'admin/vendors/jquery-ui-1.11.4.min',
@@ -91,7 +88,7 @@
 			'admin/sidebar',
 			'admin/startup',
 			'admin/favorite',
-			'admin/permission'))
+			'admin/permission'])
 		?>
 	<script>
 		$.bcUtil.init({
@@ -105,12 +102,12 @@
 	<body id="<?php $this->BcBaser->contentsName(true) ?>" class="normal">
 
   <div class="bca-data">
-    <div id="BaseUrl" hidden><?php echo $this->request->base ?></div>
-    <div id="SaveFavoriteBoxUrl" hidden><?php $this->BcBaser->url(array('plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_favorite_box')) ?></div>
-    <div id="SaveSearchBoxUrl" hidden><?php $this->BcBaser->url(array('plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_search_box', $this->BcBaser->getContentsName(true))) ?></div>
-    <div id="SearchBoxOpened" hidden><?php echo $this->Session->read('Baser.searchBoxOpened.' . $this->BcBaser->getContentsName(true)) ?></div>
-    <div id="CurrentPageName" hidden><?php $this->BcBaser->contentsTitle() ?></div>
-    <div id="CurrentPageUrl" hidden><?php echo ($this->request->url == Configure::read('Routing.prefixes.0')) ? '/admin/dashboard/index' : '/' . $this->request->url; ?></div>
+	<div id="BaseUrl" style="display: none"><?php echo $this->request->base ?></div>
+	<div id="SaveFavoriteBoxUrl" style="display:none"><?php $this->BcBaser->url(['plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_favorite_box']) ?></div>
+	<div id="SaveSearchBoxUrl" style="display:none"><?php $this->BcBaser->url(['plugin' => '', 'controller' => 'dashboard', 'action' => 'ajax_save_search_box', $this->BcBaser->getContentsName(true)]) ?></div>
+	<div id="SearchBoxOpened" style="display:none"><?php echo $this->Session->read('Baser.searchBoxOpened.' . $this->BcBaser->getContentsName(true)) ?></div>
+	<div id="CurrentPageName" style="display: none"><?php echo h($this->BcBaser->getContentsTitle()) ?></div>
+	<div id="CurrentPageUrl" style="display: none"><?php echo ($this->request->url == Configure::read('Routing.prefixes.0')) ? '/' . BcUtil::getAdminPrefix() . '/dashboard/index' : '/' . h($this->request->url); ?></div>
     <!-- Waiting -->
     <div id="Waiting" class="waiting-box bca-waiting-box" hidden>
       <div class="corner10">
@@ -135,7 +132,7 @@
 
 						<div class="bca-main__header">
 
-							<h1 class="bca-main__header-title"><?php $this->BcBaser->contentsTitle() ?></h1>
+							<h1 class="bca-main__header-title"><?php h($this->BcBaser->contentsTitle()) ?></h1>
 
 							<div class="bca-main__header-actions">
 								<?php $this->BcBaser->element('main_body_header_links'); ?>
@@ -169,7 +166,9 @@
 						<div id="BcMessageBox"><div id="BcSystemMessage" class="notice-message"></div></div>
 
 						<div class="bca-main__contents clearfix">
+							<?php echo $this->BcLayout->dispatchContentsHeader() ?>
 							<?php $this->BcBaser->content() ?>
+							<?php echo $this->BcLayout->dispatchContentsFooter() ?>
 						</div>
 
 					<!-- / bca-main__body --></article>
@@ -178,7 +177,12 @@
 
 			<!-- / #Wrap --></div>
 
-		<?php $this->BcBaser->footer() ?>
+<?php $bcUtilLoginUser = BcUtil::loginUser(); ?>
+<?php if (!empty($bcUtilLoginUser)): ?>
+	<?php $this->BcBaser->footer([], ['cache' => ['key' => '_admin_footer']]) ?>
+<?php else: ?>
+	<?php $this->BcBaser->footer() ?>
+<?php endif ?>
 
 	<!-- / #Page --></div>
 

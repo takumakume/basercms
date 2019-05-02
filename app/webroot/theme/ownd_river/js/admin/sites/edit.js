@@ -13,14 +13,29 @@
  */
 
 $(function(){
+	var alias = $("#SiteAlias").val();
     $("#BtnDelete").click(function(){
-		if(confirm('サブサイトを削除してもよろしいですか？\nサブサイトに関連しているコンテンツは全てゴミ箱に入ります。')) {
+		if(confirm(bcI18n.confirmMessage1)) {
 			var form = $(this).parents('form');
-			form.attr('action', $.baseUrl + '/admin/sites/delete');
+			form.attr('action', $(this).data('action'));
 			form.submit();
 		}
         return false;
     });
+    $("#BtnSave").click(function(){
+    	if(alias && alias != $("#SiteAlias").val()) {
+			$.bcConfirm.show({
+				'title': bcI18n.confirmTitle1,
+				'message': bcI18n.confirmMessage2,
+				'ok':function(){
+					$.bcUtil.showLoader();
+					$("#SiteAdminEditForm").submit();
+				}
+			});
+			return false;
+		}
+		$.bcUtil.showLoader();
+	});
 
 	$("#SiteMainSiteId").change(loadDeviceAndLang);
 	$("#SiteDevice, #SiteLang").change(loadOptions);
@@ -32,7 +47,7 @@ $(function(){
  * デバイスと言語の表示設定
  */
 	function loadDeviceAndLang() {
-		$.bcUtil.ajax($.baseUrl + '/admin/sites/ajax_get_selectable_devices_and_lang/' + $("#SiteMainSiteId").val() + '/' + $("#SiteId").val(), function(result){
+		$.bcUtil.ajax($.baseUrl + '/' + $.bcUtil.adminPrefix + '/sites/ajax_get_selectable_devices_and_lang/' + $("#SiteMainSiteId").val() + '/' + $("#SiteId").val(), function(result){
 			var selectDevice = $("#SiteDevice");
 			var selectLang = $("#SiteLang");
 			var device = selectDevice.val();
@@ -44,7 +59,7 @@ $(function(){
 				selectDevice.append($('<option>').val(value).text(name).prop('selected', (value === device)));
 			});
 			$.each(result.langs, function (value, name) {
-				selectLang.append($('<option>').val(value).text(name).prop('selected', (name === lang)));
+				selectLang.append($('<option>').val(value).text(name).prop('selected', (value === lang)));
 			});
 			loadOptions();
 		}, {type: 'GET', loaderType: 'after', loaderSelector: '#SiteMainSiteId'});

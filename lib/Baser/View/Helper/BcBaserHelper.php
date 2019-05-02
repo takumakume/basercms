@@ -928,7 +928,7 @@ class BcBaserHelper extends AppHelper {
 /**
  * 画像タグを出力する
  *
- * @param array $path 画像のパス（img フォルダからの相対パス）
+ * @param string $path 画像のパス（img フォルダからの相対パス）
  * @param array $options オプション（主にHTML属性）
  *	※ パラメータについては、HtmlHelper::image() を参照。
  * @return void
@@ -940,7 +940,7 @@ class BcBaserHelper extends AppHelper {
 /**
  * 画像タグを取得する
  *
- * @param string $path 画像のパス（img フォルダからの相対パス）
+ * @param mixed $path 画像のパス（img フォルダからの相対パス）
  * @param array $options オプション（主にHTML属性）
  * ※ パラメータについては、HtmlHelper::image() を参照。
  * @return string 画像タグ

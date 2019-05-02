@@ -88,7 +88,7 @@ $(function(){
 			}
 			$("#FavoriteAjaxForm").submit();
 			$("#FavoriteName").focus();
-
+			
 		},
 		close: function() {
 			$("#FavoriteId").val('');
@@ -208,7 +208,7 @@ $(function(){
 			});
 		}, {hideLoader: false});
 	}
-
+	
 /**
  * 行を初期化
  */
@@ -269,7 +269,7 @@ $(function(){
 		});
 
 	}
-
+	
 /**
  * コンテキストメニュークリックハンドラ
  */

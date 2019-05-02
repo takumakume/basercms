@@ -1,20 +1,20 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Uploader.View
  * @since			baserCMS v 3.0.10
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
 /**
  * index
  *
  * @var \BcAppView $this
  */
-$this->BcBaser->i18nScript([
+echo $this->BcBaser->i18nScript([
     'uploaderCancel' => __d('baser', 'キャンセル'),
     'uploaderSave' => __d('baser', '保存'),
 	'uploaderEdit' => __d('baser', '編集'),
@@ -24,15 +24,15 @@ $this->BcBaser->i18nScript([
 	'uploaderAlertMessage3' => __d('baser', 'このファイルの編集・削除はできません。'),
 	'uploaderAlertMessage4' => __d('baser', 'サーバーでの処理に失敗しました。'),
     'uploaderConfirmMessage1' => __d('baser', '本当に削除してもよろしいですか？')
-]);
-$this->BcBaser->js(array('Uploader.admin/uploader_files/uploader_list'));
+], ['inline' => true]);
+$this->BcBaser->js(['Uploader.admin/uploader_files/uploader_list']);
 if(!isset($listId)) {
 	$listId = '';
 }
 ?>
 
 
-<?php $this->BcBaser->link('ListUrl', array('action' => 'ajax_list', $listId, 'num' => $this->passedArgs['num']), array('id' => 'ListUrl'.$listId, 'style' => 'display:none')) ?>
+<?php $this->BcBaser->link('ListUrl', ['action' => 'ajax_list', $listId, 'num' => $this->passedArgs['num']], ['id' => 'ListUrl'.$listId, 'style' => 'display:none']) ?>
 
 
 <!-- JS用設定値 -->
@@ -56,6 +56,6 @@ if(!isset($listId)) {
 <?php endif ?>
 
 <!-- 編集ダイアログ -->
-<div id="EditDialog" title="ファイル情報編集">
-	<?php $this->BcBaser->element('uploader_files/form', array('listId', $listId, 'popup' => true)) ?>
+<div id="EditDialog" title="<?php echo __d('baser', 'ファイル情報編集') ?>">
+	<?php $this->BcBaser->element('uploader_files/form', ['listId', $listId, 'popup' => true]) ?>
 </div>

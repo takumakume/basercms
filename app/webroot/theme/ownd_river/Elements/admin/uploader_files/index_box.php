@@ -1,43 +1,43 @@
 <?php
 /**
- * baserCMS :  Based Website Development Project <http://basercms.net>
- * Copyright (c) baserCMS Users Community <http://basercms.net/community/>
+ * baserCMS :  Based Website Development Project <https://basercms.net>
+ * Copyright (c) baserCMS Users Community <https://basercms.net/community/>
  *
  * @copyright		Copyright (c) baserCMS Users Community
- * @link			http://basercms.net baserCMS Project
+ * @link			https://basercms.net baserCMS Project
  * @package			Uploader.View
  * @since			baserCMS v 3.0.10
- * @license			http://basercms.net/license/index.html
+ * @license			https://basercms.net/license/index.html
  */
-$classies = array();
+$classies = [];
 if (!$this->Uploader->isPublish($file)) {
-	$classies = array('unpublish', 'disablerow', 'selectable-file');
+	$classies = ['unpublish', 'disablerow', 'selectable-file'];
 	$statusPublish = false;
 } else {
-	$classies = array('publish', 'selectable-file');
+	$classies = ['publish', 'selectable-file'];
 	$statusPublish = true;
 }
 $class = ' class="' . implode(' ', $classies) . ' bca-file-list__item"';
 ?>
 
 <span<?php echo $class; ?> id="selectedFile<?php echo $file['UploaderFile']['id'] ?>">
-	<?php echo $this->Uploader->file($file, array(
+	<?php echo $this->Uploader->file($file, [
 		'width' => 120,
 		'height'=> 120,
 		'size'	=> 'small',
-		'alt'	=> $file['UploaderFile']['alt'],
+		'alt'	=> h($file['UploaderFile']['alt']),
 		'style' => 'width:120px;height:120px'
-	)) ?>
+	]) ?>
 	<div style="text-align:right">
-		<span class="id"><?php echo $file['UploaderFile']['id'] ?></span>.<span><?php echo $this->BcText->truncate($file['UploaderFile']['alt'], 13) ?></span>
+		<span class="id"><?php echo $file['UploaderFile']['id'] ?></span>.<span><?php echo $this->BcText->truncate(h($file['UploaderFile']['alt']), 13) ?></span>
 	</div>
 	<span class="name"><?php echo $file['UploaderFile']['name'] ?></span>
 	<div style="text-align:right;margin-top:2px">
-		<span class="created">
-			[公開状態：<?php echo $this->BcText->booleanMark($statusPublish); ?>]&nbsp;<?php echo $this->BcTime->format('Y.m.d',$file['UploaderFile']['created']) ?>
+		<span class="created" style="white-space: nowrap">
+			[<?php echo __d('baser', '公開状態') ?>：<?php echo $this->BcText->booleanMark($statusPublish); ?>]&nbsp;<?php echo $this->BcTime->format('Y.m.d',$file['UploaderFile']['created']) ?>
 		</span>
 	</div>
-	<div class="user-name" style="text-align:right"><span><?php echo $this->BcText->arrayValue($file['UploaderFile']['user_id'], $users) ?></span></div>
+	<div class="user-name" style="text-align:right"><span><?php echo h($this->BcText->arrayValue($file['UploaderFile']['user_id'], $users)) ?></span></div>
 	<div style="display:none">
 		<span class="modified"><?php echo $this->BcTime->format('Y.m.d',$file['UploaderFile']['modified']) ?></span>
 		<span class="small"><?php echo $file['UploaderFile']['small'] ?></span>
@@ -50,6 +50,6 @@ $class = ' class="' . implode(' ', $classies) . ' bca-file-list__item"';
 		<span class="publish-end"><?php echo $this->BcTime->format('Y/m/d', $file['UploaderFile']['publish_end']) ?></span>
 		<span class="publish-end-time"><?php echo $this->BcTime->format('H:i:s', $file['UploaderFile']['publish_end']) ?></span>
 		<span class="uploader-category-id"><?php echo $file['UploaderFile']['uploader_category_id'] ?></span>
-		<span class="alt"><?php echo $file['UploaderFile']['alt'] ?></span>
+		<span class="alt"><?php echo h($file['UploaderFile']['alt']) ?></span>
 	</div>
 </span>

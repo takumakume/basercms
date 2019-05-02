@@ -1,7 +1,30 @@
 $(function(){
 
+	var fullUrl = $("#AdminBlogBLogPostsEditScript").attr('data-fullurl');
 	var previewurlBase = $("#AdminBlogBLogPostsEditScript").attr('data-previewurl');
-p(previewurlBase);
+
+	$("input[type=text]").each(function(){
+		$(this).keypress(function(e){
+			if(e.which && e.which === 13) {
+				return false;
+			}
+			return true;
+		});
+	});
+
+	if (!document.queryCommandSupported('copy')) {
+		$("#BtnCopyUrl").hide();
+	}
+	$("#BtnCopyUrl").click(function(){
+		var copyArea = $("<textarea style=\" opacity:0; width:1px; height:1px; margin:0; padding:0; border-style: none;\"/>");
+		copyArea.text(fullUrl);
+		$(this).after(copyArea);
+		copyArea.select();
+		document.execCommand("copy");
+		copyArea.remove();
+		return false;
+	});
+
 	$("#BtnPreview").click(function(){
 		window.open('', 'preview');
 		var form = $(this).parents('form');
