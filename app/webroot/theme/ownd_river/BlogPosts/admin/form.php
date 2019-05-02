@@ -304,32 +304,23 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 
 <?php echo $this->BcForm->end() ?>
 
-<div id="AddBlogCategoryForm" style="display:none">
-	<h3><?php echo __d('baser', '新しいブログカテゴリを入力してください。')?></h3>
-	<table>
-		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.title', __d('baser', 'カテゴリタイトル')) ?>&nbsp;<span class="required">*</span></th>
-			<td class="col-input">
-				<?php echo $this->BcForm->input('BlogCategory.title', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-			</td>
-		</tr>
-		<tr>
-			<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'カテゴリ名')) ?>&nbsp</th>
-			<td class="col-input">
-				<?php echo $this->BcForm->input('BlogCategory.name', ['type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true]) ?>
-				<i class="bca-icon--question-circle btn help bca-help"></i>
-				<div id="helptextName" class="helptext">
-					<ul>
-						<li><?php echo __d('baser', 'URLに利用されます')?></li>
-						<li><?php echo __d('baser', '半角のみで入力してください')?></li>
-						<li><?php echo __d('baser', '空の場合はカテゴリタイトルから値が自動で設定されます')?></li>
-					</ul>
-				</div>
-			</td>
-		</tr>
-	</table>
-	<div class="submit">
-		<?php echo $this->BcForm->submit(__d('baser', '保存'), ['div' => false, 'class' => 'button', 'id' => 'BtnBlogCategorySave']) ?>
-		<?php echo $this->BcForm->button(__d('baser', 'キャンセル'), ['div' => false, 'class' => 'button', 'id' => 'BtnBlogCategoryCancel']) ?>
-	</div>
+<div id="AddBlogCategoryForm" title="<?php echo __d('baser', 'カテゴリ新規追加') ?>" style="display:none">
+	<dl>
+		<dt><?php echo $this->BcForm->label('BlogCategory.title', __d('baser', 'カテゴリタイトル')) ?></dt>
+		<dd>
+			<?php echo $this->BcForm->input('BlogCategory.title', ['type' => 'text', 'size' => 40, 'maxlength' => 255, 'value' => '', 'autofocus' => true]) ?>
+		</dd>
+		<dt><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'カテゴリ名')) ?></dt>
+		<dd>
+			<?php echo $this->BcForm->input('BlogCategory.name', ['type' => 'text', 'size' => 40, 'maxlength' => 255, 'value' => '']) ?>
+			<i class="bca-icon--question-circle btn help bca-help"></i>
+			<div id="helptextName" class="helptext">
+				<ul>
+					<li><?php echo __d('baser', 'URLに利用されます')?></li>
+					<li><?php echo __d('baser', '半角のみで入力してください')?></li>
+					<li><?php echo __d('baser', '空の場合はカテゴリタイトルから値が自動で設定されます')?></li>
+				</ul>
+			</div>
+		</dd>
+	</dl>
 </div>
