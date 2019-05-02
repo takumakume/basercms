@@ -72,7 +72,7 @@ $this->BcBaser->js('Feed.admin/feed_details/form', false);
 					'options' => $this->BcForm->getControlSource('cache_time'),
 					'empty' => __d('baser', 'なし')])
 				?>
-<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpCacheTime', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('FeedDetail.cache_time') ?>
 				<div id="helptextCacheTime" class="helptext"><?php echo __d('baser', '負荷を軽減させる為、フィード情報をキャッシュさせる時間を選択してください。') ?></div>
 			</td>
@@ -80,7 +80,7 @@ $this->BcBaser->js('Feed.admin/feed_details/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('FeedDetail.category_filter', __d('baser', 'カテゴリフィルター')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('FeedDetail.category_filter', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpCategoryFilter', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+<i class="bca-icon--question-circle btn help bca-help"></i>
 <?php echo $this->BcForm->error('FeedDetail.category_filter') ?>
 				<div id="helptextCategoryFilter" class="helptext">
 					<ul>

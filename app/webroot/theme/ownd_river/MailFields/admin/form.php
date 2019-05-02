@@ -44,7 +44,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.field_name', __d('baser', 'フィールド名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.field_name', ['type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpFieldName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.field_name') ?>
 				<div id="helptextFieldName" class="helptext"><?php echo __d('baser', '重複しない半角英数字で入力してください。') ?></div>
 			</td>
@@ -53,7 +53,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.name', __d('baser', '項目名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.name', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.name') ?>
 				<div id="helptextName" class="helptext"><?php echo __d('baser', '項目を特定しやすいわかりやすい名前を入力してください。日本語可。') ?></div>
 			</td>
@@ -62,7 +62,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.type', __d('baser', 'タイプ')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.type', ['type' => 'select', 'options' => $this->BcForm->getControlSource('type')]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpType', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.type') ?>
 				<div id="helptextType" class="helptext">
 					<ul>
@@ -77,7 +77,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.head', __d('baser', '項目見出し')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.head', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpHead', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.head') ?>
 				<div id="helptextHead" class="helptext"><?php echo __d('baser', ' グループとして設定する場合、同グループの２番目以降のフィールドについてこの項目の入力は不要です。 ') ?></div>
 			</td>
@@ -128,7 +128,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.source', __d('baser', '選択リスト')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.source', ['type' => 'textarea', 'cols' => 35, 'rows' => 4]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpSource', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.source') ?>
 				<div id="helptextSource" class="helptext">
 					<ul>
@@ -150,7 +150,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.rows', __d('baser', '行数')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.rows', ['type' => 'text', 'size' => 10, 'maxlength' => 255]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpRows', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.rows') ?>
 				<div id="helptextRows" class="helptext"><?php echo __d('baser', 'テキストボックスの場合の行数を指定します。') ?></div>
 			</td>
@@ -176,7 +176,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.valid_ex', __d('baser', '拡張入力チェック')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.valid_ex', ['type' => 'select', 'multiple' => 'checkbox', 'options' => $this->BcForm->getControlSource('valid_ex')]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpValidEx', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.valid_ex') ?>
 				<div id="helptextValidEx" class="helptext">
 					<ul>
@@ -193,7 +193,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.group_field', __d('baser', 'グループ名')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.group_field', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpGroupField', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.group_field') ?>
 				<div id="helptextGroupField" class="helptext">
 					<ul>
@@ -207,7 +207,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.group_valid', __d('baser', 'グループ入力チェック')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.group_valid', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpGroupValid', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('MailField.group_valid') ?>
 				<div id="helptextGroupValid" class="helptext">
 					<ul>
@@ -236,7 +236,7 @@ $this->BcBaser->js('Mail.admin/mail_fields/form', false);
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('MailField.separator', __d('baser', '区切り文字')) ?></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('MailField.separator', ['type' => 'text', 'size' => 40, 'maxlength' => 255]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpGroupValid', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<div id="helpSeparator" class="helptext">
 					<ul>
 						<li><?php echo __d('baser', '空白の場合は自動で「＆nbsp;＆nbsp;」が挿入されます')?></li>

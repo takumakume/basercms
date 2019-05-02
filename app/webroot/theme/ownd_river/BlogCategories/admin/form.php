@@ -52,7 +52,7 @@ $fullUrl = $this->BcBaser->getContentsUrl($this->request->params['Content']['url
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'カテゴリ名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
 				<?php echo $this->BcForm->input('BlogCategory.name', ['type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<?php echo $this->BcForm->error('BlogCategory.name') ?>
 				<div id="helptextName" class="helptext">
 					<ul>
@@ -96,7 +96,7 @@ $fullUrl = $this->BcBaser->getContentsUrl($this->request->params['Content']['url
 							'options' => $owners,
 							'empty' => __d('baser', '指定しない')])
 						?>
-						<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpOwnerId', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+						<i class="bca-icon--question-circle btn help bca-help"></i>
 						<?php echo $this->BcForm->error('BlogCategory.owner_id') ?>
 					<?php else: ?>
 						<?php echo $this->BcText->arrayValue($this->request->data['BlogCategory']['owner_id'], $owners) ?>

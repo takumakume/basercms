@@ -317,7 +317,7 @@ $this->BcBaser->js('Blog.admin/blog_posts/form', false, [
 			<th class="col-head"><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'カテゴリ名')) ?>&nbsp</th>
 			<td class="col-input">
 				<?php echo $this->BcForm->input('BlogCategory.name', ['type' => 'text', 'size' => 40, 'maxlength' => 255, 'autofocus' => true]) ?>
-				<?php echo $this->BcHtml->image('admin/icn_help.png', ['id' => 'helpName', 'class' => 'btn help', 'alt' => __d('baser', 'ヘルプ')]) ?>
+				<i class="bca-icon--question-circle btn help bca-help"></i>
 				<div id="helptextName" class="helptext">
 					<ul>
 						<li><?php echo __d('baser', 'URLに利用されます')?></li>
