@@ -16,8 +16,7 @@
   input[type="tel"],
   input[type="url"],
   input[type="checkbox"],
-  input[type="email"],
-  select {
+  input[type="email"]{
     &:focus {
       box-shadow: $focus_shadow;
       border-color: $color_primary;
