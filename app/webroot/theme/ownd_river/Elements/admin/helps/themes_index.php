@@ -18,7 +18,7 @@
 
 <p><?php echo __d('baser', 'ここではテーマを切り替えたり、テーマファイルを閲覧、編集したりとテーマの管理を行う事ができます。<br />なお、コアテンプレートとは、baserCMSコアで準備しているテンプレートで、内包しているテーマファイルの編集、削除は行えませんが、現在のテーマへコピーする事ができます。')?></p>
 <ul>
-	<li><?php echo sprintf(__d('baser', 'テーマを切り替えるには、対象テーマの %s ボタンをクリックします。'), $this->BcBaser->getImg('admin/icn_tool_apply.png'))?></li>
+	<li><?php echo sprintf(__d('baser', 'テーマを切り替えるには、対象テーマの %s ボタンをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="apply"></i>')?></li>
 	<li><?php echo sprintf(__d('baser', 'テーマを丸ごとコピーするには、対象テーマの %s ボタンをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="copy"></i>')?></li>
 	<li><?php echo sprintf(__d('baser', 'テーマファイルを閲覧、編集する場合は、対象テーマの %s ボタンをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="edit"></i>')?></li>
 	<li><?php echo sprintf(__d('baser', 'テーマを削除するには、対象テーマの  %s ボタンをクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="delete"></i>')?></li>
