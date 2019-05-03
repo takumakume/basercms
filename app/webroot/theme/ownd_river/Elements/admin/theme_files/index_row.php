@@ -58,7 +58,7 @@ array_push($params, $data['name']);
 <?php else: ?>
 		<?php $this->BcBaser->link(
 			'<i class="bca-icon--file" data-bca-icon-size="md"></i>'.$data['name'],
-			array_merge(['action' => 'index', $theme, $plugin, $type], $params),
+			array_merge(['action' => 'edit', $theme, $type], $params),
         	['class' => '']
 		) ?>
 <?php endif ?>
