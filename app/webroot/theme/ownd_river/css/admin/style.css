@@ -3599,7 +3599,8 @@ div.jstree-publish-even {
   position: relative;
   flex-basis: 100%;
   overflow: auto;
-  background: #f8f8f8; }
+  background: #f8f8f8;
+  line-height: 1.4; }
   .bca-main__body {
     padding: 0; }
   .bca-main__contents {
@@ -4725,6 +4726,8 @@ body {
     margin-bottom: 8px;
     line-height: 1.5;
     border-bottom: 1px solid #eeeeea; }
+    .bca-feed__list-item-date {
+      font-size: 80%; }
 
 .bca-update-log__list {
   margin: 20px 0 30px;
@@ -4735,6 +4738,8 @@ body {
     margin-bottom: 8px;
     line-height: 1.5;
     border-bottom: 1px solid #eeeeea; }
+    .bca-update-log__list-item .date {
+      font-size: 80%; }
 
 .bca-search {
   font-size: 1.6rem;
@@ -6250,7 +6255,7 @@ table.cake-sql-log tr td {
   .ui-widget input[type="email"]:focus,
   .ui-widget select:focus {
     box-shadow: 0 0 4px 0px #FF6F61;
-    border-color: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
     border-width: 1px; }
 
 .ui-tabs {
