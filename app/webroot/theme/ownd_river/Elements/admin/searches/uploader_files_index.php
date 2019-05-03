@@ -32,7 +32,7 @@ if(!isset($listId)) {
 		<?php echo $this->BcForm->label('BlogPost.blog_tag_id', __d('baser', 'タイプ'), ['class' => 'bca-search__input-item-label']) ?>
 		<?php echo $this->BcForm->input('Filter.uploader_type', array('type' => 'radio', 'options' => array('all'=>__d('baser', '指定なし'), 'img' => __d('baser', '画像'), 'etc' => __d('baser', '画像以外')), 'id' => 'FilterUploaderType'.$listId)) ?>
 	</span>
-	<div class="button bca-search__btns">
-		<div class="bca-search__btns-item"><?php echo $this->BcForm->submit(__d('baser', '検索'), array('id' => 'BtnFilter'.$listId, 'div' => false, 'class' => 'button filter-control bca-btn', 'data-bca-btn-type' => 'search')) ?></div>
-	</div>
+	<span class="button bca-search__btns">
+		<span class="bca-search__btns-item"><?php echo $this->BcForm->submit(__d('baser', '検索'), array('id' => 'BtnFilter'.$listId, 'div' => false, 'class' => 'button filter-control bca-btn', 'data-bca-btn-type' => 'search')) ?></span>
+	</span>
 </div>

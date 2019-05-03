@@ -3364,9 +3364,6 @@ body * {
   border: 1px solid #CCC;
   margin-top: 25px; }
 
-.ui-widget-header {
-  background: #EFEFEF; }
-
 .ui-tabs .ui-tabs-nav li {
   font-weight: bold; }
 
@@ -6231,7 +6228,9 @@ table.cake-sql-log tr td {
 .ui-widget input[type="search"],
 .ui-widget input[type="tel"],
 .ui-widget input[type="url"],
-.ui-widget input[type="email"] {
+.ui-widget input[type="checkbox"],
+.ui-widget input[type="email"],
+.ui-widget select {
   display: inline-block;
   outline: none;
   padding: 0.7em 0.5em 0.6em 0.5em;
@@ -6239,7 +6238,7 @@ table.cake-sql-log tr td {
   box-sizing: border-box;
   border: 1px solid #ccc;
   line-height: 1.6;
-  font-size: 1.4rem;
+  font-size: 1.4rem !important;
   color: #424f44; }
   .ui-widget input[type="text"]:focus,
   .ui-widget input[type="password"]:focus,
@@ -6247,9 +6246,11 @@ table.cake-sql-log tr td {
   .ui-widget input[type="search"]:focus,
   .ui-widget input[type="tel"]:focus,
   .ui-widget input[type="url"]:focus,
-  .ui-widget input[type="email"]:focus {
+  .ui-widget input[type="checkbox"]:focus,
+  .ui-widget input[type="email"]:focus,
+  .ui-widget select:focus {
     box-shadow: 0 0 4px 0px #FF6F61;
-    border-color: #FF6F61;
+    border-color: 0 0 4px 0px #FF6F61;
     border-width: 1px; }
 
 .ui-tabs {
@@ -6441,11 +6442,13 @@ table.cake-sql-log tr td {
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
   border: 1px solid #eeeeea !important; }
 
-.ui-widget-header {
+.ui-widget-header,
+.cke_dialog_title {
   border: none !important;
   background-color: #ccc !important;
   background-image: none !important;
-  color: #424f44 !important; }
+  color: #424f44 !important;
+  box-shadow: none !important; }
 
 .ui-datepicker table {
   font-size: 1.4rem !important; }
@@ -6468,6 +6471,196 @@ table.cake-sql-log tr td {
 
 .ui-dialog td {
   padding: 1em 0 !important; }
+
+#UploaderSearch {
+  border: 1px solid #eeeeea !important;
+  background-color: #FFF !important;
+  padding: 8px 10px !important; }
+
+.cke_dialog .cke_dialog_ui_radio_input {
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  margin: 0px; }
+  .cke_dialog .cke_dialog_ui_radio_input + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 2em;
+    font-size: 1.4rem; }
+  .cke_dialog .cke_dialog_ui_radio_input[data-bca-radio-size=lg] + label {
+    font-size: 2rem; }
+  .cke_dialog .cke_dialog_ui_radio_input[data-bca-radio-size=sm] + label {
+    font-size: 1.4rem; }
+  .cke_dialog .cke_dialog_ui_radio_input + label:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1.5em;
+    height: 1.5em;
+    box-sizing: border-box;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 50%; }
+  .cke_dialog .cke_dialog_ui_radio_input:checked + label:before {
+    background: #FF6F61;
+    box-shadow: 0 0 0px 4px #fff inset; }
+  .cke_dialog .cke_dialog_ui_radio_input:focus + label:before {
+    box-shadow: 0 0 0px 4px #fff inset, 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
+    border-width: 1px; }
+
+.cke_dialog select.bca-select__select,
+.cke_dialog select.cke_dialog_ui_input_select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../../img/admin/icn_select.svg) no-repeat center right 0.5em/10px auto, #FFFFFF !important;
+  font-size: 1.4rem;
+  padding: 0 26px 0 4px !important;
+  border: 1px solid #ccc;
+  line-height: 1.4 !important;
+  height: auto !important;
+  width: auto !important;
+  outline: none;
+  border-radius: 3px;
+  color: #424f44;
+  box-shadow: none; }
+  .cke_dialog select.bca-select__select[data-bca-select-size=lg],
+  .cke_dialog select.cke_dialog_ui_input_select[data-bca-select-size=lg] {
+    font-size: 1.6rem; }
+  .cke_dialog select.bca-select__select[data-bca-select-size=sm],
+  .cke_dialog select.cke_dialog_ui_input_select[data-bca-select-size=sm] {
+    font-size: 1.2rem; }
+  .cke_dialog select.bca-select__select:focus,
+  .cke_dialog select.cke_dialog_ui_input_select:focus {
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
+    border-width: 1px; }
+
+.cke_dialog input.bca-textbox__input,
+.cke_dialog input.cke_dialog_ui_input_text,
+.cke_dialog input.cke_dialog_ui_input_password,
+.cke_dialog textarea.cke_dialog_ui_input_textarea {
+  line-height: 1.4 !important;
+  height: auto !important;
+  padding: 0 4px !important;
+  display: inline-block;
+  outline: none;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  color: #424f44; }
+  .cke_dialog input.bca-textbox__input[data-input-text-size=lg],
+  .cke_dialog input.cke_dialog_ui_input_text[data-input-text-size=lg],
+  .cke_dialog input.cke_dialog_ui_input_password[data-input-text-size=lg],
+  .cke_dialog textarea.cke_dialog_ui_input_textarea[data-input-text-size=lg] {
+    font-size: 1.6rem; }
+  .cke_dialog input.bca-textbox__input[data-input-text-size=sm],
+  .cke_dialog input.cke_dialog_ui_input_text[data-input-text-size=sm],
+  .cke_dialog input.cke_dialog_ui_input_password[data-input-text-size=sm],
+  .cke_dialog textarea.cke_dialog_ui_input_textarea[data-input-text-size=sm] {
+    font-size: 1.2rem; }
+  .cke_dialog input.bca-textbox__input[data-input-text-size=full-counter],
+  .cke_dialog input.cke_dialog_ui_input_text[data-input-text-size=full-counter],
+  .cke_dialog input.cke_dialog_ui_input_password[data-input-text-size=full-counter],
+  .cke_dialog textarea.cke_dialog_ui_input_textarea[data-input-text-size=full-counter] {
+    width: calc(100% - 80px); }
+  .cke_dialog input.bca-textbox__input[data-margin=bottom],
+  .cke_dialog input.cke_dialog_ui_input_text[data-margin=bottom],
+  .cke_dialog input.cke_dialog_ui_input_password[data-margin=bottom],
+  .cke_dialog textarea.cke_dialog_ui_input_textarea[data-margin=bottom] {
+    margin-bottom: 10px; }
+  .cke_dialog input.bca-textbox__input:focus,
+  .cke_dialog input.cke_dialog_ui_input_text:focus,
+  .cke_dialog input.cke_dialog_ui_input_password:focus,
+  .cke_dialog textarea.cke_dialog_ui_input_textarea:focus {
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61 !important;
+    border-width: 1px; }
+
+.cke_dialog .cke_dialog_body label {
+  margin-bottom: 2px !important;
+  margin-top: 2px !important;
+  display: inline-block !important;
+  color: #424f44 !important;
+  font-size: 12px; }
+
+.cke_dialog .bca-btn {
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.7em 1em 0.6em;
+  line-height: 1.2;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  outline: none;
+  color: #424f44;
+  text-decoration: none;
+  background-image: linear-gradient(white 10%, #f4f5f1 100%);
+  transition: all .3s ease-out 0s;
+  white-space: nowrap; }
+  .cke_dialog .bca-btn::before {
+    margin-right: 4px;
+    color: #424f44; }
+  .cke_dialog .bca-btn:hover {
+    text-decoration: none;
+    color: #424f44;
+    background-color: #eeeeea;
+    background-image: linear-gradient(white 100%, white 100%); }
+  .cke_dialog .bca-btn:focus {
+    box-shadow: 0 0 4px 0px #FF6F61; }
+
+.cke_dialog .cke_dialog_contents .file-list {
+  padding: 0; }
+  .cke_dialog .cke_dialog_contents .file-list #DivPanelList .file-list-body {
+    border: none; }
+
+.cke_dialog a.cke_dialog_ui_button_ok {
+  text-shadow: none;
+  border: 1px solid #b6b6b6;
+  border-bottom-color: #999;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5), 0 0 2px rgba(255, 255, 255, 0.15) inset, 0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  background: #e4e4e4;
+  background-image: linear-gradient(to bottom, #fff, #e4e4e4);
+  color: #333; }
+
+.cke_dialog a.cke_dialog_ui_button_ok span {
+  text-shadow: none; }
+
+.cke_dialog a.cke_dialog_ui_button_ok:hover {
+  border-color: #9e9e9e;
+  background: #ccc;
+  background-image: linear-gradient(to bottom, #f2f2f2, #ccc); }
+
+.cke_dialog a.cke_dialog_ui_button_ok:focus, .cke_dialog a.cke_dialog_ui_button_ok:active {
+  border-color: #969696;
+  outline: 0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4) inset; }
+
+.cke_dialog .cke_dialog_contents .file-list-body {
+  margin-top: 14px; }
+
+.cke_dialog .bca-table-listup__thead-th {
+  font-weight: bold; }
+
+.cke_dialog .bca-table-listup__thead-th,
+.cke_dialog .bca-table-listup__tbody-td {
+  vertical-align: middle !important;
+  padding: 7px 7px !important;
+  border-bottom: 1px solid #eeeeea; }
+
+.cke_dialog .cke_dialog_contents .file-list-body {
+  background-color: #FFF;
+  padding: 0; }
+
+.cke_dialog tr:hover .bca-table-listup__tbody-td {
+  background: inherit; }
 
 .jstree-proton .jstree-wholerow-hovered {
   background: #ddd !important; }

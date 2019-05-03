@@ -82,7 +82,9 @@ $this->BcBaser->js([
 		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '公開状態') ?></th>
 		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '投稿者') ?></th>
 		<th class="bca-table-listup__thead-th"><?php echo __d('baser', '投稿日') ?><br><?php echo __d('baser', '編集日') ?></th>
+<?php if(!$listId): ?>
 		<th class="bca-table-listup__thead-th"><?php echo __d('baser', 'アクション') ?></th>
+<?php endif ?>
 	</tr>
 </thead>
 <?php if ($files): ?>
