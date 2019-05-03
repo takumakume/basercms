@@ -43,7 +43,11 @@ $this->BcBaser->js('admin/pages/edit', false);
 </div>
 
 <?php if (BcUtil::isAdminUser()): ?>
-<div class="bca-section">
+<section class="bca-section" data-bca-section-type="form-group">
+	<div class="bca-collapse__action">
+    	<button type="button" class="bca-collapse__btn" data-bca-collapse="collapse" data-bca-target="#pageSettingBody" aria-expanded="false" aria-controls="pageSettingBody">詳細設定&nbsp;&nbsp;<i class="bca-icon--chevron-down bca-collapse__btn-icon"></i></button>
+	</div>
+  <div class="bca-collapse" id="pageSettingBody" data-bca-state="">
 	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="bca-form-table__label"><?php echo $this->BcForm->label('Page.page_template', __d('baser', '固定ページテンプレート')) ?></th>
@@ -70,6 +74,7 @@ $this->BcBaser->js('admin/pages/edit', false);
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
+</section>
 <?php endif ?>
 
 <?php echo $this->BcFormTable->dispatchAfter() ?>
