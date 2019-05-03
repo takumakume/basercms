@@ -2515,27 +2515,22 @@
 .waiting-box {
   background-color: #FFF;
   position: fixed;
-  text-align: center;
   z-index: 10000;
   width: 100%;
   height: 100%;
-  opacity: 0.3;
-  filter: alpha(opacity=30);
-  -moz-opacity: 0.3;
-  padding-top: 200px;
-  display: none; }
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6; }
 
 .waiting-box div {
-  background-color: #CCC;
-  border: 5px solid #999;
-  font-size: x-small;
   margin: 0 auto;
-  padding: 60px 20px;
-  text-align: center;
-  height: 40px;
-  width: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   font-size: 10px;
-  font-weight: bold;
+  padding-bottom: 100px;
   font-family: Verdana, Geneva, sans-serif; }
 
 .waiting-box img {

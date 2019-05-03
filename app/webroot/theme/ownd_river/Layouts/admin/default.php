@@ -111,8 +111,7 @@
     <!-- Waiting -->
     <div id="Waiting" class="waiting-box bca-waiting-box" hidden>
       <div class="corner10">
-        <?php echo $this->Html->image('admin/ajax-loader.gif') ?><br />
-        WAIT
+        <?php echo $this->Html->image('admin/ajax-loader.gif') ?>
       </div>
     </div>
   </div>
