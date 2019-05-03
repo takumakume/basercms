@@ -153,9 +153,8 @@
     &[data-content-is-expanded="true"] {
       .bca-nav__sub-title {
         color: $color_text_primary;
-        background: $color_background_primary;
         cursor: default;
-        background: $color_background_menu_current;
+        background: $color_background_menu_dark;
         &-label {
           //color: #fff;
         }

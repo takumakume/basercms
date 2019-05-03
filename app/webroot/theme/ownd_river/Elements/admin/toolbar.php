@@ -132,7 +132,7 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 				</li>
 				<?php if (!empty($user) && in_array('admin', $currentUserAuthPrefixes)): ?>
 					<li>
-						<?php $this->BcBaser->link(__d('baser', 'キャッシュクリア'), ['prefix' => 'admin', 'plugin'=> false, 'controller' => 'site_configs', 'action' => 'del_cache'], ['confirm' => __d('baser', 'キャッシュクリアします。いいですか？')]) ?>　
+						<?php $this->BcBaser->link(__d('baser', 'キャッシュクリア'), ['admin' => true, 'plugin'=> false, 'controller' => 'site_configs', 'action' => 'del_cache'], ['confirm' => __d('baser', 'キャッシュクリアします。いいですか？')]) ?>　
 					</li>
 				<?php endif ?>
 			</ul>

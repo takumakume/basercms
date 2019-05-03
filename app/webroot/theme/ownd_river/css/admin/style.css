@@ -4198,9 +4198,8 @@ body {
               opacity: 1; }
     .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-title {
       color: #424f44;
-      background: #f8f8f8;
       cursor: default;
-      background: #f8f8f8; }
+      background: #ddd; }
     .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list {
       display: block;
       position: relative;
