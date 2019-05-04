@@ -89,7 +89,6 @@ $config['BcApp'] = [
 					'SiteConfigsInfo' => ['title' => __d('baser', '環境情報'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'site_configs', 'action' => 'info']],
 					'ThemeFiles' => ['title' => __d('baser', 'コアテンプレート確認'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'theme_files', 'action' => 'index', 'core']],
 					'ToolsMaintenance' => ['title' => __d('baser', 'データメンテナンス'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'maintenance']],
-					'ThemesResetData' => ['title' => __d('baser', 'データリセット'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'themes', 'action' => 'reset_data']],
 					'ToolsLog' => ['title' => __d('baser', 'ログメンテナンス'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'log']],
 					'ToolsWriteSchema' => ['title' => __d('baser', 'スキーマファイル生成'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'write_schema']],
 					'ToolsLoadSchema' => ['title' => __d('baser', 'スキーマファイル読込'), 'url' => ['admin' => true, 'plugin' => null, 'controller' => 'tools', 'action' => 'load_schema']],

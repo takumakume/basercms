@@ -352,7 +352,7 @@
             }
             &:hover {
               text-decoration: none;
-              color: $color_darkest;
+              color: $color_darkest!important;
               background: $color_background_menu_dark;
             }
           }

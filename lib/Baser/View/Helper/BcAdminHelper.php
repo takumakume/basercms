@@ -94,6 +94,11 @@ class BcAdminHelper extends AppHelper {
 		if($params) {
 			$currentUrl .= '?' . $params;
 		}
+		if(!$this->request->params['plugin']) {
+			$currentGroupUrl = '/' . Configure::read('Routing.prefixes.0') . '/' . $this->request->params['controller'] . '/';
+		} else {
+			$currentGroupUrl = '/' . Configure::read('Routing.prefixes.0') . '/' . $this->request->params['plugin'] . '/' . $this->request->params['controller'] . '/';
+		}
 		$contents = $adminMenuGroups['Contents'];
 		$systems = $adminMenuGroups['Systems'];
 		$plugins = $adminMenuGroups['Plugins'];
@@ -126,6 +131,9 @@ class BcAdminHelper extends AppHelper {
 
 			$covertedAdminMenus = [];
 			if(!empty($adminMenuGroup['menus'])) {
+				$current = false;
+				$groupCurrent = false;
+				$i = 0;
 				foreach($adminMenuGroup['menus'] as $menu => $adminMenu) {
 					$adminMenu['name'] = $menu;
 					$url = $this->BcBaser->getUrl($adminMenu['url']);
@@ -134,20 +142,43 @@ class BcAdminHelper extends AppHelper {
 						if(empty($adminMenuGroup['url'])) {
 							$adminMenuGroup['url'] = $url;
 						}
-						$adminMenu['url'] = $url;
-						$current = false;
-						if(preg_match('/^' . preg_quote($url, '/') . '$/', $currentUrl)) {
-							$current = true;
-						}
-						if($current) {
-							$adminMenu['current'] = true;
-							$adminMenuGroup['current'] = false;
-							$adminMenuGroup['expanded'] = true;
+						$groupUrlReg = [];
+						if(!$adminMenu['url']['plugin']) {
+							$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['url']['controller'] . '/', '/');
 						} else {
-							$adminMenu['current'] = false;
+							$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['url']['plugin'] . '/' . $adminMenu['url']['controller'] . '/', '/');
 						}
-						$covertedAdminMenus[] = $adminMenu;
+						if(!empty($adminMenu['controllerAsCurrent'])) {
+							if(!$adminMenu['url']['plugin']) {
+								$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['controllerAsCurrent'] . '/', '/');
+							} else {
+								$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['url']['plugin'] . '/' . $adminMenu['controllerAsCurrent'] . '/', '/');
+							}
+						}
+						if($groupUrlReg) {
+							$groupUrlReg = '/^(' . implode('|', $groupUrlReg) . ')$/';
+						}
+						$adminMenu['url'] = $url;
+						if(preg_match('/^' . preg_quote($url, '/') . '$/', $currentUrl)) {
+							$current = $i;
+						}
+						if($groupUrlReg && $groupCurrent === false && preg_match($groupUrlReg, $currentGroupUrl)) {
+							$groupCurrent = $i;
+						}
+						$adminMenu['current'] = false;
+						$covertedAdminMenus[$i] = $adminMenu;
 					}
+					$i++;
+				}
+				if($current !== false || $groupCurrent !== false) {
+					if($current !== false) {
+						$currentMenu = $current;
+					} else {
+						$currentMenu = $groupCurrent;
+					}
+					$covertedAdminMenus[$currentMenu]['current'] = true;
+					$adminMenuGroup['current'] = false;
+					$adminMenuGroup['expanded'] = true;
 				}
 			}
 			$adminMenuGroup['menus'] = $covertedAdminMenus;
