@@ -66,6 +66,9 @@ if ($this->request->action !== 'admin_add_folder') {
 		<?php echo $this->BcForm->dispatchAfterForm() ?>
 	</table>
 </div>
+
+<?php echo $this->BcFormTable->dispatchAfter() ?>
+
 <div class="submit bca-actions">
 	<?php if ($this->request->action == 'admin_add_folder'): ?>
 		<div class="bca-actions__main">
@@ -91,34 +94,8 @@ if ($this->request->action !== 'admin_add_folder') {
 	<?php endif ?>
 </div>
 
-<?php echo $this->BcFormTable->dispatchAfter() ?>
-
 <?php if ($this->request->action == 'admin_add_folder' || $this->request->action == 'admin_edit_folder'): ?>
 	<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(['action' => 'index', $theme, $plugin, $type], explode('/', $path)), ['class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list']); ?>
 <?php else: ?>
 	<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(['action' => 'index', $theme, $plugin, $type], explode('/', dirname($path))), ['class' => 'btn-gray button bca-btn', 'data-bca-btn-type' => 'back-to-list']); ?>
 <?php endif ?>
-
-<div class="submit">
-	<?php if ($this->request->action == 'admin_add_folder'): ?>
-		<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(['action' => 'index', $theme, $plugin, $type], $parentPrams), ['class' => 'btn-gray button', 'data-bca-btn-type' => 'back-to-list']); ?>
-		<?php echo $this->BcForm->submit(__d('baser', '保存'), ['div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'lg', 'data-bca-btn-width' => 'lg', 'id' => 'BtnSave']) ?>
-	<?php elseif ($this->request->action == 'admin_edit_folder'): ?>
-		<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(['action' => 'index', $theme, $plugin, $type], $parentPrams), ['class' => 'btn-gray button', 'data-bca-btn-type' => 'back-to-list']); ?>
-		<?php if($isWritable): ?>
-			<?php echo $this->BcForm->submit(__d('baser', '保存'), ['div' => false, 'class' => 'button bca-btn', 'data-bca-btn-type' => 'save', 'data-bca-btn-size' => 'lg', 'data-bca-btn-width' => 'lg', 'id' => 'BtnSave']) ?>
-			<?php $this->BcBaser->link(__d('baser', '削除'), array_merge(['action' => 'del', $theme, $type], $params), ['class' => 'submit-token button bca-btn', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'sm'], sprintf(__d('baser', '%s を本当に削除してもいいですか？'), $this->BcForm->value('ThemeFolder.name')), false	) ?>
-		<?php endif ?>
-	<?php else: ?>
-		<?php $this->BcBaser->link(__d('baser', '一覧に戻る'), array_merge(['action' => 'index', $theme, $plugin, $type], $parentPrams), ['class' => 'btn-gray button', 'data-bca-btn-type' => 'back-to-list']); ?>
-		<?php if (!$safeModeOn): ?>
-			<?php if ($theme == 'core'): ?>
-				<?php $this->BcBaser->link(__d('baser', '現在のテーマにコピー'), array_merge(['action' => 'copy_folder_to_theme', $theme, $plugin, $type], $params), ['class' => 'submit-token btn-red button bca-btn', 'data-bca-btn-size' => 'lg', 'data-bca-btn-width' => 'lg'], sprintf(__d('baser', "本当に現在のテーマ「 %s 」にコピーしてもいいですか？\n既に存在するファイルは上書きされます。"), Inflector::camelize($siteConfig['theme']))); ?>
-			<?php endif ?>
-		<?php else: ?>
-            <?php echo __d('baser', '機能制限のセーフモードで動作していますので、現在のテーマへのコピーはできません。')?>
-		<?php endif ?>
-	<?php endif ?>
-</div>
-
-<?php echo $this->BcForm->end() ?>
