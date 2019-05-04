@@ -40,7 +40,7 @@ class BcUploadHelper extends BcAppHelper {
 			'imgsize' => 'medium', // 画像サイズ
 			'rel' => '', // rel属性
 			'title' => '', // タイトル属性
-			'link' => null, // 大きいサイズの画像へのリンク有無
+			'link' => true, // 大きいサイズの画像へのリンク有無
 			'force' => false,
 			'width' => '', // 横幅
 			'height' => '', // 高さ
@@ -190,8 +190,9 @@ class BcUploadHelper extends BcAppHelper {
 			'force' => false,
 			'output' => '', // 出力タイプ tag ,url を指定、未指定(or false)の場合は、tagで出力(互換性のため)
 			'limited' => false,  // 公開制限フォルダを利用する場合にフォルダ名を設定する
-			'link' => null, // 大きいサイズの画像へのリンク有無
+			'link' => true, // 大きいサイズの画像へのリンク有無
 			'img' => null,
+			'class' => ''
 		], $options);
 
 		$this->setEntity($fieldName);

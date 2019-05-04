@@ -1140,7 +1140,7 @@ class BcBaserHelperTest extends BaserTestCase {
 		$result = ob_get_clean();
 		$this->assertEquals($expected, $result);
 		// リンクあり
-		$expected = '<a href="/" class="tool-menu">公開ページ</a>';
+		$expected = '<a href="/" class="tool-menu">サイト確認</a>';
 		$this->_View->viewVars['currentUserAuthPrefixes'] = [Configure::read('Routing.prefixes.0')];
 		$this->_View->viewVars['publishLink'] = '/';
 		ob_start();

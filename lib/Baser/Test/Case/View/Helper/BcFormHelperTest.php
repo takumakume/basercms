@@ -249,7 +249,7 @@ class BcFormHelperTest extends BaserTestCase {
 			['value', [1], 'User.id', ['type' => 'select', 'multiple' => 'checkbox', 'options' => [1 => 'abc', 2 => 'def']], '<span class="bca-checkbox-group"><input type="hidden".*?<span class="bca-checkbox"><input type="checkbox".+?class="bca-checkbox__input" \/>&nbsp;<label.+?class="bca-checkbox__label"'],
 			['value', [1], 'User.id', ['type' => 'select', 'options' => [1 => 'abc', 2 => 'def']], '<span class="bca-select"><select.+?class="bca-select__select"'],
 			['value', 'hoge', 'User.id', ['type' => 'textarea'], '<span class="bca-textarea"><textarea name="data\[User\]\[id\]" class="bca-textarea__textarea" maxlength="11" cols="30" rows="6" id="UserId">hoge<\/textarea><\/span>'],
-			['value', 'hoge', 'User.id', ['type' => 'hidden'], '<input type="hidden" name="data\[User\]\[id\]" value="hoge" id="UserId"\/>'],
+			['value', 'hoge', 'User.id', ['type' => 'hidden'], '<input type="hidden" name="data\[User\]\[id\]" value="hoge" class="bca-hidden__input" id="UserId"\/>'],
 			['value', 'hoge', 'User.id', ['div' => 'true'], '<input type="hidden" name="data\[User\]\[id\]" value="hoge" id="UserId"\/>'],
 			['value', 'hoge', 'User.id', ['error' => 'true'], '<input type="hidden" name="data\[User\]\[id\]" value="hoge" id="UserId"\/>'],
 			['value', 'hoge', 'User.id', ['type' => 'text'], '<span class="bca-textbox"><input name="data\[User\]\[id\]" value="hoge" class="bca-textbox__input" maxlength=".*" type="text" id="UserId"\/><\/span>'],
@@ -266,7 +266,7 @@ class BcFormHelperTest extends BaserTestCase {
 			['value', 'hoge', 'User.id', ['type' => 'time', 'options' => []], '<select name="data\[User\]\[id\]\[hour\].*id="UserIdHour".*1<\/op.*12<\/op.*\/se.*id="UserIdMin">.*00<\/op.*59<\/op.*\/se.*id="UserIdMeridian">.*selected="selected">am<\/op.*value="pm">pm<\/option>\n<\/select>'],
 			['value', 'hoge', 'User.id', ['type' => 'datetime', 'options' => []], '<select name="data\[User\]\[id\]\[month\].*id="UserIdMonth.*01<\/op.*12<\/op.*<\/sel.*id="UserIdDay">.*1<\/option>.*31<\/op.*<\/se.*id="UserIdYear">.*' . $endYear . '<\/op.*' . $beginYear . '<\/op.*<\/se.*id="UserIdHour">.*1<\/op.*12<\/op.*<\/se.*id="UserIdMin">.*00<\/op.*59<\/op.*<\/se.*id="UserIdMeridian">.*selected="selected">am<\/op.*pm<\/op.*ect>'],
 			['value', 'hoge', 'User.id', ['type' => 'input', 'div' => 'true'], '<div class="true"><input type="hidden" name="data\[User\]\[id\]" value="hoge" id="UserId"\/><\/div>'],
-			['value', 'hoge', 'User.id', ['type' => 'input', 'counter' => 'true'], '<input type="hidden".+?<span id="UserIdCounter" class="size-counter">.+?<script.+?<\/script>'],
+			['value', 'hoge', 'User.id', ['type' => 'input', 'counter' => 'true'], '<input type="hidden".+?<span id="UserIdCounter" class="bca-size-counter size-counter">.+?<script.+?<\/script>'],
 			['', '', 'BlogTag.BlogTag', '', "<input type=\"hidden\" name=\"data\[BlogTag\]\[BlogTag\]\" value=\"\" id=\"BlogTagBlogTag_\"\/>\n<select name=\"data\[BlogTag\]\[BlogTag\]\[\]\" multiple=\"multiple\" id=\"BlogTagBlogTag\">\n<\/select>"],
 			['', '', 'hoge', '', "<input name=\"data\[hoge\]\" type=\"text\" id=\"hoge\"\/>"],
 			['', '', 'hoge', ['a' => 'hogege'], "<input name=\"data\[hoge\]\" a=\"hogege\" type=\"text\" id=\"hoge\"\/>"]
