@@ -24,7 +24,7 @@ $this->BcListTable->setColumnNumber(3);
 
 <div class="bca-data-list__top">
   <!-- 一括処理 -->
-  <?php if ($this->BcBaser->isAdminUser()): ?>
+  <?php if ($this->BcBaser->isAdminUser() && $theme != 'core'): ?>
     <div class="bca-action-table-listup">
       <?php echo $this->BcForm->input('ListTool.batch', ['type' => 'select',
         'options' => [
