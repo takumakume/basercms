@@ -30,7 +30,7 @@ $config['BcApp'] = [
 				'type' => 'dashboard',
 				'url' => '/admin',
 			],
-			'Default' => [
+			'Contents' => [
 				'title' => __d('baser', 'コンテンツ管理'),
 				'type' => 'contents',
 				'menus' => [

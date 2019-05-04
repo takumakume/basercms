@@ -1,2 +1,3 @@
 <?php
-$config = array();
+$config['BcApp.adminNavigation.Contents.Contents.menus.ContentsTrash.disable'] = true;
+

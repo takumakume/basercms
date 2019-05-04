@@ -71,8 +71,6 @@ class BcAdminHelper extends AppHelper {
  */
 	public function getJsonMenu() {
 		$adminMenuGroups = Configure::read('BcApp.adminNavigation');
-
-		// print_r($adminMenuGroups);exit;
 		$currentSiteId = $this->Session->read('ContentsAdminIndex.named.site_id');
 		if(!$adminMenuGroups) {
 			return null;
@@ -112,6 +110,9 @@ class BcAdminHelper extends AppHelper {
 		$Permission = ClassRegistry::init('Permission');
 		$covertedAdminMenuGroups = [];
 		foreach($adminMenuGroups as $group => $adminMenuGroup) {
+			if(!empty($adminMenuGroup['disable']) && $adminMenuGroup['disable'] === true) {
+				continue;
+			}
 			$adminMenuGroup = array_merge(['current' => false], $adminMenuGroup);
 			if(!isset($adminMenuGroup['siteId'])) {
 				$adminMenuGroup = array_merge(['siteId' => null], $adminMenuGroup);
@@ -135,6 +136,9 @@ class BcAdminHelper extends AppHelper {
 				$groupCurrent = false;
 				$i = 0;
 				foreach($adminMenuGroup['menus'] as $menu => $adminMenu) {
+					if(!empty($adminMenu['disable']) && $adminMenu['disable'] === true) {
+						continue;
+					}
 					$adminMenu['name'] = $menu;
 					$url = $this->BcBaser->getUrl($adminMenu['url']);
 					$url = preg_replace('/^' . preg_quote($this->request->base, '/') . '\//', '/', $url);
