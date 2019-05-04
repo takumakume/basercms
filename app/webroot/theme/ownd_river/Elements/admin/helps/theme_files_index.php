@@ -27,10 +27,11 @@
 	<li><?php echo sprintf(__d('baser', 'テーマファイルを削除するには、対象ファイルの %s をクリックします。'), '<i class="bca-btn-icon" data-bca-btn-type="delete"></i>')?></li>
 	<li><?php echo sprintf(__d('baser', 'テーマファイルを現在のテーマにコピーするには、対象ファイル・フォルダの %s をクリックし、その後表示される画面下の「現在のテーマにコピー」をクリックします。（core テーマのみ）'),'<i class="bca-btn-icon" data-bca-btn-type="preview"></i>')?></li>
 </ul>
-<p><?php echo __d('baser', 'テーマファイルの種類は次の６つとなります。')?></p>
+<p><?php echo __d('baser', 'テーマファイルの種類は次の７つとなります。')?></p>
 <ul>
 	<li><?php echo __d('baser', 'レイアウト')?>：<?php echo __d('baser', 'Webページの枠組となるテンプレートファイル')?></li>
 	<li><?php echo __d('baser', 'エレメント')?>：<?php echo __d('baser', '共通部品となるテンプレートファイル')?></li>
+	<li><?php echo __d('baser', 'Eメール')?>：<?php echo __d('baser', '送信メール用のテンプレートファイル')?></li>
 	<li><?php echo __d('baser', 'コンテンツ')?>：<?php echo __d('baser', 'Webページのコンテンツ部分のテンプレートファイル')?></li>
 	<li>CSS：<?php echo __d('baser', 'カスケーディングスタイルシートファイル')?></li>
 	<li><?php echo __d('baser', 'イメージ')?>：<?php echo __d('baser', '写真や背景等の画像ファイル')?></li>

@@ -74,7 +74,7 @@
 			'admin/vendors/jquery-contextMenu-2.2.0/jquery.contextMenu.min',
 			'admin/vendors/jquery.form-2.94',
 			'admin/vendors/jquery.validate.min',
-      'admin/vendors/jquery.colorbox-1.6.1.min',
+      		'admin/vendors/jquery.colorbox-1.6.1.min',
 			'admin/vendors/bootstrap-4.1.3/bootstrap.bundle.min',
 			'admin/libs/jquery.mScroll',
 			'admin/libs/jquery.baseUrl',
@@ -93,7 +93,8 @@
 	<script>
 		$.bcUtil.init({
 			baseUrl: '<?php echo $this->request->base ?>',
-			adminPrefix: '<?php echo BcUtil::getAdminPrefix() ?>'
+			adminPrefix: '<?php echo BcUtil::getAdminPrefix() ?>',
+			frontFullUrl: '<?php echo (!empty($publishLink))? $publishLink : '' ?>'
 		});
 	</script>
 <?php $this->BcBaser->scripts() ?>

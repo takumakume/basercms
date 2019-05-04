@@ -26,6 +26,11 @@
 		adminPrefix: null,
 
 	/**
+	 * フロントフルURL
+	 */
+		frontFullUrl: null,
+
+	/**
 	 * 初期化
 	 *
 	 * @param config
@@ -36,6 +41,9 @@
 			}
 			if(config.adminPrefix !== undefined) {
 				$.bcUtil.adminPrefix = config.adminPrefix;
+			}
+			if(config.frontFullUrl !== undefined) {
+				$.bcUtil.frontFullUrl = config.frontFullUrl;
 			}
 		},
 	/**

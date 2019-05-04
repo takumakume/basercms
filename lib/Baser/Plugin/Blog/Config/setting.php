@@ -27,8 +27,7 @@ foreach ($blogContents as $blogContent) {
 			'BlogCategories' . $blog['id'] => ['title' => 'カテゴリ', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_categories', 'action' => 'index', $blog['id']]],
 			'BlogTags' . $blog['id'] => ['title' => 'タグ', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
 			'BlogComments' . $blog['id'] => ['title' => 'コメント', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_comments', 'action' => 'index', $blog['id']]],
-			'BlogContentsEdit' . $blog['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_contents', 'action' => 'edit', $blog['id']]],
-			'Blog' . $blog['id'] => ['title' => '公開ページ', 'url' => $content['url']],
+			'BlogContentsEdit' . $blog['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_contents', 'action' => 'edit', $blog['id']]]
 		]
 	];
 }

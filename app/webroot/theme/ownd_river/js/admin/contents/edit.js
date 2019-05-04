@@ -72,16 +72,6 @@ $(function(){
         return false;
     });
 
-	$("#BtnCopyUrl").click(function(){
-    	var copyArea = $("<textarea/>");
-    	copyArea.text(fullUrl);
-    	$("body").append(copyArea);
-		copyArea.select();
-    	document.execCommand("copy");
-    	copyArea.remove();
-    	return false;
-	});
-
     $(".create-alias").click(function(){
     	var siteId = $(this).attr('data-site-id');
     	var displayName = $("#SiteDisplayName" + siteId).val();

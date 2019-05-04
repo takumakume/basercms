@@ -32,8 +32,7 @@ foreach ($mailContents as $mailContent) {
 		'menus' => [
 			'MailMessages' . $mail['id'] => ['title' => '受信メール', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_messages', 'action' => 'index', $mail['id']]],
 			'MailFields' . $mail['id'] => ['title' => 'フィールド', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_fields', 'action' => 'index', $mail['id']]],
-			'MailContents' . $mail['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_contents', 'action' => 'edit', $mail['id']]],
-			'Mail' . $mail['id'] => ['title' => '公開ページ', 'url' => $content['url']],
+			'MailContents' . $mail['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_contents', 'action' => 'edit', $mail['id']]]
 		]
 	];
 }

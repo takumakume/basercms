@@ -17,13 +17,24 @@ $owners = $this->BcForm->getControlSource('BlogCategory.owner_id');
 $fullUrl = $this->BcBaser->getContentsUrl($this->request->params['Content']['url'], true, $this->request->params['Site']['use_subdomain']) . 'archives/category/' . $this->BcForm->value('BlogCategory.name');
 ?>
 
-
 <?php if ($this->action == 'admin_edit'): ?>
-	<div class="em-box bca-current-box">
-		<p><?php echo sprintf(__d('baser', 'このカテゴリのURL：%s'), $this->BcBaser->getLink($fullUrl, $fullUrl, ['target' => '_blank']))?></p>
-	</div>
-<?php endif ?>
-
+  <div class="bca-section bca-section__post-top">
+	<span class="bca-post__no">
+		<?php echo $this->BcForm->label('BlogCategory.no', 'No') ?> : <strong><?php echo $this->BcForm->value('BlogCategory.no') ?></strong>
+		<?php echo $this->BcForm->input('BlogCategory.no', ['type' => 'hidden']) ?>
+	</span>
+	<span class="bca-post__url">
+	  <a href="<?php echo $this->BcBaser->getUri($fullUrl) ?>" class="bca-text-url" target="_blank" data-toggle="tooltip" data-placement="top" title="公開URLを開きます"><i class="bca-icon--globe"></i><?php echo $this->BcBaser->getUri($fullUrl) ?></a>
+	  <?php echo $this->BcForm->button('', [
+		'id' => 'BtnCopyUrl',
+		'class' => 'bca-btn',
+		'type' => 'button',
+		'data-bca-btn-type' => 'textcopy',
+		'data-bca-btn-category' => 'text',
+		'data-bca-btn-size' => 'sm'
+	  ]) ?>
+  </div>
+<?php endif; ?>
 
 <?php /* BlogContent.idを第一引数にしたいが為にURL直書き */ ?>
 <?php if ($this->action == 'admin_add'): ?>
@@ -39,15 +50,6 @@ $fullUrl = $this->BcBaser->getContentsUrl($this->request->params['Content']['url
 <!-- form -->
 <div class="section">
 	<table cellpadding="0" cellspacing="0" id="FormTable" class="form-table bca-form-table">
-		<?php if ($this->action == 'admin_edit'): ?>
-			<tr>
-				<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.no', 'No') ?></th>
-				<td class="col-input bca-form-table__input">
-					<?php echo $this->BcForm->value('BlogCategory.no') ?>
-					<?php echo $this->BcForm->input('BlogCategory.no', ['type' => 'hidden']) ?>
-				</td>
-			</tr>
-		<?php endif; ?>
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('BlogCategory.name', __d('baser', 'カテゴリ名')) ?>&nbsp;<span class="bca-label" data-bca-label-type="required"><?php echo __d('baser', '必須') ?></span></th>
 			<td class="col-input bca-form-table__input">
