@@ -187,8 +187,7 @@ class ThemesController extends AppController {
 		} else {
 			$this->setMessage(__d('baser', '初期データの読み込みが完了しましたが、いくつかの処理に失敗しています。ログを確認してください。'), true);
 		}
-		$this->redirect('index');
-
+		$this->redirect('/admin');
 	}
 
 /**
