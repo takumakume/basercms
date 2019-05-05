@@ -100,8 +100,6 @@ if($this->BcContents->isEditable()) {
 </div>
 
 <section id="BasicSetting" class="bca-section">
-	<h2 class="bca-main__heading" data-bca-heading-size="lg"
-		data-bca-table-type="type2"><?php echo __d('baser', '基本設定') ?></h2>
 	<table class="form-table bca-form-table" data-bca-table-type="type2">
 		<tr>
 			<th class="col-head bca-form-table__label"><?php echo $this->BcForm->label('Content.name', 'URL') ?>

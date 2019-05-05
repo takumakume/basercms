@@ -19,8 +19,15 @@ $config['BcApp.adminNavigation'] = [
 			'title' => __d('baser', 'フィード管理'),
 			'type' => 'system',
 			'menus' => [
-				'FeedConfigs' => ['title' => __d('baser', 'フィード設定'), 'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'index'], 'controllerAsCurrent' => 'feed_details'],
-				'FeedDeleteCache' => ['title' => __d('baser', 'フィードキャッシュ削除'), 'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'delete_cache']],
+				'FeedConfigs' => [
+					'title' => __d('baser', 'フィード設定'),
+					'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'index'],
+					'currentRegex' => '/(\/feed\/feed_configs\/|\/feed\/feed_details\/)/s'
+				],
+				'FeedDeleteCache' => [
+					'title' => __d('baser', 'フィードキャッシュ削除'),
+					'url' => ['admin' => true, 'plugin' => 'feed', 'controller' => 'feed_configs', 'action' => 'delete_cache']
+				]
 ]]]];
 // @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
 $config['BcApp.adminNavi.feed'] = [

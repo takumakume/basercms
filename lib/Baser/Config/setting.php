@@ -28,7 +28,7 @@ $config['BcApp'] = [
 			'Dashboard' => [
 				'title' => __d('baser', 'ダッシュボード'),
 				'type' => 'dashboard',
-				'url' => '/admin',
+				'url' => '/' . Configure::read('Routing.prefixes.0'),
 			],
 			'Contents' => [
 				'title' => __d('baser', 'コンテンツ管理'),

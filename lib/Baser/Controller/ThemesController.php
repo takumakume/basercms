@@ -107,7 +107,7 @@ class ThemesController extends AppController {
 			if ($themename != 'core' && $themename != '_notes') {
 				if ($themename == $this->siteConfigs['theme']) {
 					$currentTheme = $this->_loadThemeInfo($themename);
-				} else {
+				} elseif(!is_file(WWW_ROOT . 'theme' . DS . $themename . DS . 'Layouts' . DS . 'admin' . DS . 'default.php')) {
 					$datas[] = $this->_loadThemeInfo($themename);
 				}
 			}

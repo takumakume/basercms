@@ -23,14 +23,33 @@ foreach ($blogContents as $blogContent) {
 		'title' => $content['title'],
 		'type' => 'blog-content',
 		'menus' => [
-			'BlogPosts' . $blog['id'] => ['title' => '記事', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', $blog['id']]],
-			'BlogCategories' . $blog['id'] => ['title' => 'カテゴリ', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_categories', 'action' => 'index', $blog['id']]],
-			'BlogTags' . $blog['id'] => ['title' => 'タグ', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
-			'BlogComments' . $blog['id'] => ['title' => 'コメント', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_comments', 'action' => 'index', $blog['id']]],
-			'BlogContentsEdit' . $blog['id'] => ['title' => '設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_contents', 'action' => 'edit', $blog['id']]]
+			'BlogPosts' . $blog['id'] => [
+				'title' => '記事',
+				'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_posts', 'action' => 'index', $blog['id']],
+				'currentRegex' => '/\/blog\/blog_posts\/.+?\/' . $blog['id'] . '/s'
+			],
+			'BlogCategories' . $blog['id'] => [
+				'title' => 'カテゴリ',
+				'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_categories', 'action' => 'index', $blog['id']],
+				'currentRegex' => '/\/blog\/blog_categories\/.+?\/' . $blog['id'] . '/s'
+			],
+			'BlogComments' . $blog['id'] => [
+				'title' => 'コメント',
+				'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_comments', 'action' => 'index', $blog['id']]
+			],
+			'BlogContentsEdit' . $blog['id'] => [
+				'title' => '設定',
+				'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_contents', 'action' => 'edit', $blog['id']]
+			]
 		]
 	];
 }
+$config['BcApp.adminNavigation'] = [
+	'Plugins' => [
+		'menus' => [
+			'BlogTags' => ['title' => 'ブログタグ設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
+		]
+]];
 // @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
 $config['BcApp.adminNavi.blog'] = [
 	'name' => __d('baser', 'ブログプラグイン'),

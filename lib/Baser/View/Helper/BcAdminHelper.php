@@ -92,11 +92,6 @@ class BcAdminHelper extends AppHelper {
 		if($params) {
 			$currentUrl .= '?' . $params;
 		}
-		if(!$this->request->params['plugin']) {
-			$currentGroupUrl = '/' . Configure::read('Routing.prefixes.0') . '/' . $this->request->params['controller'] . '/';
-		} else {
-			$currentGroupUrl = '/' . Configure::read('Routing.prefixes.0') . '/' . $this->request->params['plugin'] . '/' . $this->request->params['controller'] . '/';
-		}
 		$contents = $adminMenuGroups['Contents'];
 		$systems = $adminMenuGroups['Systems'];
 		$plugins = $adminMenuGroups['Plugins'];
@@ -109,6 +104,7 @@ class BcAdminHelper extends AppHelper {
 		$adminMenuGroups = $contents + $adminMenuGroups + $systems;
 		$Permission = ClassRegistry::init('Permission');
 		$covertedAdminMenuGroups = [];
+		$currentOn = false;
 		foreach($adminMenuGroups as $group => $adminMenuGroup) {
 			if(!empty($adminMenuGroup['disable']) && $adminMenuGroup['disable'] === true) {
 				continue;
@@ -132,9 +128,6 @@ class BcAdminHelper extends AppHelper {
 
 			$covertedAdminMenus = [];
 			if(!empty($adminMenuGroup['menus'])) {
-				$current = false;
-				$groupCurrent = false;
-				$i = 0;
 				foreach($adminMenuGroup['menus'] as $menu => $adminMenu) {
 					if(!empty($adminMenu['disable']) && $adminMenu['disable'] === true) {
 						continue;
@@ -146,48 +139,45 @@ class BcAdminHelper extends AppHelper {
 						if(empty($adminMenuGroup['url'])) {
 							$adminMenuGroup['url'] = $url;
 						}
-						$groupUrlReg = [];
-						if(!$adminMenu['url']['plugin']) {
-							$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['url']['controller'] . '/', '/');
-						} else {
-							$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['url']['plugin'] . '/' . $adminMenu['url']['controller'] . '/', '/');
-						}
-						if(!empty($adminMenu['controllerAsCurrent'])) {
-							if(!$adminMenu['url']['plugin']) {
-								$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['controllerAsCurrent'] . '/', '/');
-							} else {
-								$groupUrlReg[] = preg_quote('/' . Configure::read('Routing.prefixes.0') . '/' . $adminMenu['url']['plugin'] . '/' . $adminMenu['controllerAsCurrent'] . '/', '/');
-							}
-						}
-						if($groupUrlReg) {
-							$groupUrlReg = '/^(' . implode('|', $groupUrlReg) . ')$/';
-						}
+						$adminMenu['urlArray'] = $adminMenu['url'];
 						$adminMenu['url'] = $url;
 						if(preg_match('/^' . preg_quote($url, '/') . '$/', $currentUrl)) {
-							$current = $i;
+							$adminMenu['current'] = true;
+							$adminMenuGroup['current'] = false;
+							$adminMenuGroup['expanded'] = true;
+							$currentOn = true;
 						}
-						if($groupUrlReg && $groupCurrent === false && preg_match($groupUrlReg, $currentGroupUrl)) {
-							$groupCurrent = $i;
-						}
-						$adminMenu['current'] = false;
-						$covertedAdminMenus[$i] = $adminMenu;
+						$covertedAdminMenus[] = $adminMenu;
 					}
-					$i++;
-				}
-				if($current !== false || $groupCurrent !== false) {
-					if($current !== false) {
-						$currentMenu = $current;
-					} else {
-						$currentMenu = $groupCurrent;
-					}
-					$covertedAdminMenus[$currentMenu]['current'] = true;
-					$adminMenuGroup['current'] = false;
-					$adminMenuGroup['expanded'] = true;
 				}
 			}
 			$adminMenuGroup['menus'] = $covertedAdminMenus;
 			$covertedAdminMenuGroups[] = $adminMenuGroup;
 		}
+
+		if($currentOn === false) {
+			foreach($covertedAdminMenuGroups as $key => $adminMenuGroup) {
+				if(!empty($adminMenuGroup['disable']) && $adminMenuGroup['disable'] === true) {
+					continue;
+				}
+				foreach($adminMenuGroup['menus'] as $menu => $adminMenu) {
+					if ((!empty($adminMenu['disable']) && $adminMenu['disable'] === true) || empty($adminMenu['currentRegex'])) {
+						continue;
+					}
+					if(preg_match($adminMenu['currentRegex'], $currentUrl)) {
+						$covertedAdminMenuGroups[$key]['menus'][$menu]['current'] = true;
+						$covertedAdminMenuGroups[$key]['current'] = false;
+						$covertedAdminMenuGroups[$key]['expanded'] = true;
+						$currentOn = true;
+						break;
+					}
+				}
+				if($currentOn === true) {
+					break;
+				}
+			}
+		}
+
 		$menuSettings = [
 			'currentSiteId' => $currentSiteId,
 			'menuList' => $covertedAdminMenuGroups
