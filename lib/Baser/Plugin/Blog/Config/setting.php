@@ -13,6 +13,12 @@
 /**
  * システムナビ
  */
+$config['BcApp.adminNavigation'] = [
+	'Plugins' => [
+		'menus' => [
+			'BlogTags' => ['title' => 'ブログタグ設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
+		]
+]];
 $BlogContent = ClassRegistry::init('Blog.BlogContent');
 $blogContents = $BlogContent->find('all', ['recursive' => 0]);
 foreach ($blogContents as $blogContent) {
@@ -44,12 +50,6 @@ foreach ($blogContents as $blogContent) {
 		]
 	];
 }
-$config['BcApp.adminNavigation'] = [
-	'Plugins' => [
-		'menus' => [
-			'BlogTags' => ['title' => 'ブログタグ設定', 'url' => ['admin' => true, 'plugin' => 'blog', 'controller' => 'blog_tags', 'action' => 'index']],
-		]
-]];
 // @deprecated 5.0.0 since 4.2.0 BcApp.adminNavigation の形式に変更
 $config['BcApp.adminNavi.blog'] = [
 	'name' => __d('baser', 'ブログプラグイン'),
