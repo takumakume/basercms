@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: baserCMS\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-07-04 19:45+0900\n"
-"Last-Translator: ryuring\n"
+"PO-Revision-Date: 2018-03-20 15:40+0900\n"
+"Last-Translator: \n"
 "Language-Team: baserCMS Users Community <info@basercms.net>\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -207,7 +207,7 @@ msgstr "Any"
 #: Plugin/Mail/Model/MailMessage.php:177;184;256
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:134;135;138;144
 #: Plugin/Mail/View/Elements/mail_input.php:93
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:78;91
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:74;87
 msgid "必須項目です。"
 msgstr "It is required."
 
@@ -231,48 +231,53 @@ msgstr "Previous"
 msgid "次へ"
 msgstr "Next"
 
-#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;114
-#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;114
-#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;116
-msgid "日"
-msgstr "Sun"
-
-#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;115
-#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_monthly_archives.php:51;53
-#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;115
-#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;117
-msgid "月"
-msgstr "Mon"
-
-#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;116
-#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;116
-#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;118
-msgid "火"
-msgstr "Tue"
-
-#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;117
-#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;117
-#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;119
-msgid "水"
-msgstr "Wed"
-
 #: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;118
 #: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;118
 #: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;120
-msgid "木"
-msgstr "Thu"
+msgid "日"
+msgstr "Sun"
 
 #: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;119
+#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_monthly_archives.php:51;53
 #: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;119
 #: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;121
-msgid "金"
-msgstr "Fri"
+msgid "月"
+msgstr "Mon"
 
 #: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;120
 #: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;120
 #: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;122
+msgid "火"
+msgstr "Tue"
+
+#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;121
+#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;121
+#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;123
+msgid "水"
+msgstr "Wed"
+
+#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;122
+#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;122
+#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;124
+msgid "木"
+msgstr "Thu"
+
+#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;123
+#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;123
+#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;125
+msgid "金"
+msgstr "Fri"
+
+#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:79;124
+#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:79;124
+#: Plugin/Blog/View/Elements/widgets/blog_calendar.php:81;126
 msgid "土"
 msgstr "Sat"
+
+#: Config/theme/bc_sample/Elements/smartphone/widgets/blog_calendar.php:104;110;112
+#: Config/theme/bc_sample/Elements/widgets/blog_calendar.php:104;110;112
+msgid "%s月"
+msgstr "Month %s"
 
 #: Config/theme/bc_sample/Elements/smartphone/widgets/blog_monthly_archives.php:51;53
 msgid "年"
@@ -517,19 +522,19 @@ msgstr "%s/%s"
 msgid "%s年"
 msgstr "Year %s"
 
-#: Plugin/Blog/Controller/BlogController.php:478
+#: Plugin/Blog/Controller/BlogController.php:477
 #: Plugin/Blog/View/Elements/blog_comments_scripts.php:10
 msgid "送信が完了しました。送信された内容は確認後公開させて頂きます。"
 msgstr ""
 "Submission has been completed. After confirming the contents we will make it "
 "public."
 
-#: Plugin/Blog/Controller/BlogController.php:480
+#: Plugin/Blog/Controller/BlogController.php:479
 #: Plugin/Blog/View/Elements/blog_comments_scripts.php:11
 msgid "コメントの送信が完了しました。"
 msgstr "Comment submission has been completed."
 
-#: Plugin/Blog/Controller/BlogController.php:485
+#: Plugin/Blog/Controller/BlogController.php:484
 msgid "コメントの送信に失敗しました。"
 msgstr "Comment submission has been failed."
 
@@ -553,8 +558,8 @@ msgstr "Related article"
 msgid "非公開"
 msgstr "Do not publish"
 
-#: Plugin/Feed/Controller/FeedConfigsController.php:241
-#: Plugin/Feed/Controller/FeedDetailsController.php:204
+#: Plugin/Feed/Controller/FeedConfigsController.php:237
+#: Plugin/Feed/Controller/FeedDetailsController.php:200
 msgid "無効な処理です。"
 msgstr "Invalid process."
 
@@ -580,7 +585,7 @@ msgstr ""
 
 #: Plugin/Mail/Model/MailMessage.php:192
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:136;137
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:76;88
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:72;84
 msgid "形式が無効です。"
 msgstr "Invalid format"
 
@@ -609,11 +614,11 @@ msgstr "Please enter all with full-size katakana."
 msgid "クリア"
 msgstr "Clear"
 
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:94
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:90
 msgid "入力データが一致していません"
 msgstr "Input data does not match"
 
-#: Plugin/Mail/View/Elements/mobile/mail_input.php:95
+#: Plugin/Mail/View/Elements/mobile/mail_input.php:91
 msgid "入力データが不完全です"
 msgstr "Input data is incomplete"
 
@@ -642,13 +647,9 @@ msgstr "The reception is suspended."
 msgid "現在、受付を停止しています。"
 msgstr "The reception is suspended now."
 
-#: Plugin/Uploader/Event/UploaderViewEventListener.php:70
 #: View/Errors/error400.php:17 View/Errors/error500.php:17;18
 msgid "baser"
 msgstr "baser"
-
-#~ msgid "%s月"
-#~ msgstr "Month %s"
 
 #~ msgid "コメントを受付けました"
 #~ msgstr "Accepted Comment"

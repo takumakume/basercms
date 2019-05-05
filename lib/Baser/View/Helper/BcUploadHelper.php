@@ -16,7 +16,6 @@ App::uses('BcAppHelper', 'View/Helper');
  * アップロードヘルパー
  *
  * @package Baser.View.Helper
- * 
  * @property HtmlHelper $Html
  */
 class BcUploadHelper extends BcAppHelper {

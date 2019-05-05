@@ -128,6 +128,7 @@ class MailContentsController extends MailAppController {
 				$this->setMessage(__d('baser', '入力エラーです。内容を修正してください。'), true);
 			}
 		}
+		$this->subMenuElements = ['mail_common'];
 		$this->help = 'mail_contents_form';
 		$this->render('form');
 	}

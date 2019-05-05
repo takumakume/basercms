@@ -160,6 +160,7 @@ class BlogContentsController extends BlogAppController {
 		}
 		$this->request->params['Content'] = $this->BcContents->getContent($id)['Content'];
 		$this->set('blogContent', $this->request->data);
+		$this->subMenuElements = ['blog_posts'];
 		$this->set('themes', $this->SiteConfig->getThemes());
 		$this->pageTitle = __d('baser', 'ブログ設定編集');
 		$this->help = 'blog_contents_form';

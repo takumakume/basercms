@@ -199,7 +199,7 @@ msgstr ""
 
 #: Config/theme/bc_sample/Elements/mail_input.php:86
 #: Config/theme/bc_sample/Elements/smartphone/mail_input.php:86
-#: Plugin/Mail/Model/MailMessage.php:401
+#: Plugin/Mail/Model/MailMessage.php:394
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:141
 #: Plugin/Mail/View/Elements/mail_input.php:97
 #: Plugin/Mail/View/Elements/mobile/mail_input.php:89
@@ -208,7 +208,7 @@ msgstr ""
 
 #: Config/theme/bc_sample/Elements/mail_input.php:87
 #: Config/theme/bc_sample/Elements/smartphone/mail_input.php:87
-#: Plugin/Mail/Model/MailMessage.php:360
+#: Plugin/Mail/Model/MailMessage.php:353
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:142
 #: Plugin/Mail/View/Elements/mail_input.php:98
 #: Plugin/Mail/View/Elements/mobile/mail_input.php:90
@@ -496,30 +496,30 @@ msgstr ""
 msgid "【%s】コメントが投稿されました"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:338
+#: Plugin/Blog/Controller/BlogController.php:336
 msgid "%s年%s月%s日"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:340
+#: Plugin/Blog/Controller/BlogController.php:338
 msgid "%s年%s月"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:342
+#: Plugin/Blog/Controller/BlogController.php:340
 #: Plugin/Blog/View/Elements/widgets/blog_category_archives.php:53
 msgid "%s年"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:474
+#: Plugin/Blog/Controller/BlogController.php:472
 #: Plugin/Blog/View/Elements/blog_comments_scripts.php:10
 msgid "送信が完了しました。送信された内容は確認後公開させて頂きます。"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:476
+#: Plugin/Blog/Controller/BlogController.php:474
 #: Plugin/Blog/View/Elements/blog_comments_scripts.php:11
 msgid "コメントの送信が完了しました。"
 msgstr ""
 
-#: Plugin/Blog/Controller/BlogController.php:481
+#: Plugin/Blog/Controller/BlogController.php:479
 msgid "コメントの送信に失敗しました。"
 msgstr ""
 
@@ -552,49 +552,49 @@ msgstr ""
 msgid "お問い合わせ"
 msgstr ""
 
-#: Plugin/Mail/Controller/MailController.php:241
+#: Plugin/Mail/Controller/MailController.php:240
 msgid "ファイルのアップロードサイズが上限を超えています。"
 msgstr ""
 
-#: Plugin/Mail/Controller/MailController.php:282
+#: Plugin/Mail/Controller/MailController.php:280
 msgid "エラー : 入力内容を確認して再度送信してください。"
 msgstr ""
 
-#: Plugin/Mail/Controller/MailController.php:390
+#: Plugin/Mail/Controller/MailController.php:371
 msgid "エラー : 送信中にエラーが発生しました。しばらくたってから再度送信お願いします。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:191;198;281
+#: Plugin/Mail/Model/MailMessage.php:188;195;274
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:136;137;140;146
 msgid "必須項目です。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:212
+#: Plugin/Mail/Model/MailMessage.php:209
 msgid "半角数字で入力してください。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:220
+#: Plugin/Mail/Model/MailMessage.php:217
 #: Plugin/Mail/Test/Case/Model/MailMessageTest.php:138;139
 msgid "形式が無効です。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:236
+#: Plugin/Mail/Model/MailMessage.php:231
 msgid "ファイルサイズがオーバーしています。 %s MB以内のファイルをご利用ください。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:240
+#: Plugin/Mail/Model/MailMessage.php:233
 msgid "何らかの原因でファイルをアップロードできませんでした。Webサイトの管理者に連絡してください。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:254
+#: Plugin/Mail/Model/MailMessage.php:247
 msgid "ファイル形式が無効です。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:289
+#: Plugin/Mail/Model/MailMessage.php:282
 msgid "日付の形式が無効です。"
 msgstr ""
 
-#: Plugin/Mail/Model/MailMessage.php:293
+#: Plugin/Mail/Model/MailMessage.php:286
 msgid "全て全角カタカナで入力してください。"
 msgstr ""
 
@@ -602,7 +602,7 @@ msgstr ""
 msgid "クリア"
 msgstr ""
 
-#: Plugin/Mail/View/Helper/MailformHelper.php:263
+#: Plugin/Mail/View/Helper/MailformHelper.php:245
 msgid "認証画像"
 msgstr ""
 

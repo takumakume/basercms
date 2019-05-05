@@ -34,7 +34,7 @@ $this->BcListTable->setColumnNumber(5);
                 </div>
 <?php endif ?>
             </th>
-            <th>NO</th>
+            <th>No</th>
             <th><?php echo __d('baser', 'カテゴリ名')?>
                 <?php if ($this->BcBaser->siteConfig['category_permission']): ?>
                     <br /><?php echo __d('baser', '管理グループ')?>

@@ -234,7 +234,7 @@ class BcContentsComponent extends Component {
  * @param Controller $controller
  * @return void
  */
-		public function settingForm(Controller $controller, $currentSiteId, $currentContentId = null) {
+public function settingForm(Controller $controller, $currentSiteId, $currentContentId = null) {
 
 		// コントロールソースを設定
 		$options = [];
