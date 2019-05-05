@@ -61,6 +61,9 @@
         background-color: $color_secondary;
         &-label {
           color:$color_lightest;
+          &:hover {
+            color:$color_darkest;
+          }
         }
       }
     }
