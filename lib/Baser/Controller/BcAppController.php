@@ -475,23 +475,20 @@ class BcAppController extends Controller {
  */
 	protected function setTheme() {
 		$theme = null;
-		if(BcUtil::isAdminSystem()) {
-			if(!$theme) {
-				$theme = $this->adminTheme;
+		if (!empty($this->request->params['Site']['theme'])) {
+			$theme = $this->request->params['Site']['theme'];
+		}
+		if(!$theme) {
+			$site = BcSite::findCurrent();
+			if (!empty($site->theme)) {
+				$theme = $site->theme;
 			}
-		} else {
-			if (!empty($this->request->params['Site']['theme'])) {
-				$theme = $this->request->params['Site']['theme'];
-			}
-			if(!$theme) {
-				$site = BcSite::findCurrent();
-				if (!empty($site->theme)) {
-					$theme = $site->theme;
-				}
-			}
-			if (!$theme && !empty($this->siteConfigs['theme'])) {
-				$theme = $this->siteConfigs['theme'];
-			}
+		}
+		if (!$theme && !empty($this->siteConfigs['theme'])) {
+			$theme = $this->siteConfigs['theme'];
+		}
+		if(!$theme && BcUtil::isAdminSystem() && $this->adminTheme) {
+			$theme = $this->adminTheme;
 		}
 		$this->theme = $theme;
 	}
