@@ -4887,8 +4887,9 @@ body {
     margin-top: 0;
     margin-bottom: 40px;
     text-align: center;
-    color: #424f44;
-    font-weight: bold; }
+    color: #FF6F61;
+    font-weight: bold;
+    font-size: 4rem; }
   .bca-login__logo {
     width: 230px; }
   .bca-login-form-item {
