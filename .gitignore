@@ -48,10 +48,10 @@ package.json
 /docker/docker-compose.yml
 /volumes/*
 /.docker-sync/
-!app/webroot/theme/ownd_river
+!app/webroot/theme/third
 /lib/Baser/View/Themed/*
 package-lock.json
 /phpmyadmin/
-app/webroot/theme/ownd_river/__assets/__gulp.command
-app/webroot/theme/ownd_river/__assets/__gulp_yarn_install.command
-app/webroot/theme/ownd_river/css/admin/map/*
+app/webroot/theme/third/__assets/__gulp.command
+app/webroot/theme/third/__assets/__gulp_yarn_install.command
+app/webroot/theme/third/css/admin/map/*
