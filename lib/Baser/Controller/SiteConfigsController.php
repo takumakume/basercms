@@ -179,12 +179,7 @@ class SiteConfigsController extends AppController {
 		if (!$writableInstall) {
 			$disableSettingInstallSetting = ['disabled' => 'disabled'];
 		}
-		$themes = BcUtil::getThemeList();
-		foreach($themes as $key => $theme) {
-			if(!preg_match('/^admin\-/', $theme)) {
-				unset($themes[$key]);
-			}
-		}
+		$themes = BcUtil::getAdminThemeList();
 		array_unshift($themes, 'baserCMS標準テーマ');
 		$this->set(compact(
 			'baseUrl', 'userGroups', 'rewriteInstalled', 'writableInstall', 'writableHtaccess',

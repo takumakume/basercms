@@ -98,16 +98,14 @@ class ThemesController extends AppController {
  */
 	public function admin_index() {
 		$this->pageTitle = __d('baser', 'テーマ一覧');
-		$path = WWW_ROOT . 'theme';
-		$folder = new Folder($path);
-		$files = $folder->read(true, true);
+		$themes = BcUtil::getThemeList();
 		$datas = [];
-		$currentTheme = [];
-		foreach ($files[0] as $themename) {
+		$currentTheme = null;
+		foreach ($themes as $themename) {
 			if ($themename != 'core' && $themename != '_notes') {
 				if ($themename == $this->siteConfigs['theme']) {
 					$currentTheme = $this->_loadThemeInfo($themename);
-				} elseif(!is_file(WWW_ROOT . 'theme' . DS . $themename . DS . 'Layouts' . DS . 'admin' . DS . 'default.php')) {
+				} else {
 					$datas[] = $this->_loadThemeInfo($themename);
 				}
 			}

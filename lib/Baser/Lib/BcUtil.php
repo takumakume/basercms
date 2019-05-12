@@ -346,11 +346,10 @@ class BcUtil extends CakeObject {
 	}
 
 /**
- * テーマリストを取得する
- *
+ * 全てのテーマを取得する
  * @return array
  */
-	public static function getThemeList() {
+	public static function getAllThemeList() {
 		$path = WWW_ROOT . 'theme';
 		$folder = new Folder($path);
 		$files = $folder->read(true, true);
@@ -358,6 +357,36 @@ class BcUtil extends CakeObject {
 		foreach ($files[0] as $theme) {
 			if ($theme != 'core' && $theme != '_notes') {
 				$themes[$theme] = $theme;
+			}
+		}
+		return $themes;
+	}
+
+/**
+ * テーマリストを取得する
+ *
+ * @return array
+ */
+	public static function getThemeList() {
+		$themes = self::getAllThemeList();
+		foreach ($themes as $key => $theme) {
+			if(preg_match('/^admin\-/', $theme)) {
+				unset($themes[$key]);
+			}
+		}
+		return $themes;
+	}
+
+/**
+ * テーマリストを取得する
+ *
+ * @return array
+ */
+	public static function getAdminThemeList() {
+		$themes = self::getAllThemeList();
+		foreach ($themes as $key => $theme) {
+			if(!preg_match('/^admin\-/', $theme)) {
+				unset($themes[$key]);
 			}
 		}
 		return $themes;
