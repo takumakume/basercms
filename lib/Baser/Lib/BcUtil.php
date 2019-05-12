@@ -350,13 +350,17 @@ class BcUtil extends CakeObject {
  * @return array
  */
 	public static function getAllThemeList() {
-		$path = WWW_ROOT . 'theme';
-		$folder = new Folder($path);
-		$files = $folder->read(true, true);
+		$paths = [WWW_ROOT . 'theme', BASER_VIEWS . 'Themed'];
 		$themes = [];
-		foreach ($files[0] as $theme) {
-			if ($theme != 'core' && $theme != '_notes') {
-				$themes[$theme] = $theme;
+		foreach($paths as $path) {
+			$folder = new Folder($path);
+			$files = $folder->read(true, true);
+			if($files[0]) {
+				foreach($files[0] as $theme) {
+					if ($theme !== 'core' && $theme !== '_notes') {
+						$themes[$theme] = $theme;
+					}
+				}
 			}
 		}
 		return $themes;
