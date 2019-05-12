@@ -181,7 +181,7 @@ class SiteConfigsController extends AppController {
 		}
 		$themes = BcUtil::getThemeList();
 		foreach($themes as $key => $theme) {
-			if(!is_file(WWW_ROOT . 'theme' . DS . $theme . DS . 'Layouts' . DS . 'admin' . DS . 'default.php')) {
+			if(!preg_match('/^admin\-/', $theme)) {
 				unset($themes[$key]);
 			}
 		}

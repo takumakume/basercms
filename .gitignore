@@ -48,10 +48,10 @@ package.json
 /docker/docker-compose.yml
 /volumes/*
 /.docker-sync/
-!app/webroot/theme/third
+!app/webroot/theme/admin-third
 /lib/Baser/View/Themed/*
 package-lock.json
 /phpmyadmin/
-app/webroot/theme/third/__assets/__gulp.command
-app/webroot/theme/third/__assets/__gulp_yarn_install.command
-app/webroot/theme/third/css/admin/map/*
+app/webroot/theme/admin-third/__assets/__gulp.command
+app/webroot/theme/admin-third/__assets/__gulp_yarn_install.command
+app/webroot/theme/admin-third/css/admin/map/*

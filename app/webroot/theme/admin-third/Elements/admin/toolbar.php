@@ -96,7 +96,7 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 				<?php
 				# TODO: お気に入りを表示（サイドメニューとのイベント処理・同期・スタイルの調整を検討中）
 				# <li>
-				# <a href="javascript:void(0)" class="title"><?php echo __d('baser', 'お気に入り') ? ><img src="/theme/third/img/admin/btn_dropdown.png" width="8" height="11" class="bc-btn"></a>
+				# <a href="javascript:void(0)" class="title"><?php echo __d('baser', 'お気に入り') ? ><img src="/theme/admin-third/img/admin/btn_dropdown.png" width="8" height="11" class="bc-btn"></a>
 				#	<div id="FavoriteArea" hidden>
 				#		<?php $this->BcBaser->element('favorite_menu') ? >
 				#		<?php $this->BcBaser->element('permission') ? >

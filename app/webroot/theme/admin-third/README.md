@@ -1,7 +1,7 @@
-# third 開発ドキュメント
+# admin-third 開発ドキュメント
 
 ## 概要
-thirdは、新しい管理システムのテーマです。  
+admin-thirdは、新しい管理システムのテーマです。  
 baserCMS 4.2 で、パッケージに同梱され、テーマの切り替えが可能となり、 baserCMS 5 でデフォルトの管理システムテーマとなる予定です。
 
 ## 開発への参加
@@ -39,7 +39,7 @@ nodebrew install-binary v8.15.1
 nodebrew use v8.15.1
 
 # npm で、必要なパッケージをインストールする
-cd app/webroot/theme/third/__assets/
+cd app/webroot/theme/admin-third/__assets/
 npm install
 
 # タスクランナー実行
