@@ -35,8 +35,8 @@ $.extend($.baserAjaxBatch.config, {
 					$(this).remove();
 					if($(config.listTable+" tbody td").length) {
 						$.baserAjaxDataList.initList();
-						$(config.listTable+" tbody tr").removeClass('even odd');
-						$.yuga.stripe();
+						// $(config.listTable+" tbody tr").removeClass('even odd');
+						// $.yuga.stripe();
 					} else {
 						$.baserAjaxDataList.load(document.location.href);
 						$(config.listTable+" tbody").append('<td colspan="'+colspan+'"><p class="no-data">データがありません。</p></td>');

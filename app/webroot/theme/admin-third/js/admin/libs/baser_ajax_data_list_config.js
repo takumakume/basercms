@@ -29,8 +29,8 @@ $.extend($.baserAjaxDataList.config, {
 						row.remove();
 						if($(config.dataList+" tbody td").length) {
 							$.baserAjaxDataList.initList();
-							$(config.dataList+" tbody tr").removeClass('even odd');
-							$.yuga.stripe();
+							// $(config.dataList+" tbody tr").removeClass('even odd');
+							// $.yuga.stripe();
 						} else {
 							$.baserAjaxDataList.load(document.location.href);
 						}
@@ -56,10 +56,10 @@ $.extend($.baserAjaxDataList.config, {
 					$(config.pageEndNum).html(Number($(config.pageEndNum).html()) + 1);
 					row.after(result);
 					$.baserAjaxDataList.initList();
-					row.next().hide().fadeIn(300, function(){
-						$(config.dataList+" tbody tr").removeClass('even odd');
-						$.yuga.stripe();
-					});
+					// row.next().hide().fadeIn(300, function(){
+					//	$(config.dataList+" tbody tr").removeClass('even odd');
+					//	$.yuga.stripe();
+					// });
 					
 				} else {
 					$(config.alertBox).html(bcI18n.commonCopyFailedMessage);

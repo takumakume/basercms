@@ -157,8 +157,8 @@
 				},
 				complete: function() {
 					$(config.loader).hide();
-					$(config.listTable + " " + config.items).removeClass('even odd');
-					$.yuga.stripe();
+					// $(config.listTable + " " + config.items).removeClass('even odd');
+					// $.yuga.stripe();
 				}
 			});
 		}, {hideLoader: false});
