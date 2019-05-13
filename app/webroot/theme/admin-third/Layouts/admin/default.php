@@ -16,7 +16,7 @@
  * @var BcAppView $this
  */
 ?>
-<?php $this->BcBaser->docType() ?>
+<?php $this->BcBaser->docType('html5') ?>
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
