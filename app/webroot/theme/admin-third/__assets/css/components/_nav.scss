@@ -214,24 +214,6 @@
       }
     }
 
-    &[data-content-type="blog-content"] {
-      .bca-nav__sub-title > a {
-        @include bca-icon(blog);
-      }
-    }
-
-    &[data-content-type="mail-content"] {
-      .bca-nav__sub-title > a {
-        @include bca-icon(mail);
-      }
-    }
-
-    &[data-content-type="uploader"] {
-      .bca-nav__sub-title > a {
-        @include bca-icon(uploader);
-      }
-    }
-
     &[data-content-type="system"] {
       .bca-nav__sub-title > a {
         @include bca-icon(system);
@@ -400,13 +382,6 @@
             @include bca-icon(tools);
           }
         }
-        &[data-system-type="feed"] {
-          .bca-nav__system-list-item-title > a {
-            @include bca-icon(feed);
-          }
-        }
-
-
         &[data-sub-content-is-current="true"] {
           .bca-nav__system-list-item-title {
             background-color: $color_secondary;

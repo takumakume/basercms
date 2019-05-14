@@ -17,12 +17,6 @@
 $bca-icon--dashboard: $fa-var-home;
 // コンテンツ管理
 $bca-icon--contents: $fa-var-sitemap;
-// ブログ
-$bca-icon--blog: $fa-var-file-alt;
-// メール
-$bca-icon--mail: $fa-var-envelope;
-// アップロード管理
-$bca-icon--uploader: $fa-var-image;
 // 設定
 $bca-icon--system: $fa-var-cog;
 
@@ -46,9 +40,6 @@ $bca-icon--theme: $fa-var-paint-brush;
 $bca-icon--plugin: $fa-var-plug;
 // ユーティリティ
 $bca-icon--tools: $fa-var-wrench;
-// フィード
-$bca-icon--feed: $fa-var-rss;
-
 
 
 /**
@@ -123,8 +114,16 @@ $bca-icon--setting: $fa-var-cog;
 $bca-icon--search: $fa-var-search;
 // クリア
 $bca-icon--clear: $fa-var-sync;
-
-
+// 名称変更
+$bca-icon--rename: $fa-var-i-cursor;
+// もとに戻す
+$bca-icon--undo: $fa-var-undo;
+// もとに戻す
+$bca-icon--ban: $fa-var-ban;
+// リンク
+$bca-icon--link: $fa-var-link;
+// エイリアス
+$bca-icon--alias: $fa-var-external-link-square-alt;
 
 /**
  *
@@ -206,8 +205,8 @@ $bca-icon--minus-square: $fa-var-minus-square;
 $bca-icon--bookmark: $fa-var-bookmark;
 // 地球
 $bca-icon--globe: $fa-var-globe-americas;
-
-
+// ファイル
+$bca-icon--file: $fa-var-file;
 
 
 // -------------------------------------------------
@@ -235,21 +234,6 @@ $bca-icon--globe: $fa-var-globe-americas;
   &--contents {
     @include bca-icon-base($bca-icon--contents);
   }
-  &--blog {
-    @include bca-icon-base($bca-icon--blog) {
-      @extend %far;
-    }
-  }
-  &--mail {
-    @include bca-icon-base($bca-icon--mail) {
-      @extend %far;
-    }
-  }
-  &--uploader {
-    @include bca-icon-base($bca-icon--uploader) {
-      @extend %far;
-    }
-  }
   &--system {
     @include bca-icon-base($bca-icon--system);
   }
@@ -274,9 +258,6 @@ $bca-icon--globe: $fa-var-globe-americas;
   }
   &--tools {
     @include bca-icon-base($bca-icon--tools);
-  }
-  &--feed {
-    @include bca-icon-base($bca-icon--feed);
   }
   &--publish {
     @include bca-icon-base($bca-icon--publish) {
@@ -303,6 +284,31 @@ $bca-icon--globe: $fa-var-globe-americas;
   }
   &--delete {
     @include bca-icon-base($bca-icon--delete) {
+      @extend %far;
+    }
+  }
+  &--ban {
+    @include bca-icon-base($bca-icon--ban) {
+      @extend %far;
+    }
+  }
+  &--undo {
+    @include bca-icon-base($bca-icon--undo) {
+      @extend %far;
+    }
+  }
+  &--rename {
+    @include bca-icon-base($bca-icon--rename) {
+      @extend %far;
+    }
+  }
+  &--link {
+    @include bca-icon-base($bca-icon--link) {
+      @extend %far;
+    }
+  }
+  &--alias {
+    @include bca-icon-base($bca-icon--alias) {
       @extend %far;
     }
   }
@@ -375,6 +381,9 @@ $bca-icon--globe: $fa-var-globe-americas;
   }
   &--file-list {
     @include bca-icon-base($bca-icon--file-list);
+  }
+  &--file {
+    @include bca-icon-base($bca-icon--file);
   }
   &--update {
     @include bca-icon-base($bca-icon--update);

@@ -302,7 +302,7 @@
 							$.extend(true, menu, {
 								"view": {
 									label: bcI18n.bcTreeCheck,
-									"icon": $.baseUrl + "/img/admin/icn_tool_check.png",
+									"icon": "bca-icon--preview",
 									"action": function (obj) {
 										$.bcTree.openUrl(data.contentFullUrl, true);
 									}
@@ -318,7 +318,7 @@
 								$.extend(true, menu, {
 									"publish": {
 										label: bcI18n.bcTreePublish,
-										"icon": $.baseUrl + "/img/admin/icn_tool_publish.png",
+										"icon": "bca-icon--publish",
 										"action": function (obj) {
 											$.bcToken.check(function(){
 												return $.ajax({
@@ -357,7 +357,7 @@
 								$.extend(true, menu, {
 									"unpublish": {
 										label: bcI18n.bcTreeUnpublish,
-										"icon": $.baseUrl + "/img/admin/icn_tool_unpublish.png",
+										"icon": "bca-icon--unpublish",
 										"action": function (obj) {
 											$.bcToken.check(function(){
 												return $.ajax({
@@ -403,7 +403,7 @@
 							$.extend(true, menu, {
 								"manage": {
 									label: bcI18n.bcTreeManage,
-									"icon": $.baseUrl + "/img/admin/icn_tool_manage.png",
+									"icon": "bca-icon--th-list",
 									"action": function (obj) {
 										$.bcTree.openUrl($.bcTree.createLink($.bcTree.settings[data.contentType]['url']['manage'], data.contentId, data.contentParentId, data.contentEntityId));
 									}
@@ -419,7 +419,7 @@
 							$.extend(true, menu, {
 								"rename": {
 									label: bcI18n.bcTreeRename,
-									"icon": $.baseUrl + "/img/admin/icon_rename.png",
+									"icon": "bca-icon--rename",
 									"action": function (obj) {
 										$.bcTree.renameContent(node, node.text);
 									}
@@ -433,7 +433,7 @@
 							$.extend(true, menu, {
 								"edit": {
 									label: bcI18n.bcTreeEdit,
-									"icon": $.baseUrl + "/img/admin/icn_tool_edit.png",
+									"icon": "bca-icon--edit",
 									"action": function (obj) {
 										if(!node.data.jstree.alias) {
 											$.bcTree.openUrl($.bcTree.createLink($.bcTree.settings[data.contentType]['url']['edit'], data.contentId, data.contentParentId, data.contentEntityId));
@@ -453,7 +453,7 @@
 							$.extend(true, menu, {
 								"copy": {
 									label: bcI18n.bcTreeCopy,
-									"icon": $.baseUrl + "/img/admin/icn_tool_copy.png",
+									"icon": "bca-icon--copy",
 									"action": function (obj) {
 										$.bcTree.copyContent(parent, node);
 									}
@@ -474,7 +474,7 @@
 							$.extend(true, menu, {
 								"delete": {
 									label: deleteLabel,
-									"icon": $.baseUrl + "/img/admin/icn_tool_delete.png",
+									"icon": "bca-icon--delete",
 									"action": function (obj) {
 										var message = bcI18n.bcTreeConfirmToTrash;
 										if(data.alias) {
@@ -492,7 +492,7 @@
 								"return": {
 									_disabled: editDisabled,
 									label: "戻す",
-									"icon": $.baseUrl + "/img/admin/icon_return.png",
+									"icon": "bca-icon--undo",
 									"action": function (obj) {
 										if(data.alias) {
 											$.ajax({
@@ -520,7 +520,7 @@
 								"empty": {
 									_disabled: !$.bcTree.config.isAdmin,
 									label: bcI18n.bcTreeEmptyTrash,
-									"icon": $.baseUrl + "/img/admin/icon_empty.png",
+									"icon": "bca-icon--ban",
 									"action": function (obj) {
 										if(confirm(bcI18n.bcTreeConfirmMessage1)) {
 											$.bcToken.check(function(){
@@ -804,9 +804,13 @@
 			var contentPlugin = setting.plugin;
 			var contentType = setting.type;
 			var contentEntityId = null;
-			var iconAdd = setting.url.icon;
-			var iconMenu = setting.url.icon;
-
+			var iconAdd;
+			var iconMenu;
+			if(setting.url.icon) {
+				iconAdd = iconMenu = setting.url.icon;
+			} else {
+				iconAdd = iconMenu = setting.icon;
+			}
 			if (setting.type == 'ContentFolder') {
 				var separatorBefore = true;
 				type = 'folder';

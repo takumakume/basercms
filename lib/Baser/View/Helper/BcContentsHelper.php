@@ -88,10 +88,18 @@ class BcContentsHelper extends AppHelper {
 
 			// icon
 			if (!empty($setting['icon'])) {
-				$setting['url']['icon'] = $this->_getIconUrl($setting['plugin'], $setting['type'], $setting['icon']);
+				if(preg_match('/\.(png|jpg|gif)$/', $setting['icon'])) {
+					$setting['url']['icon'] = $this->_getIconUrl($setting['plugin'], $setting['type'], $setting['icon']);	
+				}
 			} else {
-				$setting['url']['icon'] = $this->_getIconUrl($setting['plugin'], $setting['type'], null);
+				// 後方互換のため判定を入れる（v4.2.0）
+				if(Configure::read('BcSite.admin_theme') === Configure::read('BcApp.adminNewThemeName')) {
+					$setting['icon'] = $setting['icon'] = 'bca-icon--file';
+				} else {
+					$setting['url']['icon'] = $this->_getIconUrl($setting['plugin'], $setting['type'], null);
+				}
 			}
+			
 			// routes
 			foreach (['manage', 'add', 'edit', 'delete', 'copy', 'dblclick'] as $method) {
 				if (empty($setting['routes'][$method]) && !in_array($method, ['copy', 'manage', 'dblclick'])) {

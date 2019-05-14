@@ -3,7 +3,7 @@
  * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa, .bca-icon--dashboard::before, .bca-icon--contents::before, .bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--uploader::before, .bca-icon--system::before, .bca-icon--siteconfigs::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--tools::before, .bca-icon--feed::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--th-list::before, .bca-icon--back-to-list::before, .bca-icon--favorite::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--help::before, .bca-icon--permission::before, .bca-icon--apply::before, .bca-icon--home::before, .bca-icon--switch::before, .bca-icon--open::before, .bca-icon--textcopy::before, .bca-icon--download::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--file-list::before, .bca-icon--update::before, .bca-icon--setting::before, .bca-icon--search::before, .bca-icon--clear::before, .bca-icon--datetimepicker-date::before, .bca-icon--datetimepicker-time::before, .bca-icon--list-default::before, .bca-icon--list-circle::before, .bca-icon--error::before, .bca-icon--alert::before, .bca-icon--notification::before, .bca-icon--facebook::before, .bca-icon--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before,
+.fa, .bca-icon--dashboard::before, .bca-icon--contents::before, .bca-icon--system::before, .bca-icon--siteconfigs::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--tools::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--rename::before, .bca-icon--link::before, .bca-icon--alias::before, .bca-icon--th-list::before, .bca-icon--back-to-list::before, .bca-icon--favorite::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--help::before, .bca-icon--permission::before, .bca-icon--apply::before, .bca-icon--home::before, .bca-icon--switch::before, .bca-icon--open::before, .bca-icon--textcopy::before, .bca-icon--download::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--file-list::before, .bca-icon--update::before, .bca-icon--setting::before, .bca-icon--search::before, .bca-icon--clear::before, .bca-icon--datetimepicker-date::before, .bca-icon--datetimepicker-time::before, .bca-icon--list-default::before, .bca-icon--list-circle::before, .bca-icon--error::before, .bca-icon--alert::before, .bca-icon--notification::before, .bca-icon--facebook::before, .bca-icon--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before,
 .fas,
 .far,
 .fal,
@@ -86,14 +86,14 @@
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--dashboard::before, .fa-pull-left.bca-icon--contents::before, .fa-pull-left.bca-icon--blog::before, .fa-pull-left.bca-icon--mail::before, .fa-pull-left.bca-icon--uploader::before, .fa-pull-left.bca-icon--system::before, .fa-pull-left.bca-icon--siteconfigs::before, .fa-pull-left.bca-icon--users::before, .fa-pull-left.bca-icon--sites::before, .fa-pull-left.bca-icon--theme::before, .fa-pull-left.bca-icon--plugin::before, .fa-pull-left.bca-icon--tools::before, .fa-pull-left.bca-icon--feed::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-icon--back-to-list::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--apply::before, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-icon--switch::before, .fa-pull-left.bca-icon--open::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-icon--download::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-icon--file-list::before, .fa-pull-left.bca-icon--update::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-icon--clear::before, .fa-pull-left.bca-icon--datetimepicker-date::before, .fa-pull-left.bca-icon--datetimepicker-time::before, .fa-pull-left.bca-icon--list-default::before, .fa-pull-left.bca-icon--list-circle::before, .fa-pull-left.bca-icon--error::before, .fa-pull-left.bca-icon--alert::before, .fa-pull-left.bca-icon--notification::before, .fa-pull-left.bca-icon--facebook::before, .fa-pull-left.bca-icon--twitter::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before,
+.fa.fa-pull-left, .fa-pull-left.bca-icon--dashboard::before, .fa-pull-left.bca-icon--contents::before, .fa-pull-left.bca-icon--system::before, .fa-pull-left.bca-icon--siteconfigs::before, .fa-pull-left.bca-icon--users::before, .fa-pull-left.bca-icon--sites::before, .fa-pull-left.bca-icon--theme::before, .fa-pull-left.bca-icon--plugin::before, .fa-pull-left.bca-icon--tools::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-icon--rename::before, .fa-pull-left.bca-icon--link::before, .fa-pull-left.bca-icon--alias::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-icon--back-to-list::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-icon--apply::before, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-icon--switch::before, .fa-pull-left.bca-icon--open::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-icon--download::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-icon--file-list::before, .fa-pull-left.bca-icon--update::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-icon--clear::before, .fa-pull-left.bca-icon--datetimepicker-date::before, .fa-pull-left.bca-icon--datetimepicker-time::before, .fa-pull-left.bca-icon--list-default::before, .fa-pull-left.bca-icon--list-circle::before, .fa-pull-left.bca-icon--error::before, .fa-pull-left.bca-icon--alert::before, .fa-pull-left.bca-icon--notification::before, .fa-pull-left.bca-icon--facebook::before, .fa-pull-left.bca-icon--twitter::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before,
 .fas.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
 .fab.fa-pull-left {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--dashboard::before, .fa-pull-right.bca-icon--contents::before, .fa-pull-right.bca-icon--blog::before, .fa-pull-right.bca-icon--mail::before, .fa-pull-right.bca-icon--uploader::before, .fa-pull-right.bca-icon--system::before, .fa-pull-right.bca-icon--siteconfigs::before, .fa-pull-right.bca-icon--users::before, .fa-pull-right.bca-icon--sites::before, .fa-pull-right.bca-icon--theme::before, .fa-pull-right.bca-icon--plugin::before, .fa-pull-right.bca-icon--tools::before, .fa-pull-right.bca-icon--feed::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-icon--back-to-list::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--apply::before, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-icon--switch::before, .fa-pull-right.bca-icon--open::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-icon--download::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-icon--file-list::before, .fa-pull-right.bca-icon--update::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-icon--clear::before, .fa-pull-right.bca-icon--datetimepicker-date::before, .fa-pull-right.bca-icon--datetimepicker-time::before, .fa-pull-right.bca-icon--list-default::before, .fa-pull-right.bca-icon--list-circle::before, .fa-pull-right.bca-icon--error::before, .fa-pull-right.bca-icon--alert::before, .fa-pull-right.bca-icon--notification::before, .fa-pull-right.bca-icon--facebook::before, .fa-pull-right.bca-icon--twitter::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before,
+.fa.fa-pull-right, .fa-pull-right.bca-icon--dashboard::before, .fa-pull-right.bca-icon--contents::before, .fa-pull-right.bca-icon--system::before, .fa-pull-right.bca-icon--siteconfigs::before, .fa-pull-right.bca-icon--users::before, .fa-pull-right.bca-icon--sites::before, .fa-pull-right.bca-icon--theme::before, .fa-pull-right.bca-icon--plugin::before, .fa-pull-right.bca-icon--tools::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-icon--rename::before, .fa-pull-right.bca-icon--link::before, .fa-pull-right.bca-icon--alias::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-icon--back-to-list::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-icon--apply::before, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-icon--switch::before, .fa-pull-right.bca-icon--open::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-icon--download::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-icon--file-list::before, .fa-pull-right.bca-icon--update::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-icon--clear::before, .fa-pull-right.bca-icon--datetimepicker-date::before, .fa-pull-right.bca-icon--datetimepicker-time::before, .fa-pull-right.bca-icon--list-default::before, .fa-pull-right.bca-icon--list-circle::before, .fa-pull-right.bca-icon--error::before, .fa-pull-right.bca-icon--alert::before, .fa-pull-right.bca-icon--notification::before, .fa-pull-right.bca-icon--facebook::before, .fa-pull-right.bca-icon--twitter::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before,
 .fas.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -4308,7 +4308,7 @@ readers do not read off random characters that represent icons */
   src: url("../../fonts/admin/fa-solid-900.eot");
   src: url("../../fonts/admin/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../fonts/admin/fa-solid-900.woff2") format("woff2"), url("../../fonts/admin/fa-solid-900.woff") format("woff"), url("../../fonts/admin/fa-solid-900.ttf") format("truetype"), url("../../fonts/admin/fa-solid-900.svg#fontawesome") format("svg"); }
 
-.fa, .bca-icon--dashboard::before, .bca-icon--contents::before, .bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--uploader::before, .bca-icon--system::before, .bca-icon--siteconfigs::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--tools::before, .bca-icon--feed::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--th-list::before, .bca-icon--back-to-list::before, .bca-icon--favorite::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--help::before, .bca-icon--permission::before, .bca-icon--apply::before, .bca-icon--home::before, .bca-icon--switch::before, .bca-icon--open::before, .bca-icon--textcopy::before, .bca-icon--download::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--file-list::before, .bca-icon--update::before, .bca-icon--setting::before, .bca-icon--search::before, .bca-icon--clear::before, .bca-icon--datetimepicker-date::before, .bca-icon--datetimepicker-time::before, .bca-icon--list-default::before, .bca-icon--list-circle::before, .bca-icon--error::before, .bca-icon--alert::before, .bca-icon--notification::before, .bca-icon--facebook::before, .bca-icon--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before,
+.fa, .bca-icon--dashboard::before, .bca-icon--contents::before, .bca-icon--system::before, .bca-icon--siteconfigs::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--theme::before, .bca-icon--plugin::before, .bca-icon--tools::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--rename::before, .bca-icon--link::before, .bca-icon--alias::before, .bca-icon--th-list::before, .bca-icon--back-to-list::before, .bca-icon--favorite::before, .bca-icon--menuitem::before, .bca-icon--add::before, .bca-icon--help::before, .bca-icon--permission::before, .bca-icon--apply::before, .bca-icon--home::before, .bca-icon--switch::before, .bca-icon--open::before, .bca-icon--textcopy::before, .bca-icon--download::before, .bca-icon--draggable::before, .bca-icon--folder::before, .bca-icon--file::before, .bca-icon--up-directory::before, .bca-icon--arrow-right::before, .bca-icon--arrow-left::before, .bca-icon--arrow-up::before, .bca-icon--arrow-down::before, .bca-icon--file-list::before, .bca-icon--update::before, .bca-icon--setting::before, .bca-icon--search::before, .bca-icon--clear::before, .bca-icon--datetimepicker-date::before, .bca-icon--datetimepicker-time::before, .bca-icon--list-default::before, .bca-icon--list-circle::before, .bca-icon--error::before, .bca-icon--alert::before, .bca-icon--notification::before, .bca-icon--facebook::before, .bca-icon--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before,
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
@@ -4385,15 +4385,6 @@ readers do not read off random characters that represent icons */
 .bca-icon--contents::before {
   content: "\f0e8"; }
 
-.bca-icon--blog::before {
-  content: "\f15c"; }
-
-.bca-icon--mail::before {
-  content: "\f0e0"; }
-
-.bca-icon--uploader::before {
-  content: "\f03e"; }
-
 .bca-icon--system::before {
   content: "\f013"; }
 
@@ -4415,9 +4406,6 @@ readers do not read off random characters that represent icons */
 .bca-icon--tools::before {
   content: "\f0ad"; }
 
-.bca-icon--feed::before {
-  content: "\f09e"; }
-
 .bca-icon--publish::before {
   content: "\f144"; }
 
@@ -4435,6 +4423,15 @@ readers do not read off random characters that represent icons */
 
 .bca-icon--delete::before {
   content: "\f2ed"; }
+
+.bca-icon--rename::before {
+  content: "\f246"; }
+
+.bca-icon--link::before {
+  content: "\f0c1"; }
+
+.bca-icon--alias::before {
+  content: "\f360"; }
 
 .bca-icon--th-list::before {
   content: "\f00b"; }
@@ -4502,6 +4499,9 @@ readers do not read off random characters that represent icons */
 
 .bca-icon--file-list::before {
   content: "\f15c"; }
+
+.bca-icon--file::before {
+  content: "\f15b"; }
 
 .bca-icon--update::before {
   content: "\f021"; }
@@ -4577,7 +4577,7 @@ readers do not read off random characters that represent icons */
 .bca-icon--globe::before {
   content: "\f57d"; }
 
-.bca-icon--blog::before, .bca-icon--mail::before, .bca-icon--uploader::before, .bca-icon--users::before, .bca-icon--sites::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--apply::before {
+.bca-icon--users::before, .bca-icon--sites::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--rename::before, .bca-icon--link::before, .bca-icon--alias::before, .bca-icon--apply::before {
   font-weight: 400; }
 
 .bca-icon--facebook::before, .bca-icon--twitter::before {
@@ -5194,8 +5194,34 @@ readers do not read off random characters that represent icons */
   /*padding:0px 10px;*/ }
 
 .vakata-context li > a {
-  padding-top: 3px;
-  padding-bottom: 3px; }
+  color: #424f44 !important; }
+
+.jstree-container-ul .jstree-icon {
+  font-size: 1.6rem !important; }
+
+.jstree-container-ul .bca-icon--folder {
+  color: #edc528; }
+
+.vakata-context li > a:hover {
+  background-color: #ddd !important;
+  box-shadow: none !important; }
+
+.vakata-context li i:before,
+.bca-nav__system-list-item-title-label:before,
+.bca-nav__sub-title-label::before,
+.jstree-themeicon-custom::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0;
+  font-family: 'Font Awesome 5 Free';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-weight: 400; }
 
 .vakata-context li > a .vakata-contextmenu-sep {
   border-left: none !important;
@@ -5374,21 +5400,6 @@ div.jstree-publish-even {
   font-stretch: normal;
   margin: 0 .3em 0 0; }
 
-.bca-icon--blog::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
-.bca-icon--mail::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
-.bca-icon--uploader::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
 .bca-icon--system::before {
   font-size: 95%;
   font-stretch: normal;
@@ -5420,11 +5431,6 @@ div.jstree-publish-even {
   margin: 0 .3em 0 0; }
 
 .bca-icon--tools::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
-.bca-icon--feed::before {
   font-size: 95%;
   font-stretch: normal;
   margin: 0 .3em 0 0; }
@@ -5680,6 +5686,21 @@ div.jstree-publish-even {
   margin: 0 .3em 0 0; }
 
 .bca-icon--bookmark::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0; }
+
+.bca-icon--alias::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0; }
+
+.bca-icon--rename::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0; }
+
+.bca-icon--link::before {
   font-size: 95%;
   font-stretch: normal;
   margin: 0 .3em 0 0; }

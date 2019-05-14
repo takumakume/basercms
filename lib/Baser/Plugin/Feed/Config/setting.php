@@ -18,6 +18,7 @@ $config['BcApp.adminNavigation'] = [
 		'Feed' => [
 			'title' => __d('baser', 'フィード管理'),
 			'type' => 'system',
+			'icon' => 'bca-icon--feed',
 			'menus' => [
 				'FeedConfigs' => [
 					'title' => __d('baser', 'フィード設定'),

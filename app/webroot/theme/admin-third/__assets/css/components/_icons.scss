@@ -5,15 +5,6 @@
   &--contents {
     @include bca-icon(contents);
   }
-  &--blog {
-    @include bca-icon(blog);
-  }
-  &--mail {
-    @include bca-icon(mail);
-  }
-  &--uploader {
-    @include bca-icon(uploader);
-  }
   &--system {
     @include bca-icon(system);
   }
@@ -34,9 +25,6 @@
   }
   &--tools {
     @include bca-icon(tools);
-  }
-  &--feed {
-    @include bca-icon(feed);
   }
   &--publish {
     @include bca-icon(publish);
@@ -190,6 +178,15 @@
   }
   &--bookmark {
     @include bca-icon(bookmark);
+  }
+  &--alias {
+    @include bca-icon(alias);
+  }
+  &--rename {
+    @include bca-icon(rename);
+  }
+  &--link {
+    @include bca-icon(link);
   }
   &--globe {
     @include bca-icon(globe);

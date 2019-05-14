@@ -28,6 +28,7 @@ foreach ($blogContents as $blogContent) {
 		'siteId' => $content['site_id'],
 		'title' => $content['title'],
 		'type' => 'blog-content',
+		'icon' => 'bca-icon--blog',
 		'menus' => [
 			'BlogPosts' . $blog['id'] => [
 				'title' => '記事',
@@ -64,7 +65,7 @@ $config['BcContents']['items']['Blog'] = [
 		'title' => __d('baser', 'ブログ'),
 		'multiple'	=> true,
 		'preview'	=> true,
-		'icon'	=> 'admin/icon_blog.png',
+		'icon'	=> 'bca-icon--blog',
 		'routes' => [
 			'manage'	=> [
 				'admin' => true,

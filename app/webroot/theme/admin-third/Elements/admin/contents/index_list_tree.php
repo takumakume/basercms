@@ -38,9 +38,13 @@ if (!$PermissionModel->check('/' . Configure::read('Routing.prefixes.0') . '/con
 		$alias = false;
 		$open = false;
 		if(!empty($this->BcContents->settings[$type]['icon'])) {
-			$iconPath = $this->BcContents->settings[$type]['url']['icon'];
+		    if($this->BcContents->settings[$type]['url']['icon']) {
+				$icon = $this->BcContents->settings[$type]['url']['icon'];    
+            } else {
+				$icon = $this->BcContents->settings[$type]['icon'];
+            }
 		} else {
-			$iconPath = $this->BcContents->settings['Default']['url']['icon'];
+			$icon = $this->BcContents->settings['Default']['url']['icon'];
 		}
 		if($data['Content']['alias_id']) {
 			$alias = true;
@@ -58,7 +62,7 @@ if (!$PermissionModel->check('/' . Configure::read('Routing.prefixes.0') . '/con
 		}
 		?>
 <li id="node-<?php echo $data['Content']['id'] ?>" data-jstree='{
-	"icon":"<?php echo $iconPath ?>",
+	"icon":"<?php echo $icon ?>",
 	"name":"<?php echo urldecode($data['Content']['name']) ?>",
 	"type":"<?php echo $treeItemType ?>",
 	"status":"<?php echo (bool) $status ?>",

@@ -1,0 +1,6 @@
+.bca-icon--mail::before {
+    content: "\f0e0";
+}
+#ContentsTreeList .bca-icon--mail{
+    color:#7faa00;
+}

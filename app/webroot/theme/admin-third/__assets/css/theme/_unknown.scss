@@ -662,10 +662,37 @@
 }
 
 .vakata-context li > a {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  //padding-top: 3px!important;
+  //padding-bottom: 3px!important;
+  color: $color_text_primary!important;
 }
-
+.jstree-container-ul .jstree-icon {
+  font-size:1.6rem!important;
+}
+.jstree-container-ul .bca-icon--folder {
+  color:#edc528;  
+}
+.vakata-context li>a:hover {
+  background-color:$color_background_menu_dark!important;
+  box-shadow:none!important;
+}
+.vakata-context li i:before,
+.bca-nav__system-list-item-title-label:before,
+.bca-nav__sub-title-label::before,
+.jstree-themeicon-custom::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0;
+  font-family: 'Font Awesome 5 Free';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-weight: 400;
+}
 .vakata-context li > a .vakata-contextmenu-sep {
   border-left: none !important;
   background: none;

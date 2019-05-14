@@ -1,0 +1,6 @@
+.bca-icon--blog::before {
+    content: "\f15c";
+}
+#ContentsTreeList .bca-icon--blog{
+    color:#7faa00;
+}
