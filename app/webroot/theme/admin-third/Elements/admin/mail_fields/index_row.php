@@ -44,7 +44,7 @@ if (!$data['MailField']['use_field']) {
 		<?php echo $this->BcTime->format('Y-m-d', $data['MailField']['created']) ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['MailField']['modified']) ?>
 	</td>
-	<td class="bca-table-listup__tbody-td">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php $this->BcBaser->link('', ['action' => 'ajax_unpublish', $mailContent['MailContent']['id'], $data['MailField']['id']], ['title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_publish', $mailContent['MailContent']['id'], $data['MailField']['id']], ['title' => __d('baser', '公開'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'edit', $mailContent['MailContent']['id'], $data['MailField']['id']], ['title' => __d('baser', '編集'), 'class' => ' bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>

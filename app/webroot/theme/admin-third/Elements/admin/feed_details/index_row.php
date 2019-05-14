@@ -34,7 +34,7 @@
 	<?php echo $this->BcListTable->dispatchShowRow($data) ?>
 	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['created']) ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['modified']) ?></td>
-	<td class="bca-table-listup__tbody-td">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php $this->BcBaser->link('', $data['url'], ['title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['controller' => 'feed_details', 'action' => 'edit', $this->BcForm->value('FeedConfig.id'), $data['id']], ['title' => __d('baser', '編集'), 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['controller' => 'feed_details', 'action' => 'ajax_delete', $this->BcForm->value('FeedConfig.id'), $data['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg']) ?>

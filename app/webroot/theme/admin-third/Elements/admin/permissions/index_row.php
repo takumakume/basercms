@@ -45,7 +45,7 @@
 		<?php echo $this->BcTime->format('Y-m-d', $data['Permission']['created']); ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['Permission']['modified']); ?>
 	</td>
-	<td class="bca-table-listup__tbody-td">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php $this->BcBaser->link('', ['action' => 'ajax_unpublish', $data['Permission']['id']], ['title' => __d('baser', '無効'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_publish', $data['Permission']['id']], ['title' => __d('baser', '有効'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'edit', $this->request->params['pass'][0], $data['Permission']['id']], ['title' => __d('baser', '編集'), 'class' => ' bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
