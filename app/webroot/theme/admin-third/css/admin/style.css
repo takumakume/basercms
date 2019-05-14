@@ -7634,7 +7634,7 @@ body {
     border-bottom: none; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__label {
       vertical-align: top;
-      width: 240px;
+      width: 250px;
       padding-left: 0.2em;
       text-align: left;
       white-space: nowrap; }
@@ -7657,7 +7657,8 @@ body {
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textbox,
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textarea {
         position: relative;
-        margin-top: -0.5em; }
+        margin-top: -0.5em;
+        margin-left: -4px; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__explanation {
       display: inline-block;
       margin-left: 1em;
