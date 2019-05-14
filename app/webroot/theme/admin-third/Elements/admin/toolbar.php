@@ -61,11 +61,23 @@ if (!empty($currentAuthPrefix['name']) && $currentPrefix != 'front') {
 					)
 				?>
 			<?php
-				# TODO: どういうケースか不明
 				else: ?>
-				<?php if (in_array('admin', $currentUserAuthPrefixes)): ?>
-					<?php $this->BcBaser->link($this->BcBaser->getImg('admin/btn_logo.png', ['alt' => __d('baser', 'baserCMS管理システム'), 'class' => 'bc-btn']), ['plugin' => null, 'admin' => true, 'controller' => 'dashboard', 'action' => 'index'], ['title' => __d('baser', 'baserCMS管理システム')]) ?>
-				<?php else: ?>
+				<?php
+					# 管理画面にアクセス可能な権限がある場合
+					if (in_array('admin', $currentUserAuthPrefixes)): ?>
+					<?php
+					$this->BcBaser->link(
+						$this->BcBaser->getImg('admin/logo_icon.svg', ['alt' => '', 'width' => '24', 'height' => '21', 'class' => 'bca-toolbar__logo-symbol'])
+							.'<span class="bca-toolbar__logo-text">'
+							.$this->BcBaser->siteConfig['formal_name']
+							.'</span>', ['plugin' => null, 'admin' => true, 'controller' => 'dashboard', 'action' => 'index']
+						,
+						['class' => 'bca-toolbar__logo-link']
+					)
+					?>
+				<?php
+				# 管理画面にアクセス権限がない場合
+				else: ?>
 					<?php $this->BcBaser->link($authName, Configure::read('BcAuthPrefix.' . $currentPrefix . '.loginRedirect'), ['title' => $authName]) ?>
 				<?php endif ?>
 			<?php endif ?>
