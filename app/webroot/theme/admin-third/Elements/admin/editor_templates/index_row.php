@@ -37,7 +37,7 @@
 
 	<td class="bca-table-listup__tbody-td" style="white-space:nowrap"><?php echo $this->BcTime->format('Y-m-d', $data['EditorTemplate']['created']) ?><br>
 		<?php echo $this->BcTime->format('Y-m-d', $data['EditorTemplate']['modified']) ?></td>
-	<td class="row-tools bca-table-listup__tbody-td">
+	<td class="row-tools bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php $this->BcBaser->link('',
 			['action' => 'edit', $data['EditorTemplate']['id']],
 			['title' => __d('baser', '編集'), 'class' => ' bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']
