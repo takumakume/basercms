@@ -44,7 +44,7 @@ $types = BcUtil::unserialize($this->BcBaser->siteConfig['content_types']);
 	</span>
 	<span class="bca-search__input-item">
 		<?php echo $this->BcForm->label('SearchIndex.keyword', __d('baser', 'キーワード'), ['class' => 'bca-search__input-item-label']) ?>
-		<?php echo $this->BcForm->input('SearchIndex.keyword', ['type' => 'text', 'class' => 'bca-input-text', 'size' => '30']) ?>
+		<?php echo $this->BcForm->input('SearchIndex.keyword', ['type' => 'text', 'class' => 'bca-textbox__input', 'size' => '30']) ?>
 	</span>
 	<span class="bca-search__input-item">
 		<?php echo $this->BcForm->label('SearchIndex.status', __d('baser', '公開状態'), ['class' => 'bca-search__input-item-label']) ?>

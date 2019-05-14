@@ -8267,28 +8267,6 @@ table.cake-sql-log tr td {
   float: left;
   width: 33%; }
 
-.bca-input-text {
-  display: inline-block;
-  outline: none;
-  padding: 0.7em 0.5em 0.6em 0.5em;
-  border-radius: 3px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
-  line-height: 1.2;
-  font-size: 1.4rem;
-  color: #424f44;
-  margin: 4px; }
-  .bca-input-text[data-input-text-size=lg] {
-    font-size: 1.6rem; }
-  .bca-input-text[data-input-text-size=sm] {
-    font-size: 1.2rem; }
-  .bca-input-text[data-input-text-size=full-counter] {
-    width: calc(100% - 80px); }
-  .bca-input-text:focus {
-    box-shadow: 0 0 4px 0px #FF6F61;
-    border-color: #FF6F61;
-    border-width: 1px; }
-
 .bca-textbox-color {
   display: inline-block; }
   .bca-textbox-color__input {
@@ -8325,7 +8303,7 @@ table.cake-sql-log tr td {
     box-sizing: border-box;
     border: 1px solid #ccc;
     line-height: 1.2;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: #424f44;
     margin: 4px; }
     .bca-textbox__input[data-input-text-size=lg] {

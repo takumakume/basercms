@@ -8,7 +8,7 @@
     box-sizing: border-box;
     border: 1px solid $color_control_border_color;
     line-height: 1.2;
-    font-size: $input_text_font_size;
+    font-size: $button_font_size_medium;
     color: $color_text_secondary;
     margin:4px;
     &[data-input-text-size=lg] {

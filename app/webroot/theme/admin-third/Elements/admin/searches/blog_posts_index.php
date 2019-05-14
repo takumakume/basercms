@@ -22,7 +22,7 @@ $users = $this->BcForm->getControlSource("BlogPost.user_id");
 <p class="bca-search__input-list">
 	<span class="bca-search__input-item">
 		<?php echo $this->BcForm->label('BlogPost.name', __d('baser', 'タイトル'), ['class' => 'bca-search__input-item-label']) ?>
-		<?php echo $this->BcForm->input('BlogPost.name', ['type' => 'text', 'class' => 'bca-input-text', 'size' => '30']) ?></span>
+		<?php echo $this->BcForm->input('BlogPost.name', ['type' => 'text', 'class' => 'bca-textbox__input', 'size' => '30']) ?></span>
 <?php if ($this->BlogCategories): ?>
 	<span class="bca-search__input-item">
 		<?php echo $this->BcForm->label('BlogPost.blog_category_id', __d('baser', 'カテゴリー'), ['class' => 'bca-search__input-item-label']) ?>
