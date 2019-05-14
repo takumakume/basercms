@@ -40,8 +40,10 @@ if($this->action == 'admin_index') {
             <?php echo $this->BcForm->input('ViewSetting.list_type', array('type' => 'radio', 'options' => $listTypes)) ?>
         </div>
 		<div class="bca-panel-box__inline-fields-separator"></div>
-		<button id="BtnOpenTree" class="button-small"><?php echo __d('baser', '全て展開') ?></button>　
-		<button id="BtnCloseTree" class="button-small"><?php echo __d('baser', '全て閉じる') ?></button>
+        <div id="GrpChangeTreeOpenClose">
+            <button id="BtnOpenTree" class="button-small"><?php echo __d('baser', '全て展開') ?></button>　
+            <button id="BtnCloseTree" class="button-small"><?php echo __d('baser', '全て閉じる') ?></button>
+        </div>
     </div>
 </div>
 <?php endif ?>
