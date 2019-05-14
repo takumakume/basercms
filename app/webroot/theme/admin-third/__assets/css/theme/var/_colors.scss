@@ -38,11 +38,15 @@ $color_background_secondary_border: $color_border;
 $color_main_contents_border_color:$color_border;
 
 // menu
-$color_background_menu: $color_border;
-$color_background_menu_current: $color_background_primary;
 $color_background_menu_dark: #ddd;
+$color_background_menu: $color_border;
+$color_background_menu_current: $color_darkest;
+$color_background_menu_current_parent: $color_background_menu_dark;
+$color_background_menu_current_submenu: $color_background_primary;
+$color_background_menu_hover: $color_background_menu_dark;
 $color_menu_link: $color_darkest;
-$color_menu_hover: $color_secondary;
+$color_menu_current: $color_lightest;
+$color_menu_hover: $color_darkest;
 
 // table
 $color_background_table_listup: $color_background_menu;
