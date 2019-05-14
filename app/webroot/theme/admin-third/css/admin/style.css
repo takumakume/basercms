@@ -8244,7 +8244,10 @@ table.cake-sql-log tr td {
       .bca-panel-box__inline-fields-item {
         display: flex;
         justify-content: flex-start;
-        align-items: center; }
+        align-items: center;
+        white-space: nowrap; }
+        .bca-panel-box__inline-fields-item .bca-radio-group {
+          margin-bottom: 0; }
       .bca-panel-box__inline-fields-title {
         font-weight: bold;
         display: inline-block;

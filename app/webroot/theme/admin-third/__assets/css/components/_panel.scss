@@ -26,6 +26,11 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        white-space: nowrap;
+
+        .bca-radio-group {
+          margin-bottom: 0;
+        }
       }
 
       &-title {
