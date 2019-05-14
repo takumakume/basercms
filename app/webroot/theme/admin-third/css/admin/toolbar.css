@@ -5723,7 +5723,7 @@ body {
   .bca-toolbar .bca-toolbar__logo {
     flex: 0 1 auto;
     display: flex;
-    padding: 0 0 0 1em; }
+    padding: 0 0 0 12px; }
     .bca-toolbar .bca-toolbar__logo-link {
       display: flex;
       justify-content: flex-start;
@@ -5787,7 +5787,7 @@ body {
         box-shadow: 0 0 0 #ccc;
         border: 0;
         width: 100%;
-        padding: 2px 10px 2px 10px;
+        padding: 2px 20px;
         color: #fff;
         text-decoration: none; }
         .bca-toolbar__users > ul > li > a:hover, .bca-toolbar__users > ul > li > a:focus {

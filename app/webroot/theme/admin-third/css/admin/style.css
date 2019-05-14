@@ -6310,7 +6310,7 @@ div.jstree-publish-even {
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 7px 10px; }
+    padding: 7px 20px 7px 12px; }
     .bca-footer__inner--full .bca-footer__main {
       display: flex;
       align-items: center; }
@@ -6342,7 +6342,7 @@ body {
   .bca-toolbar .bca-toolbar__logo {
     flex: 0 1 auto;
     display: flex;
-    padding: 0 0 0 1em; }
+    padding: 0 0 0 12px; }
     .bca-toolbar .bca-toolbar__logo-link {
       display: flex;
       justify-content: flex-start;
@@ -6406,7 +6406,7 @@ body {
         box-shadow: 0 0 0 #ccc;
         border: 0;
         width: 100%;
-        padding: 2px 10px 2px 10px;
+        padding: 2px 20px;
         color: #fff;
         text-decoration: none; }
         .bca-toolbar__users > ul > li > a:hover, .bca-toolbar__users > ul > li > a:focus {
@@ -7399,12 +7399,12 @@ body {
     margin-right: 0.2vw; }
     .bca-search__input-item-label {
       display: block;
-      margin-bottom: 8px; }
+      margin: 0 0 8px 4px; }
   .bca-search__btns {
     /*display: flex;
     justify-content: center;
     align-items: center;*/
-    margin: 1em 0 0; }
+    margin: 1em 0 0 4px; }
     .bca-search__btns-item {
       margin: 0 1em 0 0;
       display: inline-block; }
