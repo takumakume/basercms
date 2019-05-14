@@ -53,7 +53,7 @@ if (!$data['BlogComment']['status']) {
 		<?php echo $this->BcTime->format('Y-m-d', $data['BlogComment']['created']); ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['BlogComment']['modified']); ?>
 	</td>
-	<td class="bca-table-listup__tbody-td">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php if (!empty($this->params['pass'][1])): ?>
 			<?php $this->BcBaser->link('', ['action' => 'ajax_unpublish', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']], ['title' => __d('baser', '非公開'), 'class' => 'btn-unpublish bca-btn-icon', 'data-bca-btn-type' => 'unpublish','data-bca-btn-size' => 'lg']) ?>
 			<?php $this->BcBaser->link('', ['action' => 'ajax_publish', $blogContent['BlogContent']['id'], $data['BlogComment']['blog_post_id'], $data['BlogComment']['id']], ['title' => __d('baser', '公開'), 'class' => 'btn-publish bca-btn-icon', 'data-bca-btn-type' => 'publish','data-bca-btn-size' => 'lg']) ?>

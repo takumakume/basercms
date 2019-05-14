@@ -42,7 +42,7 @@ if (isset($user['user_group_id'])) {
 	<?php echo $this->BcListTable->dispatchShowRow($data) ?>
 	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['BlogCategory']['created']); ?><br />
 		<?php echo $this->BcTime->format('Y-m-d', $data['BlogCategory']['modified']); ?></td>
-  <td class="bca-table-listup__tbody-td">
+  <td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
     <?php $this->BcBaser->link('', $this->Blog->getCategoryUrl($data['BlogCategory']['id']), ['title' => __d('baser', '確認'), 'target' => '_blank', 'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg']) ?>
     <?php if (in_array($data['BlogCategory']['owner_id'], $allowOwners) || (isset($user['user_group_id']) && $user['user_group_id'] == Configure::read('BcApp.adminGroupId'))): ?>
       <?php $this->BcBaser->link('', ['action' => 'edit', $blogContent['BlogContent']['id'], $data['BlogCategory']['id']], ['title' => __d('baser', '編集'),'class' => 'bca-btn-icon', 'data-bca-btn-type' => 'edit','data-bca-btn-size' => 'lg']) ?>
