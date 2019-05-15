@@ -38,10 +38,10 @@ $(function(){
 		<?php echo __d('baser', 'インストール環境の条件をチェックしました。<br />次に進む為には、「基本必須条件」の赤い項目を全て解決する必要があります。')?>
 	</div>
 
-	<div class="section">
+	<div class="section bca-section">
 
 		<!-- basic -->
-		<h2><?php echo __d('baser', '基本必須条件')?></h2>
+		<h2 class="bca-main__heading"><?php echo __d('baser', '基本必須条件')?></h2>
 		<div class="panel-box bca-panel-box corner10">
 			<ul class="section">
 				<li class='<?php if ($phpVersionOk) echo 'check'; else echo 'failed'; ?>'>
@@ -233,13 +233,13 @@ $(function(){
 		</div>
 	</div>
 
-	<div class="section">
+	<div class="section bca-section">
 		<!-- option -->
-		<h2><?php echo __d('baser', 'オプション')?></h2>
+		<h2 class="bca-main__heading"><?php echo __d('baser', 'オプション')?></h2>
 
 		<div class="panel-box bca-panel-box corner10">
-			<h3><?php echo __d('baser', 'ファイルデータベース')?></h3>
-			<div class="section"> <?php echo __d('baser', 'データベースサーバーが利用できない場合には、ファイルベースデータベースの SQLite を利用できます。有効にするには、下記のフォルダへの書き込み権限が必要です ')?></div>
+			<h3 class="bca-panel-box__title"><?php echo __d('baser', 'ファイルデータベース')?></h3>
+			<div class="section"> <?php echo __d('baser', 'データベースサーバーが利用できない場合には、ファイルベースデータベースの SQLite を利用できます。<br>有効にするには、下記のフォルダへの書き込み権限が必要です ')?></div>
 			<ul class="section">
 				<li class='<?php if ($dbDirWritable) echo 'check'; else echo 'failed'; ?>'>
 					<?php echo __d('baser', '/app/db/ の書き込み権限（707 OR 777 等、サーバー推奨がある場合はそちらに従ってください）')?><br />
@@ -256,8 +256,8 @@ $(function(){
 		</div>
 
 		<div class="panel-box bca-panel-box corner10">
-			<h3><?php echo __d('baser', '管理システムの参照ファイル配置')?></h3>
-			<div class="section"><?php echo __d('baser', 'baserCMSでは、インストール時に、管理システムより参照する、画像ファイル、CSSファイル、Javascriptファイルを、下記のパスに自動配置します。既に存在する場合には上書きされてしまいますのでご注意ください。')?></div>
+			<h3 class="bca-panel-box__title"><?php echo __d('baser', '管理システムの参照ファイル配置')?></h3>
+			<div class="section"><?php echo __d('baser', 'baserCMSでは、インストール時に、管理システムより参照する、画像ファイル、CSSファイル、Javascriptファイルを、下記のパスに自動配置します。<br>既に存在する場合には上書きされてしまいますのでご注意ください。')?></div>
 			<ul class="section">
 				<li class='<?php if (!$imgAdminDirExists) echo 'check'; else echo'failed'; ?>'>
 <?php if (ROOT . DS != WWW_ROOT): ?>
@@ -320,7 +320,7 @@ $(function(){
 		</div>
 
 		<div class="panel-box bca-panel-box corner10">
-			<h3><?php echo __d('baser', 'PHPのメモリ')?></h3>
+			<h3 class="bca-panel-box__title"><?php echo __d('baser', 'PHPのメモリ')?></h3>
 			<div class="section"><?php echo sprintf(__d('baser', 'PHPのメモリが %s より低い場合、baserCMSの全ての機能が正常に動作しない可能性があります。'), Configure::read('BcRequire.phpMemory') . " MB")?><br />
 				<small><?php echo __d('baser', 'サーバー環境によってはPHPのメモリ上限が取得できず「0MB」となっている場合もあります。その場合、サーバー業者等へサーバースペックを直接確認してください。')?></small> </div>
 			<ul class="section">
@@ -337,7 +337,7 @@ $(function(){
 		</div>
 
 		<div class="panel-box bca-panel-box corner10">
-			<h3><?php echo __d('baser', 'PHPセーフモード')?></h3>
+			<h3 class="bca-panel-box__title"><?php echo __d('baser', 'PHPセーフモード')?></h3>
 			<div class="section"><?php echo __d('baser', 'セーフモードがOnの場合、PHPを「CGIモード」に切り替えないとbaserCMSの全ての機能を利用する事はできません。')?><br />
 				<small><?php echo __d('baser', 'ページカテゴリ機能や、テーマ切り替え機能など、プログラム側でフォルダを自動生成する機能は、事前にFTPでの作業を併用する必要があります。')?></small><br />
 			</div>
@@ -375,12 +375,12 @@ $(function(){
 
 	<form action="<?php echo $this->request->base ?>/installations/step2" method="post" id="checkenv">
 		<?php echo $this->BcForm->hidden('clicked') ?>
-		<div class="submit">
-			<?php echo $this->BcForm->button(__d('baser', '再チェック'), ['class' => 'btn-orange button', 'id' => 'btncheckagain']) ?>
+		<div class="submit bca-actions">
+			<?php echo $this->BcForm->button(__d('baser', '再チェック'), ['class' => 'btn-orange button bca-btn bca-actions__item', 'id' => 'btncheckagain']) ?>
 <?php if (!$blRequirementsMet): ?>
-			<?php echo $this->BcForm->button(__d('baser', '次のステップへ'), ['class' => 'btn-red button', 'id' => 'btnnext', 'style' => 'display:none']) ?>
+			<?php echo $this->BcForm->button(__d('baser', '次のステップへ'), ['class' => 'btn-red button bca-btn bca-actions__item', 'id' => 'btnnext', 'style' => 'display:none', 'data-bca-btn-type' => 'save']) ?>
 <?php else: ?>
-			<?php echo $this->BcForm->button(__d('baser', '次のステップへ'), ['class' => 'btn-red button', 'id' => 'btnnext']) ?>
+			<?php echo $this->BcForm->button(__d('baser', '次のステップへ'), ['class' => 'btn-red button bca-btn bca-actions__item', 'id' => 'btnnext', 'data-bca-btn-type' => 'save']) ?>
 <?php endif ?>
 		</div>
 	</form>

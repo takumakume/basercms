@@ -1749,13 +1749,11 @@ class BcManagerComponent extends Component {
 	}
 
 	public function getAvailableAdminThemes() {
-		$themes = BcUtil::getThemeList();
+		$themes = BcUtil::getAdminThemeList();
 		$adminThemes = [];
 		if($themes) {
 			foreach($themes as $theme) {
-				if(is_dir(BASER_THEMES . $theme . DS . 'Layouts' . DS . 'admin')) {
-					$adminThemes[$theme] = $theme;
-				}
+				$adminThemes[$theme] = $theme;
 			}
 		}
 		return $adminThemes;

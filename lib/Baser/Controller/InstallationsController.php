@@ -211,7 +211,7 @@ class InstallationsController extends AppController {
 		}
 
 		$this->set('dbDataPatterns', $this->BcManager->getAllDefaultDataPatterns());
-		$this->set('adminThemes', array_merge(['' => 'old-admin-theme'], $this->BcManager->getAvailableAdminThemes()));
+		$this->set('adminThemes', array_merge(['' => '標準テーマ'], $this->BcManager->getAvailableAdminThemes()));
 		$this->pageTitle = __d('baser', 'baserCMSのインストール｜ステップ３');
 		$this->set('dbsource', $dbsource);
 	}
@@ -546,7 +546,7 @@ class InstallationsController extends AppController {
 			if (preg_match('/with message \'(.+?)\' in/s', $e->getMessage(), $matches)) {
 				$message .= "\n" . $matches[1];
 			}
-					$this->setMessage(__d('baser', 'データベースへの接続でエラーが発生しました。データベース設定を見直してください。\nサーバー上に指定されたデータベースが存在しない可能性が高いです。'), true);
+					$this->setMessage(__d('baser', "データベースへの接続でエラーが発生しました。データベース設定を見直してください。\nサーバー上に指定されたデータベースが存在しない可能性が高いです。"), true);
 			return false;
 		}
 

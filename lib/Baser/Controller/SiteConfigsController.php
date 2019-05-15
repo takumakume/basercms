@@ -184,7 +184,7 @@ class SiteConfigsController extends AppController {
 			$disableSettingInstallSetting = ['disabled' => 'disabled'];
 		}
 		$themes = BcUtil::getAdminThemeList();
-		array_unshift($themes, 'baserCMS標準テーマ');
+		array_unshift($themes, '標準テーマ');
 		$this->set(compact(
 			'baseUrl', 'userGroups', 'rewriteInstalled', 'writableInstall', 'writableHtaccess',
 			'writableHtaccess2', 'disableSettingInstallSetting', 'themes'

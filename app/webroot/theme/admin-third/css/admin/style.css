@@ -8892,9 +8892,9 @@ table.cake-sql-log tr td {
               transform: rotate(180deg); }
 
 .bca-em-box {
-  padding: 40px;
+  padding: 20px;
   background: #FFFFFF;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: 15px auto;
   text-align: center;
   line-height: 2; }
@@ -9410,6 +9410,30 @@ table.cake-sql-log tr td {
     font-size: 1.2rem;
     margin-right: 40px;
     margin-bottom: 5px; }
+
+.step-1 .bca-section {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto; }
+
+.step2 .check .check-result {
+  color: #ddd; }
+
+.step2 .failed .check-result {
+  color: #f20014; }
+
+.step2 .check-result {
+  margin: 20px 0;
+  font-size: 2rem; }
+
+.step-3 ul li,
+.step-4 ul li {
+  margin: 20px 0; }
+  .step-3 ul li label,
+  .step-4 ul li label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block; }
 
 .bt-content {
   line-height: 1.5em; }

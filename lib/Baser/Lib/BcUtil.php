@@ -392,6 +392,9 @@ class BcUtil extends CakeObject {
 			if(!preg_match('/^admin\-/', $theme)) {
 				unset($themes[$key]);
 			}
+			if($theme === 'admin-third') {
+				$themes[$key] = 'admin-third（ベータ版）';
+			}
 		}
 		return $themes;
 	}
