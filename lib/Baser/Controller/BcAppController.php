@@ -338,6 +338,9 @@ class BcAppController extends Controller {
 
 		// コンソールから利用される場合、$isInstall だけでは判定できないので、BC_INSTALLED も判定に入れる
 		if(!BC_INSTALLED || $isInstall || $isUpdate) {
+			if(!BC_INSTALLED || $isInstall) {
+				$this->theme = 'admin-third';
+			}
 			return;
 		}
 

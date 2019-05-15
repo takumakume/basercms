@@ -8892,12 +8892,12 @@ table.cake-sql-log tr td {
               transform: rotate(180deg); }
 
 .bca-em-box {
-  padding: 1px 15px;
+  padding: 40px;
   background: #FFFFFF;
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin: 15px auto;
   text-align: center;
-  line-height: 1.6; }
+  line-height: 2; }
   .bca-em-box a {
     color: #690; }
     .bca-em-box a:hover {

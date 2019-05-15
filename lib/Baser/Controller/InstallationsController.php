@@ -157,7 +157,7 @@ class InstallationsController extends AppController {
 		extract($checkResult);
 
 		$this->set('blRequirementsMet', ($phpXml && $phpGd && $tmpDirWritable && $pagesDirWritable && $configDirWritable && $phpVersionOk && $themeDirWritable && $imgDirWritable && $jsDirWritable && $cssDirWritable));
-		$this->pageTitle = __d('baser', 'baserCMSのインストール [ステップ２]');
+		$this->pageTitle = __d('baser', 'baserCMSのインストール｜ステップ２');
 	}
 
 /**
@@ -197,7 +197,7 @@ class InstallationsController extends AppController {
 				$errorMessage = __d('baser', 'データベースの構築中にエラーが発生しました。');
 				try {
 					$this->_deleteAllTables();
-					$result = $this->_constructionDb($dbDataPattern, $this->request->data['Installation']['adminTheme']);
+					$result = $this->_constructionDb($dbDataPattern, @$this->request->data['Installation']['adminTheme']);
 				} catch(Exception $e) {
 					$errorMessage .= "\n" . $e->getMessage();
 				}
@@ -212,7 +212,7 @@ class InstallationsController extends AppController {
 
 		$this->set('dbDataPatterns', $this->BcManager->getAllDefaultDataPatterns());
 		$this->set('adminThemes', array_merge(['' => 'old-admin-theme'], $this->BcManager->getAvailableAdminThemes()));
-		$this->pageTitle = __d('baser', 'baserCMSのインストール [ステップ３]');
+		$this->pageTitle = __d('baser', 'baserCMSのインストール｜ステップ３');
 		$this->set('dbsource', $dbsource);
 	}
 
@@ -271,7 +271,7 @@ class InstallationsController extends AppController {
 			}
 		}
 
-		$this->pageTitle = __d('baser', 'baserCMSのインストール [ステップ４]');
+		$this->pageTitle = __d('baser', 'baserCMSのインストール｜ステップ４');
 	}
 
 /**
