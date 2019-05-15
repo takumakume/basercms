@@ -25,7 +25,7 @@
 	<?php echo $this->BcListTable->dispatchShowRow($data) ?>
 	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['User']['created']) ?><br>
 		<?php echo $this->BcTime->format('Y-m-d', $data['User']['modified']) ?></td>
-	<td class="row-tools bca-table-listup__tbody-td">
+	<td class="row-tools bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php $this->BcBaser->link('', ['action' => 'edit', $data['User']['id']], ['title' => __d('baser', '編集'), 'class' => ' bca-btn-icon', 'data-bca-btn-type' => 'edit', 'data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $data['User']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete', 'data-bca-btn-size' => 'lg']) ?>
 		<?php if (!$this->BcBaser->isAdminUser($data['User']['user_group_id'])): ?>

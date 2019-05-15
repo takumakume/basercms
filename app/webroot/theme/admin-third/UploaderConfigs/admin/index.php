@@ -115,7 +115,7 @@
 <!-- button -->
 <div class="submit bca-actions">
 	<div class="bca-actions__main">
-		<?php echo $this->BcForm->submit(__d('baser', '更新'), ['div' => false, 'class' => 'btn-orange button bca-btn bca-actions__item', 'data-bca-btn-type' => 'add', 'data-bca-btn-size' => 'xl', 'id' => 'btnSubmit']) ?>
+		<?php echo $this->BcForm->submit(__d('baser', '更新'), ['div' => false, 'class' => 'btn-orange button bca-btn bca-actions__item', 'data-bca-btn-type' => 'add', 'data-bca-btn-width' => 'lg', 'data-bca-btn-size' => 'lg', 'id' => 'btnSubmit']) ?>
 	</div>
 </div>
 

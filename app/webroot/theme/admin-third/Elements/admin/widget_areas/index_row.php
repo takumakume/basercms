@@ -29,7 +29,7 @@
 	<td class="bca-table-listup__tbody-td"><?php echo $this->BcTime->format('Y-m-d', $data['WidgetArea']['created']); ?>
 		<br>
 		<?php echo $this->BcTime->format('Y-m-d', $data['WidgetArea']['modified']); ?></td>
-	<td class="bca-table-listup__tbody-td">
+	<td class="bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php
 		$this->BcBaser->link('',
 			['action' => 'edit', $data['WidgetArea']['id']],

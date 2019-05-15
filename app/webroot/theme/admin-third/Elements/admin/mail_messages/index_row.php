@@ -53,7 +53,7 @@
 			○
 		<?php endif ?>
 	</td>
-	<td class="row-tools bca-table-listup__tbody-td">
+	<td class="row-tools bca-table-listup__tbody-td bca-table-listup__tbody-td--actions">
 		<?php $this->BcBaser->link('', ['action' => 'view', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '詳細'), 'class' => 'btn-view bca-btn-icon', 'data-bca-btn-type' => 'preview','data-bca-btn-size' => 'lg']) ?>
 		<?php $this->BcBaser->link('', ['action' => 'ajax_delete', $mailContent['MailContent']['id'], $data['MailMessage']['id']], ['title' => __d('baser', '削除'), 'class' => 'btn-delete bca-btn-icon', 'data-bca-btn-type' => 'delete','data-bca-btn-size' => 'lg']) ?>
 	</td>
