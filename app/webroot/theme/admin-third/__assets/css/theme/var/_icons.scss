@@ -230,6 +230,8 @@ $bca-icon--file: $fa-var-file;
   }
 }
 %bca-icon {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Font Awesome 5 Free';
   font-size: 95%;
   font-style: normal;

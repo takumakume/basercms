@@ -108,6 +108,7 @@
         // アイコン
         i {
           vertical-align: middle !important;
+          font-weight: 900;
 
           &:before {
             @extend %bca-icon;

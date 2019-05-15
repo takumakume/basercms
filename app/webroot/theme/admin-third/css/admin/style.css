@@ -4796,6 +4796,8 @@ readers do not read off random characters that represent icons */
  *
  */
 .bca-nav__sub-title-label:before, .bca-nav__system-list-item-title-label:before, .jstree-proton .jstree-container-ul .jstree-icon:before, .jstree-proton-contextmenu li > a i:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Font Awesome 5 Free';
   font-size: 95%;
   font-style: normal;
@@ -6344,7 +6346,8 @@ body {
       .bca-nav__sub-title-label {
         display: block;
         vertical-align: middle;
-        padding: 12px 10px 12px 10px; }
+        padding: 12px 10px 12px 10px;
+        font-weight: 900; }
         .bca-nav__sub-title-label:before {
           display: inline-block;
           width: 16px;
@@ -9329,7 +9332,8 @@ table.cake-sql-log tr td {
         background-color: #ddd !important;
         box-shadow: none !important; }
       .jstree-proton-contextmenu li > a i {
-        vertical-align: middle !important; }
+        vertical-align: middle !important;
+        font-weight: 900; }
         .jstree-proton-contextmenu li > a i:before {
           font-size: 15px !important;
           margin: 0 !important; }

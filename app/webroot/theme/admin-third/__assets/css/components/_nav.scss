@@ -39,6 +39,7 @@
         display: block;
         vertical-align: middle;
         padding: 12px 10px 12px 10px;
+        font-weight: 900;
         &:before {
           @extend %bca-icon;
           display: inline-block;
