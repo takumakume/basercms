@@ -6561,6 +6561,8 @@ body {
             text-decoration: none;
             color: #424f44 !important;
             background: #ddd; }
+          .bca-nav__system-list-item-title-label span {
+            font-weight: bold; }
       .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before {
         font-size: 95%;
         font-stretch: normal;

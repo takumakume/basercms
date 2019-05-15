@@ -41,7 +41,7 @@
 			<div class="bca-nav__system-list" v-bind:hidden="!systemExpanded">
 				<div v-for="system in systemList" class="bca-nav__system-list-item" v-bind:data-system-type="system.name.toLowerCase()" v-bind:data-sub-content-is-expanded="system.expanded" v-bind:data-sub-content-is-current="system.current">
 					<h4 class="bca-nav__system-list-item-title">
-						<a v-bind:href="baseURL + system.url" v-bind:class="'bca-nav__system-list-item-title-label ' + system.icon">{{ system.title }}</a>
+						<a v-bind:href="baseURL + system.url" v-bind:class="'bca-nav__system-list-item-title-label ' + system.icon"><span>{{ system.title }}</span></a>
 					</h4>
 					<ul v-if="system.menus && system.menus.length" class="bca-nav__system-sub-list">
 						<li v-for="subSystem in system.menus" class="bca-nav__system-sub-list-item" v-bind:data-sub-item-is-current="subSystem.current">
