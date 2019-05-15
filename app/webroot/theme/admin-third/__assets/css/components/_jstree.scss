@@ -40,8 +40,13 @@
       .jstree-wholerow-clicked {
         background: $color_primary !important;
       }
-      .jstree-clicked + .content-name {
-        color: $color_lightest!important;
+      .jstree-clicked {
+        & + .content-name {
+          color: $color_lightest!important;
+        }
+        .jstree-icon {
+          color: $color_lightest !important;
+        }
       }
 
       // クリックレコードのホバー時
@@ -71,6 +76,7 @@
       font-size: 1.6rem !important;
       &:before {
         @extend %bca-icon;
+        margin: 0;
       }
 
       &.bca-icon--folder {
@@ -110,6 +116,12 @@
           }
           &.bca-icon--folder {
             color: #edc528;
+          }
+          &.bca-icon--alias {
+            color: #6fa83d;
+          }
+          &.bca-icon--link {
+            color: #6fa83d;
           }
         }
 

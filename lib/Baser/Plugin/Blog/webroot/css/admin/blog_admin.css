@@ -1,7 +1,7 @@
 .bca-icon--blog::before {
     content: "\f15c";
 }
-.jstree-proton .bca-icon--mail {
+.jstree-proton .bca-icon--blog {
     color:#7faa00;
 }
 .jstree-proton-contextmenu .bca-icon--blog{

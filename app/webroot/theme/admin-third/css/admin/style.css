@@ -9296,6 +9296,8 @@ table.cake-sql-log tr td {
       background: #6fa83d !important; }
     .jstree-proton .jstree-container-ul .jstree-node .jstree-clicked + .content-name {
       color: #fff !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-clicked .jstree-icon {
+      color: #fff !important; }
     .jstree-proton .jstree-container-ul .jstree-node .jstree-hovered.jstree-clicked {
       color: #fff !important; }
     .jstree-proton .jstree-container-ul .jstree-node .alias {
@@ -9310,6 +9312,8 @@ table.cake-sql-log tr td {
       background-color: #ccc; }
   .jstree-proton .jstree-container-ul .jstree-icon {
     font-size: 1.6rem !important; }
+    .jstree-proton .jstree-container-ul .jstree-icon:before {
+      margin: 0; }
     .jstree-proton .jstree-container-ul .jstree-icon.bca-icon--folder {
       color: #edc528; }
   .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .bca-icon--folder::before {
@@ -9331,6 +9335,10 @@ table.cake-sql-log tr td {
           margin: 0 !important; }
         .jstree-proton-contextmenu li > a i.bca-icon--folder {
           color: #edc528; }
+        .jstree-proton-contextmenu li > a i.bca-icon--alias {
+          color: #6fa83d; }
+        .jstree-proton-contextmenu li > a i.bca-icon--link {
+          color: #6fa83d; }
       .jstree-proton-contextmenu li > a .vakata-contextmenu-sep {
         border-left: none !important;
         background: none !important; }
