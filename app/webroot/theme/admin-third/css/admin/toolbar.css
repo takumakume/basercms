@@ -4726,7 +4726,7 @@ readers do not read off random characters that represent icons */
   font-size: small; }
 
 .form-error {
-  border: 1px solid #c04949 !important; }
+  border: 1px solid #f20014 !important; }
 
 .error {
   color: #C30; }
@@ -5764,7 +5764,7 @@ body {
       margin: 8px;
       padding: 3px 8px 3px 5px;
       border-radius: 22px;
-      background-color: #c04949;
+      background-color: #f20014;
       font-weight: bold;
       color: #fff; }
   .bca-toolbar__users > ul {
@@ -5827,7 +5827,7 @@ body {
           position: relative;
           z-index: 1; }
           .bca-toolbar__users > ul > li.active > ul a:hover {
-            background-color: #FF6F61;
+            background-color: #6fa83d;
             color: #fff; }
 
 /*# sourceMappingURL=map/toolbar.css.map */

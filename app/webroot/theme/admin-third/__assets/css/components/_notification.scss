@@ -1,5 +1,5 @@
 .message {
-  color: $color_primary;
+  color: $color_notification;
   font-weight: normal;
   margin: 20px;
   line-height: 1.6;
@@ -8,7 +8,7 @@
 #MessageBox .message,
 #MessageBox .notice-message,
 #BcMessageBox .notice-message {
-  color: $color_primary;
+  color: $color_notification;
   @include bca-icon(notification) {
     margin: 0 .3em 0 0;
   }
