@@ -132,7 +132,9 @@ $config['BcApp'] = [
 	'allowedPhpOtherThanAdmins' => true,
 	'marketThemeRss' => 'https://market.basercms.net/themes.rss',
 	'marketPluginRss' => 'https://market.basercms.net/plugins.rss',
-	'specialThanks'	=> 'https://basercms.net/special_thanks/special_thanks/ajax_users'
+	'specialThanks'	=> 'https://basercms.net/special_thanks/special_thanks/ajax_users',
+	// 管理システムの新しいテーマ名
+	'adminNewThemeName' => 'admin-third'
 ];
 
 /**
@@ -323,7 +325,7 @@ $config['BcContents'] = [
 						'action'	=> 'view'
 					]
 				],
-				'icon'	=> 'admin/icon_content.png',
+				'icon'	=> 'bca-icon--file',
 			],
 			'ContentFolder'	=> [
 				'multiple'	=> true,
@@ -350,12 +352,12 @@ $config['BcContents'] = [
 						'action'	=> 'view'
 					]
 				],
-				'icon'	=> 'admin/icon_folder.png',
+				'icon'	=> 'bca-icon--folder',
 			],
 			'ContentAlias'	=> [
 				'multiple' => true,
 				'title' => __d('baser', 'エイリアス'),
-				'icon'	=> 'admin/icon_alias.png',
+				'icon'	=> 'bca-icon--alias',
 				'routes' => [
 					'add'	=> [
 						'admin' => true,
@@ -395,13 +397,13 @@ $config['BcContents'] = [
 						'action'	=> 'view'
 					]
 				],
-				'icon'	=> 'admin/icon_link.png',
+				'icon'	=> 'bca-icon--link',
 			],
 			'Page'	=> [
 				'title' => __d('baser', '固定ページ'),
 				'multiple'	=> true,
 				'preview'	=> true,
-				'icon'	=> 'admin/icon_page.png',
+				'icon'	=> 'bca-icon--file',
 				'omitViewAction' => true,
 				'routes' => [
 					'add'	=> [

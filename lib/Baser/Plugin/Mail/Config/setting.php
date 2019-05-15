@@ -29,6 +29,7 @@ foreach ($mailContents as $mailContent) {
 		'siteId' => $content['site_id'],
 		'title' => $content['title'],
 		'type' => 'mail-content',
+		'icon' => 'bca-icon--mail',
 		'menus' => [
 			'MailMessages' . $mail['id'] => ['title' => '受信メール', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_messages', 'action' => 'index', $mail['id']]],
 			'MailFields' . $mail['id'] => ['title' => 'フィールド', 'url' => ['admin' => true, 'plugin' => 'mail', 'controller' => 'mail_fields', 'action' => 'index', $mail['id']]],
@@ -49,7 +50,7 @@ $config['BcContents']['items']['Mail'] = [
 		'title' => __d('baser', 'メールフォーム'),
 		'multiple'	=> true,
 		'preview'	=> true,
-		'icon'	=> 'admin/icon_mail.png',
+		'icon'	=> 'bca-icon--mail',
 		'routes' => [
 			'manage'	=> [
 				'admin' => true,

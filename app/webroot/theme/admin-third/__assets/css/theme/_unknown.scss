@@ -634,59 +634,8 @@
 /*    Contents
 /* ==================================================================== */
 
-#ContentsTreeList li {
-  margin: 0;
-  padding: 0;
-}
-
 .ui-widget-content {
   border: 1px solid #DDD;
-}
-
-#ContentsTreeList li ul {
-  margin-left: 26px;
-}
-
-.jstree-proton .jstree-anchor {
-  margin: 0 !important;
-}
-
-.vakata-context,
-.vakata-context ul {
-  background-color: #FFF;
-  font-size: 14px;
-}
-
-.vakata-context li {
-  /*padding:0px 10px;*/
-}
-
-.vakata-context li > a {
-  padding-top: 3px;
-  padding-bottom: 3px;
-}
-
-.vakata-context li > a .vakata-contextmenu-sep {
-  border-left: none !important;
-  background: none;
-}
-
-.vakata-context .vakata-context-separator > a,
-.vakata-context .vakata-context-separator > a:hover {
-  margin: 0;
-}
-
-#ContentsTreeList {
-  border: 1px solid #DDD;
-}
-
-#ContentsTreeList li .alias {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_alias_layerd.png");
-  position: absolute;
-  top: 0;
 }
 
 #DataList td .alias {
@@ -698,46 +647,6 @@
   top: -32px;
 }
 
-ul.jstree-contextmenu li .icon-alias-layerd {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_alias_layerd.png");
-  position: absolute;
-  margin-top: -32px;
-}
-
-ul.jstree-contextmenu li .icon-add-layerd {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_add_layerd.png");
-  position: absolute;
-  margin-top: -32px;
-}
-
-#ContentsTreeList li .function {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_function.png");
-  position: absolute;
-  cursor: pointer;
-}
-
-div.jstree-unpublish-odd,
-div.jstree-unpublish-even {
-  background-color: #fff;
-
-}
-
-div.jstree-unpublish-even {
-
-}
-
-div.jstree-publish-even {
-  /*background-color: #F2F2F2;*/
-}
 
 #RelatedContentsSetting .icon-add-layerd {
   display: inline-block;

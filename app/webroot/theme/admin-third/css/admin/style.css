@@ -395,7 +395,7 @@ template {
  * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
-.fa, .bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a::before, .bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a::before, .bca-icon--uploader::before, .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a::before, .bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a::before, .bca-nav__system-title button::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before, .bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before, .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before, .bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before, .bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before, .bca-icon--feed::before, .bca-nav__system-list-item[data-system-type="feed"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon-text[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--th-list::before, .bca-btn-icon[data-bca-btn-type=th-list]::before, .bca-btn-icon-text[data-bca-btn-type=th-list]::before, .bca-icon--back-to-list::before, .bca-btn-icon[data-bca-btn-type=back-to-list]::before, .bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-icon--favorite::before, .bca-nav-favorite-title-button::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon-text[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-icon--menuitem::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon-text[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon-text[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-icon--permission::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon-text[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before, .bca-icon--home::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon-text[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-icon--switch::before, .bca-btn-icon[data-bca-btn-type=switch]::before, .bca-icon--open::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon-text[data-bca-btn-type=open]::before, .bca-icon--textcopy::before, .bca-btn-icon[data-bca-btn-type=textcopy]::before, .bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .bca-btn[data-bca-btn-type=textcopy]::before, .bca-icon--download::before, .bca-btn-icon[data-bca-btn-type=download]::before, .bca-btn-icon-text[data-bca-btn-type=download]::before, .bca-btn[data-bca-btn-type=download]::before, .bca-icon--draggable::before, .bca-btn-icon[data-bca-btn-type=draggable]::before, .bca-btn-icon-text[data-bca-btn-type=draggable]::before, .bca-btn[data-bca-btn-type=draggable]::before, .bca-icon--folder::before, .bca-btn-icon[data-bca-btn-type=folder]::before, .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before, .bca-icon--up-directory::before, .bca-btn-icon[data-bca-btn-type=up-directory]::before, .bca-icon--arrow-right::before, .bca-btn-icon[data-bca-btn-type=arrow-right]::before, .bca-icon--arrow-left::before, .bca-btn-icon[data-bca-btn-type=arrow-left]::before, .bca-icon--arrow-up::before, .bca-btn-icon[data-bca-btn-type=arrow-up]::before, .bca-icon--arrow-down::before, .bca-btn-icon[data-bca-btn-type=arrow-down]::before, .bca-icon--file-list::before, .bca-btn-icon[data-bca-btn-type=file-list]::before, .bca-icon--update::before, .bca-btn-icon[data-bca-btn-type=update]::before, .bca-icon--setting::before, .bca-btn-icon[data-bca-btn-type=setting]::before, .bca-icon--search::before, .bca-btn[data-bca-btn-type=search]::before, .bca-icon--clear::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before, .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before, .bca-icon--list-default::before, .bca-list__item::before, .bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .bca-list__item::before, .bca-icon--error::before, .ui-dialog label.error::before, .error-message::before, .bca-icon--alert::before, #MessageBox .alert-message::before,
+.fa, .bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a::before, .bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before, .bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a::before, .bca-nav__system-title button::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before, .bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before, .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before, .bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before, .bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon-text[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--rename::before, .bca-icon--link::before, .bca-icon--alias::before, .bca-icon--th-list::before, .bca-btn-icon[data-bca-btn-type=th-list]::before, .bca-btn-icon-text[data-bca-btn-type=th-list]::before, .bca-icon--back-to-list::before, .bca-btn-icon[data-bca-btn-type=back-to-list]::before, .bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-icon--favorite::before, .bca-nav-favorite-title-button::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon-text[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-icon--menuitem::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon-text[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon-text[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-icon--permission::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon-text[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before, .bca-icon--home::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon-text[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-icon--switch::before, .bca-btn-icon[data-bca-btn-type=switch]::before, .bca-icon--open::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon-text[data-bca-btn-type=open]::before, .bca-icon--textcopy::before, .bca-btn-icon[data-bca-btn-type=textcopy]::before, .bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .bca-btn[data-bca-btn-type=textcopy]::before, .bca-icon--download::before, .bca-btn-icon[data-bca-btn-type=download]::before, .bca-btn-icon-text[data-bca-btn-type=download]::before, .bca-btn[data-bca-btn-type=download]::before, .bca-icon--draggable::before, .bca-btn-icon[data-bca-btn-type=draggable]::before, .bca-btn-icon-text[data-bca-btn-type=draggable]::before, .bca-btn[data-bca-btn-type=draggable]::before, .bca-icon--folder::before, .bca-btn-icon[data-bca-btn-type=folder]::before, .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .bca-icon--folder::before, .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before, .bca-icon--up-directory::before, .bca-btn-icon[data-bca-btn-type=up-directory]::before, .bca-icon--arrow-right::before, .bca-btn-icon[data-bca-btn-type=arrow-right]::before, .bca-icon--arrow-left::before, .bca-btn-icon[data-bca-btn-type=arrow-left]::before, .bca-icon--arrow-up::before, .bca-btn-icon[data-bca-btn-type=arrow-up]::before, .bca-icon--arrow-down::before, .bca-btn-icon[data-bca-btn-type=arrow-down]::before, .bca-icon--file-list::before, .bca-btn-icon[data-bca-btn-type=file-list]::before, .bca-icon--update::before, .bca-btn-icon[data-bca-btn-type=update]::before, .bca-icon--setting::before, .bca-btn-icon[data-bca-btn-type=setting]::before, .bca-icon--search::before, .bca-btn[data-bca-btn-type=search]::before, .bca-icon--clear::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before, .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before, .bca-icon--list-default::before, .bca-list__item::before, .bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .bca-list__item::before, .bca-icon--error::before, .ui-dialog label.error::before, .error-message::before, .bca-icon--alert::before, #MessageBox .alert-message::before,
 #authMessage::before,
 #AlertMessage::before,
 #BcMessageBox .alert-message::before,
@@ -484,7 +484,7 @@ template {
 .fa-pull-right {
   float: right; }
 
-.fa.fa-pull-left, .fa-pull-left.bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--uploader::before, .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a.fa-pull-left::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--feed::before, .bca-nav__system-list-item[data-system-type="feed"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=publish]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=publish]::before, .fa-pull-left.bca-btn[data-bca-btn-type=publish]::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=unpublish]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .fa-pull-left.bca-btn[data-bca-btn-type=unpublish]::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=preview]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=preview]::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=edit]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=edit]::before, .fa-pull-left.bca-btn[data-bca-btn-type=edit]::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=copy]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=copy]::before, .fa-pull-left.bca-btn[data-bca-btn-type=copy]::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=delete]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=delete]::before, .fa-pull-left.bca-btn[data-bca-btn-type=delete]::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=th-list]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=th-list]::before, .fa-pull-left.bca-icon--back-to-list::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=back-to-list]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .fa-pull-left.bca-btn[data-bca-btn-type=back-to-list]::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title-button::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=favorite]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=favorite]::before, .fa-pull-left.bca-btn[data-bca-btn-type=favorite]::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=menuitem]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .fa-pull-left.bca-btn[data-bca-btn-type=menuitem]::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=add]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=add]::before, .fa-pull-left.bca-btn[data-bca-btn-type=add]::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=help]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=help]::before, .fa-pull-left.bca-btn[data-bca-btn-type=help]::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=permission]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=permission]::before, .fa-pull-left.bca-btn[data-bca-btn-type=permission]::before, .fa-pull-left.bca-icon--apply::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=apply]::before, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=home]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=home]::before, .fa-pull-left.bca-btn[data-bca-btn-type=home]::before, .fa-pull-left.bca-icon--switch::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=switch]::before, .fa-pull-left.bca-icon--open::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=open]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=open]::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=textcopy]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .fa-pull-left.bca-btn[data-bca-btn-type=textcopy]::before, .fa-pull-left.bca-icon--download::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=download]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=download]::before, .fa-pull-left.bca-btn[data-bca-btn-type=download]::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=draggable]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=draggable]::before, .fa-pull-left.bca-btn[data-bca-btn-type=draggable]::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=folder]::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=file]::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=up-directory]::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-right]::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-left]::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-up]::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-down]::before, .fa-pull-left.bca-icon--file-list::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=file-list]::before, .fa-pull-left.bca-icon--update::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=update]::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=setting]::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-btn[data-bca-btn-type=search]::before, .fa-pull-left.bca-icon--clear::before, .fa-pull-left.bca-btn[data-bca-btn-type=clear]::before, .fa-pull-left.bca-icon--datetimepicker-date::before, .fa-pull-left.bca-datetimepicker__date-label::before, .fa-pull-left.bca-icon--datetimepicker-time::before, .fa-pull-left.bca-datetimepicker__time-label::before, .fa-pull-left.bca-icon--list-default::before, .fa-pull-left.bca-list__item::before, .fa-pull-left.bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .fa-pull-left.bca-list__item::before, .fa-pull-left.bca-icon--error::before, .ui-dialog label.fa-pull-left.error::before, .fa-pull-left.error-message::before, .fa-pull-left.bca-icon--alert::before, #MessageBox .fa-pull-left.alert-message::before,
+.fa.fa-pull-left, .fa-pull-left.bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a.fa-pull-left::before, .bca-nav__system-title button.fa-pull-left::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a.fa-pull-left::before, .fa-pull-left.bca-icon--publish::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=publish]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=publish]::before, .fa-pull-left.bca-btn[data-bca-btn-type=publish]::before, .fa-pull-left.bca-icon--unpublish::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=unpublish]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .fa-pull-left.bca-btn[data-bca-btn-type=unpublish]::before, .fa-pull-left.bca-icon--preview::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=preview]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=preview]::before, .fa-pull-left.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-left::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=edit]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=edit]::before, .fa-pull-left.bca-btn[data-bca-btn-type=edit]::before, .fa-pull-left.bca-icon--copy::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=copy]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=copy]::before, .fa-pull-left.bca-btn[data-bca-btn-type=copy]::before, .fa-pull-left.bca-icon--delete::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=delete]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=delete]::before, .fa-pull-left.bca-btn[data-bca-btn-type=delete]::before, .fa-pull-left.bca-icon--rename::before, .fa-pull-left.bca-icon--link::before, .fa-pull-left.bca-icon--alias::before, .fa-pull-left.bca-icon--th-list::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=th-list]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=th-list]::before, .fa-pull-left.bca-icon--back-to-list::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=back-to-list]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .fa-pull-left.bca-btn[data-bca-btn-type=back-to-list]::before, .fa-pull-left.bca-icon--favorite::before, .fa-pull-left.bca-nav-favorite-title-button::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=favorite]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=favorite]::before, .fa-pull-left.bca-btn[data-bca-btn-type=favorite]::before, .fa-pull-left.bca-icon--menuitem::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=menuitem]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .fa-pull-left.bca-btn[data-bca-btn-type=menuitem]::before, .fa-pull-left.bca-icon--add::before, .fa-pull-left.bca-nav-favorite-functions-add::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=add]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=add]::before, .fa-pull-left.bca-btn[data-bca-btn-type=add]::before, .fa-pull-left.bca-icon--help::before, .fa-pull-left.bca-nav-favorite-functions-help::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=help]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=help]::before, .fa-pull-left.bca-btn[data-bca-btn-type=help]::before, .fa-pull-left.bca-icon--permission::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=permission]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=permission]::before, .fa-pull-left.bca-btn[data-bca-btn-type=permission]::before, .fa-pull-left.bca-icon--apply::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=apply]::before, .fa-pull-left.bca-icon--home::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=home]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=home]::before, .fa-pull-left.bca-btn[data-bca-btn-type=home]::before, .fa-pull-left.bca-icon--switch::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=switch]::before, .fa-pull-left.bca-icon--open::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=open]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=open]::before, .fa-pull-left.bca-icon--textcopy::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=textcopy]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .fa-pull-left.bca-btn[data-bca-btn-type=textcopy]::before, .fa-pull-left.bca-icon--download::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=download]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=download]::before, .fa-pull-left.bca-btn[data-bca-btn-type=download]::before, .fa-pull-left.bca-icon--draggable::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=draggable]::before, .fa-pull-left.bca-btn-icon-text[data-bca-btn-type=draggable]::before, .fa-pull-left.bca-btn[data-bca-btn-type=draggable]::before, .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=folder]::before, .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .fa-pull-left.bca-icon--folder::before, .fa-pull-left.bca-icon--file::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=file]::before, .fa-pull-left.bca-icon--up-directory::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=up-directory]::before, .fa-pull-left.bca-icon--arrow-right::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-right]::before, .fa-pull-left.bca-icon--arrow-left::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-left]::before, .fa-pull-left.bca-icon--arrow-up::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-up]::before, .fa-pull-left.bca-icon--arrow-down::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=arrow-down]::before, .fa-pull-left.bca-icon--file-list::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=file-list]::before, .fa-pull-left.bca-icon--update::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=update]::before, .fa-pull-left.bca-icon--setting::before, .fa-pull-left.bca-btn-icon[data-bca-btn-type=setting]::before, .fa-pull-left.bca-icon--search::before, .fa-pull-left.bca-btn[data-bca-btn-type=search]::before, .fa-pull-left.bca-icon--clear::before, .fa-pull-left.bca-btn[data-bca-btn-type=clear]::before, .fa-pull-left.bca-icon--datetimepicker-date::before, .fa-pull-left.bca-datetimepicker__date-label::before, .fa-pull-left.bca-icon--datetimepicker-time::before, .fa-pull-left.bca-datetimepicker__time-label::before, .fa-pull-left.bca-icon--list-default::before, .fa-pull-left.bca-list__item::before, .fa-pull-left.bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .fa-pull-left.bca-list__item::before, .fa-pull-left.bca-icon--error::before, .ui-dialog label.fa-pull-left.error::before, .fa-pull-left.error-message::before, .fa-pull-left.bca-icon--alert::before, #MessageBox .fa-pull-left.alert-message::before,
 .fa-pull-left#authMessage::before,
 .fa-pull-left#AlertMessage::before,
 #BcMessageBox .fa-pull-left.alert-message::before,
@@ -497,7 +497,7 @@ template {
 .fab.fa-pull-left {
   margin-right: .3em; }
 
-.fa.fa-pull-right, .fa-pull-right.bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--uploader::before, .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a.fa-pull-right::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--feed::before, .bca-nav__system-list-item[data-system-type="feed"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=publish]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=publish]::before, .fa-pull-right.bca-btn[data-bca-btn-type=publish]::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=unpublish]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .fa-pull-right.bca-btn[data-bca-btn-type=unpublish]::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=preview]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=preview]::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=edit]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=edit]::before, .fa-pull-right.bca-btn[data-bca-btn-type=edit]::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=copy]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=copy]::before, .fa-pull-right.bca-btn[data-bca-btn-type=copy]::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=delete]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=delete]::before, .fa-pull-right.bca-btn[data-bca-btn-type=delete]::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=th-list]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=th-list]::before, .fa-pull-right.bca-icon--back-to-list::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=back-to-list]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .fa-pull-right.bca-btn[data-bca-btn-type=back-to-list]::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title-button::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=favorite]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=favorite]::before, .fa-pull-right.bca-btn[data-bca-btn-type=favorite]::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=menuitem]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .fa-pull-right.bca-btn[data-bca-btn-type=menuitem]::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=add]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=add]::before, .fa-pull-right.bca-btn[data-bca-btn-type=add]::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=help]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=help]::before, .fa-pull-right.bca-btn[data-bca-btn-type=help]::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=permission]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=permission]::before, .fa-pull-right.bca-btn[data-bca-btn-type=permission]::before, .fa-pull-right.bca-icon--apply::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=apply]::before, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=home]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=home]::before, .fa-pull-right.bca-btn[data-bca-btn-type=home]::before, .fa-pull-right.bca-icon--switch::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=switch]::before, .fa-pull-right.bca-icon--open::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=open]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=open]::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=textcopy]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .fa-pull-right.bca-btn[data-bca-btn-type=textcopy]::before, .fa-pull-right.bca-icon--download::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=download]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=download]::before, .fa-pull-right.bca-btn[data-bca-btn-type=download]::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=draggable]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=draggable]::before, .fa-pull-right.bca-btn[data-bca-btn-type=draggable]::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=folder]::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=file]::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=up-directory]::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-right]::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-left]::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-up]::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-down]::before, .fa-pull-right.bca-icon--file-list::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=file-list]::before, .fa-pull-right.bca-icon--update::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=update]::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=setting]::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-btn[data-bca-btn-type=search]::before, .fa-pull-right.bca-icon--clear::before, .fa-pull-right.bca-btn[data-bca-btn-type=clear]::before, .fa-pull-right.bca-icon--datetimepicker-date::before, .fa-pull-right.bca-datetimepicker__date-label::before, .fa-pull-right.bca-icon--datetimepicker-time::before, .fa-pull-right.bca-datetimepicker__time-label::before, .fa-pull-right.bca-icon--list-default::before, .fa-pull-right.bca-list__item::before, .fa-pull-right.bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .fa-pull-right.bca-list__item::before, .fa-pull-right.bca-icon--error::before, .ui-dialog label.fa-pull-right.error::before, .fa-pull-right.error-message::before, .fa-pull-right.bca-icon--alert::before, #MessageBox .fa-pull-right.alert-message::before,
+.fa.fa-pull-right, .fa-pull-right.bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a.fa-pull-right::before, .bca-nav__system-title button.fa-pull-right::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a.fa-pull-right::before, .fa-pull-right.bca-icon--publish::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=publish]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=publish]::before, .fa-pull-right.bca-btn[data-bca-btn-type=publish]::before, .fa-pull-right.bca-icon--unpublish::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=unpublish]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .fa-pull-right.bca-btn[data-bca-btn-type=unpublish]::before, .fa-pull-right.bca-icon--preview::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=preview]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=preview]::before, .fa-pull-right.bca-icon--edit::before, .bca-toolbar__tools-edit a.fa-pull-right::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=edit]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=edit]::before, .fa-pull-right.bca-btn[data-bca-btn-type=edit]::before, .fa-pull-right.bca-icon--copy::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=copy]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=copy]::before, .fa-pull-right.bca-btn[data-bca-btn-type=copy]::before, .fa-pull-right.bca-icon--delete::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=delete]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=delete]::before, .fa-pull-right.bca-btn[data-bca-btn-type=delete]::before, .fa-pull-right.bca-icon--rename::before, .fa-pull-right.bca-icon--link::before, .fa-pull-right.bca-icon--alias::before, .fa-pull-right.bca-icon--th-list::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=th-list]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=th-list]::before, .fa-pull-right.bca-icon--back-to-list::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=back-to-list]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .fa-pull-right.bca-btn[data-bca-btn-type=back-to-list]::before, .fa-pull-right.bca-icon--favorite::before, .fa-pull-right.bca-nav-favorite-title-button::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=favorite]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=favorite]::before, .fa-pull-right.bca-btn[data-bca-btn-type=favorite]::before, .fa-pull-right.bca-icon--menuitem::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=menuitem]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .fa-pull-right.bca-btn[data-bca-btn-type=menuitem]::before, .fa-pull-right.bca-icon--add::before, .fa-pull-right.bca-nav-favorite-functions-add::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=add]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=add]::before, .fa-pull-right.bca-btn[data-bca-btn-type=add]::before, .fa-pull-right.bca-icon--help::before, .fa-pull-right.bca-nav-favorite-functions-help::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=help]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=help]::before, .fa-pull-right.bca-btn[data-bca-btn-type=help]::before, .fa-pull-right.bca-icon--permission::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=permission]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=permission]::before, .fa-pull-right.bca-btn[data-bca-btn-type=permission]::before, .fa-pull-right.bca-icon--apply::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=apply]::before, .fa-pull-right.bca-icon--home::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=home]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=home]::before, .fa-pull-right.bca-btn[data-bca-btn-type=home]::before, .fa-pull-right.bca-icon--switch::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=switch]::before, .fa-pull-right.bca-icon--open::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=open]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=open]::before, .fa-pull-right.bca-icon--textcopy::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=textcopy]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .fa-pull-right.bca-btn[data-bca-btn-type=textcopy]::before, .fa-pull-right.bca-icon--download::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=download]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=download]::before, .fa-pull-right.bca-btn[data-bca-btn-type=download]::before, .fa-pull-right.bca-icon--draggable::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=draggable]::before, .fa-pull-right.bca-btn-icon-text[data-bca-btn-type=draggable]::before, .fa-pull-right.bca-btn[data-bca-btn-type=draggable]::before, .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=folder]::before, .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .fa-pull-right.bca-icon--folder::before, .fa-pull-right.bca-icon--file::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=file]::before, .fa-pull-right.bca-icon--up-directory::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=up-directory]::before, .fa-pull-right.bca-icon--arrow-right::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-right]::before, .fa-pull-right.bca-icon--arrow-left::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-left]::before, .fa-pull-right.bca-icon--arrow-up::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-up]::before, .fa-pull-right.bca-icon--arrow-down::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=arrow-down]::before, .fa-pull-right.bca-icon--file-list::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=file-list]::before, .fa-pull-right.bca-icon--update::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=update]::before, .fa-pull-right.bca-icon--setting::before, .fa-pull-right.bca-btn-icon[data-bca-btn-type=setting]::before, .fa-pull-right.bca-icon--search::before, .fa-pull-right.bca-btn[data-bca-btn-type=search]::before, .fa-pull-right.bca-icon--clear::before, .fa-pull-right.bca-btn[data-bca-btn-type=clear]::before, .fa-pull-right.bca-icon--datetimepicker-date::before, .fa-pull-right.bca-datetimepicker__date-label::before, .fa-pull-right.bca-icon--datetimepicker-time::before, .fa-pull-right.bca-datetimepicker__time-label::before, .fa-pull-right.bca-icon--list-default::before, .fa-pull-right.bca-list__item::before, .fa-pull-right.bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .fa-pull-right.bca-list__item::before, .fa-pull-right.bca-icon--error::before, .ui-dialog label.fa-pull-right.error::before, .fa-pull-right.error-message::before, .fa-pull-right.bca-icon--alert::before, #MessageBox .fa-pull-right.alert-message::before,
 .fa-pull-right#authMessage::before,
 .fa-pull-right#AlertMessage::before,
 #BcMessageBox .fa-pull-right.alert-message::before,
@@ -4718,7 +4718,7 @@ readers do not read off random characters that represent icons */
   src: url("../../fonts/admin/fa-solid-900.eot");
   src: url("../../fonts/admin/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../fonts/admin/fa-solid-900.woff2") format("woff2"), url("../../fonts/admin/fa-solid-900.woff") format("woff"), url("../../fonts/admin/fa-solid-900.ttf") format("truetype"), url("../../fonts/admin/fa-solid-900.svg#fontawesome") format("svg"); }
 
-.fa, .bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a::before, .bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before, .bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a::before, .bca-icon--uploader::before, .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a::before, .bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a::before, .bca-nav__system-title button::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before, .bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before, .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before, .bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before, .bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before, .bca-icon--feed::before, .bca-nav__system-list-item[data-system-type="feed"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon-text[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--th-list::before, .bca-btn-icon[data-bca-btn-type=th-list]::before, .bca-btn-icon-text[data-bca-btn-type=th-list]::before, .bca-icon--back-to-list::before, .bca-btn-icon[data-bca-btn-type=back-to-list]::before, .bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-icon--favorite::before, .bca-nav-favorite-title-button::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon-text[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-icon--menuitem::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon-text[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon-text[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-icon--permission::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon-text[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before, .bca-icon--home::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon-text[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-icon--switch::before, .bca-btn-icon[data-bca-btn-type=switch]::before, .bca-icon--open::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon-text[data-bca-btn-type=open]::before, .bca-icon--textcopy::before, .bca-btn-icon[data-bca-btn-type=textcopy]::before, .bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .bca-btn[data-bca-btn-type=textcopy]::before, .bca-icon--download::before, .bca-btn-icon[data-bca-btn-type=download]::before, .bca-btn-icon-text[data-bca-btn-type=download]::before, .bca-btn[data-bca-btn-type=download]::before, .bca-icon--draggable::before, .bca-btn-icon[data-bca-btn-type=draggable]::before, .bca-btn-icon-text[data-bca-btn-type=draggable]::before, .bca-btn[data-bca-btn-type=draggable]::before, .bca-icon--folder::before, .bca-btn-icon[data-bca-btn-type=folder]::before, .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before, .bca-icon--up-directory::before, .bca-btn-icon[data-bca-btn-type=up-directory]::before, .bca-icon--arrow-right::before, .bca-btn-icon[data-bca-btn-type=arrow-right]::before, .bca-icon--arrow-left::before, .bca-btn-icon[data-bca-btn-type=arrow-left]::before, .bca-icon--arrow-up::before, .bca-btn-icon[data-bca-btn-type=arrow-up]::before, .bca-icon--arrow-down::before, .bca-btn-icon[data-bca-btn-type=arrow-down]::before, .bca-icon--file-list::before, .bca-btn-icon[data-bca-btn-type=file-list]::before, .bca-icon--update::before, .bca-btn-icon[data-bca-btn-type=update]::before, .bca-icon--setting::before, .bca-btn-icon[data-bca-btn-type=setting]::before, .bca-icon--search::before, .bca-btn[data-bca-btn-type=search]::before, .bca-icon--clear::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before, .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before, .bca-icon--list-default::before, .bca-list__item::before, .bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .bca-list__item::before, .bca-icon--error::before, .ui-dialog label.error::before, .error-message::before, .bca-icon--alert::before, #MessageBox .alert-message::before,
+.fa, .bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a::before, .bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before, .bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a::before, .bca-nav__system-title button::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before, .bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before, .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before, .bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before, .bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon-text[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=edit]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--rename::before, .bca-icon--link::before, .bca-icon--alias::before, .bca-icon--th-list::before, .bca-btn-icon[data-bca-btn-type=th-list]::before, .bca-btn-icon-text[data-bca-btn-type=th-list]::before, .bca-icon--back-to-list::before, .bca-btn-icon[data-bca-btn-type=back-to-list]::before, .bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=back-to-list]::before, .bca-icon--favorite::before, .bca-nav-favorite-title-button::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon-text[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=favorite]::before, .bca-icon--menuitem::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=menuitem]::before, .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon-text[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=add]::before, .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon-text[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=help]::before, .bca-icon--permission::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon-text[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=permission]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before, .bca-icon--home::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon-text[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=home]::before, .bca-icon--switch::before, .bca-btn-icon[data-bca-btn-type=switch]::before, .bca-icon--open::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon-text[data-bca-btn-type=open]::before, .bca-icon--textcopy::before, .bca-btn-icon[data-bca-btn-type=textcopy]::before, .bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .bca-btn[data-bca-btn-type=textcopy]::before, .bca-icon--download::before, .bca-btn-icon[data-bca-btn-type=download]::before, .bca-btn-icon-text[data-bca-btn-type=download]::before, .bca-btn[data-bca-btn-type=download]::before, .bca-icon--draggable::before, .bca-btn-icon[data-bca-btn-type=draggable]::before, .bca-btn-icon-text[data-bca-btn-type=draggable]::before, .bca-btn[data-bca-btn-type=draggable]::before, .bca-icon--folder::before, .bca-btn-icon[data-bca-btn-type=folder]::before, .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .bca-icon--folder::before, .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before, .bca-icon--up-directory::before, .bca-btn-icon[data-bca-btn-type=up-directory]::before, .bca-icon--arrow-right::before, .bca-btn-icon[data-bca-btn-type=arrow-right]::before, .bca-icon--arrow-left::before, .bca-btn-icon[data-bca-btn-type=arrow-left]::before, .bca-icon--arrow-up::before, .bca-btn-icon[data-bca-btn-type=arrow-up]::before, .bca-icon--arrow-down::before, .bca-btn-icon[data-bca-btn-type=arrow-down]::before, .bca-icon--file-list::before, .bca-btn-icon[data-bca-btn-type=file-list]::before, .bca-icon--update::before, .bca-btn-icon[data-bca-btn-type=update]::before, .bca-icon--setting::before, .bca-btn-icon[data-bca-btn-type=setting]::before, .bca-icon--search::before, .bca-btn[data-bca-btn-type=search]::before, .bca-icon--clear::before, .bca-btn[data-bca-btn-type=clear]::before, .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before, .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before, .bca-icon--list-default::before, .bca-list__item::before, .bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .bca-list__item::before, .bca-icon--error::before, .ui-dialog label.error::before, .error-message::before, .bca-icon--alert::before, #MessageBox .alert-message::before,
 #authMessage::before,
 #AlertMessage::before,
 #BcMessageBox .alert-message::before,
@@ -4795,211 +4795,151 @@ readers do not read off random characters that represent icons */
  * SNS
  *
  */
-.bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a::before {
-  content: "\f015"; }
-
-.bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before {
-  content: "\f0e8"; }
-
-.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a::before {
-  content: "\f15c"; }
-
-.bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a::before {
-  content: "\f0e0"; }
-
-.bca-icon--uploader::before, .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a::before {
-  content: "\f03e"; }
-
-.bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a::before, .bca-nav__system-title button::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before {
-  content: "\f013"; }
-
-.bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before {
-  content: "\f0c9"; }
-
-.bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before {
-  content: "\f007"; }
-
-.bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before {
-  content: "\f2c2"; }
-
-.bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before {
-  content: "\f1fc"; }
-
-.bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before {
-  content: "\f1e6"; }
-
-.bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before {
-  content: "\f0ad"; }
-
-.bca-icon--feed::before, .bca-nav__system-list-item[data-system-type="feed"] .bca-nav__system-list-item-title > a::before {
-  content: "\f09e"; }
-
-.bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before {
-  content: "\f144"; }
-
-.bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before {
-  content: "\f28b"; }
-
-.bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before {
-  content: "\f06e"; }
-
-.bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon-text[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=edit]::before {
-  content: "\f303"; }
-
-.bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before {
-  content: "\f0c5"; }
-
-.bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before {
-  content: "\f2ed"; }
-
-.bca-icon--th-list::before, .bca-btn-icon[data-bca-btn-type=th-list]::before, .bca-btn-icon-text[data-bca-btn-type=th-list]::before {
-  content: "\f00b"; }
-
-.bca-icon--back-to-list::before, .bca-btn-icon[data-bca-btn-type=back-to-list]::before, .bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=back-to-list]::before {
-  content: "\f053"; }
-
-.bca-icon--favorite::before, .bca-nav-favorite-title-button::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon-text[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=favorite]::before {
-  content: "\f004"; }
-
-.bca-icon--menuitem::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=menuitem]::before {
-  content: "\f105"; }
-
-.bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon-text[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=add]::before {
-  content: "\f055"; }
-
-.bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon-text[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=help]::before {
-  content: "\f059"; }
-
-.bca-icon--permission::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon-text[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=permission]::before {
-  content: "\f023"; }
-
-.bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before {
-  content: "\f14a"; }
-
-.bca-icon--home::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon-text[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=home]::before {
-  content: "\f015"; }
-
-.bca-icon--switch::before, .bca-btn-icon[data-bca-btn-type=switch]::before {
-  content: "\f2f6"; }
-
-.bca-icon--open::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon-text[data-bca-btn-type=open]::before {
-  content: "\f07c"; }
-
-.bca-icon--textcopy::before, .bca-btn-icon[data-bca-btn-type=textcopy]::before, .bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .bca-btn[data-bca-btn-type=textcopy]::before {
-  content: "\f0ea"; }
-
-.bca-icon--download::before, .bca-btn-icon[data-bca-btn-type=download]::before, .bca-btn-icon-text[data-bca-btn-type=download]::before, .bca-btn[data-bca-btn-type=download]::before {
-  content: "\f019"; }
-
-.bca-icon--draggable::before, .bca-btn-icon[data-bca-btn-type=draggable]::before, .bca-btn-icon-text[data-bca-btn-type=draggable]::before, .bca-btn[data-bca-btn-type=draggable]::before {
-  content: "\f338"; }
-
-.bca-icon--folder::before, .bca-btn-icon[data-bca-btn-type=folder]::before {
-  content: "\f07b"; }
-
-.bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before {
-  content: "\f15b";
-  font-weight: 400; }
-
-.bca-icon--up-directory::before, .bca-btn-icon[data-bca-btn-type=up-directory]::before {
-  content: "\f062"; }
-
-.bca-icon--arrow-right::before, .bca-btn-icon[data-bca-btn-type=arrow-right]::before {
-  content: "\f061"; }
-
-.bca-icon--arrow-left::before, .bca-btn-icon[data-bca-btn-type=arrow-left]::before {
-  content: "\f060"; }
-
-.bca-icon--arrow-up::before, .bca-btn-icon[data-bca-btn-type=arrow-up]::before {
-  content: "\f062"; }
-
-.bca-icon--arrow-down::before, .bca-btn-icon[data-bca-btn-type=arrow-down]::before {
-  content: "\f063"; }
-
-.bca-icon--file-list::before, .bca-btn-icon[data-bca-btn-type=file-list]::before {
-  content: "\f15c"; }
-
-.bca-icon--update::before, .bca-btn-icon[data-bca-btn-type=update]::before {
-  content: "\f021"; }
-
-.bca-icon--setting::before, .bca-btn-icon[data-bca-btn-type=setting]::before {
-  content: "\f013"; }
-
-.bca-icon--search::before, .bca-btn[data-bca-btn-type=search]::before {
-  content: "\f002"; }
-
-.bca-icon--clear::before, .bca-btn[data-bca-btn-type=clear]::before {
-  content: "\f021"; }
-
-.bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before {
-  content: "\f133";
-  font-weight: 400; }
-
-.bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before {
-  content: "\f017";
-  font-weight: 400; }
-
-.bca-icon--list-default::before, .bca-list__item::before {
-  content: "\f105"; }
-
-.bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .bca-list__item::before {
-  content: "\f111"; }
-
-.bca-icon--error::before, .ui-dialog label.error::before, .error-message::before {
-  content: "\f071"; }
-
-.bca-icon--alert::before, #MessageBox .alert-message::before,
-#authMessage::before,
-#AlertMessage::before,
-#BcMessageBox .alert-message::before,
-#UpdateMessage::before {
-  content: "\f071"; }
-
-.bca-icon--notification::before, #MessageBox .message::before,
-#MessageBox .notice-message::before,
-#BcMessageBox .notice-message::before {
-  content: "\f05a"; }
-
-.bca-icon--facebook::before, .bca-footer__sns__link--facebook::before {
-  content: "\f39e"; }
-
-.bca-icon--twitter::before, .bca-footer__sns__link--twitter::before {
-  content: "\f099"; }
-
-.bca-icon--next::before {
-  content: "\f105"; }
-
-.bca-icon--back::before {
-  content: "\f104"; }
-
-.bca-icon--asc::before {
-  content: "\f0d8"; }
-
-.bca-icon--desc::before {
-  content: "\f0d7"; }
-
-.bca-icon--chevron-down::before {
-  content: "\f078"; }
-
-.bca-icon--list::before {
-  content: "\f0ca"; }
-
-.bca-icon--plus-square::before {
-  content: "\f0fe"; }
-
-.bca-icon--question-circle::before {
-  content: "\f059"; }
-
-.bca-icon--minus-square::before {
-  content: "\f146"; }
-
-.bca-icon--bookmark::before {
-  content: "\f02e"; }
-
-.bca-icon--globe::before {
-  content: "\f57d"; }
-
-.bca-icon--blog::before, .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a::before, .bca-icon--mail::before, .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a::before, .bca-icon--uploader::before, .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a::before, .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before {
+.bca-nav__sub-title-label:before, .bca-nav__system-list-item-title-label:before, .jstree-proton .jstree-container-ul .jstree-icon:before, .jstree-proton-contextmenu li > a i:before {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 95%;
+  font-style: normal;
+  font-stretch: normal; }
+  .bca-icon--dashboard::before, .bca-nav__sub[data-content-type="dashboard"] .bca-nav__sub-title > a::before {
+    content: "\f015"; }
+  .bca-icon--contents::before, .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before {
+    content: "\f0e8"; }
+  .bca-icon--system::before, .bca-nav__sub[data-content-type="system"] .bca-nav__sub-title > a::before, .bca-nav__system-title button::before, .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before {
+    content: "\f013"; }
+  .bca-icon--siteconfigs::before, .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before {
+    content: "\f0c9"; }
+  .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before {
+    content: "\f007"; }
+  .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before {
+    content: "\f2c2"; }
+  .bca-icon--theme::before, .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before {
+    content: "\f1fc"; }
+  .bca-icon--plugin::before, .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before {
+    content: "\f1e6"; }
+  .bca-icon--tools::before, .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before {
+    content: "\f0ad"; }
+  .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before {
+    content: "\f144"; }
+  .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before {
+    content: "\f28b"; }
+  .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before {
+    content: "\f06e"; }
+  .bca-icon--edit::before, .bca-toolbar__tools-edit a::before, .bca-btn-icon[data-bca-btn-type=edit]::before, .bca-btn-icon-text[data-bca-btn-type=edit]::before, .bca-btn[data-bca-btn-type=edit]::before {
+    content: "\f303"; }
+  .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before {
+    content: "\f0c5"; }
+  .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before {
+    content: "\f2ed"; }
+  .bca-icon--rename::before {
+    content: "\f246"; }
+  .bca-icon--link::before {
+    content: "\f0c1"; }
+  .bca-icon--alias::before {
+    content: "\f360"; }
+  .bca-icon--th-list::before, .bca-btn-icon[data-bca-btn-type=th-list]::before, .bca-btn-icon-text[data-bca-btn-type=th-list]::before {
+    content: "\f00b"; }
+  .bca-icon--back-to-list::before, .bca-btn-icon[data-bca-btn-type=back-to-list]::before, .bca-btn-icon-text[data-bca-btn-type=back-to-list]::before, .bca-btn[data-bca-btn-type=back-to-list]::before {
+    content: "\f053"; }
+  .bca-icon--favorite::before, .bca-nav-favorite-title-button::before, .bca-btn-icon[data-bca-btn-type=favorite]::before, .bca-btn-icon-text[data-bca-btn-type=favorite]::before, .bca-btn[data-bca-btn-type=favorite]::before {
+    content: "\f004"; }
+  .bca-icon--menuitem::before, .bca-btn-icon[data-bca-btn-type=menuitem]::before, .bca-btn-icon-text[data-bca-btn-type=menuitem]::before, .bca-btn[data-bca-btn-type=menuitem]::before {
+    content: "\f105"; }
+  .bca-icon--add::before, .bca-nav-favorite-functions-add::before, .bca-btn-icon[data-bca-btn-type=add]::before, .bca-btn-icon-text[data-bca-btn-type=add]::before, .bca-btn[data-bca-btn-type=add]::before {
+    content: "\f055"; }
+  .bca-icon--help::before, .bca-nav-favorite-functions-help::before, .bca-btn-icon[data-bca-btn-type=help]::before, .bca-btn-icon-text[data-bca-btn-type=help]::before, .bca-btn[data-bca-btn-type=help]::before {
+    content: "\f059"; }
+  .bca-icon--permission::before, .bca-btn-icon[data-bca-btn-type=permission]::before, .bca-btn-icon-text[data-bca-btn-type=permission]::before, .bca-btn[data-bca-btn-type=permission]::before {
+    content: "\f023"; }
+  .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before {
+    content: "\f14a"; }
+  .bca-icon--home::before, .bca-btn-icon[data-bca-btn-type=home]::before, .bca-btn-icon-text[data-bca-btn-type=home]::before, .bca-btn[data-bca-btn-type=home]::before {
+    content: "\f015"; }
+  .bca-icon--switch::before, .bca-btn-icon[data-bca-btn-type=switch]::before {
+    content: "\f2f6"; }
+  .bca-icon--open::before, .bca-btn-icon[data-bca-btn-type=open]::before, .bca-btn-icon-text[data-bca-btn-type=open]::before {
+    content: "\f07c"; }
+  .bca-icon--textcopy::before, .bca-btn-icon[data-bca-btn-type=textcopy]::before, .bca-btn-icon-text[data-bca-btn-type=textcopy]::before, .bca-btn[data-bca-btn-type=textcopy]::before {
+    content: "\f0ea"; }
+  .bca-icon--download::before, .bca-btn-icon[data-bca-btn-type=download]::before, .bca-btn-icon-text[data-bca-btn-type=download]::before, .bca-btn[data-bca-btn-type=download]::before {
+    content: "\f019"; }
+  .bca-icon--draggable::before, .bca-btn-icon[data-bca-btn-type=draggable]::before, .bca-btn-icon-text[data-bca-btn-type=draggable]::before, .bca-btn[data-bca-btn-type=draggable]::before {
+    content: "\f338"; }
+  .bca-icon--folder::before, .bca-btn-icon[data-bca-btn-type=folder]::before {
+    content: "\f07b"; }
+  .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .bca-icon--folder::before {
+    content: "\f07c"; }
+  .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before {
+    content: "\f15b"; }
+  .bca-icon--up-directory::before, .bca-btn-icon[data-bca-btn-type=up-directory]::before {
+    content: "\f062"; }
+  .bca-icon--arrow-right::before, .bca-btn-icon[data-bca-btn-type=arrow-right]::before {
+    content: "\f061"; }
+  .bca-icon--arrow-left::before, .bca-btn-icon[data-bca-btn-type=arrow-left]::before {
+    content: "\f060"; }
+  .bca-icon--arrow-up::before, .bca-btn-icon[data-bca-btn-type=arrow-up]::before {
+    content: "\f062"; }
+  .bca-icon--arrow-down::before, .bca-btn-icon[data-bca-btn-type=arrow-down]::before {
+    content: "\f063"; }
+  .bca-icon--file-list::before, .bca-btn-icon[data-bca-btn-type=file-list]::before {
+    content: "\f15c"; }
+  .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before {
+    content: "\f15b"; }
+  .bca-icon--update::before, .bca-btn-icon[data-bca-btn-type=update]::before {
+    content: "\f021"; }
+  .bca-icon--setting::before, .bca-btn-icon[data-bca-btn-type=setting]::before {
+    content: "\f013"; }
+  .bca-icon--search::before, .bca-btn[data-bca-btn-type=search]::before {
+    content: "\f002"; }
+  .bca-icon--clear::before, .bca-btn[data-bca-btn-type=clear]::before {
+    content: "\f021"; }
+  .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before {
+    content: "\f133"; }
+  .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before {
+    content: "\f017"; }
+  .bca-icon--list-default::before, .bca-list__item::before {
+    content: "\f105"; }
+  .bca-icon--list-circle::before, .bca-list[data-bca-list-type=circle] .bca-list__item::before {
+    content: "\f111"; }
+  .bca-icon--error::before, .ui-dialog label.error::before, .error-message::before {
+    content: "\f071"; }
+  .bca-icon--alert::before, #MessageBox .alert-message::before,
+  #authMessage::before,
+  #AlertMessage::before,
+  #BcMessageBox .alert-message::before,
+  #UpdateMessage::before {
+    content: "\f071"; }
+  .bca-icon--notification::before, #MessageBox .message::before,
+  #MessageBox .notice-message::before,
+  #BcMessageBox .notice-message::before {
+    content: "\f05a"; }
+  .bca-icon--facebook::before, .bca-footer__sns__link--facebook::before {
+    content: "\f39e"; }
+  .bca-icon--twitter::before, .bca-footer__sns__link--twitter::before {
+    content: "\f099"; }
+  .bca-icon--next::before {
+    content: "\f105"; }
+  .bca-icon--back::before {
+    content: "\f104"; }
+  .bca-icon--asc::before {
+    content: "\f0d8"; }
+  .bca-icon--desc::before {
+    content: "\f0d7"; }
+  .bca-icon--chevron-down::before {
+    content: "\f078"; }
+  .bca-icon--list::before {
+    content: "\f0ca"; }
+  .bca-icon--plus-square::before {
+    content: "\f0fe"; }
+  .bca-icon--question-circle::before {
+    content: "\f059"; }
+  .bca-icon--minus-square::before {
+    content: "\f146"; }
+  .bca-icon--bookmark::before {
+    content: "\f02e"; }
+  .bca-icon--globe::before {
+    content: "\f57d"; }
+
+.bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before, .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before, .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before, .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before {
   font-weight: 400; }
 
 .bca-icon--facebook::before, .bca-footer__sns__link--facebook::before, .bca-icon--twitter::before, .bca-footer__sns__link--twitter::before {
@@ -5116,7 +5056,7 @@ readers do not read off random characters that represent icons */
 	width:100%;
 }*/
 a {
-  color: #6fa83d;
+  color: #FF6F61;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -5171,7 +5111,7 @@ body * {
   font-size: small; }
 
 .form-error {
-  border: 1px solid #f20014 !important; }
+  border: 1px solid #c04949 !important; }
 
 .error {
   color: #C30; }
@@ -5617,49 +5557,8 @@ body * {
 /* ==================================================================== */
 /*    Contents
 /* ==================================================================== */
-#ContentsTreeList li {
-  margin: 0;
-  padding: 0; }
-
 .ui-widget-content {
   border: 1px solid #DDD; }
-
-#ContentsTreeList li ul {
-  margin-left: 26px; }
-
-.jstree-proton .jstree-anchor {
-  margin: 0 !important; }
-
-.vakata-context,
-.vakata-context ul {
-  background-color: #FFF;
-  font-size: 14px; }
-
-.vakata-context li {
-  /*padding:0px 10px;*/ }
-
-.vakata-context li > a {
-  padding-top: 3px;
-  padding-bottom: 3px; }
-
-.vakata-context li > a .vakata-contextmenu-sep {
-  border-left: none !important;
-  background: none; }
-
-.vakata-context .vakata-context-separator > a,
-.vakata-context .vakata-context-separator > a:hover {
-  margin: 0; }
-
-#ContentsTreeList {
-  border: 1px solid #DDD; }
-
-#ContentsTreeList li .alias {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_alias_layerd.png");
-  position: absolute;
-  top: 0; }
 
 #DataList td .alias {
   display: block;
@@ -5668,37 +5567,6 @@ body * {
   background: url("../../img/admin/icon_alias_layerd.png");
   position: relative;
   top: -32px; }
-
-ul.jstree-contextmenu li .icon-alias-layerd {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_alias_layerd.png");
-  position: absolute;
-  margin-top: -32px; }
-
-ul.jstree-contextmenu li .icon-add-layerd {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_add_layerd.png");
-  position: absolute;
-  margin-top: -32px; }
-
-#ContentsTreeList li .function {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_function.png");
-  position: absolute;
-  cursor: pointer; }
-
-div.jstree-unpublish-odd,
-div.jstree-unpublish-even {
-  background-color: #fff; }
-
-div.jstree-publish-even {
-  /*background-color: #F2F2F2;*/ }
 
 #RelatedContentsSetting .icon-add-layerd {
   display: inline-block;
@@ -5878,21 +5746,6 @@ div.jstree-publish-even {
   font-stretch: normal;
   margin: 0 .3em 0 0; }
 
-.bca-icon--blog::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
-.bca-icon--mail::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
-.bca-icon--uploader::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
 .bca-icon--system::before {
   font-size: 95%;
   font-stretch: normal;
@@ -5924,11 +5777,6 @@ div.jstree-publish-even {
   margin: 0 .3em 0 0; }
 
 .bca-icon--tools::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0; }
-
-.bca-icon--feed::before {
   font-size: 95%;
   font-stretch: normal;
   margin: 0 .3em 0 0; }
@@ -6188,6 +6036,21 @@ div.jstree-publish-even {
   font-stretch: normal;
   margin: 0 .3em 0 0; }
 
+.bca-icon--alias::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0; }
+
+.bca-icon--rename::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0; }
+
+.bca-icon--link::before {
+  font-size: 95%;
+  font-stretch: normal;
+  margin: 0 .3em 0 0; }
+
 .bca-icon--globe::before {
   font-size: 95%;
   font-stretch: normal;
@@ -6269,7 +6132,7 @@ div.jstree-publish-even {
       padding-top: 30px;
       overflow: hidden;
       font-size: 2.2rem;
-      background-color: #6fa83d; }
+      background-color: #FF6F61; }
       .bca-footer__sns__link:before {
         position: absolute;
         top: 50%;
@@ -6301,7 +6164,7 @@ div.jstree-publish-even {
       .bca-footer__links__item a:link, .bca-footer__links__item a:visited, .bca-footer__links__item a:active {
         color: #ccc; }
       .bca-footer__links__item a:hover {
-        color: #6fa83d; }
+        color: #FF6F61; }
   .bca-footer__copyright {
     margin: 0;
     text-align: center; }
@@ -6383,7 +6246,7 @@ body {
       margin: 8px;
       padding: 3px 8px 3px 5px;
       border-radius: 22px;
-      background-color: #f20014;
+      background-color: #c04949;
       font-weight: bold;
       color: #fff; }
   .bca-toolbar__users > ul {
@@ -6446,7 +6309,7 @@ body {
           position: relative;
           z-index: 1; }
           .bca-toolbar__users > ul > li.active > ul a:hover {
-            background-color: #6fa83d;
+            background-color: #FF6F61;
             color: #fff; }
 
 .bca-nav {
@@ -6483,15 +6346,41 @@ body {
         vertical-align: middle;
         padding: 12px 10px 12px 10px; }
         .bca-nav__sub-title-label:before {
+          display: inline-block;
           width: 16px;
           text-align: center;
-          margin-right: 10px !important; }
+          margin: 0 10px 0 0 !important; }
         .bca-nav__sub-title-label:link, .bca-nav__sub-title-label:visited {
           color: #424f44; }
         .bca-nav__sub-title-label:hover {
           text-decoration: none;
           color: #424f44;
           background: #ddd; }
+        .bca-nav__sub-title-label span {
+          font-weight: bold; }
+    .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title {
+      background-color: #424f44; }
+      .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title-label {
+        color: #fff; }
+        .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title-label:hover {
+          color: #424f44; }
+    .bca-nav__sub:hover {
+      color: #FF6F61; }
+      .bca-nav__sub:hover:not([data-content-is-expanded="true"]):not([data-content-type="dashboard"])::after {
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        right: 0;
+        margin-top: -10px;
+        border: 10px solid;
+        border-color: transparent #eeeeea transparent transparent; }
+    .bca-nav__sub:hover .bca-nav__sub-list {
+      display: block;
+      background: #eeeeea;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+      z-index: 10; }
     .bca-nav__sub-list {
       display: none;
       position: absolute;
@@ -6535,26 +6424,6 @@ body {
             color: #424f44; }
             .bca-nav__sub-list-item a:hover::before {
               opacity: 1; }
-    .bca-nav__sub:hover .bca-nav__sub-list {
-      display: block;
-      background: #eeeeea;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-      z-index: 10; }
-      .bca-nav__sub:hover .bca-nav__sub-list::before {
-        content: "";
-        display: block;
-        position: absolute;
-        z-index: 20;
-        top: 10px;
-        left: -20px;
-        border: 10px solid;
-        border-color: transparent #eeeeea transparent transparent; }
-    .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title {
-      background-color: #424f44; }
-      .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title-label {
-        color: #fff; }
-        .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title-label:hover {
-          background: #424f44; }
     .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-title {
       color: #424f44;
       cursor: default;
@@ -6569,20 +6438,18 @@ body {
               transform: none;
       box-shadow: none;
       background: #f8f8f8;
-      padding: 0; }
-      .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item a {
-        padding: 13px 20px 11px 35px;
-        white-space: inherit; }
+      padding-top: 0; }
       .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] {
         background: #424f44; }
         .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a {
           position: relative;
+          padding-left: 35px;
           color: #fff;
-          font-weight: bold; }
+          font-weight: bold;
+          padding-top: 13px;
+          padding-bottom: 11px; }
           .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:link, .bca-nav__sub[data-content-is-expanded="true"] .bca-nav__sub-list-item[data-sub-content-is-current="true"] a:visited {
             color: #fff; }
-    .bca-nav__sub[data-content-is-expanded="true"]:hover .bca-nav__sub-list::before {
-      content: none; }
     .bca-nav__sub[data-content-type] .bca-nav__sub-title > a:before {
       width: 16px;
       text-align: center;
@@ -6592,18 +6459,6 @@ body {
       font-stretch: normal;
       margin: 0 .3em 0 0; }
     .bca-nav__sub[data-content-type="contents"] .bca-nav__sub-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__sub[data-content-type="blog-content"] .bca-nav__sub-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__sub[data-content-type="mail-content"] .bca-nav__sub-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__sub[data-content-type="uploader"] .bca-nav__sub-title > a::before {
       font-size: 95%;
       font-stretch: normal;
       margin: 0 .3em 0 0; }
@@ -6646,25 +6501,48 @@ body {
         vertical-align: middle;
         margin-right: 6px;
         float: right; }
+    .bca-nav__system[data-content-is-current="true"] .bca-nav__system-title {
+      color: #424f44;
+      background: #f8f8f8;
+      cursor: default; }
+    .bca-nav__system[data-content-is-current="true"] .bca-nav__system-list {
+      display: block;
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      -webkit-transform: none;
+              transform: none;
+      box-shadow: none;
+      background: #eeeeea; }
+      .bca-nav__system[data-content-is-current="true"] .bca-nav__system-list-item[data-content-is-current="true"] {
+        background: #FF6F61; }
+        .bca-nav__system[data-content-is-current="true"] .bca-nav__system-list-item[data-content-is-current="true"] > h4 {
+          background: #424f44; }
+        .bca-nav__system[data-content-is-current="true"] .bca-nav__system-list-item[data-content-is-current="true"] > h4 > a {
+          position: relative;
+          font-weight: bold;
+          color: #fff; }
     .bca-nav__system-list-item {
       padding: 0;
       position: relative; }
       .bca-nav__system-list-item:hover {
-        color: #6fa83d; }
-        .bca-nav__system-list-item:hover .bca-nav__system-sub-list {
+        color: #FF6F61; }
+        .bca-nav__system-list-item:hover:not([data-sub-content-is-expanded="true"]):not([data-system-type="siteconfigs"])::after {
+          content: "";
           display: block;
-          background: #eeeeea;
-          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-          z-index: 10; }
-          .bca-nav__system-list-item:hover .bca-nav__system-sub-list::before {
-            content: "";
-            display: block;
-            position: absolute;
-            z-index: 20;
-            top: 10px;
-            left: -20px;
-            border: 10px solid;
-            border-color: transparent #eeeeea transparent transparent; }
+          position: absolute;
+          z-index: 20;
+          top: 50%;
+          right: 0;
+          margin-top: -10px;
+          border: 10px solid;
+          border-color: transparent #eeeeea transparent transparent; }
+      .bca-nav__system-list-item:hover .bca-nav__system-sub-list {
+        display: block;
+        background: #eeeeea;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        z-index: 10; }
       .bca-nav__system-list-item-title {
         margin: 0;
         padding: 0; }
@@ -6673,6 +6551,7 @@ body {
           vertical-align: middle;
           padding: 12px 10px 12px 10px; }
           .bca-nav__system-list-item-title-label:before {
+            display: inline-block;
             width: 16px;
             text-align: center;
             margin-right: 10px !important; }
@@ -6680,14 +6559,58 @@ body {
             color: #424f44; }
           .bca-nav__system-list-item-title-label:hover {
             text-decoration: none;
-            color: #424f44;
+            color: #424f44 !important;
             background: #ddd; }
+          .bca-nav__system-list-item-title-label span {
+            font-weight: bold; }
+      .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0;
+        width: 16px;
+        text-align: center; }
+      .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
+      .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
+      .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
+      .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
+      .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
+      .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
       .bca-nav__system-list-item[data-sub-content-is-current="true"] .bca-nav__system-list-item-title {
         background-color: #424f44; }
         .bca-nav__system-list-item[data-sub-content-is-current="true"] .bca-nav__system-list-item-title-label {
           color: #fff; }
-          .bca-nav__system-list-item[data-sub-content-is-current="true"] .bca-nav__system-list-item-title-label:hover {
-            background-color: #424f44; }
+      .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-sub-list {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        width: auto;
+        -webkit-transform: none;
+                transform: none;
+        box-shadow: none;
+        background: #f8f8f8;
+        padding-top: 0;
+        color: #424f44; }
+      .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-list-item-title {
+        background-color: #ddd; }
     .bca-nav__system-sub-list {
       display: none;
       margin: 0;
@@ -6705,75 +6628,19 @@ body {
           font-size: 1.3rem;
           padding: 7px 20px 5px 35px;
           color: #424f44;
-          display: block;
-          white-space: nowrap; }
+          display: block; }
         .bca-nav__system-sub-list-item a:hover {
           font-weight: bold;
           text-decoration: none; }
-    .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-list-item-title {
-      background-color: #ddd; }
-    .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-title {
-      color: #424f44;
-      background: #424f44;
-      cursor: default; }
-    .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-sub-list {
-      display: block;
-      position: relative;
-      top: auto;
-      left: auto;
-      width: auto;
-      -webkit-transform: none;
-              transform: none;
-      box-shadow: none;
-      background: #f8f8f8;
-      padding: 0;
-      color: #424f44; }
-      .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-sub-list-item a {
-        padding: 13px 20px 11px 35px;
-        white-space: inherit; }
-      .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-sub-list-item[data-sub-item-is-current="true"] {
-        background: #424f44; }
-        .bca-nav__system-list-item[data-sub-content-is-expanded="true"] .bca-nav__system-sub-list-item[data-sub-item-is-current="true"] a {
-          position: relative;
-          padding-left: 35px;
-          color: #fff;
-          font-weight: bold; }
-    .bca-nav__system-list-item[data-sub-content-is-expanded="true"]:hover .bca-nav__system-sub-list::before {
-      content: none; }
-    .bca-nav__system-list-item[data-system-type] .bca-nav__system-item-list-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0;
-      width: 16px;
-      text-align: center; }
-    .bca-nav__system-list-item[data-system-type="siteconfigs"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__system-list-item[data-system-type="theme"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__system-list-item[data-system-type="plugin"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__system-list-item[data-system-type="tools"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
-    .bca-nav__system-list-item[data-system-type="feed"] .bca-nav__system-list-item-title > a::before {
-      font-size: 95%;
-      font-stretch: normal;
-      margin: 0 .3em 0 0; }
+        .bca-nav__system-sub-list-item[data-sub-item-is-current="true"] {
+          background: #424f44; }
+          .bca-nav__system-sub-list-item[data-sub-item-is-current="true"] a {
+            position: relative;
+            padding-left: 35px;
+            color: #fff;
+            font-weight: bold;
+            padding-top: 13px;
+            padding-bottom: 11px; }
 
 .bca-nav-favorite {
   font-size: 1.6rem;
@@ -6840,7 +6707,7 @@ body {
       display: inline-block;
       vertical-align: middle;
       cursor: pointer;
-      color: #6fa83d; }
+      color: #FF6F61; }
       .bca-nav-favorite-functions-add::before {
         font-size: 95%;
         font-stretch: normal;
@@ -6850,7 +6717,7 @@ body {
       display: inline-block;
       vertical-align: middle;
       cursor: pointer;
-      color: #6fa83d;
+      color: #FF6F61;
       margin-left: 15px; }
       .bca-nav-favorite-functions-help::before {
         font-size: 95%;
@@ -6866,7 +6733,7 @@ body {
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  color: #6fa83d;
+  color: #FF6F61;
   transition: all 0.2s; }
   .bca-btn-icon:hover {
     text-decoration: none;
@@ -6933,11 +6800,11 @@ body {
     margin: 0 .3em 0 0; }
   .bca-btn-icon[data-bca-btn-type=login] {
     color: #fff;
-    border: 1px solid #639536;
-    background-image: linear-gradient(#6fa83d 10%, #639536 100%); }
+    border: 1px solid #ff5848;
+    background-image: linear-gradient(#FF6F61 10%, #ff5848 100%); }
     .bca-btn-icon[data-bca-btn-type=login]:hover, .bca-btn-icon[data-bca-btn-type=login]:focus {
       color: #fff;
-      background-image: linear-gradient(#639536 10%, #639536 100%); }
+      background-image: linear-gradient(#ff5848 10%, #ff5848 100%); }
   .bca-btn-icon[data-bca-btn-type=switch]::before {
     font-size: 95%;
     font-stretch: normal;
@@ -7006,7 +6873,7 @@ body {
     font-size: 1.2rem; }
   .bca-btn-icon[data-bca-btn-status=primary] {
     color: #fff;
-    background: #6fa83d; }
+    background: #FF6F61; }
     .bca-btn-icon[data-bca-btn-status=primary]::before {
       color: #fff; }
     .bca-btn-icon[data-bca-btn-status=primary]:hover {
@@ -7103,11 +6970,11 @@ body {
     margin: 0 .3em 0 0; }
   .bca-btn-icon-text[data-bca-btn-type=login] {
     color: #fff;
-    border: 1px solid #639536;
-    background-image: linear-gradient(#6fa83d 10%, #639536 100%); }
+    border: 1px solid #ff5848;
+    background-image: linear-gradient(#FF6F61 10%, #ff5848 100%); }
     .bca-btn-icon-text[data-bca-btn-type=login]:hover, .bca-btn-icon-text[data-bca-btn-type=login]:focus {
       color: #fff;
-      background-image: linear-gradient(#639536 10%, #639536 100%); }
+      background-image: linear-gradient(#ff5848 10%, #ff5848 100%); }
   .bca-btn-icon-text[data-bca-btn-type=open]::before {
     font-size: 95%;
     font-stretch: normal;
@@ -7132,7 +6999,7 @@ body {
     font-size: 1.2rem; }
   .bca-btn-icon-text[data-bca-btn-status=primary] {
     color: #fff;
-    background: #6fa83d; }
+    background: #FF6F61; }
     .bca-btn-icon-text[data-bca-btn-status=primary]::before {
       color: #fff; }
     .bca-btn-icon-text[data-bca-btn-status=primary]:hover {
@@ -7193,7 +7060,7 @@ body {
   .bca-table[data-bca-table-type=type2] .cel1 {
     width: 120px; }
   .bca-table[data-bca-table-type=type2] .bca-currentrow th, .bca-table[data-bca-table-type=type2] .bca-currentrow td {
-    background: #6fa83d; }
+    background: #FF6F61; }
 
 /* list-table
 ----------------------------------------------- */
@@ -7220,9 +7087,9 @@ body {
       tr .bca-table-listup__thead-th--select input {
         margin: 0; }
       tr .bca-table-listup__thead-th--select a {
-        color: #6fa83d; }
+        color: #FF6F61; }
         tr .bca-table-listup__thead-th--select a .bca-btn-icon-text[data-bca-btn-type=draggable]::before {
-          color: #6fa83d; }
+          color: #FF6F61; }
   .bca-table-listup__a {
     display: inline-block;
     line-height: 1;
@@ -7296,7 +7163,7 @@ body {
   .bca-table-listup [data-bca-text-size=lg] {
     font-size: 1.6rem; }
   .bca-table-listup .bca-currentrow th, .bca-table-listup .bca-currentrow td {
-    background: #6fa83d;
+    background: #FF6F61;
     color: #FFF; }
 
 /* Crumb
@@ -7498,7 +7365,7 @@ body {
     margin-top: 0;
     margin-bottom: 40px;
     text-align: center;
-    color: #6fa83d;
+    color: #FF6F61;
     font-weight: bold;
     font-size: 4rem; }
   .bca-login__logo {
@@ -7534,7 +7401,7 @@ body {
            -moz-appearance: none;
                 appearance: none; }
         .bca-login-form-item .bca-textbox .bca-textbox__input:focus {
-          border-color: #6fa83d;
+          border-color: #FF6F61;
           border-width: 1px;
           outline: none; }
   .bca-login button.bca-btn--login {
@@ -7634,7 +7501,7 @@ body {
     border-bottom: none; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__label {
       vertical-align: top;
-      width: 250px;
+      width: 240px;
       padding-left: 0.2em;
       text-align: left;
       white-space: nowrap; }
@@ -7657,8 +7524,7 @@ body {
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textbox,
       .bca-form-table[data-bca-table-type=type2] .bca-form-table__input .bca-textarea {
         position: relative;
-        margin-top: -0.5em;
-        margin-left: -4px; }
+        margin-top: -0.5em; }
     .bca-form-table[data-bca-table-type=type2] .bca-form-table__explanation {
       display: inline-block;
       margin-left: 1em;
@@ -7676,7 +7542,7 @@ body {
   margin-bottom: 20px; }
 
 .message {
-  color: #0087bc;
+  color: #FF6F61;
   font-weight: normal;
   margin: 20px;
   line-height: 1.6; }
@@ -7684,7 +7550,7 @@ body {
 #MessageBox .message,
 #MessageBox .notice-message,
 #BcMessageBox .notice-message {
-  color: #0087bc; }
+  color: #FF6F61; }
   #MessageBox .message::before,
   #MessageBox .notice-message::before,
   #BcMessageBox .notice-message::before {
@@ -7698,7 +7564,7 @@ body {
 #AlertMessage,
 #BcMessageBox .alert-message,
 #UpdateMessage {
-  color: #f20014 !important; }
+  color: #c04949 !important; }
   #MessageBox .alert-message::before,
   #authMessage::before,
   #AlertMessage::before,
@@ -7862,7 +7728,7 @@ table.cake-sql-log tr td {
     background-color: #eeeeea;
     background-image: linear-gradient(white 100%, white 100%); }
   .bca-btn:focus, .ui-dialog-buttonset button:focus, .button-small:focus {
-    box-shadow: 0 0 4px 0px #6fa83d; }
+    box-shadow: 0 0 4px 0px #FF6F61; }
 
 .bca-btn[data-bca-btn-type=publish]::before {
   font-size: 95%;
@@ -7887,7 +7753,7 @@ table.cake-sql-log tr td {
 .bca-btn[data-bca-btn-type=save] {
   color: #fff;
   border: none;
-  background: #6fa83d; }
+  background: #FF6F61; }
   .bca-btn[data-bca-btn-type=save]::before {
     color: #fff; }
   .bca-btn[data-bca-btn-type=save]:hover {
@@ -7917,7 +7783,7 @@ table.cake-sql-log tr td {
 .bca-btn[data-bca-btn-type=add] {
   color: #fff;
   border: none;
-  background: #6fa83d; }
+  background: #FF6F61; }
   .bca-btn[data-bca-btn-type=add]::before {
     font-size: 95%;
     font-stretch: normal;
@@ -7945,11 +7811,11 @@ table.cake-sql-log tr td {
 
 .bca-btn[data-bca-btn-type=login] {
   color: #fff;
-  border: 1px solid #639536;
-  background-image: linear-gradient(#6fa83d 10%, #639536 100%); }
+  border: 1px solid #ff5848;
+  background-image: linear-gradient(#FF6F61 10%, #ff5848 100%); }
   .bca-btn[data-bca-btn-type=login]:hover, .bca-btn[data-bca-btn-type=login]:focus {
     color: #fff;
-    background-image: linear-gradient(#639536 10%, #639536 100%); }
+    background-image: linear-gradient(#ff5848 10%, #ff5848 100%); }
 
 .bca-btn[data-bca-btn-type=search]::before {
   font-size: 95%;
@@ -8004,7 +7870,7 @@ table.cake-sql-log tr td {
   border: none;
   background: none;
   box-shadow: none;
-  color: #6fa83d; }
+  color: #FF6F61; }
   .bca-btn[data-bca-btn-category=text]:hover {
     text-decoration: underline; }
 
@@ -8012,14 +7878,14 @@ table.cake-sql-log tr td {
   transition: none; }
   .bca-btn[data-bca-btn-color=danger]:hover {
     color: #fff;
-    background: #f20014;
-    border-color: #f20014; }
+    background: #c04949;
+    border-color: #c04949; }
     .bca-btn[data-bca-btn-color=danger]:hover::before {
       color: #fff; }
 
 .bca-btn[data-bca-btn-status=primary] {
   color: #fff;
-  background: #6fa83d; }
+  background: #FF6F61; }
   .bca-btn[data-bca-btn-status=primary]::before {
     color: #fff; }
   .bca-btn[data-bca-btn-status=primary]:hover {
@@ -8074,11 +7940,11 @@ table.cake-sql-log tr td {
       border: 1px solid #ccc;
       border-radius: 50%; }
     .bca-radio__input:checked + label:before {
-      background: #6fa83d;
+      background: #FF6F61;
       box-shadow: 0 0 0px 4px #fff inset; }
     .bca-radio__input:focus + label:before {
-      box-shadow: 0 0 0px 4px #fff inset, 0 0 4px 0px #6fa83d;
-      border-color: #6fa83d;
+      box-shadow: 0 0 0px 4px #fff inset, 0 0 4px 0px #FF6F61;
+      border-color: #FF6F61;
       border-width: 1px; }
   .bca-radio__label {
     margin-bottom: 0; }
@@ -8111,8 +7977,8 @@ table.cake-sql-log tr td {
       display: block; }
     .bca-checkbox__input:focus + label:before,
     .bca-checkbox__input:focus + .bca-checkbox-label:before {
-      box-shadow: 0 0 4px 0px #6fa83d;
-      border-color: #6fa83d;
+      box-shadow: 0 0 4px 0px #FF6F61;
+      border-color: #FF6F61;
       border-width: 1px; }
   .bca-checkbox__input + label, .bca-checkbox__label {
     position: relative;
@@ -8145,8 +8011,8 @@ table.cake-sql-log tr td {
       height: 0.9em;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
-      border-right: 0.24em solid #6fa83d;
-      border-bottom: 0.24em solid #6fa83d; }
+      border-right: 0.24em solid #FF6F61;
+      border-bottom: 0.24em solid #FF6F61; }
     .bca-checkbox__input + label[data-bca-checkbox-size=lg], .bca-checkbox__label[data-bca-checkbox-size=lg] {
       font-size: 2rem; }
     .bca-checkbox__input + label[data-bca-checkbox-size=sm], .bca-checkbox__label[data-bca-checkbox-size=sm] {
@@ -8170,8 +8036,8 @@ table.cake-sql-log tr td {
   .bca-select__select[data-bca-select-size=sm] {
     font-size: 1.2rem; }
   .bca-select__select:focus {
-    box-shadow: 0 0 4px 0px #6fa83d;
-    border-color: #6fa83d;
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
     border-width: 1px; }
 
 /* bca-data-list
@@ -8204,7 +8070,7 @@ table.cake-sql-log tr td {
   line-height: 1.8; }
   .bca-label[data-bca-label-type="required"] {
     white-space: nowrap;
-    background: #f20014;
+    background: #c04949;
     border-radius: 3px; }
   .bca-label[data-bca-label-type="optional"] {
     background: #00E; }
@@ -8276,8 +8142,8 @@ table.cake-sql-log tr td {
     .bca-textbox-color__input[data-margin=bottom] {
       margin-bottom: 10px; }
     .bca-textbox-color__input:focus {
-      box-shadow: 0 0 4px 0px #6fa83d;
-      border-color: #6fa83d;
+      box-shadow: 0 0 4px 0px #FF6F61;
+      border-color: #FF6F61;
       border-width: 1px; }
 
 .bca-textbox {
@@ -8302,8 +8168,8 @@ table.cake-sql-log tr td {
     .bca-textbox__input[data-margin=bottom] {
       margin-bottom: 10px; }
     .bca-textbox__input:focus {
-      box-shadow: 0 0 4px 0px #6fa83d;
-      border-color: #6fa83d;
+      box-shadow: 0 0 4px 0px #FF6F61;
+      border-color: #FF6F61;
       border-width: 1px; }
 
 .bca-textarea {
@@ -8330,8 +8196,8 @@ table.cake-sql-log tr td {
     .bca-textarea__textarea[data-width=full] {
       width: calc(100% - 80px); }
     .bca-textarea__textarea:focus {
-      box-shadow: 0 0 4px 0px #6fa83d;
-      border-color: #6fa83d;
+      box-shadow: 0 0 4px 0px #FF6F61;
+      border-color: #FF6F61;
       border-width: 1px; }
 
 .bca-file__delete {
@@ -8352,7 +8218,7 @@ table.cake-sql-log tr td {
       display: block; }
     .bca-file__delete-input:focus + label:before,
     .bca-file__delete-input:focus + .bca-file__delete-label:before {
-      box-shadow: 0 0 4px 0px #6fa83d; }
+      box-shadow: 0 0 4px 0px #FF6F61; }
   .bca-file__delete-input + label, .bca-file__delete-label {
     position: relative;
     display: inline-block;
@@ -8382,8 +8248,8 @@ table.cake-sql-log tr td {
       height: 0.9em;
       -webkit-transform: rotate(45deg);
               transform: rotate(45deg);
-      border-right: 0.24em solid #6fa83d;
-      border-bottom: 0.24em solid #6fa83d; }
+      border-right: 0.24em solid #FF6F61;
+      border-bottom: 0.24em solid #FF6F61; }
     .bca-file__delete-input + label[data-bca-checkbox-size=lg], .bca-file__delete-label[data-bca-checkbox-size=lg] {
       font-size: 2rem; }
     .bca-file__delete-input + label[data-bca-checkbox-size=sm], .bca-file__delete-label[data-bca-checkbox-size=sm] {
@@ -8453,8 +8319,8 @@ table.cake-sql-log tr td {
       .bca-datetimepicker__date-input[data-input-text-size=full-counter], .bca-datetimepicker__time-input[data-input-text-size=full-counter] {
         width: calc(100% - 80px); }
       .bca-datetimepicker__date-input:focus, .bca-datetimepicker__time-input:focus {
-        box-shadow: 0 0 4px 0px #6fa83d;
-        border-color: #6fa83d;
+        box-shadow: 0 0 4px 0px #FF6F61;
+        border-color: #FF6F61;
         border-width: 1px; }
   .bca-datetimepicker__date-label::before {
     font-size: 95%;
@@ -8589,7 +8455,7 @@ table.cake-sql-log tr td {
 
 .bca-current-theme {
   position: relative;
-  border: 3px solid #6fa83d;
+  border: 3px solid #FF6F61;
   padding: 20px;
   margin-bottom: 20px; }
   .bca-current-theme__name {
@@ -8871,11 +8737,11 @@ table.cake-sql-log tr td {
     display: inline-block;
     width: auto;
     font-size: 2rem;
-    line-height: 1.2;
+    line-height: 1;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    color: #6fa83d;
+    color: #FF6F61;
     padding-left: 0;
     outline: none; }
     .bca-collapse__btn:hover {
@@ -8892,12 +8758,12 @@ table.cake-sql-log tr td {
               transform: rotate(180deg); }
 
 .bca-em-box {
-  padding: 20px;
+  padding: 1px 15px;
   background: #FFFFFF;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin: 15px auto;
   text-align: center;
-  line-height: 2; }
+  line-height: 1.6; }
   .bca-em-box a {
     color: #690; }
     .bca-em-box a:hover {
@@ -8910,9 +8776,9 @@ table.cake-sql-log tr td {
   margin: 20px auto 20px;
   line-height: 1.6; }
   .bca-current-box a {
-    color: #f20014; }
+    color: #c04949; }
     .bca-current-box a:hover {
-      color: #6fa83d;
+      color: #FF6F61;
       text-decoration: none; }
 
 .ui-dialog {
@@ -8947,8 +8813,8 @@ table.cake-sql-log tr td {
   .ui-widget input[type="url"]:focus,
   .ui-widget input[type="checkbox"]:focus,
   .ui-widget input[type="email"]:focus {
-    box-shadow: 0 0 4px 0px #6fa83d;
-    border-color: #6fa83d;
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
     border-width: 1px; }
 
 .ui-tabs {
@@ -9009,7 +8875,7 @@ table.cake-sql-log tr td {
     background-color: #eeeeea !important;
     background-image: linear-gradient(white 100%, white 100%) !important; }
   .ui-button:focus {
-    box-shadow: 0 0 4px 0px #6fa83d !important; }
+    box-shadow: 0 0 4px 0px #FF6F61 !important; }
 
 .ui-state-default {
   background: #FFFFFF !important;
@@ -9048,7 +8914,7 @@ table.cake-sql-log tr td {
 /* ui-dialog
 ----------------------------------------------- */
 .ui-dialog label.error, .error-message {
-  color: #f20014;
+  color: #c04949;
   font-size: 1.4rem;
   padding: 2px;
   margin-left: 5px;
@@ -9133,11 +8999,11 @@ table.cake-sql-log tr td {
     line-height: 1.6; }
 
 .ui-tabs-panel a {
-  color: #6fa83d !important;
+  color: #FF6F61 !important;
   text-decoration: none !important; }
 
 .ui-tabs-panel a:hover {
-  color: #6fa83d;
+  color: #FF6F61;
   text-decoration: underline !important; }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -9207,11 +9073,11 @@ table.cake-sql-log tr td {
     border: 1px solid #ccc;
     border-radius: 50%; }
   .cke_dialog .cke_dialog_ui_radio_input:checked + label:before {
-    background: #6fa83d;
+    background: #FF6F61;
     box-shadow: 0 0 0px 4px #fff inset; }
   .cke_dialog .cke_dialog_ui_radio_input:focus + label:before {
-    box-shadow: 0 0 0px 4px #fff inset, 0 0 4px 0px #6fa83d;
-    border-color: #6fa83d;
+    box-shadow: 0 0 0px 4px #fff inset, 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
     border-width: 1px; }
 
 .cke_dialog select.bca-select__select,
@@ -9238,8 +9104,8 @@ table.cake-sql-log tr td {
     font-size: 1.2rem; }
   .cke_dialog select.bca-select__select:focus,
   .cke_dialog select.cke_dialog_ui_input_select:focus {
-    box-shadow: 0 0 4px 0px #6fa83d;
-    border-color: #6fa83d;
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61;
     border-width: 1px; }
 
 .cke_dialog input.bca-textbox__input,
@@ -9280,8 +9146,8 @@ table.cake-sql-log tr td {
   .cke_dialog input.cke_dialog_ui_input_text:focus,
   .cke_dialog input.cke_dialog_ui_input_password:focus,
   .cke_dialog textarea.cke_dialog_ui_input_textarea:focus {
-    box-shadow: 0 0 4px 0px #6fa83d;
-    border-color: #6fa83d !important;
+    box-shadow: 0 0 4px 0px #FF6F61;
+    border-color: #FF6F61 !important;
     border-width: 1px; }
 
 .cke_dialog .cke_dialog_body label {
@@ -9315,7 +9181,7 @@ table.cake-sql-log tr td {
     background-color: #eeeeea;
     background-image: linear-gradient(white 100%, white 100%); }
   .cke_dialog .bca-btn:focus {
-    box-shadow: 0 0 4px 0px #6fa83d; }
+    box-shadow: 0 0 4px 0px #FF6F61; }
 
 .cke_dialog .cke_dialog_contents .file-list {
   padding: 0; }
@@ -9363,23 +9229,91 @@ table.cake-sql-log tr td {
 .cke_dialog tr:hover .bca-table-listup__tbody-td {
   background: inherit; }
 
-.jstree-proton .jstree-wholerow-hovered {
-  background: #ddd !important; }
-
-.jstree-proton .jstree-hovered.jstree-clicked {
-  color: #fff !important; }
-
-.jstree-proton .jstree-hovered {
-  color: #424f44 !important; }
-
-.jstree-proton .jstree-wholerow-clicked {
-  background: #6fa83d !important; }
-
-.jstree-proton .content-name {
-  position: relative; }
-
-.jstree-proton .jstree-clicked + .content-name {
-  color: #fff !important; }
+.jstree-proton {
+  border: 1px solid #DDD; }
+  .jstree-proton .jstree-container-ul .jstree-node {
+    margin: 0;
+    padding: 0; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-children {
+      margin-left: 26px; }
+    .jstree-proton .jstree-container-ul .jstree-node .content-name {
+      position: relative; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-anchor {
+      margin: 0 !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .function {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      background: url("../../img/admin/icon_function.png");
+      position: absolute;
+      cursor: pointer; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-wholerow-hovered {
+      background: #ddd !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-hovered {
+      color: #424f44 !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-wholerow-clicked {
+      background: #FF6F61 !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-clicked + .content-name {
+      color: #fff !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-hovered.jstree-clicked {
+      color: #fff !important; }
+    .jstree-proton .jstree-container-ul .jstree-node .alias {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url("../../img/admin/icon_alias_layerd.png");
+      position: absolute;
+      top: 0; }
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-unpublish-odd,
+    .jstree-proton .jstree-container-ul .jstree-node .jstree-unpublish-even {
+      background-color: #ccc; }
+  .jstree-proton .jstree-container-ul .jstree-icon {
+    font-size: 1.6rem !important; }
+    .jstree-proton .jstree-container-ul .jstree-icon.bca-icon--folder {
+      color: #edc528; }
+  .jstree-proton .jstree-container-ul .jstree-open > .jstree-anchor .bca-icon--folder::before {
+    font-size: 95%;
+    font-stretch: normal;
+    margin: 0 .3em 0 0; }
+  .jstree-proton-contextmenu {
+    background-color: #fff !important;
+    font-size: 14px; }
+    .jstree-proton-contextmenu li > a {
+      color: #424f44 !important; }
+      .jstree-proton-contextmenu li > a:hover {
+        background-color: #ddd !important;
+        box-shadow: none !important; }
+      .jstree-proton-contextmenu li > a i {
+        vertical-align: middle !important; }
+        .jstree-proton-contextmenu li > a i:before {
+          font-size: 15px !important;
+          margin: 0 !important; }
+        .jstree-proton-contextmenu li > a i.bca-icon--folder {
+          color: #edc528; }
+      .jstree-proton-contextmenu li > a .vakata-contextmenu-sep {
+        border-left: none !important;
+        background: none !important; }
+    .jstree-proton-contextmenu li.vakata-context-separator {
+      border-top: 1px solid #ccc !important;
+      border-radius: 0 !important; }
+      .jstree-proton-contextmenu li.vakata-context-separator a {
+        margin: 0; }
+        .jstree-proton-contextmenu li.vakata-context-separator a:hover {
+          margin: 0; }
+    .jstree-proton-contextmenu .icon-alias-layerd {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url("../../img/admin/icon_alias_layerd.png");
+      position: absolute;
+      margin-top: -36px; }
+    .jstree-proton-contextmenu .icon-add-layerd {
+      display: block;
+      width: 32px;
+      height: 32px;
+      background: url("../../img/admin/icon_add_layerd.png");
+      position: absolute;
+      margin-top: -36px; }
 
 .ui-dialog .uploader-file-image .url {
   border: none !important;
@@ -9389,7 +9323,7 @@ table.cake-sql-log tr td {
   margin-left: 20px; }
 
 .ui-dialog .uploader-file-image .url a {
-  color: #6fa83d !important; }
+  color: #FF6F61 !important; }
 
 .ui-dialog #UploaderFileImage {
   width: 500px; }
@@ -9410,33 +9344,6 @@ table.cake-sql-log tr td {
     font-size: 1.2rem;
     margin-right: 40px;
     margin-bottom: 5px; }
-
-.step-1 .bca-section {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto; }
-
-.step2 .check .check-result {
-  color: #ddd; }
-
-.step2 .failed .check-result {
-  color: #f20014; }
-
-.step2 .check-result {
-  margin: 20px 0;
-  font-size: 2rem; }
-
-.step-3 ul li,
-.step-4 ul li {
-  margin: 20px 0; }
-  .step-3 ul li label,
-  .step-4 ul li label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block; }
-
-.step-5 li {
-  margin: 20px 0; }
 
 .bt-content {
   line-height: 1.5em; }

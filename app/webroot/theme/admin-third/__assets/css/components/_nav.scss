@@ -40,9 +40,11 @@
         vertical-align: middle;
         padding: 12px 10px 12px 10px;
         &:before {
+          @extend %bca-icon;
+          display: inline-block;
           width: 16px;
           text-align: center;
-          margin-right: 10px!important;
+          margin: 0 10px 0 0 !important;
         }
         &:link,
         &:visited {
@@ -51,8 +53,22 @@
         }
         &:hover {
           text-decoration: none;
-          color: $color_menu_link;
-          background: $color_background_menu_hover;
+          color: $color_darkest;
+          background: $color_background_menu_dark;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    &[data-content-is-current="true"] {
+      .bca-nav__sub-title {
+        background-color: $color_secondary;
+        &-label {
+          color:$color_lightest;
+          &:hover {
+            color:$color_darkest;
+          }
         }
       }
     }
@@ -220,24 +236,6 @@
       }
     }
 
-    &[data-content-type="blog-content"] {
-      .bca-nav__sub-title > a {
-        @include bca-icon(blog);
-      }
-    }
-
-    &[data-content-type="mail-content"] {
-      .bca-nav__sub-title > a {
-        @include bca-icon(mail);
-      }
-    }
-
-    &[data-content-type="uploader"] {
-      .bca-nav__sub-title > a {
-        @include bca-icon(uploader);
-      }
-    }
-
     &[data-content-type="system"] {
       .bca-nav__sub-title > a {
         @include bca-icon(system);
@@ -320,6 +318,8 @@
             vertical-align: middle;
             padding: 12px 10px 12px 10px;
             &:before {
+              @extend %bca-icon;
+              display: inline-block;
               width: 16px;
               text-align: center;
               margin-right: 10px !important;
@@ -433,6 +433,9 @@
                 content: none;
               }
             }
+            span {
+              font-weight: bold;
+            }
           }
         }
 
@@ -475,9 +478,78 @@
             @include bca-icon(tools);
           }
         }
-        &[data-system-type="feed"] {
-          .bca-nav__system-list-item-title > a {
-            @include bca-icon(feed);
+        &[data-sub-content-is-current="true"] {
+          .bca-nav__system-list-item-title {
+            background-color: $color_secondary;
+            &-label {
+              color:$color_lightest;
+            }
+          }
+        }
+        // 中が展開されている時
+        &[data-sub-content-is-expanded="true"] {
+          .bca-nav {
+            &__system {
+              &-sub-list {
+                display: block;
+                position: relative;
+                top: auto;
+                left: auto;
+                width: auto;
+                transform: none;
+                box-shadow: none;
+                background: $color_background_menu_current;
+                padding-top: 0;
+                color: $color_text_primary;
+              }
+              &-list-item {
+                &-title {
+                  background-color: $color_background_menu_dark;
+                  &-label {
+                    //color:$color_lightest;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-sub-list {
+      display: none;
+      margin: 0;
+      list-style: none;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      min-width: 200px;
+      padding-left: 0;
+      padding-top:11px;
+      padding-bottom:11px;
+      &-item {
+        margin: 0;
+        a {
+          font-size: 1.3rem;
+          padding: 7px 20px 5px 35px;
+          color: $color_text_primary;
+          display:block;
+        }
+        a:hover {
+          font-weight: bold;
+          text-decoration: none;
+        }
+        // 現在開いているページ
+        &[data-sub-item-is-current="true"] {
+          // background: $color_primary;
+          background: $color_secondary;
+          a {
+            position: relative;
+            padding-left: 35px;
+            color: $color_lightest;
+            font-weight: bold;
+            padding-top:13px;
+            padding-bottom:11px;
           }
         }
       }

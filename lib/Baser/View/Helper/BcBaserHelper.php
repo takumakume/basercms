@@ -787,6 +787,17 @@ class BcBaserHelper extends AppHelper {
 			}
 		}
 
+		$plugins = CakePlugin::loaded();
+		if($plugins) {
+			foreach($plugins as $plugin) {
+				$cssName = 'admin' . DS . Inflector::underscore($plugin) . '_admin';
+				$path = CakePlugin::path($plugin) . 'webroot' . DS . 'css' . DS . $cssName . '.css';
+				if(file_exists($path)) {
+					$this->css($plugin . '.' . $cssName);
+				}
+			}
+		}
+
 		// ### テーマ用CSS出力
 		// 《表示条件》
 		// - インストーラーではない

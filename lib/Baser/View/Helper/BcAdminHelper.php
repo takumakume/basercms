@@ -109,6 +109,9 @@ class BcAdminHelper extends AppHelper {
 			if(!empty($adminMenuGroup['disable']) && $adminMenuGroup['disable'] === true) {
 				continue;
 			}
+			if(!isset($adminMenuGroup['icon'])) {
+				$adminMenuGroup['icon'] = 'bca-icon--file';
+			}
 			$adminMenuGroup = array_merge(['current' => false], $adminMenuGroup);
 			if(!isset($adminMenuGroup['siteId'])) {
 				$adminMenuGroup = array_merge(['siteId' => null], $adminMenuGroup);
@@ -131,6 +134,9 @@ class BcAdminHelper extends AppHelper {
 				foreach($adminMenuGroup['menus'] as $menu => $adminMenu) {
 					if(!empty($adminMenu['disable']) && $adminMenu['disable'] === true) {
 						continue;
+					}
+					if(!isset($adminMenu['icon'])) {
+						$adminMenu['icon'] = '';
 					}
 					$adminMenu['name'] = $menu;
 					$url = $this->BcBaser->getUrl($adminMenu['url']);
