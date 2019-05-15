@@ -40,9 +40,11 @@
         vertical-align: middle;
         padding: 12px 10px 12px 10px;
         &:before {
+          @extend %bca-icon;
+          display: inline-block;
           width: 16px;
           text-align: center;
-          margin-right: 10px!important;
+          margin: 0 10px 0 0 !important;
         }
         &:link,
         &:visited {
@@ -53,6 +55,9 @@
           text-decoration: none;
           color: $color_darkest;
           background: $color_background_menu_dark;
+        }
+        span {
+          font-weight: bold;
         }
       }
     }
@@ -326,6 +331,8 @@
             vertical-align: middle;
             padding: 12px 10px 12px 10px;
             &:before {
+              @extend %bca-icon;
+              display: inline-block;
               width: 16px;
               text-align: center;
               margin-right: 10px !important;

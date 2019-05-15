@@ -230,6 +230,11 @@ $bca-icon--file: $fa-var-file;
   }
 }
 %bca-icon {
+  font-family: 'Font Awesome 5 Free';
+  font-size: 95%;
+  font-style: normal;
+  font-stretch: normal;
+
   &--dashboard {
     @include bca-icon-base($bca-icon--dashboard);
   }

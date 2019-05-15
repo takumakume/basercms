@@ -69,6 +69,9 @@
     // アイコン
     .jstree-icon {
       font-size: 1.6rem !important;
+      &:before {
+        @extend %bca-icon;
+      }
 
       &.bca-icon--folder {
         color: #edc528;
@@ -101,6 +104,7 @@
           vertical-align: middle !important;
 
           &:before {
+            @extend %bca-icon;
             font-size: 15px !important;
             margin: 0 !important;
           }
@@ -137,7 +141,7 @@
       height: 32px;
       background: url("../../img/admin/icon_alias_layerd.png");
       position: absolute;
-      margin-top: -32px;
+      margin-top: -36px;
     }
     // アクション . プラグイン追加
     .icon-add-layerd {
@@ -146,7 +150,7 @@
       height: 32px;
       background: url("../../img/admin/icon_add_layerd.png");
       position: absolute;
-      margin-top: -32px;
+      margin-top: -36px;
     }
   }
 }

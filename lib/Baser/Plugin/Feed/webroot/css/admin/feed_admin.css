@@ -1,3 +1,4 @@
 .bca-icon--feed::before {
     content: "\f09e";
+    font-weight: 900;
 }
