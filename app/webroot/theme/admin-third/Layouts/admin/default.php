@@ -148,7 +148,6 @@
 						<div id="FirstMessage" class="em-box bca-em-box" style="text-align:left">
 							<?php echo __d('baser', 'baserCMSへようこそ。') ?><br>
 							<ul style="font-weight:normal;font-size:14px;">
-								<li><?php echo __d('baser', '画面右上の「システムナビ」より管理システムの全ての機能にアクセスする事ができます。') ?></li>
 								<li><?php echo __d('baser', 'お気に入り機能については、画面右側にある「お気に入りに追加」をクリックして、お気に入りとして登録する事ができます。') ?></li>
 								<li><?php echo __d('baser', 'まずは、画面上部のメニュー、「コンテンツ管理」よりWebサイトの全体像を確認しましょう。') ?></li>
 							</ul>

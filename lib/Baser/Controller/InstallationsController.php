@@ -211,7 +211,7 @@ class InstallationsController extends AppController {
 		}
 
 		$this->set('dbDataPatterns', $this->BcManager->getAllDefaultDataPatterns());
-		$this->set('adminThemes', array_merge(['' => '標準テーマ'], $this->BcManager->getAvailableAdminThemes()));
+		$this->set('adminThemes', array_merge(['' => '標準テーマ'], BcUtil::getAdminThemeList()));
 		$this->pageTitle = __d('baser', 'baserCMSのインストール｜ステップ３');
 		$this->set('dbsource', $dbsource);
 	}

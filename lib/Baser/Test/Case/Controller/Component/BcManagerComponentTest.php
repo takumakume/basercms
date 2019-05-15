@@ -977,19 +977,4 @@ class BcManagerComponentTest extends BaserTestCase {
 		$this->markTestIncomplete('このテストは、まだ実装されていません。');
 	}
 
-	/**
-	 * 利用可能な管理画面用のテーマ一覧を取得する
-	 */
-	public function testGetAvailableAdminThemes() {
-		$adminThemes = $this->BcManager->getAvailableAdminThemes();
-		$this->assertEquals(['ownd_river' => 'ownd_river'], $adminThemes);
-		$theme = Configure::read('BcApp.defaultTheme');
-		$Folder = new Folder();
-		$adminLayoutPath = BASER_THEMES . $theme . DS . 'Layouts' . DS . 'admin';
-		$Folder->create($adminLayoutPath);
-		$adminThemes = $this->BcManager->getAvailableAdminThemes();
-		$this->assertEquals(['ownd_river' => 'ownd_river', $theme => $theme], $adminThemes);
-		$Folder->delete($adminLayoutPath);
-	}
-
 }

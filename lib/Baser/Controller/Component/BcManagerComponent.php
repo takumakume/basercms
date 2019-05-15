@@ -1747,16 +1747,5 @@ class BcManagerComponent extends Component {
 		}
 		return $result;
 	}
-
-	public function getAvailableAdminThemes() {
-		$themes = BcUtil::getAdminThemeList();
-		$adminThemes = [];
-		if($themes) {
-			foreach($themes as $theme) {
-				$adminThemes[$theme] = $theme;
-			}
-		}
-		return $adminThemes;
-	}
 	
 }
