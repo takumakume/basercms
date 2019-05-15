@@ -92,6 +92,8 @@ $bca-icon--download: $fa-var-download;
 $bca-icon--draggable: $fa-var-arrows-alt-v;
 // フォルダ
 $bca-icon--folder: $fa-var-folder;
+// フォルダ（オープン）
+$bca-icon--folder-open: $fa-var-folder-open;
 // ファイル
 $bca-icon--file: $fa-var-file;
 // 1階層上に戻る
@@ -298,19 +300,13 @@ $bca-icon--file: $fa-var-file;
     }
   }
   &--rename {
-    @include bca-icon-base($bca-icon--rename) {
-      @extend %far;
-    }
+    @include bca-icon-base($bca-icon--rename);
   }
   &--link {
-    @include bca-icon-base($bca-icon--link) {
-      @extend %far;
-    }
+    @include bca-icon-base($bca-icon--link);
   }
   &--alias {
-    @include bca-icon-base($bca-icon--alias) {
-      @extend %far;
-    }
+    @include bca-icon-base($bca-icon--alias);
   }
   &--th-list {
     @include bca-icon-base($bca-icon--th-list);
@@ -359,9 +355,12 @@ $bca-icon--file: $fa-var-file;
   &--folder {
     @include bca-icon-base($bca-icon--folder);
   }
+  &--folder-open {
+    @include bca-icon-base($bca-icon--folder-open);
+  }
   &--file {
     @include bca-icon-base($bca-icon--file) {
-      font-weight: 400;
+      @extend %far;
     }
   }
   &--up-directory {
@@ -399,12 +398,12 @@ $bca-icon--file: $fa-var-file;
   }
   &--datetimepicker-date {
     @include bca-icon-base($bca-icon--datetimepicker-date) {
-      font-weight: 400;
+      @extend %far;
     }
   }
   &--datetimepicker-time {
     @include bca-icon-base($bca-icon--datetimepicker-time) {
-      font-weight: 400;
+      @extend %far;
     }
   }
   &--list-default {

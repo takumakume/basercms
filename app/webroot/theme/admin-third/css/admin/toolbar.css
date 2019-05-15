@@ -4479,8 +4479,7 @@ readers do not read off random characters that represent icons */
   content: "\f07b"; }
 
 .bca-icon--file::before {
-  content: "\f15b";
-  font-weight: 400; }
+  content: "\f15b"; }
 
 .bca-icon--up-directory::before {
   content: "\f062"; }
@@ -4516,12 +4515,10 @@ readers do not read off random characters that represent icons */
   content: "\f021"; }
 
 .bca-icon--datetimepicker-date::before {
-  content: "\f133";
-  font-weight: 400; }
+  content: "\f133"; }
 
 .bca-icon--datetimepicker-time::before {
-  content: "\f017";
-  font-weight: 400; }
+  content: "\f017"; }
 
 .bca-icon--list-default::before {
   content: "\f105"; }
@@ -4577,7 +4574,7 @@ readers do not read off random characters that represent icons */
 .bca-icon--globe::before {
   content: "\f57d"; }
 
-.bca-icon--users::before, .bca-icon--sites::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--rename::before, .bca-icon--link::before, .bca-icon--alias::before, .bca-icon--apply::before {
+.bca-icon--users::before, .bca-icon--sites::before, .bca-icon--publish::before, .bca-icon--unpublish::before, .bca-icon--preview::before, .bca-icon--copy::before, .bca-icon--delete::before, .bca-icon--apply::before, .bca-icon--file::before, .bca-icon--datetimepicker-date::before, .bca-icon--datetimepicker-time::before {
   font-weight: 400; }
 
 .bca-icon--facebook::before, .bca-icon--twitter::before {
@@ -5172,75 +5169,8 @@ readers do not read off random characters that represent icons */
 /* ==================================================================== */
 /*    Contents
 /* ==================================================================== */
-#ContentsTreeList li {
-  margin: 0;
-  padding: 0; }
-
 .ui-widget-content {
   border: 1px solid #DDD; }
-
-#ContentsTreeList li ul {
-  margin-left: 26px; }
-
-.jstree-proton .jstree-anchor {
-  margin: 0 !important; }
-
-.vakata-context,
-.vakata-context ul {
-  background-color: #FFF;
-  font-size: 14px; }
-
-.vakata-context li {
-  /*padding:0px 10px;*/ }
-
-.vakata-context li > a {
-  color: #424f44 !important; }
-
-.jstree-container-ul .jstree-icon {
-  font-size: 1.6rem !important; }
-
-.jstree-container-ul .bca-icon--folder {
-  color: #edc528; }
-
-.vakata-context li > a:hover {
-  background-color: #ddd !important;
-  box-shadow: none !important; }
-
-.vakata-context li i:before,
-.bca-nav__system-list-item-title-label:before,
-.bca-nav__sub-title-label::before,
-.jstree-themeicon-custom::before {
-  font-size: 95%;
-  font-stretch: normal;
-  margin: 0 .3em 0 0;
-  font-family: 'Font Awesome 5 Free';
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  font-weight: 400; }
-
-.vakata-context li > a .vakata-contextmenu-sep {
-  border-left: none !important;
-  background: none; }
-
-.vakata-context .vakata-context-separator > a,
-.vakata-context .vakata-context-separator > a:hover {
-  margin: 0; }
-
-#ContentsTreeList {
-  border: 1px solid #DDD; }
-
-#ContentsTreeList li .alias {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_alias_layerd.png");
-  position: absolute;
-  top: 0; }
 
 #DataList td .alias {
   display: block;
@@ -5249,37 +5179,6 @@ readers do not read off random characters that represent icons */
   background: url("../../img/admin/icon_alias_layerd.png");
   position: relative;
   top: -32px; }
-
-ul.jstree-contextmenu li .icon-alias-layerd {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_alias_layerd.png");
-  position: absolute;
-  margin-top: -32px; }
-
-ul.jstree-contextmenu li .icon-add-layerd {
-  display: block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_add_layerd.png");
-  position: absolute;
-  margin-top: -32px; }
-
-#ContentsTreeList li .function {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background: url("../../img/admin/icon_function.png");
-  position: absolute;
-  cursor: pointer; }
-
-div.jstree-unpublish-odd,
-div.jstree-unpublish-even {
-  background-color: #fff; }
-
-div.jstree-publish-even {
-  /*background-color: #F2F2F2;*/ }
 
 #RelatedContentsSetting .icon-add-layerd {
   display: inline-block;
