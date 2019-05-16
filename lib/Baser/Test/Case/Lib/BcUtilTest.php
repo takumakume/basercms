@@ -342,7 +342,7 @@ class BcUtilTest extends BaserTestCase {
 	public function testGetAdminThemeList() {
 		$themes = BcUtil::getAdminThemeList();
 		$this->assertFalse(in_array('nada-icons', $themes));
-		$this->assertTrue(in_array('admin-third', $themes));
+		$this->assertTrue(array_key_exists('admin-third', $themes));
 	}
 
 /**
