@@ -401,7 +401,7 @@ template {
 #BcMessageBox .alert-message::before, .bca-icon--notification::before, #MessageBox .message::before,
 #MessageBox .notice-message::before,
 #BcMessageBox .notice-message::before,
-#UpdateMessage::before, .bca-icon--facebook::before, .bca-footer__sns__link--facebook::before, .bca-icon--twitter::before, .bca-footer__sns__link--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before,
+#UpdateMessage::before, .bca-icon--facebook::before, .bca-footer__sns__link--facebook::before, .bca-icon--twitter::before, .bca-footer__sns__link--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .jstree-proton .jstree-container-ul .jstree-node .function::before,
 .fas,
 .far,
 .fal,
@@ -490,7 +490,7 @@ template {
 #BcMessageBox .fa-pull-left.alert-message::before, .fa-pull-left.bca-icon--notification::before, #MessageBox .fa-pull-left.message::before,
 #MessageBox .fa-pull-left.notice-message::before,
 #BcMessageBox .fa-pull-left.notice-message::before,
-.fa-pull-left#UpdateMessage::before, .fa-pull-left.bca-icon--facebook::before, .fa-pull-left.bca-footer__sns__link--facebook::before, .fa-pull-left.bca-icon--twitter::before, .fa-pull-left.bca-footer__sns__link--twitter::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before,
+.fa-pull-left#UpdateMessage::before, .fa-pull-left.bca-icon--facebook::before, .fa-pull-left.bca-footer__sns__link--facebook::before, .fa-pull-left.bca-icon--twitter::before, .fa-pull-left.bca-footer__sns__link--twitter::before, .fa-pull-left.bca-icon--next::before, .fa-pull-left.bca-icon--back::before, .fa-pull-left.bca-icon--asc::before, .fa-pull-left.bca-icon--desc::before, .fa-pull-left.bca-icon--chevron-down::before, .fa-pull-left.bca-icon--list::before, .fa-pull-left.bca-icon--plus-square::before, .fa-pull-left.bca-icon--question-circle::before, .fa-pull-left.bca-icon--minus-square::before, .fa-pull-left.bca-icon--bookmark::before, .fa-pull-left.bca-icon--globe::before, .jstree-proton .jstree-container-ul .jstree-node .fa-pull-left.function::before,
 .fas.fa-pull-left,
 .far.fa-pull-left,
 .fal.fa-pull-left,
@@ -503,7 +503,7 @@ template {
 #BcMessageBox .fa-pull-right.alert-message::before, .fa-pull-right.bca-icon--notification::before, #MessageBox .fa-pull-right.message::before,
 #MessageBox .fa-pull-right.notice-message::before,
 #BcMessageBox .fa-pull-right.notice-message::before,
-.fa-pull-right#UpdateMessage::before, .fa-pull-right.bca-icon--facebook::before, .fa-pull-right.bca-footer__sns__link--facebook::before, .fa-pull-right.bca-icon--twitter::before, .fa-pull-right.bca-footer__sns__link--twitter::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before,
+.fa-pull-right#UpdateMessage::before, .fa-pull-right.bca-icon--facebook::before, .fa-pull-right.bca-footer__sns__link--facebook::before, .fa-pull-right.bca-icon--twitter::before, .fa-pull-right.bca-footer__sns__link--twitter::before, .fa-pull-right.bca-icon--next::before, .fa-pull-right.bca-icon--back::before, .fa-pull-right.bca-icon--asc::before, .fa-pull-right.bca-icon--desc::before, .fa-pull-right.bca-icon--chevron-down::before, .fa-pull-right.bca-icon--list::before, .fa-pull-right.bca-icon--plus-square::before, .fa-pull-right.bca-icon--question-circle::before, .fa-pull-right.bca-icon--minus-square::before, .fa-pull-right.bca-icon--bookmark::before, .fa-pull-right.bca-icon--globe::before, .jstree-proton .jstree-container-ul .jstree-node .fa-pull-right.function::before,
 .fas.fa-pull-right,
 .far.fa-pull-right,
 .fal.fa-pull-right,
@@ -4724,7 +4724,7 @@ readers do not read off random characters that represent icons */
 #BcMessageBox .alert-message::before, .bca-icon--notification::before, #MessageBox .message::before,
 #MessageBox .notice-message::before,
 #BcMessageBox .notice-message::before,
-#UpdateMessage::before, .bca-icon--facebook::before, .bca-footer__sns__link--facebook::before, .bca-icon--twitter::before, .bca-footer__sns__link--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before,
+#UpdateMessage::before, .bca-icon--facebook::before, .bca-footer__sns__link--facebook::before, .bca-icon--twitter::before, .bca-footer__sns__link--twitter::before, .bca-icon--next::before, .bca-icon--back::before, .bca-icon--asc::before, .bca-icon--desc::before, .bca-icon--chevron-down::before, .bca-icon--list::before, .bca-icon--plus-square::before, .bca-icon--question-circle::before, .bca-icon--minus-square::before, .bca-icon--bookmark::before, .bca-icon--globe::before, .jstree-proton .jstree-container-ul .jstree-node .function::before,
 .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; }
@@ -4940,6 +4940,8 @@ readers do not read off random characters that represent icons */
     content: "\f02e"; }
   .bca-icon--globe::before {
     content: "\f57d"; }
+  .jstree-proton .jstree-container-ul .jstree-node .function::before {
+    content: "\f141"; }
 
 .bca-icon--users::before, .bca-nav__system-list-item[data-system-type="users"] .bca-nav__system-list-item-title > a::before, .bca-icon--sites::before, .bca-nav__system-list-item[data-system-type="sites"] .bca-nav__system-list-item-title > a::before, .bca-icon--publish::before, .bca-btn-icon[data-bca-btn-type=publish]::before, .bca-btn-icon-text[data-bca-btn-type=publish]::before, .bca-btn[data-bca-btn-type=publish]::before, .bca-icon--unpublish::before, .bca-btn-icon[data-bca-btn-type=unpublish]::before, .bca-btn-icon-text[data-bca-btn-type=unpublish]::before, .bca-btn[data-bca-btn-type=unpublish]::before, .bca-icon--preview::before, .bca-btn-icon[data-bca-btn-type=preview]::before, .bca-btn-icon-text[data-bca-btn-type=preview]::before, .bca-icon--copy::before, .bca-btn-icon[data-bca-btn-type=copy]::before, .bca-btn-icon-text[data-bca-btn-type=copy]::before, .bca-btn[data-bca-btn-type=copy]::before, .bca-icon--delete::before, .bca-btn-icon[data-bca-btn-type=delete]::before, .bca-btn-icon-text[data-bca-btn-type=delete]::before, .bca-btn[data-bca-btn-type=delete]::before, .bca-icon--apply::before, .bca-btn-icon[data-bca-btn-type=apply]::before, .bca-icon--file::before, .bca-btn-icon[data-bca-btn-type=file]::before, .bca-icon--datetimepicker-date::before, .bca-datetimepicker__date-label::before, .bca-icon--datetimepicker-time::before, .bca-datetimepicker__time-label::before {
   font-weight: 400; }
@@ -9296,9 +9298,14 @@ table.cake-sql-log tr td {
       display: inline-block;
       width: 32px;
       height: 32px;
-      background: url("../../img/admin/icon_function.png");
       position: absolute;
-      cursor: pointer; }
+      cursor: pointer;
+      font-size: 18px;
+      text-align: right; }
+      .jstree-proton .jstree-container-ul .jstree-node .function::before {
+        font-size: 95%;
+        font-stretch: normal;
+        margin: 0 .3em 0 0; }
     .jstree-proton .jstree-container-ul .jstree-node .jstree-wholerow-hovered {
       background: #ddd !important; }
     .jstree-proton .jstree-container-ul .jstree-node .jstree-hovered {

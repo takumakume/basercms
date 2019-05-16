@@ -23,11 +23,13 @@
         display: inline-block;
         width: 32px;
         height: 32px;
-        background: url("../../img/admin/icon_function.png");
+        //background: url("../../img/admin/icon_function.png");
         position: absolute;
         cursor: pointer;
+        font-size:18px;
+        text-align: right;
+        @include bca-icon(ellipsis-h);
       }
-
       // ホバー時
       .jstree-wholerow-hovered {
         background: $color_background_menu_dark !important;

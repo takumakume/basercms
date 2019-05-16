@@ -126,6 +126,8 @@ $bca-icon--ban: $fa-var-ban;
 $bca-icon--link: $fa-var-link;
 // エイリアス
 $bca-icon--alias: $fa-var-external-link-square-alt;
+// 機能ボタン
+$bca-icon--ellipsis-h: $fa-var-ellipsis-h;
 
 /**
  *
@@ -470,6 +472,9 @@ $bca-icon--file: $fa-var-file;
   }
   &--globe {
     @include bca-icon-base($bca-icon--globe);
+  }
+  &--ellipsis-h {
+    @include bca-icon-base($bca-icon--ellipsis-h);
   }
 }
 %far {
