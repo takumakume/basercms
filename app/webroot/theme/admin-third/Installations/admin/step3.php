@@ -206,7 +206,7 @@ $(document).ready( function() {
 
 			<ul>
 				<li><label><?php echo __d('baser', 'フロントテーマと初期データ')?></label>
-					<?php echo __d('baser', '利用するフロント側のデザインテーマと、コアパッケージやデザインテーマが保有するデモンストレーション用データを選択します。')?><br>
+                    <p class="bca-main__text"><?php echo __d('baser', '利用するフロント側のデザインテーマと、コアパッケージやデザインテーマが保有するデモンストレーション用データを選択します。')?></p>
 					<?php echo $this->BcForm->input('Installation.dbDataPattern', ['type' => 'select', 'options' => $dbDataPatterns]) ?><br>
 					<small>
 <?php if (isset($dbDataPatterns[$this->request->data['Installation']['dbDataPattern']])): ?>
@@ -214,7 +214,7 @@ $(document).ready( function() {
 <?php endif; ?>
 				</li>
 				<li><label><?php echo __d('baser', '管理システムテーマ')?></label>
-					<?php echo __d('baser', '管理システム用のデザインテーマを選択します。')?><br>
+                    <p class="bca-main__text"><?php echo __d('baser', '管理システム用のデザインテーマを選択します。')?></p>
 					<?php echo $this->BcForm->input('Installation.adminTheme', ['type' => 'select', 'options' => $adminThemes]) ?>
 				</li>
 			</ul>

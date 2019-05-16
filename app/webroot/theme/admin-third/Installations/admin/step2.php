@@ -239,7 +239,7 @@ $(function(){
 
 		<div class="panel-box bca-panel-box corner10">
 			<h3 class="bca-panel-box__title"><?php echo __d('baser', 'ファイルデータベース')?></h3>
-			<div class="section"> <?php echo __d('baser', 'データベースサーバーが利用できない場合には、ファイルベースデータベースの SQLite を利用できます。<br>有効にするには、下記のフォルダへの書き込み権限が必要です ')?></div>
+			<div class="section"><p class="bca-main__text"><?php echo __d('baser', 'データベースサーバーが利用できない場合には、ファイルベースデータベースの SQLite を利用できます。<br>有効にするには、下記のフォルダへの書き込み権限が必要です ')?></p></div>
 			<ul class="section">
 				<li class='<?php if ($dbDirWritable) echo 'check'; else echo 'failed'; ?>'>
 					<?php echo __d('baser', '/app/db/ の書き込み権限（707 OR 777 等、サーバー推奨がある場合はそちらに従ってください）')?><br />
@@ -257,7 +257,7 @@ $(function(){
 
 		<div class="panel-box bca-panel-box corner10">
 			<h3 class="bca-panel-box__title"><?php echo __d('baser', '管理システムの参照ファイル配置')?></h3>
-			<div class="section"><?php echo __d('baser', 'baserCMSでは、インストール時に、管理システムより参照する、画像ファイル、CSSファイル、Javascriptファイルを、下記のパスに自動配置します。<br>既に存在する場合には上書きされてしまいますのでご注意ください。')?></div>
+            <div class="section"><p class="bca-main__text"><?php echo __d('baser', 'baserCMSでは、インストール時に、管理システムより参照する、画像ファイル、CSSファイル、Javascriptファイルを、下記のパスに自動配置します。<br>既に存在する場合には上書きされてしまいますのでご注意ください。')?></p></div>
 			<ul class="section">
 				<li class='<?php if (!$imgAdminDirExists) echo 'check'; else echo'failed'; ?>'>
 <?php if (ROOT . DS != WWW_ROOT): ?>
@@ -321,8 +321,8 @@ $(function(){
 
 		<div class="panel-box bca-panel-box corner10">
 			<h3 class="bca-panel-box__title"><?php echo __d('baser', 'PHPのメモリ')?></h3>
-			<div class="section"><?php echo sprintf(__d('baser', 'PHPのメモリが %s より低い場合、baserCMSの全ての機能が正常に動作しない可能性があります。'), Configure::read('BcRequire.phpMemory') . " MB")?><br />
-				<small><?php echo __d('baser', 'サーバー環境によってはPHPのメモリ上限が取得できず「0MB」となっている場合もあります。その場合、サーバー業者等へサーバースペックを直接確認してください。')?></small> </div>
+			<div class="section"><p class="bca-main__text"><?php echo sprintf(__d('baser', 'PHPのメモリが %s より低い場合、baserCMSの全ての機能が正常に動作しない可能性があります。'), Configure::read('BcRequire.phpMemory') . " MB")?><br>
+                    <small><?php echo __d('baser', 'サーバー環境によってはPHPのメモリ上限が取得できず「0MB」となっている場合もあります。その場合、サーバー業者等へサーバースペックを直接確認してください。')?></small></p></div>
 			<ul class="section">
 				<li class='<?php if ($phpMemoryOk) echo 'check'; else echo 'failed'; ?>'>
 					<?php echo sprintf(__d('baser', 'PHPのメモリ上限 >= %s'), Configure::read('BcRequire.phpMemory') . " MB")?>
@@ -338,8 +338,8 @@ $(function(){
 
 		<div class="panel-box bca-panel-box corner10">
 			<h3 class="bca-panel-box__title"><?php echo __d('baser', 'PHPセーフモード')?></h3>
-			<div class="section"><?php echo __d('baser', 'セーフモードがOnの場合、PHPを「CGIモード」に切り替えないとbaserCMSの全ての機能を利用する事はできません。')?><br />
-				<small><?php echo __d('baser', 'ページカテゴリ機能や、テーマ切り替え機能など、プログラム側でフォルダを自動生成する機能は、事前にFTPでの作業を併用する必要があります。')?></small><br />
+			<div class="section"><p class="bca-main__text"><?php echo __d('baser', 'セーフモードがOnの場合、PHPを「CGIモード」に切り替えないとbaserCMSの全ての機能を利用する事はできません。')?><br>
+                    <small><?php echo __d('baser', 'ページカテゴリ機能や、テーマ切り替え機能など、プログラム側でフォルダを自動生成する機能は、事前にFTPでの作業を併用する必要があります。')?></small></p>
 			</div>
 			<ul class="section">
 				<li class='<?php if ($safeModeOff) echo 'check'; else echo 'failed'; ?>'>

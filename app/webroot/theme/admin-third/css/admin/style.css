@@ -5737,6 +5737,14 @@ body * {
   .bca-main__text {
     margin: 0 0 1em;
     line-height: 1.5; }
+  .bca-main pre {
+    background-color: #efefef;
+    padding: 5px 10px; }
+  .bca-main code {
+    background-color: #efefef;
+    padding: 2px 5px; }
+  .bca-main__number-list li {
+    margin: 20px 0; }
 
 .bca-icon--dashboard::before {
   font-size: 95%;
@@ -9399,9 +9407,7 @@ table.cake-sql-log tr td {
     margin-bottom: 5px; }
 
 .step-1 .bca-section {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto; }
+  text-align: center; }
 
 .step2 .check .check-result {
   color: #ddd; }
@@ -9412,6 +9418,10 @@ table.cake-sql-log tr td {
 .step2 .check-result {
   margin: 20px 0;
   font-size: 2rem; }
+
+.step-3 div.float-left,
+.step-4 div.float-left {
+  width: auto; }
 
 .step-3 ul li,
 .step-4 ul li {

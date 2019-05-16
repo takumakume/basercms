@@ -34,21 +34,22 @@ $(function(){
 
 <?php if (!$complete): ?>
 
-	<p><?php echo __d('baser', 'baserCMSを初期化します。データベースのデータも全て削除されます。')?></p>
+	<p class="bca-main__text"><?php echo __d('baser', 'baserCMSを初期化します。データベースのデータも全て削除されます。')?></p>
 	<?php if (BC_INSTALLED): ?>
-		<p><?php echo __d('baser', 'データベースのバックアップをとられていない場合は必ずバックアップを保存してから実行してください。')?></p>
+		<p class="bca-main__text"><?php echo __d('baser', 'データベースのバックアップをとられていない場合は必ずバックアップを保存してから実行してください。')?></p>
 		<ul><li><?php $this->BcBaser->link(__d('baser', 'バックアップはこちらから'), ['admin' => true, 'controller' => 'tools', 'action' => 'maintenance', 'backup', '?' => ['backup_encoding' => 'UTF-8']]) ?></li></ul>
 	<?php endif ?>
+    <div class="submit bca-actions">
 	<?php echo $this->BcForm->create('Installation', ['url' => ['action' => 'reset']]) ?>
 	<?php echo $this->BcForm->input('Installation.reset', ['type' => 'hidden', 'value' => true]) ?>
-	<?php echo $this->BcForm->end(['label' => __d('baser', '初期化する'), 'class' => 'button']) ?>
-
+	<?php echo $this->BcForm->end(['label' => __d('baser', '初期化する'), 'class' => 'button', 'class' => 'button bca-btn bca-actions__item']) ?>
+    </div>
 <?php else: ?>
 
 	<div class="section">
-		<p><?php echo __d('baser', '引き続きbaserCMSのインストールを行うには、「インストールページへ」ボタンをクリックしてください。')?></p>
+		<p class="bca-main__text"><?php echo __d('baser', '引き続きbaserCMSのインストールを行うには、「インストールページへ」ボタンをクリックしてください。')?></p>
 	</div>
-	<div class="submit">
-		<?php $this->BcBaser->link(__d('baser', 'インストールページへ'), '/', ['class' => 'button btn-red']) ?>
+	<div class="submit bca-actions">
+		<?php $this->BcBaser->link(__d('baser', 'インストールページへ'), '/', ['class' => 'button btn-red bca-btn bca-actions__item']) ?>
 	</div>
 <?php endif ?>

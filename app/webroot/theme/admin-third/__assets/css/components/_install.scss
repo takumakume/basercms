@@ -1,8 +1,6 @@
 .step-1 {
   .bca-section {
-    width:60%;
-    margin-left:auto;
-    margin-right: auto;
+    text-align: center;
   }
 }
 .step2 {
@@ -23,6 +21,9 @@
 }
 .step-3,
 .step-4 {
+  div.float-left {
+    width:auto;
+  }
   ul {
     li {
       margin:20px 0;
