@@ -188,7 +188,7 @@
         padding: 0;
         &-item {
           a {
-            padding: 13px 20px 11px 35px;
+            padding: 6px 20px 5px 35px;
             white-space: inherit;
           }
           // 現在開いているページ
@@ -196,6 +196,7 @@
             // background: $color_primary;
             background: $color_background_menu_current;
             a {
+              padding: 13px 20px 11px 35px;
               position: relative;
               color: $color_menu_current;
               font-weight: bold;
@@ -411,7 +412,7 @@
 
             &-item {
               a {
-                padding: 13px 20px 11px 35px;
+                padding: 6px 20px 5px 35px;
                 white-space: inherit;
               }
               // 現在開いているページ
@@ -419,8 +420,8 @@
                 // background: $color_primary;
                 background: $color_background_menu_current;
                 a {
+                  padding: 13px 20px 11px 35px;
                   position: relative;
-                  padding-left: 35px;
                   color: $color_menu_current;
                   font-weight: bold;
                 }
@@ -433,9 +434,6 @@
               &::before {
                 content: none;
               }
-            }
-            span {
-              font-weight: bold;
             }
           }
         }
@@ -499,7 +497,7 @@
                 width: auto;
                 transform: none;
                 box-shadow: none;
-                background: $color_background_menu_current;
+                //background: $color_background_menu_current;
                 padding-top: 0;
                 color: $color_text_primary;
               }
