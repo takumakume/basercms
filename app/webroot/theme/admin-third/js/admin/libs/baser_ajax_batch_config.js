@@ -27,16 +27,14 @@ $.extend($.baserAjaxBatch.config, {
 			confirm: bcI18n.batchListConfirmDeleteMessage, 
 			result: function() {
 				var config = $.baserAjaxBatch.config;
-				var colspan = $(config.targetCheckbox+":checked:first").parent().parent().find('td').length;
+				var colspan = $(config.targetCheckbox+":checked:first").parent().parent().parent().find('td').length;
 				var delNum = $(config.targetCheckbox+":checked").length;
 				$(config.pageTotalNum).html(Number($(config.pageTotalNum).html()) - delNum);
 				$(config.pageEndNum).html(Number($(config.pageEndNum).html()) - delNum);
-				$(config.targetCheckbox+":checked").parent().parent().fadeOut(300, function(){
+				$(config.targetCheckbox+":checked").parent().parent().parent().fadeOut(300, function(){
 					$(this).remove();
 					if($(config.listTable+" tbody td").length) {
 						$.baserAjaxDataList.initList();
-						// $(config.listTable+" tbody tr").removeClass('even odd');
-						// $.yuga.stripe();
 					} else {
 						$.baserAjaxDataList.load(document.location.href);
 						$(config.listTable+" tbody").append('<td colspan="'+colspan+'"><p class="no-data">データがありません。</p></td>');
@@ -51,7 +49,7 @@ $.extend($.baserAjaxBatch.config, {
 			confirm: bcI18n.batchListConfirmPublishMessage,
 			result: function() {
 				var config = $.baserAjaxBatch.config;
-				var row = $(config.targetCheckbox+":checked").parent().parent();
+				var row = $(config.targetCheckbox+":checked").parent().parent().parent();
 				row.removeClass('publish');
 				row.removeClass('unpublish');
 				row.removeClass('disablerow');
@@ -68,7 +66,7 @@ $.extend($.baserAjaxBatch.config, {
 			confirm: bcI18n.batchListConfirmUnpublishMessage,
 			result: function() {
 				var config = $.baserAjaxBatch.config;
-				var row = $(config.targetCheckbox+":checked").parent().parent();
+				var row = $(config.targetCheckbox+":checked").parent().parent().parent();
 				row.removeClass('publish');
 				row.removeClass('unpublish');
 				row.addClass('disablerow');
