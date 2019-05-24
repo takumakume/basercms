@@ -481,7 +481,7 @@ class ThemeFilesController extends AppController {
 		if ($plugin) {
 			$pageTitle .= '：' . $plugin;
 		}
-		$this->pageTitle = sprinf(__d('baser', '%s｜%s表示'), $pageTitle, $this->_tempalteTypes[$type]);
+		$this->pageTitle = sprintf(__d('baser', '%s｜%s表示'), $pageTitle, $this->_tempalteTypes[$type]);
 		$this->crumbs[] = ['name' => $this->_tempalteTypes[$type], 'url' => ['controller' => 'theme_files', 'action' => 'index', $theme, $type]];
 		$this->subMenuElements = ['theme_files'];
 		$this->set('currentPath', str_replace(ROOT, '', dirname($fullpath)) . '/');
