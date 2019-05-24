@@ -610,7 +610,7 @@ class ThemeFilesController extends AppController {
 		}
 
 		$this->crumbs[] = ['name' => $this->_tempalteTypes[$type], 'url' => ['controller' => 'theme_files', 'action' => 'index', $theme, $type]];
-		$this->pageTitle = sprinf(__d('baser', '%s｜フォルダ作成'), $theme);
+		$this->pageTitle = sprintf(__d('baser', '%s｜フォルダ作成'), $theme);
 		$this->subMenuElements = ['theme_files'];
 		$this->set('currentPath', str_replace(ROOT, '', $fullpath));
 		$this->set('isWritable', is_writable($fullpath));
