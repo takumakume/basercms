@@ -67,7 +67,7 @@ class ToolsController extends AppController {
 	public function __construct($request = null, $response = null) {
 		parent::__construct($request, $response);
 		$this->crumbs = [
-			['name' => __d('baser', 'システム設定'), 'url' => ['controller' => 'site_configs', 'action' => 'index']],
+			['name' => __d('baser', 'システム設定'), 'url' => ['controller' => 'site_configs', 'action' => 'form']],
 			['name' => __d('baser', 'ユーティリティ'), 'url' => ['controller' => 'tools', 'action' => 'index']]
 		];
 	}
