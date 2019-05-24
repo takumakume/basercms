@@ -725,17 +725,16 @@
 /* context-menu
 ----------------------------------------------- */
 
-.context-menu-icon-edit:before,
-.context-menu-icon-delete:before {
-  content: "" !important;
-}
-
 .context-menu-icon-edit {
-  background: url(../../img/admin/icn_tool_edit.png) no-repeat left top;
+  @include bca-icon(edit);
 }
 
 .context-menu-icon-delete {
-  background: url(../../img/admin/icn_tool_delete.png) no-repeat left top;
+  @include bca-icon(delete);
+}
+
+.context-menu-icon::before {
+  color: $color_text_primary !important;
 }
 
 .context-menu-item {
@@ -752,13 +751,11 @@
 .context-menu-item span {
   display: block;
   padding-left: 0.5em;
-  border-left: 1px solid #FFF;
 }
 
 .context-menu-hover {
-  background-color: #efeff7 !important;
-  box-shadow: 0 0 2px #0a6aa1;
-  color: #000 !important;
+  background-color: $color_background_menu_hover !important;
+  color: $color_text_primary !important;
 }
 
 .context-menu-list {
