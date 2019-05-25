@@ -1750,3 +1750,7 @@ div.jstree-publish-even{
     color: #535A62;
     font-size:13px;
 }
+.required figcaption {
+    color: #535A62;
+    font-size:13px;
+}
