@@ -6376,8 +6376,6 @@ body {
       background-color: #424f44; }
       .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title-label {
         color: #fff; }
-        .bca-nav__sub[data-content-is-current="true"] .bca-nav__sub-title-label:hover {
-          color: #424f44; }
     .bca-nav__sub-list {
       display: none;
       position: absolute;

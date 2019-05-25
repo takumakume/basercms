@@ -393,7 +393,7 @@ class BcUtil extends CakeObject {
 				unset($themes[$key]);
 			}
 			if($theme === array_keys(Configure::read('BcApp.adminNewThemeName'))[0]) {
-				$themes[$key] = Configure::read('BcApp.adminNewThemeName')[0];
+				$themes[$key] = Configure::read('BcApp.adminNewThemeName')[array_keys(Configure::read('BcApp.adminNewThemeName'))[0]];
 			}
 		}
 		return $themes;
