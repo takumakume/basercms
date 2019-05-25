@@ -221,7 +221,7 @@ $(document).ready( function() {
 				<li>
 					<?php echo $this->BcForm->label('Installation.adminTheme', __d('baser', '管理システムテーマ')) ?><br>
 					<?php echo $this->BcForm->input('Installation.adminTheme', ['type' => 'select', 'options' => $adminThemes]) ?><br>
-					<small>※ <?php echo __d('baser', '管理システムのデザインテーマを選択します。これまでのbaserCMSに慣れている場合は、 old-admin-theme を選択してください。')?></small>
+					<small>※ <?php echo __d('baser', '管理システムのデザインテーマを選択します。これまでのbaserCMSに慣れている場合は、 標準テーマ を選択してください。')?></small>
 				</li>
 			</ul>
 		</div>
