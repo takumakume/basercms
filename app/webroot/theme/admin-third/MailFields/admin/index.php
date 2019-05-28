@@ -22,7 +22,7 @@ $this->BcBaser->js([
 ]);
 $this->BcAdmin->addAdminMainBodyHeaderLinks([
 	'url' => ['action' => 'add', $this->request->params['pass'][0]],
-	'title' => __d('baser', '新規記事追加'),
+	'title' => __d('baser', '新規フィールド追加'),
 ]);
 ?>
 
