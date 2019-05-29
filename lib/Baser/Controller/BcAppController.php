@@ -341,12 +341,12 @@ class BcAppController extends Controller {
 			return;
 		}
 
-		// Ajax ヘッダー
 		if ($this->request->is('ajax') || $this->BcAuth->user()) {
 			// キャッシュ対策
-			$this->response->header("Cache-Control: no-cache, must-revalidate");
-			$this->response->header("Cache-Control: post-check=0, pre-check=0", false);
-			$this->response->header("Pragma: no-cache");
+			$this->response->header([
+				'Cache-Control' => 'no-cache, must-revalidate, post-check=0, pre-check=0',
+				'Pragma'				=> 'no-cache',
+			]);
 		}
 
 		// テーマ内プラグインのテンプレートをテーマに梱包できるようにプラグインパスにテーマのパスを追加
