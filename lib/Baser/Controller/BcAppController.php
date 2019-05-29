@@ -425,6 +425,12 @@ class BcAppController extends Controller {
 					}
 				}
 			}
+			if ($user) {
+				$this->response->header([
+					'Cache-Control' => 'no-cache, must-revalidate, post-check=0, pre-check=0',
+					'Pragma'				=> 'no-cache',
+				]);
+			}
 		}
 
 		if($isRequestView) {
